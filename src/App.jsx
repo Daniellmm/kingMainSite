@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import GGEI from "./pages/GGEI";
 import Preloader from "./component/Preloader";
 import NavBar from "./component/NavBar";
+import Footer from "./component/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,7 @@ function App() {
             <Route path="/ggei" element={<GGEI />} />
             <Route path="/laserfund" element={<LaserFund />} />
           </Routes>
+          <Footer />
         </>
       )}
     </Router>

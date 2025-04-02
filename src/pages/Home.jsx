@@ -257,7 +257,7 @@ const Home = () => {
           </div>
 
           <div className='grid lg:grid-cols-3 gap-y-10'>
-            <div className='flex flex-col justify-start gap-y-5 items-center px-7'>
+            <div className='flex flex-col justify-start gap-y-5 items-center md:px-7'>
               <div>
                 <img src={Rect1} alt="" />
               </div>
@@ -277,7 +277,7 @@ const Home = () => {
               </div>
 
             </div>
-            <div className='flex flex-col justify-start gap-y-5 items-center px-7  '>
+            <div className='flex flex-col justify-start gap-y-5 items-center md:px-7  '>
               <div>
                 <img src={Rect2} alt="" />
               </div>
@@ -297,7 +297,7 @@ const Home = () => {
               </div>
 
             </div>
-            <div className='flex flex-col justify-start gap-y-5 items-center px-7  '>
+            <div className='flex flex-col justify-start gap-y-5 items-center md:px-7  '>
               <div>
                 <img src={Rect3} alt="" />
               </div>
