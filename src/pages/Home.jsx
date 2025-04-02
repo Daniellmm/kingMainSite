@@ -17,7 +17,7 @@ import ArrowR from '../assets/images/arrowupright.png'
 const Home = () => {
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-32 w-full flex flex-col justify-center items-center'>
           <div>
             <img src={MText} alt="" />
@@ -103,7 +103,7 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black min-h-screen pb-14'>
+      <section className='overflow-hidden px-10 bg-black md:min-h-screen pb-14'>
         <div className='flex flex-col justify-center items-center pt-24 pb-10'>
           <div className='pb-10'>
             <img src={AWW} alt="" />
@@ -119,7 +119,7 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white min-h-screen pb-14'>
+      <section className='overflow-hidden px-10 bg-white flex justify-center items-center min-h-screen pb-14'>
         <div className='flex justify-center items-center pt-20'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <div className='flex justify-center items-center'>
@@ -208,7 +208,7 @@ const Home = () => {
               <div><h1 className='font-bold text-2xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 1</h1></div>
 
               <div>
-                <h1 className=' text-lg' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click “Apply Now”</h1>
+                <h1 className=' text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click “Apply Now”</h1>
               </div>
 
             </div>
@@ -220,7 +220,7 @@ const Home = () => {
               <div><h1 className='font-bold text-2xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 2</h1></div>
 
               <div>
-                <h1 className=' text-lg' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Same Day Pre-Approvals</h1>
+                <h1 className=' text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Same Day Pre-Approvals</h1>
               </div>
 
             </div>
@@ -232,7 +232,7 @@ const Home = () => {
               <div><h1 className='font-bold text-2xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 3 </h1></div>
 
               <div>
-                <h1 className=' text-lg' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Receive Your Funds</h1>
+                <h1 className=' text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Receive Your Funds</h1>
               </div>
 
             </div>
@@ -256,7 +256,7 @@ const Home = () => {
             </h1>
           </div>
 
-          <div className='grid lg:grid-cols-3 '>
+          <div className='grid lg:grid-cols-3 gap-y-10'>
             <div className='flex flex-col justify-start gap-y-5 items-center px-7'>
               <div>
                 <img src={Rect1} alt="" />
@@ -332,7 +332,7 @@ const Home = () => {
       <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-black min-h-[55vh]'>
         <div className='flex flex-col justify-center items-center text-white gap-y-5'>
           <h1 className=' text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Have Questions?</h1>
-          <h2 className=' text-xl font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 200, fontStyle: 'normal' }}>Complete questionnaire to speak to a representative.</h2>
+          <h2 className=' text-xl font-semibold text-center' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 200, fontStyle: 'normal' }}>Complete questionnaire to speak to a representative.</h2>
           <div className='pt-7'>
             <button className='bg-[#E7A647] text-black px-3 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
               Complete Questionnaire
