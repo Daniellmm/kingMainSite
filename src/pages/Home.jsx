@@ -8,6 +8,10 @@ import MARK from '../assets/images/mark.png'
 import Correct from '../assets/images/correct.png'
 import Out from '../assets/images/out.png'
 import Money from '../assets/images/money.png'
+import Rect1 from '../assets/images/rect1.png'
+import Rect2 from '../assets/images/rect2.png'
+import Rect3 from '../assets/images/rect3.png'
+import ArrowR from '../assets/images/arrowupright.png'
 
 
 const Home = () => {
@@ -146,7 +150,7 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black min-h-screen pb-14'>
+      <section className='overflow-hidden px-10 bg-black min-h-screen pb-10'>
         <div className='flex justify-center items-center pt-20'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <div className='flex justify-center items-center'>
@@ -235,7 +239,105 @@ const Home = () => {
 
           </div>
 
+          <div className='pt-10'>
+            <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              Apply Now
+            </button>
+          </div>
+        </div>
+      </section>
 
+
+      <section className='overflow-hidden px-10 bg-white min-h-[80vh] pb-14'>
+        <div className='flex flex-col justify-center items-center'>
+          <div>
+            <h1 className='text-[#E7A647] text-3xl font-semibold py-9' style={{ fontFamily: 'Minion Pro, serif' }} >
+              Recent Articles & News
+            </h1>
+          </div>
+
+          <div className='grid lg:grid-cols-3 '>
+            <div className='flex flex-col justify-start gap-y-5 items-center px-7'>
+              <div>
+                <img src={Rect1} alt="" />
+              </div>
+
+              <div>
+                <h1 className='text-black text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+              </div>
+
+              <div className='flex justify-between items-center w-full'>
+                <p className='text-[#E7A647] text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+
+                <div className='flex justify-center items-center'>
+                  <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
+
+                  <img src={ArrowR} alt="" />
+                </div>
+              </div>
+
+            </div>
+            <div className='flex flex-col justify-start gap-y-5 items-center px-7  '>
+              <div>
+                <img src={Rect2} alt="" />
+              </div>
+
+              <div>
+                <h1 className='text-black text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+              </div>
+
+              <div className='flex justify-between items-center w-full'>
+                <p className='text-[#E7A647] text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+
+                <div className='flex justify-center items-center'>
+                  <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
+
+                  <img src={ArrowR} alt="" />
+                </div>
+              </div>
+
+            </div>
+            <div className='flex flex-col justify-start gap-y-5 items-center px-7  '>
+              <div>
+                <img src={Rect3} alt="" />
+              </div>
+
+              <div>
+                <h1 className='text-black text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+              </div>
+
+              <div className='flex justify-between items-center w-full'>
+                <p className='text-[#E7A647] text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+
+                <div className='flex justify-center items-center'>
+                  <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
+                  <img src={ArrowR} alt="" />
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div className='pt-10'>
+            <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              View All Post
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-black min-h-[55vh]'>
+        <div className='flex flex-col justify-center items-center text-white gap-y-5'>
+          <h1 className=' text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Have Questions?</h1>
+          <h2 className=' text-xl font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 200, fontStyle: 'normal' }}>Complete questionnaire to speak to a representative.</h2>
+          <div className='pt-7'>
+            <button className='bg-[#E7A647] text-black px-3 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              Complete Questionnaire
+            </button>
+          </div>
         </div>
       </section>
     </>
