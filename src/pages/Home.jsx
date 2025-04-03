@@ -1,6 +1,7 @@
 import React from 'react'
 import MText from '../assets/images/png1.png'
-import DollarCoin from '../assets/images/bg-live/coin.png'
+import DollarCoin from '../assets/images/bg-live/bookmyl.png'
+import DollarCoin2 from '../assets/images/bg-live/bookmyr.png'
 import BANK from '../assets/images/bank.png'
 import AWW from '../assets/images/aww.png'
 import BBB from '../assets/images/bbb.png'
@@ -41,7 +42,7 @@ const Home = () => {
           <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
         </div>
         <div className='absolute bottom-[100px] right-[-40px]'>
-          <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
+          <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
