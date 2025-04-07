@@ -34,10 +34,10 @@ const Funding = () => {
         </div>
 
         <div className='absolute top-[200px] left-[-40px]'>
-          <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
+          <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-40' />
         </div>
         <div className='absolute bottom-[100px] right-[-40px]'>
-          <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
+          <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-40' />
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
@@ -64,7 +64,7 @@ const Funding = () => {
             <h1 className='text-[#E7A647] pb-10 text-3xl text-center lg:px-44 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Discover the Secrets to Building a Funding Business with Unlimited Earning Potential </h1>
           </div>
 
-          <div>
+          <div className=''>
             <p className='text-white text-sm leading-5 lg:px-20 pb-14' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve ever tried to work in the funding industry, you know the biggest challenge is finding financing solutions that actually work for your customers—and that skepticism is understandable.
               <br /> <br />
               We get it.
@@ -72,7 +72,8 @@ const Funding = () => {
               That’s why partnering with High Ticket Offer Financing is the smartest and most profitable move you can make. With 12 years of experience and nearly $1B
               funded through word of mouth alone, our proven system delivers results. We’ve spent millions of dollars building a network of funding experts and capital sources that actually work.
               <br /> <br />
-              Now, we’re handing you the blueprint to build your own successful funding  business — with all the tools,  resources, and training you need to succeed. But don’t just take our word for it—listen to these  client testimonials. </p>
+              Now, we’re handing you the blueprint to build your own successful funding  business — with all the tools,  resources, and training you need to succeed. But don’t just take our word for it—listen to these  client testimonials.
+            </p>
           </div>
 
           <div>
