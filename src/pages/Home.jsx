@@ -20,7 +20,7 @@ const Home = () => {
     <>
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-32 w-full flex flex-col justify-center items-center'>
-          <div>
+          <div className='pb-7'>
             <img src={MText} alt="" />
           </div>
           <div>
