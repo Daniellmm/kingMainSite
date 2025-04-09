@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Funding from "./pages/Funding";
 import Insurance from "./pages/Insurance";
 import LaserFund from "./pages/LaserFund";
-import Blog from "./pages/Blog";
+// import Blog from "./pages/Blog";
 import GGEI from "./pages/GGEI";
 import Preloader from "./component/Preloader";
 import NavBar from "./component/NavBar";
@@ -34,7 +34,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/funding" element={<Funding />} />
             <Route path="/insurance" element={<Insurance />} />
-            <Route path="/blog" element={<Blog />} />
+            {/* <Route path="/blog" element={<Blog />} /> */}
             <Route path="/ggei" element={<GGEI />} />
             <Route path="/laserfund" element={<LaserFund />} />
           </Routes>
