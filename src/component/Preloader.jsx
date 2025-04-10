@@ -110,7 +110,7 @@ const Preloader = () => {
                 <div className='absolute inset-0 flex justify-center items-center'>
                     <div className='relative p-[0 30px] mil-preloader-2'>
                         <p className='absolute opacity-0 inset-0 z-10 bg-gradient-to-r from-[#E7A647] to-[#ff9901] reveal-box'></p>
-                        <p className='loader-text  text-white text-3xl md:text-4xl'>The King</p>
+                        <p className='loader-text tracking-[19px] text-white text-3xl md:text-4xl'>The King</p>
                     </div>
                 </div>
             </div>
