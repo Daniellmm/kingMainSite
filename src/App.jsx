@@ -10,6 +10,7 @@ import GGEI from "./pages/GGEI";
 import Preloader from "./component/Preloader";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
+import ScrollToTop from "./component/ScrollToTop";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       {isLoading ? (
         <Preloader />
       ) : (
