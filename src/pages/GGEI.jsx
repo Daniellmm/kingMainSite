@@ -70,7 +70,7 @@ const GGEI = () => {
 
           <div className='flex gap-y-4 flex-col justify-start items-start'>
             <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Earning More Money</h1>
-            <p className='text-white' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>The Truth About Wealth That 98% of Entrepreneurs Are Missing </p>
+            <p className='text-white font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>The Truth About Wealth That 98% of Entrepreneurs Are Missing </p>
           </div>
         </div>
       </section>
@@ -90,7 +90,7 @@ const GGEI = () => {
             </div>
 
             <div >
-              <p className='font-medium text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
+              <p className='font-medium text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
                 <br /><br />
                 I co-founded this powerful group because I am committed to helping entrepreneurs avoid the pain I experienced after making an extraordinary amount of money, losing it all, and having to rebuild from scratch.
                 <br /><br />
@@ -101,7 +101,7 @@ const GGEI = () => {
 
               <p className='text-xl font-bold py-3' style={{ fontFamily: 'Minion Pro, serif' }}>Where did I go wrong?  </p>
 
-              <p className='font-medium text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>After experiencing such a tremendous loss, I went on a mission to uncover the true secrets to building and sustaining wealth. What I realized was that most of us have been misled.
+              <p className='text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>After experiencing such a tremendous loss, I went on a mission to uncover the true secrets to building and sustaining wealth. What I realized was that most of us have been misled.
                 <br /><br />
                 Many believe that wealth is built solely by earning more money. Others, the more financially savvy entrepreneurs, think investing is the key. While both are essential components of wealth-building, neither guarantees financial security on their own.
               </p>
@@ -111,7 +111,7 @@ const GGEI = () => {
           <p className='text-xl font-semibold py-3' style={{ fontFamily: 'Minion Pro, serif' }}>
             The real key to building wealth is simple: never lose money.
           </p>
-          <p className='pb-5 text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+          <p className='pb-5 text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
             • If you rely solely on earning money, you will inevitably spend it to sustain your lifestyle. <br />
             • If you rely solely on investing, you risk losing it to bad investments or unfavorable market conditions.
           </p>
@@ -125,7 +125,7 @@ const GGEI = () => {
             <li>Protecting the money you’ve earned</li>
             <li>Growing the money you’ve protected </li>
           </ol>
-          <p className='font-medium text-sm' style={{ fontFamily: 'Montserrat, serif' }}>
+          <p className='font-extralight text-sm ' style={{ fontFamily: 'Montserrat, serif' }}>
             At the Become Your Own Bank Summit, we will teach you how to implement a systematic approach to mastering all three—quickly and aggressively.
           </p>
           <p className='text-lg font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
@@ -211,14 +211,14 @@ const GGEI = () => {
                   Introducing the Become Your Own Bank Summit
                 </h1>
               </div>
-              <p className='text-white text-sm pt-5 pb-5' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <p className='text-white text-sm pt-5 pb-5 font-extralight' style={{ fontFamily: 'Montserrat, serif'}}>
                 The Global Group Economic Initiative is committed to helping entrepreneurs build real wealth by changing how they think about business, revenue, and wealth building.
                 <br /> <br />
                 To help you break free from financial limitations, High Ticket Offer Financing has partnered with the Millennial Millionaire to create the Global Group Economic Initiative—a
                 game-changing program designed to help you:
               </p>
 
-              <div className='flex flex-col justify-start items-start gap-y-5 text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <div className='flex flex-col justify-start items-start gap-y-5 text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif'}}>
                 <div className='flex gap-3 justify-center items-center text-white'>
                   <img src={CHECK} className='h-7' alt="" />
                   <div>
@@ -264,7 +264,7 @@ const GGEI = () => {
                 </h1>
               </div>
 
-              <div className='flex flex-col justify-start items-start gap-y-5 text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <div className='flex flex-col justify-start items-start gap-y-5 text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
                 <div className='flex gap-3 justify-center items-center text-gray-700'>
                   <img src={CHECK} className='h-7' alt="" />
                   <div>
