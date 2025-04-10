@@ -119,12 +119,7 @@ const NavBar = () => {
               >
                 GGEI
               </li>
-              <li
-                className={`font-semibold text-lg md:text-sm cursor-pointer hover:text-gray-600 transition-colors ${isActive('/contact') ? 'text-blue-600' : ''}`}
-                onClick={() => navigateTo('/blog')}
-              >
-                Blog
-              </li>
+              
             </ul>
           </div>
 
@@ -176,12 +171,7 @@ const NavBar = () => {
               >
                 GGEI
               </li>
-              <li
-                className={`font-semibold text-lg md:text-sm cursor-pointer hover:text-gray-600 transition-colors ${isActive('/contact') ? 'text-blue-600' : ''}`}
-                onClick={() => navigateTo('/blog')}
-              >
-                Blog
-              </li>
+              
 
               <div className='w-[102px] border border-1 rounded-lg border-black'>
                 <button
