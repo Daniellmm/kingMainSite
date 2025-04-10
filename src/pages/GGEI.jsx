@@ -90,7 +90,7 @@ const GGEI = () => {
             </div>
 
             <div >
-              <p className='font-medium text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
+              <p className='text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
                 <br /><br />
                 I co-founded this powerful group because I am committed to helping entrepreneurs avoid the pain I experienced after making an extraordinary amount of money, losing it all, and having to rebuild from scratch.
                 <br /><br />
