@@ -84,7 +84,7 @@ const Funding = () => {
 
 
       <section className='overflow-hidden px-10 bg-white flex justify-center items-center  min-h-[70vh] pb-14'>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center pt-10'>
           <div className='grid '>
 
             <div className='flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center '>

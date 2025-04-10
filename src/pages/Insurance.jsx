@@ -44,7 +44,7 @@ const Insurance = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white min-h-[50vh]'>
+      <section className='overflow-hidden px-10 bg-white min-h-[50vh] pb-14'>
         <div className='flex flex-col justify-center items-center pt-24 '>
 
           <div className='lg:px-24'>
@@ -102,7 +102,7 @@ const Insurance = () => {
 
 
       <section className='overflow-hidden flex flex-col justify-center items-center px-10 bg-black min-h-[58vh] pb-10'>
-        <div className='flex flex-col justify-center items-center lg:px-64'>
+        <div className='flex flex-col justify-center items-center lg:px-64 pt-10'>
           <div>
             <h1 className='text-[#E7A647] text-center pb-10 text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Even if you believe your financials are on track, you should still get a FREE financial
               review.
