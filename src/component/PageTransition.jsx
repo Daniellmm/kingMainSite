@@ -35,7 +35,7 @@ const PageTransition = ({ children }) => {
         duration: 0.6,
         stagger: 0.1,
         delay: 0.3,
-        ease: "power2.out"
+        ease: "power2.inOut"
       }
     );
 

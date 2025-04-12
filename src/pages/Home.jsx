@@ -104,10 +104,10 @@ const Home = () => {
           </ScrollAnimation>
         </div>
 
-        <div className='absolute top-[200px] left-[-40px] hero-dollar-left'>
+        <div className='absolute top-[200px] lg:left-[-40px] left-[0px] hero-dollar-left'>
           <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
         </div>
-        <div className='absolute bottom-[100px] right-[-40px] hero-dollar-right'>
+        <div className='absolute bottom-[100px] lg:right-[-40px] right-[0px] hero-dollar-right'>
           <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
