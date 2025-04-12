@@ -59,7 +59,7 @@ const Insurance = () => {
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-black md:min-h-[70vh] pb-14'>
         <div className='flex justify-center items-center pt-10 md:px-40'>
-          <div className='grid md:grid-cols-2 gap-y-10'>
+          <div className='grid md:grid-cols-2 gap-x-11 gap-y-10'>
             <div>
               <img src={HEADPHONE} className='h-80' alt="" />
             </div>
@@ -83,7 +83,7 @@ const Insurance = () => {
             <h1 className='text-[#E7A647] pb-10 text-3xl text-center md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}> About YellowBrick Financial — A Company That Cares </h1>
           </div>
 
-          <div className='grid md:grid-cols-2 lg:px-40 gap-y-10'>
+          <div className='grid md:grid-cols-2 gap-x-16 lg:px-40 gap-y-10'>
             <div>
               <img src={BIGLOGO} className='h-72' alt="" />
             </div>
@@ -117,8 +117,8 @@ const Insurance = () => {
 
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-white min-h-[80vh] pb-14'>
-        <div className='flex justify-center items-center pt-10 lg:px-40'>
-          <div className='grid md:grid-cols-2 gap-y-10'>
+        <div className='flex justify-center items-center pt-10 lg:px-20'>
+          <div className='grid md:grid-cols-2 gap-x-20 gap-y-10'>
             <div>
               <img src={FALLCOIN} className='h-96' alt="" />
             </div>
@@ -167,7 +167,7 @@ const Insurance = () => {
           </div>
 
           <div className='lg:px-20 space-y-10'>
-            <div className='grid md:grid-cols-2 space-y-10'>
+            <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
               <div>
                 <img src={KING} alt="" />
               </div>
@@ -188,7 +188,7 @@ const Insurance = () => {
               </div>
             </div>
 
-            <div className='grid md:grid-cols-2 space-y-10'>
+            <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
               <div>
                 <img src={ALEXIS} alt="" />
               </div>
@@ -208,7 +208,7 @@ const Insurance = () => {
             </div>
 
             <div className='flex justify-center items-center'>
-              <div className='grid md:grid-cols-2 space-y-10'>
+              <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
                 <div>
                   <img src={GENE} alt="" />
                 </div>

@@ -136,8 +136,8 @@ const GGEI = () => {
 
 
       <section className='overflow-hidden px-10 bg-black min-h-[50vh] pb-14'>
-        <div className='flex flex-col md:flex-row justify-center md:px-32 items-center gap-20 pt-24 '>
-          <div className='flex gap-y-4 flex-col justify-start items-start md:w-1/2 font-normal'>
+        <div className='flex flex-col lg:flex-row justify-center md:px-32 items-center gap-20 pt-24 '>
+          <div className='flex gap-y-4 flex-col justify-start items-start lg:w-1/2 font-normal'>
             <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
               EARN, PROTECT, GROW
             </h1>
@@ -159,8 +159,8 @@ const GGEI = () => {
 
 
       <section className='overflow-hidden px-10 bg-white min-h-[50vh] pb-14'>
-        <div className='flex flex-col md:flex-row justify-center md:px-32 items-center gap-10 pt-24 '>
-          <div className='flex gap-y-4 flex-col justify-start items-start md:w-1/2 font-normal'>
+        <div className='flex flex-col lg:flex-row justify-center md:px-32 items-center gap-10 pt-24 '>
+          <div className='flex gap-y-4 flex-col justify-start items-start lg:w-1/2 font-normal'>
             <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
               About Us
             </h1>

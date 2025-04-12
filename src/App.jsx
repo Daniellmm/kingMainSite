@@ -10,23 +10,24 @@ import Preloader from "./component/Preloader";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import ScrollToTop from "./component/ScrollToTop";
+import PageTransition from "./component/PageTransition"; 
 
-// Create a context for loading state
+
 const LoadingContext = createContext();
 
-// Component to handle route changes
+
 function RouteChangeListener() {
   const location = useLocation();
   const { setIsLoading } = useContext(LoadingContext);
   
   useEffect(() => {
-    // Show preloader when route changes
+    
     setIsLoading(true);
     
-    // Hide preloader after delay
+    
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5555); // Reduced from 5555ms for better UX
+    }, 5555); 
     
     return () => clearTimeout(timer);
   }, [location.pathname, setIsLoading]);
@@ -47,11 +48,31 @@ function AppContent() {
         <>
           <NavBar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/funding" element={<Funding />} />
-            <Route path="/insurance" element={<Insurance />} />
-            <Route path="/ggei" element={<GGEI />} />
-            <Route path="/laserfund" element={<LaserFund />} />
+            <Route path="/" element={
+              <PageTransition>
+                <Home />
+              </PageTransition>
+            } />
+            <Route path="/funding" element={
+              <PageTransition>
+                <Funding />
+              </PageTransition>
+            } />
+            <Route path="/insurance" element={
+              <PageTransition>
+                <Insurance />
+              </PageTransition>
+            } />
+            <Route path="/ggei" element={
+              <PageTransition>
+                <GGEI />
+              </PageTransition>
+            } />
+            <Route path="/laserfund" element={
+              <PageTransition>
+                <LaserFund />
+              </PageTransition>
+            } />
           </Routes>
           <Footer />
         </>
@@ -62,6 +83,15 @@ function AppContent() {
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5555); 
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <LoadingContext.Provider value={{ isLoading, setIsLoading }}>

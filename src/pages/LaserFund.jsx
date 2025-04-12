@@ -49,7 +49,7 @@ const LaserFund = () => {
 
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-white md:min-h-[70vh] pb-14'>
-        <div className='flex justify-center items-center pt-10 md:px-52 '>
+        <div className='flex justify-center items-center pt-10 lg:px-32 '>
           <div className='grid md:grid-cols-2 gap-y-10 '>
             <div>
               <img src={DISC} className='h-96' alt="" />
@@ -270,7 +270,7 @@ const LaserFund = () => {
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-white min-h-[80vh] pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-28'>
-          <div className='grid md:grid-cols-2 gap-y-10'>
+          <div className='grid md:grid-cols-2 gap-x-11 gap-y-10'>
             <div>
               <img src={CHART} alt="" />
             </div>
@@ -380,7 +380,7 @@ const LaserFund = () => {
 
       <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-black min-h-[55vh] py-10'>
         <div className='flex flex-col justify-center items-center  gap-y-5'>
-          <h1 className=' text-3xl font-semibold text-[#E7A647]' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>BONUS: Get Started Today and Receive a Free Trading Strategy Guide ($197 Value)!</h1>
+          <h1 className=' text-3xl text-center font-semibold text-[#E7A647]' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>BONUS: Get Started Today and Receive a Free Trading Strategy Guide ($197 Value)!</h1>
           <h2 className=' text-xl font-semibold text-white text-center' style={{ fontFamily: 'Montserrat, serif', fontWeight: 200, fontStyle: 'normal' }}>Don’t miss this opportunity to transform your financial future.</h2>
           <h2 className=' text-xl font- text-white text-center' style={{ fontFamily: 'Montserrat, serif', fontWeight: 200, fontStyle: 'normal' }}>Click Below to Get Started Now!  </h2>
           <div className='pt-7'>
