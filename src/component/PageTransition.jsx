@@ -41,7 +41,7 @@ const PageTransition = ({ children }) => {
 
     return () => {
      
-      tl.kill();
+    //   tl.kill();
     };
   }, []);
 
