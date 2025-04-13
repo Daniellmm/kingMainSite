@@ -10,6 +10,10 @@ import KING from '../assets/images/king.png'
 import ALEXIS from '../assets/images/alexis.png'
 import GENE from '../assets/images/gene.png'
 import ScrollAnimation from '../component/ScrollAnimation'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Insurance = () => {
   // Animation transition duration in milliseconds - centralized for consistency

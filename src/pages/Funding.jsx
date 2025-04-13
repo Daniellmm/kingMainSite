@@ -11,7 +11,7 @@ import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 const Funding = () => {
   useEffect(() => {
