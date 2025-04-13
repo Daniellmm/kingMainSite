@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef  } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import MText from '../assets/images/png3.png'
 import NOTE from '../assets/images/bg-live/note.png'
 import NOTE2 from '../assets/images/bg-live/note2.png'
@@ -11,18 +11,19 @@ import ALEXIS from '../assets/images/alexis.png'
 import GENE from '../assets/images/gene.png'
 import ScrollAnimation from '../component/ScrollAnimation'
 
-
 const Insurance = () => {
+  // Animation transition duration in milliseconds - centralized for consistency
+  const TRANSITION_DURATION = 500; // 0.5 seconds
+  const AUTO_SCROLL_INTERVAL = 60000; // 60 seconds (1 minute)
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const autoScrollTimerRef = useRef(null);  
 
-  
   const teamMembers = [
     {
-      image: 'KING',
+      image: KING, // Direct reference to the imported image
       name: 'King Edwards',
       title: 'King, a visionary, funding expert, and author',
       bio: `was born in Los Angeles and raised in New York. He draws inspiration from the diverse influences of each city. 
@@ -39,7 +40,7 @@ const Insurance = () => {
       King aims to rewrite the rules of the game and help his clients leave an indelible mark on their respective industries and their family's lives.`
     },
     {
-      image: 'ALEXIS',
+      image: ALEXIS, // Direct reference to the imported image
       name: 'Alexis Holifield',
       title: 'Co-Founder of The Millennial Millionaire',
       bio: `Alexis Holifield, began her journey to learning the laws of building generational wealth at the early age of 17 years old. 
@@ -54,7 +55,7 @@ const Insurance = () => {
       and financial states of her client. Specializing in Estate Planning, Cash Value Life Insurance, Retirement, and Executive Business Planning.`
     },
     {
-      image: 'GENE',
+      image: GENE, // Direct reference to the imported image
       name: 'Gene Santos',
       title: 'Financial Advisor',
       bio: `Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
@@ -80,7 +81,6 @@ const Insurance = () => {
     }
   ];
 
-  
   const nextSlide = () => {
     if (isTransitioning) return;
     
@@ -90,7 +90,7 @@ const Insurance = () => {
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
-    }, 500); // Match this with CSS transition duration
+    }, TRANSITION_DURATION);
   };
 
   // Function to handle previous slide with animation
@@ -103,7 +103,7 @@ const Insurance = () => {
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
-    }, 500); // Match this with CSS transition duration
+    }, TRANSITION_DURATION);
   };
   
   // Function to handle specific slide selection
@@ -116,12 +116,12 @@ const Insurance = () => {
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
-    }, 500); // Match this with CSS transition duration
+    }, TRANSITION_DURATION);
   };
 
   // Auto-scroll functionality
   useEffect(() => {
-    // Start auto-scroll timer when not in large screen mode
+    // Only start auto-scroll timer when not in large screen mode
     const startAutoScroll = () => {
       // Clear any existing timer first
       if (autoScrollTimerRef.current) {
@@ -132,7 +132,7 @@ const Insurance = () => {
       if (!isLargeScreen) {
         autoScrollTimerRef.current = setInterval(() => {
           nextSlide();
-        }, 50); // 60000ms = 1 minute
+        }, AUTO_SCROLL_INTERVAL);
       }
     };
     
@@ -144,7 +144,7 @@ const Insurance = () => {
         clearInterval(autoScrollTimerRef.current);
       }
     };
-  }, [isLargeScreen, currentSlide]);
+  }, [isLargeScreen]); // Remove currentSlide dependency to prevent resetting interval on each slide change
 
   // Check screen size on component mount and window resize
   useEffect(() => {
@@ -166,25 +166,24 @@ const Insurance = () => {
 
   // Reset auto-scroll timer when user manually navigates
   const handleManualNavigation = (action) => {
-    // Clear existing timer
-    if (autoScrollTimerRef.current) {
-      clearInterval(autoScrollTimerRef.current);
+    // Only manipulate timer if not in large screen mode
+    if (!isLargeScreen) {
+      // Clear existing timer
+      if (autoScrollTimerRef.current) {
+        clearInterval(autoScrollTimerRef.current);
+      }
+      
+      // Perform navigation action
+      action();
+      
+      // Restart timer
+      autoScrollTimerRef.current = setInterval(() => {
+        nextSlide();
+      }, AUTO_SCROLL_INTERVAL);
+    } else {
+      // Just perform the action without timer manipulation
+      action();
     }
-    
-    // Perform navigation action
-    action();
-    
-    // Restart timer
-    autoScrollTimerRef.current = setInterval(() => {
-      nextSlide();
-    }, 50); // 60000ms = 1 minute
-  };
-
-  
-  const teamImages = {
-    KING: KING,
-    ALEXIS: ALEXIS,
-    GENE: GENE
   };
 
   const slideStyles = {
@@ -194,7 +193,7 @@ const Insurance = () => {
       overflow: 'hidden'
     },
     teamSlide: {
-      transition: 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out',
+      transition: `transform ${TRANSITION_DURATION/1000}s ease-in-out, opacity ${TRANSITION_DURATION/1000}s ease-in-out`,
       opacity: isTransitioning ? 0 : 1,
       transform: isTransitioning ? 'scale(0.95)' : 'scale(1)'
     }
@@ -216,7 +215,7 @@ const Insurance = () => {
             </div>
 
             <div className='flex w-full justify-center'>
-              <iframe className='lg:w-[650px] pb-5 rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[650px] pb-5 rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
@@ -244,7 +243,7 @@ const Insurance = () => {
           <div className='flex flex-col justify-center items-center pt-24 '>
 
             <div className='lg:px-24'>
-              <h1 className='text-black text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>The definition of insanity is doing the same thing over and over again and expecting a different result.” It’s time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today.</h1>
+              <h1 className='text-black text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>The definition of insanity is doing the same thing over and over again and expecting a different result." It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today.</h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-2xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>C.e.o, Founder</h1>
@@ -264,7 +263,7 @@ const Insurance = () => {
             </ScrollAnimation >
             <div className='flex flex-col justify-center items-start'>
               <ScrollAnimation animation="slideUp" delay={0.3}>
-                <h1 className='text-[#E7A647] pb-10 text-3xl  md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Book a <span className='text-white italic'>Free</span>  Financial Review and Get the “Spender, Saver, Wealth Creator” Audio FREE. </h1>
+                <h1 className='text-[#E7A647] pb-10 text-3xl  md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Book a <span className='text-white italic'>Free</span>  Financial Review and Get the "Spender, Saver, Wealth Creator" Audio FREE. </h1>
               </ScrollAnimation>
               <div>
                 <ScrollAnimation animation="slideUp" delay={0.4}>
@@ -295,9 +294,9 @@ const Insurance = () => {
             <div>
               <ScrollAnimation animation="slideLeft" delay={0.4}>
                 <p className='text-black text-sm ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                  78% of Americans live paycheck to paycheck, and nearly half (49%) have less than $500 in savings. The truth is, the wealthy don’t just invest wisely—they structure and protect their money differently. Billionaires like Warren Buffett aren’t just investors; they leverage life insurance, tax-efficient financial strategies, and asset protection to ensure their wealth continues to grow—regardless of economic conditions.
+                  78% of Americans live paycheck to paycheck, and nearly half (49%) have less than $500 in savings. The truth is, the wealthy don't just invest wisely—they structure and protect their money differently. Billionaires like Warren Buffett aren't just investors; they leverage life insurance, tax-efficient financial strategies, and asset protection to ensure their wealth continues to grow—regardless of economic conditions.
                   <br /><br />
-                  At YellowBrick Financial, we believe financial security isn’t a luxury—it’s a necessity. We are  committed to helping entrepreneurs correct critical financial mistakes by structuring financial  plans the right way—designed to grow, protect, and pass down wealth for generations. We  teach our clients what the wealthy already know: how to build financial independence with  strategies that work in both good times and bad.
+                  At YellowBrick Financial, we believe financial security isn't a luxury—it's a necessity. We are  committed to helping entrepreneurs correct critical financial mistakes by structuring financial  plans the right way—designed to grow, protect, and pass down wealth for generations. We  teach our clients what the wealthy already know: how to build financial independence with  strategies that work in both good times and bad.
                 </p>
               </ScrollAnimation>
             </div>
@@ -396,7 +395,7 @@ const Insurance = () => {
               {teamMembers.map((member, index) => (
                 <div key={index} className='grid md:grid-cols-2 gap-x-14 space-y-10'>
                   <div>
-                    <img src={teamImages[member.image]} alt={member.name} />
+                    <img src={member.image} alt={member.name} />
                   </div>
                   <div className='flex flex-col justify-center items-start'>
                     <div>
@@ -428,7 +427,7 @@ const Insurance = () => {
                   <div className='flex flex-col items-center'>
                     <div className='mb-6'>
                       <img 
-                        src={teamImages[teamMembers[currentSlide].image]} 
+                        src={teamMembers[currentSlide].image} 
                         alt={teamMembers[currentSlide].name}
                         className='w-full max-w-md mx-auto transition-all duration-500 ease-in-out'
                       />
@@ -497,7 +496,7 @@ const Insurance = () => {
                       className="bg-[#E7A647] h-1.5 rounded-full"
                       style={{
                         width: '100%',
-                        animation: 'autoScrollProgress 60s linear infinite',
+                        animation: `autoScrollProgress ${AUTO_SCROLL_INTERVAL/1000}s linear infinite`,
                       }}
                     ></div>
                   </div>
