@@ -249,35 +249,35 @@ const Home = () => {
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideDown'>
+              <ScrollAnimation animation='slideUp'>
                 <div className='flex gap-x-3 pt-5 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>Small Business Loans Up to $3M</h1>
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideDown'>
+              <ScrollAnimation animation='slideUp'>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>No Doc Funding Up to $200K</h1>
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideDown'>
+              <ScrollAnimation animation='slideUp'>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>0% Business Funding Up to $150K</h1>
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideDown'>
+              <ScrollAnimation animation='slideUp'>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>Home Equity Lines of Credit Up to $4M</h1>
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideDown'>
+              <ScrollAnimation animation='slideUp'>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>And More…</h1>
