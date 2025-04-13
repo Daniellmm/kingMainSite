@@ -410,12 +410,13 @@ const Funding = () => {
               </div>
             </div>
 
-
-            <div className='flex justify-center items-center'>
+            <ScrollAnimation animation="slideLeft">
+            <div className='flex justify-center pt-8 lg:pt-0 items-center'>
               <div className='pb-10'>
                 <img src={SCI} className='md:h-[400px]' alt="" />
               </div>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>

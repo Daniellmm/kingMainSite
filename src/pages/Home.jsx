@@ -95,7 +95,7 @@ const Home = () => {
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animation="fadeIn" delay={0.9}>
+          <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
               <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Check My Funding Eligibility
@@ -249,35 +249,35 @@ const Home = () => {
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideUp'>
+              <ScrollAnimation animation='slideUp' delay={0.2}>
                 <div className='flex gap-x-3 pt-5 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>Small Business Loans Up to $3M</h1>
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideUp'>
+              <ScrollAnimation animation='slideUp' delay={0.4}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>No Doc Funding Up to $200K</h1>
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideUp'>
+              <ScrollAnimation animation='slideUp' delay={0.6}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>0% Business Funding Up to $150K</h1>
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideUp'>
+              <ScrollAnimation animation='slideUp' delay={0.8}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>Home Equity Lines of Credit Up to $4M</h1>
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation='slideUp'>
+              <ScrollAnimation animation='slideUp' delay={0.9}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
                   <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>And More…</h1>
@@ -302,7 +302,7 @@ const Home = () => {
           </ScrollAnimation>
           <div className='grid lg:grid-cols-3 gap-x-10 gap-y-8'>
 
-            <ScrollAnimation animation="slideRight">
+            <ScrollAnimation animation="slideRight" delay={0.3}>
               <div className='h-[200px] w-[300px] bg-white rounded-xl flex flex-col justify-center items-center'>
                 <div>
                   <img src={Out} alt="" />
@@ -317,7 +317,7 @@ const Home = () => {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animation="fadeIn">
+            <ScrollAnimation animation="fadeIn" delay={0.6}>
               <div className='h-[200px] w-[300px] bg-white rounded-xl flex flex-col justify-center items-center'>
                 <div>
                   <img src={Correct} alt="" />
@@ -332,7 +332,7 @@ const Home = () => {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animation="slideLeft">
+            <ScrollAnimation animation="slideLeft" delay={0.9}>
               <div className='h-[200px] w-[300px] bg-white rounded-xl flex flex-col justify-center items-center'>
                 <div>
                   <img src={Money} alt="" />
@@ -373,7 +373,7 @@ const Home = () => {
 
           <div className='grid lg:grid-cols-3 gap-y-10'>
 
-            <ScrollAnimation animation="slideRight" delay={0.2}>
+            <ScrollAnimation animation="slideRight" delay={0.3}>
               <div className='flex flex-col justify-start gap-y-5 items-center md:px-7'>
                 <div>
                   <img src={Rect1} alt="" />
@@ -396,7 +396,7 @@ const Home = () => {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animation="slideRight" delay={0.4}>
+            <ScrollAnimation animation="slideRight" delay={0.6}>
               <div className='flex flex-col justify-start gap-y-5 items-center md:px-7  '>
                 <div>
                   <img src={Rect2} alt="" />
@@ -419,7 +419,7 @@ const Home = () => {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animation="slideRight" delay={0.6}>
+            <ScrollAnimation animation="slideRight" delay={0.9}>
               <div className='flex flex-col justify-start gap-y-5 items-center md:px-7  '>
                 <div>
                   <img src={Rect3} alt="" />
