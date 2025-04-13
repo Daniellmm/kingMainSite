@@ -16,10 +16,10 @@ const ScrollAnimation = ({ children, animation = "fadeIn", delay = 0, duration =
         switch (animation) {
             case "fadeIn":
                 tl = gsap.fromTo(element,
-                    { opacity: 0, y: 30 },
+                    { opacity: 0,  },
                     {
                         opacity: 1,
-                        y: 0,
+                            
                         duration: duration,
                         delay: delay,
                         ease: "power2.out",
