@@ -102,15 +102,15 @@ const Preloader = () => {
         <div className='fix z-10 top-0 left-0 w-full h-screen bg-black fixed'>
             <div className='relative h-full text-[#E7A647]'>
                 <div className='absolute h-full w-full flex justify-center items-center mil-preloader'>
-                    <p className='opacity-0 mr-[15px] px-1 mil-1 text-2xl md:text-4xl font-thin text-[#E7A647]' style={{ fontFamily: 'Minion Pro, serif' }}>GET</p>
-                    <p className='opacity-0 mr-[15px] px-1 mil-1 text-2xl md:text-4xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>UP TO</p>
-                    <p className='opacity-0 mr-[15px] px-1 mil-1 text-2xl md:text-4xl font-thin' style={{ fontFamily: 'Minion Pro, serif' }}>$4M</p>
+                    <p className='opacity-0 mr-[15px] px-1 mil-1 text-4xl md:text-4xl font-thin text-[#E7A647]' style={{ fontFamily: 'Minion Pro, serif' }}>GET</p>
+                    <p className='opacity-0 mr-[15px] px-1 mil-1 text-4xl md:text-4xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>UP TO</p>
+                    <p className='opacity-0 mr-[15px] px-1 mil-1 text-4xl md:text-4xl font-thin' style={{ fontFamily: 'Minion Pro, serif' }}>$4M</p>
                 </div>
 
                 <div className='absolute inset-0 flex justify-center items-center'>
                     <div className='relative p-[0 30px] mil-preloader-2'>
                         <p className='absolute opacity-0 inset-0 z-10 bg-gradient-to-r from-[#E7A647] to-[#ff9901] reveal-box'></p>
-                        <p className='loader-text tracking-[1px] px-10 text-center text-white text-xl md:text-xl'>IN FAST, RELIABLE FUNDING FOR YOU AND YOUR CUSTOMERS</p>
+                        <p className='loader-text tracking-[1px] px-10 text-center text-white text-sm md:text-xl'>IN FAST, RELIABLE FUNDING FOR YOU AND YOUR CUSTOMERS</p>
                     </div>
                 </div>
             </div>
