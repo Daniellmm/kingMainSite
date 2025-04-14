@@ -6,7 +6,12 @@ import FundingLogo from '../assets/images/logo/fundingLogo.png'
 import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
 import LaserFundLogo from '../assets/images/logo/laserLogo.png'
 import GGEILogo from '../assets/images/logo/ggei.png'
-// import BlogLogo from '../assets/images/logo/homeLogo.png'
+import ScrollAnimation from '../component/ScrollAnimation';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const NavBar = () => {
 
