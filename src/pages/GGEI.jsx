@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect , useState, useRef } from 'react'
 import MText from '../assets/images/png5.png'
 import DollarCoin from '../assets/images/bg-live/3Ddollar.png'
 import DollarCoin2 from '../assets/images/bg-live/3Ddollar1.png'
@@ -11,64 +11,101 @@ import BLOCK from '../assets/images/block.png'
 import CHECK from '../assets/images/check.png'
 import LAPTOP from '../assets/images/laptop.png'
 import GIRL from '../assets/images/girl.png'
+import KF from '../assets/images/team/kf.png'
+import AF from '../assets/images/team/af.png'
+import RF from '../assets/images/team/rf.png'
+import SF from '../assets/images/team/sf.png'
+import GF from '../assets/images/team/gf.png'
+import KING from '../assets/images/team/king.png'
+import GENE from '../assets/images/team/gene.png'
+import ALEXIS from '../assets/images/team/alexis.png'
+import RAMSEY from '../assets/images/team/ramsey.png'
+import SHAWN from '../assets/images/team/shawn.png'
+
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// useEffect(() => {
-//   gsap.fromTo('.hero-dollar-left',
-//     {
-//       x: -100,
-//       opacity: 0,
-//       rotation: -20
-//     },
-//     {
-//       x: 0,
-//       opacity: 1,
-//       rotation: 0,
-//       duration: 1.5,
-//       ease: "elastic.out(1, 0.3)",
-//       delay: 0.5
-//     }
-//   );
+const TeamSlider = ({ teamMembers }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sliderRef = useRef(null);
 
-//   gsap.fromTo('.hero-dollar-right',
-//     {
-//       x: 100,
-//       opacity: 0,
-//       rotation: 20
-//     },
-//     {
-//       x: 0,
-//       opacity: 1,
-//       rotation: 0,
-//       duration: 1.5,
-//       ease: "elastic.out(1, 0.3)",
-//       delay: 0.8
-//     }
-//   );
+  // Auto scroll effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Move to next slide
+      setCurrentIndex((prevIndex) => 
+        prevIndex === teamMembers.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 6000); // Change slide every 3 seconds
 
-//   gsap.to('.hero-dollar-left', {
-//     y: 15,
-//     duration: 2,
-//     repeat: -1,
-//     yoyo: true,
-//     ease: "sine.inOut"
-//   });
+    return () => clearInterval(interval);
+  }, [teamMembers.length]);
 
-//   gsap.to('.hero-dollar-right', {
-//     y: -15,
-//     duration: 2.5,
-//     repeat: -1,
-//     yoyo: true,
-//     ease: "sine.inOut",
-//     delay: 0.5
-//   });
-// }, []);
+  // When currentIndex changes, scroll the slider
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollTo({
+        left: currentIndex * sliderRef.current.offsetWidth,
+        behavior: 'smooth'
+      });
+    }
+  }, [currentIndex]);
+
+  return (
+    <div className="w-full relative">
+      {/* Slider container */}
+      <div 
+        ref={sliderRef}
+        className="flex overflow-x-hidden snap-x snap-mandatory scroll-smooth"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {teamMembers.map((member, index) => (
+          <div key={index} className="min-w-full snap-center flex justify-center">
+            <div className="relative">
+              <img src={member.frame} className="h-[400px] z-10" alt="" />
+              <div className="absolute z-10 top-[-20px] left-[60px]">
+                <img 
+                  src={member.name} 
+                  className={`${member.isGene ? 'mt-[35px]' : ''} w-[230px]`}
+                  alt="" 
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation dots */}
+      <div className="flex justify-center gap-2 mt-5">
+        {teamMembers.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-3 h-3 rounded-full ${
+              currentIndex === index ? 'bg-[#E7A647]' : 'bg-gray-300'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 
 const GGEI = () => {
+
+  const teamMembers = [
+    { frame: KF, name: KING, isGene: false },
+    { frame: AF, name: ALEXIS, isGene: false },
+    { frame: GF, name: GENE, isGene: true },
+    { frame: RF, name: RAMSEY, isGene: false },
+    { frame: SF, name: SHAWN, isGene: false }
+  ];
+
   return (
     <>
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
@@ -312,6 +349,89 @@ const GGEI = () => {
       </section>
 
 
+      <section className='hidden lg:block overflow-hidden px-10 bg-white min-h-[100vh] pb-20 large-screen'>
+        <div className='flex flex-col justify-center items-center pt-10'>
+          <ScrollAnimation animation="zoomIn">
+            <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
+          </ScrollAnimation>
+
+
+
+          <div className='flex relative gap-x-14 gap-y-40 pt-44 flex-wrap justify-center items-center'>
+
+            <div className='relative '>
+              <img src={KF} className='h-[400px]  z-10' alt="" />
+
+              <div className='absolute z-10 top-[-125px] left-[10px]'>
+                <img src={KING} className='w-[300px] ' alt="" />
+              </div>
+              <div className='absolute z-10 top-[-125px] left-[10px]'>
+                <img src={KING} className='w-[300px] ' alt="" />
+              </div>
+            </div>
+
+            <div className='relative'>
+              <img src={AF} className='h-[400px] z-10' alt="" />
+
+              <div className='absolute z-10 top-[-125px]'>
+                <img src={ALEXIS} alt="" />
+              </div>
+              <div className='absolute z-10 top-[-125px]'>
+                <img src={ALEXIS} alt="" />
+              </div>
+            </div>
+
+            <div className='relative'>
+              <img src={GF} className='h-[400px] z-10' alt="" />
+
+              <div className='absolute z-10 top-[-90px]'>
+                <img src={GENE} alt="" />
+              </div>
+              <div className='absolute z-10 top-[-90px]'>
+                <img src={GENE} alt="" />
+              </div>
+            </div>
+
+            <div className='relative'>
+              <img src={RF} className='h-[400px] z-10' alt="" />
+
+              <div className='absolute z-10 top-[-125px] left-[10px]'>
+                <img src={RAMSEY} className='w-[300px]' alt="" />
+              </div>
+              <div className='absolute z-10 top-[-125px] left-[10px]'>
+                <img src={RAMSEY} className='w-[300px]' alt="" />
+              </div>
+            </div>
+            <div className='relative'>
+              <img src={SF} className='h-[400px] z-10' alt="" />
+
+              <div className='absolute z-10 top-[-125px]'>
+                <img src={SHAWN} className='w-[300px]' alt="" />
+              </div>
+              <div className='absolute z-10 top-[-125px]'>
+                <img src={SHAWN} className='w-[300px]' alt="" />
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+
+      <section className='lg:hidden overflow-hidden px-10 bg-white min-h-[100vh] pb-20 medium-small-screen'>
+        <div className='flex flex-col justify-center items-center pt-10'>
+          <ScrollAnimation animation="zoomIn">
+            <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
+          </ScrollAnimation>
+
+          <div className='pt-44 '>
+            <TeamSlider teamMembers={teamMembers} />
+          </div>
+        </div>
+      </section>
+
+
       <section className='overflow-hidden flex justify-center items-center px-10 bg-black min-h-[80vh] pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-28'>
           <div className='grid md:grid-cols-2 gap-y-10'>
@@ -459,23 +579,23 @@ const GGEI = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideDown" delay={0.5}>
-            <p className='text-white font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
-              If you’re tired of working hard without seeing real financial results…
-              <br /><br />
-              If you’re ready to start building true generational wealth…
-              <br /><br />
-              If you want to know the secrets that the top 1% use to secure and grow their fortunes…
-              <br /><br />
-              Join the Become Your Own Bank Summit and discover the strategies that will change your financial future forever.
-            </p>
+              <p className='text-white font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
+                If you’re tired of working hard without seeing real financial results…
+                <br /><br />
+                If you’re ready to start building true generational wealth…
+                <br /><br />
+                If you want to know the secrets that the top 1% use to secure and grow their fortunes…
+                <br /><br />
+                Join the Become Your Own Bank Summit and discover the strategies that will change your financial future forever.
+              </p>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideUp" delay={0.6}>
-            <div>
-              <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                I Want To Secure A Spot
-              </button>
-            </div>
+              <div>
+                <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  I Want To Secure A Spot
+                </button>
+              </div>
             </ScrollAnimation>
           </div>
 
