@@ -1,4 +1,4 @@
-import React, { useEffect , useState, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import MText from '../assets/images/png5.png'
 import DollarCoin from '../assets/images/bg-live/3Ddollar.png'
 import DollarCoin2 from '../assets/images/bg-live/3Ddollar1.png'
@@ -36,7 +36,7 @@ const TeamSlider = ({ teamMembers }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       // Move to next slide
-      setCurrentIndex((prevIndex) => 
+      setCurrentIndex((prevIndex) =>
         prevIndex === teamMembers.length - 1 ? 0 : prevIndex + 1
       );
     }, 6000); // Change slide every 3 seconds
@@ -57,7 +57,7 @@ const TeamSlider = ({ teamMembers }) => {
   return (
     <div className="w-full relative">
       {/* Slider container */}
-      <div 
+      <div
         ref={sliderRef}
         className="flex overflow-x-hidden snap-x snap-mandatory scroll-smooth"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
@@ -67,10 +67,10 @@ const TeamSlider = ({ teamMembers }) => {
             <div className="relative">
               <img src={member.frame} className="h-[400px] z-10" alt="" />
               <div className="absolute z-10 top-[-20px] left-[60px]">
-                <img 
-                  src={member.name} 
+                <img
+                  src={member.name}
                   className={`${member.isGene ? 'mt-[35px]' : ''} w-[230px]`}
-                  alt="" 
+                  alt=""
                 />
               </div>
             </div>
@@ -84,9 +84,8 @@ const TeamSlider = ({ teamMembers }) => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? 'bg-[#E7A647]' : 'bg-gray-300'
-            }`}
+            className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-[#E7A647]' : 'bg-gray-300'
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
@@ -106,13 +105,70 @@ const GGEI = () => {
     { frame: SF, name: SHAWN, isGene: false }
   ];
 
+
+  useEffect(() => {
+    gsap.fromTo('.hero-dollar-left',
+      {
+        x: -100,
+        opacity: 0,
+        rotation: -20
+      },
+      {
+        x: 0,
+        opacity: 1,
+        rotation: 0,
+        duration: 1.5,
+        ease: "elastic.out(1, 0.3)",
+        delay: 0.5
+      }
+    );
+
+    gsap.fromTo('.hero-dollar-right',
+      {
+        x: 100,
+        opacity: 0,
+        rotation: 20
+      },
+      {
+        x: 0,
+        opacity: 1,
+        rotation: 0,
+        duration: 1.5,
+        ease: "elastic.out(1, 0.3)",
+        delay: 0.8
+      }
+    );
+
+
+    gsap.to('.hero-dollar-left', {
+      y: 15,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+
+    gsap.to('.hero-dollar-right', {
+      y: -15,
+      duration: 2.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+      delay: 0.5
+    });
+  }, []);
+
+
   return (
     <>
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-40 w-full flex flex-col justify-center items-center'>
-          <ScrollAnimation animation="fadeIn" delay={0.3}>
+          <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-7'>
-              <img src={MText} alt="" />
+              {/* <img src={MText} alt="" /> */}
+              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent">
+                NEVER GO BROKE AGAIN
+              </h1>
             </div>
           </ScrollAnimation>
 
@@ -139,7 +195,7 @@ const GGEI = () => {
         <div className='absolute top-[200px] left-[-40px] '>
           <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] hero-dollar-left lg:h-auto' />
         </div>
-        <div className='absolute bottom-[100px] right-[-40px] '>
+        <div className='absolute bottom-[100px] right-[0px] '>
           <img src={DollarCoin2} alt="" className='h-[100px] hero-dollar-right md:h-[120px] lg:h-auto' />
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
@@ -360,56 +416,86 @@ const GGEI = () => {
           <div className='flex relative gap-x-14 gap-y-40 pt-44 flex-wrap justify-center items-center'>
 
             <div className='relative '>
-              <img src={KF} className='h-[400px]  z-10' alt="" />
+              <ScrollAnimation animation="fadeIn" delay={0.2}>
+                <img src={KF} className='h-[400px]  z-10' alt="" />
+              </ScrollAnimation>
 
-              <div className='absolute z-10 top-[-125px] left-[10px]'>
-                <img src={KING} className='w-[300px] ' alt="" />
-              </div>
-              <div className='absolute z-10 top-[-125px] left-[10px]'>
-                <img src={KING} className='w-[300px] ' alt="" />
-              </div>
+             
+                <div className='absolute z-10 top-[-125px] left-[10px]'>
+                <ScrollAnimation animation="zoomIn" delay={0.4}>
+                  <img src={KING} className='w-[300px] ' alt="" />
+              </ScrollAnimation>
+                </div>
+                <div className='absolute z-10 top-[-125px] left-[10px]'>
+                <ScrollAnimation animation="zoomIn" delay={0.4}>
+                  <img src={KING} className='w-[300px] ' alt="" />
+                  </ScrollAnimation >
+                </div>
             </div>
 
             <div className='relative'>
+            <ScrollAnimation animation="fadeIn" delay={0.3}>
               <img src={AF} className='h-[400px] z-10' alt="" />
-
+              </ScrollAnimation>
               <div className='absolute z-10 top-[-125px]'>
+              <ScrollAnimation animation="zoomIn" delay={0.6}>
                 <img src={ALEXIS} alt="" />
+                </ScrollAnimation>
               </div>
               <div className='absolute z-10 top-[-125px]'>
+              <ScrollAnimation animation="zoomIn" delay={0.6}>
                 <img src={ALEXIS} alt="" />
+                </ScrollAnimation>
               </div>
             </div>
 
             <div className='relative'>
+            <ScrollAnimation animation="fadeIn" delay={0.4}>
               <img src={GF} className='h-[400px] z-10' alt="" />
+              </ScrollAnimation>
 
               <div className='absolute z-10 top-[-90px]'>
+              <ScrollAnimation animation="zoomIn" delay={0.8}>
                 <img src={GENE} alt="" />
+                </ScrollAnimation>
               </div>
               <div className='absolute z-10 top-[-90px]'>
+              <ScrollAnimation animation="zoomIn" delay={0.8}>
                 <img src={GENE} alt="" />
+                </ScrollAnimation >
               </div>
             </div>
 
             <div className='relative'>
+            <ScrollAnimation animation="fadeIn" delay={0.4}>
               <img src={RF} className='h-[400px] z-10' alt="" />
+              </ScrollAnimation>
 
               <div className='absolute z-10 top-[-125px] left-[10px]'>
+              <ScrollAnimation animation="zoomIn" delay={0.7}>
                 <img src={RAMSEY} className='w-[300px]' alt="" />
-              </div>
+                </ScrollAnimation >
+             </div>
               <div className='absolute z-10 top-[-125px] left-[10px]'>
+              <ScrollAnimation animation="zoomIn" delay={0.7}>
                 <img src={RAMSEY} className='w-[300px]' alt="" />
+                </ScrollAnimation>
               </div>
             </div>
             <div className='relative'>
+            <ScrollAnimation animation="fadeIn" delay={0.5}>
               <img src={SF} className='h-[400px] z-10' alt="" />
+              </ScrollAnimation>
 
               <div className='absolute z-10 top-[-125px]'>
+              <ScrollAnimation animation="zoomIn" delay={0.9}>
                 <img src={SHAWN} className='w-[300px]' alt="" />
+                </ScrollAnimation>
               </div>
               <div className='absolute z-10 top-[-125px]'>
+              <ScrollAnimation animation="zoomIn" delay={0.9}>
                 <img src={SHAWN} className='w-[300px]' alt="" />
+                </ScrollAnimation>
               </div>
             </div>
 

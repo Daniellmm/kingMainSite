@@ -77,9 +77,14 @@ const Home = () => {
 
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-32 w-full flex flex-col justify-center items-center'>
-          <ScrollAnimation animation="fadeIn" delay={0.3}>
+          <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-7'>
-              <img src={MText} alt="" />
+              {/* <img src={MText} alt="" /> */}
+              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent">
+                GET UP TO $4M
+              </h1>
+
+
             </div>
           </ScrollAnimation>
 
