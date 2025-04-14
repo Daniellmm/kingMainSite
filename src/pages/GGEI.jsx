@@ -16,6 +16,11 @@ import AF from '../assets/images/team/af.png'
 import RF from '../assets/images/team/rf.png'
 import SF from '../assets/images/team/sf.png'
 import GF from '../assets/images/team/gf.png'
+import KFS from '../assets/images/team/frame1.png'
+import AFS from '../assets/images/team/frame2.png'
+import RFS from '../assets/images/team/frame4.png'
+import SFS from '../assets/images/team/frame5.png'
+import GFS from '../assets/images/team/frame3.png'
 import KING from '../assets/images/team/king.png'
 import GENE from '../assets/images/team/gene.png'
 import ALEXIS from '../assets/images/team/alexis.png'
@@ -67,11 +72,11 @@ const TeamSlider = ({ teamMembers }) => {
             <div className="relative">
               <img src={member.frame} className="h-[400px] z-10" alt="" />
               <div className="absolute z-10 top-[-20px] left-[60px]">
-                <img
+                {/* <img
                   src={member.name}
                   className={`${member.isGene ? 'mt-[35px]' : ''} w-[230px]`}
                   alt=""
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -98,11 +103,11 @@ const TeamSlider = ({ teamMembers }) => {
 const GGEI = () => {
 
   const teamMembers = [
-    { frame: KF, name: KING, isGene: false },
-    { frame: AF, name: ALEXIS, isGene: false },
-    { frame: GF, name: GENE, isGene: true },
-    { frame: RF, name: RAMSEY, isGene: false },
-    { frame: SF, name: SHAWN, isGene: false }
+    { frame: KFS, name: KING, isGene: false },
+    { frame: AFS, name: ALEXIS, isGene: false },
+    { frame: GFS, name: GENE, isGene: true },
+    { frame: RFS, name: RAMSEY, isGene: false },
+    { frame: SFS, name: SHAWN, isGene: false }
   ];
 
 
