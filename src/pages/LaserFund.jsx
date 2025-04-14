@@ -585,7 +585,7 @@ const LaserFund = () => {
                         <div key={index} className="min-w-full px-4">
                           <div className="relative overflow-hidden rounded-lg shadow-2xl">
                             <iframe
-                              className="w-full aspect-video"
+                              className="w-full h-[250px] aspect-video"
                               src={videoUrl}
                               title={`Testimonial video ${index + 1}`}
                               frameBorder="0"
