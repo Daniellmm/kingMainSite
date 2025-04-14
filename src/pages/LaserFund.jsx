@@ -565,7 +565,7 @@ const LaserFund = () => {
                 <div className="relative">
                   {/* Left arrow navigation */}
                   <button
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
                     onClick={handlePrevSlide}
                     aria-label="Previous slide"
                   >
@@ -600,7 +600,7 @@ const LaserFund = () => {
 
                   {/* Right arrow navigation */}
                   <button
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
                     onClick={handleNextSlide}
                     aria-label="Next slide"
                   >
