@@ -226,7 +226,7 @@ const NavBar = () => {
               </li>
               <li
                 data-path="/ggei"
-                className={`font-semibold text-lg md:text-sm cursor-pointer  transition-colors ${isActive('/ggei') ? 'text-yellow-600' : ''}`}
+                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/ggei')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}

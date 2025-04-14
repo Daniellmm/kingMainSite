@@ -80,7 +80,7 @@ const Home = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-7'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent">
+              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 GET UP TO $4M
               </h1>
 
@@ -233,6 +233,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
 
       <section className='overflow-hidden px-10 bg-black min-h-screen pb-10'>
         <div className='flex justify-center items-center pt-20'>
@@ -457,6 +458,7 @@ const Home = () => {
           </ScrollAnimation>
         </div>
       </section>
+
 
       <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-black min-h-[55vh]'>
         <ScrollAnimation animation="fadeIn">

@@ -171,7 +171,7 @@ const GGEI = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-7'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent">
+              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 NEVER GO BROKE AGAIN
               </h1>
             </div>
