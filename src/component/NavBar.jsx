@@ -190,7 +190,7 @@ const NavBar = () => {
             <ul className='flex space-x-5 md:space-x-10'>
               <li
                 data-path="/"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -199,7 +199,7 @@ const NavBar = () => {
               </li>
               <li
                 data-path="/funding"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/funding') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/funding')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -208,7 +208,7 @@ const NavBar = () => {
               </li>
               <li
                 data-path="/insurance"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/insurance') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/insurance')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -217,7 +217,7 @@ const NavBar = () => {
               </li>
               <li
                 data-path="/laserfund"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/laserfund')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -226,7 +226,7 @@ const NavBar = () => {
               </li>
               <li
                 data-path="/ggei"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/ggei') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg md:text-sm cursor-pointer hover:text-yellow-600 transition-colors ${isActive('/ggei') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/ggei')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -256,31 +256,31 @@ const NavBar = () => {
           >
             <ul className='flex space-y-4 justify-center items-center flex-col'>
               <li
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/')}
               >
                 Home
               </li>
               <li
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/funding') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/funding')}
               >
                 Funding
               </li>
               <li
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/insurance') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/insurance')}
               >
                 Insurance
               </li>
               <li
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/laserfund')}
               >
                 LaserFund
               </li>
               <li
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/ggei') ? 'text-blue-600' : ''}`}
+                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/ggei')}
               >
                 GGEI

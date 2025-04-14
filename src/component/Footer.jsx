@@ -64,7 +64,7 @@ const Footer = () => {
         duration: 0.5,
         stagger: 0.1,
         ease: 'back.out(1.7)',
-        delay: 0.5,
+        delay: 0.8,
         scrollTrigger: {
           trigger: socialIconsRef.current,
           start: 'top 90%',
@@ -97,7 +97,7 @@ const Footer = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.5,
+        duration: 0.8,
         delay: 1,
         ease: 'power2.out',
         scrollTrigger: {
@@ -114,7 +114,7 @@ const Footer = () => {
     gsap.to(e.target, {
       scale: enter ? 1.2 : 1,
       rotation: enter ? 10 : 0,
-      duration: 0.3,
+      duration: 0.4,
       ease: 'power2.out'
     });
   };
@@ -124,7 +124,7 @@ const Footer = () => {
     gsap.to(e.target, {
       x: enter ? 5 : 0,
       color: enter ? '#E7A647' : 'black',
-      duration: 0.2,
+      duration: 0.1,
       ease: 'power1.out'
     });
   };
