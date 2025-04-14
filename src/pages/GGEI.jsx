@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 import MText from '../assets/images/png5.png'
 import DollarCoin from '../assets/images/bg-live/3Ddollar.png'
 import DollarCoin2 from '../assets/images/bg-live/3Ddollar1.png'
@@ -17,58 +17,56 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-//  useEffect(() => {
-//      gsap.fromTo('.hero-dollar-left',
-//        {
-//          x: -100,
-//          opacity: 0,
-//          rotation: -20
-//        },
-//        {
-//          x: 0,
-//          opacity: 1,
-//          rotation: 0,
-//          duration: 1.5,
-//          ease: "elastic.out(1, 0.3)",
-//          delay: 0.5
-//        }
-//      );
+// useEffect(() => {
+//   gsap.fromTo('.hero-dollar-left',
+//     {
+//       x: -100,
+//       opacity: 0,
+//       rotation: -20
+//     },
+//     {
+//       x: 0,
+//       opacity: 1,
+//       rotation: 0,
+//       duration: 1.5,
+//       ease: "elastic.out(1, 0.3)",
+//       delay: 0.5
+//     }
+//   );
 
-//      gsap.fromTo('.hero-dollar-right',
-//        {
-//          x: 100,
-//          opacity: 0,
-//          rotation: 20
-//        },
-//        {
-//          x: 0,
-//          opacity: 1,
-//          rotation: 0,
-//          duration: 1.5,
-//          ease: "elastic.out(1, 0.3)",
-//          delay: 0.8
-//        }
-//      );
+//   gsap.fromTo('.hero-dollar-right',
+//     {
+//       x: 100,
+//       opacity: 0,
+//       rotation: 20
+//     },
+//     {
+//       x: 0,
+//       opacity: 1,
+//       rotation: 0,
+//       duration: 1.5,
+//       ease: "elastic.out(1, 0.3)",
+//       delay: 0.8
+//     }
+//   );
 
+//   gsap.to('.hero-dollar-left', {
+//     y: 15,
+//     duration: 2,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "sine.inOut"
+//   });
 
-//      gsap.to('.hero-dollar-left', {
-//        y: 15,
-//        duration: 2,
-//        repeat: -1,
-//        yoyo: true,
-//        ease: "sine.inOut"
-//      });
-
-//      gsap.to('.hero-dollar-right', {
-//        y: -15,
-//        duration: 2.5,
-//        repeat: -1,
-//        yoyo: true,
-//        ease: "sine.inOut",
-//        delay: 0.5
-//      });
-//    }, []);  
-
+//   gsap.to('.hero-dollar-right', {
+//     y: -15,
+//     duration: 2.5,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "sine.inOut",
+//     delay: 0.5
+//   });
+// }, []);
 
 const GGEI = () => {
   return (
@@ -101,11 +99,11 @@ const GGEI = () => {
           </ScrollAnimation>
         </div>
 
-        <div className='absolute top-[200px] left-[-40px] hero-dollar-left'>
-          <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
+        <div className='absolute top-[200px] left-[-40px] '>
+          <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] hero-dollar-left lg:h-auto' />
         </div>
-        <div className='absolute bottom-[100px] right-[-40px] hero-dollar-right'>
-          <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
+        <div className='absolute bottom-[100px] right-[-40px] '>
+          <img src={DollarCoin2} alt="" className='h-[100px] hero-dollar-right md:h-[120px] lg:h-auto' />
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>

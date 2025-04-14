@@ -23,7 +23,8 @@ const Insurance = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const autoScrollTimerRef = useRef(null);  
+  const autoScrollTimerRef = useRef(null);
+  const [focusedVideo, setFocusedVideo] = useState(1);
 
   const teamMembers = [
     {
@@ -87,10 +88,10 @@ const Insurance = () => {
 
   const nextSlide = () => {
     if (isTransitioning) return;
-    
+
     setIsTransitioning(true);
     setCurrentSlide((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1));
-    
+
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
@@ -100,23 +101,23 @@ const Insurance = () => {
   // Function to handle previous slide with animation
   const prevSlide = () => {
     if (isTransitioning) return;
-    
+
     setIsTransitioning(true);
     setCurrentSlide((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1));
-    
+
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
     }, TRANSITION_DURATION);
   };
-  
+
   // Function to handle specific slide selection
   const goToSlide = (index) => {
     if (isTransitioning || index === currentSlide) return;
-    
+
     setIsTransitioning(true);
     setCurrentSlide(index);
-    
+
     // Reset transition state after animation completes
     setTimeout(() => {
       setIsTransitioning(false);
@@ -131,7 +132,7 @@ const Insurance = () => {
       if (autoScrollTimerRef.current) {
         clearInterval(autoScrollTimerRef.current);
       }
-      
+
       // Set new timer for auto-scrolling every 60 seconds (1 minute)
       if (!isLargeScreen) {
         autoScrollTimerRef.current = setInterval(() => {
@@ -139,9 +140,9 @@ const Insurance = () => {
         }, AUTO_SCROLL_INTERVAL);
       }
     };
-    
+
     startAutoScroll();
-    
+
     // Clean up timer on component unmount or when screen size changes
     return () => {
       if (autoScrollTimerRef.current) {
@@ -155,13 +156,13 @@ const Insurance = () => {
     const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint is typically 1024px
     };
-    
+
     // Initial check
     checkScreenSize();
-    
+
     // Add event listener for window resize
     window.addEventListener('resize', checkScreenSize);
-    
+
     // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('resize', checkScreenSize);
@@ -176,10 +177,10 @@ const Insurance = () => {
       if (autoScrollTimerRef.current) {
         clearInterval(autoScrollTimerRef.current);
       }
-      
+
       // Perform navigation action
       action();
-      
+
       // Restart timer
       autoScrollTimerRef.current = setInterval(() => {
         nextSlide();
@@ -197,11 +198,47 @@ const Insurance = () => {
       overflow: 'hidden'
     },
     teamSlide: {
-      transition: `transform ${TRANSITION_DURATION/1000}s ease-in-out, opacity ${TRANSITION_DURATION/1000}s ease-in-out`,
+      transition: `transform ${TRANSITION_DURATION / 1000}s ease-in-out, opacity ${TRANSITION_DURATION / 1000}s ease-in-out`,
       opacity: isTransitioning ? 0 : 1,
       transform: isTransitioning ? 'scale(0.95)' : 'scale(1)'
     }
   };
+
+
+  // Initialize videos as state so we can update it
+  const [videos, setVideos] = useState([
+    "https://www.youtube.com/embed/8oc1XzrVKdU",
+    "https://www.youtube.com/embed/byzZl7yl0S0",
+    "https://www.youtube.com/embed/Nkowi5BdpD4",
+  ]);
+
+
+  const handlePrevVideo = () => {
+    // Rotate videos left (make the last video the first)
+    const newVideos = [...videos];
+    const firstVideo = newVideos.shift();
+    newVideos.push(firstVideo);
+    setVideos(newVideos);
+  };
+
+  const handleNextVideo = () => {
+    // Rotate videos right (make the last video the first)
+    const newVideos = [...videos];
+    const lastVideo = newVideos.pop();
+    newVideos.unshift(lastVideo);
+    setVideos(newVideos);
+  };
+
+  // Navigation functions for the mobile slider
+  const handlePrevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
+  };
+
+
 
   return (
     <>
@@ -381,10 +418,163 @@ const Insurance = () => {
           <ScrollAnimation animation="zoomIn" delay={0.2}>
             <h1 className='text-[#E7A647] text-center pb-10 text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
           </ScrollAnimation>
-          <div>
-            <img src={LONG} alt="" />
+          <div className="w-full">
+            {/* Desktop/Large Screen Layout */}
+            <div className="hidden lg:block bg-black w-full relative">
+              {/* Grid pattern overlay */}
+              <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+
+              {/* Content container */}
+              <div className="relative z-10 max-w-7xl mx-auto px-4">
+                {/* Video gallery */}
+                <div className="flex items-center justify-center">
+                  {/* Left arrow navigation */}
+                  <button
+                    className="absolute left-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handlePrevVideo}
+                    aria-label="Previous video"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+
+                  {/* Left video */}
+                  <div className="w-1/4 transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 -mr-6 z-10">
+                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                      <iframe
+                        className="w-full aspect-video"
+                        src={videos[0]}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen>
+                      </iframe>
+                    </div>
+                  </div>
+
+                  {/* Center video (larger) */}
+                  <div className="w-1/2 transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 z-20">
+                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                      <iframe
+                        className="w-full aspect-video"
+                        src={videos[1]}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen>
+                      </iframe>
+                    </div>
+                  </div>
+
+                  {/* Right video */}
+                  <div className="w-1/4 transform transition-transform duration-300 hover:scale-105 -ml-6 z-10">
+                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                      <iframe
+                        className="w-full aspect-video"
+                        src={videos[2]}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen>
+                      </iframe>
+                    </div>
+                  </div>
+
+                  {/* Right arrow navigation */}
+                  <button
+                    className="absolute right-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handleNextVideo}
+                    aria-label="Next video"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile/Medium Screen Slider - This remains the same */}
+            <div className="lg:hidden bg-black w-full relative">
+              {/* Grid pattern overlay */}
+              <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+
+              {/* Content container */}
+              <div className="relative z-10 max-w-7xl mx-auto px-4">
+                {/* Video slider */}
+                <div className="relative">
+                  {/* Left arrow navigation */}
+                  <button
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handlePrevSlide}
+                    aria-label="Previous slide"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+
+                  {/* Slider container */}
+                  <div className="overflow-hidden">
+                    <div
+                      className="flex transition-transform duration-300 ease-in-out"
+                      style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                    >
+                      {/* Video slides - dynamically render all videos */}
+                      {videos.map((videoUrl, index) => (
+                        <div key={index} className="min-w-full px-4">
+                          <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                            <iframe
+                              className="w-full aspect-video"
+                              src={videoUrl}
+                              title={`Testimonial video ${index + 1}`}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen>
+                            </iframe>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right arrow navigation */}
+                  <button
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handleNextSlide}
+                    aria-label="Next slide"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Dot indicators */}
+                <div className="flex justify-center mt-4">
+                  {videos.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`h-3 w-3 mx-1 rounded-full ${currentSlide === index ? 'bg-[#E7A647]' : 'bg-gray-400'}`}
+                      onClick={() => setCurrentSlide(index)}
+                      aria-label={`Go to slide ${index + 1}`}
+                    ></button>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Add a CSS style for the grid pattern */}
+        <style jsx>{`
+          .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+          }
+        `}</style>
       </section>
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-white min-h-[100vh] pb-14 team-section'>
@@ -394,7 +584,7 @@ const Insurance = () => {
           </ScrollAnimation>
 
           {isLargeScreen ? (
-           
+
             <div className='lg:px-20 space-y-10'>
               {teamMembers.map((member, index) => (
                 <div key={index} className='grid md:grid-cols-2 gap-x-14 space-y-10'>
@@ -423,15 +613,15 @@ const Insurance = () => {
               ))}
             </div>
           ) : (
-            
+
             <div className='w-full max-w-2xl mx-auto' style={slideStyles.teamSlideContainer}>
               <div className='relative'>
-                
+
                 <div className='team-slide' style={slideStyles.teamSlide}>
                   <div className='flex flex-col items-center'>
                     <div className='mb-6'>
-                      <img 
-                        src={teamMembers[currentSlide].image} 
+                      <img
+                        src={teamMembers[currentSlide].image}
                         alt={teamMembers[currentSlide].name}
                         className='w-full max-w-md mx-auto transition-all duration-500 ease-in-out'
                       />
@@ -458,17 +648,17 @@ const Insurance = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Navigation buttons */}
                 <div className='flex justify-between mt-8'>
-                  <button 
+                  <button
                     onClick={() => handleManualNavigation(prevSlide)}
                     className='bg-[#E7A647] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#d89935] transition-colors transform hover:scale-105 active:scale-95 transition-transform duration-300'
                     aria-label='Previous team member'
                   >
                     ← Prev
                   </button>
-                  
+
                   {/* Dots indicator with animations */}
                   <div className='flex items-center space-x-2'>
                     {teamMembers.map((_, index) => (
@@ -476,15 +666,15 @@ const Insurance = () => {
                         key={index}
                         onClick={() => handleManualNavigation(() => goToSlide(index))}
                         className={`w-3 h-3 rounded-full transform transition-all duration-300 
-                          ${index === currentSlide 
-                            ? 'bg-[#E7A647] scale-125 shadow-md' 
+                          ${index === currentSlide
+                            ? 'bg-[#E7A647] scale-125 shadow-md'
                             : 'bg-gray-300 hover:bg-gray-400'}`}
                         aria-label={`Go to slide ${index + 1}`}
                       />
                     ))}
                   </div>
-                  
-                  <button 
+
+                  <button
                     onClick={() => handleManualNavigation(nextSlide)}
                     className='bg-[#E7A647] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#d89935] transition-colors transform hover:scale-105 active:scale-95 transition-transform duration-300'
                     aria-label='Next team member'
@@ -492,20 +682,20 @@ const Insurance = () => {
                     Next →
                   </button>
                 </div>
-                
+
                 {/* Auto-scroll indicator */}
                 <div className="mt-4 flex justify-center items-center">
                   <div className="w-full max-w-xs bg-gray-200 rounded-full h-1.5 overflow-hidden">
-                    <div 
+                    <div
                       className="bg-[#E7A647] h-1.5 rounded-full"
                       style={{
                         width: '100%',
-                        animation: `autoScrollProgress ${AUTO_SCROLL_INTERVAL/1000}s linear infinite`,
+                        animation: `autoScrollProgress ${AUTO_SCROLL_INTERVAL / 1000}s linear infinite`,
                       }}
                     ></div>
                   </div>
                 </div>
-                
+
                 {/* Add keyframes for auto-scroll progress animation to your CSS */}
                 <style jsx>{`
                   @keyframes autoScrollProgress {

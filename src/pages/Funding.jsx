@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import SYOB from '../assets/images/syob.png'
 import SCI from '../assets/images/scifi.png'
 import CHECK from '../assets/images/check.png'
@@ -65,6 +65,42 @@ const Funding = () => {
       delay: 0.5
     });
   }, []);
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [focusedVideo, setFocusedVideo] = useState(1);
+
+  // Initialize videos as state so we can update it
+  const [videos, setVideos] = useState([
+    "https://www.youtube.com/embed/8oc1XzrVKdU",
+    "https://www.youtube.com/embed/byzZl7yl0S0",
+    "https://www.youtube.com/embed/Nkowi5BdpD4",
+  ]);
+
+
+  const handlePrevVideo = () => {
+    // Rotate videos left (make the last video the first)
+    const newVideos = [...videos];
+    const firstVideo = newVideos.shift();
+    newVideos.push(firstVideo);
+    setVideos(newVideos);
+  };
+
+  const handleNextVideo = () => {
+    // Rotate videos right (make the last video the first)
+    const newVideos = [...videos];
+    const lastVideo = newVideos.pop();
+    newVideos.unshift(lastVideo);
+    setVideos(newVideos);
+  };
+
+  // Navigation functions for the mobile slider
+  const handlePrevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <>
@@ -147,10 +183,162 @@ const Funding = () => {
             </div>
           </ScrollAnimation>
 
-          <div>
-            <img src={LONG} alt="" />
+          <div className="w-full">
+            {/* Desktop/Large Screen Layout */}
+            <div className="hidden lg:block bg-black w-full relative">
+              {/* Grid pattern overlay */}
+              <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+
+              {/* Content container */}
+              <div className="relative z-10 max-w-7xl mx-auto px-4">
+                {/* Video gallery */}
+                <div className="flex items-center justify-center">
+                  {/* Left arrow navigation */}
+                  <button
+                    className="absolute left-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handlePrevVideo}
+                    aria-label="Previous video"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+
+                  {/* Left video */}
+                  <div className="w-1/4 transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 -mr-6 z-10">
+                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                      <iframe
+                        className="w-full aspect-video"
+                        src={videos[0]}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen>
+                      </iframe>
+                    </div>
+                  </div>
+
+                  {/* Center video (larger) */}
+                  <div className="w-1/2 transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 z-20">
+                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                      <iframe
+                        className="w-full aspect-video"
+                        src={videos[1]}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen>
+                      </iframe>
+                    </div>
+                  </div>
+
+                  {/* Right video */}
+                  <div className="w-1/4 transform transition-transform duration-300 hover:scale-105 -ml-6 z-10">
+                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                      <iframe
+                        className="w-full aspect-video"
+                        src={videos[2]}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen>
+                      </iframe>
+                    </div>
+                  </div>
+
+                  {/* Right arrow navigation */}
+                  <button
+                    className="absolute right-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handleNextVideo}
+                    aria-label="Next video"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile/Medium Screen Slider - This remains the same */}
+            <div className="lg:hidden bg-black w-full relative">
+              {/* Grid pattern overlay */}
+              <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+
+              {/* Content container */}
+              <div className="relative z-10 max-w-7xl mx-auto px-4">
+                {/* Video slider */}
+                <div className="relative">
+                  {/* Left arrow navigation */}
+                  <button
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handlePrevSlide}
+                    aria-label="Previous slide"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+
+                  {/* Slider container */}
+                  <div className="overflow-hidden">
+                    <div
+                      className="flex transition-transform duration-300 ease-in-out"
+                      style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                    >
+                      {/* Video slides - dynamically render all videos */}
+                      {videos.map((videoUrl, index) => (
+                        <div key={index} className="min-w-full px-4">
+                          <div className="relative overflow-hidden rounded-lg shadow-2xl">
+                            <iframe
+                              className="w-full aspect-video"
+                              src={videoUrl}
+                              title={`Testimonial video ${index + 1}`}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen>
+                            </iframe>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right arrow navigation */}
+                  <button
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handleNextSlide}
+                    aria-label="Next slide"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Dot indicators */}
+                <div className="flex justify-center mt-4">
+                  {videos.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`h-3 w-3 mx-1 rounded-full ${currentSlide === index ? 'bg-[#E7A647]' : 'bg-gray-400'}`}
+                      onClick={() => setCurrentSlide(index)}
+                      aria-label={`Go to slide ${index + 1}`}
+                    ></button>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        {/* Add a CSS style for the grid pattern */}
+        <style jsx>{`
+          .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+          }
+        `}</style>
       </section>
 
 
@@ -198,12 +386,12 @@ const Funding = () => {
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="fadeIn" delay={0.6}>
-                <div className='flex gap-3 justify-center items-center text-black'>
-                  <img src={CHECK} className='h-7' alt="" />
-                  <div>
-                    <p> <span className='font-bold'> Minimal Overhead </span> – No need for a large team or expensive infrastructure to get started. </p>
+                  <div className='flex gap-3 justify-center items-center text-black'>
+                    <img src={CHECK} className='h-7' alt="" />
+                    <div>
+                      <p> <span className='font-bold'> Minimal Overhead </span> – No need for a large team or expensive infrastructure to get started. </p>
+                    </div>
                   </div>
-                </div>
                 </ScrollAnimation>
 
               </div>
@@ -215,98 +403,98 @@ const Funding = () => {
 
       <section className='overflow-hidden px-10 bg-black md:min-h-screen pb-14'>
         <div className='flex flex-col justify-center items-center py-10'>
-        <ScrollAnimation animation="zoomIn">
-          <div>
-            <h1 className='text-[#E7A647] pb-10 text-3xl text-center lg:px-44 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Here’s What You’ll Get When You License Our Product:</h1>
-          </div>
+          <ScrollAnimation animation="zoomIn">
+            <div>
+              <h1 className='text-[#E7A647] pb-10 text-3xl text-center lg:px-44 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Here’s What You’ll Get When You License Our Product:</h1>
+            </div>
           </ScrollAnimation>
 
 
           <div className='flex flex-col gap-y-7 lg:px-32 justify-start items-start w-full'>
-          <ScrollAnimation animation="fadeIn" delay={0.2}>
-            <div className='flex  flex-col items-start'>
-              <div className='flex justify-center items-center gap-x-4'>
-                <img src={CHECK} className='h-8' alt="" />
-                <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Complete Training Program </p>
-              </div>
+            <ScrollAnimation animation="fadeIn" delay={0.2}>
+              <div className='flex  flex-col items-start'>
+                <div className='flex justify-center items-center gap-x-4'>
+                  <img src={CHECK} className='h-8' alt="" />
+                  <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Complete Training Program </p>
+                </div>
 
-              <div className='pl-16'>
-                <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                  ● Step-by-step guidance on how to structure, launch, and scale your funding business. <br />
-                  ● Learn how to market your business and attract high-quality clients.
-                </p>
+                <div className='pl-16'>
+                  <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    ● Step-by-step guidance on how to structure, launch, and scale your funding business. <br />
+                    ● Learn how to market your business and attract high-quality clients.
+                  </p>
+                </div>
               </div>
-            </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeIn" delay={0.4}>
-            <div className='flex  flex-col items-start'>
-              <div className='flex justify-center items-center gap-x-4'>
-                <img src={CHECK} className='h-8' alt="" />
-                <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> 1-on-1 Coaching  </p>
-              </div>
+              <div className='flex  flex-col items-start'>
+                <div className='flex justify-center items-center gap-x-4'>
+                  <img src={CHECK} className='h-8' alt="" />
+                  <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> 1-on-1 Coaching  </p>
+                </div>
 
-              <div className='pl-16'>
-                <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                  ● Work directly with funding experts who have built 7 and 8-figure funding businesses. <br />
-                  ● Get personalized support to troubleshoot challenges and accelerate your growth.
-                </p>
+                <div className='pl-16'>
+                  <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    ● Work directly with funding experts who have built 7 and 8-figure funding businesses. <br />
+                    ● Get personalized support to troubleshoot challenges and accelerate your growth.
+                  </p>
+                </div>
               </div>
-            </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeIn" delay={0.6}>
-            <div className='flex  flex-col items-start'>
-              <div className='flex justify-center items-center gap-x-4'>
-                <img src={CHECK} className='h-8' alt="" />
-                <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Access to ALL Funding Options </p>
-              </div>
+              <div className='flex  flex-col items-start'>
+                <div className='flex justify-center items-center gap-x-4'>
+                  <img src={CHECK} className='h-8' alt="" />
+                  <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Access to ALL Funding Options </p>
+                </div>
 
-              <div className='pl-16'>
-                <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                  ● No-doc personal funding – Up to $150,000 <br />
-                  ● 0% Business Credit – Up to 12 months <br />
-                  ● Long-term, low-interest business lines of credit – Up to $3M <br />
-                  ● Home Equity Lines of Credit (HELOC) – Up to $4M <br />
-                  ● And more…
-                </p>
+                <div className='pl-16'>
+                  <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    ● No-doc personal funding – Up to $150,000 <br />
+                    ● 0% Business Credit – Up to 12 months <br />
+                    ● Long-term, low-interest business lines of credit – Up to $3M <br />
+                    ● Home Equity Lines of Credit (HELOC) – Up to $4M <br />
+                    ● And more…
+                  </p>
+                </div>
               </div>
-            </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeIn" delay={0.8}>
-            <div className='flex  flex-col items-start'>
-              <div className='flex justify-center items-center gap-x-4'>
-                <img src={CHECK} className='h-8' alt="" />
-                <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Exclusive Funding Network  </p>
-              </div>
+              <div className='flex  flex-col items-start'>
+                <div className='flex justify-center items-center gap-x-4'>
+                  <img src={CHECK} className='h-8' alt="" />
+                  <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Exclusive Funding Network  </p>
+                </div>
 
-              <div className='pl-16'>
-                <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                  ● Tap into a network of lenders and funding products that have been tested and proven to
-                  work. <br />
-                  ● We’ve done the hard work of building relationships with funding partners — you just
-                  need to connect the dots.
-                </p>
+                <div className='pl-16'>
+                  <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    ● Tap into a network of lenders and funding products that have been tested and proven to
+                    work. <br />
+                    ● We’ve done the hard work of building relationships with funding partners — you just
+                    need to connect the dots.
+                  </p>
+                </div>
               </div>
-            </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeIn" delay={0.9}>
-            <div className='flex  flex-col items-start'>
-              <div className='flex justify-center items-center gap-x-4'>
-                <img src={CHECK} className='h-8' alt="" />
-                <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Charge What You Want </p>
-              </div>
+              <div className='flex  flex-col items-start'>
+                <div className='flex justify-center items-center gap-x-4'>
+                  <img src={CHECK} className='h-8' alt="" />
+                  <p className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Charge What You Want </p>
+                </div>
 
-              <div className='pl-16'>
-                <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                  ● This is your business — you control the pricing.  <br />
-                  ● Earn significant fees on every deal you close, creating consistent cash flow and scalable
-                  revenue.
-                </p>
+                <div className='pl-16'>
+                  <p className='text-white font-thin text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    ● This is your business — you control the pricing.  <br />
+                    ● Earn significant fees on every deal you close, creating consistent cash flow and scalable
+                    revenue.
+                  </p>
+                </div>
               </div>
-            </div>
             </ScrollAnimation>
           </div>
 
@@ -319,25 +507,25 @@ const Funding = () => {
         <div className='flex justify-center items-center pt-20'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <div className='flex justify-center items-center'>
-            <ScrollAnimation animation="slideRight">
-              <div className='pb-10'>
-                <img src={SYOB} className='md:h-[400px]' alt="" />
-              </div>
+              <ScrollAnimation animation="slideRight">
+                <div className='pb-10'>
+                  <img src={SYOB} className='md:h-[400px]' alt="" />
+                </div>
               </ScrollAnimation>
             </div>
 
             <ScrollAnimation animation="slideLeft">
-            <div className='flex flex-col gap-y-5 md:px-10 lg:px-24 h-full justify-center '>
-              <div>
-                <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why This Business Is So Profitable</h1>
-              </div>
+              <div className='flex flex-col gap-y-5 md:px-10 lg:px-24 h-full justify-center '>
+                <div>
+                  <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why This Business Is So Profitable</h1>
+                </div>
 
-              <div>
-                <p className='text-sm text-gray-700' style={{ fontFamily: 'Montserrat, serif' }}>Most entrepreneurs don’t know where to turn for funding — or they’ve been burned by funding companies that overpromise and underdeliver.
+                <div>
+                  <p className='text-sm text-gray-700' style={{ fontFamily: 'Montserrat, serif' }}>Most entrepreneurs don’t know where to turn for funding — or they’ve been burned by funding companies that overpromise and underdeliver.
 
-                  <br /><br />  You’ll have the power to give them the capital they need to grow — and you’ll get paid handsomely for doing it.</p>
+                    <br /><br />  You’ll have the power to give them the capital they need to grow — and you’ll get paid handsomely for doing it.</p>
+                </div>
               </div>
-            </div>
             </ScrollAnimation>
           </div>
         </div>
@@ -349,73 +537,73 @@ const Funding = () => {
           <div className='grid md:grid-cols-2 grid-rows-1'>
 
             <div className='flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center '>
-            <ScrollAnimation animation="zoomIn">
-              <div>
-                <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Start Your Own Funding Business</h1>
-              </div>
+              <ScrollAnimation animation="zoomIn">
+                <div>
+                  <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Start Your Own Funding Business</h1>
+                </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideUp">
                 <div>
-                <p className='text-white'>If you’ve been looking for a business model that: </p>
-              </div>
+                  <p className='text-white'>If you’ve been looking for a business model that: </p>
+                </div>
               </ScrollAnimation>
 
 
               <div className='flex flex-col justify-start items-start gap-y-5'>
 
-              <ScrollAnimation animation="slideRight" delay={0.2}>
-                <div className='flex gap-3 justify-center items-center text-white'>
-                  <img src={CHECK} className='h-7' alt="" />
-                  <div>
-                    <p> Has unlimited earning potential</p>
+                <ScrollAnimation animation="slideRight" delay={0.2}>
+                  <div className='flex gap-3 justify-center items-center text-white'>
+                    <img src={CHECK} className='h-7' alt="" />
+                    <div>
+                      <p> Has unlimited earning potential</p>
+                    </div>
                   </div>
-                </div>
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="slideRight" delay={0.4}>
-                <div className='flex gap-3 justify-center items-center text-white'>
-                  <img src={CHECK} className='h-7' alt="" />
-                  <div>
-                    <p> Solves a real problem for business owners </p>
+                  <div className='flex gap-3 justify-center items-center text-white'>
+                    <img src={CHECK} className='h-7' alt="" />
+                    <div>
+                      <p> Solves a real problem for business owners </p>
+                    </div>
                   </div>
-                </div>
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="slideRight" delay={0.6}>
-                <div className='flex gap-3 justify-center items-center text-white'>
-                  <img src={CHECK} className='h-7' alt="" />
-                  <div>
-                    <p> Requires minimal overhead and setup costs </p>
+                  <div className='flex gap-3 justify-center items-center text-white'>
+                    <img src={CHECK} className='h-7' alt="" />
+                    <div>
+                      <p> Requires minimal overhead and setup costs </p>
+                    </div>
                   </div>
-                </div>
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="slideRight" delay={0.8}>
-                <div className='flex gap-3 justify-center items-center text-white'>
-                  <img src={CHECK} className='h-7' alt="" />
-                  <div>
-                    <p> Works in ANY economy</p>
+                  <div className='flex gap-3 justify-center items-center text-white'>
+                    <img src={CHECK} className='h-7' alt="" />
+                    <div>
+                      <p> Works in ANY economy</p>
+                    </div>
                   </div>
-                </div>
-              </ScrollAnimation>
+                </ScrollAnimation>
 
-              <ScrollAnimation animation="slideUp">
-                <div className='flex gap-3 justify-center items-center text-white'>
-                  <div>
-                    <p>Then this is your moment.</p>
+                <ScrollAnimation animation="slideUp">
+                  <div className='flex gap-3 justify-center items-center text-white'>
+                    <div>
+                      <p>Then this is your moment.</p>
+                    </div>
                   </div>
-                </div>
                 </ScrollAnimation>
               </div>
             </div>
 
             <ScrollAnimation animation="slideLeft">
-            <div className='flex justify-center pt-8 lg:pt-0 items-center'>
-              <div className='pb-10'>
-                <img src={SCI} className='md:h-[400px]' alt="" />
+              <div className='flex justify-center pt-8 lg:pt-0 items-center'>
+                <div className='pb-10'>
+                  <img src={SCI} className='md:h-[400px]' alt="" />
+                </div>
               </div>
-            </div>
             </ScrollAnimation>
           </div>
         </div>
@@ -424,15 +612,15 @@ const Funding = () => {
 
       <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-white min-h-[55vh]'>
         <div className='flex flex-col justify-center items-center text-[#E7A647] gap-y-5'>
-        <ScrollAnimation animation="zoomIn" >
-          <h1 className=' text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Spots Are Filling Fast – Secure Yours Today! </h1>
+          <ScrollAnimation animation="zoomIn" >
+            <h1 className=' text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Spots Are Filling Fast – Secure Yours Today! </h1>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
-          <div className='pt-7'>
-            <button className='bg-[#E7A647] text-black px-3 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-              Your Journey Starts Here
-            </button>
-          </div>
+            <div className='pt-7'>
+              <button className='bg-[#E7A647] text-black px-3 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                Your Journey Starts Here
+              </button>
+            </div>
           </ScrollAnimation>
         </div>
       </section>
