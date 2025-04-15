@@ -125,7 +125,7 @@ const NavBar = () => {
   const handleLinkHover = (e, enter) => {
     gsap.to(e.target, {
       scale: enter ? 1.05 : 1,
-      color: enter ? '#3B82F6' : isActive(e.target.getAttribute('data-path')) ? '#2563EB' : '#000',
+      color: enter ? '#E7A647' : isActive(e.target.getAttribute('data-path')) ? '#E7A647' : '#000',
       duration: 0.2
     });
   };
@@ -134,7 +134,7 @@ const NavBar = () => {
   const handleButtonHover = (e, enter) => {
     gsap.to(e.target, {
       scale: enter ? 1.05 : 1,
-      backgroundColor: enter ? 'rgba(231, 166, 71, 0.1)' : 'transparent',
+      backgroundColor: enter ? '#E7A647' : 'transparent',
       duration: 0.2
     });
   };
@@ -239,7 +239,7 @@ const NavBar = () => {
           {/* contact us btn  */}
           <div ref={buttonRef} className='hidden md:block lg:flex gap-x-5 border border-1 rounded-lg border-black'>
             <button
-              className='bg-Btn text-black rounded-lg text-sm md:text-sm py-3 md:py-3 px-4 md:px-5 border-black transition-all duration-300'
+              className='bg-Btn text-black rounded-lg text-sm md:text-sm hover:bg-[#E7A647] py-3 md:py-3 px-4 md:px-5 border-black transition-all duration-300'
               onMouseEnter={(e) => handleButtonHover(e, true)}
               onMouseLeave={(e) => handleButtonHover(e, false)}
             >
