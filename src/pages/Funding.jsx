@@ -104,7 +104,7 @@ const Funding = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'> 
         <div className='z-10 relative pt-32 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-7'>
@@ -128,7 +128,7 @@ const Funding = () => {
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
               <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                Check My Funding Eligibility
+              Your Journey Starts Here
               </button>
             </div>
           </ScrollAnimation>
@@ -174,7 +174,7 @@ const Funding = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.6}>
             <div className=''>
-              <p className='text-white text-sm leading-5 lg:px-20 pb-14' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve ever tried to work in the funding industry, you know the biggest challenge is finding financing solutions that actually work for your customers—and that skepticism is understandable.
+              <p className='text-white text-sm font-thin leading-5 lg:px-20 pb-14' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve ever tried to work in the funding industry, you know the biggest challenge is finding financing solutions that actually work for your customers—and that skepticism is understandable.
                 <br /> <br />
                 We get it.
                 <br /> <br />
@@ -362,7 +362,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-black'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> <span className='font-bold'> Unlimited Earning Potential </span> – You decide what to charge and how much to earn.</p>
+                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Unlimited Earning Potential </span> – You decide what to charge and how much to earn.</p>
                     </div>
                   </div>
                 </ScrollAnimation>
@@ -371,7 +371,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-black'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> <span className='font-bold'> Simple Business Model </span> – Earn capital by simply connecting business owners with funding
+                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Simple Business Model </span> – Earn capital by simply connecting business owners with funding
                         solutions that work.</p>
                     </div>
                   </div>
@@ -381,7 +381,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-black'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> <span className='font-bold'> Massive Market Demand </span> – 82% of entrepreneurs need cash flow to grow — and you’ll
+                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Massive Market Demand </span> – 82% of entrepreneurs need cash flow to grow — and you’ll
                         have the solution.
                       </p>
                     </div>
@@ -392,7 +392,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-black'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> <span className='font-bold'> Minimal Overhead </span> – No need for a large team or expensive infrastructure to get started. </p>
+                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Minimal Overhead </span> – No need for a large team or expensive infrastructure to get started. </p>
                     </div>
                   </div>
                 </ScrollAnimation>
@@ -548,7 +548,7 @@ const Funding = () => {
 
               <ScrollAnimation animation="slideUp">
                 <div>
-                  <p className='text-white'>If you’ve been looking for a business model that: </p>
+                  <p className='text-white font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve been looking for a business model that: </p>
                 </div>
               </ScrollAnimation>
 
@@ -559,7 +559,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-white'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> Has unlimited earning potential</p>
+                      <p  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Has unlimited earning potential</p>
                     </div>
                   </div>
                 </ScrollAnimation>
@@ -568,7 +568,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-white'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> Solves a real problem for business owners </p>
+                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Solves a real problem for business owners </p>
                     </div>
                   </div>
                 </ScrollAnimation>
@@ -577,7 +577,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-white'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> Requires minimal overhead and setup costs </p>
+                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Requires minimal overhead and setup costs </p>
                     </div>
                   </div>
                 </ScrollAnimation>
@@ -586,7 +586,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-white'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> Works in ANY economy</p>
+                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Works in ANY economy</p>
                     </div>
                   </div>
                 </ScrollAnimation>
@@ -594,7 +594,7 @@ const Funding = () => {
                 <ScrollAnimation animation="slideUp">
                   <div className='flex gap-3 justify-center items-center text-white'>
                     <div>
-                      <p>Then this is your moment.</p>
+                      <p className='font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Then this is your moment.</p>
                     </div>
                   </div>
                 </ScrollAnimation>
