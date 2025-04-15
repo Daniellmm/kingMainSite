@@ -298,7 +298,7 @@ const Insurance = () => {
 
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-black md:min-h-[70vh] pb-14'>
-        <div className='flex justify-center items-center pt-10 md:px-40'>
+        <div className='flex justify-center items-center pt-10 lg:px-40'>
           <div className='grid md:grid-cols-2 gap-x-11 gap-y-10'>
             <ScrollAnimation animation="slideRight" delay={0.2}>
               <div>
