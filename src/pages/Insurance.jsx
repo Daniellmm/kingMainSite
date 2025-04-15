@@ -415,11 +415,11 @@ const Insurance = () => {
       <section className='overflow-hidden flex flex-col justify-center items-center px-10 bg-black md:min-h-[80vh] pb-10'>
         <div className='flex flex-col justify-center items-center pt-10 lg:pt-16 gap-y-3'>
           <ScrollAnimation animation="slideDown" delay={0.1}>
-            <h1 className='text-xl font-thin tracking-widest text-gray-400 text-center'>Trusted by Professionals Like You</h1>
+            <h1 className='text-lg tracking-[4px] uppercase font-extralight text-gray-500 text-center' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Trusted by Professionals Like You</h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.2}>
-            <h1 className='text-[#E7A647] text-center pb-10 text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
+            <h1 className='text-[#E7A647] text-center pb-10 text-3xl' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
           </ScrollAnimation>
           <div className="w-full">
             {/* Desktop/Large Screen Layout */}
