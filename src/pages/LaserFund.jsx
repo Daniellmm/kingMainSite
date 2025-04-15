@@ -164,7 +164,7 @@ const LaserFund = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.3}>
                 <div>
-                  <p>Get our “Buy The Dip Crypto Series: How I 7x’d My Crypto Portfolio is 3  months Buying & Selling Crypto on Coinbase”.</p>
+                  <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Get our “Buy The Dip Crypto Series: How I 7x’d My Crypto Portfolio is 3  months Buying & Selling Crypto on Coinbase”.</p>
                 </div>
               </ScrollAnimation>
 
@@ -206,7 +206,7 @@ const LaserFund = () => {
               <div className='flex gap-3 justify-center items-center text-white'>
                 <img src={CHECK} className='h-7' alt="" />
                 <div>
-                  <p> <span className='font-bold'> Forex Trading </span> – Learn how to navigate the $7 trillion-a-day forex market and capitalize on
+                  <p className='font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Forex Trading </span> – Learn how to navigate the $7 trillion-a-day forex market and capitalize on
                     currency movements. </p>
                 </div>
               </div>
@@ -217,7 +217,7 @@ const LaserFund = () => {
               <div className='flex gap-3 justify-center items-center text-white'>
                 <img src={CHECK} className='h-7' alt="" />
                 <div>
-                  <p> <span className='font-bold'> Futures Trading </span> – Discover how to trade commodities, indexes, and more with precision and
+                  <p className='font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Futures Trading </span> – Discover how to trade commodities, indexes, and more with precision and
                     confidence.</p>
                 </div>
               </div>
@@ -227,7 +227,7 @@ const LaserFund = () => {
               <div className='flex gap-3 justify-center items-center text-white'>
                 <img src={CHECK} className='h-7' alt="" />
                 <div>
-                  <p> <span className='font-bold'> Crypto Spot Trading </span> – Understand the volatility and opportunity in the digital currency
+                  <p className='font-thin'  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Crypto Spot Trading </span> – Understand the volatility and opportunity in the digital currency
                     markets and how to profit from it, today!
                   </p>
                 </div>
@@ -378,25 +378,25 @@ const LaserFund = () => {
                 <ScrollAnimation animation="slideRight" delay={0.2}>
                   <div className='flex justify-center items-center gap-x-2 text-white'>
                     <div className='h-1 bg-white w-1 rounded-full'></div>
-                    <p> 20+ in-depth training modules teaching you how to trade.</p>
+                    <p className='font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>  <span className='font-bold'>20+ in-depth training modules </span> teaching you how to trade.</p>
                   </div>
                 </ScrollAnimation>
                 <ScrollAnimation animation="slideRight" delay={0.3}>
                   <div className='flex justify-center items-center gap-x-2 text-white'>
                     <div className='h-1 bg-white w-1 rounded-full'></div>
-                    <p> Automated trading algorithms – We’ll show you the exact algorithms we use to generate cash on demand. </p>
+                    <p className='font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'>Automated trading algorithms </span> – We’ll show you the exact algorithms we use to generate cash on demand. </p>
                   </div>
                 </ScrollAnimation>
                 <ScrollAnimation animation="slideRight" delay={0.4}>
                   <div className='flex justify-center items-center gap-x-2 text-white'>
                     <div className='h-1 bg-white w-1 rounded-full'></div>
-                    <p>“Buy the Dip” Crypto Series – How I 7x’d my crypto portfolio in just 3 months using spot trading on Coinbases </p>
+                    <p className='font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'>“Buy the Dip” Crypto Series</span> – How I 7x’d my crypto portfolio in just 3 months using spot trading on Coinbases </p>
                   </div>
                 </ScrollAnimation>
                 <ScrollAnimation animation="slideRight" delay={0.5}>
                   <div className='flex justify-center items-center gap-x-2 text-white'>
                     <div className='h-1 bg-white w-1 rounded-full'></div>
-                    <p> And so much more…</p>
+                    <p className='font-bold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> And so much more…</p>
                   </div>
                 </ScrollAnimation>
               </div>
@@ -437,7 +437,7 @@ const LaserFund = () => {
                   <div className='flex gap-3 justify-center items-center text-black'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> <span className='font-bold'> Beginners </span> : Start with the basics—learn how the
+                      <p className='text-gray-700 font-[400]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Beginners </span> : Start with the basics—learn how the
                         markets work and how to trade with confidence. </p>
                     </div>
                   </div>
@@ -447,7 +447,7 @@ const LaserFund = () => {
                   <div className='flex gap-3 justify-center items-center text-black'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> <span className='font-bold'> Intermediate Traders </span>: Refine your strategy, improve
+                      <p className='text-gray-700 font-[400]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Intermediate Traders </span>: Refine your strategy, improve
                         your execution, and increase your profits.</p>
                     </div>
                   </div>
@@ -457,7 +457,7 @@ const LaserFund = () => {
                   <div className='flex gap-3 justify-center items-center text-black'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p> <span className='font-bold'> Advanced Traders </span> : Gain access to proprietary strategies
+                      <p className='text-gray-700 font-[400]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> <span className='font-bold'> Advanced Traders </span> : Gain access to proprietary strategies
                         and market insights from top industry professionals.
                       </p>
                     </div>
@@ -473,7 +473,7 @@ const LaserFund = () => {
       <section className='overflow-hidden flex flex-col justify-center items-center px-10 bg-black md:min-h-[80vh] pb-10 youtube-video-section'>
         <div className='flex flex-col justify-center items-center pt-10 lg:pt-16 gap-y-3'>
           <ScrollAnimation animation="slideDown" delay={0.2}>
-            <h1 className='text-xl font-thin tracking-widest text-gray-400 text-center'>Trusted by Professionals Like You</h1>
+          <h1 className='text-lg tracking-[4px] uppercase font-extralight text-gray-500 text-center' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Trusted by Professionals Like You</h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.1}>
