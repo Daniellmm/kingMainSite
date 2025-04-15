@@ -109,12 +109,12 @@ const Home = () => {
           </ScrollAnimation>
         </div>
 
-        <div className='absolute top-[200px] lg:left-[-40px] left-[0px] hero-dollar-left'>
+        {/* <div className='absolute top-[200px] lg:left-[-40px] left-[0px] hero-dollar-left'>
           <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
         </div>
         <div className='absolute bottom-[100px] lg:right-[-40px] right-[0px] hero-dollar-right'>
           <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
-        </div>
+        </div> */}
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
 
@@ -190,7 +190,7 @@ const Home = () => {
             </div>
 
             <div>
-              <h1 className='text-white text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>"Our mission is to create more millionaire entrepreneurs by ensuring you have all <br />the funding you need to start and scale your business aggressively."</h1>
+              <h1 className='text-white tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>"Our mission is to create more millionaire entrepreneurs by ensuring you have all <br />the funding you need to start and scale your business aggressively."</h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-2xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>C.e.o, Founder</h1>
@@ -251,7 +251,7 @@ const Home = () => {
             <div className='flex flex-col justify-center py-10 md:px-12 lg:p-20'>
               <ScrollAnimation animation='zoomIn'>
                 <div>
-                  <h1 className='text-[#E7A647] text-3xl' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
+                  <h1 className='text-[#E7A647] font-semibold text-3xl' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
                 </div>
               </ScrollAnimation>
 
@@ -317,7 +317,7 @@ const Home = () => {
                 <div><h1 className='font-bold text-2xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 1</h1></div>
 
                 <div>
-                  <h1 className=' text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click “Apply Now”</h1>
+                  <h1 className=' text-sm font-bold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click “Apply Now”</h1>
                 </div>
 
               </div>
@@ -332,7 +332,7 @@ const Home = () => {
                 <div><h1 className='font-bold text-2xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 2</h1></div>
 
                 <div>
-                  <h1 className=' text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Same Day Pre-Approvals</h1>
+                  <h1 className=' text-sm font-bold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Same Day Pre-Approvals</h1>
                 </div>
 
               </div>
@@ -347,7 +347,7 @@ const Home = () => {
                 <div><h1 className='font-bold text-2xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 3 </h1></div>
 
                 <div>
-                  <h1 className=' text-sm' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Receive Your Funds</h1>
+                  <h1 className=' text-sm font-bold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Receive Your Funds</h1>
                 </div>
 
               </div>
