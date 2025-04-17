@@ -297,7 +297,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='flex flex-col justify-center items-center pt-28'>
+        <div className='flex flex-col justify-center items-center pt-16'>
           <ScrollAnimation animation="zoomIn">
             <div>
               <h1 className='text-[#E7A647] text-3xl' style={{ fontFamily: 'Minion Pro, serif' }}>How It Works:</h1>
@@ -463,7 +463,7 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-black min-h-[55vh]'>
+      <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-black min-h-[40vh]'>
         <ScrollAnimation animation="fadeIn">
           <div className='flex flex-col justify-center items-center text-white gap-y-5'>
             <h1 className=' text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Have Questions?</h1>
