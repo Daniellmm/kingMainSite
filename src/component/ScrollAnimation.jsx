@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ScrollAnimation = ({ children, animation = "fadeIn", delay = 0, duration = 0.8, triggerPosition = "top 70%" }) => {
+const ScrollAnimation = ({ children, animation = "fadeIn", delay = 0, duration = 0.8, triggerPosition = "top 80%" }) => {
     const elementRef = useRef(null);
 
     useEffect(() => {

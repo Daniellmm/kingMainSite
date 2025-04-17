@@ -122,8 +122,8 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white min-h-screen pb-14'>
-        <div className='flex justify-center items-center  pt-10'>
+      <section className='overflow-hidden md:px-10  bg-white min-h-screen pb-14'>
+        <div className='flex justify-center items-center  pt-5'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <ScrollAnimation animation="slideRight">
               <div className='flex justify-center items-center'>
@@ -132,7 +132,7 @@ const Home = () => {
             </ScrollAnimation>
 
 
-            <div className='flex flex-col gap-y-5 h-full justify-center lg:px-24 '>
+            <div className='flex flex-col gap-y-5 px-10 h-full justify-center lg:px-24 '>
               <ScrollAnimation animation="zoomIn">
                 <div>
                   <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>The Ultimate Funding Qualifications Guide for Free</h1>
@@ -187,7 +187,7 @@ const Home = () => {
 
       <section className='overflow-hidden px-10 bg-black md:min-h-screen pb-14'>
         <ScrollAnimation animation="fadeIn">
-          <div className='flex flex-col justify-center items-center pt-24 pb-10'>
+          <div className='flex flex-col justify-center items-center pt-10 md:pt-24 '>
             <div className='pb-10'>
               <img src={AWW} alt="" />
             </div>
@@ -204,7 +204,7 @@ const Home = () => {
 
 
       <section className='overflow-hidden px-10 bg-white flex justify-center items-center min-h-screen pb-14'>
-        <div className='flex justify-center items-center pt-20'>
+        <div className='flex justify-center items-center mdpt-10'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <ScrollAnimation animation="slideRight">
               <div className='flex justify-center items-center'>
