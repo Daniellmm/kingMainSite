@@ -242,13 +242,13 @@ const Insurance = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
-        <div className='z-10 relative pt-32 w-full flex flex-col justify-center items-center'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center md:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
+        <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-7'>
               {/* <img src={MText} alt="" /> */}
               <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-               95% DON'T DO THIS
+                95% DON'T DO THIS
               </h1>
             </div>
           </ScrollAnimation>
@@ -282,9 +282,9 @@ const Insurance = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white min-h-[50vh] pb-14'>
+      <section className='overflow-hidden px-10 bg-white min-h-[40vh]'>
         <ScrollAnimation animation="fadeIn" delay={0.5}>
-          <div className='flex flex-col justify-center items-center pt-24 '>
+          <div className='flex flex-col justify-center items-center pt-10 '>
 
             <div className='lg:px-24'>
               <h1 className='text-black text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>The definition of insanity is doing the same thing over and over again and expecting a different result." It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today.</h1>
@@ -350,8 +350,8 @@ const Insurance = () => {
       </section>
 
 
-      <section className='overflow-hidden flex flex-col justify-center items-center px-10 bg-black min-h-[58vh] pb-10'>
-        <div className='flex flex-col justify-center items-center lg:px-64 pt-10'>
+      <section className='overflow-hidden flex flex-col justify-center items-center px-10 bg-black min-h-[48vh]'>
+        <div className='flex flex-col justify-center items-center lg:px-64 '>
           <ScrollAnimation animation="zoomIn">
             <div>
               <h1 className='text-[#E7A647] text-center pb-10 text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Even if you believe your financials are on track, you should still get a FREE financial
@@ -581,136 +581,95 @@ const Insurance = () => {
       </section>
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-white min-h-[100vh] pb-14 team-section'>
-        <div className='flex flex-col justify-center items-center pt-10 w-full'>
+        <div className='flex flex-col justify-center items-center pt-10'>
+          <div>
           <ScrollAnimation animation="zoomIn" delay={0.2}>
             <h1 className='text-[#E7A647] text-center pb-10 text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet the Team</h1>
           </ScrollAnimation>
+          </div>
 
-          {isLargeScreen ? (
+          <div className='lg:px-20 space-y-10'>
+            <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
+              <div>
+                <img src={KING} alt="" />
+              </div>
 
-            <div className='lg:px-20 space-y-10'>
-              {teamMembers.map((member, index) => (
-                <div key={index} className='grid md:grid-cols-2 gap-x-14 space-y-10'>
-                  <div>
-                    <img src={member.image} alt={member.name} />
-                  </div>
-                  <div className='flex flex-col justify-center items-start'>
-                    <div>
-                      <h1 className='text-[#E7A647] text-2xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>{member.name}</h1>
-                    </div>
-                    <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>{member.title}</p>
-                    <p className='text-sm pt-5'>
-                      {member.bio.split('\n\n').map((paragraph, i) => (
-                        <React.Fragment key={i}>
-                          {paragraph}
-                          {i < member.bio.split('\n\n').length - 1 && (
-                            <>
-                              <br /> <br />
-                            </>
-                          )}
-                        </React.Fragment>
-                      ))}
-                    </p>
-                  </div>
+              <div className='flex flex-col justify-center items-start'>
+                <div>
+                  <h1 className='text-[#E7A647] text-2xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King Edwards</h1>
                 </div>
-              ))}
-            </div>
-          ) : (
+                <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King, a visionary, funding expert, and author</p>
 
-            <div className='w-full max-w-2xl mx-auto' style={slideStyles.teamSlideContainer}>
-              <div className='relative'>
-
-                <div className='team-slide' style={slideStyles.teamSlide}>
-                  <div className='flex flex-col items-center'>
-                    <div className='mb-6'>
-                      <img
-                        src={teamMembers[currentSlide].image}
-                        alt={teamMembers[currentSlide].name}
-                        className='w-full max-w-md mx-auto transition-all duration-500 ease-in-out'
-                      />
-                    </div>
-                    <div className='text-center md:text-left px-4 transition-all duration-500 ease-in-out'>
-                      <h1 className='text-[#E7A647] text-2xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                        {teamMembers[currentSlide].name}
-                      </h1>
-                      <p className='text-lg italic font-semibold mb-4' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                        {teamMembers[currentSlide].title}
-                      </p>
-                      <p className='text-sm'>
-                        {teamMembers[currentSlide].bio.split('\n\n').map((paragraph, i) => (
-                          <React.Fragment key={i}>
-                            {paragraph}
-                            {i < teamMembers[currentSlide].bio.split('\n\n').length - 1 && (
-                              <>
-                                <br /> <br />
-                              </>
-                            )}
-                          </React.Fragment>
-                        ))}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Navigation buttons */}
-                <div className='flex justify-between mt-8'>
-                  <button
-                    onClick={() => handleManualNavigation(prevSlide)}
-                    className='bg-[#E7A647] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#d89935] transition-colors transform hover:scale-105 active:scale-95 transition-transform duration-300'
-                    aria-label='Previous team member'
-                  >
-                    ← Prev
-                  </button>
-
-                  {/* Dots indicator with animations */}
-                  <div className='flex items-center space-x-2'>
-                    {teamMembers.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleManualNavigation(() => goToSlide(index))}
-                        className={`w-3 h-3 rounded-full transform transition-all duration-300 
-                          ${index === currentSlide
-                            ? 'bg-[#E7A647] scale-125 shadow-md'
-                            : 'bg-gray-300 hover:bg-gray-400'}`}
-                        aria-label={`Go to slide ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={() => handleManualNavigation(nextSlide)}
-                    className='bg-[#E7A647] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#d89935] transition-colors transform hover:scale-105 active:scale-95 transition-transform duration-300'
-                    aria-label='Next team member'
-                  >
-                    Next →
-                  </button>
-                </div>
-
-                {/* Auto-scroll indicator */}
-                <div className="mt-4 flex justify-center items-center">
-                  <div className="w-full max-w-xs bg-gray-200 rounded-full h-1.5 overflow-hidden">
-                    <div
-                      className="bg-[#E7A647] h-1.5 rounded-full"
-                      style={{
-                        width: '100%',
-                        animation: `autoScrollProgress ${AUTO_SCROLL_INTERVAL / 1000}s linear infinite`,
-                      }}
-                    ></div>
-                  </div>
-                </div>
-
-                {/* Add keyframes for auto-scroll progress animation to your CSS */}
-                <style jsx>{`
-                  @keyframes autoScrollProgress {
-                    0% { width: 0%; }
-                    100% { width: 100%; }
-                  }
-                `}</style>
+                <p className='text-sm pt-5'>
+                  was born in Los Angeles and raised in New York. He draws inspiration from the diverse influences of each city. LA exposed him to the glamorous Hollywood lifestyle, while New York instilled a sense of grit and determination.
+                  <br /> <br />
+                  In his first professional project, King embarked on the creation of HighTicketOfferFinancing.com. This innovative venture aimed to provide alternative funding solutions for entrepreneurs operating in industries traditionally overlooked by banks. Through this endeavor, he sought to help consultants and entrepreneurs earn significant profits, develop and sell high-value products and services, and safeguard themselves from legal implications using HTOF’s comprehensive workflows, standard operating procedures, and contract templates.
+                  <br /> <br />
+                  With a focus on helping entrepreneurs thrive and achieve remarkable financial milestones, King has received accolades such as the Man of the Moment and Made Man Award for his achievements. Through unwavering determination and an unwavering focus on the next best move, King aims to rewrite the rules of the game and help his clients leave an indelible mark on their respective industries and their family’s lives.
+                </p>
               </div>
             </div>
-          )}
+
+            <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
+              <div>
+                <img src={ALEXIS} alt="" />
+              </div>
+
+              <div className='flex flex-col justify-center items-start'>
+                <div>
+                  <h1 className='text-[#E7A647] text-2xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Alexis Holifield</h1>
+                </div>
+                <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Co-Founder of The Millennial Millionaire</p>
+
+                <p className='text-sm pt-5'>
+                  Alexis Holifield, began her journey to learning the laws of building generational wealth at the early age of 17 years old. She began her journey by attending a seminar put on by T. Harv Eker "Secrets Of The Millionaire Mind". Immediately, she began creating an archive of these "well-kept secrets of the wealthy" for the world to know. She went on to graduate with honors and complete a masters degree in life through first hand experience of wealth building, in addition the Multi-Millionaires she continues to be mentored by.
+                  <br /> <br />
+                  As a Licensed Insurance Broker, Financial Strategist, & Wealth Planner, Alexis dedicates her time as a coach and a mentor sharing Financial Intelligence and Investment Education to cultivate the minds of Millennials all over the nation. Her mission to advise families, individuals, and business owners to begin or enhance their journey to financial freedom to increase and preserve wealth is expressed in her ability to transform the paradigm, and financial states of her client. Specializing in Estate Planning, Cash Value Life Insurance, Retirement, and Executive Business Planning.
+                </p>
+              </div>
+            </div>
+
+            <div className='flex justify-center items-center'>
+              <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
+                <div>
+                  <img src={GENE} alt="" />
+                </div>
+
+                <div className='flex flex-col justify-center items-start'>
+                  <div>
+                    <h1 className='text-[#E7A647] text-2xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
+                  </div>
+                  <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
+
+                  <p className='text-sm pt-5'>
+                    Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
+                    management for high net worth individuals and families. With over a decade of strategic experience in the finance and insurance industry, Gene has established himself as a trusted
+                    advisor to discerning clients seeking sophisticated financial solutions.
+                    <br /> <br />
+                    Demonstrating exceptional performance, Gene has successfully written over $25 million in life
+                    insurance coverage, strategically managed in excess of $2.4 million in client assets, and
+                    facilitated more than $15 million in annuity premiums. His practice is precisely calibrated to
+                    serve high net worth clients, delivering nuanced financial strategies that address the complex
+                    wealth management needs of successful professionals and entrepreneurs.
+                    <br /> <br />
+                    Specializing in advanced retirement planning, comprehensive estate strategies, and tailored
+                    investment optimization, Gene provides a strategic approach that goes beyond standard
+                    financial advising. His expertise lies in crafting customized financial solutions that protect and
+                    grow wealth, with a keen understanding of the unique financial challenges facing high-net-worth
+                    individuals.
+                    <br /> <br />
+                    Gene's client-focused methodology combines rigorous financial acumen with a commitment to
+                    building long-term, trust-based relationships. By offering personalized guidance and strategic
+                    insights, he empowers clients to make informed decisions that align with their most significant
+                    financial objectives and legacy planning goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
     </>
   )
 }

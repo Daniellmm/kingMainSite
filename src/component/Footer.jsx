@@ -139,7 +139,7 @@ const Footer = () => {
   };
 
   return (
-    <div ref={footerRef} className='bg-white h-[60vh] pt-14 flex flex-col justify-between gap-y-5 items-center px-10 md:px-16'>
+    <div ref={footerRef} className='bg-white min-h-[60vh] pt-14 flex flex-col justify-between gap-y-5 items-center px-10 md:px-16'>
       <div className='grid lg:grid-cols-4 md:grid-cols-2 w-full gap-y-10'>
 
         <div ref={column1Ref} className='flex flex-col justify-start items-start'>
