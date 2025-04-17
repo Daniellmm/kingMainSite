@@ -104,8 +104,8 @@ const Funding = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'> 
-        <div className='z-10 relative pt-32 w-full flex flex-col justify-center items-center'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center md:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'> 
+        <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-7'>
               {/* <img src={MText} alt="" /> */}
@@ -145,7 +145,7 @@ const Funding = () => {
 
 
       <section className='overflow-hidden px-10 bg-white md:min-h-screen pb-14'>
-        <div className='flex flex-col justify-center items-center pt-24 pb-10'>
+        <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="fadeIn">
             <div className='pb-10'>
               <img src={AWW} alt="" />
@@ -164,8 +164,8 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black md:min-h-screen pb-14'>
-        <div className='flex flex-col justify-center items-center py-20'>
+      <section className='overflow-hidden px-10 bg-black md:min-h-screen  '>
+        <div className='flex flex-col justify-center items-center py-10'>
           <ScrollAnimation animation="zoomIn" >
             <div>
               <h1 className='text-[#E7A647] pb-10 text-3xl text-center lg:px-44 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Discover the Secrets to Building a Funding Business with Unlimited Earning Potential </h1>
@@ -345,8 +345,8 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white flex justify-center items-center  min-h-[70vh] pb-14'>
-        <div className='flex justify-center items-center pt-10'>
+      <section className='overflow-hidden px-10 bg-white flex justify-center items-center  min-h-[60vh] pb-10'>
+        <div className='flex justify-center items-center pt-7'>
           <div className='grid '>
 
             <div className='flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center '>
@@ -404,7 +404,7 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black md:min-h-screen pb-14'>
+      <section className='overflow-hidden px-5 bg-black md:min-h-screen'>
         <div className='flex flex-col justify-center items-center py-10'>
           <ScrollAnimation animation="zoomIn">
             <div>
@@ -506,8 +506,8 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white flex justify-center items-center min-h-screen pb-14'>
-        <div className='flex justify-center items-center pt-20'>
+      <section className='overflow-hidden px-10 bg-white flex justify-center items-center md:min-h-screen pb-14'>
+        <div className='flex justify-center items-center pt-5'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <div className='flex justify-center items-center'>
               <ScrollAnimation animation="slideRight">
@@ -535,8 +535,8 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black flex justify-center items-center min-h-screen pb-14'>
-        <div className='flex justify-center items-center pt-20'>
+      <section className='overflow-hidden px-10 bg-black flex justify-center items-center min-h-screen pb-8'>
+        <div className='flex justify-center items-center pt-6'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
 
             <div className='flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center '>
@@ -603,7 +603,7 @@ const Funding = () => {
 
             <ScrollAnimation animation="slideLeft">
               <div className='flex justify-center pt-8 lg:pt-0 items-center'>
-                <div className='pb-10'>
+                <div className=''>
                   <img src={SCI} className='md:h-[400px]' alt="" />
                 </div>
               </div>
@@ -613,7 +613,7 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-white min-h-[55vh]'>
+      <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-white min-h-[40vh]'>
         <div className='flex flex-col justify-center items-center text-[#E7A647] gap-y-5'>
           <ScrollAnimation animation="zoomIn" >
             <h1 className=' text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Spots Are Filling Fast – Secure Yours Today! </h1>
