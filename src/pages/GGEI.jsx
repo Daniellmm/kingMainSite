@@ -166,8 +166,8 @@ const GGEI = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
-        <div className='z-10 relative pt-40 w-full flex flex-col justify-center items-center'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
+        <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-7'>
               {/* <img src={MText} alt="" /> */}
@@ -207,8 +207,8 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white min-h-[50vh] pb-14'>
-        <div className='flex flex-col justify-center items-center pt-24 '>
+      <section className='overflow-hidden flex justify-center px-10 bg-white lg:min-h-[50vh] pb-14'>
+        <div className='flex flex-col justify-center items-center pt-8 '>
 
           <ScrollAnimation animation="zoomIn" delay={0.4}>
             <div className='lg:px-24'>
@@ -223,8 +223,8 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black min-h-[50vh] pb-14'>
-        <div className='flex flex-col md:flex-row justify-center items-center gap-20 pt-24 '>
+      <section className='overflow-hidden px-10 bg-black lg:min-h-[50vh] pb-14'>
+        <div className='flex flex-col md:flex-row justify-center items-center gap-x-20 gap-y-8 pt-10 '>
           <div className=''>
             <ScrollAnimation animation="slideRight" delay={0.2}>
               <img src={SCI} alt="" />
@@ -326,8 +326,8 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black min-h-[50vh] pb-14'>
-        <div className='flex flex-col lg:flex-row justify-center md:px-32 items-center gap-20 pt-24 '>
+      <section className='overflow-hidden px-10 bg-black lg:min-h-[50vh] pb-14'>
+        <div className='flex flex-col lg:flex-row justify-center md:px-32 items-center gap-20 pt-10 '>
           <div className='flex gap-y-4 flex-col justify-start items-start lg:w-1/2 font-normal'>
             <ScrollAnimation animation="zoomIn">
               <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
@@ -359,7 +359,7 @@ const GGEI = () => {
 
 
       <section className='overflow-hidden px-10 bg-white min-h-[50vh] pb-14'>
-        <div className='flex flex-col lg:flex-row justify-center md:px-32 items-center gap-10 pt-24 '>
+        <div className='flex flex-col lg:flex-row justify-center md:px-32 items-center gap-10 pt-10 '>
           <div className='flex gap-y-4 flex-col justify-start items-start lg:w-1/2 font-normal'>
             <ScrollAnimation animation="zoomIn">
               <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
@@ -389,7 +389,7 @@ const GGEI = () => {
 
 
       <section className='overflow-hidden px-10 bg-black min-h-[50vh] pb-14'>
-        <div className='flex flex-col md:flex-row justify-center items-center md:px-32 gap-20 pt-24 '>
+        <div className='flex flex-col md:flex-row justify-center items-center md:px-32 gap-x-20 gap-y-10 pt-10 '>
           <div className=''>
             <ScrollAnimation animation="slideDown" delay={0.4}>
               <img src={DART} alt="" />
@@ -410,7 +410,7 @@ const GGEI = () => {
       </section>
 
 
-      <section className='hidden lg:block overflow-hidden px-10 bg-white min-h-[100vh] pb-20 large-screen'>
+      <section className='hidden lg:block overflow-hidden px-10 bg-white lg:min-h-[100vh] pb-20 large-screen'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
@@ -510,13 +510,13 @@ const GGEI = () => {
       </section>
 
 
-      <section className='lg:hidden overflow-hidden px-10 bg-white min-h-[100vh] pb-20 medium-small-screen'>
+      <section className='lg:hidden overflow-hidden px-10 bg-white min-h-[50vh] pb-20 medium-small-screen'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
           </ScrollAnimation>
 
-          <div className='pt-44 '>
+          <div className='pt-3 '>
             <TeamSlider teamMembers={teamMembers} />
           </div>
         </div>
@@ -591,20 +591,20 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden flex justify-center items-center px-10 bg-white min-h-[80vh] pb-14'>
+      <section className='overflow-hidden flex justify-center items-center bg-white min-h-[80vh] pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-28'>
           <div className='grid md:grid-cols-2 gap-10'>
 
             <div className='flex flex-col gap-5 justify-center'>
               <div>
                 <ScrollAnimation animation="zoomIn">
-                  <h1 className='text-[#E7A647] text-4xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  <h1 className='text-[#E7A647] px-10 text-4xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                     What You’ll Learn at the Summit:
                   </h1>
                 </ScrollAnimation>
               </div>
 
-              <div className='flex flex-col justify-start items-start gap-y-5 text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
+              <div className='flex flex-col px-5 justify-start items-start gap-y-5 text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
                 <ScrollAnimation animation="slideRight" delay={0.3}>
                   <div className='flex gap-3 justify-center items-center text-gray-700'>
                     <img src={CHECK} className='h-7' alt="" />
@@ -645,7 +645,7 @@ const GGEI = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <div>
-                <img src={LAPTOP} className='lg:h-[400px]' alt="" />
+                <img src={LAPTOP} className='px-10 lg:h-[400px]' alt="" />
               </div>
             </ScrollAnimation>
           </div>
