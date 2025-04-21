@@ -110,7 +110,7 @@ const LaserFund = () => {
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
-            <div className='pb-7'>
+            <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
               <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 BECOMES A MASTER TRADER
@@ -120,7 +120,7 @@ const LaserFund = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white pb-5 text-center text-sm md:text-xl' style={{ fontFamily: 'Minion Pro, serif' }}>Master the markets, build wealth, create passive income,
+              <p className='text-white pb-8 text-center text-sm md:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}>Master the markets, build wealth, create passive income,
                 and learn the secrets to successful trading.</p>
             </div>
 
@@ -153,18 +153,18 @@ const LaserFund = () => {
           <div className='grid md:grid-cols-2 gap-y-10 '>
             <ScrollAnimation animation="slideRight" delay={0.2}>
               <div>
-                <img src={DISC} className='h-96' alt="" />
+                <img src={DISC} className='md:h-[500px]' alt="" />
               </div>
             </ScrollAnimation>
 
             <div className='flex flex-col justify-center items-start gap-y-6'>
               <ScrollAnimation animation="zoomIn">
-                <h1 className='text-[#E7A647] text-3xl  md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Want to learn Crypto? </h1>
+                <h1 className='text-[#E7A647] text-3xl lg:text-[45px] md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Want to learn Crypto? </h1>
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideUp" delay={0.3}>
                 <div>
-                  <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Get our “Buy The Dip Crypto Series: How I 7x’d My Crypto Portfolio is 3  months Buying & Selling Crypto on Coinbase”.</p>
+                  <p className='md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Get our “Buy The Dip Crypto Series: How I 7x’d My Crypto Portfolio is 3  months Buying & Selling Crypto on Coinbase”.</p>
                 </div>
               </ScrollAnimation>
 
@@ -185,23 +185,23 @@ const LaserFund = () => {
         <div className='flex flex-col justify-center items-start pt-10 lg:px-40'>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] px-10 text-3xl  md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Are you ready to take control of your financial future?</h1>
+              <h1 className='text-[#E7A647] px-10 text-3xl lg:text-[45px] leading-[45px]  md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Are you ready to take control of your financial future?</h1>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideDown" delay={0.1}>
             <div>
-              <p className='text-white py-5 px-10 text-sm tracking-wider ' style={{ fontFamily: 'Minion Pro, serif' }}>Whether you’re a beginner or an experienced trader, The Laser Fund PAMM Trading & Education Network will equip you with the skills, strategies, and tools you need to master the markets and create long-term wealth. </p>
+              <p className='text-white md:text-[18px] leading-[25px] py-5 px-10 text-sm tracking-wider ' style={{ fontFamily: 'Minion Pro, serif' }}>Whether you’re a beginner or an experienced trader, The Laser Fund PAMM Trading & Education Network will equip you with the skills, strategies, and tools you need to master the markets and create long-term wealth. </p>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideDown" delay={0.2}>
             <div>
-              <h1 className='text-white text-lg px-10 pb-3' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>We provide comprehensive training in: </h1>
+              <h1 className='text-white md:text-[19px] text-lg px-10 pb-3' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>We provide comprehensive training in: </h1>
             </div>
           </ScrollAnimation>
 
-          <div className='flex flex-col px-5 justify-start items-start gap-y-5'>
+          <div className='flex flex-col px-5 md:text-[18px] justify-start items-start gap-y-5'>
             <ScrollAnimation animation="slideDown" delay={0.3}>
               <div className='flex gap-3 justify-center items-center text-white'>
                 <img src={CHECK} className='h-7' alt="" />
@@ -243,13 +243,13 @@ const LaserFund = () => {
           <div className='grid md:grid-cols-2 gap-y-10 gap-x-10'>
             <ScrollAnimation animation="slideRight" delay={0.2}>
               <div>
-                <img src={LASER} className='lg:pt-16 px-10' alt="" />
+                <img src={LASER} className='lg:pt-16 px-10 md:px-0' alt="" />
               </div>
             </ScrollAnimation>
 
-            <div className=' flex flex-col justify-center gap-y-5'>
+            <div className=' flex flex-col md:text-[18px] justify-center gap-y-5'>
               <ScrollAnimation animation="zoomIn">
-                <h1 className='text-[#E7A647]  text-3xl px-10 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                <h1 className='text-[#E7A647]  text-3xl lg:text-[45px] leading-[45px] px-10 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                   As a Member of The Laser Fund PAMM Trading & Education Network
                 </h1>
               </ScrollAnimation>
@@ -260,7 +260,7 @@ const LaserFund = () => {
                 </p>
               </ScrollAnimation>
 
-              <div className='px-5'>
+              <div className='px-5 flex flex-col gap-y-4'>
                 <ScrollAnimation animation="slideLeft" delay={0.3}>
                   <div className='flex  justify-start items-start gap-x-3 '>
                     <div>
@@ -371,12 +371,12 @@ const LaserFund = () => {
 
             <div className=' flex flex-col justify-center gap-y-5'>
               <ScrollAnimation animation="zoomIn">
-                <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                   What You’ll Have Access To
                 </h1>
               </ScrollAnimation >
 
-              <div className='flex flex-col items-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <div className='flex flex-col md:text-[20px] gap-y-4 items-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 <ScrollAnimation animation="slideRight" delay={0.2}>
                   <div className='flex justify-center items-center gap-x-2 text-white'>
                     <div className='h-1 bg-white w-1 rounded-full'></div>
@@ -426,15 +426,15 @@ const LaserFund = () => {
             <div className='flex flex-col justify-center'>
               <ScrollAnimation animation="zoomIn" delay={0.1}>
                 <div className='px-10'>
-                  <h1 className='text-[#E7A647] text-4xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Perfect for All Skill Levels</h1>
+                  <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Perfect for All Skill Levels</h1>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideUp" delay={0.2}>
-                <p className='text-gray-600 px-10 pt-5 pb-5' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Whether you’ve never placed a trade before or you’ve been trading for years, our platform is designed to meet you where you are and take you to the next level. </p>
+                <p className='text-gray-600 px-10 pt-5 pb-5 md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Whether you’ve never placed a trade before or you’ve been trading for years, our platform is designed to meet you where you are and take you to the next level. </p>
               </ScrollAnimation>
 
-              <div className='flex flex-col px-5 justify-start items-start gap-y-5' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <div className='flex flex-col px-5 justify-start md:text-[18px] items-start gap-y-5' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 <ScrollAnimation animation="slideUp" delay={0.3}>
                   <div className='flex gap-3 justify-center items-center text-black'>
                     <img src={CHECK} className='h-7' alt="" />
@@ -479,7 +479,7 @@ const LaserFund = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.1}>
-            <h1 className='text-[#E7A647] text-center pb-10 text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
+            <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
           </ScrollAnimation>
 
           <div className="w-full">
@@ -648,15 +648,15 @@ const LaserFund = () => {
             <div className='flex flex-col  justify-center'>
               <ScrollAnimation animation="zoomIn">
                 <div className='px-10'>
-                  <h1 className='text-[#E7A647] text-4xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>LIMITED SPOTS AVAILABLE</h1>
+                  <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>LIMITED SPOTS AVAILABLE</h1>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideLeft" delay={0.2}>
-                <p className='text-gray-600 px-10 pt-5 pb-5 font-light' style={{ fontFamily: 'Montserrat, serif' }}>Join The Laser Fund Trading & Education Network today and get:
+                <p className='text-gray-600 px-10 md:text-[20px] pt-5 pb-5 font-light' style={{ fontFamily: 'Montserrat, serif' }}>Join The Laser Fund Trading & Education Network today and get:
                 </p>
               </ScrollAnimation>
-              <div className='flex flex-col px-5 justify-start items-start gap-y-5 text-gray-500' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <div className='flex flex-col md:text-[18px] px-5 justify-start items-start gap-y-5 text-gray-500' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 <ScrollAnimation animation="slideLeft" delay={0.3}>
                   <div className='flex gap-3 justify-center items-center '>
                     <img src={CHECK} className='h-7' alt="" />
@@ -700,7 +700,7 @@ const LaserFund = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.5}>
               <div className='px-10'>
-                <img src={LAY} alt="" />
+                <img src={LAY} className='md:w-[600px]' alt="" />
               </div>
             </ScrollAnimation>
           </div>
@@ -711,12 +711,12 @@ const LaserFund = () => {
       <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-black min-h-[55vh] py-10'>
         <div className='flex flex-col justify-center items-center  gap-y-5'>
           <ScrollAnimation animation="zoomIn">
-            <h1 className=' text-3xl text-center font-semibold text-[#E7A647]' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>BONUS: Get Started Today and Receive a Free Trading Strategy Guide ($197 Value)!</h1>
+            <h1 className=' text-3xl lg:text-[45px] leading-[45px] text-center font-semibold text-[#E7A647]' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>BONUS: Get Started Today and Receive a Free Trading Strategy Guide ($197 Value)!</h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
-            <h2 className=' text-xl font-semibold text-white text-center' style={{ fontFamily: 'Montserrat, serif', fontWeight: 200, fontStyle: 'normal' }}>Don’t miss this opportunity to transform your financial future.</h2>
-            <h2 className=' text-xl font- text-white text-center' style={{ fontFamily: 'Montserrat, serif', fontWeight: 200, fontStyle: 'normal' }}>Click Below to Get Started Now!  </h2>
+            <h2 className=' text-xl font-semibold text-white text-center md:text-[28px] pb-5' style={{ fontFamily: 'Montserrat, serif', fontWeight: 200, fontStyle: 'normal' }}>Don’t miss this opportunity to transform your financial future.</h2>
+            <h2 className=' text-xl font- text-white text-center md:text-[22px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 200, fontStyle: 'normal' }}>Click Below to Get Started Now!  </h2>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.5}>
             <div className='pt-7'>

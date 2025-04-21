@@ -74,7 +74,7 @@ const Home = () => {
 
   return (
     <>
-
+ 
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
@@ -256,7 +256,7 @@ const Home = () => {
             <div className='flex flex-col justify-center py-10 md:px-10 gap-[15px]'>
               <ScrollAnimation animation='zoomIn'>
                 <div>
-                  <h1 className='text-[#E7A647] font-semibold text-3xl lg:text-[45px] leading-[55px]' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
+                  <h1 className='text-[#E7A647] font-semibold `text-3xl lg:text-[45px]` leading-[55px]' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
                 </div>
               </ScrollAnimation>
 

@@ -245,7 +245,7 @@ const Insurance = () => {
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
-            <div className='pb-7'>
+            <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
               <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 95% DON'T DO THIS
@@ -255,7 +255,7 @@ const Insurance = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white pb-5 text-center text-sm md:text-xl' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
+              <p className='text-white pb-8 text-center text-sm md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
             </div>
 
             <div className='flex w-full justify-center'>
@@ -287,10 +287,10 @@ const Insurance = () => {
           <div className='flex flex-col justify-center items-center pt-10 '>
 
             <div className='lg:px-24'>
-              <h1 className='text-black text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>The definition of insanity is doing the same thing over and over again and expecting a different result." It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today.</h1>
+              <h1 className='text-black text-center md:text-[26px] leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>The definition of insanity is doing the same thing over and over again and expecting a different result." It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today.</h1>
             </div>
             <div>
-              <h1 className='text-[#E7A647] text-2xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>C.e.o, Founder</h1>
+              <h1 className='text-[#E7A647] text-3xl md:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>C.e.o, Founder</h1>
             </div>
           </div>
         </ScrollAnimation>
@@ -302,12 +302,12 @@ const Insurance = () => {
           <div className='grid md:grid-cols-2 gap-x-11 gap-y-10'>
             <ScrollAnimation animation="slideRight" delay={0.2}>
               <div>
-                <img src={HEADPHONE} className='h-80' alt="" />
+                <img src={HEADPHONE} className='md:h-96' alt="" />
               </div>
             </ScrollAnimation >
             <div className='flex flex-col justify-center items-start'>
               <ScrollAnimation animation="slideUp" delay={0.3}>
-                <h1 className='text-[#E7A647] pb-10 text-3xl  md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Book a <span className='text-white italic'>Free</span>  Financial Review and Get the "Spender, Saver, Wealth Creator" Audio FREE. </h1>
+                <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-[45px] md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Book a <span className='text-white italic'>Free</span>  Financial Review and Get the "Spender, Saver, Wealth Creator" Audio FREE. </h1>
               </ScrollAnimation>
               <div>
                 <ScrollAnimation animation="slideUp" delay={0.4}>
@@ -326,7 +326,7 @@ const Insurance = () => {
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] pb-10 text-3xl text-center md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}> About YellowBrick Financial — A Company That Cares </h1>
+              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] text-center md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}> About YellowBrick Financial — A Company That Cares </h1>
             </div>
           </ScrollAnimation>
           <div className='grid md:grid-cols-2 gap-x-16 lg:px-40 gap-y-10'>
@@ -337,7 +337,7 @@ const Insurance = () => {
             </ScrollAnimation>
             <div>
               <ScrollAnimation animation="slideLeft" delay={0.4}>
-                <p className='text-black text-sm ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                <p className='text-black text-sm md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                   78% of Americans live paycheck to paycheck, and nearly half (49%) have less than $500 in savings. The truth is, the wealthy don't just invest wisely—they structure and protect their money differently. Billionaires like Warren Buffett aren't just investors; they leverage life insurance, tax-efficient financial strategies, and asset protection to ensure their wealth continues to grow—regardless of economic conditions.
                   <br /><br />
                   At YellowBrick Financial, we believe financial security isn't a luxury—it's a necessity. We are  committed to helping entrepreneurs correct critical financial mistakes by structuring financial  plans the right way—designed to grow, protect, and pass down wealth for generations. We  teach our clients what the wealthy already know: how to build financial independence with  strategies that work in both good times and bad.
@@ -354,7 +354,7 @@ const Insurance = () => {
         <div className='flex flex-col justify-center items-center lg:px-64 '>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] text-center pb-10 text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Even if you believe your financials are on track, you should still get a FREE financial
+              <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Even if you believe your financials are on track, you should still get a FREE financial
                 review.
               </h1>
             </div>
@@ -362,7 +362,7 @@ const Insurance = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.2}>
             <div>
-              <p className='text-white text-sm font-extralight text-center leading-6 lg:px-20 ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>88% of financial plans and life insurance policies are improperly structured, leaving families exposed to unnecessary taxes, lost wealth, and financial instability when they need protection the most.</p>
+              <p className='text-white text-sm md:text-[20px] font-extralight text-center leading-6 lg:px-20 ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>88% of financial plans and life insurance policies are improperly structured, leaving families exposed to unnecessary taxes, lost wealth, and financial instability when they need protection the most.</p>
             </div>
           </ScrollAnimation>
         </div>
@@ -373,20 +373,20 @@ const Insurance = () => {
         <div className='flex justify-center items-center pt-10 lg:px-20'>
           <div className='grid md:grid-cols-2 gap-x-20 gap-y-10'>
             <ScrollAnimation animation="slideRight" delay={0.2}>
-              <div>
-                <img src={FALLCOIN} className='h-96' alt="" />
+              <div className='flex justify-end'>
+                <img src={FALLCOIN} className='md:h-[500px]' alt="" />
               </div>
             </ScrollAnimation>
 
             <div className=' flex flex-col justify-center gap-y-5'>
               <ScrollAnimation animation="zoomIn">
-                <h1 className='text-[#E7A647] text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                   Even if you believe your financials are on track, you should still get a FREE financial review.
                 </h1>
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideUp" delay={0.3}>
-                <p className=' text-sm font-extralight text-gray-900 leading-6' style={{ fontFamily: 'Montserrat, serif' }}>
+                <p className=' text-sm font-extralight text-gray-900 md:text-[18px] leading-6' style={{ fontFamily: 'Montserrat, serif' }}>
                   88% of financial plans and life insurance policies are improperly structured,
                   leaving families exposed to unnecessary taxes,
                   lost wealth, and financial instability when they need protection the most.
@@ -394,7 +394,7 @@ const Insurance = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideUp" delay={0.5}>
-                <p className='text-black font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                <p className='text-black font-semibold md:text-[18px]' style={{ fontFamily: 'Minion Pro, serif' }}>
                   Are You Ready to Know Exactly What You Need to Do to Get Your Company Financials on Track?
                 </p>
               </ScrollAnimation>
@@ -419,7 +419,7 @@ const Insurance = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.2}>
-            <h1 className='text-[#E7A647] text-center pb-10 text-3xl' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
+            <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px]' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
           </ScrollAnimation>
           <div className="w-full">
             {/* Desktop/Large Screen Layout */}
@@ -584,7 +584,7 @@ const Insurance = () => {
         <div className='flex flex-col justify-center items-center pt-10'>
           <div>
           <ScrollAnimation animation="zoomIn" delay={0.2}>
-            <h1 className='text-[#E7A647] text-center pb-10 text-3xl font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet the Team</h1>
+            <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet the Team</h1>
           </ScrollAnimation>
           </div>
 
@@ -596,7 +596,7 @@ const Insurance = () => {
 
               <div className='flex flex-col justify-center items-start'>
                 <div>
-                  <h1 className='text-[#E7A647] text-2xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King Edwards</h1>
+                  <h1 className='text-[#E7A647] text-3xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King Edwards</h1>
                 </div>
                 <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King, a visionary, funding expert, and author</p>
 
@@ -617,7 +617,7 @@ const Insurance = () => {
 
               <div className='flex flex-col justify-center items-start'>
                 <div>
-                  <h1 className='text-[#E7A647] text-2xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Alexis Holifield</h1>
+                  <h1 className='text-[#E7A647] text-3xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Alexis Holifield</h1>
                 </div>
                 <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Co-Founder of The Millennial Millionaire</p>
 
@@ -637,7 +637,7 @@ const Insurance = () => {
 
                 <div className='flex flex-col justify-center items-start'>
                   <div>
-                    <h1 className='text-[#E7A647] text-2xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
+                    <h1 className='text-[#E7A647] text-3xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
                   </div>
                   <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
 

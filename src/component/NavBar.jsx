@@ -190,18 +190,8 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600' : ''}`}
+                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/')}
-                onMouseEnter={(e) => handleLinkHover(e, true)}
-                onMouseLeave={(e) => handleLinkHover(e, false)}
-              >
-                Home
-              </li>
-              <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                data-path="/funding"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/funding')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
@@ -209,8 +199,18 @@ const NavBar = () => {
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                data-path="/funding"
+                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/funding')}
+                onMouseEnter={(e) => handleLinkHover(e, true)}
+                onMouseLeave={(e) => handleLinkHover(e, false)}
+              >
+                SYOFB
+              </li>
+              <li
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/insurance"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600' : ''}`}
+                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/insurance')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -220,22 +220,22 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/laserfund"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600' : ''}`}
+                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/laserfund')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
-                LaserFund
+                Trading
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/ggei"
-                className={`font-semibold text-lg md:text-sm cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600' : ''}`}
+                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/ggei')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
-                GGEI
+                Become A Bank
               </li>
             </ul>
           </div>
@@ -262,38 +262,38 @@ const NavBar = () => {
             <ul className='flex space-y-4 justify-center items-center flex-col'>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600' : ''}`}
+                className={` text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/')}
-              >
-                Home
-              </li>
-              <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/funding')}
               >
                 Funding
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600' : ''}`}
+                className={`text-lg cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/funding')}
+              >
+                SYOFB
+              </li>
+              <li
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                className={` text-lg cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/insurance')}
               >
                 Insurance
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600' : ''}`}
+                className={` text-lg cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/laserfund')}
               >
-                LaserFund
+                Trading
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={`font-semibold text-lg cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600' : ''}`}
+                className={` text-lg cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/ggei')}
               >
-                GGEI
+                Become A Bank
               </li>
 
               <div className='w-[114px] border border-1 rounded-lg border-black'>
