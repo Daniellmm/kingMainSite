@@ -282,7 +282,7 @@ const Insurance = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white min-h-[40vh]'>
+      <section className='overflow-hidden px-10 bg-white min-h-[40vh] pb-10'>
         <ScrollAnimation animation="fadeIn" delay={0.5}>
           <div className='flex flex-col justify-center items-center pt-10 '>
 
@@ -350,7 +350,7 @@ const Insurance = () => {
       </section>
 
 
-      <section className='overflow-hidden flex flex-col justify-center items-center px-10 bg-black min-h-[48vh]'>
+      <section className='overflow-hidden flex flex-col justify-center items-center px-10 py-7 bg-black min-h-[48vh]'>
         <div className='flex flex-col justify-center items-center lg:px-64 '>
           <ScrollAnimation animation="zoomIn">
             <div>

@@ -296,7 +296,7 @@ const NavBar = () => {
                 GGEI
               </li>
 
-              <div className='w-[102px] border border-1 rounded-lg border-black'>
+              <div className='w-[114px] border border-1 rounded-lg border-black'>
                 <button
                   style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                   className='bg-Btn text-black rounded-lg text-sm py-3 px-4 border-black transition-transform duration-500'
