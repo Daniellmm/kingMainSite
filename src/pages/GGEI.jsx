@@ -179,7 +179,7 @@ const GGEI = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white text-center text-sm md:text-[28px] pb-8' style={{ fontFamily: 'Minion Pro, serif' }}>Turn Your Business Into a Bank That Grows Your Wealth Aggressively
+              <p className='text-white text-center  md:text-[28px] pb-8' style={{ fontFamily: 'Minion Pro, serif' }}>Turn Your Business Into a Bank That Grows Your Wealth Aggressively
                 & Consistently at GGEI’s</p>
             </div>
 
@@ -190,7 +190,7 @@ const GGEI = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Secure My Spot
               </button>
             </div>
@@ -266,7 +266,7 @@ const GGEI = () => {
 
             <div className='md:text-[20px]' >
               <ScrollAnimation animation="slideUp" delay={0.4}>
-                <p className='text-sm font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
+                <p className=' font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
                   <br /><br />
                   I co-founded this powerful group because I am committed to helping entrepreneurs avoid the pain I experienced after making an extraordinary amount of money, losing it all, and having to rebuild from scratch.
                   <br /><br />
@@ -281,7 +281,7 @@ const GGEI = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="zoomIn" delay={0.6}>
-                <p className='text-sm font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>After experiencing such a tremendous loss, I went on a mission to uncover the true secrets to building and sustaining wealth. What I realized was that most of us have been misled.
+                <p className=' font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>After experiencing such a tremendous loss, I went on a mission to uncover the true secrets to building and sustaining wealth. What I realized was that most of us have been misled.
                   <br /><br />
                   Many believe that wealth is built solely by earning more money. Others, the more financially savvy entrepreneurs, think investing is the key. While both are essential components of wealth-building, neither guarantees financial security on their own.
                 </p>
@@ -296,7 +296,7 @@ const GGEI = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.4}>
-            <p className='pb-5 text-sm font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+            <p className='pb-5  font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
               • If you rely solely on earning money, you will inevitably spend it to sustain your lifestyle. <br />
               • If you rely solely on investing, you risk losing it to bad investments or unfavorable market conditions.
             </p>
@@ -308,14 +308,14 @@ const GGEI = () => {
             </p>
           </ScrollAnimation >
           <ScrollAnimation animation="slideUp" delay={0.8}>
-            <ol className='pb-5 font-bold text-sm leading-[25px] md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+            <ol className='pb-5 font-bold  leading-[25px] md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
               <li>Earning more money</li>
               <li>Protecting the money you’ve earned</li>
               <li>Growing the money you’ve protected </li>
             </ol>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.9}>
-            <p className='font-extralight text-sm md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+            <p className='font-extralight  md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
               At the Become Your Own Bank Summit, we will teach you how to implement a systematic approach to mastering all three—quickly and aggressively.
             </p>
             <p className='text-lg font-semibold md:text-[22px] pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
@@ -342,7 +342,7 @@ const GGEI = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.5}>
               <div>
-                <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                   I Want To Secure A Spot
                 </button>
               </div>
@@ -542,7 +542,7 @@ const GGEI = () => {
               </div>
 
               <ScrollAnimation animation="slideLeft" delay={0.2}>
-                <p className='text-white text-sm pt-5 pb-5 font-extralight md:text-[20px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+                <p className='text-white  pt-5 pb-5 font-extralight md:text-[20px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
                   The Global Group Economic Initiative is committed to helping entrepreneurs build real wealth by changing how they think about business, revenue, and wealth building.
                   <br /> <br />
                   To help you break free from financial limitations, High Ticket Offer Financing has partnered with the Millennial Millionaire to create the Global Group Economic Initiative—a
@@ -550,7 +550,7 @@ const GGEI = () => {
                 </p>
               </ScrollAnimation >
 
-              <div className='flex flex-col justify-start items-start md:text-[18px] gap-y-5 text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
+              <div className='flex flex-col justify-start items-start md:text-[18px] gap-y-5  font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
                 <ScrollAnimation animation="slideLeft" delay={0.3}>
                   <div className='flex gap-3 justify-center items-center text-white'>
                     <img src={CHECK} className='h-7' alt="" />
@@ -604,7 +604,7 @@ const GGEI = () => {
                 </ScrollAnimation>
               </div>
 
-              <div className='flex flex-col px-5 justify-start md:text-[18px] leading-[25px] items-start gap-y-5 text-sm font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
+              <div className='flex flex-col px-5 justify-start md:text-[18px] leading-[25px] items-start gap-y-5  font-extralight' style={{ fontFamily: 'Montserrat, serif' }}>
                 <ScrollAnimation animation="slideRight" delay={0.3}>
                   <div className='flex gap-3 justify-center items-center text-gray-700'>
                     <img src={CHECK} className='h-7' alt="" />
@@ -683,7 +683,7 @@ const GGEI = () => {
 
             <ScrollAnimation animation="slideUp" delay={0.6}>
               <div>
-                <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                   I Want To Secure A Spot
                 </button>
               </div>

@@ -120,7 +120,7 @@ const LaserFund = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white pb-8 text-center text-sm md:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}>Master the markets, build wealth, create passive income,
+              <p className='text-white pb-8 text-center  md:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}>Master the markets, build wealth, create passive income,
                 and learn the secrets to successful trading.</p>
             </div>
 
@@ -131,7 +131,7 @@ const LaserFund = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Review Disclaimer
               </button>
             </div>
@@ -170,7 +170,7 @@ const LaserFund = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.4}>
                 <div>
-                  <button className='bg-[#E7A647] px-5 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <button className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     FREE Financial Review
                   </button>
                 </div>
@@ -191,7 +191,7 @@ const LaserFund = () => {
 
           <ScrollAnimation animation="slideDown" delay={0.1}>
             <div>
-              <p className='text-white md:text-[18px] leading-[25px] py-5 px-10 text-sm tracking-wider ' style={{ fontFamily: 'Minion Pro, serif' }}>Whether you’re a beginner or an experienced trader, The Laser Fund PAMM Trading & Education Network will equip you with the skills, strategies, and tools you need to master the markets and create long-term wealth. </p>
+              <p className='text-white md:text-[18px] leading-[25px] py-5 px-10  tracking-wider ' style={{ fontFamily: 'Minion Pro, serif' }}>Whether you’re a beginner or an experienced trader, The Laser Fund PAMM Trading & Education Network will equip you with the skills, strategies, and tools you need to master the markets and create long-term wealth. </p>
             </div>
           </ScrollAnimation>
 
@@ -272,7 +272,7 @@ const LaserFund = () => {
                         1-on-1 Coaching
                       </h1>
 
-                      <p className='text-sm font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <p className=' font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                         Get personal guidance from seasoned trading experts. Our tailored coaching sessions help you develop a winning strategy and avoid costly mistakes.
                       </p>
 
@@ -291,7 +291,7 @@ const LaserFund = () => {
                         Proven Strategies
                       </h1>
 
-                      <p className='text-sm font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <p className=' font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                         Learn the exact methods used by professional traders to generate consistent profits in the forex, futures, and crypto markets.
                       </p>
 
@@ -310,7 +310,7 @@ const LaserFund = () => {
                         Live Trading Sessions
                       </h1>
 
-                      <p className='text-sm font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <p className=' font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                         Watch and learn from live market trades, understand market movements in real-time, and ask questions as they happen.
                       </p>
 
@@ -329,7 +329,7 @@ const LaserFund = () => {
                         Community of Traders
                       </h1>
 
-                      <p className='text-sm font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <p className=' font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                         Join a thriving community of like-minded traders. Share insights, ask questions, and grow together with the support of experienced mentors and fellow traders.
                       </p>
 
@@ -348,7 +348,7 @@ const LaserFund = () => {
                         Passive Income Opportunities
                       </h1>
 
-                      <p className='text-sm font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <p className=' font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                         We don’t just teach you how to trade—we show you how to create consistent passive income through strategic investing, automated trading bots, and other income-generating strategies.
                       </p>
 
@@ -720,7 +720,7 @@ const LaserFund = () => {
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.5}>
             <div className='pt-7'>
-              <button className='bg-[#E7A647] text-black px-3 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Review Disclaimer
               </button>
             </div>

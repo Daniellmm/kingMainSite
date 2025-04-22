@@ -208,7 +208,7 @@ const Insurance = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white pb-5 text-center text-sm md:text-xl' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
+              <p className='text-white pb-5 text-center  md:text-xl' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
             </div>
 
             <div className='flex w-full justify-center'>
@@ -217,7 +217,7 @@ const Insurance = () => {
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Check My Funding Eligibility
               </button>
             </div>
@@ -257,7 +257,7 @@ const Insurance = () => {
               </ScrollAnimation>
               <div>
                 <ScrollAnimation animation="slideUp" delay={0.4}>
-                  <button className='bg-[#E7A647] px-5 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <button className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     FREE Financial Review
                   </button>
                 </ScrollAnimation>
@@ -283,7 +283,7 @@ const Insurance = () => {
             </ScrollAnimation>
             <div>
               <ScrollAnimation animation="slideLeft" delay={0.4}>
-                <p className='text-black text-sm ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                <p className='text-black  ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                   78% of Americans live paycheck to paycheck, and nearly half (49%) have less than $500 in savings. The truth is, the wealthy don't just invest wisely—they structure and protect their money differently. Billionaires like Warren Buffett aren't just investors; they leverage life insurance, tax-efficient financial strategies, and asset protection to ensure their wealth continues to grow—regardless of economic conditions.
                   <br /><br />
                   At YellowBrick Financial, we believe financial security isn't a luxury—it's a necessity. We are  committed to helping entrepreneurs correct critical financial mistakes by structuring financial  plans the right way—designed to grow, protect, and pass down wealth for generations. We  teach our clients what the wealthy already know: how to build financial independence with  strategies that work in both good times and bad.
@@ -308,7 +308,7 @@ const Insurance = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.2}>
             <div>
-              <p className='text-white text-sm font-extralight text-center leading-6 lg:px-20 ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>88% of financial plans and life insurance policies are improperly structured, leaving families exposed to unnecessary taxes, lost wealth, and financial instability when they need protection the most.</p>
+              <p className='text-white  font-extralight text-center leading-6 lg:px-20 ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>88% of financial plans and life insurance policies are improperly structured, leaving families exposed to unnecessary taxes, lost wealth, and financial instability when they need protection the most.</p>
             </div>
           </ScrollAnimation>
         </div>
@@ -332,7 +332,7 @@ const Insurance = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideUp" delay={0.3}>
-                <p className=' text-sm font-extralight text-gray-900 leading-6' style={{ fontFamily: 'Montserrat, serif' }}>
+                <p className='  font-extralight text-gray-900 leading-6' style={{ fontFamily: 'Montserrat, serif' }}>
                   88% of financial plans and life insurance policies are improperly structured,
                   leaving families exposed to unnecessary taxes,
                   lost wealth, and financial instability when they need protection the most.
@@ -347,7 +347,7 @@ const Insurance = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.7}>
                 <div>
-                  <button className='bg-[#E7A647] px-5 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <button className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     FREE Financial Review
                   </button>
                 </div>
@@ -402,7 +402,7 @@ const Insurance = () => {
                     
                     {/* Apply ScrollAnimation to the bio text */}
                     <ScrollAnimation animation="slideUp" delay={0.4}>
-                      <p className='text-sm pt-5'>
+                      <p className=' pt-5'>
                         {member.bio.split('\n\n').map((paragraph, i) => (
                           <React.Fragment key={i}>
                             {paragraph}
@@ -440,7 +440,7 @@ const Insurance = () => {
                       <p className='text-lg italic font-semibold mb-4' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                         {teamMembers[currentSlide].title}
                       </p>
-                      <p className='text-sm'>
+                      <p className=''>
                         {teamMembers[currentSlide].bio.split('\n\n').map((paragraph, i) => (
                           <React.Fragment key={i}>
                             {paragraph}

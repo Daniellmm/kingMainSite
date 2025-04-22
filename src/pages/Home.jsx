@@ -90,7 +90,7 @@ const Home = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white pb-5 text-center text-sm md:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}>in Fast, Reliable Financing for You & Your Customers!</p>
+              <p className='text-white pb-5 text-center  md:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}>in Fast, Reliable Financing for You & Your Customers!</p>
             </div>
           </ScrollAnimation>
 
@@ -105,7 +105,7 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Check My Funding Eligibility
               </button>
             </div>
@@ -189,7 +189,7 @@ const Home = () => {
 
                   <ScrollAnimation animation="slideUp">
                     <div className='pt-14'>
-                      <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                         Download Now
                       </button>
                     </div>
@@ -256,42 +256,42 @@ const Home = () => {
             <div className='flex flex-col justify-center py-10 md:px-10 gap-[15px]'>
               <ScrollAnimation animation='zoomIn'>
                 <div>
-                  <h1 className='text-[#E7A647] font-semibold `text-3xl lg:text-[45px]` leading-[55px]' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
+                  <h1 className='text-[#E7A647] font-semibold text-3xl lg:text-[45px] leading-[55px]' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation='slideUp' delay={0.2}>
                 <div className='flex gap-x-3 pt-5 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
-                  <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>Small Business Loans Up to $3M</h1>
+                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>Small Business Loans Up to $3M</h1>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation='slideUp' delay={0.4}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
-                  <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>No Doc Funding Up to $200K</h1>
+                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>No Doc Funding Up to $200K</h1>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation='slideUp' delay={0.6}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
-                  <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>0% Business Funding Up to $150K</h1>
+                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>0% Business Funding Up to $150K</h1>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation='slideUp' delay={0.8}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
-                  <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>Home Equity Lines of Credit Up to $4M</h1>
+                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>Home Equity Lines of Credit Up to $4M</h1>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation='slideUp' delay={0.9}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
-                  <h1 className='text-white text-sm' style={{ fontFamily: 'Montserrat, serif' }}>And More…</h1>
+                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>And More…</h1>
                 </div>
               </ScrollAnimation>
 
@@ -323,7 +323,7 @@ const Home = () => {
                   <div><h1 className='font-bold text-2xl lg:text-[32px] py-3' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 1</h1></div>
 
                   <div>
-                    <h1 className=' text-sm font-bold lg:text-[24px] ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click “Apply Now”</h1>
+                    <h1 className='  font-bold lg:text-[24px] ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click “Apply Now”</h1>
                   </div>
 
                 </div>
@@ -340,7 +340,7 @@ const Home = () => {
                   <div><h1 className='font-bold text-2xl lg:text-[32px] py-3' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 2</h1></div>
 
                   <div>
-                    <h1 className=' text-sm font-bold lg:text-[24px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Same Day Pre-Approvals</h1>
+                    <h1 className='  font-bold lg:text-[24px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Same Day Pre-Approvals</h1>
                   </div>
 
                 </div>
@@ -357,7 +357,7 @@ const Home = () => {
                   <div><h1 className='font-bold text-2xl lg:text-[32px] py-3' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 3 </h1></div>
 
                   <div>
-                    <h1 className=' text-sm font-bold lg:text-[24px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Receive Your Funds</h1>
+                    <h1 className='  font-bold lg:text-[24px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Receive Your Funds</h1>
                   </div>
 
                 </div>
@@ -369,8 +369,8 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp">
             <div className='pt-10'>
-              <button className='bg-[#E7A647]  px-5 py-4 text-sm  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                {/* <button className='bg-[#E7A647] lg:w-[194px] lg:h-[64px] px-3 py-2 text-sm lg:text-[24px] font-[600] rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> */}
+              <button className='bg-[#E7A647]  px-5 py-4   rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                {/* <button className='bg-[#E7A647] lg:w-[194px] lg:h-[64px] px-3 py-2  lg:text-[24px] font-[600] rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> */}
                 Apply Now
               </button>
             </div>
@@ -398,11 +398,11 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black ' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
                 <div className='flex justify-between items-center w-full'>
-                  <p className='text-[#E7A647] text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+                  <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
 
                   <div className='flex justify-center items-center'>
                     <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
@@ -421,11 +421,11 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black ' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
                 <div className='flex justify-between items-center w-full'>
-                  <p className='text-[#E7A647] text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+                  <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
 
                   <div className='flex justify-center items-center'>
                     <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
@@ -444,11 +444,11 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black ' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
                 <div className='flex justify-between items-center w-full'>
-                  <p className='text-[#E7A647] text-sm' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+                  <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
 
                   <div className='flex justify-center items-center'>
                     <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
@@ -463,7 +463,7 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp">
             <div className='pt-10'>
-              <button className='bg-[#E7A647] px-5 py-4 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] px-5 py-4  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 View All Post
               </button>
             </div>
@@ -478,7 +478,7 @@ const Home = () => {
             <h1 className=' text-3xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Have Questions?</h1>
             <h2 className=' text-xl lg:text-[24px] font-semibold text-center' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 200, fontStyle: 'normal' }}>Complete questionnaire to speak to a representative.</h2>
             <div className='pt-1'>
-              <button className='bg-[#E7A647] text-black px-3 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Complete Questionnaire
               </button>
             </div>

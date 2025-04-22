@@ -255,7 +255,7 @@ const Insurance = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white pb-8 text-center text-sm md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
+              <p className='text-white pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
             </div>
 
             <div className='flex w-full justify-center'>
@@ -264,7 +264,7 @@ const Insurance = () => {
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Check My Funding Eligibility
               </button>
             </div>
@@ -311,7 +311,7 @@ const Insurance = () => {
               </ScrollAnimation>
               <div>
                 <ScrollAnimation animation="slideUp" delay={0.4}>
-                  <button className='bg-[#E7A647] px-5 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <button className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     FREE Financial Review
                   </button>
                 </ScrollAnimation>
@@ -337,7 +337,7 @@ const Insurance = () => {
             </ScrollAnimation>
             <div>
               <ScrollAnimation animation="slideLeft" delay={0.4}>
-                <p className='text-black text-sm md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                <p className='text-black  md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                   78% of Americans live paycheck to paycheck, and nearly half (49%) have less than $500 in savings. The truth is, the wealthy don't just invest wisely—they structure and protect their money differently. Billionaires like Warren Buffett aren't just investors; they leverage life insurance, tax-efficient financial strategies, and asset protection to ensure their wealth continues to grow—regardless of economic conditions.
                   <br /><br />
                   At YellowBrick Financial, we believe financial security isn't a luxury—it's a necessity. We are  committed to helping entrepreneurs correct critical financial mistakes by structuring financial  plans the right way—designed to grow, protect, and pass down wealth for generations. We  teach our clients what the wealthy already know: how to build financial independence with  strategies that work in both good times and bad.
@@ -362,7 +362,7 @@ const Insurance = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.2}>
             <div>
-              <p className='text-white text-sm md:text-[20px] font-extralight text-center leading-6 lg:px-20 ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>88% of financial plans and life insurance policies are improperly structured, leaving families exposed to unnecessary taxes, lost wealth, and financial instability when they need protection the most.</p>
+              <p className='text-white  md:text-[20px] font-extralight text-center leading-6 lg:px-20 ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>88% of financial plans and life insurance policies are improperly structured, leaving families exposed to unnecessary taxes, lost wealth, and financial instability when they need protection the most.</p>
             </div>
           </ScrollAnimation>
         </div>
@@ -386,7 +386,7 @@ const Insurance = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideUp" delay={0.3}>
-                <p className=' text-sm font-extralight text-gray-900 md:text-[18px] leading-6' style={{ fontFamily: 'Montserrat, serif' }}>
+                <p className='  font-extralight text-gray-900 md:text-[18px] leading-6' style={{ fontFamily: 'Montserrat, serif' }}>
                   88% of financial plans and life insurance policies are improperly structured,
                   leaving families exposed to unnecessary taxes,
                   lost wealth, and financial instability when they need protection the most.
@@ -401,7 +401,7 @@ const Insurance = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.7}>
                 <div>
-                  <button className='bg-[#E7A647] px-5 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <button className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     FREE Financial Review
                   </button>
                 </div>
@@ -600,7 +600,7 @@ const Insurance = () => {
                 </div>
                 <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King, a visionary, funding expert, and author</p>
 
-                <p className='text-sm pt-5'>
+                <p className=' pt-5'>
                   was born in Los Angeles and raised in New York. He draws inspiration from the diverse influences of each city. LA exposed him to the glamorous Hollywood lifestyle, while New York instilled a sense of grit and determination.
                   <br /> <br />
                   In his first professional project, King embarked on the creation of HighTicketOfferFinancing.com. This innovative venture aimed to provide alternative funding solutions for entrepreneurs operating in industries traditionally overlooked by banks. Through this endeavor, he sought to help consultants and entrepreneurs earn significant profits, develop and sell high-value products and services, and safeguard themselves from legal implications using HTOF’s comprehensive workflows, standard operating procedures, and contract templates.
@@ -621,7 +621,7 @@ const Insurance = () => {
                 </div>
                 <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Co-Founder of The Millennial Millionaire</p>
 
-                <p className='text-sm pt-5'>
+                <p className=' pt-5'>
                   Alexis Holifield, began her journey to learning the laws of building generational wealth at the early age of 17 years old. She began her journey by attending a seminar put on by T. Harv Eker "Secrets Of The Millionaire Mind". Immediately, she began creating an archive of these "well-kept secrets of the wealthy" for the world to know. She went on to graduate with honors and complete a masters degree in life through first hand experience of wealth building, in addition the Multi-Millionaires she continues to be mentored by.
                   <br /> <br />
                   As a Licensed Insurance Broker, Financial Strategist, & Wealth Planner, Alexis dedicates her time as a coach and a mentor sharing Financial Intelligence and Investment Education to cultivate the minds of Millennials all over the nation. Her mission to advise families, individuals, and business owners to begin or enhance their journey to financial freedom to increase and preserve wealth is expressed in her ability to transform the paradigm, and financial states of her client. Specializing in Estate Planning, Cash Value Life Insurance, Retirement, and Executive Business Planning.
@@ -641,7 +641,7 @@ const Insurance = () => {
                   </div>
                   <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
 
-                  <p className='text-sm pt-5'>
+                  <p className=' pt-5'>
                     Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
                     management for high net worth individuals and families. With over a decade of strategic experience in the finance and insurance industry, Gene has established himself as a trusted
                     advisor to discerning clients seeking sophisticated financial solutions.

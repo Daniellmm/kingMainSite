@@ -239,7 +239,7 @@ const Footer = () => {
 
             <div className='w-full overflow-hidden'>
               <button 
-                className='bg-[#E7A647] w-full px-3 py-4 text-sm rounded-[5px] transform transition-all duration-300' 
+                className='bg-[#E7A647] w-full px-3 py-4  rounded-[5px] transform transition-all duration-300' 
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 onMouseEnter={(e) => handleButtonHover(e, true)}
                 onMouseLeave={(e) => handleButtonHover(e, false)}
@@ -254,11 +254,11 @@ const Footer = () => {
       <div className='flex flex-col gap-y-7 justify-between w-full items-center'>
         <div ref={dividerRef} className='h-[1px] bg-black w-full'></div>
         <div ref={copyrightRef} className='flex flex-col text-center gap-y-4 md:flex-row justify-between w-full items-center pb-5'>
-          <h1 className='text-sm' style={{ fontFamily: 'Montserrat, serif' }}>
+          <h1 className='' style={{ fontFamily: 'Montserrat, serif' }}>
             Copyright © 2025 <span className='text-[#E7A647]'> High Ticket Offer.</span> All Rights Reserved.
           </h1>
           <h1 
-            className='text-sm cursor-pointer hover:text-[#E7A647] transition-colors duration-300' 
+            className=' cursor-pointer hover:text-[#E7A647] transition-colors duration-300' 
             style={{ fontFamily: 'Montserrat, serif' }}
           >
             Privacy & Cookie Policy

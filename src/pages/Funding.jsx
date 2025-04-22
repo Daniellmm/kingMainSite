@@ -117,7 +117,7 @@ const Funding = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <p className='text-white pb-7 text-center text-sm md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
+              <p className='text-white pb-7 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
             </div>
 
             <div className='flex justify-center'>
@@ -127,7 +127,7 @@ const Funding = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
               Your Journey Starts Here
               </button>
             </div>
@@ -174,7 +174,7 @@ const Funding = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.6}>
             <div className=''>
-              <p className='text-white text-sm md:text-[20px] leading-snug font-thin  lg:px-20 pb-14' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve ever tried to work in the funding industry, you know the biggest challenge is finding financing solutions that actually work for your customers—and that skepticism is understandable.
+              <p className='text-white  md:text-[20px] leading-snug font-thin  lg:px-20 pb-14' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve ever tried to work in the funding industry, you know the biggest challenge is finding financing solutions that actually work for your customers—and that skepticism is understandable.
                 <br /> <br />
                 We get it.
                 <br /> <br />
@@ -418,11 +418,11 @@ const Funding = () => {
               <div className='flex  flex-col items-start'>
                 <div className='flex justify-center items-center gap-x-4'>
                   <img src={CHECK} className='h-8' alt="" />
-                  <p className='text-white text-sm md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Complete Training Program </p>
+                  <p className='text-white  md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Complete Training Program </p>
                 </div>
 
                 <div className='pl-16'>
-                  <p className='text-white font-thin md:text-[18px] text-sm leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <p className='text-white font-thin md:text-[18px]  leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     ● Step-by-step guidance on how to structure, launch, and scale your funding business. <br />
                     ● Learn how to market your business and attract high-quality clients.
                   </p>
@@ -434,11 +434,11 @@ const Funding = () => {
               <div className='flex  flex-col items-start'>
                 <div className='flex justify-center items-center gap-x-4'>
                   <img src={CHECK} className='h-8' alt="" />
-                  <p className='text-white text-sm md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> 1-on-1 Coaching  </p>
+                  <p className='text-white  md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> 1-on-1 Coaching  </p>
                 </div>
 
                 <div className='pl-16'>
-                  <p className='text-white font-thin text-sm md:text-[18px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <p className='text-white font-thin  md:text-[18px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     ● Work directly with funding experts who have built 7 and 8-figure funding businesses. <br />
                     ● Get personalized support to troubleshoot challenges and accelerate your growth.
                   </p>
@@ -450,11 +450,11 @@ const Funding = () => {
               <div className='flex  flex-col items-start'>
                 <div className='flex justify-center items-center gap-x-4'>
                   <img src={CHECK} className='h-8' alt="" />
-                  <p className='text-white text-sm md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Access to ALL Funding Options </p>
+                  <p className='text-white  md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Access to ALL Funding Options </p>
                 </div>
 
                 <div className='pl-16'>
-                  <p className='text-white font-thin text-sm md:text-[18px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <p className='text-white font-thin  md:text-[18px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     ● No-doc personal funding – Up to $150,000 <br />
                     ● 0% Business Credit – Up to 12 months <br />
                     ● Long-term, low-interest business lines of credit – Up to $3M <br />
@@ -469,11 +469,11 @@ const Funding = () => {
               <div className='flex  flex-col items-start'>
                 <div className='flex justify-center items-center gap-x-4'>
                   <img src={CHECK} className='h-8' alt="" />
-                  <p className='text-white text-sm md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Exclusive Funding Network  </p>
+                  <p className='text-white  md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Exclusive Funding Network  </p>
                 </div>
 
                 <div className='pl-16'>
-                  <p className='text-white font-thin text-sm md:text-[18px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <p className='text-white font-thin  md:text-[18px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     ● Tap into a network of lenders and funding products that have been tested and proven to
                     work. <br />
                     ● We’ve done the hard work of building relationships with funding partners — you just
@@ -487,11 +487,11 @@ const Funding = () => {
               <div className='flex  flex-col items-start'>
                 <div className='flex justify-center items-center gap-x-4'>
                   <img src={CHECK} className='h-8' alt="" />
-                  <p className='text-white text-sm md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Charge What You Want </p>
+                  <p className='text-white  md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Charge What You Want </p>
                 </div>
 
                 <div className='pl-16'>
-                  <p className='text-white font-thin text-sm md:text-[18px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <p className='text-white font-thin  md:text-[18px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     ● This is your business — you control the pricing.  <br />
                     ● Earn significant fees on every deal you close, creating consistent cash flow and scalable
                     revenue.
@@ -524,7 +524,7 @@ const Funding = () => {
                 </div>
 
                 <div>
-                  <p className='text-sm text-gray-700 md:text-[20px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif' }}>Most entrepreneurs don’t know where to turn for funding — or they’ve been burned by funding companies that overpromise and underdeliver.
+                  <p className=' text-gray-700 md:text-[20px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif' }}>Most entrepreneurs don’t know where to turn for funding — or they’ve been burned by funding companies that overpromise and underdeliver.
 
                     <br /><br />  You’ll have the power to give them the capital they need to grow — and you’ll get paid handsomely for doing it.</p>
                 </div>
@@ -620,7 +620,7 @@ const Funding = () => {
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div className='pt-7'>
-              <button className='bg-[#E7A647] text-black px-3 py-3 text-sm rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Your Journey Starts Here
               </button>
             </div>

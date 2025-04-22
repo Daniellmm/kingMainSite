@@ -190,7 +190,7 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/"
-                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -200,7 +200,7 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/funding"
-                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/funding')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -210,7 +210,7 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/insurance"
-                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/insurance')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -220,7 +220,7 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/laserfund"
-                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/laserfund')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -230,7 +230,7 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/ggei"
-                className={` text-lg md:text-sm cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/ggei')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -244,7 +244,7 @@ const NavBar = () => {
           <div ref={buttonRef} className='hidden md:block lg:flex gap-x-5 border border-1 rounded-lg border-black'>
             <button
               style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-              className='bg-Btn text-black rounded-lg text-sm md:text-sx hover:bg-[#E7A647] py-3 md:py-2 px-4 md:px-2 border-black transition-all duration-300'
+              className='bg-Btn text-black rounded-lg  md:text-sx hover:bg-[#E7A647] py-3 md:py-2 px-4 md:px-2 border-black transition-all duration-300'
               onMouseEnter={(e) => handleButtonHover(e, true)}
               onMouseLeave={(e) => handleButtonHover(e, false)}
             >
@@ -299,7 +299,7 @@ const NavBar = () => {
               <div className='w-[114px] border border-1 rounded-lg border-black'>
                 <button
                   style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                  className='bg-Btn text-black rounded-lg text-sm py-3 px-4 border-black transition-transform duration-500'
+                  className='bg-Btn text-black rounded-lg  py-3 px-4 border-black transition-transform duration-500'
                 >
                   Contact Us
                 </button>
