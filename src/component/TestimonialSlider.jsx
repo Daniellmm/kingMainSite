@@ -107,7 +107,7 @@
               <div 
                 key={index}
                 className="w-full flex-shrink-0"
-                style={{ width: `${50 / images.length}%` }}
+                style={{ width: `${80 / images.length}%` }}
               >
                 <img 
                   src={img} 
