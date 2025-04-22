@@ -16,11 +16,37 @@ import PageTransition from "./component/PageTransition";
 const LoadingContext = createContext();
 
 
+const preloaderContent = {
+  '/': {
+    mainText: ['GET', 'UP TO', '$4M'],
+    subText: 'IN FAST, RELIABLE FUNDING FOR YOU AND YOUR CUSTOMERS'
+  },
+  '/funding': {
+    mainText: ['BUSINESS', 'FUNDING', 'SOLUTIONS'],
+    subText: 'FLEXIBLE FINANCING OPTIONS FOR YOUR GROWING BUSINESS'
+  },
+  '/insurance': {
+    mainText: ['PROTECT', 'YOUR', 'INVESTMENT'],
+    subText: 'COMPREHENSIVE INSURANCE COVERAGE FOR PEACE OF MIND'
+  },
+  '/laserfund': {
+    mainText: ['LASER', 'FOCUSED', 'FUNDING'],
+    subText: 'TARGETED FINANCIAL SOLUTIONS FOR SPECIALIZED INDUSTRIES'
+  },
+  '/ggei': {
+    mainText: ['BE', 'YOUR OWN', 'BANK'],
+    subText: 'SUSTAINABLE FUNDING FOR ECO-FRIENDLY BUSINESS VENTURES'
+  },
+};
+
 function RouteChangeListener() {
   const location = useLocation();
-  const { setIsLoading } = useContext(LoadingContext);
+  const { setIsLoading, setCurrentPath } = useContext(LoadingContext);
   
   useEffect(() => {
+   
+    setCurrentPath(location.pathname);
+    
     
     setIsLoading(true);
     
@@ -30,20 +56,23 @@ function RouteChangeListener() {
     }, 5000); 
     
     return () => clearTimeout(timer);
-  }, [location.pathname, setIsLoading]);
+  }, [location.pathname, setIsLoading, setCurrentPath]);
   
   return null;
 }
 
 function AppContent() {
-  const { isLoading } = useContext(LoadingContext);
+  const { isLoading, currentPath } = useContext(LoadingContext);
+  
+  
+  const content = preloaderContent[currentPath] || preloaderContent['/'];
   
   return (
     <>
       <ScrollToTop />
       <RouteChangeListener />
       {isLoading ? (
-        <Preloader />
+        <Preloader mainText={content.mainText} subText={content.subText} />
       ) : (
         <>
           <NavBar />
@@ -83,8 +112,8 @@ function AppContent() {
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPath, setCurrentPath] = useState('/');
 
-  
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -94,7 +123,7 @@ function App() {
   }, []);
 
   return (
-    <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
+    <LoadingContext.Provider value={{ isLoading, setIsLoading, currentPath, setCurrentPath }}>
       <Router>
         <AppContent />
       </Router>
