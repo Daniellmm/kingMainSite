@@ -15,7 +15,11 @@ import Rect3 from '../assets/images/rect3.png';
 import ArrowR from '../assets/images/arrowupright.png';
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import CustomSlider from '../component/TestimonialSlider';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,7 +78,7 @@ const Home = () => {
 
   return (
     <>
- 
+
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
@@ -298,7 +302,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
 
+
+      <section className='overflow-hidden px-5 bg-white min-h-screen pb-10'>
         <div className='flex flex-col justify-center items-center pt-16'>
           <ScrollAnimation animation="zoomIn">
             <div>
@@ -308,14 +315,14 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp">
             <div className='pb-10'>
-              <h1 className='text-white text-2xl lg:text-[34px] text-center' style={{ fontFamily: 'Minion Pro, serif' }}>Our pre-approval process is simple, quick, and easy.</h1>
+              <h1 className='text-black  text-2xl lg:text-[34px] text-center' style={{ fontFamily: 'Minion Pro, serif' }}>Our pre-approval process is simple, quick, and easy.</h1>
             </div>
           </ScrollAnimation>
           <div className='grid lg:grid-cols-3 gap-x-10 gap-y-8'>
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="slideRight" delay={0.3}>
-                <div className='h-[244px] w-[320px] md:w-[370px] bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px] md:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Out} alt="" />
                   </div>
@@ -332,7 +339,7 @@ const Home = () => {
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="fadeIn" delay={0.6}>
-                <div className='h-[244px] w-[320px] md:w-[370px] bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px] md:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Correct} alt="" />
                   </div>
@@ -349,7 +356,7 @@ const Home = () => {
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="slideLeft" delay={0.9}>
-                <div className='h-[244px] w-[320px] md:w-[370px] bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px] md:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Money} alt="" />
                   </div>
@@ -378,6 +385,21 @@ const Home = () => {
         </div>
       </section>
 
+      <section className='overflow-hidden px-5 bg-[#4A4A4A] min-h-[40vh] pb-10'>
+        <div className='flex flex-col justify-center items-center pt-10'>
+          <ScrollAnimation animation="zoomIn">
+            <div>
+              <h1 className='text-[#E7A647] text-3xl lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>Our Happy Clients Says About Us</h1>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="fadeIn">
+            <div className='w-full pt-10'>
+              <CustomSlider />
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
 
       <section className='overflow-hidden px-10 bg-white min-h-[80vh] pb-14'>
         <div className='flex flex-col justify-center items-center'>
