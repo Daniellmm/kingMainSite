@@ -53,7 +53,7 @@ function RouteChangeListener() {
     
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); 
+    }, 6000); 
     
     return () => clearTimeout(timer);
   }, [location.pathname, setIsLoading, setCurrentPath]);
@@ -117,7 +117,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); 
+    }, 6000); 
     
     return () => clearTimeout(timer);
   }, []);
