@@ -89,7 +89,7 @@
 
     return (
       <div 
-        className="relative w-full max-w-3xl mx-auto rounded-lg shadow-lg"
+        className="relative w-full max-w-[600px] mx-auto rounded-lg shadow-lg"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
