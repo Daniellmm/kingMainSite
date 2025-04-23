@@ -173,14 +173,14 @@
         {/* Arrows */}
         <button 
           onClick={prevSlide} 
-          className="absolute top-1/2 left-2 md:left-[-40px] transform -translate-y-1/2 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-200 transition opacity-75 hover:opacity-100 z-10"
+          className="absolute top-1/2 left-10 md:left-[-40px] transform -translate-y-1/2 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-200 transition opacity-75 hover:opacity-100 z-10"
           disabled={isTransitioning}
         >
           ‹
         </button>
         <button 
           onClick={nextSlide} 
-          className="absolute top-1/2 right-2 md:right-[-40px] transform -translate-y-1/2 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-200 transition opacity-75 hover:opacity-100 z-10"
+          className="absolute top-1/2 right-10 md:right-[-40px] transform -translate-y-1/2 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-200 transition opacity-75 hover:opacity-100 z-10"
           disabled={isTransitioning}
         >
           ›
