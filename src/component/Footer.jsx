@@ -2,10 +2,19 @@ import React, { useEffect, useRef } from 'react'
 import LOGO1 from '../assets/images/logo/homeLogo.png'
 import Facebk from '../assets/images/icons/facebook.png'
 import YouTB from '../assets/images/icons/youtube.png'
-import X from '../assets/images/icons/twitter.png'
+import X from '../assets/images/icons/twitter1.png'
 import LinkedIn from '../assets/images/icons/linkedin.png'
+import INSTA from '../assets/images/icons/insta.png'
+import TIKTOK from '../assets/images/icons/tiktok.png'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+const YOUTB_LINK = "https://www.youtube.com/@highticketofferfinancing";
+const TICTOK_LINK = "https://www.tiktok.com/@highticketofferfinancing?_t=ZP-8vm7IS30NCg&_r=1  ";
+const   IG_LINK = "https://www.instagram.com/highticketofferfinancing?igsh=amcwdXIzZWNjajMy&utm_source=qr ";
+const FB_LINK = "https://www.facebook.com/share/1FpiDQiWHd/";
+const X_LINK = "https://x.com/htofinancing";
+const LINKEDIN_LINK = "https://www.linkedin.com/company/highticketofferfinancing/";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -138,6 +147,28 @@ const Footer = () => {
     });
   };
 
+
+  const handleTKLinkClick = () => {
+    window.open(TICTOK_LINK, '_blank');
+  };
+  const handleXLinkClick = () => {
+    window.open(X_LINK, '_blank');
+  };
+  const handleYTLinkClick = () => {
+    window.open(YOUTB_LINK, '_blank');
+  };
+  const handleFBLinkClick = () => {
+    window.open(FB_LINK, '_blank');
+  };
+  const handleLBLinkClick = () => {
+    window.open(LINKEDIN_LINK, '_blank');
+  }
+  const handleIGLinkClick = () => {
+    window.open(IG_LINK, '_blank');
+  }
+
+
+
   return (
     <div ref={footerRef} className='bg-white min-h-[60vh] pt-14 flex flex-col justify-between gap-y-5 items-center px-5 md:px-16'>
       <div className='grid lg:grid-cols-4 md:grid-cols-2 w-full gap-y-10'>
@@ -150,6 +181,7 @@ const Footer = () => {
           <div ref={socialIconsRef} className='flex justify-center items-center gap-4'>
             <img 
               src={Facebk} 
+              onClick={handleFBLinkClick}
               alt="Facebook" 
               className='cursor-pointer'
               onMouseEnter={(e) => handleSocialIconHover(e, true)}
@@ -158,6 +190,7 @@ const Footer = () => {
             <img 
               src={YouTB} 
               alt="YouTube" 
+              onClick={handleYTLinkClick}
               className='cursor-pointer'
               onMouseEnter={(e) => handleSocialIconHover(e, true)}
               onMouseLeave={(e) => handleSocialIconHover(e, false)}
@@ -165,6 +198,7 @@ const Footer = () => {
             <img 
               src={X} 
               alt="X/Twitter" 
+              onClick={handleXLinkClick}
               className='cursor-pointer'
               onMouseEnter={(e) => handleSocialIconHover(e, true)}
               onMouseLeave={(e) => handleSocialIconHover(e, false)}
@@ -172,6 +206,23 @@ const Footer = () => {
             <img 
               src={LinkedIn} 
               alt="LinkedIn" 
+              onClick={handleLBLinkClick}
+              className='cursor-pointer'
+              onMouseEnter={(e) => handleSocialIconHover(e, true)}
+              onMouseLeave={(e) => handleSocialIconHover(e, false)}
+            />
+            <img 
+              src={INSTA} 
+              alt="instagram" 
+              onClick={handleIGLinkClick}
+              className='cursor-pointer'
+              onMouseEnter={(e) => handleSocialIconHover(e, true)}
+              onMouseLeave={(e) => handleSocialIconHover(e, false)}
+            />
+            <img 
+              src={TIKTOK} 
+              alt="tiktok" 
+              onClick={handleTKLinkClick}
               className='cursor-pointer'
               onMouseEnter={(e) => handleSocialIconHover(e, true)}
               onMouseLeave={(e) => handleSocialIconHover(e, false)}
