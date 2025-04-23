@@ -31,6 +31,9 @@ import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+const FORM_URL = "https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI"
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const TeamSlider = ({ teamMembers }) => {
@@ -164,6 +167,11 @@ const GGEI = () => {
   }, []);
 
 
+  // Function to handle button clicks
+  const handleButtonClick = () => {
+    window.open(FORM_URL, '_blank');
+  };
+
   return (
     <>
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
@@ -190,7 +198,10 @@ const GGEI = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button
+                onClick={handleButtonClick}
+                className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Secure My Spot
               </button>
             </div>
@@ -342,7 +353,10 @@ const GGEI = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.5}>
               <div>
-                <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                <button
+                  onClick={handleButtonClick}
+                  className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                   I Want To Secure A Spot
                 </button>
               </div>
@@ -425,81 +439,81 @@ const GGEI = () => {
                 <img src={KF} className='h-[400px]  z-10' alt="" />
               </ScrollAnimation>
 
-             
-                <div className='absolute z-10 top-[-125px] left-[10px]'>
+
+              <div className='absolute z-10 top-[-125px] left-[10px]'>
                 <ScrollAnimation animation="zoomIn" delay={0.4}>
                   <img src={KING} className='w-[300px] ' alt="" />
-              </ScrollAnimation>
-                </div>
-                <div className='absolute z-10 top-[-125px] left-[10px]'>
+                </ScrollAnimation>
+              </div>
+              <div className='absolute z-10 top-[-125px] left-[10px]'>
                 <ScrollAnimation animation="zoomIn" delay={0.4}>
                   <img src={KING} className='w-[300px] ' alt="" />
-                  </ScrollAnimation >
-                </div>
-            </div>
-
-            <div className='relative'>
-            <ScrollAnimation animation="fadeIn" delay={0.3}>
-              <img src={AF} className='h-[400px] z-10' alt="" />
-              </ScrollAnimation>
-              <div className='absolute z-10 top-[-125px]'>
-              <ScrollAnimation animation="zoomIn" delay={0.6}>
-                <img src={ALEXIS} alt="" />
-                </ScrollAnimation>
-              </div>
-              <div className='absolute z-10 top-[-125px]'>
-              <ScrollAnimation animation="zoomIn" delay={0.6}>
-                <img src={ALEXIS} alt="" />
-                </ScrollAnimation>
-              </div>
-            </div>
-
-            <div className='relative'>
-            <ScrollAnimation animation="fadeIn" delay={0.4}>
-              <img src={GF} className='h-[400px] z-10' alt="" />
-              </ScrollAnimation>
-
-              <div className='absolute z-10 top-[-90px]'>
-              <ScrollAnimation animation="zoomIn" delay={0.8}>
-                <img src={GENE} alt="" />
-                </ScrollAnimation>
-              </div>
-              <div className='absolute z-10 top-[-90px]'>
-              <ScrollAnimation animation="zoomIn" delay={0.8}>
-                <img src={GENE} alt="" />
                 </ScrollAnimation >
               </div>
             </div>
 
             <div className='relative'>
-            <ScrollAnimation animation="fadeIn" delay={0.4}>
-              <img src={RF} className='h-[400px] z-10' alt="" />
+              <ScrollAnimation animation="fadeIn" delay={0.3}>
+                <img src={AF} className='h-[400px] z-10' alt="" />
+              </ScrollAnimation>
+              <div className='absolute z-10 top-[-125px]'>
+                <ScrollAnimation animation="zoomIn" delay={0.6}>
+                  <img src={ALEXIS} alt="" />
+                </ScrollAnimation>
+              </div>
+              <div className='absolute z-10 top-[-125px]'>
+                <ScrollAnimation animation="zoomIn" delay={0.6}>
+                  <img src={ALEXIS} alt="" />
+                </ScrollAnimation>
+              </div>
+            </div>
+
+            <div className='relative'>
+              <ScrollAnimation animation="fadeIn" delay={0.4}>
+                <img src={GF} className='h-[400px] z-10' alt="" />
+              </ScrollAnimation>
+
+              <div className='absolute z-10 top-[-90px]'>
+                <ScrollAnimation animation="zoomIn" delay={0.8}>
+                  <img src={GENE} alt="" />
+                </ScrollAnimation>
+              </div>
+              <div className='absolute z-10 top-[-90px]'>
+                <ScrollAnimation animation="zoomIn" delay={0.8}>
+                  <img src={GENE} alt="" />
+                </ScrollAnimation >
+              </div>
+            </div>
+
+            <div className='relative'>
+              <ScrollAnimation animation="fadeIn" delay={0.4}>
+                <img src={RF} className='h-[400px] z-10' alt="" />
               </ScrollAnimation>
 
               <div className='absolute z-10 top-[-125px] left-[10px]'>
-              <ScrollAnimation animation="zoomIn" delay={0.7}>
-                <img src={RAMSEY} className='w-[300px]' alt="" />
+                <ScrollAnimation animation="zoomIn" delay={0.7}>
+                  <img src={RAMSEY} className='w-[300px]' alt="" />
                 </ScrollAnimation >
-             </div>
+              </div>
               <div className='absolute z-10 top-[-125px] left-[10px]'>
-              <ScrollAnimation animation="zoomIn" delay={0.7}>
-                <img src={RAMSEY} className='w-[300px]' alt="" />
+                <ScrollAnimation animation="zoomIn" delay={0.7}>
+                  <img src={RAMSEY} className='w-[300px]' alt="" />
                 </ScrollAnimation>
               </div>
             </div>
             <div className='relative'>
-            <ScrollAnimation animation="fadeIn" delay={0.5}>
-              <img src={SF} className='h-[400px] z-10' alt="" />
+              <ScrollAnimation animation="fadeIn" delay={0.5}>
+                <img src={SF} className='h-[400px] z-10' alt="" />
               </ScrollAnimation>
 
               <div className='absolute z-10 top-[-125px]'>
-              <ScrollAnimation animation="zoomIn" delay={0.9}>
-                <img src={SHAWN} className='w-[300px]' alt="" />
+                <ScrollAnimation animation="zoomIn" delay={0.9}>
+                  <img src={SHAWN} className='w-[300px]' alt="" />
                 </ScrollAnimation>
               </div>
               <div className='absolute z-10 top-[-125px]'>
-              <ScrollAnimation animation="zoomIn" delay={0.9}>
-                <img src={SHAWN} className='w-[300px]' alt="" />
+                <ScrollAnimation animation="zoomIn" delay={0.9}>
+                  <img src={SHAWN} className='w-[300px]' alt="" />
                 </ScrollAnimation>
               </div>
             </div>
@@ -683,7 +697,10 @@ const GGEI = () => {
 
             <ScrollAnimation animation="slideUp" delay={0.6}>
               <div>
-                <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                <button 
+                onClick={handleButtonClick}
+                className='bg-[#E7A647] px-3 py-2  rounded-[8px]' 
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                   I Want To Secure A Spot
                 </button>
               </div>

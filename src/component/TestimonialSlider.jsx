@@ -1,10 +1,61 @@
   import React, { useState, useEffect, useRef } from 'react';
-  import testimonial1 from '../assets/images/testimonial/Brittany.png';
-  import testimonial2 from '../assets/images/testimonial/Delfin.png';
-  import testimonial3 from '../assets/images/testimonial/Jeremy.png';
-  import testimonial4 from '../assets/images/testimonial/Rene.png';
+  import testimonial1 from '../assets/images/testimonial/Joshua.png';
+  import testimonial2 from '../assets/images/testimonial/Matt.png';
+  import testimonial3 from '../assets/images/testimonial/Rene.png';
+  import testimonial4 from '../assets/images/testimonial/Demarcus.png';
+  import testimonial5 from '../assets/images/testimonial/Najibul.png';
+  import testimonial6 from '../assets/images/testimonial/Robert.png';
+  import testimonial7 from '../assets/images/testimonial/Jeremy.png';
+  import testimonial8 from '../assets/images/testimonial/Lemy.png';
+  import testimonial9 from '../assets/images/testimonial/Raul.png';
+  import testimonial10 from '../assets/images/testimonial/Sarah.png';
+  import testimonial11 from '../assets/images/testimonial/Juwan.png';
+  import testimonial12 from '../assets/images/testimonial/Daniel.png';
+  import testimonial13 from '../assets/images/testimonial/Bernicia.png';
+  import testimonial14 from '../assets/images/testimonial/Tyrone.png';
+  import testimonial15 from '../assets/images/testimonial/Abdullah.png';
+  import testimonial16 from '../assets/images/testimonial/Corboi.png';
+  import testimonial17 from '../assets/images/testimonial/Brittany.png';
+  import testimonial18 from '../assets/images/testimonial/Marshall.png';
+  import testimonial19 from '../assets/images/testimonial/AgaFilms.png';
+  import testimonial20 from '../assets/images/testimonial/April.png';
+  import testimonial21 from '../assets/images/testimonial/Marcus.png';
+  import testimonial22 from '../assets/images/testimonial/Clayton.png';
+  import testimonial23 from '../assets/images/testimonial/Gilbert.png';
+  import testimonial24 from '../assets/images/testimonial/Odile.png';
+  import testimonial25 from '../assets/images/testimonial/Xufang.png';
+  import testimonial26 from '../assets/images/testimonial/Delfin.png';
+  import testimonial27 from '../assets/images/testimonial/Justin.png';
 
-  const images = [testimonial1, testimonial2, testimonial3, testimonial4];
+  const images = [
+    testimonial1, 
+    testimonial2, 
+    testimonial3, 
+    testimonial4,
+    testimonial5,
+    testimonial6,
+    testimonial7,
+    testimonial8,
+    testimonial9,
+    testimonial10,
+    testimonial11,
+    testimonial12,
+    testimonial13,
+    testimonial14,
+    testimonial15,
+    testimonial16,
+    testimonial17,
+    testimonial18,
+    testimonial19,
+    testimonial20,
+    testimonial21,
+    testimonial22,
+    testimonial23,
+    testimonial24,
+    testimonial25,
+    testimonial26,
+    testimonial27,
+  ];
 
   const CustomSlider = ({ autoSlideInterval = 5000 }) => {
     const [current, setCurrent] = useState(0);
@@ -89,25 +140,25 @@
 
     return (
       <div 
-        className="relative w-full max-w-[600px] mx-auto rounded-lg shadow-lg"
+        className="relative w-full lg:mx-10 rounded-lg shadow-lg"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <div className="relative h-full overflow-hidden">
           {/* Create a wrapper div that holds all images side by side */}
           <div 
-            className="flex transition-transform gap-x-5 duration-500 ease-in-out h-full md:gap-x-10"
+            className="flex transition-transform gap-x-4 duration-500 ease-in-out h-full md:gap-x-9"
             style={{ 
               transform: `translateX(-${current * 10}%)`,
-              width: `${images.length * 100}%`
+              width: `${images.length * 10}%`
             }}
             
           >
             {images.map((img, index) => (
               <div 
                 key={index}
-                className="w-full flex-shrink-0"
-                style={{ width: `${80 / images.length}%` }}
+                className=" flex-shrink-0 w-[20%] lg:w-[10%]"
+                // style={{ width: `${40 / images.length}%` }}
               >
                 <img 
                   src={img} 
@@ -136,7 +187,7 @@
         </button>
 
         {/* Dots */}
-        <div className="absolute bottom-[-30px] z-20 left-1/2 transform -translate-x-1/2 flex gap-2">
+        {/* <div className="absolute bottom-[-30px] z-20 left-1/2 transform -translate-x-1/2 flex gap-2">
           {images.map((_, index) => (
             <div
               key={index}
@@ -144,7 +195,7 @@
               onClick={() => goToSlide(index)}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     );
   };

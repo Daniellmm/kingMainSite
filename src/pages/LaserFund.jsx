@@ -14,6 +14,8 @@ import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap';
 
 
+const FORM_URL = "https://www.laserfundpamm.com/disclaimer "
+
 const LaserFund = () => {
   useEffect(() => {
     gsap.fromTo('.hero-dollar-left',
@@ -103,7 +105,10 @@ const LaserFund = () => {
     setCurrentSlide((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
   };
 
-
+  // Function to handle button clicks
+  const handleButtonClick = () => {
+    window.open(FORM_URL, '_blank');
+  };
 
   return (
     <>
@@ -131,7 +136,10 @@ const LaserFund = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button
+                onClick={handleButtonClick                                                                              }
+                className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Review Disclaimer
               </button>
             </div>
@@ -170,7 +178,10 @@ const LaserFund = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.4}>
                 <div>
-                  <button className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <button 
+                  onClick={handleButtonClick}
+                  className='bg-[#E7A647] px-5 py-3  rounded-[8px]' 
+                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     FREE Financial Review
                   </button>
                 </div>
@@ -720,7 +731,10 @@ const LaserFund = () => {
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.5}>
             <div className='pt-7'>
-              <button className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button 
+              onClick={handleButtonClick}
+              className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]' 
+              style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Review Disclaimer
               </button>
             </div>

@@ -11,6 +11,8 @@ import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+const FORM_URL = "https://syofb.io/vsl "
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Funding = () => {
@@ -102,15 +104,21 @@ const Funding = () => {
     setCurrentSlide((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
   };
 
+  // Function to handle button clicks
+  const handleButtonClick = () => {
+    window.open(FORM_URL, '_blank');
+  };
+
+
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'> 
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
               <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-               START YOUR OWN FUNDING BUSINESS
+                START YOUR OWN FUNDING BUSINESS
               </h1>
             </div>
           </ScrollAnimation>
@@ -127,8 +135,11 @@ const Funding = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-              Your Journey Starts Here
+              <button
+                onClick={handleButtonClick}
+                className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                Your Journey Starts Here
               </button>
             </div>
           </ScrollAnimation>
@@ -559,7 +570,7 @@ const Funding = () => {
                   <div className='flex gap-3 justify-center items-center text-white'>
                     <img src={CHECK} className='h-7' alt="" />
                     <div>
-                      <p  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Has unlimited earning potential</p>
+                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Has unlimited earning potential</p>
                     </div>
                   </div>
                 </ScrollAnimation>
@@ -620,7 +631,10 @@ const Funding = () => {
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div className='pt-7'>
-              <button className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button
+                onClick={handleButtonClick}
+                className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]'
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Your Journey Starts Here
               </button>
             </div>

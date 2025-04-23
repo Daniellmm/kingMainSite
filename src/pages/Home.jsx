@@ -20,6 +20,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomSlider from '../component/TestimonialSlider';
 
+// Form URL for buttons
+const FORM_URL = "https://api.leadconnectorhq.com/widget/form/6cFWjFbL2wvGc3vBFdVd";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,19 +78,20 @@ const Home = () => {
     });
   }, []);
 
+  // Function to handle button clicks
+  const handleButtonClick = () => {
+    window.open(FORM_URL, '_blank');
+  };
+
   return (
     <>
-
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
-              {/* <img src={MText} alt="" /> */}
               <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 GET UP TO $4M
               </h1>
-
-
             </div>
           </ScrollAnimation>
 
@@ -109,19 +112,16 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button 
+                className='bg-[#E7A647] px-3 py-2 rounded-[8px]' 
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                onClick={handleButtonClick}
+              >
                 Check My Funding Eligibility
               </button>
             </div>
           </ScrollAnimation>
         </div>
-
-        {/* <div className='absolute top-[200px] lg:left-[-40px] left-[0px] hero-dollar-left'>
-          <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
-        </div>
-        <div className='absolute bottom-[100px] lg:right-[-40px] right-[0px] hero-dollar-right'>
-          <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-auto' />
-        </div> */}
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
 
@@ -193,18 +193,18 @@ const Home = () => {
 
                   <ScrollAnimation animation="slideUp">
                     <div className='pt-14'>
-                      <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <button 
+                        className='bg-[#E7A647] px-3 py-2 rounded-[8px]' 
+                        style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                        onClick={handleButtonClick}
+                      >
                         Download Now
                       </button>
                     </div>
                   </ScrollAnimation>
                 </div>
               </ScrollAnimation>
-
-
-
             </div>
-
           </div>
         </div>
       </section>
@@ -330,7 +330,7 @@ const Home = () => {
                   <div><h1 className='font-bold text-2xl lg:text-[32px] py-3' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 1</h1></div>
 
                   <div>
-                    <h1 className='  font-bold lg:text-[24px] ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click “Apply Now”</h1>
+                    <h1 className='  font-bold lg:text-[24px] ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click "Apply Now"</h1>
                   </div>
 
                 </div>
@@ -370,14 +370,15 @@ const Home = () => {
                 </div>
               </ScrollAnimation>
             </div>
-
-
           </div>
 
           <ScrollAnimation animation="slideUp">
             <div className='pt-10'>
-              <button className='bg-[#E7A647]  px-5 py-4   rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                {/* <button className='bg-[#E7A647] lg:w-[194px] lg:h-[64px] px-3 py-2  lg:text-[24px] font-[600] rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> */}
+              <button 
+                className='bg-[#E7A647] px-5 py-4 rounded-[8px]' 
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                onClick={handleButtonClick}
+              >
                 Apply Now
               </button>
             </div>
@@ -394,7 +395,7 @@ const Home = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeIn">
-            <div className='w-full pt-10'>
+            <div className='w-full flex pt-10'>
               <CustomSlider />
             </div>
           </ScrollAnimation>
@@ -485,7 +486,7 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp">
             <div className='pt-10'>
-              <button className='bg-[#E7A647] px-5 py-4  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button className='bg-[#E7A647] px-5 py-4 rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 View All Post
               </button>
             </div>
@@ -500,7 +501,11 @@ const Home = () => {
             <h1 className=' text-3xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Have Questions?</h1>
             <h2 className=' text-xl lg:text-[24px] font-semibold text-center' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 200, fontStyle: 'normal' }}>Complete questionnaire to speak to a representative.</h2>
             <div className='pt-1'>
-              <button className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button 
+                className='bg-[#E7A647] text-black px-3 py-3 rounded-[8px]' 
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                onClick={handleButtonClick}
+              >
                 Complete Questionnaire
               </button>
             </div>

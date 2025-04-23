@@ -13,6 +13,10 @@ import ScrollAnimation from '../component/ScrollAnimation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { gsap } from 'gsap';
 
+
+
+const FORM_URL = "https://api.leadconnectorhq.com/widget/form/TufHjWMyJ7iFxU6TBfrk"
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Insurance = () => {
@@ -238,7 +242,10 @@ const Insurance = () => {
     setCurrentSlide((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
   };
 
-
+  // Function to handle button clicks
+  const handleButtonClick = () => {
+    window.open(FORM_URL, '_blank');
+  };
 
   return (
     <>
@@ -264,7 +271,10 @@ const Insurance = () => {
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button className='bg-[#E7A647] px-3 py-2  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <button
+                onClick={handleButtonClick}
+                className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 Check My Funding Eligibility
               </button>
             </div>
@@ -311,7 +321,10 @@ const Insurance = () => {
               </ScrollAnimation>
               <div>
                 <ScrollAnimation animation="slideUp" delay={0.4}>
-                  <button className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <button
+                    onClick={handleButtonClick}
+                    className='bg-[#E7A647] px-5 py-3  rounded-[8px]'
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     FREE Financial Review
                   </button>
                 </ScrollAnimation>
@@ -401,7 +414,9 @@ const Insurance = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.7}>
                 <div>
-                  <button className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                  <button
+                    onClick={handleButtonClick}
+                    className='bg-[#E7A647] px-5 py-3  rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                     FREE Financial Review
                   </button>
                 </div>
@@ -583,9 +598,9 @@ const Insurance = () => {
       <section className='overflow-hidden flex justify-center items-center px-10 bg-white min-h-[100vh] pb-14 team-section'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <div>
-          <ScrollAnimation animation="zoomIn" delay={0.2}>
-            <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet the Team</h1>
-          </ScrollAnimation>
+            <ScrollAnimation animation="zoomIn" delay={0.2}>
+              <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet the Team</h1>
+            </ScrollAnimation>
           </div>
 
           <div className='lg:px-20 space-y-10'>
