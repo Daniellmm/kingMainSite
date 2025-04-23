@@ -155,7 +155,7 @@ const Home = () => {
             <div className='flex flex-col gap-y-5 px-5 h-full justify-center lg:px-24 '>
               <ScrollAnimation animation="zoomIn">
                 <div>
-                  <h1 className='text-[#E7A647] text-3xl lg:text-[47px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>The Ultimate Funding Qualifications Guide for Free</h1>
+                  <h1 className='text-[#E7A647] text-3xl lg:text-[47px] text-center leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>The Ultimate Funding Qualifications Guide for Free</h1>
                 </div>
               </ScrollAnimation>
 
