@@ -22,8 +22,8 @@ const preloaderContent = {
     subText: 'IN FAST, RELIABLE FUNDING FOR YOU AND YOUR CUSTOMERS'
   },
   '/funding': {
-    mainText: ['BUSINESS', 'FUNDING', 'SOLUTIONS'],
-    subText: 'FLEXIBLE FINANCING OPTIONS FOR YOUR GROWING BUSINESS'
+    mainText: ['Start Your',  'Own','Funding Business'],
+    subText: 'Earn Up To 6 Figures + In Consulting Fees'
   },
   '/insurance': {
     mainText: ['PROTECT', 'YOUR', 'INVESTMENT'],

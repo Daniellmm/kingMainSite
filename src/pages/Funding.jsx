@@ -125,11 +125,13 @@ const Funding = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <p className='text-white pb-7 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain They Desperately Need to Succeed.</p>
+              <p className='text-white pb-7 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+                Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain <br />They Desperately Need to Succeed.
+              </p>
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[1050px] pb-5 rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -145,17 +147,17 @@ const Funding = () => {
           </ScrollAnimation>
         </div>
 
-        <div className='absolute top-[200px] left-[-40px]'>
-          <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-40 hero-dollar-left' />
+        <div className='absolute top-[300px] left-[-40px]'>
+          <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-[250px] hero-dollar-left' />
         </div>
-        <div className='absolute bottom-[100px] right-[-40px]'>
-          <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-40 hero-dollar-right' />
+        <div className='absolute bottom-[10px] right-[-40px]'>
+          <img src={DollarCoin2} alt="" className='h-[100px] md:h-[120px] lg:h-[250px] hero-dollar-right' />
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white md:min-h-screen pb-14'>
+      <section className='overflow-hidden px-10 bg-white pb-14'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="fadeIn">
             <div className='pb-10'>
@@ -175,7 +177,7 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black md:min-h-screen  '>
+      <section className='overflow-hidden px-10 bg-black py-10 '>
         <div className='flex flex-col justify-center items-center py-10'>
           <ScrollAnimation animation="zoomIn" >
             <div>
@@ -356,7 +358,7 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white flex justify-center items-center  min-h-[60vh] pb-10'>
+      <section className='overflow-hidden px-10 bg-white flex justify-center items-center pt-10 pb-10'>
         <div className='flex justify-center items-center pt-7'>
           <div className='grid '>
 
@@ -415,16 +417,16 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-5 bg-black md:min-h-screen'>
+      <section className='overflow-hidden px-5 bg-black py-10'>
         <div className='flex flex-col justify-center items-center py-10'>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] text-center lg:px-44 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Here’s What You’ll Get When You License Our Product:</h1>
+              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] text-center lg:px-28 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Here’s What You’ll Get When You License Our Product:</h1>
             </div>
           </ScrollAnimation>
 
 
-          <div className='flex flex-col gap-y-7  lg:px-32 justify-start items-start w-full'>
+          <div className='flex flex-col gap-y-7  lg:px-28 justify-start items-start w-full'>
             <ScrollAnimation animation="fadeIn" delay={0.2}>
               <div className='flex  flex-col items-start'>
                 <div className='flex justify-center items-center gap-x-4'>
@@ -517,9 +519,9 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white flex justify-center items-center md:min-h-screen pb-14'>
+      <section className='overflow-hidden px-10 bg-white flex justify-center items-center pb-14'>
         <div className='flex justify-center items-center pt-5'>
-          <div className='grid md:grid-cols-2 grid-rows-1'>
+          <div className='grid lg:grid-cols-2'>
             <div className='flex justify-center items-center'>
               <ScrollAnimation animation="slideRight">
                 <div className='pb-10'>
@@ -529,7 +531,7 @@ const Funding = () => {
             </div>
 
             <ScrollAnimation animation="slideLeft">
-              <div className='flex flex-col gap-y-5 md:px-10 lg:px-24 h-full justify-center '>
+              <div className='flex flex-col gap-y-5 md:px-10 lg:px-6 h-full justify-center '>
                 <div>
                   <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why This Business Is So Profitable</h1>
                 </div>
@@ -546,69 +548,71 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black flex justify-center items-center min-h-screen pb-8'>
+      <section className='overflow-hidden px-10 bg-black flex justify-center items-center py-10 pb-8'>
         <div className='flex justify-center items-center pt-6'>
-          <div className='grid md:grid-cols-2 grid-rows-1'>
+          <div className='grid lg:grid-cols-2 grid-rows-1'>
 
-            <div className='flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center '>
-              <ScrollAnimation animation="zoomIn">
-                <div>
-                  <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Start Your Own Funding Business</h1>
-                </div>
-              </ScrollAnimation>
-
-              <ScrollAnimation animation="slideUp">
-                <div>
-                  <p className='text-white font-thin md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve been looking for a business model that: </p>
-                </div>
-              </ScrollAnimation>
-
-
-              <div className='flex flex-col justify-start md:text-[20px] items-start gap-y-5'>
-
-                <ScrollAnimation animation="slideRight" delay={0.2}>
-                  <div className='flex gap-3 justify-center items-center text-white'>
-                    <img src={CHECK} className='h-7' alt="" />
-                    <div>
-                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Has unlimited earning potential</p>
-                    </div>
-                  </div>
-                </ScrollAnimation>
-
-                <ScrollAnimation animation="slideRight" delay={0.4}>
-                  <div className='flex gap-3 justify-center items-center text-white'>
-                    <img src={CHECK} className='h-7' alt="" />
-                    <div>
-                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Solves a real problem for business owners </p>
-                    </div>
-                  </div>
-                </ScrollAnimation>
-
-                <ScrollAnimation animation="slideRight" delay={0.6}>
-                  <div className='flex gap-3 justify-center items-center text-white'>
-                    <img src={CHECK} className='h-7' alt="" />
-                    <div>
-                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Requires minimal overhead and setup costs </p>
-                    </div>
-                  </div>
-                </ScrollAnimation>
-
-                <ScrollAnimation animation="slideRight" delay={0.8}>
-                  <div className='flex gap-3 justify-center items-center text-white'>
-                    <img src={CHECK} className='h-7' alt="" />
-                    <div>
-                      <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Works in ANY economy</p>
-                    </div>
+            <div className='flex w-full justify-center items-ecnter pl-20 bg-'>
+              <div className='flex flex-col gap-y-3 md:px-10 lg:px-5 justify-center'>
+                <ScrollAnimation animation="zoomIn">
+                  <div>
+                    <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Start Your Own Funding Business</h1>
                   </div>
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="slideUp">
-                  <div className='flex gap-3 justify-center items-center text-white'>
-                    <div>
-                      <p className='font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Then this is your moment.</p>
-                    </div>
+                  <div>
+                    <p className='text-white font-thin md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve been looking for a business model that: </p>
                   </div>
                 </ScrollAnimation>
+
+
+                <div className='flex flex-col justify-start md:text-[20px] items-start gap-y-5'>
+
+                  <ScrollAnimation animation="slideRight" delay={0.2}>
+                    <div className='flex gap-3 justify-center items-center text-white'>
+                      <img src={CHECK} className='h-7' alt="" />
+                      <div>
+                        <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Has unlimited earning potential</p>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
+
+                  <ScrollAnimation animation="slideRight" delay={0.4}>
+                    <div className='flex gap-3 justify-center items-center text-white'>
+                      <img src={CHECK} className='h-7' alt="" />
+                      <div>
+                        <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Solves a real problem for business owners </p>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
+
+                  <ScrollAnimation animation="slideRight" delay={0.6}>
+                    <div className='flex gap-3 justify-center items-center text-white'>
+                      <img src={CHECK} className='h-7' alt="" />
+                      <div>
+                        <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Requires minimal overhead and setup costs </p>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
+
+                  <ScrollAnimation animation="slideRight" delay={0.8}>
+                    <div className='flex gap-3 justify-center items-center text-white'>
+                      <img src={CHECK} className='h-7' alt="" />
+                      <div>
+                        <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}> Works in ANY economy</p>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
+
+                  <ScrollAnimation animation="slideUp">
+                    <div className='flex gap-3 justify-center items-center text-white'>
+                      <div>
+                        <p className='font-thin' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Then this is your moment.</p>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
+                </div>
               </div>
             </div>
 

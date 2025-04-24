@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 
 const Preloader = ({ mainText, subText }) => {
    
-    const displayMainText = mainText || ['GET', 'UP TO', '$4M'];
+    const displayMainText = mainText || ['GET','UP TO','$4M'];
     const displaySubText = subText || 'IN FAST, RELIABLE FUNDING FOR YOU AND YOUR CUSTOMERS';
 
     useEffect(() => {
