@@ -15,8 +15,8 @@ import Rect3 from '../assets/images/rect3.png';
 import ArrowR from '../assets/images/arrowupright.png';
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger'; 
-import "slick-carousel/slick/slick.css"; 
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomSlider from '../component/TestimonialSlider';
 
@@ -86,7 +86,7 @@ const Home = () => {
   return (
     <>
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
-        <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
+        <div className='z-10 relative pt-24 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
@@ -103,8 +103,8 @@ const Home = () => {
 
           <ScrollAnimation animation="zoomIn" delay={0.7}>
             <div>
-              <iframe className='lg:w-[850px] pb-5 rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]'
-                src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player"
+              <iframe className='md:w-[850px] pb-5 rounded-2xl h-[250px] md:rounded-[50px] md:h-[415px]'
+                src="https://www.youtube.com/embed/JvPEDv5MiFg?si=OlcE94Yhzy49qHXs" title="YouTube video player"
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -112,12 +112,12 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <button 
-                className='bg-[#E7A647] px-3 py-2 rounded-[8px]' 
+              <button
+                className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 onClick={handleButtonClick}
               >
-                Check My Funding Eligibility
+                Apply Now
               </button>
             </div>
           </ScrollAnimation>
@@ -125,7 +125,7 @@ const Home = () => {
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
 
-      <section className='overflow-hidden px-5 bg-white md:min-h-screen pb-14'>
+      <section className='overflow-hidden px-5 bg-white lg:min-h-screen pb-14'>
         <ScrollAnimation animation="fadeIn">
           <div className='flex flex-col justify-center items-center pt-10 md:pt-24 '>
             <div className='pb-10'>
@@ -142,7 +142,7 @@ const Home = () => {
         </ScrollAnimation>
       </section>
 
-      <section className='overflow-hidden md:px-10  bg-black min-h-[60vh] pb-14'>
+      <section className='overflow-hidden md:px-10 bg-black lg:min-h-[60vh] pb-14'>
         <div className='flex justify-center items-center  pt-5'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <ScrollAnimation animation="slideRight">
@@ -155,7 +155,9 @@ const Home = () => {
             <div className='flex flex-col gap-y-5 px-5 h-full justify-center lg:px-24 '>
               <ScrollAnimation animation="zoomIn">
                 <div>
-                  <h1 className='text-[#E7A647] text-3xl lg:text-[47px] text-center leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>The Ultimate Funding Qualifications Guide for Free</h1>
+                  <h1 className='text-[#E7A647] text-3xl lg:text-[47px] text-center leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                    “The Ultimate Funding Qualification Guide” <span className='text-red-600 line-through'>FREE</span>
+                  </h1>
                 </div>
               </ScrollAnimation>
 
@@ -193,8 +195,8 @@ const Home = () => {
 
                   <ScrollAnimation animation="slideUp">
                     <div className='pt-14'>
-                      <button 
-                        className='bg-[#E7A647] px-3 py-2 rounded-[8px]' 
+                      <button
+                        className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
                         style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                         onClick={handleButtonClick}
                       >
@@ -209,13 +211,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='overflow-hidden px-5 bg-white flex justify-center items-center min-h-screen pb-14'>
+      <section className='overflow-hidden px-5 bg-white flex justify-center items-center lg:min-h-screen pb-16'>
         <div className='flex justify-center items-center md:pt-10'>
-          <div className='grid md:grid-cols-2 grid-rows-1'>
+          <div className='grid lg:grid-cols-2 grid-rows-1'>
             <ScrollAnimation animation="slideRight">
               <div className='flex justify-center items-center pt-10'>
                 <div>
-                  <iframe className='lg:w-[580px] pb-5 rounded-xl h-[250px] lg:rounded-[50px] lg:h-[580px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe className='md:w-[580px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
             </ScrollAnimation>
@@ -244,7 +246,7 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-5 bg-black min-h-screen pb-10'>
+      <section className='overflow-hidden px-5 bg-black lg:min-h-screen pb-10'>
         <div className='flex justify-center items-center pt-20'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <div className='flex justify-center items-center'>
@@ -305,7 +307,7 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-5 bg-white min-h-screen pb-10'>
+      <section className='overflow-hidden px-5 bg-white lg:min-h-screen pb-10'>
         <div className='flex flex-col justify-center items-center pt-16'>
           <ScrollAnimation animation="zoomIn">
             <div>
@@ -374,8 +376,8 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp">
             <div className='pt-10'>
-              <button 
-                className='bg-[#E7A647] px-5 py-4 rounded-[8px]' 
+              <button
+                className='bg-[#E7A647] px-5 py-4 rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 onClick={handleButtonClick}
               >
@@ -386,7 +388,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='overflow-hidden px-5 bg-[#4A4A4A] min-h-[40vh] pb-10'>
+      <section className='overflow-hidden px-5 bg-black min-h-[40vh] pb-10'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
             <div>
@@ -501,8 +503,8 @@ const Home = () => {
             <h1 className=' text-3xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Have Questions?</h1>
             <h2 className=' text-xl lg:text-[24px] font-semibold text-center' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 200, fontStyle: 'normal' }}>Complete questionnaire to speak to a representative.</h2>
             <div className='pt-1'>
-              <button 
-                className='bg-[#E7A647] text-black px-3 py-3 rounded-[8px]' 
+              <button
+                className='bg-[#E7A647] text-black px-3 py-3 rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 onClick={handleButtonClick}
               >
