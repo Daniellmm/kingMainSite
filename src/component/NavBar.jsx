@@ -145,7 +145,7 @@ const NavBar = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white backdrop-blur-md shadow-md' : 'bg-white'
         }`}
     >
-      <div className='w-full overflow-hidden text-black py-2 px-8 md:px-32'>
+      <div className='w-full overflow-hidden text-black py-2 px-8 md:px-24'>
         <div className='flex justify-between items-center'>
           {/* logo */}
           <div ref={logoRef} className='cursor-pointer'>
@@ -186,7 +186,7 @@ const NavBar = () => {
 
           {/* Nav Links (hidden on mobile, shown on medium screens and up) */}
           <div ref={linksRef} className='hidden md:flex'>
-            <ul className='flex space-x-5 md:space-x-10'>
+            <ul className='flex space-x-5 md:space-x-6'>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/"

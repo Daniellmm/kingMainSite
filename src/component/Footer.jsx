@@ -170,7 +170,7 @@ const Footer = () => {
 
 
   return (
-    <div ref={footerRef} className='bg-white min-h-[60vh] pt-14 flex flex-col justify-between gap-y-5 items-center px-5 md:px-16'>
+    <div ref={footerRef} className='bg-white pt-14 flex flex-col justify-between gap-y-5 items-center px-5 md:px-16'>
       <div className='grid lg:grid-cols-4 md:grid-cols-2 w-full gap-y-10'>
 
         <div ref={column1Ref} className='flex flex-col justify-start items-start'>
@@ -178,7 +178,7 @@ const Footer = () => {
             <img src={LOGO1} alt="" className='transform transition-transform hover:scale-105 duration-300' />
           </div>
           <h1 className='font-thin pl-5 py-2' style={{ fontFamily: 'Montserrat, serif' }}>Follow Us On</h1>
-          <div ref={socialIconsRef} className='flex justify-center items-center gap-4'>
+          <div ref={socialIconsRef} className='flex justify-start flex-wrap items-center gap-4'>
             <img 
               src={Facebk} 
               onClick={handleFBLinkClick}

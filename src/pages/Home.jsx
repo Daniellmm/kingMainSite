@@ -85,7 +85,7 @@ const Home = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center  md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-24 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
@@ -125,7 +125,7 @@ const Home = () => {
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
 
-      <section className='overflow-hidden px-5 bg-white lg:min-h-screen pb-14'>
+      <section className='overflow-hidden px-5 bg-white  pb-14'>
         <ScrollAnimation animation="fadeIn">
           <div className='flex flex-col justify-center items-center pt-10 md:pt-24 '>
             <div className='pb-10'>
@@ -142,7 +142,7 @@ const Home = () => {
         </ScrollAnimation>
       </section>
 
-      <section className='overflow-hidden md:px-10 bg-black lg:min-h-[60vh] pb-14'>
+      <section className='overflow-hidden md:px-10 bg-black  pb-14'>
         <div className='flex justify-center items-center  pt-5'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <ScrollAnimation animation="slideRight">
@@ -152,7 +152,7 @@ const Home = () => {
             </ScrollAnimation>
 
 
-            <div className='flex flex-col gap-y-5 px-5 h-full justify-center lg:px-24 '>
+            <div className='flex flex-col gap-y-5 px-5 h-full justify-center lg:px-4 '>
               <ScrollAnimation animation="zoomIn">
                 <div>
                   <h1 className='text-[#E7A647] text-3xl lg:text-[47px] text-center leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
@@ -211,13 +211,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='overflow-hidden px-5 bg-white flex justify-center items-center lg:min-h-screen pb-16'>
+      <section className='overflow-hidden px-5 bg-white flex justify-center items-center pb-16'>
         <div className='flex justify-center items-center md:pt-10'>
           <div className='grid lg:grid-cols-2 grid-rows-1'>
             <ScrollAnimation animation="slideRight">
-              <div className='flex justify-center items-center pt-10'>
+              <div className='flex justify-end items-center pt-10'>
                 <div>
-                  <iframe className='md:w-[450px] lg:w-[580px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe className='md:w-[450px]  pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
             </ScrollAnimation>
@@ -246,7 +246,7 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-5 bg-black lg:min-h-screen pb-10'>
+      <section className='overflow-hidden px-5 bg-black pb-10'>
         <div className='flex justify-center items-center pt-20'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <div className='flex justify-center items-center'>
@@ -307,7 +307,7 @@ const Home = () => {
       </section>
 
 
-      <section className='overflow-hidden px-5 bg-white lg:min-h-screen pb-10'>
+      <section className='overflow-hidden px-5 bg-white pb-10'>
         <div className='flex flex-col justify-center items-center pt-16'>
           <ScrollAnimation animation="zoomIn">
             <div>
@@ -324,7 +324,7 @@ const Home = () => {
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="slideRight" delay={0.3}>
-                <div className='h-[244px] w-[320px] lg:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px]   shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Out} alt="" />
                   </div>
@@ -341,7 +341,7 @@ const Home = () => {
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="fadeIn" delay={0.6}>
-                <div className='h-[244px] w-[320px] lg:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px]  shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Correct} alt="" />
                   </div>
@@ -358,7 +358,7 @@ const Home = () => {
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="slideLeft" delay={0.9}>
-                <div className='h-[244px] w-[320px] lg:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px]  shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Money} alt="" />
                   </div>
@@ -388,11 +388,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='overflow-hidden px-5 bg-black min-h-[40vh] pb-10'>
+      <section className='overflow-hidden px-5 bg-black min-h-[40vh] pt-10 pb-10'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] text-3xl lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>Our Happy Clients Says About Us</h1>
+              <h1 className='text-[#E7A647] text-3xl lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>Client Results</h1>
             </div>
           </ScrollAnimation>
 
@@ -404,7 +404,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='overflow-hidden px-10 bg-white min-h-[80vh] pb-14'>
+      <section className='overflow-hidden px-10 bg-white pt-10 pb-14'>
         <div className='flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn">
             <div>
@@ -418,16 +418,16 @@ const Home = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <div className='flex flex-col justify-start gap-y-5 items-center px-10 md:px-5'>
-                <div className='md:w-[387px] w-[330px]'>
+                <div className=''>
                   <img src={Rect1} alt="" />
                 </div>
 
                 <div>
-                  <h1 className='text-black ' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold ' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
-                <div className='flex justify-between items-center w-full'>
-                  <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+                <div className='flex justify-end items-center w-full'>
+                  {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
 
                   <div className='flex justify-center items-center'>
                     <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
@@ -441,16 +441,16 @@ const Home = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.6}>
               <div className='flex flex-col justify-start gap-y-5 items-center px-10 md:px-5  '>
-                <div className='md:w-[387px] w-[330px]'>
+                <div className=''>
                   <img src={Rect2} className='w-[387px]' alt="" />
                 </div>
 
                 <div>
-                  <h1 className='text-black ' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
-                <div className='flex justify-between items-center w-full'>
-                  <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+                <div className='flex justify-end items-center w-full'>
+                  {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
 
                   <div className='flex justify-center items-center'>
                     <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
@@ -464,16 +464,16 @@ const Home = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.9}>
               <div className='flex flex-col justify-start gap-y-5 items-center px-10 md:px-5  '>
-                <div className='md:w-[387px] w-[330px]'>
+                <div className=''>
                   <img src={Rect3} alt="" />
                 </div>
 
                 <div>
-                  <h1 className='text-black ' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
-                <div className='flex justify-between items-center w-full'>
-                  <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p>
+                <div className='flex justify-end items-center w-full'>
+                  {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
 
                   <div className='flex justify-center items-center'>
                     <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
