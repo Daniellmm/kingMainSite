@@ -217,7 +217,7 @@ const Home = () => {
             <ScrollAnimation animation="slideRight">
               <div className='flex justify-center items-center pt-10'>
                 <div>
-                  <iframe className='md:w-[580px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe className='md:w-[450px] lg:w-[580px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
             </ScrollAnimation>
@@ -324,7 +324,7 @@ const Home = () => {
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="slideRight" delay={0.3}>
-                <div className='h-[244px] w-[320px] md:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px] lg:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Out} alt="" />
                   </div>
@@ -341,7 +341,7 @@ const Home = () => {
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="fadeIn" delay={0.6}>
-                <div className='h-[244px] w-[320px] md:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px] lg:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Correct} alt="" />
                   </div>
@@ -358,7 +358,7 @@ const Home = () => {
 
             <div className='flex justify-center'>
               <ScrollAnimation animation="slideLeft" delay={0.9}>
-                <div className='h-[244px] w-[320px] md:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
+                <div className='h-[244px] w-[320px] lg:w-[370px] shadow-lg shadow-black/35 bg-white rounded-xl flex flex-col justify-center items-center'>
                   <div>
                     <img src={Money} alt="" />
                   </div>
