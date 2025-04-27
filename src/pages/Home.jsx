@@ -85,11 +85,11 @@ const Home = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center  md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-5 bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-24 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
-              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className="lg:text-8xl text-6xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 GET UP TO $4M
               </h1>
             </div>
@@ -97,13 +97,13 @@ const Home = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white pb-5 text-center  md:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}>in Fast, Reliable Financing for You & Your Customers!</p>
+              <p className='text-white pb-5 text-center text-[20px] md:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}>in Fast, Reliable Financing for You & Your Customers!</p>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.7}>
             <div>
-              <iframe className='md:w-[850px] pb-5 rounded-2xl h-[250px] md:rounded-[50px] md:h-[415px]'
+              <iframe className='md:w-[850px] pb-5 rounded-2xl w-[350px] h-[250px] md:rounded-[50px] md:h-[415px]'
                 src="https://www.youtube.com/embed/JvPEDv5MiFg?si=OlcE94Yhzy49qHXs" title="YouTube video player"
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -111,7 +111,7 @@ const Home = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
-            <div>
+            <div className='pt-14 md:pt-0'>
               <button
                 className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
@@ -133,7 +133,7 @@ const Home = () => {
             </div>
 
             <div>
-              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>"Our mission is to create more millionaire entrepreneurs by ensuring you have all <br />the funding you need to start and scale your business aggressively."</h1>
+              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>"Our mission is to create more millionaire entrepreneurs by ensuring you have all <br className='hidden lg:block' />the funding you need to start and scale your business aggressively."</h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>C.e.o, Founder</h1>
@@ -156,7 +156,7 @@ const Home = () => {
               <ScrollAnimation animation="zoomIn">
                 <div>
                   <h1 className='text-[#E7A647] text-3xl lg:text-[47px] text-center leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
-                    “The Ultimate Funding Qualification Guide” <span className='text-red-600 line-through'>FREE</span>
+                    Download “The Ultimate Funding Qualification Guide” <span className='text-red-600 line-through'>FREE</span>
                   </h1>
                 </div>
               </ScrollAnimation>
@@ -194,7 +194,7 @@ const Home = () => {
                   </form>
 
                   <ScrollAnimation animation="slideUp">
-                    <div className='pt-14'>
+                    <div className='pt-14 flex justify-center lg:justify-start'>
                       <button
                         className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
                         style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
@@ -214,21 +214,23 @@ const Home = () => {
       <section className='overflow-hidden px-5 bg-white flex justify-center items-center pb-16'>
         <div className='flex justify-center items-center md:pt-10'>
           <div className='grid lg:grid-cols-2 grid-rows-1'>
-            <ScrollAnimation animation="slideRight">
-              <div className='flex justify-end items-center pt-10'>
-                <div>
-                  <iframe className='md:w-[450px]  pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div className='flex justify-center lg:justify-end w-full'>
+              <ScrollAnimation animation="slideRight">
+                <div className='flex justify-end items-center pt-10'>
+                  <div>
+                    <iframe className='md:w-[530px] w-[370px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
                 </div>
-              </div>
-            </ScrollAnimation>
+              </ScrollAnimation>
+            </div>
 
             <ScrollAnimation animation="slideLeft">
-              <div className='flex flex-col gap-y-5 md:px-10 h-full items-start  justify-center '>
+              <div className='flex flex-col gap-y-5 md:px-10 h-full items-center lg:items-start justify-center '>
                 <div>
-                  <h1 className='text-[#E7A647] text-3xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>About Us</h1>
+                  <h1 className='text-[#E7A647] text-4xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>About Us</h1>
                 </div>
 
-                <div>
+                <div className='flex justify-center lg:justify-start'>
                   <p className='text-lg lg:text-[18px] text-gray-700 leading-7' style={{ fontFamily: 'Montserrat, serif' }}>If you're here, it's likely because you've worked with other funding companies in the past only
                     to be met with empty promises and disappointing results. To make matters worse, some have
                     even charged you upfront fees without delivering meaningful outcomes. That ends today!
@@ -259,10 +261,10 @@ const Home = () => {
 
             </div>
 
-            <div className='flex flex-col justify-center py-10 md:px-10 gap-[15px]'>
+            <div className='flex flex-col justify-center items-center lg:items-start py-10 md:px-10 gap-[15px]'>
               <ScrollAnimation animation='zoomIn'>
                 <div>
-                  <h1 className='text-[#E7A647] font-semibold text-3xl lg:text-[45px] leading-[55px]' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
+                  <h1 className='text-[#E7A647] text-center lg:text-start font-semibold text-3xl lg:text-[45px] leading-[55px]' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
                 </div>
               </ScrollAnimation>
 
@@ -311,7 +313,7 @@ const Home = () => {
         <div className='flex flex-col justify-center items-center pt-16'>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] text-3xl lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>How It Works:</h1>
+              <h1 className='text-[#E7A647] text-4xl text-center lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>How It Works:</h1>
             </div>
           </ScrollAnimation>
 
@@ -392,7 +394,7 @@ const Home = () => {
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] text-3xl lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>Client Results</h1>
+              <h1 className='text-[#E7A647] text-4xl text-center lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>Client Results</h1>
             </div>
           </ScrollAnimation>
 
@@ -408,7 +410,7 @@ const Home = () => {
         <div className='flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] text-3xl lg:text-[47px] font-semibold py-9' style={{ fontFamily: 'Minion Pro, serif' }} >
+              <h1 className='text-[#E7A647] text-4xl text-center lg:text-[47px] font-semibold py-9' style={{ fontFamily: 'Minion Pro, serif' }} >
                 Recent Articles & News
               </h1>
             </div>
@@ -418,7 +420,7 @@ const Home = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <div className='flex flex-col justify-start gap-y-5 items-center px-10 md:px-5'>
-                <div className=''>
+                <div className='w-[340px] lg:w-auto'>
                   <img src={Rect1} alt="" />
                 </div>
 
