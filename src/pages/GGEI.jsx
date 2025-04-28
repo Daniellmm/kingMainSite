@@ -6,7 +6,7 @@ import SCI from '../assets/images/sci.png'
 import YELLOW from '../assets/images/yellow.png'
 import BIGLOGO2 from '../assets/images/biglogo2.png'
 import DART from '../assets/images/dart.png'
-import LONG2 from '../assets/images/long2.png'
+import LONG2 from '../assets/images/king4.jpg'
 import BLOCK from '../assets/images/block.png'
 import CHECK from '../assets/images/check.png'
 import LAPTOP from '../assets/images/laptop.png'
@@ -273,7 +273,7 @@ const GGEI = () => {
           <div className='flex flex-col md:flex-row justify-center items-center gap-x-3 gap-y-5 pt-6'>
             <div className='md:w-5/6'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
-                <img src={LONG2} alt="" />
+                <img src={LONG2} className='rounded-xl' alt="" />
               </ScrollAnimation>
             </div>
 

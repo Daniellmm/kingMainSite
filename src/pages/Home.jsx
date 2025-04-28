@@ -230,8 +230,8 @@ const Home = () => {
                   <h1 className='text-[#E7A647] text-4xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>About Us</h1>
                 </div>
 
-                <div className='flex justify-center lg:justify-start'>
-                  <p className='text-lg lg:text-[18px] text-gray-700 leading-7' style={{ fontFamily: 'Montserrat, serif' }}>If you're here, it's likely because you've worked with other funding companies in the past only
+                <div className='flex'>
+                  <p className='text-lg lg:text-[18px] items-center lg:items-start text-gray-700 leading-7' style={{ fontFamily: 'Montserrat, serif' }}>If you're here, it's likely because you've worked with other funding companies in the past only
                     to be met with empty promises and disappointing results. To make matters worse, some have
                     even charged you upfront fees without delivering meaningful outcomes. That ends today!
                     <br /><br />
