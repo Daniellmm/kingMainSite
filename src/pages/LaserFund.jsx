@@ -382,7 +382,7 @@ const LaserFund = () => {
 
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-black pb-14'>
-        <div className='flex justify-center items-center pt-10 lg:px-40'>
+        <div className='flex justify-center items-center pt-10 lg:px-20'>
           <div className='grid md:grid-cols-2 gap-y-10 gap-x-10'>
 
 
@@ -432,10 +432,10 @@ const LaserFund = () => {
 
 
       <section className='overflow-hidden flex justify-center items-center bg-white pb-14'>
-        <div className='flex justify-center items-center pt-10 lg:px-28'>
+        <div className='flex justify-center items-center pt-10 lg:px-10'>
           <div className='grid md:grid-cols-2 gap-x-11 gap-y-10'>
             <ScrollAnimation animation="slideRight" delay={0.3}>
-              <div className='px-10'>
+              <div className='px-10 flex justify-center'>
                 <img src={CHART} alt="" />
               </div>
             </ScrollAnimation>
