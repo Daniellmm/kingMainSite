@@ -126,7 +126,7 @@ const Home = () => {
       </section>
 
       <section className='overflow-hidden px-5 bg-white  pb-14'>
-        <ScrollAnimation animation="fadeIn">
+        <ScrollAnimation animation="fadeIn" delay={0.8}>
           <div className='flex flex-col justify-center items-center pt-10 md:pt-24 '>
             <div className='pb-10'>
               <img src={AWW} alt="" />
@@ -145,7 +145,7 @@ const Home = () => {
       <section className='overflow-hidden md:px-10 bg-black  pb-14'>
         <div className='flex justify-center items-center  pt-5'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
-            <ScrollAnimation animation="slideRight">
+            <ScrollAnimation animation="slideRight" delay={0.8}>
               <div className='flex justify-end items-center  '>
                 <img src={BANK} alt="" className='' />
               </div>
@@ -153,7 +153,7 @@ const Home = () => {
 
 
             <div className='flex flex-col gap-y-5 px-5 h-full justify-center lg:px-4 '>
-              <ScrollAnimation animation="zoomIn">
+              <ScrollAnimation animation="zoomIn" delay={0.8}>
                 <div>
                   <h1 className='text-[#E7A647] text-3xl lg:text-[47px] text-center leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                     Download “The Ultimate Funding Qualification Guide” <span className='text-red-600 line-through'>FREE</span>
@@ -161,7 +161,7 @@ const Home = () => {
                 </div>
               </ScrollAnimation>
 
-              <ScrollAnimation animation="slideLeft" delay={0.2}>
+              <ScrollAnimation animation="slideLeft" delay={0.8}>
                 <div className='bg-white p-7 rounded-lg'>
                   <form action="">
                     <div>
@@ -193,7 +193,7 @@ const Home = () => {
                     </div>
                   </form>
 
-                  <ScrollAnimation animation="slideUp">
+                  <ScrollAnimation animation="slideUp" delay={0.8}>
                     <div className='pt-14 flex justify-center lg:justify-start'>
                       <button
                         className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
@@ -215,7 +215,7 @@ const Home = () => {
         <div className='flex justify-center items-center md:pt-10'>
           <div className='grid lg:grid-cols-2 grid-rows-1'>
             <div className='flex justify-center lg:justify-end w-full'>
-              <ScrollAnimation animation="slideRight">
+              <ScrollAnimation animation="slideRight" delay={0.8}>
                 <div className='flex justify-end items-center pt-10'>
                   <div>
                     <iframe className='md:w-[530px] w-[340px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -224,7 +224,7 @@ const Home = () => {
               </ScrollAnimation>
             </div>
 
-            <ScrollAnimation animation="slideLeft">
+            <ScrollAnimation animation="slideLeft" delay={0.8}>
               <div className='flex flex-col gap-y-5 md:px-10 h-full items-center lg:items-start justify-center '>
                 <div>
                   <h1 className='text-[#E7A647] text-4xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>About Us</h1>
@@ -253,7 +253,7 @@ const Home = () => {
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <div className='flex justify-center items-center'>
 
-              <ScrollAnimation animation='slideRight'>
+              <ScrollAnimation animation='slideRight' delay={0.8}>
                 <div>
                   <img src={BBB} className=' w-auto' alt="" />
                 </div>
@@ -262,7 +262,7 @@ const Home = () => {
             </div>
 
             <div className='flex flex-col justify-center items-center lg:items-start py-10 md:px-10 gap-[15px]'>
-              <ScrollAnimation animation='zoomIn'>
+              <ScrollAnimation animation='zoomIn' delay={0.8}>
                 <div>
                   <h1 className='text-[#E7A647] text-center lg:text-start font-semibold text-3xl lg:text-[45px] leading-[55px]' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
                 </div>
@@ -311,13 +311,13 @@ const Home = () => {
 
       <section className='overflow-hidden px-5 bg-white pb-10'>
         <div className='flex flex-col justify-center items-center pt-16'>
-          <ScrollAnimation animation="zoomIn">
+          <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1 className='text-[#E7A647] text-4xl text-center lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>How It Works:</h1>
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animation="slideUp">
+          <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className='pb-10'>
               <h1 className='text-black  text-2xl lg:text-[34px] text-center' style={{ fontFamily: 'Minion Pro, serif' }}>Our pre-approval process is simple, quick, and easy.</h1>
             </div>
@@ -376,7 +376,7 @@ const Home = () => {
             </div>
           </div>
 
-          <ScrollAnimation animation="slideUp">
+          <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className='pt-10'>
               <button
                 className='bg-[#E7A647] px-5 py-4 rounded-[8px]'
@@ -392,13 +392,13 @@ const Home = () => {
 
       <section className='overflow-hidden px-5 bg-black min-h-[40vh] pt-10 pb-10'>
         <div className='flex flex-col justify-center items-center pt-10'>
-          <ScrollAnimation animation="zoomIn">
+          <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1 className='text-[#E7A647] text-4xl text-center lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>Client Results</h1>
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animation="fadeIn">
+          <ScrollAnimation animation="fadeIn" delay={0.8}>
             <div className='w-full flex pt-10'>
               <CustomSlider />
             </div>
@@ -408,7 +408,7 @@ const Home = () => {
 
       <section className='overflow-hidden px-10 bg-white pt-10 pb-14'>
         <div className='flex flex-col justify-center items-center'>
-          <ScrollAnimation animation="zoomIn">
+          <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1 className='text-[#E7A647] text-4xl text-center lg:text-[47px] font-semibold py-9' style={{ fontFamily: 'Minion Pro, serif' }} >
                 Recent Articles & News
@@ -488,7 +488,7 @@ const Home = () => {
 
           </div>
 
-          <ScrollAnimation animation="slideUp">
+          <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className='pt-10'>
               <button className='bg-[#E7A647] px-5 py-4 rounded-[8px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 View All Post
@@ -500,7 +500,7 @@ const Home = () => {
 
 
       <section className='overflow-hidden px-5 justify-center items-center w-full flex bg-black min-h-[40vh]'>
-        <ScrollAnimation animation="fadeIn">
+        <ScrollAnimation animation="fadeIn" delay={0.8}>
           <div className='flex flex-col justify-center items-center text-white gap-y-5'>
             <h1 className=' text-3xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Have Questions?</h1>
             <h2 className=' text-xl lg:text-[24px] font-semibold text-center' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 200, fontStyle: 'normal' }}>Complete questionnaire to speak to a representative.</h2>
