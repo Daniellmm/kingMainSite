@@ -6,7 +6,7 @@ import SCI from '../assets/images/sci.png'
 import YELLOW from '../assets/images/yellow.png'
 import BIGLOGO2 from '../assets/images/biglogo2.png'
 import DART from '../assets/images/dart.png'
-import LONG2 from '../assets/images/king4.jpg'
+import LONG2 from '../assets/images/longg2.png'
 import BLOCK from '../assets/images/block.png'
 import CHECK from '../assets/images/check.png'
 import LAPTOP from '../assets/images/laptop.png'
@@ -192,7 +192,7 @@ const GGEI = () => {
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[850px] pb-5 w-[340px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 w-[340px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/LpuVmLAyTxk?si=oFpmJNhC1cfZtZaL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -208,7 +208,7 @@ const GGEI = () => {
           </ScrollAnimation>
         </div>
 
-        <div className='absolute top-[350px] left-[-40px] '>
+        <div className='absolute top-[600px] lg:top-[350px] left-[0px] '>
           <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] hero-dollar-left lg:h-auto' />
         </div>
         <div className='absolute top-[100px] right-[0px] '>
@@ -257,8 +257,8 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white  pb-14'>
-        <div className='flex flex-col justify-center items-start gap-y-4 md:px-10 pt-10'>
+      <section className='overflow-hidden px-20 bg-white  pb-14'>
+        <div className='flex flex-col justify-center items-start  gap-y-4 pt-10'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
               Most entrepreneurs believe that the secret to wealth lies in earning more money—but is that really the case?
@@ -271,9 +271,9 @@ const GGEI = () => {
 
 
           <div className='flex flex-col md:flex-row justify-center items-center gap-x-3 gap-y-5 pt-6'>
-            <div className='md:w-5/6'>
+            <div className='h-full w-[45%] bg-black'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
-                <img src={LONG2} className='rounded-xl' alt="" />
+                <img src={LONG2} className='rounded-xl lg:h-[450px] w-auto' alt="" />
               </ScrollAnimation>
             </div>
 
