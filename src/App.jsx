@@ -34,7 +34,7 @@ const preloaderContent = {
     subText: ' Learn While You Earn'
   },
   '/ggei': {
-    mainText: ['BE', 'YOUR OWN', 'BANK'],
+    mainText: ['Become', 'Your Own', 'Bank'],
     subText: 'SUSTAINABLE FUNDING FOR ECO-FRIENDLY BUSINESS VENTURES'
   },
 };

@@ -174,12 +174,12 @@ const GGEI = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className="lg:text-8xl text-5xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 NEVER GO BROKE AGAIN
               </h1>
             </div>
@@ -187,12 +187,12 @@ const GGEI = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white text-center  md:text-[28px] pb-8' style={{ fontFamily: 'Minion Pro, serif' }}>Turn Your Business Into a Bank That Grows Your Wealth Aggressively
+              <p className='text-white text-center text-xl  md:text-[28px] pb-8' style={{ fontFamily: 'Minion Pro, serif' }}>Turn Your Business Into a Bank That Grows Your Wealth Aggressively
                 & Consistently at GGEI’s</p>
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[1050px] pb-5 rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 w-[340px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -208,33 +208,35 @@ const GGEI = () => {
           </ScrollAnimation>
         </div>
 
-        <div className='absolute top-[200px] left-[-40px] '>
+        <div className='absolute top-[350px] left-[-40px] '>
           <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] hero-dollar-left lg:h-auto' />
         </div>
-        <div className='absolute bottom-[100px] right-[0px] '>
-          <img src={DollarCoin2} alt="" className='h-[100px] hero-dollar-right md:h-[120px] lg:h-auto' />
+        <div className='absolute top-[100px] right-[0px] '>
+          <img src={DollarCoin2} alt="" className='h-[200px] hero-dollar-right md:h-[120px] lg:h-auto' />
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
 
 
-      <section className='overflow-hidden flex justify-center px-10 bg-white lg:min-h-[50vh] pb-14'>
-        <div className='flex flex-col justify-center items-center pt-8 '>
+      <section className='overflow-hidden flex justify-center px-5 bg-gray-200 py-10'>
+        <div className='py-14 lg:px-16 px-2 bg-white rounded-xl flex justify-center'>
+          <div className='flex flex-col justify-center items-center pt-8 '>
 
-          <ScrollAnimation animation="zoomIn" delay={0.4}>
-            <div className='lg:px-24'>
-              <h1 className='text-black font-bold text-3xl text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“If your income provides for your upkeep, it will become your
-                downfall.”</h1>
-            </div>
-            <div>
-              <h1 className='text-[#E7A647] text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Alexis Holifield</h1>
-            </div>
-          </ScrollAnimation>
+            <ScrollAnimation animation="zoomIn" delay={0.4}>
+              <div className='lg:px-24'>
+                <h1 className='text-black font-bold text-3xl text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“If your income provides for your upkeep, it will become your
+                  downfall.”</h1>
+              </div>
+              <div>
+                <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Alexis Holifield</h1>
+              </div>
+            </ScrollAnimation>
+          </div>
         </div>
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black lg:min-h-[50vh] pb-14'>
+      <section className='overflow-hidden px-10 bg-black  pb-14'>
         <div className='flex flex-col md:flex-row justify-center items-center gap-x-20 gap-y-8 pt-10 '>
           <div className=''>
             <ScrollAnimation animation="slideRight" delay={0.2}>
@@ -244,27 +246,27 @@ const GGEI = () => {
 
           <div className='flex gap-y-4 flex-col justify-start items-start'>
             <ScrollAnimation animation="zoomIn">
-              <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Earning More Money</h1>
+              <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Earning More Money</h1>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideUp" delay={0.4}>
-              <p className='text-white font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>The Truth About Wealth That 98% of Entrepreneurs Are Missing </p>
+              <p className='text-white text-center lg:text-start font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>The Truth About Wealth That 98% of Entrepreneurs Are Missing </p>
             </ScrollAnimation>
           </div>
         </div>
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white min-h-screen pb-14'>
-        <div className='flex flex-col justify-center items-start gap-y-4 md:px-32 pt-10'>
+      <section className='overflow-hidden px-10 bg-white  pb-14'>
+        <div className='flex flex-col justify-center items-start gap-y-4 md:px-10 pt-10'>
           <ScrollAnimation animation="zoomIn">
-            <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+            <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
               Most entrepreneurs believe that the secret to wealth lies in earning more money—but is that really the case?
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.1}>
-            <p className='text-xl font-semibold md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>Meet Our Co-Founder: King Edwards </p>
+            <p className='text-xl font-semibold md:text-[26px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>Meet Our Co-Founder: King Edwards </p>
           </ScrollAnimation>
 
 
@@ -277,7 +279,7 @@ const GGEI = () => {
 
             <div className='md:text-[20px]' >
               <ScrollAnimation animation="slideUp" delay={0.4}>
-                <p className=' font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
+                <p className=' font-extralight md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
                   <br /><br />
                   I co-founded this powerful group because I am committed to helping entrepreneurs avoid the pain I experienced after making an extraordinary amount of money, losing it all, and having to rebuild from scratch.
                   <br /><br />
@@ -288,11 +290,11 @@ const GGEI = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideLeft" delay={0.5}>
-                <p className='text-xl font-bold py-3 md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>Where did I go wrong?  </p>
+                <p className='text-xl font-bold py-3 md:text-[22px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>Where did I go wrong?  </p>
               </ScrollAnimation>
 
               <ScrollAnimation animation="zoomIn" delay={0.6}>
-                <p className=' font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>After experiencing such a tremendous loss, I went on a mission to uncover the true secrets to building and sustaining wealth. What I realized was that most of us have been misled.
+                <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>After experiencing such a tremendous loss, I went on a mission to uncover the true secrets to building and sustaining wealth. What I realized was that most of us have been misled.
                   <br /><br />
                   Many believe that wealth is built solely by earning more money. Others, the more financially savvy entrepreneurs, think investing is the key. While both are essential components of wealth-building, neither guarantees financial security on their own.
                 </p>
@@ -301,35 +303,35 @@ const GGEI = () => {
             </div>
           </div>
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <p className='text-xl font-semibold py-3 md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+            <p className='text-xl font-semibold py-3 md:text-[22px] text-center lg:text-start ' style={{ fontFamily: 'Minion Pro, serif' }}>
               The real key to building wealth is simple: never lose money.
             </p>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.4}>
-            <p className='pb-5  font-extralight md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+            <p className='pb-5  font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
               • If you rely solely on earning money, you will inevitably spend it to sustain your lifestyle. <br />
               • If you rely solely on investing, you risk losing it to bad investments or unfavorable market conditions.
             </p>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.4}>
-            <p className='text-xl py-4 font-semibold md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+            <p className='text-xl py-4 font-semibold text-center lg:text-start md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>
               True wealth follows a three-step process:
             </p>
           </ScrollAnimation >
           <ScrollAnimation animation="slideUp" delay={0.8}>
-            <ol className='pb-5 font-bold  leading-[25px] md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+            <ol className='pb-5 font-bold  leading-[25px] text-center lg:text-start md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
               <li>Earning more money</li>
               <li>Protecting the money you’ve earned</li>
               <li>Growing the money you’ve protected </li>
             </ol>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.9}>
-            <p className='font-extralight  md:text-[18px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+            <p className='font-extralight  md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
               At the Become Your Own Bank Summit, we will teach you how to implement a systematic approach to mastering all three—quickly and aggressively.
             </p>
-            <p className='text-lg font-semibold md:text-[22px] pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
+            <p className='text-lg font-semibold md:text-[22px] text-center lg:text-start pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
               Is this something you’d like to learn?
             </p>
           </ScrollAnimation>
@@ -337,30 +339,31 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black lg:min-h-[50vh] pb-14'>
-        <div className='flex flex-col lg:flex-row justify-center md:px-32 items-center gap-20 pt-10 '>
+      <section className='overflow-hidden px-10 bg-black pb-14'>
+        <div className='flex flex-col lg:flex-row justify-center md:px-10 items-center gap-20 pt-10 '>
           <div className='flex gap-y-4 flex-col justify-start items-start lg:w-1/2 font-normal'>
             <ScrollAnimation animation="zoomIn">
-              <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] lg:leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                 EARN, PROTECT, GROW
               </h1>
             </ScrollAnimation>
             <ScrollAnimation animation="slideRight" delay={0.3}>
-              <p className='text-white font-extralight md:text-[22px]' style={{ fontFamily: 'Montserrat, serif' }}>
+              <p className='text-white text-center lg:text-start font-extralight md:text-[22px]' style={{ fontFamily: 'Montserrat, serif' }}>
                 AN ENTREPRENEURS GUILD TO EARNING MORE MONEY, PROTECTING THE MONEY YOU HAVE EARNED, & GROWING THE MONEY YOU HAVE PROTECTED.
               </p>
             </ScrollAnimation>
-
-            <ScrollAnimation animation="slideRight" delay={0.5}>
-              <div>
-                <button
-                  onClick={handleButtonClick}
-                  className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
-                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                  I Want To Secure A Spot
-                </button>
-              </div>
-            </ScrollAnimation>
+            <div className='flex justify-center lg:justify-start w-full'>
+              <ScrollAnimation animation="slideRight" delay={0.5}>
+                <div className='flex justify-center w-full'>
+                  <button
+                    onClick={handleButtonClick}
+                    className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    I Want To Secure A Spot
+                  </button>
+                </div>
+              </ScrollAnimation>
+            </div>
           </div>
 
           <ScrollAnimation animation="slideLeft" delay={0.6}>
@@ -372,17 +375,17 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white min-h-[50vh] pb-14'>
-        <div className='flex flex-col lg:flex-row justify-center md:px-32 items-center gap-10 pt-10 '>
-          <div className='flex gap-y-4 flex-col justify-start items-start lg:w-1/2 font-normal'>
+      <section className='overflow-hidden px-10 bg-white  pb-14'>
+        <div className='flex flex-col lg:flex-row justify-center md:px-10 items-center gap-10 pt-10 '>
+          <div className='flex gap-y-4 flex-col  lg:w-1/2 font-normal'>
             <ScrollAnimation animation="zoomIn">
-              <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                 About Us
               </h1>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideRight" delay={0.3}>
-              <p className='text-black font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>
+              <p className='text-black text-center lg:text-start font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>
                 King Edwards of High Ticket Offer Financing and Alexis Holifield of Femininity & Fine-Ance have joined forces to create The Global Group Economic Initiative.
                 The Global Group Economic Initivatice is a Christian-based wealth-building community dedicated to helping serious entrepreneurs achieve lasting financial success.
                 We teach proven strategies that empower business owners to generate significantly more revenue, grow their net worth year after year—regardless of
@@ -402,20 +405,20 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black min-h-[50vh] pb-14'>
-        <div className='flex flex-col md:flex-row justify-center items-center md:px-32 gap-x-20 gap-y-10 pt-10 '>
+      <section className='overflow-hidden px-10 bg-black pb-14'>
+        <div className='flex flex-col md:flex-row  md:px-10 gap-x-20 gap-y-10 pt-10 '>
           <div className=''>
             <ScrollAnimation animation="slideDown" delay={0.4}>
               <img src={DART} alt="" />
             </ScrollAnimation>
           </div>
 
-          <div className='flex gap-y-4 flex-col justify-start items-start md:w-1/2'>
+          <div className='flex gap-y-4 flex-col justify-center md:w-1/2'>
             <ScrollAnimation animation="zoomIn">
-              <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Our Mission:</h1>
+              <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Our Mission:</h1>
             </ScrollAnimation>
             <ScrollAnimation animation="slideUp" delay={0.8}>
-              <p className='text-white font-light md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+              <p className='text-white text-center lg:text-start font-light md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                 To create more millionaire entrepreneurs by equipping you with <span className='font-bold'>century-old wealth-building secrets </span>used by the world’s richest individuals.
               </p>
             </ScrollAnimation>
@@ -424,7 +427,7 @@ const GGEI = () => {
       </section>
 
 
-      <section className='hidden lg:block overflow-hidden px-10 bg-white lg:min-h-[100vh] pb-20 large-screen'>
+      <section className='hidden lg:block overflow-hidden px-10 bg-white  pb-20 large-screen'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
@@ -524,7 +527,7 @@ const GGEI = () => {
       </section>
 
 
-      <section className='lg:hidden overflow-hidden px-10 bg-white min-h-[50vh] pb-20 medium-small-screen'>
+      <section className='lg:hidden overflow-hidden px-10 bg-white  pb-20 medium-small-screen'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
@@ -537,11 +540,11 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden flex justify-center items-center px-10 bg-black min-h-[80vh] pb-14'>
-        <div className='flex justify-center items-center pt-10 lg:px-28'>
+      <section className='overflow-hidden flex justify-center items-center px-10 bg-black pb-14'>
+        <div className='flex justify-center items-center pt-10 lg:px-1'>
           <div className='grid md:grid-cols-2 gap-y-10'>
             <ScrollAnimation animation="slideRight" delay={0.3}>
-              <div>
+              <div className='flex justify-center'>
                 <img src={BLOCK} className='lg:h-[470px]' alt="" />
               </div>
             </ScrollAnimation>
@@ -549,14 +552,14 @@ const GGEI = () => {
             <div className='flex flex-col justify-center'>
               <div>
                 <ScrollAnimation animation="zoomIn" >
-                  <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                     Introducing the Become Your Own Bank Summit
                   </h1>
                 </ScrollAnimation>
               </div>
 
               <ScrollAnimation animation="slideLeft" delay={0.2}>
-                <p className='text-white  pt-5 pb-5 font-extralight md:text-[20px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+                <p className='text-white text-center lg:text-start pt-5 pb-5 font-extralight md:text-[20px] leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
                   The Global Group Economic Initiative is committed to helping entrepreneurs build real wealth by changing how they think about business, revenue, and wealth building.
                   <br /> <br />
                   To help you break free from financial limitations, High Ticket Offer Financing has partnered with the Millennial Millionaire to create the Global Group Economic Initiative—a
@@ -605,14 +608,14 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden flex justify-center items-center bg-white min-h-[80vh] pb-14'>
-        <div className='flex justify-center items-center pt-10 lg:px-28'>
+      <section className='overflow-hidden flex justify-center items-center bg-white  pb-14'>
+        <div className='flex justify-center items-center pt-10 lg:px-10'>
           <div className='grid md:grid-cols-2 gap-10'>
 
             <div className='flex flex-col gap-5 justify-center'>
               <div>
                 <ScrollAnimation animation="zoomIn">
-                  <h1 className='text-[#E7A647] px-10 text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  <h1 className='text-[#E7A647] px-10 text-center lg:text-start text-3xl lg:text-[45px] lg:leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                     What You’ll Learn at the Summit:
                   </h1>
                 </ScrollAnimation>
@@ -667,8 +670,8 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black min-h-[50vh] pb-14'>
-        <div className='flex flex-col md:flex-row justify-center md:px-32 items-center gap-20 pt-24 '>
+      <section className='overflow-hidden px-10 bg-black pb-14'>
+        <div className='flex flex-col md:flex-row justify-center md:px-10 items-center gap-20 pt-24 '>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div className=''>
               <img src={GIRL} alt="" />
@@ -678,13 +681,13 @@ const GGEI = () => {
 
           <div className='flex gap-y-4 flex-col justify-start items-start md:w-1/2 font-normal'>
             <ScrollAnimation animation="zoomIn">
-              <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className='text-[#E7A647] text-3xl text-center lg:text-start lg:text-[45px] lg:leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                 Are You Ready to Take Your Business to the Next Level?
               </h1>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slideDown" delay={0.5}>
-              <p className='text-white font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>
+              <p className='text-white text-center lg:text-start font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>
                 If you’re tired of working hard without seeing real financial results…
                 <br /><br />
                 If you’re ready to start building true generational wealth…
@@ -695,16 +698,18 @@ const GGEI = () => {
               </p>
             </ScrollAnimation>
 
+<div className='flex w-full justify-center lg:justify-start'>
             <ScrollAnimation animation="slideUp" delay={0.6}>
               <div>
-                <button 
-                onClick={handleButtonClick}
-                className='bg-[#E7A647] px-3 py-2  rounded-[8px]' 
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                <button
+                  onClick={handleButtonClick}
+                  className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                   I Want To Secure A Spot
                 </button>
               </div>
             </ScrollAnimation>
+</div>
           </div>
 
 
