@@ -265,11 +265,11 @@ const Insurance = () => {
             <div className='flex justify-center'>
               <p className='text-white pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
                 95% of entrepreneurs fail because they don’t properly protect the
-               <br className='hidden lg:block' /> money they earn. Don’t let this be you. <span className='text-[#e7a647]'>Watch this video.</span>
+                <br className='hidden lg:block' /> money they earn. Don’t let this be you. <span className='text-[#e7a647]'>Watch this video.</span>
               </p>
 
               <div className='flex items-end'>
-              <img src={ARROWD} alt="" />
+                <img src={ARROWD} alt="" />
               </div>
             </div>
 
@@ -531,7 +531,7 @@ const Insurance = () => {
                 {/* Video slider */}
                 <div className="relative">
                   {/* Left arrow navigation */}
-                  
+
 
                   {/* Slider container */}
                   <div className="overflow-hidden">
@@ -558,29 +558,29 @@ const Insurance = () => {
                   </div>
 
                   <div className='flex justify-center items-center gap-x-10'>
-                  <button
-                    className="absolute left-[10px] bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handlePrevSlide}
-                    aria-label="Previous slide"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
+                    <button
+                      className="absolute left-[10px] bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                      onClick={handlePrevSlide}
+                      aria-label="Previous slide"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
 
-                  {/* Right arrow navigation */}
-                  <button
-                    className="absolute right-[10px]  bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handleNextSlide}
-                    aria-label="Next slide"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
+                    {/* Right arrow navigation */}
+                    <button
+                      className="absolute right-[10px]  bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                      onClick={handleNextSlide}
+                      aria-label="Next slide"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
                   </div>
 
-                  
+
                 </div>
 
                 {/* Dot indicators */}
@@ -696,6 +696,8 @@ const Insurance = () => {
               </div>
             </div>
           </div>
+
+          <div className='w-full h-[1px] mt-7 lg:mt-16 bg-black'></div>
         </div>
       </section>
 
