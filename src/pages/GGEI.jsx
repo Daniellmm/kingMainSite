@@ -257,8 +257,8 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-20 bg-white  pb-14'>
-        <div className='flex flex-col justify-center items-start  gap-y-4 pt-10'>
+      <section className='overflow-hidden px-10 md:px-10 bg-white  pb-14'>
+        <div className='flex flex-col justify-center items-start gap-y-4 pt-10'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
               Most entrepreneurs believe that the secret to wealth lies in earning more money—but is that really the case?
@@ -270,8 +270,8 @@ const GGEI = () => {
           </ScrollAnimation>
 
 
-          <div className='flex flex-col md:flex-row justify-center items-center gap-x-3 gap-y-5 pt-6'>
-            <div className='h-full w-[45%] bg-black'>
+          <div className='flex flex-col md:flex-row justify-center items-center gap-x-2 gap-y-5 pt-6'>
+            <div className='h-full w-[50%]'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
                 <img src={LONG2} className='rounded-xl lg:h-[450px] w-auto' alt="" />
               </ScrollAnimation>
