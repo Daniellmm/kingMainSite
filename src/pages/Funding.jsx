@@ -112,12 +112,12 @@ const Funding = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center lg:min-h-screen md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className="lg:text-8xl text-[38px] text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 START YOUR OWN FUNDING BUSINESS
               </h1>
             </div>
