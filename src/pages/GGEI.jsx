@@ -698,18 +698,18 @@ const GGEI = () => {
               </p>
             </ScrollAnimation>
 
-<div className='flex w-full justify-center lg:justify-start'>
-            <ScrollAnimation animation="slideUp" delay={0.6}>
-              <div>
-                <button
-                  onClick={handleButtonClick}
-                  className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
-                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                  I Want To Secure A Spot
-                </button>
-              </div>
-            </ScrollAnimation>
-</div>
+            <div className='flex w-full justify-center lg:justify-start'>
+              <ScrollAnimation animation="slideUp" delay={0.6}>
+                <div>
+                  <button
+                    onClick={handleButtonClick}
+                    className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    I Want To Secure A Spot
+                  </button>
+                </div>
+              </ScrollAnimation>
+            </div>
           </div>
 
 

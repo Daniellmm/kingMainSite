@@ -1,5 +1,10 @@
 import React, { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 import LOGO1 from '../assets/images/logo/homeLogo.png'
+import FundingLogo from '../assets/images/logo/fundingLogo.png'
+import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
+import LaserFundLogo from '../assets/images/logo/laserLogo.png'
+import GGEILogo from '../assets/images/logo/ggei.png'
 import Facebk from '../assets/images/icons/facebook.png'
 import YouTB from '../assets/images/icons/youtube.png'
 import X from '../assets/images/icons/twitter1.png'
@@ -11,7 +16,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const YOUTB_LINK = "https://www.youtube.com/@highticketofferfinancing";
 const TICTOK_LINK = "https://www.tiktok.com/@highticketofferfinancing?_t=ZP-8vm7IS30NCg&_r=1  ";
-const   IG_LINK = "https://www.instagram.com/highticketofferfinancing?igsh=amcwdXIzZWNjajMy&utm_source=qr ";
+const IG_LINK = "https://www.instagram.com/highticketofferfinancing?igsh=amcwdXIzZWNjajMy&utm_source=qr ";
 const FB_LINK = "https://www.facebook.com/share/1FpiDQiWHd/";
 const X_LINK = "https://x.com/htofinancing";
 const LINKEDIN_LINK = "https://www.linkedin.com/company/highticketofferfinancing/";
@@ -19,6 +24,20 @@ const LINKEDIN_LINK = "https://www.linkedin.com/company/highticketofferfinancing
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
+  const location = useLocation();
+  
+  // Create logo map just like in NavBar
+  const logoMap = {
+    '/': LOGO1,
+    '/funding': FundingLogo,
+    '/insurance': InsuranceLogo,
+    '/laserfund': LaserFundLogo,
+    '/ggei': GGEILogo,
+  };
+
+  // Get current logo based on path
+  const currentLogo = logoMap[location.pathname] || LOGO1;
+
   // Create refs for animated elements
   const footerRef = useRef(null);
   const socialIconsRef = useRef(null);
@@ -167,15 +186,17 @@ const Footer = () => {
     window.open(IG_LINK, '_blank');
   }
 
-
-
   return (
     <div ref={footerRef} className='bg-white pt-14 flex flex-col justify-between gap-y-5 items-center px-5 md:px-16'>
       <div className='grid lg:grid-cols-4 md:grid-cols-2 w-full gap-y-10'>
 
         <div ref={column1Ref} className='flex flex-col justify-start items-start'>
           <div className='overflow-hidden'>
-            <img src={LOGO1} alt="" className='transform transition-transform hover:scale-105 duration-300' />
+            <img 
+              src={currentLogo} 
+              alt={`${location.pathname.slice(1) || 'home'} logo`} 
+              className='transform transition-transform hover:scale-105 duration-300' 
+            />
           </div>
           <h1 className='font-thin pl-5 py-2' style={{ fontFamily: 'Montserrat, serif' }}>Follow Us On</h1>
           <div ref={socialIconsRef} className='flex justify-start flex-wrap items-center gap-4'>
