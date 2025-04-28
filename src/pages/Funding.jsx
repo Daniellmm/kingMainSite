@@ -131,7 +131,7 @@ const Funding = () => {
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[850px] pb-5 rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 rounded-2xl w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -147,7 +147,7 @@ const Funding = () => {
           </ScrollAnimation>
         </div>
 
-        <div className='absolute top-[300px] left-[-40px]'>
+        <div className='absolute top-[200px] lg:top-[300px] left-[-40px]'>
           <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] lg:h-[250px] hero-dollar-left' />
         </div>
         <div className='absolute bottom-[10px] right-[-40px]'>
@@ -167,26 +167,26 @@ const Funding = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.3}>
             <div className='lg:px-24'>
-              <h1 className='text-black text-center leading-10 md:text-[24px]' style={{ fontFamily: 'Minion Pro, serif' }}>82% of entrepreneurs fail due to lack of cash flow—and 38% run out of cash entirely. By starting a funding business, you become the solution to a problem nearly every entrepreneur faces. This is the most profitable, low start-up cost opportunity available, and no extensive education is required—everyone needs capital.</h1>
+              <h1 className='text-black text-center leading-10 md:text-[24px]' style={{ fontFamily: 'Minion Pro, serif' }}> This is the most profitable, low start-up cost opportunity available, and no extensive education is required—everyone needs capital.</h1>
             </div>
             <div>
-              <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>C.e.o, Founder</h1>
+              <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Erick Alvarez</h1>
             </div>
           </ScrollAnimation>
         </div>
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-black py-10 '>
+      <section className='overflow-hidden  bg-black lg:pb-5 '>
         <div className='flex flex-col justify-center items-center py-10'>
           <ScrollAnimation animation="zoomIn" >
             <div>
-              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:px-44 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Discover the Secrets to Building a Funding Business with Unlimited Earning Potential </h1>
+              <h1 className='text-[#E7A647] px-10 pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:px-20 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Discover the Secrets to Building a Funding <br className='hidden lg:block' />Business with Unlimited <br className='hidden lg:block' /> Earning Potential </h1>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeIn" delay={0.6}>
-            <div className=''>
+            <div className='text-center px-10 lg:text-start'>
               <p className='text-white  md:text-[20px] leading-snug font-thin  lg:px-20 pb-14' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve ever tried to work in the funding industry, you know the biggest challenge is finding financing solutions that actually work for your customers—and that skepticism is understandable.
                 <br /> <br />
                 We get it.
@@ -282,19 +282,11 @@ const Funding = () => {
               <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
 
               {/* Content container */}
-              <div className="relative z-10 max-w-7xl mx-auto px-4">
+              <div className="relative z-10 max-w-7xl">
                 {/* Video slider */}
                 <div className="relative">
                   {/* Left arrow navigation */}
-                  <button
-                    className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handlePrevSlide}
-                    aria-label="Previous slide"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
+                  
 
                   {/* Slider container */}
                   <div className="overflow-hidden">
@@ -320,9 +312,20 @@ const Funding = () => {
                     </div>
                   </div>
 
+                  <div className='flex justify-center items-center gap-x-10'>
+                  <button
+                    className="absolute left-[10px] bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    onClick={handlePrevSlide}
+                    aria-label="Previous slide"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+
                   {/* Right arrow navigation */}
                   <button
-                    className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                    className="absolute right-[10px]  bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
                     onClick={handleNextSlide}
                     aria-label="Next slide"
                   >
@@ -330,10 +333,13 @@ const Funding = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
+                  </div>
+
+                  
                 </div>
 
                 {/* Dot indicators */}
-                <div className="flex justify-center mt-4">
+                <div className="flex pt-6 justify-center mt-4">
                   {videos.map((_, index) => (
                     <button
                       key={index}
@@ -365,7 +371,7 @@ const Funding = () => {
             <div className='flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center '>
               <ScrollAnimation animation="zoomIn">
                 <div>
-                  <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why Starting a Funding Business is the Smartest Move Right Now</h1>
+                  <h1 className='text-[#E7A647] text-center lg:text-start text-4xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why Starting a Funding Business is the Smartest Move Right Now</h1>
                 </div>
               </ScrollAnimation>
 
@@ -533,11 +539,11 @@ const Funding = () => {
             <ScrollAnimation animation="slideLeft">
               <div className='flex flex-col gap-y-5 md:px-10 lg:px-6 h-full justify-center '>
                 <div>
-                  <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why This Business Is So Profitable</h1>
+                  <h1 className='text-[#E7A647] text-center lg:text-start text-4xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why This Business Is So Profitable</h1>
                 </div>
 
                 <div>
-                  <p className=' text-gray-700 md:text-[20px] leading-[30px]' style={{ fontFamily: 'Montserrat, serif' }}>Most entrepreneurs don’t know where to turn for funding — or they’ve been burned by funding companies that overpromise and underdeliver.
+                  <p className=' text-gray-700 md:text-[20px] text-center lg:text-start leading-[30px]' style={{ fontFamily: 'Montserrat, serif' }}>Most entrepreneurs don’t know where to turn for funding — or they’ve been burned by funding companies that overpromise and underdeliver.
 
                     <br /><br />  You’ll have the power to give them the capital they need to grow — and you’ll get paid handsomely for doing it.</p>
                 </div>
@@ -552,17 +558,17 @@ const Funding = () => {
         <div className='flex justify-center items-center pt-6'>
           <div className='grid lg:grid-cols-2 grid-rows-1'>
 
-            <div className='flex w-full justify-center items-ecnter pl-20 bg-'>
+            <div className='flex w-full justify-center items-ecnter  lg:pl-20 bg-'>
               <div className='flex flex-col gap-y-3 md:px-10 lg:px-5 justify-center'>
                 <ScrollAnimation animation="zoomIn">
                   <div>
-                    <h1 className='text-[#E7A647] text-3xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Start Your Own Funding Business</h1>
+                    <h1 className='text-[#E7A647] text-center lg:text-start  text-4xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Start Your Own Funding Business</h1>
                   </div>
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="slideUp">
                   <div>
-                    <p className='text-white font-thin md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve been looking for a business model that: </p>
+                    <p className='text-white text-center lg:text-start font-thin md:text-[20px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve been looking for a business model that: </p>
                   </div>
                 </ScrollAnimation>
 
@@ -628,10 +634,10 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 justify-center items-center w-full flex bg-white min-h-[40vh]'>
+      <section className='overflow-hidden px-5 justify-center items-center w-full flex bg-white min-h-[40vh]'>
         <div className='flex flex-col justify-center items-center text-[#E7A647] gap-y-5'>
           <ScrollAnimation animation="zoomIn" >
-            <h1 className=' text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Spots Are Filling Fast – Secure Yours Today! </h1>
+            <h1 className=' text-4xl text-center lg:text-start lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Spots Are Filling Fast – Secure Yours Today! </h1>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div className='pt-7'>
@@ -643,6 +649,10 @@ const Funding = () => {
               </button>
             </div>
           </ScrollAnimation>
+
+          <div className='w-full h-[1px] mt-5 bg-black'>
+
+          </div>
         </div>
       </section>
     </>
