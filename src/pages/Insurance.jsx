@@ -255,7 +255,7 @@ const Insurance = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className="lg:text-8xl text-5xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 95% DON'T DO THIS
               </h1>
             </div>
