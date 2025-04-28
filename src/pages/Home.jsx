@@ -103,15 +103,15 @@ const Home = () => {
 
           <ScrollAnimation animation="zoomIn" delay={0.7}>
             <div>
-              <iframe className='md:w-[850px] pb-5 rounded-2xl w-[350px] h-[250px] md:rounded-[50px] md:h-[415px]'
+              <iframe className='md:w-[850px] pb-5 rounded-2xl w-[340px] h-[250px] md:rounded-[50px] md:h-[415px]'
                 src="https://www.youtube.com/embed/JvPEDv5MiFg?si=OlcE94Yhzy49qHXs" title="YouTube video player"
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animation="slideUp" delay={0.3}>
-            <div className='pt-14 md:pt-0'>
+          <ScrollAnimation animation="slideUp" delay={0.6}>
+            <div className='md:pt-0'>
               <button
                 className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
@@ -218,7 +218,7 @@ const Home = () => {
               <ScrollAnimation animation="slideRight">
                 <div className='flex justify-end items-center pt-10'>
                   <div>
-                    <iframe className='md:w-[530px] w-[370px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe className='md:w-[530px] w-[340px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </div>
                 </div>
               </ScrollAnimation>
