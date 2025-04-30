@@ -179,16 +179,18 @@ const GGEI = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-5xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                NEVER GO BROKE AGAIN
+              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+                Business Banking Accelerator
               </h1>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white text-center text-xl  md:text-[28px] pb-8' style={{ fontFamily: 'Minion Pro, serif' }}>Turn Your Business Into a Bank That Grows Your Wealth Aggressively
-                & Consistently at GGEI’s</p>
+              <p className='text-white text-center text-xl  md:text-[28px] pb-8' style={{ fontFamily: 'Minion Pro, serif' }}>
+                Learn How To Turn Your Business into a Bank That Grows Your Wealth
+                Agressively and Consistently at GGEI’s
+              </p>
             </div>
 
             <div className='flex justify-center'>
@@ -244,7 +246,7 @@ const GGEI = () => {
             </ScrollAnimation>
           </div>
 
-          <div className='flex gap-y-4 flex-col justify-start items-start'>
+          <div className='flex gap-y-4 flex-col justify-center items-center'>
             <ScrollAnimation animation="zoomIn">
               <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Earning More Money</h1>
             </ScrollAnimation>
@@ -257,7 +259,7 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 md:px-10 bg-white  pb-14'>
+      <section className='overflow-hidden px-5 md:px-10 bg-white  pb-14'>
         <div className='flex flex-col justify-center items-start gap-y-4 pt-10'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
@@ -266,7 +268,7 @@ const GGEI = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.1}>
-            <p className='text-xl font-semibold md:text-[26px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>Meet Our Co-Founder: King Edwards </p>
+            <p className='text-xl font-semibold md:text-[26px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>A Message From Our Co-Founder </p>
           </ScrollAnimation>
 
 
@@ -279,24 +281,44 @@ const GGEI = () => {
 
             <div className='md:text-[20px]' >
               <ScrollAnimation animation="slideUp" delay={0.4}>
-                <p className=' font-extralight md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>Hello, and welcome to Global Group Economic Initiative’s ”Become Your Own Bank Summit”.
+                <p className=' font-extralight text-black/70 md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
+                  Hello, King Edwards here, and I want to welcome you to <span className='font-bold'> The Global Group Economic Initiative’s
+                    “Become Your Own Bank Summit.”</span>
                   <br /><br />
-                  I co-founded this powerful group because I am committed to helping entrepreneurs avoid the pain I experienced after making an extraordinary amount of money, losing it all, and having to rebuild from scratch.
-                  <br /><br />
+                  This powerful initiative was created because I, along with the incredible team outlined below, am
+                  committed to helping entrepreneurs, athletes, and entertainers avoid the painful cycle of earning
+                  significant income, losing it all, and having to rebuild from scratch—a cycle that far too many of us
+                  face.
+                  {/* <br /><br />
                   At 28 years old, I became a millionaire. I thought I had made it. I had driven every luxury car, sailed on every yacht, and had some of the most powerful people in the world on speed dial. I believed there was no way I could go back to zero.
                   <br /><br />
-                  But by 34, I found myself filing for bankruptcy and struggling to generate income at the level I once had.
+                  But by 34, I found myself filing for bankruptcy and struggling to generate income at the level I once had. */}
                 </p>
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideLeft" delay={0.5}>
-                <p className='text-xl font-bold py-3 md:text-[22px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>Where did I go wrong?  </p>
+                <p className='text-xl font-bold py-3 md:text-[22px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>MY BACKGROUND </p>
               </ScrollAnimation>
 
               <ScrollAnimation animation="zoomIn" delay={0.6}>
-                <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>After experiencing such a tremendous loss, I went on a mission to uncover the true secrets to building and sustaining wealth. What I realized was that most of us have been misled.
+                <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+                  Both of my parents were highly successful in the entertainment industry. My father served as the
+                  Vice President of Capitol Records, and my mother is a two-time Grammy-nominated singer.
                   <br /><br />
-                  Many believe that wealth is built solely by earning more money. Others, the more financially savvy entrepreneurs, think investing is the key. While both are essential components of wealth-building, neither guarantees financial security on their own.
+                  In my early years, I believed that entertainment and popularity were the keys to wealth—until I met a
+                  successful entrepreneur who lived just like the entertainers and athletes I knew, but completely
+                  under the radar.
+                  <br /><br />
+                  After that encounter, I set out on a mission to build wealth through entrepreneurship—a path filled
+                  with unknown challenges. However, I eventually figured it out.
+                  <br /><br />
+                  And by the age of 30, I was what most would call “rich”. I earning over $100,000 per month, I had
+                  driven every luxury car you could imagine, been on yachts, flown on private jets, and built
+                  relationships with some of the most powerful billionaires in the world. I was convinced I could never
+                  go back to zero.
+                  <br /><br />
+                  However by age 33, and after several failed investments, I found myself struggling to generate
+                  income at the level I once had and was on the brink of filing for bankruptcy.
                 </p>
               </ScrollAnimation>
 
