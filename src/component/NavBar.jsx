@@ -157,7 +157,7 @@ const NavBar = () => {
           </div>
 
           {/* Menu Icon for Mobile */}
-          <div className='md:hidden'>
+          <div className='lg:hidden'>
             <button
               onClick={toggleMenu}
               className='transition-transform duration-300'
@@ -185,7 +185,7 @@ const NavBar = () => {
           </div>
 
           {/* Nav Links (hidden on mobile, shown on medium screens and up) */}
-          <div ref={linksRef} className='hidden md:flex'>
+          <div ref={linksRef} className='hidden lg:flex'>
             <ul className='flex space-x-5 md:space-x-6'>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
@@ -241,7 +241,7 @@ const NavBar = () => {
           </div>
 
           {/* contact us btn  */}
-          <div ref={buttonRef} className='hidden md:block lg:flex gap-x-5 border border-1 rounded-lg border-black'>
+          <div ref={buttonRef} className='hidden lg:block lg:flex gap-x-5 border border-1 rounded-lg border-black'>
             <button
               style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
               className='bg-Btn text-black rounded-lg  md:text-sx hover:bg-[#E7A647] py-3 md:py-2 px-4 md:px-2 border-black transition-all duration-300'
@@ -257,7 +257,7 @@ const NavBar = () => {
         {isOpen && (
           <div
             ref={mobileMenuRef}
-            className='md:hidden mt-4 backdrop-blur-md rounded-lg p-4 shadow-md'
+            className='lg:hidden mt-4 backdrop-blur-md rounded-lg p-4 shadow-md'
           >
             <ul className='flex space-y-4 justify-center items-center flex-col'>
               <li

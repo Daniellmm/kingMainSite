@@ -131,7 +131,7 @@ const Funding = () => {
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[850px] pb-5 rounded-2xl w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/m2ERPhqNENk?si=LBHOcW6Eti5e4HTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 rounded-2xl md:w-[640px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/1aJIqv7Tz_Q?si=OEQxeJPWmSdd_cex" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -181,7 +181,8 @@ const Funding = () => {
         <div className='flex flex-col justify-center items-center py-10'>
           <ScrollAnimation animation="zoomIn" >
             <div>
-              <h1 className='text-[#E7A647] px-10 pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:px-20 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Discover the Secrets to Building a Funding <br className='hidden lg:block' />Business with Unlimited <br className='hidden lg:block' /> Earning Potential </h1>
+              <h1 className='text-[#E7A647] px-10 pb-10 text-3xl lg:text-[45px] lg:leading-[45px] text-center lg:px-20 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                Discover the Secrets to Building a Funding Business with  <br className='hidden lg:block' />Unlimited Earning Potential </h1>
             </div>
           </ScrollAnimation>
 
