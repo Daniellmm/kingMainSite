@@ -13,6 +13,7 @@ import Rect1 from '../assets/images/rect1.png';
 import Rect2 from '../assets/images/rect2.png';
 import Rect3 from '../assets/images/rect3.png';
 import ArrowR from '../assets/images/arrowupright.png';
+import ARROWD from '../assets/images/arrowD.png'
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -85,25 +86,33 @@ const Home = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-5 bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-24 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
-              <h1 className="lg:text-8xl text-6xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className="lg:text-8xl px-1 text-5xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 GET UP TO $4M
               </h1>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
-            <div>
-              <p className='text-white pb-5 text-center text-[20px] md:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}>in Fast, Reliable Financing for You & Your Customers!</p>
+
+            <div className='flex justify-center'>
+              <p className='text-white pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+                in Fast, Reliable Financing for You & Your Customers!
+                <span className='text-[#e7a647]'> Watch this video.</span>
+              </p>
+
+              <div className='flex items-end'>
+                <img src={ARROWD} className=' animate-bounce lg:pl-4' alt="" />
+              </div>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.7}>
             <div>
-              <iframe className='md:w-[850px] pb-5 rounded-2xl w-[340px] h-[250px] md:rounded-[50px] md:h-[415px]'
+              <iframe className='lg:w-[850px] md:w-[640px] pb-5 rounded-2xl w-[340px] h-[250px] md:rounded-[50px] md:h-[415px]'
                 src="https://www.youtube.com/embed/JvPEDv5MiFg?si=OlcE94Yhzy49qHXs" title="YouTube video player"
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -218,31 +227,33 @@ const Home = () => {
               <ScrollAnimation animation="slideRight" delay={0.8}>
                 <div className='flex justify-end items-center pt-10'>
                   <div>
-                    <iframe className='md:w-[530px] w-[340px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe className='md:w-[490px] w-[340px] pb-5 rounded-xl h-[250px] md:rounded-[50px] md:h-[580px]' src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </div>
                 </div>
               </ScrollAnimation>
             </div>
 
-            <ScrollAnimation animation="slideLeft" delay={0.8}>
-              <div className='flex flex-col gap-y-5 md:px-10 h-full items-center lg:items-start justify-center '>
-                <div>
-                  <h1 className='text-[#E7A647] text-4xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>About Us</h1>
-                </div>
+            <div className='flex justify-center items-center'>
+              <ScrollAnimation animation="slideLeft" delay={0.8}>
+                <div className='flex flex-col gap-y-5 md:px-10 h-full items-center lg:items-start justify-center '>
+                  <div>
+                    <h1 className='text-[#E7A647] text-4xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>About Us</h1>
+                  </div>
 
-                <div className='flex'>
-                  <p className='text-lg lg:text-[18px] items-center lg:items-start text-gray-700 leading-7' style={{ fontFamily: 'Montserrat, serif' }}>If you're here, it's likely because you've worked with other funding companies in the past only
-                    to be met with empty promises and disappointing results. To make matters worse, some have
-                    even charged you upfront fees without delivering meaningful outcomes. That ends today!
-                    <br /><br />
-                    At High Ticket Offer Financing, we believe in results, not risks. That's why we charge zero
-                    upfront fees—we only get paid when we successfully secure your funding.
-                    <br /><br />
+                  <div className='flex'>
+                    <p className='text-lg lg:text-[18px] items-center lg:items-start text-gray-700 leading-7' style={{ fontFamily: 'Montserrat, serif' }}>If you're here, it's likely because you've worked with other funding companies in the past only
+                      to be met with empty promises and disappointing results. To make matters worse, some have
+                      even charged you upfront fees without delivering meaningful outcomes. That ends today!
+                      <br /><br />
+                      At High Ticket Offer Financing, we believe in results, not risks. That's why we charge zero
+                      upfront fees—we only get paid when we successfully secure your funding.
+                      <br /><br />
 
-                    It's time to stop trying to get funded and start getting funded. Let's get to work.</p>
+                      It's time to stop trying to get funded and start getting funded. Let's get to work.</p>
+                  </div>
                 </div>
-              </div>
-            </ScrollAnimation>
+              </ScrollAnimation>
+            </div>
           </div>
         </div>
       </section>
@@ -425,14 +436,14 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black font-bold ' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold ' style={{ fontFamily: 'Montserrat, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
                 <div className='flex justify-end items-center w-full'>
                   {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
 
                   <div className='flex justify-center items-center'>
-                    <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
+                    <p className='text-black text-xs' style={{ fontFamily: 'Montserrat, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
 
                     <img src={ArrowR} alt="" />
                   </div>
@@ -448,14 +459,14 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black font-bold' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold' style={{ fontFamily: 'Montserrat, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
                 <div className='flex justify-end items-center w-full'>
                   {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
 
                   <div className='flex justify-center items-center'>
-                    <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
+                    <p className='text-black text-xs' style={{ fontFamily: 'Montserrat, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
 
                     <img src={ArrowR} alt="" />
                   </div>
@@ -471,14 +482,14 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black font-bold' style={{ fontFamily: 'Minion Pro, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold' style={{ fontFamily: 'Montserrat, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
                 </div>
 
                 <div className='flex justify-end items-center w-full'>
                   {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
 
                   <div className='flex justify-center items-center'>
-                    <p className='text-black text-xs' style={{ fontFamily: 'Minion Pro, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
+                    <p className='text-black text-xs' style={{ fontFamily: 'Montserrat, serif', fontStyle: 'normal', fontWeight: 200 }}>Read More</p>
                     <img src={ArrowR} alt="" />
                   </div>
                 </div>

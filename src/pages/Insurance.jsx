@@ -269,7 +269,7 @@ const Insurance = () => {
               </p>
 
               <div className='flex items-end'>
-                <img src={ARROWD} alt="" />
+                <img src={ARROWD} className=' animate-bounce ' alt="" />
               </div>
             </div>
 
