@@ -270,7 +270,7 @@ const GGEI = () => {
           </ScrollAnimation>
 
 
-          <div className='flex lg:px-20 flex-col md:flex-row justify-center items-center gap-x-2 gap-y-5 pt-6'>
+          <div className='flex lg:px-16 flex-col md:flex-row justify-center items-center gap-x-2 gap-y-5 pt-6'>
             <div className='h-full lg:w-[50%]'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
                 <img src={LONG2} className='rounded-xl lg:h-[450px] w-auto' alt="" />

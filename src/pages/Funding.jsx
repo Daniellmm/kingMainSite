@@ -187,7 +187,7 @@ const Funding = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeIn" delay={0.6}>
-            <div className='text-center px-10 lg:text-start'>
+            <div className='text-start px-10 lg:text-start'>
               <p className='text-white  md:text-[20px] leading-snug font-thin  lg:px-20 pb-14' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve ever tried to work in the funding industry, you know the biggest challenge is finding financing solutions that actually work for your customers—and that skepticism is understandable.
                 <br /> <br />
                 We get it.
@@ -540,11 +540,11 @@ const Funding = () => {
             <ScrollAnimation animation="slideLeft">
               <div className='flex flex-col gap-y-5 md:px-10 lg:px-6 h-full justify-center '>
                 <div>
-                  <h1 className='text-[#E7A647] text-center lg:text-start text-4xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why This Business Is So Profitable</h1>
+                  <h1 className='text-[#E7A647] text-center lg:text-start text-4xl lg:text-[45px] leading-[50px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why This Business Is So Profitable?</h1>
                 </div>
 
                 <div>
-                  <p className=' text-gray-700 md:text-[20px] text-center lg:text-start leading-[30px]' style={{ fontFamily: 'Montserrat, serif' }}>Most entrepreneurs don’t know where to turn for funding — or they’ve been burned by funding companies that overpromise and underdeliver.
+                  <p className=' text-gray-700 md:text-[20px] text-start lg:text-start leading-[30px]' style={{ fontFamily: 'Montserrat, serif' }}>Most entrepreneurs don’t know where to turn for funding — or they’ve been burned by funding companies that overpromise and underdeliver.
 
                     <br /><br />  You’ll have the power to give them the capital they need to grow — and you’ll get paid handsomely for doing it.</p>
                 </div>
