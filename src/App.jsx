@@ -30,7 +30,7 @@ const preloaderContent = {
     subText: 'COMPREHENSIVE INSURANCE COVERAGE FOR PEACE OF MIND'
   },
   '/laserfund': {
-    mainText: ['Laser', 'Fund', 'PAMM'],
+    mainText: [' Master', 'The', 'Markets'],    
     subText: ' Learn While You Earn'
   },
   '/ggei': {

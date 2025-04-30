@@ -6,7 +6,7 @@ import HEADPHONE from '../assets/images/headphone.png'
 import BIGLOGO from '../assets/images/biglogo.png'
 import FALLCOIN from '../assets/images/fallcoin.png'
 import LONG from '../assets/images/long.png'
-import KING from '../assets/images/king3a.png'
+import KING from '../assets/images/king.png'
 import ALEXIS from '../assets/images/alexis.png'
 import ARROWD from '../assets/images/arrowD.png'
 import GENE from '../assets/images/gene.png'
@@ -255,8 +255,8 @@ const Insurance = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-5xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                95% DON'T DO THIS
+              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+                ARE YOU INSURING YOUR MONEY?
               </h1>
             </div>
           </ScrollAnimation>
@@ -264,17 +264,17 @@ const Insurance = () => {
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div className='flex justify-center'>
               <p className='text-white pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-                95% of entrepreneurs fail because they don’t properly protect the
-                <br className='hidden lg:block' /> money they earn. Don’t let this be you. <span className='text-[#e7a647]'>Watch this video.</span>
+                IF YOU ARE AN ENTREPRENEUR ANDBYOU ARE NOT INSURING YOUR MONEY
+                <span className='text-[#e7a647]'> Watch this video.</span>
               </p>
 
               <div className='flex items-end'>
-                <img src={ARROWD} className=' animate-bounce ' alt="" />
+                <img src={ARROWD} className=' animate-bounce lg:pl-4' alt="" />
               </div>
             </div>
 
             <div className='flex w-full justify-center'>
-              <iframe className='lg:w-[850px] pb-5 rounded-2xl w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/mRKJTzM-qTk?si=SRmluWecI8rayx0X" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 rounded-2xl md:w-[640px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/mRKJTzM-qTk?si=SRmluWecI8rayx0X" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
@@ -609,7 +609,7 @@ const Insurance = () => {
         `}</style>
       </section>
 
-      <section className='overflow-hidden flex justify-center items-center px-10 bg-white  pb-14 team-section'>
+      <section className='overflow-hidden flex justify-center items-center px-5 bg-white  pb-14 team-section'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <div>
             <ScrollAnimation animation="zoomIn" delay={0.2}>
@@ -617,10 +617,10 @@ const Insurance = () => {
             </ScrollAnimation>
           </div>
 
-          <div className='lg:px-20 space-y-10'>
-            <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
-              <div>
-                <img src={KING} className='rounded-xl' alt="" />
+          <div className='lg:px-10 space-y-10'>
+            <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+              <div className='flex justify-center items-center'>
+                <img src={KING} className='w-full' alt="" />
               </div>
 
               <div className='flex flex-col justify-center items-start'>
@@ -639,9 +639,9 @@ const Insurance = () => {
               </div>
             </div>
 
-            <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
-              <div>
-                <img src={ALEXIS} alt="" />
+            <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+              <div className='flex justify-center items-center'>
+                <img src={ALEXIS} className='w-full' alt="" />
               </div>
 
               <div className='flex flex-col justify-center items-start'>
@@ -659,9 +659,9 @@ const Insurance = () => {
             </div>
 
             <div className='flex justify-center items-center'>
-              <div className='grid md:grid-cols-2 gap-x-14 space-y-10'>
-                <div>
-                  <img src={GENE} alt="" />
+              <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+                <div className='flex justify-center items-center'>
+                  <img src={GENE} className='w-full' alt="" />
                 </div>
 
                 <div className='flex flex-col justify-center items-start'>

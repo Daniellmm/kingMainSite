@@ -73,12 +73,14 @@ const Funding = () => {
 
   // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
-    "https://www.youtube.com/embed/8oc1XzrVKdU",
-    "https://www.youtube.com/embed/byzZl7yl0S0",
-    "https://www.youtube.com/embed/Nkowi5BdpD4",
+    "https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn",
+    "https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX",
+    "https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX",
+    "https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH",
+    "https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp",
+    "https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA",
   ]);
-
-
+  
   const handlePrevVideo = () => {
     // Rotate videos left (make the last video the first)
     const newVideos = [...videos];
@@ -202,14 +204,14 @@ const Funding = () => {
 
           <div className="w-full">
             {/* Desktop/Large Screen Layout */}
-            <div className="hidden lg:block bg-black w-full relative">
+            <div className="hidden lg:block bg-black w-full relative overflow-x-auto scroll-smooth">
               {/* Grid pattern overlay */}
               <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
 
               {/* Content container */}
               <div className="relative z-10 max-w-7xl mx-auto px-4">
                 {/* Video gallery */}
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center overflow-x-auto scroll-smooth snap-x snap-mandatory">
                   {/* Left arrow navigation */}
                   <button
                     className="absolute left-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
@@ -222,7 +224,7 @@ const Funding = () => {
                   </button>
 
                   {/* Left video */}
-                  <div className="w-1/4 transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 -mr-6 z-10">
+                  <div className="w-1/4 snap-start transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 -mr-6 z-10">
                     <div className="relative overflow-hidden rounded-lg shadow-2xl">
                       <iframe
                         className="w-full aspect-video"
@@ -236,7 +238,7 @@ const Funding = () => {
                   </div>
 
                   {/* Center video (larger) */}
-                  <div className="w-1/2 transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 z-20">
+                  <div className="w-1/2 snap-start transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 z-20">
                     <div className="relative overflow-hidden rounded-lg shadow-2xl">
                       <iframe
                         className="w-full aspect-video"
@@ -250,7 +252,7 @@ const Funding = () => {
                   </div>
 
                   {/* Right video */}
-                  <div className="w-1/4 transform transition-transform duration-300 hover:scale-105 -ml-6 z-10">
+                  <div className="w-1/4 snap-start transform transition-transform duration-300 hover:scale-105 -ml-6 z-10">
                     <div className="relative overflow-hidden rounded-lg shadow-2xl">
                       <iframe
                         className="w-full aspect-video"
