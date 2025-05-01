@@ -26,7 +26,7 @@ const preloaderContent = {
     subText: 'Earn Up To 6 Figures + In Consulting Fees'
   },
   '/insurance': {
-    mainText: ['PROTECT', 'YOUR', 'INVESTMENT'],
+    mainText: ['Insure', 'Your', 'Wealth'],   
     subText: 'COMPREHENSIVE INSURANCE COVERAGE FOR PEACE OF MIND'
   },
   '/laserfund': {

@@ -114,12 +114,12 @@ const Funding = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-[38px] text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className="lg:text-[70px] text-[38px] px-5 text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 START YOUR OWN FUNDING BUSINESS
               </h1>
             </div>
@@ -127,13 +127,13 @@ const Funding = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <p className='text-white pb-7 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-                Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain <br />They Desperately Need to Succeed.
+              <p className='text-white pb-7 px-5 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+                Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain <br className='lg:block hidden' />They Desperately Need to Succeed.
               </p>
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[850px] pb-5 rounded-2xl md:w-[640px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/1aJIqv7Tz_Q?si=OEQxeJPWmSdd_cex" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 px-5 rounded-2xl md:w-[640px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/1aJIqv7Tz_Q?si=OEQxeJPWmSdd_cex" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 

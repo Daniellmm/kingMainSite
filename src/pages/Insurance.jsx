@@ -212,10 +212,13 @@ const Insurance = () => {
 
   // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
-    "https://www.youtube.com/embed/8oc1XzrVKdU",
-    "https://www.youtube.com/embed/byzZl7yl0S0",
-    "https://www.youtube.com/embed/Nkowi5BdpD4",
-  ]);
+      "https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn",
+      "https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX",
+      "https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX",
+      "https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH",
+      "https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp",
+      "https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA",
+    ]);
 
 
   const handlePrevVideo = () => {
@@ -255,7 +258,7 @@ const Insurance = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className="lg:text-7xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 ARE YOU INSURING YOUR MONEY?
               </h1>
             </div>
@@ -283,7 +286,7 @@ const Insurance = () => {
                 onClick={handleButtonClick}
                 className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                Check My Funding Eligibility
+                Free Financial Review
               </button>
             </div>
           </ScrollAnimation>
@@ -333,7 +336,7 @@ const Insurance = () => {
                     onClick={handleButtonClick}
                     className='bg-[#E7A647] px-5 py-3  rounded-[8px]'
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                    FREE Financial Review
+                    Free Financial Review
                   </button>
                 </ScrollAnimation>
               </div>

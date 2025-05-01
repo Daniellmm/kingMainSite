@@ -8,7 +8,7 @@ import LASER from '../assets/images/laser.png'
 import CIRCLE from '../assets/images/circle.png'
 import READ from '../assets/images/read.png'
 import LONG from '../assets/images/long.png'
-import ARROWD from '../assets/images/arrowD.png'  
+import ARROWD from '../assets/images/arrowD.png'
 import CHART from '../assets/images/chart.png'
 import LAY from '../assets/images/lay.png'
 import ScrollAnimation from '../component/ScrollAnimation'
@@ -75,9 +75,12 @@ const LaserFund = () => {
 
   // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
-    "https://www.youtube.com/embed/8oc1XzrVKdU",
-    "https://www.youtube.com/embed/byzZl7yl0S0",
-    "https://www.youtube.com/embed/Nkowi5BdpD4",
+    "https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn",
+    "https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX",
+    "https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX",
+    "https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH",
+    "https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp",
+    "https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA",
   ]);
 
 
@@ -127,8 +130,8 @@ const LaserFund = () => {
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div className='flex justify-center'>
               <p className='text-white px-4 pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-              Master the markets, build wealth, create passive income,
-              and learn the secrets to successful trading.
+                Master the markets, build wealth, create passive income,
+                and learn the secrets to successful trading.
                 <span className='text-[#e7a647]'> Watch this video.</span>
               </p>
 
@@ -136,7 +139,7 @@ const LaserFund = () => {
                 <img src={ARROWD} className=' animate-bounce lg:pl-4' alt="" />
               </div>
             </div>
-            
+
             <div className='flex justify-center w-full'>
               <iframe className='lg:w-[850px] px-5 pb-5 rounded-2xl w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/qVVt7nn6AcU?feature=shared" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -273,7 +276,7 @@ const LaserFund = () => {
             <div className=' flex flex-col md:text-[18px] justify-center gap-y-5'>
               <ScrollAnimation animation="zoomIn">
                 <h1 className='text-[#E7A647]  text-3xl lg:text-[45px] text-center lg:text-start lg:leading-[45px] px-10 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
-                The Laser Fund PAMM Trading, Automation & Education Network
+                  The Laser Fund PAMM Trading, Automation & Education Network
                 </h1>
               </ScrollAnimation>
 
@@ -754,7 +757,7 @@ const LaserFund = () => {
                 onClick={handleButtonClick}
                 className='bg-[#E7A647] text-black px-3 py-3  rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                Review Disclaimer
+                Download Now
               </button>
             </div>
           </ScrollAnimation>
