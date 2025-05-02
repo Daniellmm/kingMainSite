@@ -260,7 +260,7 @@ const GGEI = () => {
 
 
       <section className='overflow-hidden px-5 md:px-10 bg-white  pb-14'>
-        <div className='flex flex-col justify-center items-start gap-y-4 pt-10'>
+        <div className='flex flex-col justify-center items-center lg:items-start gap-y-4 pt-10'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
               Most entrepreneurs believe that the secret to wealth lies in earning more money—but is that really the case?
@@ -281,8 +281,8 @@ const GGEI = () => {
 
             <div className='md:text-[20px]' >
               <ScrollAnimation animation="slideUp" delay={0.4}>
-                <p className=' font-extralight text-black/70 md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
-                  Hello, King Edwards here, and I want to welcome you to <span className='font-bold'> The Global Group Economic Initiative’s
+                <p className=' font-extralight  md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
+                  Hello, King Edwards here, and I want to welcome you to <span className='font-bold text-black/70'> The Global Group Economic Initiative’s
                     “Become Your Own Bank Summit.”</span>
                   <br /><br />
                   This powerful initiative was created because I, along with the incredible team outlined below, am
@@ -316,27 +316,26 @@ const GGEI = () => {
                   driven every luxury car you could imagine, been on yachts, flown on private jets, and built
                   relationships with some of the most powerful billionaires in the world. I was convinced I could never
                   go back to zero.
-                  <br /><br />
-                  However by age 33, and after several failed investments, I found myself struggling to generate
-                  income at the level I once had and was on the brink of filing for bankruptcy.
                 </p>
               </ScrollAnimation>
 
             </div>
           </div>
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <p className='text-xl font-semibold py-3 md:text-[22px] text-center lg:text-start ' style={{ fontFamily: 'Minion Pro, serif' }}>
-              The real key to building wealth is simple: never lose money.
+            <p className=' font-extralight md:text-[18px]  text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+              However by age 33, and after several failed investments, I found myself struggling to generate
+              income at the level I once had and was on the brink of filing for bankruptcy.
+              <br /><br />
+              That traumatic financial experience forced me to search for the real principles of building and
+              sustaining wealth. This journey led me to my first financial mentor, Alexis Holifield.
+              Through our relationship, I came to a powerful realization: <span className='font-bold text-black/70'> most of us have been misled about our
+              finances. </span>
+              <br /><br />
+              Some believe wealth is built simply by earning more income. Others believe investing is the only
+              way. And while both are necessary building blocks to creating wealth, neither ensures financial
+              security on their own.
             </p>
           </ScrollAnimation>
-
-          <ScrollAnimation animation="slideUp" delay={0.4}>
-            <p className='pb-5  font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-              • If you rely solely on earning money, you will inevitably spend it to sustain your lifestyle. <br />
-              • If you rely solely on investing, you risk losing it to bad investments or unfavorable market conditions.
-            </p>
-          </ScrollAnimation>
-
           <ScrollAnimation animation="slideUp" delay={0.4}>
             <p className='text-xl py-4 font-semibold text-center lg:text-start md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>
               True wealth follows a three-step process:
@@ -345,13 +344,18 @@ const GGEI = () => {
           <ScrollAnimation animation="slideUp" delay={0.8}>
             <ol className='pb-5 font-bold  leading-[25px] text-center lg:text-start md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
               <li>Earning more money</li>
-              <li>Protecting the money you’ve earned</li>
-              <li>Growing the money you’ve protected </li>
+              <li>Protect the money you’ve earned</li>
+              <li>Grow the money you’ve protected </li>
             </ol>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.9}>
             <p className='font-extralight  md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-              At the Become Your Own Bank Summit, we will teach you how to implement a systematic approach to mastering all three—quickly and aggressively.
+              At the Become Your Own Bank Summit, we’ll teach you how to use bank funding, insurance, trading
+              algorithms, and other asset classes to grow your wealth—consistently, sustainably, and continuously
+              —just like the Warren Buffetts of the world
+            </p>
+            <p className='text-lg font-extralight md:text-[22px] text-center lg:text-start pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
+              This is what we call <span className='font-semibold'> Wealth Mastery</span>
             </p>
             <p className='text-lg font-semibold md:text-[22px] text-center lg:text-start pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
               Is this something you’d like to learn?
@@ -371,7 +375,7 @@ const GGEI = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <p className='text-white text-center lg:text-start font-extralight md:text-[22px]' style={{ fontFamily: 'Montserrat, serif' }}>
-                AN ENTREPRENEURS GUILD TO EARNING MORE MONEY, PROTECTING THE MONEY YOU HAVE EARNED, & GROWING THE MONEY YOU HAVE PROTECTED.
+                AN ENTREPRENEURS GUIDE TO EARNING MORE MONEY, PROTECTING THE MONEY YOU HAVE EARNED, & GROWING THE MONEY YOU HAVE PROTECTED.
               </p>
             </ScrollAnimation>
             <div className='flex justify-center lg:justify-start w-full'>
@@ -562,7 +566,7 @@ const GGEI = () => {
       </section>
 
 
-      <section className='overflow-hidden flex justify-center items-center px-10 bg-black pb-14'>
+      {/* <section className='overflow-hidden flex justify-center items-center px-10 bg-black pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-1'>
           <div className='grid md:grid-cols-2 gap-y-10'>
             <ScrollAnimation animation="slideRight" delay={0.3}>
@@ -627,7 +631,7 @@ const GGEI = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       <section className='overflow-hidden flex justify-center items-center bg-white  pb-14'>
