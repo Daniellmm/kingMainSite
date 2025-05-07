@@ -6,7 +6,7 @@ import SCI from '../assets/images/sci.png'
 import YELLOW from '../assets/images/yellow.png'
 import BIGLOGO2 from '../assets/images/biglogo2.png'
 import DART from '../assets/images/dart.png'
-import LONG2 from '../assets/images/longg2.png'
+import LONG2 from '../assets/images/king4.png'
 import BLOCK from '../assets/images/block.png'
 import CHECK from '../assets/images/check.png'
 import LAPTOP from '../assets/images/laptop.png'
@@ -272,8 +272,8 @@ const GGEI = () => {
           </ScrollAnimation>
 
 
-          <div className='flex lg:px-16 flex-col md:flex-row justify-center items-center gap-x-2 gap-y-5 pt-6'>
-            <div className='h-full lg:w-[50%]'>
+          <div className='flex  w-full flex-col md:flex-row justify-center items-center gap-x-2 gap-y-5 pt-6'>
+            <div className='h-full lg:w-[100%] flex justify-start items-start'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
                 <img src={LONG2} className='rounded-xl lg:h-[450px] w-auto' alt="" />
               </ScrollAnimation>
@@ -311,11 +311,6 @@ const GGEI = () => {
                   <br /><br />
                   After that encounter, I set out on a mission to build wealth through entrepreneurship—a path filled
                   with unknown challenges. However, I eventually figured it out.
-                  <br /><br />
-                  And by the age of 30, I was what most would call “rich”. I earning over $100,000 per month, I had
-                  driven every luxury car you could imagine, been on yachts, flown on private jets, and built
-                  relationships with some of the most powerful billionaires in the world. I was convinced I could never
-                  go back to zero.
                 </p>
               </ScrollAnimation>
 
@@ -323,13 +318,18 @@ const GGEI = () => {
           </div>
           <ScrollAnimation animation="slideUp" delay={0.7}>
             <p className=' font-extralight md:text-[18px]  text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+              And by the age of 30, I was what most would call “rich”. I earning over $100,000 per month, I had
+              driven every luxury car you could imagine, been on yachts, flown on private jets, and built
+              relationships with some of the most powerful billionaires in the world. I was convinced I could never
+              go back to zero.
+              <br /><br />
               However by age 33, and after several failed investments, I found myself struggling to generate
               income at the level I once had and was on the brink of filing for bankruptcy.
               <br /><br />
               That traumatic financial experience forced me to search for the real principles of building and
               sustaining wealth. This journey led me to my first financial mentor, Alexis Holifield.
               Through our relationship, I came to a powerful realization: <span className='font-bold text-black/70'> most of us have been misled about our
-              finances. </span>
+                finances. </span>
               <br /><br />
               Some believe wealth is built simply by earning more income. Others believe investing is the only
               way. And while both are necessary building blocks to creating wealth, neither ensures financial
