@@ -272,14 +272,14 @@ const GGEI = () => {
           </ScrollAnimation>
 
 
-          <div className='flex  w-full flex-col md:flex-row justify-center items-center gap-x-2 gap-y-5 pt-6'>
-            <div className='h-full lg:w-[100%] flex justify-start items-start'>
+          <div className='flex w-full flex-col md:flex-row justify-center items-center gap-x-2 gap-y-5 pt-6'>
+            <div className='h-full lg:w-[100%] flex justify-center items-start'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
-                <img src={LONG2} className='rounded-xl lg:h-[450px] w-auto' alt="" />
+                <img src={LONG2} className='rounded-xl lg:h-[650px] w-auto' alt="" />
               </ScrollAnimation>
             </div>
 
-            <div className='md:text-[20px]' >
+            <div className='md:text-[20px] lg:w-[99%]'>
               <ScrollAnimation animation="slideUp" delay={0.4}>
                 <p className=' font-extralight  md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
                   Hello, King Edwards here, and I want to welcome you to <span className='font-bold text-black/70'> The Global Group Economic Initiative’s
