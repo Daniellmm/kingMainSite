@@ -116,7 +116,7 @@ const LaserFund = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
@@ -129,14 +129,14 @@ const LaserFund = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div className='flex justify-center'>
-              <p className='text-white px-4 pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+              <p className='text-white px-4 pb-8 text-center text-sm  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
                 Master the markets, build wealth, create passive income,
                 and learn the secrets to successful trading.
                 <span className='text-[#e7a647]'> Watch this video.</span>
               </p>
 
               <div className='flex items-end'>
-                <img src={ARROWD} className=' animate-bounce lg:pl-4' alt="" />
+                <img src={ARROWD} className=' animate-bounce lg:pl-4 pr-1' alt="" />
               </div>
             </div>
 

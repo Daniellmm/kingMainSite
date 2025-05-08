@@ -86,7 +86,7 @@ const Home = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-24 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>

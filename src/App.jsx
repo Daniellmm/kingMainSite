@@ -35,7 +35,7 @@ const preloaderContent = {
   },
   '/ggei': {
     mainText: ['Become', 'Your Own', 'Bank'],
-    subText: 'SUSTAINABLE FUNDING FOR ECO-FRIENDLY BUSINESS VENTURES'
+    subText: 'Become Your Own Bank Submit'
   },
 };
 

@@ -6,7 +6,7 @@ import HEADPHONE from '../assets/images/headphone.png'
 import BIGLOGO from '../assets/images/biglogo.png'
 import FALLCOIN from '../assets/images/fallcoin.png'
 import LONG from '../assets/images/long.png'
-import KING from '../assets/images/king.png'
+import KING from '../assets/images/king5.png'
 import ALEXIS from '../assets/images/alexis.png'
 import ARROWD from '../assets/images/arrowD.png'
 import GENE from '../assets/images/gene.png'
@@ -253,7 +253,7 @@ const Insurance = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
@@ -623,7 +623,7 @@ const Insurance = () => {
           <div className='lg:px-10 space-y-10'>
             <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
               <div className='flex justify-center items-center'>
-                <img src={KING} className='w-full' alt="" />
+                <img src={KING} className='w-auto rounded-3xl' alt="" />
               </div>
 
               <div className='flex flex-col justify-center items-start'>
@@ -644,7 +644,7 @@ const Insurance = () => {
 
             <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
               <div className='flex justify-center items-center'>
-                <img src={ALEXIS} className='w-full' alt="" />
+                <img src={ALEXIS} className='w-[510px]' alt="" />
               </div>
 
               <div className='flex flex-col justify-center items-start'>
@@ -664,7 +664,7 @@ const Insurance = () => {
             <div className='flex justify-center items-center'>
               <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
                 <div className='flex justify-center items-center'>
-                  <img src={GENE} className='w-full' alt="" />
+                  <img src={GENE} className='w-[510px]' alt="" />
                 </div>
 
                 <div className='flex flex-col justify-center items-start'>

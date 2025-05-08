@@ -174,7 +174,7 @@ const GGEI = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-screen md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
@@ -226,8 +226,8 @@ const GGEI = () => {
 
             <ScrollAnimation animation="zoomIn" delay={0.4}>
               <div className='lg:px-24'>
-                <h1 className='text-black font-bold text-3xl text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“If your income provides for your upkeep, it will become your
-                  downfall.”</h1>
+                <h1 className='text-black font-bold text-3xl text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  “If you look at your circle and you don't get inspired then you don't have a circle you have a cage”</h1>
               </div>
               <div>
                 <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Alexis Holifield</h1>
@@ -268,76 +268,102 @@ const GGEI = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.1}>
-            <p className='text-xl font-semibold md:text-[26px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>A Message From Our Co-Founder </p>
           </ScrollAnimation>
 
 
-          <div className='flex w-full flex-col md:flex-row justify-center items-center gap-x-2 gap-y-5 pt-6'>
+          <div className='flex w-full flex-col md:flex-row justify-center items-center gap-x-7 gap-y-5 pt-6'>
             <div className='h-full lg:w-[100%] flex justify-center items-start'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
-                <img src={LONG2} className='rounded-xl lg:h-[650px] w-auto' alt="" />
+                <img src={LONG2} className='rounded-xl  w-auto' alt="" />
               </ScrollAnimation>
             </div>
 
             <div className='md:text-[20px] lg:w-[99%]'>
-              <ScrollAnimation animation="slideUp" delay={0.4}>
+
+              <ScrollAnimation animation="slideRight" delay={0.3}>
+                <p className='text-xl font-semibold md:text-[26px] text-center pb-3 lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>A Message From Our Co-Founder </p>
+
                 <p className=' font-extralight  md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
-                  Hello, King Edwards here, and I want to welcome you to <span className='font-bold text-black/70'> The Global Group Economic Initiative’s
-                    “Become Your Own Bank Summit.”</span>
+                  I was speaking to our Co-Founder, Alexis Holifield, and she shared a quote with me that sums up
+                  <span className='font-bold text-black/70'> The Global Group Economic Initiative's purpose: </span>
+                  “If you don’t have at least five friends in your
+                  phone who can turn $1 into $2, you need a new circle.”
                   <br /><br />
-                  This powerful initiative was created because I, along with the incredible team outlined below, am
-                  committed to helping entrepreneurs, athletes, and entertainers avoid the painful cycle of earning
-                  significant income, losing it all, and having to rebuild from scratch—a cycle that far too many of us
-                  face.
-                  {/* <br /><br />
-                  At 28 years old, I became a millionaire. I thought I had made it. I had driven every luxury car, sailed on every yacht, and had some of the most powerful people in the world on speed dial. I believed there was no way I could go back to zero.
+                  Often times, entrepreneurs fill their phones with “comfort connections” who can’t move the financial
+                  needle when it matters most. The wealthy don’t just gather friends—they cultivate strategic allies
+                  who lift them spiritually and financially.
                   <br /><br />
-                  But by 34, I found myself filing for bankruptcy and struggling to generate income at the level I once had. */}
+                  With wars on the horizon, markets teetering on collapse, and global uncertainty looming, the single
+                  smartest move you can make is connecting with people who can multiply your resources.
+                  <br /><br />
+                  <span className='font-bold text-black/70'> The Global Group Economic Initiative is that group. </span>
                 </p>
               </ScrollAnimation>
 
-              <ScrollAnimation animation="slideLeft" delay={0.5}>
-                <p className='text-xl font-bold py-3 md:text-[22px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>MY BACKGROUND </p>
-              </ScrollAnimation>
 
-              <ScrollAnimation animation="zoomIn" delay={0.6}>
-                <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-                  Both of my parents were highly successful in the entertainment industry. My father served as the
-                  Vice President of Capitol Records, and my mother is a two-time Grammy-nominated singer.
+              <ScrollAnimation animation="slideUp" delay={0.4}>
+                <br />
+                <p className=' font-extralight  md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
+                  Hello, King Edwards here. I want to welcome you to The Global Group Economic Initiative’s
+                  <span className='font-bold text-black/70'> “Become Your Own Bank Summit.” </span>
                   <br /><br />
-                  In my early years, I believed that entertainment and popularity were the keys to wealth—until I met a
-                  successful entrepreneur who lived just like the entertainers and athletes I knew, but completely
-                  under the radar.
-                  <br /><br />
-                  After that encounter, I set out on a mission to build wealth through entrepreneurship—a path filled
-                  with unknown challenges. However, I eventually figured it out.
+                  We created this powerful initiative to help entrepreneurs,
+                  athletes, and entertainers avoid the painful cycle of earning significant income, losing it all, and
+                  having to rebuild from scratch—a cycle that far too many of us face.
+
+                  At the<span className='font-bold text-black/70'> “Become Your Own Bank Summit.” </span>
+                  we empower our members to break free from financial
+                  setbacks by introducing a transformative strategy known as
+                  <span className='font-bold text-black/70'>  Infinite Banking</span>
+                  —a powerful, integrated financial model that redefines the way you build and protect wealth. By combining the
+                  forces of
+                  <span className='font-bold text-black/70'> Funding, Insurance, and Trading,</span>
+                  Infinite Banking enables you to create a private banking
+                  system within your life and business — A system that we have coined as
+                  <span className='font-bold text-black/70'> “Earn, Protect, Grow”. </span>
                 </p>
               </ScrollAnimation>
-
             </div>
           </div>
+          <ScrollAnimation animation="slideLeft" delay={0.5}>
+            <p className='text-xl font-bold py-3 md:text-[22px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>MY BACKGROUND </p>
+          </ScrollAnimation>
+
           <ScrollAnimation animation="slideUp" delay={0.7}>
+            <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+              Both of my parents were highly successful in the entertainment industry. My father served as the
+              Vice President of Capitol Records, and my mother is a two-time Grammy-nominated singer.
+              <br /><br />
+
+            </p>
             <p className=' font-extralight md:text-[18px]  text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-              And by the age of 30, I was what most would call “rich”. I earning over $100,000 per month, I had
-              driven every luxury car you could imagine, been on yachts, flown on private jets, and built
-              relationships with some of the most powerful billionaires in the world. I was convinced I could never
-              go back to zero.
+              In my early years, I believed that entertainment and popularity were the keys to wealth—until I met a
+              successful entrepreneur who lived just like the entertainers and athletes I knew, but completely
+              under the radar.
               <br /><br />
-              However by age 33, and after several failed investments, I found myself struggling to generate
-              income at the level I once had and was on the brink of filing for bankruptcy.
+              After that encounter, I set out on a mission to build wealth through entrepreneurship—a path filled
+              with unknown challenges. However, I eventually figured it out.
               <br /><br />
-              That traumatic financial experience forced me to search for the real principles of building and
-              sustaining wealth. This journey led me to my first financial mentor, Alexis Holifield.
-              Through our relationship, I came to a powerful realization: <span className='font-bold text-black/70'> most of us have been misled about our
+              By the age of 30, I was what most would call “rich.” I was
+              earning over $100,000 per month, had driven every luxury car you could imagine, been on yachts,
+              flown on private jets, and built relationships with some of the most powerful billionaires in the world.
+              I was convinced I could never go back to zero.
+              <br /><br />
+              However, by age 33, after several failed investments, I struggled to generate income at the level I
+              once had and was on the brink of filing for bankruptcy. That traumatic financial experience forced
+              me to search for the fundamental principles of building and sustaining wealth. This journey led me
+              to my first financial mentor, Alexis Holifield. Through our relationship, I came to a powerful
+              realization:
+              <span className='font-bold text-black/70'> most of us have been misled about our
                 finances. </span>
               <br /><br />
-              Some believe wealth is built simply by earning more income. Others believe investing is the only
-              way. And while both are necessary building blocks to creating wealth, neither ensures financial
-              security on their own.
+              Some believe wealth is built simply
+              by earning more income. Others believe investing is the only way. And while both are necessary
+              building blocks to creating wealth, neither ensures financial security.
             </p>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.4}>
-            <p className='text-xl py-4 font-semibold text-center lg:text-start md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+            <p className='text-xl py-2 font-semibold text-center lg:text-start md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>
               True wealth follows a three-step process:
             </p>
           </ScrollAnimation >
@@ -349,13 +375,13 @@ const GGEI = () => {
             </ol>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.9}>
-            <p className='font-extralight  md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+            <p className='font-extralight  pb-5 md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
               At the Become Your Own Bank Summit, we’ll teach you how to use bank funding, insurance, trading
               algorithms, and other asset classes to grow your wealth—consistently, sustainably, and continuously
               —just like the Warren Buffetts of the world
             </p>
-            <p className='text-lg font-extralight md:text-[22px] text-center lg:text-start pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
-              This is what we call <span className='font-semibold'> Wealth Mastery</span>
+            <p style={{ fontFamily: 'Minion Pro, serif' }}>
+              <span className='text-lg font-semibold md:text-[22px] text-center lg:text-start'>This is what we call Wealth Mastery</span>
             </p>
             <p className='text-lg font-semibold md:text-[22px] text-center lg:text-start pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
               Is this something you’d like to learn?
