@@ -194,7 +194,7 @@ const GGEI = () => {
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[850px] pb-5 w-[340px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/LpuVmLAyTxk?si=oFpmJNhC1cfZtZaL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 w-[340px] md:w-[540px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/LpuVmLAyTxk?si=oFpmJNhC1cfZtZaL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -271,7 +271,7 @@ const GGEI = () => {
           </ScrollAnimation>
 
 
-          <div className='flex w-full flex-col md:flex-row justify-center items-center gap-x-7 gap-y-5 pt-6'>
+          <div className='flex w-full flex-col lg:flex-row justify-center items-center gap-x-7 gap-y-5 pt-6'>
             <div className='h-full lg:w-[100%] flex justify-center items-start'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
                 <img src={LONG2} className='rounded-xl  w-auto' alt="" />
@@ -380,7 +380,7 @@ const GGEI = () => {
               algorithms, and other asset classes to grow your wealth—consistently, sustainably, and continuously
               —just like the Warren Buffetts of the world
             </p>
-            <p style={{ fontFamily: 'Minion Pro, serif' }}>
+            <p className='text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>
               <span className='text-lg font-semibold md:text-[22px] text-center lg:text-start'>This is what we call Wealth Mastery</span>
             </p>
             <p className='text-lg font-semibold md:text-[22px] text-center lg:text-start pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
@@ -394,11 +394,13 @@ const GGEI = () => {
       <section className='overflow-hidden px-10 bg-black pb-14'>
         <div className='flex flex-col lg:flex-row justify-center md:px-10 items-center gap-20 pt-10 '>
           <div className='flex gap-y-4 flex-col justify-start items-start lg:w-1/2 font-normal'>
+            <div className='flex justify-center lg:justify-start w-full'> 
             <ScrollAnimation animation="zoomIn">
               <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] lg:leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                 EARN, PROTECT, GROW
               </h1>
             </ScrollAnimation>
+            </div>
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <p className='text-white text-center lg:text-start font-extralight md:text-[22px]' style={{ fontFamily: 'Montserrat, serif' }}>
                 AN ENTREPRENEURS GUIDE TO EARNING MORE MONEY, PROTECTING THE MONEY YOU HAVE EARNED, & GROWING THE MONEY YOU HAVE PROTECTED.
@@ -458,7 +460,7 @@ const GGEI = () => {
 
 
       <section className='overflow-hidden px-10 bg-black pb-14'>
-        <div className='flex flex-col md:flex-row  md:px-10 gap-x-20 gap-y-10 pt-10 '>
+        <div className='flex flex-col md:flex-row gap-x-20 gap-y-10 pt-10 '>
           <div className=''>
             <ScrollAnimation animation="slideDown" delay={0.4}>
               <img src={DART} alt="" />
@@ -662,7 +664,7 @@ const GGEI = () => {
 
       <section className='overflow-hidden flex justify-center items-center bg-white  pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-10'>
-          <div className='grid md:grid-cols-2 gap-10'>
+          <div className='grid lg:grid-cols-2 gap-10'>
 
             <div className='flex flex-col gap-5 justify-center'>
               <div>
@@ -713,7 +715,7 @@ const GGEI = () => {
             </div>
 
             <ScrollAnimation animation="slideRight" delay={0.3}>
-              <div>
+              <div className='flex justify-center w-full'>
                 <img src={LAPTOP} className='px-10 lg:h-[400px]' alt="" />
               </div>
             </ScrollAnimation>
@@ -723,7 +725,7 @@ const GGEI = () => {
 
 
       <section className='overflow-hidden px-10 bg-black pb-14'>
-        <div className='flex flex-col md:flex-row justify-center md:px-10 items-center gap-20 pt-24 '>
+        <div className='flex flex-col lg:flex-row justify-center items-center gap-20 pt-24 '>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div className=''>
               <img src={GIRL} alt="" />

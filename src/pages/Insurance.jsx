@@ -253,7 +253,7 @@ const Insurance = () => {
 
   return (
     <>
-      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
+      <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-[70vh]  md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
         <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
@@ -353,9 +353,9 @@ const Insurance = () => {
               <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] text-center md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}> About YellowBrick Financial — A Company That Cares </h1>
             </div>
           </ScrollAnimation>
-          <div className='grid md:grid-cols-2 gap-x-16 lg:px-10 gap-y-10'>
+          <div className='grid lg:grid-cols-2 gap-x-16 lg:px-10 gap-y-10'>
             <ScrollAnimation animation="slideRight" delay={0.2}>
-              <div>
+              <div className='flex justify-center lg:justify-start' >
                 <img src={BIGLOGO} className='lg:h-96' alt="" />
               </div>
             </ScrollAnimation>
@@ -395,9 +395,9 @@ const Insurance = () => {
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-white  pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-20'>
-          <div className='grid md:grid-cols-2 gap-x-10 gap-y-10'>
+          <div className='grid lg:grid-cols-2 gap-x-10 gap-y-10'>
             <ScrollAnimation animation="slideRight" delay={0.2}>
-              <div className='flex justify-end '>
+              <div className='flex lg:justify-end justify-center '>
                 <img src={FALLCOIN} className='md:h-[500px]' alt="" />
               </div>
             </ScrollAnimation>

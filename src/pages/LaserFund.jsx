@@ -141,7 +141,7 @@ const LaserFund = () => {
             </div>
 
             <div className='flex justify-center w-full'>
-              <iframe className='lg:w-[850px] px-5 pb-5 rounded-2xl w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/qVVt7nn6AcU?feature=shared" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] px-5 pb-5 rounded-2xl md:w-[540px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/qVVt7nn6AcU?feature=shared" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -169,7 +169,7 @@ const LaserFund = () => {
 
       <section className='overflow-hidden flex justify-center items-center px-10 bg-white pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-10 '>
-          <div className='grid md:grid-cols-2 gap-y-10 '>
+          <div className='grid lg:grid-cols-2 gap-y-10 '>
             <ScrollAnimation animation="slideRight" delay={0.2}>
               <div className='flex justify-center'>
                 <img src={DISC} className='md:h-[500px]' alt="" />
@@ -266,7 +266,7 @@ const LaserFund = () => {
 
       <section className='overflow-hidden flex justify-center items-center  bg-white  pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-10'>
-          <div className='grid md:grid-cols-2 gap-y-10 gap-x-10'>
+          <div className='grid lg:grid-cols-2 gap-y-10 gap-x-10'>
             <ScrollAnimation animation="slideRight" delay={0.2}>
               <div className='flex justify-center'>
                 <img src={LASER} className='lg:pt-16 px-10 md:px-0' alt="" />
@@ -441,13 +441,15 @@ const LaserFund = () => {
 
 
       <section className='overflow-hidden flex justify-center items-center bg-white pb-14'>
-        <div className='flex justify-center items-center pt-10 lg:px-10'>
-          <div className='grid md:grid-cols-2 gap-x-11 gap-y-10'>
-            <ScrollAnimation animation="slideRight" delay={0.3}>
-              <div className='px-10 flex justify-center'>
-                <img src={CHART} alt="" />
-              </div>
-            </ScrollAnimation>
+        <div className='flex h-full justify-center items-center pt-10 lg:px-10'>
+          <div className='grid lg:grid-cols-2 gap-x-11 gap-y-10'>
+            <div className='flex justify-center h-full'>
+              <ScrollAnimation animation="slideRight" delay={0.3}>
+                <div className='px-10 flex justify-center'>
+                  <img src={CHART} alt="" />
+                </div>
+              </ScrollAnimation>
+            </div>
 
             <div className='flex flex-col justify-center'>
               <ScrollAnimation animation="zoomIn" delay={0.1}>
@@ -675,7 +677,7 @@ const LaserFund = () => {
 
       <section className='overflow-hidden flex justify-center items-center  bg-white pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-20'>
-          <div className='grid md:grid-cols-2 gap-10'>
+          <div className='grid lg:grid-cols-2 gap-10'>
 
             <div className='flex flex-col  justify-center'>
               <ScrollAnimation animation="zoomIn">
@@ -731,11 +733,13 @@ const LaserFund = () => {
             </div>
 
 
-            <ScrollAnimation animation="slideRight" delay={0.5}>
-              <div className='px-10'>
-                <img src={LAY} className='md:w-[600px]' alt="" />
-              </div>
-            </ScrollAnimation>
+            <div className='flex justify-center w-full min-h-full'>
+              <ScrollAnimation animation="slideRight" delay={0.5}>
+                <div className='px-10'>
+                  <img src={LAY} className='md:w-[600px]' alt="" />
+                </div>
+              </ScrollAnimation>
+            </div>
           </div>
         </div>
       </section>
