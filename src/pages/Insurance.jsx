@@ -267,7 +267,7 @@ const Insurance = () => {
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div className='flex justify-center'>
               <p className='text-white pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-                IF YOU ARE AN ENTREPRENEUR ANDBYOU ARE NOT INSURING YOUR MONEY
+                IF YOU ARE AN ENTREPRENEUR AND YOU ARE NOT INSURING YOUR MONEY
                 <span className='text-[#e7a647]'> Watch this video.</span>
               </p>
 
