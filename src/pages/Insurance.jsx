@@ -341,10 +341,10 @@ const Insurance = () => {
                   Book a <span className='text-white italic'>Complimentary</span>
                   Financial Review and Get the "Spender, Saver, Wealth Creator" Audio.
                   <div class="relative inline-block text-black font-bold">
-                    <span className=' text-red-600'>FREE</span>
-                    <svg class="absolute left-0 top-1/2 w-full h-1" viewBox="0 0 100 2" preserveAspectRatio="none">
+                    <span className=' line-through text-red-600'>FREE</span>
+                    {/* <svg class="absolute left-0 top-1/2 w-full h-1" viewBox="0 0 100 2" preserveAspectRatio="none">
                       <path d="M0,1 Q10,0 20,1 T40,1 T60,0 T80,1 T100,1" stroke="red" fill="transparent" stroke-width="2" />
-                    </svg>
+                    </svg> */}
                   </div>
 
                 </h1>
