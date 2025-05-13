@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import SYOB from '../assets/images/syob.png'
 import SCI from '../assets/images/scifi.png'
 import CHECK from '../assets/images/check.png'
@@ -10,6 +10,9 @@ import DollarCoin2 from '../assets/images/bg-live/leftmc.png'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const FORM_URL = "https://syofb.io/vsl "
 
@@ -70,6 +73,21 @@ const Funding = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [focusedVideo, setFocusedVideo] = useState(1);
+  const videoSliderRef = useRef(null);
+
+  const videoSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 8000, 
+    pauseOnHover: true,
+    arrows: true,
+    centerMode: true,
+    centerPadding: '0px',
+  }
 
   // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
@@ -170,7 +188,7 @@ const Funding = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.3}>
             <div className='lg:px-24'>
-              <h1 className='text-black text-center leading-10 text-xl lg:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}> This is the most profitable, low start-up cost opportunity available, and no extensive education is required—everyone needs capital.</h1>
+              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}> "This is the most profitable, low start-up cost opportunity available, and no extensive education is required—everyone needs capital."</h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Erick Alvarez</h1>
@@ -203,168 +221,27 @@ const Funding = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="w-full">
-            {/* Desktop/Large Screen Layout */}
-            <div className="hidden lg:block bg-black w-full relative overflow-x-auto scroll-smooth">
-              {/* Grid pattern overlay */}
-              <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
-
-              {/* Content container */}
-              <div className="relative z-10 max-w-7xl mx-auto px-4">
-                {/* Video gallery */}
-                <div className="flex items-center justify-center overflow-x-auto scroll-smooth snap-x snap-mandatory">
-                  {/* Left arrow navigation */}
-                  <button
-                    className="absolute left-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handlePrevVideo}
-                    aria-label="Previous video"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-
-                  {/* Left video */}
-                  <div className="w-1/4 snap-start transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 -mr-6 z-10">
-                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                      <iframe
-                        className="w-full aspect-video"
-                        src={videos[0]}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                      </iframe>
-                    </div>
+          <div className="w-full max-w-[400px] lg:max-w-2xl px-4">
+            <Slider ref={videoSliderRef} {...videoSettings} className="video-slider">
+              {videos.map((video, index) => (
+                <div key={index} className="px-2">
+                  <div className="relative aspect-video rounded-xl overflow-hidden">
+                    <iframe
+                      className="w-full h-full"
+                      src={video}
+                      title={`YouTube video ${index + 1}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      
+                    ></iframe>
                   </div>
-
-                  {/* Center video (larger) */}
-                  <div className="w-1/2 snap-start transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 z-20">
-                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                      <iframe
-                        className="w-full aspect-video"
-                        src={videos[1]}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                      </iframe>
-                    </div>
-                  </div>
-
-                  {/* Right video */}
-                  <div className="w-1/4 snap-start transform transition-transform duration-300 hover:scale-105 -ml-6 z-10">
-                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                      <iframe
-                        className="w-full aspect-video"
-                        src={videos[2]}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                      </iframe>
-                    </div>
-                  </div>
-
-                  {/* Right arrow navigation */}
-                  <button
-                    className="absolute right-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handleNextVideo}
-                    aria-label="Next video"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
                 </div>
-              </div>
-            </div>
-
-            {/* Mobile/Medium Screen Slider - This remains the same */}
-            <div className="lg:hidden bg-black w-full relative">
-              {/* Grid pattern overlay */}
-              <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
-
-              {/* Content container */}
-              <div className="relative z-10 max-w-7xl">
-                {/* Video slider */}
-                <div className="relative">
-                  {/* Left arrow navigation */}
-
-
-                  {/* Slider container */}
-                  <div className="overflow-hidden">
-                    <div
-                      className="flex transition-transform duration-300 ease-in-out"
-                      style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                    >
-                      {/* Video slides - dynamically render all videos */}
-                      {videos.map((videoUrl, index) => (
-                        <div key={index} className="min-w-full px-4">
-                          <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                            <iframe
-                              className="w-full h-[250px] aspect-video"
-                              src={videoUrl}
-                              title={`Testimonial video ${index + 1}`}
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen>
-                            </iframe>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className='flex justify-center items-center gap-x-10'>
-                    <button
-                      className="absolute left-[10px] bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                      onClick={handlePrevSlide}
-                      aria-label="Previous slide"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                      </svg>
-                    </button>
-
-                    {/* Right arrow navigation */}
-                    <button
-                      className="absolute right-[10px]  bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                      onClick={handleNextSlide}
-                      aria-label="Next slide"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                  </div>
-
-
-                </div>
-
-                {/* Dot indicators */}
-                <div className="flex pt-6 justify-center mt-4">
-                  {videos.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`h-3 w-3 mx-1 rounded-full ${currentSlide === index ? 'bg-[#E7A647]' : 'bg-gray-400'}`}
-                      onClick={() => setCurrentSlide(index)}
-                      aria-label={`Go to slide ${index + 1}`}
-                    ></button>
-                  ))}
-                </div>
-              </div>
-            </div>
+              ))}
+            </Slider>
           </div>
         </div>
-        {/* Add a CSS style for the grid pattern */}
-        <style jsx>{`
-          .bg-grid-pattern {
-            background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
-                            linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-          }
-        `}</style>
       </section>
 
 
