@@ -80,7 +80,7 @@ const Funding = () => {
     "https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp",
     "https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA",
   ]);
-  
+
   const handlePrevVideo = () => {
     // Rotate videos left (make the last video the first)
     const newVideos = [...videos];
@@ -120,15 +120,16 @@ const Funding = () => {
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
               <h1 className="lg:text-[70px] text-[38px] px-5 text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                START YOUR OWN FUNDING BUSINESS
+                BECOME A FUNDING BROKER
               </h1>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
-              <p className='text-white pb-7 px-5 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-                Build a Multi-6 or 7-Figure Business Helping Entrepreneurs get the Captain <br className='lg:block hidden' />They Desperately Need to Succeed.
+              <p className='text-white pb-7 px-5 text-center uppercase md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+                BUILD A MULTI-6 OR 7-FIGURE FUNDING BUSINESS <span className='text-[#e7a647]'> HELPING ENTREPRENEURS </span>
+                GET THE CAPITAL THEY DESPERATELY NEED TO SUCCEED.
               </p>
             </div>
 
@@ -169,7 +170,7 @@ const Funding = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.3}>
             <div className='lg:px-24'>
-              <h1 className='text-black text-center leading-10 md:text-[24px]' style={{ fontFamily: 'Minion Pro, serif' }}> This is the most profitable, low start-up cost opportunity available, and no extensive education is required—everyone needs capital.</h1>
+              <h1 className='text-black text-center leading-10 text-xl lg:text-[28px]' style={{ fontFamily: 'Minion Pro, serif' }}> This is the most profitable, low start-up cost opportunity available, and no extensive education is required—everyone needs capital.</h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Erick Alvarez</h1>
@@ -289,7 +290,7 @@ const Funding = () => {
                 {/* Video slider */}
                 <div className="relative">
                   {/* Left arrow navigation */}
-                  
+
 
                   {/* Slider container */}
                   <div className="overflow-hidden">
@@ -316,29 +317,29 @@ const Funding = () => {
                   </div>
 
                   <div className='flex justify-center items-center gap-x-10'>
-                  <button
-                    className="absolute left-[10px] bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handlePrevSlide}
-                    aria-label="Previous slide"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
+                    <button
+                      className="absolute left-[10px] bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                      onClick={handlePrevSlide}
+                      aria-label="Previous slide"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
 
-                  {/* Right arrow navigation */}
-                  <button
-                    className="absolute right-[10px]  bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handleNextSlide}
-                    aria-label="Next slide"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
+                    {/* Right arrow navigation */}
+                    <button
+                      className="absolute right-[10px]  bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
+                      onClick={handleNextSlide}
+                      aria-label="Next slide"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
                   </div>
 
-                  
+
                 </div>
 
                 {/* Dot indicators */}

@@ -121,7 +121,7 @@ const LaserFund = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-4xl PX-2   text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+              <h1 className="lg:text-8xl text-4xl PX-2 uppercase text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                 Become a Master Trader
               </h1>
             </div>
@@ -129,7 +129,7 @@ const LaserFund = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div className='flex justify-center'>
-              <p className='text-white px-4 pb-8 text-center text-sm  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+              <p className='text-white px-4 pb-8 text-center text-sm uppercase md:leading-[35px] md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
                 Master the markets, build wealth, create passive income,
                 and learn the secrets to successful trading.
                 <span className='text-[#e7a647]'> Watch this video.</span>
@@ -176,14 +176,17 @@ const LaserFund = () => {
               </div>
             </ScrollAnimation>
 
-            <div className='flex flex-col  justify-center items-center gap-y-6'>
+            <div className='flex flex-col justify-center items-center lg:items-start gap-y-6'>
               <ScrollAnimation animation="zoomIn">
                 <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Want to learn Crypto? </h1>
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideUp" delay={0.3}>
                 <div>
-                  <p className='md:text-[20px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Get our “Buy The Dip Crypto Series: How I 7x’d My Crypto Portfolio is 3  months Buying & Selling Crypto on Coinbase”.</p>
+                  <p className='md:text-[20px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    Get our “Buy The Dip Crypto Series
+                    (Beginners Guide): How I 7x’d My Crypto Portfolio in 3 Months Buying & Selling Crypto on
+                    Coinbase."</p>
                 </div>
               </ScrollAnimation>
 

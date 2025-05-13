@@ -212,14 +212,19 @@ const Insurance = () => {
 
   // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
-      "https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn",
-      "https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX",
-      "https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX",
-      "https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH",
-      "https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp",
-      "https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA",
-    ]);
+    "https://www.youtube.com/embed/Ib9feq1-YVw?si=4XZZMEeryeujM8YR",
+    "https://www.youtube.com/embed/rEfuJ32_JeQ?si=6Ub6lIK8BImS-Z-e",
+    "https://www.youtube.com/embed/DhdNv7iyTI4?si=ejUJltEC8MA1dKUk",
+    "https://www.youtube.com/embed/9izvdSfdtyg?si=ABwD7IF4gfdq-RZ2",
+    "https://www.youtube.com/embed/72xuX6HNr0Q?si=M9fBF2QKxonzDANS",
+  ]);
 
+  
+// https://youtu.be/Ib9feq1-YVw?si=4XZZMEeryeujM8YR
+// https://youtube.com/shorts/rEfuJ32_JeQ?si=6Ub6lIK8BImS-Z-e
+// https://youtube.com/shorts/DhdNv7iyTI4?si=ejUJltEC8MA1dKUk
+// https://youtube.com/shorts/9izvdSfdtyg?si=ABwD7IF4gfdq-RZ2
+// https://youtube.com/shorts/72xuX6HNr0Q?si=M9fBF2QKxonzDANS
 
   const handlePrevVideo = () => {
     // Rotate videos left (make the last video the first)
@@ -266,16 +271,19 @@ const Insurance = () => {
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div className='flex justify-center'>
-              <p className='text-white pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+              <p className='text-white pb-8 text-center uppercase md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
                 IF YOU ARE AN ENTREPRENEUR AND YOU ARE NOT INSURING YOUR MONEY
                 <span className='text-[#e7a647]'> Watch this video.</span>
               </p>
-
-              <div className='flex items-end'>
+              <div className='flex justify-end items-end'>
                 <img src={ARROWD} className=' animate-bounce lg:pl-4' alt="" />
               </div>
+
             </div>
 
+            {/* <div className='flex lg:hidden justify-end w-full items-center'>
+              <img src={ARROWD} className=' animate-bounce h-10 lg:pl-4' alt="" />
+            </div> */}
             <div className='flex w-full justify-center'>
               <iframe className='lg:w-[850px] pb-5 rounded-2xl md:w-[640px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/mRKJTzM-qTk?si=SRmluWecI8rayx0X" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
@@ -308,7 +316,7 @@ const Insurance = () => {
           <div className='flex flex-col justify-center items-center pt-10 '>
 
             <div className='lg:px-24'>
-              <h1 className='text-black text-center md:text-[26px] leading-relaxed lg:leading-[57px]' style={{ fontFamily: 'Minion Pro, serif' }}>The definition of insanity is doing the same thing over and over again and expecting a different result." It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today.</h1>
+              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>"The definition of insanity is doing the same thing over and over again and expecting a different result." It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today."</h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-3xl md:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}> Gene Santos</h1>
@@ -328,7 +336,18 @@ const Insurance = () => {
             </ScrollAnimation >
             <div className='flex flex-col  w-[100%] justify-center items-start'>
               <ScrollAnimation animation="slideUp" delay={0.3}>
-                <h1 className='text-[#E7A647] text-center lg:text-start pb-10 text-3xl lg:text-[45px] lg:leading-[45px] md:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Book a <span className='text-white italic'>Complimentary</span>  Financial Review and Get the "Spender, Saver, Wealth Creator" Audio FREE. </h1>
+                <h1 className='text-[#E7A647] text-center lg:text-start pb-10 text-3xl lg:text-[45px] lg:leading-[45px] md:text-start font-semibold'
+                  style={{ fontFamily: 'Minion Pro, serif' }}>
+                  Book a <span className='text-white italic'>Complimentary</span>
+                  Financial Review and Get the "Spender, Saver, Wealth Creator" Audio.
+                  <div class="relative inline-block text-black font-bold">
+                    <span className=' text-red-600'>FREE</span>
+                    <svg class="absolute left-0 top-1/2 w-full h-1" viewBox="0 0 100 2" preserveAspectRatio="none">
+                      <path d="M0,1 Q10,0 20,1 T40,1 T60,0 T80,1 T100,1" stroke="red" fill="transparent" stroke-width="2" />
+                    </svg>
+                  </div>
+
+                </h1>
               </ScrollAnimation>
               <div className='flex justify-center items-center w-full lg:justify-start'>
                 <ScrollAnimation animation="slideUp" delay={0.4}>
@@ -621,59 +640,19 @@ const Insurance = () => {
           </div>
 
           <div className='lg:px-10 space-y-10'>
-            <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
-              <div className='flex justify-center items-center'>
-                <img src={KING} className='w-auto rounded-3xl' alt="" />
-              </div>
-
-              <div className='flex flex-col justify-center items-start'>
-                <div>
-                  <h1 className='text-[#E7A647] text-3xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King Edwards</h1>
-                </div>
-                <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King, a visionary, funding expert, and author</p>
-
-                <p className=' pt-5'>
-                  was born in Los Angeles and raised in New York. He draws inspiration from the diverse influences of each city. LA exposed him to the glamorous Hollywood lifestyle, while New York instilled a sense of grit and determination.
-                  <br /> <br />
-                  In his first professional project, King embarked on the creation of HighTicketOfferFinancing.com. This innovative venture aimed to provide alternative funding solutions for entrepreneurs operating in industries traditionally overlooked by banks. Through this endeavor, he sought to help consultants and entrepreneurs earn significant profits, develop and sell high-value products and services, and safeguard themselves from legal implications using HTOF’s comprehensive workflows, standard operating procedures, and contract templates.
-                  <br /> <br />
-                  With a focus on helping entrepreneurs thrive and achieve remarkable financial milestones, King has received accolades such as the Man of the Moment and Made Man Award for his achievements. Through unwavering determination and an unwavering focus on the next best move, King aims to rewrite the rules of the game and help his clients leave an indelible mark on their respective industries and their family’s lives.
-                </p>
-              </div>
-            </div>
-
-            <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
-              <div className='flex justify-center items-center'>
-                <img src={ALEXIS} className='w-[510px]' alt="" />
-              </div>
-
-              <div className='flex flex-col justify-center items-start'>
-                <div>
-                  <h1 className='text-[#E7A647] text-3xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Alexis Holifield</h1>
-                </div>
-                <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Co-Founder of The Millennial Millionaire</p>
-
-                <p className=' pt-5'>
-                  Alexis Holifield, began her journey to learning the laws of building generational wealth at the early age of 17 years old. She began her journey by attending a seminar put on by T. Harv Eker "Secrets Of The Millionaire Mind". Immediately, she began creating an archive of these "well-kept secrets of the wealthy" for the world to know. She went on to graduate with honors and complete a masters degree in life through first hand experience of wealth building, in addition the Multi-Millionaires she continues to be mentored by.
-                  <br /> <br />
-                  As a Licensed Insurance Broker, Financial Strategist, & Wealth Planner, Alexis dedicates her time as a coach and a mentor sharing Financial Intelligence and Investment Education to cultivate the minds of Millennials all over the nation. Her mission to advise families, individuals, and business owners to begin or enhance their journey to financial freedom to increase and preserve wealth is expressed in her ability to transform the paradigm, and financial states of her client. Specializing in Estate Planning, Cash Value Life Insurance, Retirement, and Executive Business Planning.
-                </p>
-              </div>
-            </div>
-
-            <div className='flex justify-center items-center'>
+             <div className='flex justify-center items-center'>
               <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
                 <div className='flex justify-center items-center'>
                   <img src={GENE} className='w-[510px]' alt="" />
                 </div>
 
-                <div className='flex flex-col justify-center items-start'>
+                <div className='flex flex-col justify-center lg:items-start'>
                   <div>
-                    <h1 className='text-[#E7A647] text-3xl text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
+                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
                   </div>
-                  <p className='text-lg italic font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
+                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
 
-                  <p className=' pt-5'>
+                  <p className=' pt-5 text-center lg:text-start'>
                     Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
                     management for high net worth individuals and families. With over a decade of strategic experience in the finance and insurance industry, Gene has established himself as a trusted
                     advisor to discerning clients seeking sophisticated financial solutions.
@@ -696,6 +675,47 @@ const Insurance = () => {
                     financial objectives and legacy planning goals.
                   </p>
                 </div>
+              </div>
+            </div>
+
+            <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+              <div className='flex justify-center items-center'>
+                <img src={ALEXIS} className='w-[510px]' alt="" />
+              </div>
+
+              <div className='flex flex-col justify-center lg:items-start'>
+                <div>
+                  <h1 className='text-[#E7A647] text-center lg:text-start text-3xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Alexis Holifield</h1>
+                </div>
+                <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Co-Founder of The Millennial Millionaire</p>
+
+                <p className=' pt-5 text-center lg:text-start'>
+                  Alexis Holifield, began her journey to learning the laws of building generational wealth at the early age of 17 years old. She began her journey by attending a seminar put on by T. Harv Eker "Secrets Of The Millionaire Mind". Immediately, she began creating an archive of these "well-kept secrets of the wealthy" for the world to know. She went on to graduate with honors and complete a masters degree in life through first hand experience of wealth building, in addition the Multi-Millionaires she continues to be mentored by.
+                  <br /> <br />
+                  As a Licensed Insurance Broker, Financial Strategist, & Wealth Planner, Alexis dedicates her time as a coach and a mentor sharing Financial Intelligence and Investment Education to cultivate the minds of Millennials all over the nation. Her mission to advise families, individuals, and business owners to begin or enhance their journey to financial freedom to increase and preserve wealth is expressed in her ability to transform the paradigm, and financial states of her client. Specializing in Estate Planning, Cash Value Life Insurance, Retirement, and Executive Business Planning.
+                </p>
+              </div>
+            </div>
+
+          
+            <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+              <div className='flex justify-center lg:items-center'>
+                <img src={KING} className='w-auto rounded-3xl' alt="" />
+              </div>
+
+              <div className='flex flex-col justify-center lg:items-start'>
+                <div>
+                  <h1 className='text-[#E7A647] text-3xl text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King Edwards</h1>
+                </div>
+                <p className='text-lg italic font-semibold text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King, a visionary, funding expert, and author</p>
+
+                <p className=' pt-5 text-center lg:text-start'>
+                  was born in Los Angeles and raised in New York. He draws inspiration from the diverse influences of each city. LA exposed him to the glamorous Hollywood lifestyle, while New York instilled a sense of grit and determination.
+                  <br /> <br />
+                  In his first professional project, King embarked on the creation of HighTicketOfferFinancing.com. This innovative venture aimed to provide alternative funding solutions for entrepreneurs operating in industries traditionally overlooked by banks. Through this endeavor, he sought to help consultants and entrepreneurs earn significant profits, develop and sell high-value products and services, and safeguard themselves from legal implications using HTOF’s comprehensive workflows, standard operating procedures, and contract templates.
+                  <br /> <br />
+                  With a focus on helping entrepreneurs thrive and achieve remarkable financial milestones, King has received accolades such as the Man of the Moment and Made Man Award for his achievements. Through unwavering determination and an unwavering focus on the next best move, King aims to rewrite the rules of the game and help his clients leave an indelible mark on their respective industries and their family’s lives.
+                </p>
               </div>
             </div>
           </div>

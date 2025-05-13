@@ -179,22 +179,22 @@ const GGEI = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-8xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                Business Banking Accelerator
+              <h1 className="lg:text-8xl text-4xl text-center font-bold uppercase bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+                BECOME A WEALTH CREATOR
               </h1>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div>
-              <p className='text-white text-center text-xl  md:text-[28px] pb-8' style={{ fontFamily: 'Minion Pro, serif' }}>
+              <p className='text-white text-center text-xl uppercase md:text-[26px] pb-8' style={{ fontFamily: 'Minion Pro, serif' }}>
                 Learn How To Turn Your Business into a Bank That Grows Your Wealth
                 Agressively and Consistently at GGEI’s
               </p>
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[850px] pb-5 w-[340px] md:w-[540px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/LpuVmLAyTxk?si=oFpmJNhC1cfZtZaL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 w-[340px] md:w-[540px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/3jLH-sf0pQ0?si=eUvBIxPnOV_5C30s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -226,12 +226,12 @@ const GGEI = () => {
 
             <ScrollAnimation animation="zoomIn" delay={0.4}>
               <div className='lg:px-24'>
-                <h1 className='text-black font-bold text-3xl text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>
-                  “If you look at your circle and you don't get inspired then you don't have a circle you have a cage”</h1>
+                <h1 className='text-black font-bold text-xl lg:text-[28px] text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  “If you don’t have at least five friends in your phone who can turn $1 into $2, you need a new circle.”</h1>
               </div>
-              <div>
+              {/* <div>
                 <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Alexis Holifield</h1>
-              </div>
+              </div> */}
             </ScrollAnimation>
           </div>
         </div>
@@ -331,7 +331,7 @@ const GGEI = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.7}>
             <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-              Both of my parents were highly successful in the entertainment industry. My father served as the
+              Both of my parents were in the music industry. My father served as the
               Vice President of Capitol Records, and my mother is a two-time Grammy-nominated singer.
               <br /><br />
 
@@ -441,7 +441,7 @@ const GGEI = () => {
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <p className='text-black text-center lg:text-start font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>
                 King Edwards of High Ticket Offer Financing and Alexis Holifield of Femininity & Fine-Ance have joined forces to create The Global Group Economic Initiative.
-                The Global Group Economic Initivatice is a Christian-based wealth-building community dedicated to helping serious entrepreneurs achieve lasting financial success.
+                The Global Group Economic Initiative is a Christian-based wealth-building community dedicated to helping serious entrepreneurs achieve lasting financial success.
                 We teach proven strategies that empower business owners to generate significantly more revenue, grow their net worth year after year—regardless of
                 economic conditions—and build financial legacies, much like the Warren Buffetts of the world.
                 <br /> <br />

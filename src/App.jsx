@@ -23,7 +23,7 @@ const preloaderContent = {
   },
   '/funding': {
     mainText: ['Start Your',  'Own','Funding Business'],
-    subText: 'Earn Up To 6 Figures + In Consulting Fees'
+    subText: 'Earn Up To 6 Figures + Per Deal'
   },
   '/insurance': {
     mainText: ['Insure', 'Your', 'Wealth'],   

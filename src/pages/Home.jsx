@@ -91,7 +91,7 @@ const Home = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               <h1 className="lg:text-8xl px-1 text-5xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                GET UP TO $4M
+                NEED FUNDING?
               </h1>
             </div>
           </ScrollAnimation>
@@ -99,16 +99,16 @@ const Home = () => {
           <ScrollAnimation animation="fadeIn" delay={0.5}>
 
             <div className='flex justify-center'>
-              <p className='text-white pb-8 text-center  md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-                in Fast, Reliable Financing for You & Your Customers!
+              <p className='text-white pb-8 text-center uppercase px-5 md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
+                <span className='text-[#e7a647]'>GET UP TO $4M </span>
+                IN FAST, RELIABLE FINANCING FOR YOU & YOUR CUSTOMERS!
                 <span className='text-[#e7a647]'> Watch this video.</span>
               </p>
-
-              <div className='flex items-end'>
-                <img src={ARROWD} className=' animate-bounce lg:pl-4' alt="" />
-              </div>
             </div>
           </ScrollAnimation>
+          <div className='flex justify-end w-full lg:pr-32 pr-10 items-end'>
+            <img src={ARROWD} className=' h-10 animate-bounce lg:pl-4' alt="" />
+          </div>
 
           <ScrollAnimation animation="zoomIn" delay={0.7}>
             <div>
@@ -142,7 +142,7 @@ const Home = () => {
             </div>
 
             <div>
-              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>"Our mission is to create more millionaire entrepreneurs by ensuring you have all <br className='hidden lg:block' />the funding you need to start and scale your business aggressively."</h1>
+              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“We believe that every entrepreneur deserves a chance to succeed.<br className='hidden lg:block' />That happens with bank funding.” </h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>C.e.o, Founder</h1>
@@ -272,7 +272,7 @@ const Home = () => {
 
             </div>
 
-            <div className='flex flex-col justify-center items-center lg:items-start py-10 md:px-10 gap-[15px]'>
+            <div className='flex flex-col justify-start items-start lg:items-start py-10 md:px-10 gap-[15px]'>
               <ScrollAnimation animation='zoomIn' delay={0.8}>
                 <div>
                   <h1 className='text-[#E7A647] text-center lg:text-start font-semibold text-3xl lg:text-[45px] leading-[55px]' style={{ fontFamily: 'Minion Pro, serif' }}>Funding Options Available For You & Your Customers</h1>
@@ -401,11 +401,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='overflow-hidden px-5 bg-black min-h-[40vh] pt-10 pb-10'>
+      <section className='overflow-hidden px-5 bg-black min-h-screen pt-10 pb-10'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
-              <h1 className='text-[#E7A647] text-4xl text-center lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>Client Results</h1>
+              <h1 className='text-[#E7A647] text-4xl text-center lg:text-[47px] pb-2' style={{ fontFamily: 'Minion Pro, serif' }}>More Client Results</h1>
             </div>
           </ScrollAnimation>
 
@@ -436,7 +436,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black font-bold ' style={{ fontFamily: 'Montserrat, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold ' style={{ fontFamily: 'Montserrat, serif' }}> How to start a Profitable Funding Business</h1>
                 </div>
 
                 <div className='flex justify-end items-center w-full'>
@@ -459,7 +459,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black font-bold' style={{ fontFamily: 'Montserrat, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold' style={{ fontFamily: 'Montserrat, serif' }}>Why putting God at the center of your business is the key to true success</h1>
                 </div>
 
                 <div className='flex justify-end items-center w-full'>
@@ -482,7 +482,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <h1 className='text-black font-bold' style={{ fontFamily: 'Montserrat, serif' }}>Unlocking the Power of  Content Marketing: Strategies for Success</h1>
+                  <h1 className='text-black font-bold' style={{ fontFamily: 'Montserrat, serif' }}>How to Secure Capital for Your Business</h1>
                 </div>
 
                 <div className='flex justify-end items-center w-full'>

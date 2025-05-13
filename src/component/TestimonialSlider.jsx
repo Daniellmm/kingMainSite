@@ -1,4 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import Slider from 'react-slick';
+import { gsap } from 'gsap';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import testimonial1 from '../assets/images/testimonial/Joshua.png';
 import testimonial2 from '../assets/images/testimonial/Matt.png';
 import testimonial3 from '../assets/images/testimonial/Rene.png';
@@ -27,266 +31,205 @@ import testimonial25 from '../assets/images/testimonial/Xufang.png';
 import testimonial26 from '../assets/images/testimonial/Delfin.png';
 import testimonial27 from '../assets/images/testimonial/Justin.png';
 
-const images = [
-  testimonial1,
-  testimonial2,
-  testimonial3,
-  testimonial4,
-  testimonial5,
-  testimonial6,
-  testimonial7,
-  testimonial8,
-  testimonial9,
-  testimonial10,
-  testimonial11,
-  testimonial12,
-  testimonial13,
-  testimonial14,
-  testimonial15,
-  testimonial16,
-  testimonial17,
-  testimonial18,
-  testimonial19,
-  testimonial20,
-  testimonial21,
-  testimonial22,
-  testimonial23,
-  testimonial24,
-  testimonial25,
-  testimonial26,
-  testimonial27,
+const testimonials = [
+  { id: 1, image: testimonial1, name: 'Joshua', quote: 'Transformed my business with their funding solutions!' },
+  { id: 2, image: testimonial2, name: 'Matt', quote: 'Incredible support and results beyond expectations.' },
+  { id: 3, image: testimonial3, name: 'Rene', quote: 'A game-changer for entrepreneurs needing capital.' },
+  { id: 4, image: testimonial4, name: 'Demarcus', quote: 'Fast, reliable, and easy to work with.' },
+  { id: 5, image: testimonial5, name: 'Najibul', quote: 'Helped me scale my startup effortlessly.' },
+  { id: 6, image: testimonial6, name: 'Robert', quote: 'The best funding partner I’ve ever had.' },
+  { id: 7, image: testimonial7, name: 'Jeremy', quote: 'Their expertise made all the difference.' },
+  { id: 8, image: testimonial8, name: 'Lemy', quote: 'Secured funding when I needed it most.' },
+  { id: 9, image: testimonial9, name: 'Raul', quote: 'A seamless experience from start to finish.' },
+  { id: 10, image: testimonial10, name: 'Sarah', quote: 'Empowered my business to grow rapidly.' },
+  { id: 11, image: testimonial11, name: 'Juwan', quote: 'Professional and results-driven.' },
+  { id: 12, image: testimonial12, name: 'Daniel', quote: 'Funding made simple and accessible.' },
+  { id: 13, image: testimonial13, name: 'Bernicia', quote: 'They truly understand entrepreneurs’ needs.' },
+  { id: 14, image: testimonial14, name: 'Tyrone', quote: 'Unmatched support for business growth.' },
+  { id: 15, image: testimonial15, name: 'Abdullah', quote: 'A trusted partner for funding success.' },
+  { id: 16, image: testimonial16, name: 'Corboi', quote: 'Helped me achieve my business goals.' },
+  { id: 17, image: testimonial17, name: 'Brittany', quote: 'Their system is a total game-changer.' },
+  { id: 18, image: testimonial18, name: 'Marshall', quote: 'Fast funding with zero hassle.' },
+  { id: 19, image: testimonial19, name: 'AgaFilms', quote: 'Fueled my creative projects with ease.' },
+  { id: 20, image: testimonial20, name: 'April', quote: 'Outstanding service and results.' },
+  { id: 21, image: testimonial21, name: 'Marcus', quote: 'The key to unlocking my business potential.' },
+  { id: 22, image: testimonial22, name: 'Clayton', quote: 'Simplified funding for maximum impact.' },
+  { id: 23, image: testimonial23, name: 'Gilbert', quote: 'A reliable partner for growth.' },
+  { id: 24, image: testimonial24, name: 'Odile', quote: 'Their expertise is unparalleled.' },
+  { id: 25, image: testimonial25, name: 'Xufang', quote: 'Made funding accessible and stress-free.' },
+  { id: 26, image: testimonial26, name: 'Delfin', quote: 'Empowered my business to thrive.' },
+  { id: 27, image: testimonial27, name: 'Justin', quote: 'The best decision for my business growth.' },
 ];
 
-const CustomSlider = ({ autoSlideInterval = 5000 }) => {
-  const [current, setCurrent] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const autoSlideTimer = useRef(null);
-
-  // Handle automatic sliding
-  useEffect(() => {
-    startAutoSlide();
-    return () => clearInterval(autoSlideTimer.current);
-  }, []);
-
-
-  // Add these new refs for swipe functionality
-  const touchStartX = useRef(null);
-  const touchEndX = useRef(null);
+const TestimonialSlider = () => {
   const sliderRef = useRef(null);
 
-
-  // Add these new handlers for touch/swipe detection
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-    handleMouseEnter(); // Pause auto-sliding during touch
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 900,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    pauseOnHover: true,
+    arrows: true,
+    centerMode: true,
+    appendDots: (dots) => (
+      <div className="mt-4 sm:mt-8">
+        <ul className="flex justify-center gap-1">{dots}</ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <button
+        className="w-6 h-1 sm:w-8 sm:h-1 rounded-full transition-all duration-300 bg-gray-400 focus:outline-none aria-selected:w-8 aria-selected:bg-[#E7A647] aria-selected:sm:w-12"
+        aria-label={`Go to testimonial ${i + 1}`}
+      />
+    ),
+    prevArrow: (
+      <button
+        className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-[#E7A647] bg-opacity-80 backdrop-blur-sm text-black hover:bg-opacity-100 transition-all duration-300 z-20 slick-prev"
+        aria-label="Previous testimonial"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+    ),
+    nextArrow: (
+      <button
+        className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-[#E7A647] bg-opacity-80 backdrop-blur-sm text-black hover:bg-opacity-100 transition-all duration-300 z-20 slick-next"
+        aria-label="Next testimonial"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    ),
   };
 
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
+  useEffect(() => {
+    if (sliderRef.current) {
+      gsap.fromTo(
+        '.testimonial-slide',
+        { opacity: 0.5, scale: 0.95, y: 20 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.5,
+          ease: 'power2.out',
+          stagger: 0.1,
+        }
+      );
+    }
+  }, []);
 
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return;
-
-    const diffX = touchStartX.current - touchEndX.current;
-    const threshold = 100; // Minimum distance for a swipe
-
-    if (Math.abs(diffX) > threshold) {
-      if (diffX > 0) {
-        // Swipe left -> go to next slide
-        nextSlide();
-      } else {
-        // Swipe right -> go to previous slide
-        prevSlide();
+  const handleAfterChange = () => {
+    gsap.fromTo(
+      '.testimonial-slide',
+      { opacity: 0.5, scale: 0.95, y: 20 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.5,
+        ease: 'power2.out',
+        stagger: 0.1,
       }
-    }
-
-    // Reset values
-    touchStartX.current = null;
-    touchEndX.current = null;
-    handleMouseLeave(); // Resume auto-sliding after touch
+    );
   };
-
-  // Add mouse swipe support for desktop
-  const handleMouseDown = (e) => {
-    touchStartX.current = e.clientX;
-    handleMouseEnter(); // Pause auto-sliding during swipe
-
-    // Enable mouse move tracking on the entire document temporarily
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-  };
-
-  const handleMouseMove = (e) => {
-    touchEndX.current = e.clientX;
-  };
-
-  const handleMouseUp = () => {
-    if (!touchStartX.current || !touchEndX.current) {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      return;
-    }
-
-    const diffX = touchStartX.current - touchEndX.current;
-    const threshold = 100;
-
-    if (Math.abs(diffX) > threshold) {
-      if (diffX > 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
-    }
-
-    touchStartX.current = null;
-    touchEndX.current = null;
-    handleMouseLeave(); // Resume auto-sliding
-
-    // Clean up event listeners
-    document.removeEventListener('mousemove', handleMouseMove);
-    document.removeEventListener('mouseup', handleMouseUp);
-  };
-
-  const startAutoSlide = () => {
-    // Clear any existing timer
-    if (autoSlideTimer.current) {
-      clearInterval(autoSlideTimer.current);
-    }
-
-    // Set up new timer
-    autoSlideTimer.current = setInterval(() => {
-      nextSlide();
-    }, autoSlideInterval);
-  };
-
-  const resetAutoSlideTimer = () => {
-    startAutoSlide();
-  };
-
-  const prevSlide = () => {
-    if (isTransitioning) return;
-
-    setIsTransitioning(true);
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-
-    // Reset the transitioning state after animation completes
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 700);
-
-    resetAutoSlideTimer();
-  };
-
-  const nextSlide = () => {
-    if (isTransitioning) return;
-
-    setIsTransitioning(true);
-    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-
-    // Reset the transitioning state after animation completes
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 700);
-
-    resetAutoSlideTimer();
-  };
-
-  const goToSlide = (index) => {
-    if (isTransitioning || index === current) return;
-
-    setIsTransitioning(true);
-    setCurrent(index);
-
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 700);
-
-    resetAutoSlideTimer();
-  };
-
-  // Pause auto-sliding when user hovers over the slider
-  const handleMouseEnter = () => {
-    if (autoSlideTimer.current) {
-      clearInterval(autoSlideTimer.current);
-    }
-  };
-
-  // Resume auto-sliding when user stops hovering
-  const handleMouseLeave = () => {
-    startAutoSlide();
-  };
-
-
 
   return (
-    <div
-      className="relative w-full lg:mx-10 rounded-lg shadow-lg"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      ref={sliderRef}
-    >
-      <div 
-      className="relative h-full overflow-hidden"
-      onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        onMouseDown={handleMouseDown}
-      >
-        
-        {/* Create a wrapper div that holds all images side by side */}
-        <div
-          className="flex transition-transform gap-x-4 duration-500 ease-in-out h-full md:gap-x-9"
-          style={{
-            transform: `translateX(-${current * 10}%)`,
-            width: `${images.length * 10}%`
-          }}
-
+    <div className="w-full bg-black py-12 relative md:py-16">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <Slider
+          ref={sliderRef}
+          {...settings}
+          // afterChange={handleAfterChange}
+          className="testimonial-slider"
         >
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className=" flex-shrink-0 w-[20%] lg:w-[10%]"
-            // style={{ width: `${40 / images.length}%` }}
-            >
-              <img
-                src={img}
-                alt={`Testimonial ${index + 1}`}
-                className="w-full object-cover"
-              />
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="px-2 testimonial-slide">
+              <div className="rounded-xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-[3/4] bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl overflow-hidden">
+                  <img
+                    src={testimonial.image}
+                    alt={`Testimonial by ${testimonial.name}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Caption Overlay */}
+                  {/* <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-70 backdrop-blur-md p-3 md:p-4 flex flex-col items-center text-center">
+                    <p className="text-white text-xs sm:text-sm md:text-base font-medium italic line-clamp-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                      "{testimonial.quote}"
+                    </p>
+                    <p className="text-[#E7A647] text-xs sm:text-sm md:text-base mt-1" style={{ fontFamily: 'Minion Pro, serif' }}>
+                      — {testimonial.name}
+                    </p>
+                  </div> */}
+                </div>
+              </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
 
-      {/* Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-10 md:left-[-40px] transform -translate-y-1/2 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-200 transition opacity-75 hover:opacity-100 z-10"
-        disabled={isTransitioning}
-      >
-        ‹
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-10 md:right-[-40px] transform -translate-y-1/2 bg-white text-black px-3 py-2 rounded-full shadow-md hover:bg-gray-200 transition opacity-75 hover:opacity-100 z-10"
-        disabled={isTransitioning}
-      >
-        ›
-      </button>
-
-      {/* Dots */}
-      {/* <div className="absolute bottom-[-30px] z-20 left-1/2 transform -translate-x-1/2 flex gap-2">
-          {images.map((_, index) => (
-            <div
-              key={index}
-              className={`w-3 h-3 rounded-full ${index === current ? 'bg-yellow-600' : 'bg-white/50'} cursor-pointer transition-colors duration-300`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
-        </div> */}
+      {/* CSS for background grid pattern and slick overrides */}
+      <style jsx>{`
+        .bg-grid-pattern {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+          background-size: 20px 20px;
+        }
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .slick-prev,
+        .slick-next {
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 20;
+        }
+        .slick-prev {
+          left: 8px;
+        }
+        .slick-next {
+          right: 8px;
+        }
+        .slick-prev::before,
+        .slick-next::before {
+          display: none;
+        }
+        .slick-dots li {
+          margin: 0 2px;
+        }
+        .slick-dots li button {
+          width: 24px;
+          height: 4px;
+          padding: 0;
+        }
+        .slick-dots li button:before {
+          display: none;
+        }
+        @media (min-width: 640px) {
+          .slick-prev {
+            left: 16px;
+          }
+          .slick-next {
+            right: 16px;
+          }
+          .slick-dots li button {
+            width: 32px;
+            height: 4px;
+          }
+        }
+      `}</style>
     </div>
   );
 };
 
-export default CustomSlider;
+export default TestimonialSlider;
