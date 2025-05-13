@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import MText from '../assets/images/png4.png'
 import LEFT from '../assets/images/bg-live/leftimg.png'
 import RIGHT from '../assets/images/bg-live/rightimg.png'
@@ -12,12 +12,78 @@ import ARROWD from '../assets/images/arrowD.png'
 import CHART from '../assets/images/chart.png'
 import LAY from '../assets/images/lay.png'
 import ScrollAnimation from '../component/ScrollAnimation'
+import VideoCarousel from '../component/VideoCarousel'
 import { gsap } from 'gsap';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+import testimonial1 from '../assets/images/imageTest/testi1.png';
+import testimonial2 from '../assets/images/imageTest/testi2.png';
+import testimonial3 from '../assets/images/imageTest/testi3.png';
+import testimonial4 from '../assets/images/imageTest/testi4.png';
+import testimonial5 from '../assets/images/imageTest/testi5.png';
+import testimonial6 from '../assets/images/imageTest/testi6.png';
+import testimonial7 from '../assets/images/imageTest/testi7.png';
+import testimonial8 from '../assets/images/imageTest/testi8.png';
+import testimonial9 from '../assets/images/imageTest/testi9.png';
+import testimonial10 from '../assets/images/imageTest/testi10.png';
+import testimonial11 from '../assets/images/imageTest/testi11.png';
+import testimonial12 from '../assets/images/imageTest/testi12.png';
+import testimonial13 from '../assets/images/imageTest/testi13.png';
+import testimonial14 from '../assets/images/imageTest/testi14.png';
+import testimonial15 from '../assets/images/imageTest/testi15.png';
+import testimonial16 from '../assets/images/imageTest/testi16.png';
+import testimonial17 from '../assets/images/imageTest/testi17.png';
+
+
+const testimonials = [
+  { id: 1, image: testimonial1, name: 'Joshua', quote: 'Transformed my business with their funding solutions!' },
+  { id: 2, image: testimonial2, name: 'Matt', quote: 'Incredible support and results beyond expectations.' },
+  { id: 3, image: testimonial3, name: 'Rene', quote: 'A game-changer for entrepreneurs needing capital.' },
+  { id: 4, image: testimonial4, name: 'Demarcus', quote: 'Fast, reliable, and easy to work with.' },
+  { id: 5, image: testimonial5, name: 'Najibul', quote: 'Helped me scale my startup effortlessly.' },
+  { id: 6, image: testimonial6, name: 'Robert', quote: 'The best funding partner I’ve ever had.' },
+  { id: 7, image: testimonial7, name: 'Jeremy', quote: 'Their expertise made all the difference.' },
+  { id: 8, image: testimonial8, name: 'Lemy', quote: 'Secured funding when I needed it most.' },
+  { id: 9, image: testimonial9, name: 'Raul', quote: 'A seamless experience from start to finish.' },
+  { id: 10, image: testimonial10, name: 'Sarah', quote: 'Empowered my business to grow rapidly.' },
+  { id: 11, image: testimonial11, name: 'Juwan', quote: 'Professional and results-driven.' },
+  { id: 12, image: testimonial12, name: 'Daniel', quote: 'Funding made simple and accessible.' },
+  { id: 13, image: testimonial13, name: 'Bernicia', quote: 'They truly understand entrepreneurs’ needs.' },
+  { id: 14, image: testimonial14, name: 'Tyrone', quote: 'Unmatched support for business growth.' },
+  { id: 15, image: testimonial15, name: 'Abdullah', quote: 'A trusted partner for funding success.' },
+  { id: 16, image: testimonial16, name: 'Corboi', quote: 'Helped me achieve my business goals.' },
+  { id: 17, image: testimonial17, name: 'Brittany', quote: 'Their system is a total game-changer.' },
+]
 
 
 const FORM_URL = "https://www.laserfundpamm.com/disclaimer "
 
 const LaserFund = () => {
+
+  const sliderRef = useRef(null);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 900,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    pauseOnHover: true,
+    arrows: true,
+    centerMode: true,
+  }
+
+
+
+
+
+
+
+
   useEffect(() => {
     gsap.fromTo('.hero-dollar-left',
       {
@@ -75,12 +141,12 @@ const LaserFund = () => {
 
   // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
-    "https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn",
-    "https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX",
-    "https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX",
-    "https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH",
-    "https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp",
-    "https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA",
+    "https://www.youtube.com/embed/6h-KSsq1lRQ",
+    "https://www.youtube.com/embed/CYyTxYAEtxM",
+    "https://www.youtube.com/embed/RHAKwL1vrxc",
+    "https://www.youtube.com/embed/3ypIhaaqzKQ",
+    // "https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp",
+    // "https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA",
   ]);
 
 
@@ -141,7 +207,14 @@ const LaserFund = () => {
             </div>
 
             <div className='flex justify-center w-full'>
-              <iframe className='lg:w-[850px] px-5 pb-5 rounded-2xl md:w-[540px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/qVVt7nn6AcU?feature=shared" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] px-5 pb-5 rounded-2xl md:w-[540px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]'
+                src="https://www.youtube.com/embed/qVVt7nn6AcU?feature=shared"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                loading="lazy"
+              >
+              </iframe>
             </div>
           </ScrollAnimation>
 
@@ -503,179 +576,128 @@ const LaserFund = () => {
       </section>
 
 
-      <section className='overflow-hidden flex flex-col justify-center items-center  bg-black pb-10 youtube-video-section'>
-        <div className='flex flex-col justify-center items-center pt-10 lg:pt-16 gap-y-3'>
+      <section className="overflow-hidden flex flex-col justify-center items-center bg-black pb-10 youtube-video-section">
+        <div className="flex flex-col justify-center items-center pt-10 lg:pt-16 gap-y-3">
           <ScrollAnimation animation="slideDown" delay={0.2}>
-            <h1 className='text-lg tracking-[4px] uppercase px-10 font-extralight text-gray-500 text-center' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Trusted by Professionals Like You</h1>
+            <h1
+              className="text-lg tracking-[4px] uppercase px-10 font-extralight text-gray-500 text-center"
+              style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+            >
+              Trusted by Professionals Like You
+            </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.1}>
-            <h1 className='text-[#E7A647] text-center px-10 pb-10 text-4xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
+            <h1
+              className="text-[#E7A647] text-center px-10 pb-10 text-4xl lg:text-[45px] font-semibold"
+              style={{ fontFamily: 'Minion Pro, serif' }}
+            >
+              Client Success Stories
+            </h1>
           </ScrollAnimation>
 
-          <div className="w-full">
-            {/* Desktop/Large Screen Layout */}
-            <div className="hidden lg:block bg-black w-full relative">
-              {/* Grid pattern overlay */}
-              <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+          <VideoCarousel videos={videos} />
 
-              {/* Content container */}
-              <div className="relative z-10 max-w-7xl mx-auto px-4">
-                {/* Video gallery */}
-                <div className="flex items-center justify-center">
-                  {/* Left arrow navigation */}
-                  <button
-                    className="absolute left-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handlePrevVideo}
-                    aria-label="Previous video"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
+          <ScrollAnimation animation="zoomIn" delay={0.1}>
+            <h1
+              className="text-[#E7A647] text-center px-10 pt-10 text-4xl lg:text-[45px] font-semibold"
+              style={{ fontFamily: 'Minion Pro, serif' }}
+            >
+              Image Proof Of Our Client's Success
+            </h1>
+          </ScrollAnimation>
 
-                  {/* Left video */}
-                  <div className="w-1/4 transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 -mr-6 z-10">
-                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                      <iframe
-                        className="w-full aspect-video"
-                        src={videos[0]}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                      </iframe>
-                    </div>
-                  </div>
-
-                  {/* Center video (larger) */}
-                  <div className="w-1/2 transform transition-transform duration-300 hover:scale-105 mb-6 md:mb-0 z-20">
-                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                      <iframe
-                        className="w-full aspect-video"
-                        src={videos[1]}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                      </iframe>
-                    </div>
-                  </div>
-
-                  {/* Right video */}
-                  <div className="w-1/4 transform transition-transform duration-300 hover:scale-105 -ml-6 z-10">
-                    <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                      <iframe
-                        className="w-full aspect-video"
-                        src={videos[2]}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                      </iframe>
-                    </div>
-                  </div>
-
-                  {/* Right arrow navigation */}
-                  <button
-                    className="absolute right-4 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                    onClick={handleNextVideo}
-                    aria-label="Next video"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile/Medium Screen Slider - This remains the same */}
-            <div className="lg:hidden bg-black w-full relative">
-              {/* Grid pattern overlay */}
-              <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
-
-              {/* Content container */}
-              <div className="relative z-10 max-w-7xl">
-                {/* Video slider */}
-                <div className="relative">
-                  {/* Left arrow navigation */}
-
-
-                  {/* Slider container */}
-                  <div className="overflow-hidden">
-                    <div
-                      className="flex transition-transform duration-300 ease-in-out"
-                      style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                    >
-                      {/* Video slides - dynamically render all videos */}
-                      {videos.map((videoUrl, index) => (
-                        <div key={index} className="min-w-full px-4">
-                          <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                            <iframe
-                              className="w-full h-[250px] aspect-video"
-                              src={videoUrl}
-                              title={`Testimonial video ${index + 1}`}
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen>
-                            </iframe>
-                          </div>
+          <div className='mx-auto'>
+            <div className="w-full bg-black py-12 relative md:py-16">
+              <div className="max-w-7xl mx-auto px-4 relative z-10">
+                <Slider
+                  ref={sliderRef}
+                  {...settings}
+                  // afterChange={handleAfterChange}
+                  className="testimonial-slider"
+                >
+                  {testimonials.map((testimonial) => (
+                    <div key={testimonial.id} className="px-2 testimonial-slide">
+                      <div className="rounded-xl overflow-hidden shadow-2xl">
+                        <div className="relative aspect-[3/4] bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl overflow-hidden">
+                          <img
+                            src={testimonial.image}
+                            alt={`Testimonial by ${testimonial.name}`}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                          />
+                          {/* Caption Overlay */}
+                          {/* <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-70 backdrop-blur-md p-3 md:p-4 flex flex-col items-center text-center">
+                    <p className="text-white text-xs sm:text-sm md:text-base font-medium italic line-clamp-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                      "{testimonial.quote}"
+                    </p>
+                    <p className="text-[#E7A647] text-xs sm:text-sm md:text-base mt-1" style={{ fontFamily: 'Minion Pro, serif' }}>
+                      — {testimonial.name}
+                    </p>
+                  </div> */}
                         </div>
-                      ))}
+                      </div>
                     </div>
-                  </div>
-
-                  <div className='flex justify-center items-center gap-x-10'>
-                    <button
-                      className="absolute left-[10px] bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                      onClick={handlePrevSlide}
-                      aria-label="Previous slide"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                      </svg>
-                    </button>
-
-                    {/* Right arrow navigation */}
-                    <button
-                      className="absolute right-[10px]  bottom-[-80px] transform -translate-y-1/2 z-30 bg-[#E7A647] rounded-full p-2 shadow-lg hover:bg-[#c98c3c] transition-colors duration-300"
-                      onClick={handleNextSlide}
-                      aria-label="Next slide"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                  </div>
-
-
-                </div>
-
-                {/* Dot indicators */}
-                <div className="flex pt-6 justify-center mt-4">
-                  {videos.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`h-3 w-3 mx-1 rounded-full ${currentSlide === index ? 'bg-[#E7A647]' : 'bg-gray-400'}`}
-                      onClick={() => setCurrentSlide(index)}
-                      aria-label={`Go to slide ${index + 1}`}
-                    ></button>
                   ))}
-                </div>
+                </Slider>
               </div>
+
+              {/* CSS for background grid pattern and slick overrides */}
+              <style jsx>{`
+        .bg-grid-pattern {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+          background-size: 20px 20px;
+        }
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .slick-prev,
+        .slick-next {
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 20;
+        }
+        .slick-prev {
+          left: 8px;
+        }
+        .slick-next {
+          right: 8px;
+        }
+        .slick-prev::before,
+        .slick-next::before {
+          display: none;
+        }
+        .slick-dots li {
+          margin: 0 2px;
+        }
+        .slick-dots li button {
+          width: 24px;
+          height: 4px;
+          padding: 0;
+        }
+        .slick-dots li button:before {
+          display: none;
+        }
+        @media (min-width: 640px) {
+          .slick-prev {
+            left: 16px;
+          }
+          .slick-next {
+            right: 16px;
+          }
+          .slick-dots li button {
+            width: 32px;
+            height: 4px;
+          }
+        }
+      `}</style>
             </div>
           </div>
         </div>
-
-        {/* Add a CSS style for the grid pattern */}
-        <style jsx>{`
-          .bg-grid-pattern {
-            background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
-                            linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-          }
-        `}</style>
       </section>
 
       <section className='overflow-hidden flex justify-center items-center  bg-white pb-14'>
