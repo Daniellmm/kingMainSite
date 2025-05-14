@@ -35,7 +35,7 @@ const preloaderContent = {
   },
   '/ggei': {
     mainText: ['Become', 'Your Own', 'Bank'],
-    subText: 'Become Your Own Bank Submit'
+    subText: 'Become Your Own Bank Summit'
   },
 };
 

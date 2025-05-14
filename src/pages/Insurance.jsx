@@ -172,7 +172,7 @@ const Insurance = () => {
               <ScrollAnimation animation="slideUp" delay={0.3}>
                 <h1 className='text-[#E7A647] text-center lg:text-start pb-10 text-3xl lg:text-[45px] lg:leading-[45px] md:text-start font-semibold'
                   style={{ fontFamily: 'Minion Pro, serif' }}>
-                  Book a <span className='text-white italic'>Complimentary</span>
+                  Book a <span className='text-white italic'>Complimentary </span>
                   Financial Review and Get the "Spender, Saver, Wealth Creator" Audio.
                   <div class="relative inline-block text-black font-bold">
                     <span className=' line-through text-red-600'>FREE</span>
@@ -300,7 +300,7 @@ const Insurance = () => {
           <ScrollAnimation animation="zoomIn" delay={0.2}>
             <h1 className='text-[#E7A647] text-center pb-10 text-4xl px-10 lg:text-[45px]' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
           </ScrollAnimation>
-          <div className="w-full max-w-[400px] lg:max-w-2xl px-4">
+          <div className="w-full max-w-[380px] lg:max-w-2xl px-4">
             <Slider ref={videoSliderRef} {...videoSettings} className="video-slider">
               {videos.map((video, index) => (
                 <div key={index} className="px-2">

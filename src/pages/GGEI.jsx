@@ -106,8 +106,8 @@ const TeamSlider = ({ teamMembers }) => {
 const GGEI = () => {
 
   const teamMembers = [
-    { frame: KFS, name: KING, isGene: false },
     { frame: AFS, name: ALEXIS, isGene: false },
+    { frame: KFS, name: KING, isGene: false },
     { frame: GFS, name: GENE, isGene: true },
     { frame: RFS, name: RAMSEY, isGene: false },
     { frame: SFS, name: SHAWN, isGene: false }
@@ -180,8 +180,7 @@ const GGEI = () => {
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
               <h1 className="lg:text-8xl text-4xl text-center font-bold uppercase bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                BECOME A WEALTH CREATOR
-              </h1>
+                Become Your Own Bank Summit              </h1>
             </div>
           </ScrollAnimation>
 
@@ -229,9 +228,9 @@ const GGEI = () => {
                 <h1 className='text-black font-bold text-xl lg:text-[28px] text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>
                   “If you don’t have at least five friends in your phone who can turn $1 into $2, you need a new circle.”</h1>
               </div>
-              {/* <div>
-                <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Alexis Holifield</h1>
-              </div> */}
+              <div>
+                <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Anonymous</h1>
+              </div>
             </ScrollAnimation>
           </div>
         </div>
@@ -394,12 +393,12 @@ const GGEI = () => {
       <section className='overflow-hidden px-10 bg-black pb-14'>
         <div className='flex flex-col lg:flex-row justify-center md:px-10 items-center gap-20 pt-10 '>
           <div className='flex gap-y-4 flex-col justify-start items-start lg:w-1/2 font-normal'>
-            <div className='flex justify-center lg:justify-start w-full'> 
-            <ScrollAnimation animation="zoomIn">
-              <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] lg:leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
-                EARN, PROTECT, GROW
-              </h1>
-            </ScrollAnimation>
+            <div className='flex justify-center lg:justify-start w-full'>
+              <ScrollAnimation animation="zoomIn">
+                <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] lg:leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  EARN, PROTECT, GROW
+                </h1>
+              </ScrollAnimation>
             </div>
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <p className='text-white text-center lg:text-start font-extralight md:text-[22px]' style={{ fontFamily: 'Montserrat, serif' }}>
@@ -440,7 +439,7 @@ const GGEI = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <p className='text-black text-center lg:text-start font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>
-                King Edwards of High Ticket Offer Financing and Alexis Holifield of Femininity & Fine-Ance have joined forces to create The Global Group Economic Initiative.
+                King Edwards of High Ticket Offer Financing and Alexis Holifield of Millennial Millionaire have joined forces to create The Global Group Economic Initiative.
                 The Global Group Economic Initiative is a Christian-based wealth-building community dedicated to helping serious entrepreneurs achieve lasting financial success.
                 We teach proven strategies that empower business owners to generate significantly more revenue, grow their net worth year after year—regardless of
                 economic conditions—and build financial legacies, much like the Warren Buffetts of the world.
@@ -491,6 +490,22 @@ const GGEI = () => {
 
           <div className='flex relative gap-x-14 gap-y-40 pt-44 flex-wrap justify-center items-center'>
 
+            <div className='relative'>
+              <ScrollAnimation animation="fadeIn" delay={0.3}>
+                <img src={AF} className='h-[400px] z-10' alt="" />
+              </ScrollAnimation>
+              <div className='absolute z-10 top-[-125px]'>
+                <ScrollAnimation animation="zoomIn" delay={0.6}>
+                  <img src={ALEXIS} alt="" />
+                </ScrollAnimation>
+              </div>
+              <div className='absolute z-10 top-[-125px]'>
+                <ScrollAnimation animation="zoomIn" delay={0.6}>
+                  <img src={ALEXIS} alt="" />
+                </ScrollAnimation>
+              </div>
+            </div>
+
             <div className='relative '>
               <ScrollAnimation animation="fadeIn" delay={0.2}>
                 <img src={KF} className='h-[400px]  z-10' alt="" />
@@ -506,22 +521,6 @@ const GGEI = () => {
                 <ScrollAnimation animation="zoomIn" delay={0.4}>
                   <img src={KING} className='w-[300px] ' alt="" />
                 </ScrollAnimation >
-              </div>
-            </div>
-
-            <div className='relative'>
-              <ScrollAnimation animation="fadeIn" delay={0.3}>
-                <img src={AF} className='h-[400px] z-10' alt="" />
-              </ScrollAnimation>
-              <div className='absolute z-10 top-[-125px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.6}>
-                  <img src={ALEXIS} alt="" />
-                </ScrollAnimation>
-              </div>
-              <div className='absolute z-10 top-[-125px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.6}>
-                  <img src={ALEXIS} alt="" />
-                </ScrollAnimation>
               </div>
             </div>
 
