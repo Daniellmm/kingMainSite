@@ -9,9 +9,9 @@ import MARK from '../assets/images/mark.png';
 import Correct from '../assets/images/correct.png';
 import Out from '../assets/images/out.png';
 import Money from '../assets/images/money.png';
-import Rect1 from '../assets/images/rect1.png';
-import Rect2 from '../assets/images/rect2.png';
-import Rect3 from '../assets/images/rect3.png';
+import Rect1 from '../assets/images/pfb.jpg';
+import Rect2 from '../assets/images/bible.jpg';
+import Rect3 from '../assets/images/secure.jpg';
 import ArrowR from '../assets/images/arrowupright.png';
 import ARROWD from '../assets/images/arrowD.png'
 import ScrollAnimation from '../component/ScrollAnimation';
