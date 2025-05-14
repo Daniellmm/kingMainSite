@@ -555,7 +555,7 @@ const LaserFund = () => {
             </h1>
           </ScrollAnimation>
 
-          <div className="w-full max-w-[380px] lg:max-w-3xl px-4">
+          <div className="w-full max-w-[350px] lg:max-w-3xl px-4">
             <Slider ref={videoSliderRef} {...videoSettings} className="video-slider">
               {videos.map((video, index) => (
                 <div key={index} className="px-2">

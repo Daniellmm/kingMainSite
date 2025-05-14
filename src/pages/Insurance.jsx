@@ -300,7 +300,7 @@ const Insurance = () => {
           <ScrollAnimation animation="zoomIn" delay={0.2}>
             <h1 className='text-[#E7A647] text-center pb-10 text-4xl px-10 lg:text-[45px]' style={{ fontFamily: 'Minion Pro, serif' }}>Client Success Stories</h1>
           </ScrollAnimation>
-          <div className="w-full max-w-[380px] lg:max-w-2xl px-4">
+          <div className="w-full max-w-[350px] lg:max-w-2xl px-4">
             <Slider ref={videoSliderRef} {...videoSettings} className="video-slider">
               {videos.map((video, index) => (
                 <div key={index} className="px-2">
