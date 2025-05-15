@@ -237,11 +237,21 @@ const NavBar = () => {
               >
                 Become A Bank
               </li>
+              {/* <li
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                data-path="/blog"
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/blog') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/blog')}
+                onMouseEnter={(e) => handleLinkHover(e, true)}
+                onMouseLeave={(e) => handleLinkHover(e, false)}
+              >
+                Blog
+              </li> */}
             </ul>
           </div>
 
           {/* contact us btn  */}
-          <div ref={buttonRef} className='hidden lg:block lg:flex gap-x-5 border border-1 rounded-lg border-black'>
+          <div ref={buttonRef} className='hidden  lg:flex gap-x-5 border border-1 rounded-lg border-black'>
             <button
               style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
               className='bg-Btn text-black rounded-lg  md:text-sx hover:bg-[#E7A647] py-3 md:py-2 px-4 md:px-2 border-black transition-all duration-300'

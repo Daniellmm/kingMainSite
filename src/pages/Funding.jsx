@@ -91,6 +91,7 @@ const Funding = () => {
 
   // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
+    "https://www.youtube.com/embed/a9M6uPzQLFs?si=3BgzDhk_uvms2z41",
     "https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn",
     "https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX",
     "https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX",

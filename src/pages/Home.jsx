@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import MText from '../assets/images/png1.png';
-import DollarCoin from '../assets/images/bg-live/bookmyl.png';
-import DollarCoin2 from '../assets/images/bg-live/bookmyr.png';
 import BANK from '../assets/images/bank2.png';
 import AWW from '../assets/images/aww.png';
 import BBB from '../assets/images/bbb.png';

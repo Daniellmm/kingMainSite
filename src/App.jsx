@@ -11,6 +11,7 @@ import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import ScrollToTop from "./component/ScrollToTop";
 import PageTransition from "./component/PageTransition"; 
+import Blog from "./pages/Blog";
 
 
 const LoadingContext = createContext();
@@ -100,6 +101,11 @@ function AppContent() {
             <Route path="/laserfund" element={
               <PageTransition>
                 <LaserFund />
+              </PageTransition>
+            } />
+            <Route path="/blog" element={
+              <PageTransition>
+               <Blog />
               </PageTransition>
             } />
           </Routes>
