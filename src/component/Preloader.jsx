@@ -105,7 +105,7 @@ const Preloader = ({ mainText, subText }) => {
                 <div className='absolute h-full w-full flex justify-center flex-col md:flex-row gap-y-5 items-center mil-preloader'>
                     {displayMainText.map((text, index) => (
                         <p key={index} 
-                           className={`opacity-0 mr-[15px] px-1 mil-1 text-4xl md:text-4xl ${index === 1 ? 'font-semibold' : 'font-thin'} text-[#E7A647]`} 
+                           className={`opacity-0 mr-[15px] px-1 mil-1 uppercase text-4xl md:text-4xl ${index === 1 ? 'font-semibold' : 'font-thin'} text-[#E7A647]`} 
                            style={{ fontFamily: 'Minion Pro, serif' }}>
                             {text}
                         </p>
@@ -115,7 +115,7 @@ const Preloader = ({ mainText, subText }) => {
                 <div className='absolute inset-0 flex justify-center items-center'>
                     <div className='relative p-[0 30px] mil-preloader-2'>
                         <p className='absolute opacity-0 inset-0 z-10 bg-gradient-to-r from-[#E7A647] to-[#ff9901] reveal-box'></p>
-                        <p className='loader-text tracking-[1px] px-10 text-center text-white md:text-xl'>{displaySubText}</p>
+                        <p className='loader-text tracking-[1px] px-10 text-center uppercase text-white md:text-xl'>{displaySubText}</p>
                     </div>
                 </div>
             </div>
