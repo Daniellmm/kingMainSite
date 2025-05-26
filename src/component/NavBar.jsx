@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { HiMenu, HiX } from 'react-icons/hi';
+import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi';
 import LOGO1 from '../assets/images/logo/homeLogo.png'
 import FundingLogo from '../assets/images/logo/fundingLogo.png'
 import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
@@ -17,6 +17,7 @@ const NavBar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // Refs for animations
   const navbarRef = useRef(null);
@@ -24,6 +25,8 @@ const NavBar = () => {
   const linksRef = useRef(null);
   const buttonRef = useRef(null);
   const mobileMenuRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const dropdownToggleRef = useRef(null);
 
   const logoMap = {
     '/': LOGO1,
@@ -35,9 +38,35 @@ const NavBar = () => {
 
   const currentLogo = logoMap[location.pathname] || LOGO1;
 
+  // Dropdown menu items
+  const dropdownItems = [
+    { path: '/about', label: 'About Us' },
+    { path: '/credit card liquidation', label: 'CCL' },
+    { path: '/earn-protect-grow', label: 'EPG' }
+  ];
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   }
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  }
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && 
+          dropdownToggleRef.current && !dropdownToggleRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -112,13 +141,46 @@ const NavBar = () => {
     }
   }, [isOpen]);
 
+  // Dropdown animation
+  useEffect(() => {
+    if (dropdownRef.current) {
+      if (isDropdownOpen) {
+        gsap.fromTo(
+          dropdownRef.current,
+          { opacity: 0, y: -10, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "power2.out" }
+        );
+
+        // Animate dropdown items
+        gsap.fromTo(
+          dropdownRef.current.querySelectorAll('li'),
+          { opacity: 0, x: -10 },
+          { opacity: 1, x: 0, stagger: 0.05, duration: 0.2, delay: 0.1, ease: "power2.out" }
+        );
+      } else {
+        gsap.to(dropdownRef.current, {
+          opacity: 0,
+          y: -10,
+          scale: 0.95,
+          duration: 0.15,
+          ease: "power2.in"
+        });
+      }
+    }
+  }, [isDropdownOpen]);
+
   const isActive = (path) => {
     return location.pathname === path;
+  }
+
+  const isDropdownActive = () => {
+    return dropdownItems.some(item => location.pathname === item.path);
   }
 
   const navigateTo = (path) => {
     navigate(path);
     setIsOpen(false);
+    setIsDropdownOpen(false);
   }
 
   // Hover animation for nav links
@@ -139,6 +201,24 @@ const NavBar = () => {
     });
   };
 
+  // Dropdown hover animation
+  const handleDropdownHover = (e, enter) => {
+    gsap.to(e.target, {
+      scale: enter ? 1.05 : 1,
+      color: enter ? '#E7A647' : isDropdownActive() ? '#E7A647' : '#000',
+      duration: 0.2
+    });
+
+    // Animate the chevron
+    const chevron = e.target.querySelector('.chevron-icon');
+    if (chevron) {
+      gsap.to(chevron, {
+        rotate: enter ? 180 : (isDropdownOpen ? 180 : 0),
+        duration: 0.2
+      });
+    }
+  };
+
   return (
     <div
       ref={navbarRef}
@@ -151,7 +231,7 @@ const NavBar = () => {
           <div ref={logoRef} className='cursor-pointer'>
             <img
               src={currentLogo}
-          className='h-10 md:h-14'
+              className='h-10 md:h-14'
               alt={`${location.pathname.slice(1) || 'home'} logo`}
             />
           </div>
@@ -186,7 +266,7 @@ const NavBar = () => {
 
           {/* Nav Links (hidden on mobile, shown on medium screens and up) */}
           <div ref={linksRef} className='hidden lg:flex'>
-            <ul className='flex space-x-5 md:space-x-6'>
+            <ul className='flex space-x-5 md:space-x-6 items-center'>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/"
@@ -237,16 +317,44 @@ const NavBar = () => {
               >
                 Become A Bank
               </li>
-              {/* <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                data-path="/blog"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/blog') ? 'text-yellow-600 font-semibold' : ''}`}
-                onClick={() => navigateTo('/blog')}
-                onMouseEnter={(e) => handleLinkHover(e, true)}
-                onMouseLeave={(e) => handleLinkHover(e, false)}
-              >
-                Blog
-              </li> */}
+
+              {/* Dropdown Menu */}
+              <li className='relative'>
+                <div
+                  ref={dropdownToggleRef}
+                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                  className={`text-lg cursor-pointer transition-colors flex items-center gap-1 ${isDropdownActive() ? 'text-yellow-600 font-semibold' : ''}`}
+                  onClick={toggleDropdown}
+                  onMouseEnter={(e) => handleDropdownHover(e, true)}
+                  onMouseLeave={(e) => handleDropdownHover(e, false)}
+                >
+                  Other Pages
+                  <HiChevronDown 
+                    className={`chevron-icon transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
+                  />
+                </div>
+
+                {/* Dropdown Content */}
+                {isDropdownOpen && (
+                  <div
+                    ref={dropdownRef}
+                    className='absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-10'
+                  >
+                    <ul>
+                      {dropdownItems.map((item, index) => (
+                        <li
+                          key={index}
+                          style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                          className={`px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-600 cursor-pointer transition-colors ${isActive(item.path) ? 'text-yellow-600 font-semibold bg-yellow-50' : ''}`}
+                          onClick={() => navigateTo(item.path)}
+                        >
+                          {item.label}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </li>
             </ul>
           </div>
 
@@ -305,6 +413,21 @@ const NavBar = () => {
               >
                 Become A Bank
               </li>
+
+              {/* Mobile Dropdown Items */}
+              <div className='w-full border-t flex flex-col justify-center items-center border-gray-200 pt-4'>
+                <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'semibold' }} className='text-sm text-gray-500 mb-2'>Other Pages</p>
+                {dropdownItems.map((item, index) => (
+                  <li
+                    key={index}
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                    className={`text-lg cursor-pointer transition-colors ${isActive(item.path) ? 'text-yellow-600 font-semibold' : ''}`}
+                    onClick={() => navigateTo(item.path)}
+                  >
+                    {item.label}
+                  </li>
+                ))}
+              </div>
 
               <div className='w-[129px] border border-1 rounded-lg border-black'>
                 <button

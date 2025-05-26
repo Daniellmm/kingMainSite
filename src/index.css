@@ -3,6 +3,86 @@
 @tailwind utilities;
 
 
+
+
+.hero{
+    background-image: url(../src/assets/images/page-one/heroBg.png);
+   background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.vid-sec {
+    background-image: url(../src/assets/images/page-one/sectiontwoBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-sec {
+    background-image: url(../src/assets/images/page-one/cardsecBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.step-sec {
+    background-image: url(../src/assets/images/page-one/cardsecBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.who-sec {
+    background-image: url(../src/assets/images/page-one/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.last-sec {
+    background-image: url(../src/assets/images/page-one/lastpageBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.phero-sec {
+    background-image: url(../src/assets/images/page-two/heroBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.psec-two {
+    background-image: url(../src/assets/images/page-two/sectwo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.podcast-sec {
+    background-image: url(../src/assets/images/page-two/podcastBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.about-sec {
+    background-image: url(../src/assets/images/page-two/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+@font-face {
+    font-family: 'Beauty Wind';
+    src: url('/src/assets/fonts/beauty-Wind.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Beauty Wind';
+    src: url('/src/assets/fonts/beauty-Wind.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Minion Pro';
     src: url('/src/assets/fonts/MinionPro-Bold.otf') format('opentype');

@@ -12,6 +12,8 @@ import Footer from "./component/Footer";
 import ScrollToTop from "./component/ScrollToTop";
 import PageTransition from "./component/PageTransition"; 
 import Blog from "./pages/Blog";
+import Hto from "./pages/Hto";
+import PodcastPage from "./pages/PodcastPage";
 
 
 const LoadingContext = createContext();
@@ -103,9 +105,19 @@ function AppContent() {
                 <LaserFund />
               </PageTransition>
             } />
-            <Route path="/blog" element={
+            {/* <Route path="/blog" element={
               <PageTransition>
                <Blog />
+              </PageTransition>
+            } /> */}
+            <Route path="/credit card liquidation" element={
+              <PageTransition>
+               <Hto />
+              </PageTransition>
+            } />
+            <Route path="/earn-protect-grow" element={
+              <PageTransition>
+               <PodcastPage />
               </PageTransition>
             } />
           </Routes>
