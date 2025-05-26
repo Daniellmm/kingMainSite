@@ -41,13 +41,13 @@ const HeroModel = () => {
                 <ambientLight intensity={0.6} color="#f4f4f4" />
                 <directionalLight
                     position={[5, 5, 5]}
-                    intensity={1.2}
-                    color="#ffffff"
+                    intensity={2.2}
+                    color="#FDF4DC"
                     castShadow
                 />
                 <directionalLight
                     position={[-5, -5, 5]}
-                    intensity={0.5}
+                    intensity={1.8}
                     color="#ffffff"
                 />
 
