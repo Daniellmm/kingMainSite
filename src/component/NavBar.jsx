@@ -6,6 +6,10 @@ import FundingLogo from '../assets/images/logo/fundingLogo.png'
 import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
 import LaserFundLogo from '../assets/images/logo/laserLogo.png'
 import GGEILogo from '../assets/images/logo/ggei.png'
+// Add these imports for the dropdown page logos
+// import AboutLogo from '../assets/images/logo/aboutLogo.png' // Add your about logo
+// import CCLLogo from '../assets/images/logo/Logo.png' 
+import EPGLogo from '../assets/images/page-two/logo.png' 
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -28,12 +32,16 @@ const NavBar = () => {
   const dropdownRef = useRef(null);
   const dropdownToggleRef = useRef(null);
 
+  // Updated logoMap to include dropdown pages
   const logoMap = {
     '/': LOGO1,
     '/funding': FundingLogo,
     '/insurance': InsuranceLogo,
     '/laserfund': LaserFundLogo,
     '/ggei': GGEILogo,
+    // '/about': AboutLogo,
+    // '/credit card liquidation': CCLLogo, 
+    '/earn-protect-grow': EPGLogo,
   };
 
   const currentLogo = logoMap[location.pathname] || LOGO1;
@@ -334,11 +342,12 @@ const NavBar = () => {
                   />
                 </div>
 
-                {/* Dropdown Content */}
+                {/* Dropdown Content - Fixed z-index issue */}
                 {isDropdownOpen && (
                   <div
                     ref={dropdownRef}
-                    className='absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-10'
+                    className='absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-[9999]'
+                    style={{ zIndex: 9999 }}
                   >
                     <ul>
                       {dropdownItems.map((item, index) => (

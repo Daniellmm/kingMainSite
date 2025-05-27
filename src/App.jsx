@@ -40,6 +40,14 @@ const preloaderContent = {
     mainText: ['Become', 'Your Own', 'Bank'],
     subText: 'Become Your Own Bank Summit'
   },
+  '/credit card liquidation': {
+    mainText: ['Credit', 'Into', 'Cash'],
+    subText: 'Your Credit Card Limits into cash'
+  },
+  '/earn-protect-grow': {
+    mainText: ['EARN', 'PROTECT', 'GROW'],
+    subText: 'Learn how to earn more'
+  },
 };
 
 function RouteChangeListener() {
