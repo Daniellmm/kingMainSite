@@ -135,14 +135,14 @@ const AboutUs = () => {
             {/* Hero Section */}
             <section className="relative py-20 px-6 lg:px-8 overflow-hidden">
                 <div className="relative max-w-6xl mx-auto text-center" ref={heroRef}>
-                    <h1 className="text-5xl lg:text-8xl font-bold pt-10 mb-6 bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+                    <h1 className="text-4xl lg:text-8xl font-bold pt-10 mb-6 bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
                         A Declaration for Entrepreneurs Who Refuse to Settle
                     </h1>
                 </div>
             </section>
 
             {/* Declaration Section */}
-            <section className="py-16 px-6 lg:px-8 text-center lg:text-start">
+            <section className="py-6 px-6 lg:px-8 text-center lg:text-start">
                 <div
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                     className="max-w-4xl mx-auto" ref={declarationRef}>

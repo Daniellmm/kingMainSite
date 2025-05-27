@@ -81,7 +81,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
               variants={fadeInLeft}
             >
               <motion.h1
-                className='lg:text-8xl font-bold text-5xl text-center lg:text-start text-[#D09A25]'
+                className='lg:text-8xl font-bold text-4xl text-center lg:text-start text-[#D09A25]'
                 style={{ fontFamily: 'Minion Pro, serif' }}
                 variants={fadeInUp}
               >
@@ -98,7 +98,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
                   variants={fadeInUp}
                 >
                   <motion.button
-                    className="px-6 py-2 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    className="px-4 py-2 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
@@ -154,9 +154,9 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 variants={fadeInUp}
               >
-                AN ENTREPRENEURS GUIDE TO EARNING MORE MONEY, 
-                PROTECTING THE MONEY YOU HAVE EARNED, 
-                & GROWING THE MONEY YOU HAVE PROTECTED.
+                An Entrepreneur's Guide to Earning More Money, 
+                Protecting the Money You Have Earned, 
+                & Growing the Money You Have Protected.
               </motion.p>
               <motion.div
                 className='flex justify-center lg:justify-start'
@@ -286,7 +286,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
                 you see the work of a sovereign God.
               </motion.p>
 
-              <motion.div
+              {/* <motion.div
                 className='pt-16 flex justify-center items-center gap-6'
                 variants={staggerContainer}
               >
@@ -318,7 +318,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
                   variants={scaleIn}
                   whileHover={socialHover}
                 />
-              </motion.div>
+              </motion.div> */}
             </div>
           </div>
         </section>
