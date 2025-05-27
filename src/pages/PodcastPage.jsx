@@ -97,6 +97,7 @@ const PodcastPage = () => {
                     className="px-6 py-2 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                   >
                     Watch Podcast
                   </motion.button>
@@ -109,6 +110,7 @@ const PodcastPage = () => {
                     className="px-3 py-2 rounded-full text-sm bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                   >
                     Join Our Community
                   </motion.button>
@@ -161,6 +163,7 @@ const PodcastPage = () => {
                   className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                   whileHover={buttonHover}
                   whileTap={{ scale: 0.95 }}
+                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 >
                   Download Book
                 </motion.button>

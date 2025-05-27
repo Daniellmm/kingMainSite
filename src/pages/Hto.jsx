@@ -127,7 +127,9 @@ const Hto = () => {
                   viewport={{ once: true }}
                   custom={2}
                 >
-                  <button className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+                  <button
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
                     Book Now
                   </button>
                 </motion.div>
@@ -161,8 +163,8 @@ const Hto = () => {
               viewport={{ once: true }}
             >
               <p
-              style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-              className='text-[#999999] text-center lg:text-start text-lg'>
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                className='text-[#999999] text-center lg:text-start text-lg'>
                 Need fast access to cash? Our Credit Card Liquidation service helps you convert your entire credit limit
                 into spendable cash—without losing the rewards and points you’ve earned.
                 <br /><br />
@@ -558,7 +560,9 @@ const Hto = () => {
               viewport={{ once: true }}
               custom={2}
             >
-              <button className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+              <button
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
                 Book Now
               </button>
             </motion.div>
