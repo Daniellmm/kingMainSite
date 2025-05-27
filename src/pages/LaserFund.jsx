@@ -8,6 +8,7 @@ import LASER from '../assets/images/laser.png'
 import CIRCLE from '../assets/images/circle.png'
 import READ from '../assets/images/read.png'
 import LONG from '../assets/images/long.png'
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ARROWD from '../assets/images/arrowD.png'
 import CHART from '../assets/images/chart.png'
 import LAY from '../assets/images/lay.png'
@@ -60,6 +61,31 @@ const FORM_URL = "https://www.laserfundpamm.com/disclaimer "
 const LaserFund = () => {
   const sliderRef = useRef(null);
   const videoSliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+
+
+  // Sample images for the slider
+  const images = [
+    '/1.jpeg',
+    '/2.jpeg',
+    '/3.jpeg',
+    '/4.jpeg',
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+
 
   const settings = {
     dots: true,
@@ -306,7 +332,92 @@ const LaserFund = () => {
             </ScrollAnimation>
           </div>
         </div>
+
+        <div>
+
+        </div>
       </section>
+
+      <section className="py-16 px-4 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        {/* Video Column */}
+        <div className="w-full">
+          <div className="relative rounded-lg overflow-hidden shadow-2xl">
+            <video 
+              className="w-full h-64 md:h-80 lg:h-96 object-cover"
+              controls
+              poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop"
+            >
+              <source src="/man.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div className="mt-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured Video</h3>
+            <p className="text-gray-600">Experience our latest content in high definition. This video showcases the best of what we have to offer.</p>
+          </div>
+        </div>
+
+        {/* Image Slider Column */}
+        <div className="w-full">
+          <div className="relative rounded-lg overflow-hidden shadow-2xl">
+            {/* Main Image Display */}
+            <div className="relative h-64 md:h-80 lg:h-80">
+              <img 
+                src={images[currentSlide]} 
+                alt={`Slide ${currentSlide + 1}`}
+                className="w-full h-full object-cover transition-opacity duration-500"
+              />
+              
+              {/* Navigation Arrows */}
+              <button 
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button 
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
+              >
+                <ChevronRight size={24} />
+              </button>
+              
+              {/* Slide Counter */}
+              <div className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                {currentSlide + 1} / {images.length}
+              </div>
+            </div>
+            
+            {/* Thumbnail Navigation */}
+            <div className="flex space-x-2 mt-4 justify-center">
+              {images.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-16 h-12 rounded-md overflow-hidden border-2 transition-all duration-200 ${
+                    currentSlide === index 
+                      ? 'border-blue-500 opacity-100' 
+                      : 'border-gray-300 opacity-70 hover:opacity-100'
+                  }`}
+                >
+                  <img 
+                    src={image} 
+                    alt={`Thumbnail ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          <div className="mt-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Image Gallery</h3>
+            <p className="text-gray-600">Browse through our curated collection of stunning visuals. Use the arrows or thumbnails to navigate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
       <section className='overflow-hidden flex justify-center items-center bg-white pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-10'>
