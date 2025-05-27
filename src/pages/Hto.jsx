@@ -130,7 +130,7 @@ const Hto = () => {
                   <button
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                     className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
-                    Book Now
+                    Book Appointment Now
                   </button>
                 </motion.div>
               </div>
@@ -563,7 +563,7 @@ const Hto = () => {
               <button
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
-                Book Now
+                Book Appointment Now
               </button>
             </motion.div>
 

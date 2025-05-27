@@ -122,12 +122,12 @@ const AboutUs = () => {
     ];
 
     const actionItems = [
-        { title: "Get Funding For Your Business", link: "/business-funding" },
-        { title: "Get Financing For Your Customers to Pay You", link: "/customer-financing" },
-        { title: "Start Your Own Funding Business", link: "/funding-business" },
-        { title: "Get a Free Financial Review", link: "/financial-review" },
-        { title: "Learn How to Trade", link: "/trading" },
-        { title: "Attend the Become Your Own Bank Summit", link: "/summit" }
+        { title: "Get Funding For Your Business", link: "/" },
+        { title: "Get Financing For Your Customers to Pay You", link: "/credit card liquidation" },
+        { title: "Start Your Own Funding Business", link: "/funding" },
+        { title: "Get a Free Financial Review", link: "/insurance" },
+        { title: "Learn How to Trade", link: "/laserfund" },
+        { title: "Attend the Become Your Own Bank Summit", link: "/ggei" }
     ];
 
     return (
