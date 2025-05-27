@@ -346,7 +346,7 @@ const LaserFund = () => {
             <video 
               className="w-full h-64 md:h-80 lg:h-96 object-cover"
               controls
-              poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop"
+              // poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop"
             >
               <source src="/man.mp4" type="video/mp4" />
               Your browser does not support the video tag.
