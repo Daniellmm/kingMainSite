@@ -352,10 +352,10 @@ const LaserFund = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured Video</h3>
             <p className="text-gray-600">Experience our latest content in high definition. This video showcases the best of what we have to offer.</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Image Slider Column */}
@@ -411,10 +411,10 @@ const LaserFund = () => {
             </div>
           </div>
           
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Image Gallery</h3>
             <p className="text-gray-600">Browse through our curated collection of stunning visuals. Use the arrows or thumbnails to navigate.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
