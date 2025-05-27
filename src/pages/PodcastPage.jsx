@@ -3,14 +3,19 @@ import { delay, motion } from 'framer-motion'
 import KING1 from '../assets/images/page-two/hero.png'
 import KING2 from '../assets/images/page-two/aboutImg.png'
 import BOOK from '../assets/images/page-two/book.png'
-import IMAGE from '../assets/images/page-two/video.png'
 import FACEBOOK from '../assets/images/page-two/faceLogo.png'
 import X from '../assets/images/page-two/xLogo.png'
 import INSTAGRAM from '../assets/images/page-two/instagramLogo.png'
 import YOUTUBE from '../assets/images/page-two/youtubeLogo.png'
 import HeroModel from '../component/HeroModel'
+import PodcastVideosSection from '../component/PodcastVideosSection ' 
 
 const PodcastPage = () => {
+  // Your YouTube API credentials
+ const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
+
+
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -64,7 +69,6 @@ const PodcastPage = () => {
       <main className='overflow-hidden'>
         {/* Hero Section */}
         <section className='phero-sec lg:px-40 px-5 items-center justify-center'>
-          {/* <Navbar />  */}
           <motion.div
             className='flex pt-28 lg:pt-0 flex-col lg:flex-row w-full gap-10 items-center justify-center'
             initial="hidden"
@@ -126,7 +130,6 @@ const PodcastPage = () => {
               <img
                 src={KING1}
                 alt=""
-              // whileHover={imageHover}
               />
             </motion.div>
           </motion.div>
@@ -170,7 +173,7 @@ const PodcastPage = () => {
               </motion.div>
             </motion.div>
 
-            {/* 3D model of the book - Updated container */}
+            {/* 3D model of the book */}
             <motion.div
               className='lg:w-1/2 w-full h-[50vh] lg:h-[70vh] relative'
               variants={fadeInRight}
@@ -181,80 +184,12 @@ const PodcastPage = () => {
             </motion.div>
           </div>
         </section>
-        {/* Podcast Videos Section */}
-        <section className='podcast-sec lg:px-40 px-5'>
-          <div className='flex flex-col pt-20 w-full items-center justify-center'>
-            <motion.h1
-              className='text-4xl lg:text-6xl text-center lg:text-start font-bold text-[#D09A25]'
-              style={{ fontFamily: 'Minion Pro, serif' }}
-              variants={fadeInUp}
-            >
-              NOW OUT!!!
-            </motion.h1>
-            <motion.p
-              className='text-white text-center'
-              variants={fadeInUp}
-              style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-            >
-              Learn how to earn more, protect your income,
-              and grow your wealth with this practical, no-fluff guide.
-              Perfect for entrepreneurs who want to make their money work smarter.
-            </motion.p>
 
-            <motion.div variants={fadeInUp}>
-              <h1 className='text-3xl pt-10 pb-7 text-center lg:text-start font-bold text-[#D09A25]'
-                style={{ fontFamily: 'Minion Pro, serif' }}>Watch Podcast</h1>
-            </motion.div>
-
-            <motion.div
-              className='flex flex-col pb-10 justify-center items-center gap-7'
-              variants={staggerContainer}
-            >
-              <motion.div
-                className='flex flex-col lg:flex-row justify-center items-center gap-7'
-                variants={staggerContainer}
-              >
-                <motion.div variants={scaleIn}>
-                  <motion.img
-                    src={IMAGE}
-                    alt=""
-                    whileHover={imageHover}
-                    className="cursor-pointer"
-                  />
-                </motion.div>
-                <motion.div variants={scaleIn}>
-                  <motion.img
-                    src={IMAGE}
-                    alt=""
-                    whileHover={imageHover}
-                    className="cursor-pointer"
-                  />
-                </motion.div>
-              </motion.div>
-              <motion.div
-                className='flex flex-col lg:flex-row justify-center items-center gap-7'
-                variants={staggerContainer}
-              >
-                <motion.div variants={scaleIn}>
-                  <motion.img
-                    src={IMAGE}
-                    alt=""
-                    whileHover={imageHover}
-                    className="cursor-pointer"
-                  />
-                </motion.div>
-                <motion.div variants={scaleIn}>
-                  <motion.img
-                    src={IMAGE}
-                    alt=""
-                    whileHover={imageHover}
-                    className="cursor-pointer"
-                  />
-                </motion.div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
+        {/* Podcast Videos Section - Now Dynamic */}
+        <PodcastVideosSection 
+          apiKey={YOUTUBE_API_KEY}
+          channelId={YOUTUBE_CHANNEL_ID}
+        />
 
         {/* About Section */}
         <section className='about-sec lg:px-40 px-5'>
