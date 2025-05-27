@@ -139,10 +139,10 @@ const Home = () => {
             </div>
 
             <div>
-              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“We believe that every entrepreneur deserves a chance to succeed.<br className='hidden lg:block' />That happens with bank funding.” </h1>
+              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“We believe that entrepreneurship is not a gamble — it’s a strategic <br className='hidden lg:block' />path to freedom, wealth, and legacy.” </h1>
             </div>
             <div>
-              <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>C.e.o, Founder</h1>
+              <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>The CEO, Founder will remai</h1>
             </div>
           </div>
         </ScrollAnimation>

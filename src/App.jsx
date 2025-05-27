@@ -14,6 +14,7 @@ import PageTransition from "./component/PageTransition";
 import Blog from "./pages/Blog";
 import Hto from "./pages/Hto";
 import PodcastPage from "./pages/PodcastPage";
+import AboutUs from "./pages/AboutUs";
 
 
 const LoadingContext = createContext();
@@ -118,6 +119,11 @@ function AppContent() {
                <Blog />
               </PageTransition>
             } /> */}
+            <Route path="/about" element={
+              <PageTransition>
+               <AboutUs />
+              </PageTransition>
+            } />
             <Route path="/credit card liquidation" element={
               <PageTransition>
                <Hto />
