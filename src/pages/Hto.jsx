@@ -97,7 +97,7 @@ const Hto = () => {
             <div className='flex flex-col lg:flex-row pt-16 justify-center items-center'>
               <div className='lg:w-2/3 gap-y-4 pt-20 lg:pt-0 flex flex-col items-center justify-center'>
                 <motion.h1
-                  className='lg:text-7xl text-4xl text-center lg:text-start text-white'
+                  className='lg:text-8xl text-5xl text-center lg:text-start text-[#D09A25]'
                   style={{ fontFamily: 'Minion Pro, serif' }}
                   variants={fadeUp}
                   initial="hidden"
@@ -113,6 +113,7 @@ const Hto = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   custom={1}
+                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 >
                   Turn 100% of Your Credit Card Limits into cash deposited into your bank account Without the Stress
                 </motion.p>
@@ -159,7 +160,9 @@ const Hto = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <p className='text-[#999999] text-center lg:text-start text-lg'>
+              <p
+              style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+              className='text-[#999999] text-center lg:text-start text-lg'>
                 Need fast access to cash? Our Credit Card Liquidation service helps you convert your entire credit limit
                 into spendable cash—without losing the rewards and points you’ve earned.
                 <br /><br />
@@ -212,7 +215,7 @@ const Hto = () => {
                 >
                   <img src={card.imgPath} className='size-14' alt={card.title} />
                   <h1 className='text-white' style={{ fontFamily: 'Minion Pro, serif' }}>{card.title}</h1>
-                  <p className='text-[#999999]'>{card.desc}</p>
+                  <p className='text-[#999999]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>{card.desc}</p>
                 </motion.div>
               ))}
 
@@ -525,11 +528,12 @@ const Hto = () => {
         <section className='lg:px-20 px-5 pt-20  last-sec flex flex-col justify-center items-center pb-32 lg:min-h-[100vh]'>
           <div className='flex flex-col justify-center items-center gap-8'>
             <motion.h1
-              className='text-white text-4xl lg:text-6xl'
+              className='text-[#D09A25] text-4xl lg:text-6xl'
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+              style={{ fontFamily: 'Minion Pro, serif' }}
             >
               Get Started Today
             </motion.h1>
@@ -541,6 +545,7 @@ const Hto = () => {
               whileInView="visible"
               viewport={{ once: true }}
               custom={1}
+              style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
             >
               Don’t let your available credit sit idle...
             </motion.p>

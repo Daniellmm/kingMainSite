@@ -77,7 +77,7 @@ const PodcastPage = () => {
               variants={fadeInLeft}
             >
               <motion.h1
-                className='lg:text-6xl font-bold text-4xl text-center lg:text-start text-[#D09A25]'
+                className='lg:text-8xl font-bold text-5xl text-center lg:text-start text-[#D09A25]'
                 style={{ fontFamily: 'Minion Pro, serif' }}
                 variants={fadeInUp}
               >
@@ -142,16 +142,16 @@ const PodcastPage = () => {
                 style={{ fontFamily: 'Minion Pro, serif' }}
                 variants={fadeInUp}
               >
-                NOW OUT!!!
+                EARN, PROTECT, GROW
               </motion.h1>
               <motion.p
-                className='text-white text-center lg:text-start'
+                className='text-white capitalize text-center lg:text-start'
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 variants={fadeInUp}
               >
-                Learn how to earn more, protect your income,
-                and grow your wealth with this practical, no-fluff guide.
-                <br /><br />
-                Perfect for entrepreneurs who want to make their money work smarter.
+                AN ENTREPRENEURS GUIDE TO EARNING MORE MONEY, 
+                PROTECTING THE MONEY YOU HAVE EARNED, 
+                & GROWING THE MONEY YOU HAVE PROTECTED.
               </motion.p>
               <motion.div
                 className='flex justify-center lg:justify-start'
@@ -162,13 +162,13 @@ const PodcastPage = () => {
                   whileHover={buttonHover}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Watch Podcast
+                  Download Book
                 </motion.button>
               </motion.div>
             </motion.div>
 
             {/* 3D model of the book - Updated container */}
-            <motion.div 
+            <motion.div
               className='lg:w-1/2 w-full h-[50vh] lg:h-[70vh] relative'
               variants={fadeInRight}
             >
@@ -181,8 +181,25 @@ const PodcastPage = () => {
         {/* Podcast Videos Section */}
         <section className='podcast-sec lg:px-40 px-5'>
           <div className='flex flex-col pt-20 w-full items-center justify-center'>
+            <motion.h1
+              className='text-4xl lg:text-6xl text-center lg:text-start font-bold text-[#D09A25]'
+              style={{ fontFamily: 'Minion Pro, serif' }}
+              variants={fadeInUp}
+            >
+              NOW OUT!!!
+            </motion.h1>
+            <motion.p
+              className='text-white text-center'
+              variants={fadeInUp}
+              style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+            >
+              Learn how to earn more, protect your income,
+              and grow your wealth with this practical, no-fluff guide.
+              Perfect for entrepreneurs who want to make their money work smarter.
+            </motion.p>
+
             <motion.div variants={fadeInUp}>
-              <h1 className='text-4xl lg:text-6xl pb-10 text-center lg:text-start font-bold text-[#D09A25]'
+              <h1 className='text-3xl pt-10 pb-7 text-center lg:text-start font-bold text-[#D09A25]'
                 style={{ fontFamily: 'Minion Pro, serif' }}>Watch Podcast</h1>
             </motion.div>
 
@@ -268,6 +285,7 @@ const PodcastPage = () => {
                 className='text-[#999999] pt-10 text-center lg:text-start'
                 variants={fadeInUp}
                 transition={{ delay: 0.2 }}
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
               >
                 King Edwards, a visionary, funding expert, and author, was born in Los Angeles and raised in New York.
                 He draws inspiration from the diverse influences of each city—Los Angeles exposed him to the glamorous
