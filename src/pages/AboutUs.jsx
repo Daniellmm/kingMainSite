@@ -146,7 +146,7 @@ const AboutUs = () => {
                 <div
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                     className="max-w-4xl mx-auto" ref={declarationRef}>
-                    <div className="bg-neutral-900 rounded-2xl p-8 lg:p-12 border border-black/75">
+                    <div className="bg-neutral-900 rounded-2xl p-3 lg:p-12 border border-black/75">
                         <p className="text-xl lg:text-2xl leading-relaxed mb-6 text-white">
                             We believe that entrepreneurship is not a gamble—it's a strategic path to freedom, wealth, and legacy.
                         </p>
