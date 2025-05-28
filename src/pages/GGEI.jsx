@@ -14,7 +14,7 @@ import GIRL from '../assets/images/girl.png'
 import KF from '../assets/images/team/kf.png'
 import AF from '../assets/images/team/af.png'
 import GF from '../assets/images/team/gf.png'
-import RF from '../assets/images/team/rf.png'
+import RF from '../assets/images/team/ramses.png'
 import SF from '../assets/images/team/sf.png'
 import KFS from '../assets/images/team/1.png'
 import AFS from '../assets/images/team/2.png'
@@ -172,6 +172,8 @@ const GGEI = () => {
     window.open(FORM_URL, '_blank');
   };
 
+  https://youtu.be/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0
+
   return (
     <>
       <section className='relative overflow-hidden pb-10 px-10 bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
@@ -193,7 +195,7 @@ const GGEI = () => {
             </div>
 
             <div className='flex justify-center'>
-              <iframe className='lg:w-[850px] pb-5 w-[340px] md:w-[540px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/3jLH-sf0pQ0?si=eUvBIxPnOV_5C30s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe className='lg:w-[850px] pb-5 w-[340px] md:w-[540px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </ScrollAnimation>
 
@@ -229,7 +231,9 @@ const GGEI = () => {
                   “If you don’t have at least five friends in your phone who can turn $1 into $2, you need a new circle.”</h1>
               </div>
               <div>
-                <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>Anonymous</h1>
+                <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center' 
+                style={{ fontFamily: 'Adelia, serif' }}>Alexis Holifield
+                </h1>
               </div>
             </ScrollAnimation>
           </div>
