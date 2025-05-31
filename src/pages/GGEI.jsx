@@ -500,96 +500,104 @@ const GGEI = () => {
       <section className='hidden lg:block overflow-hidden px-10 bg-white  pb-20 large-screen'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
-            <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
+            <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Our Co-Founders</h1>
           </ScrollAnimation>
 
 
 
-          <div className='flex relative gap-x-14 gap-y-40 pt-44 flex-wrap justify-center items-center'>
-
-            <div className='relative'>
-              <ScrollAnimation animation="fadeIn" delay={0.3}>
-                <img src={AF} className='h-[400px] z-10' alt="" />
-              </ScrollAnimation>
-              <div className='absolute z-10 top-[-125px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.6}>
-                  <img src={ALEXIS} alt="" />
+          <div className='flex flex-col relative gap-x-14 pt-44 flex-wrap justify-center items-center'>
+            <div className='flex flex-col lg:flex-row relative gap-x-14 flex-wrap justify-center items-center'>
+              <div className='relative'>
+                <ScrollAnimation animation="fadeIn" delay={0.3}>
+                  <img src={AF} className='h-[400px] z-10' alt="" />
                 </ScrollAnimation>
+                <div className='absolute z-10 top-[-125px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.6}>
+                    <img src={ALEXIS} alt="" />
+                  </ScrollAnimation>
+                </div>
+                <div className='absolute z-10 top-[-125px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.6}>
+                    <img src={ALEXIS} alt="" />
+                  </ScrollAnimation>
+                </div>
               </div>
-              <div className='absolute z-10 top-[-125px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.6}>
-                  <img src={ALEXIS} alt="" />
+
+              <div className='relative '>
+                <ScrollAnimation animation="fadeIn" delay={0.2}>
+                  <img src={KF} className='h-[400px]  z-10' alt="" />
                 </ScrollAnimation>
+
+
+                <div className='absolute z-10 top-[-125px] left-[10px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.4}>
+                    <img src={KING} className='w-[300px] ' alt="" />
+                  </ScrollAnimation>
+                </div>
+                <div className='absolute z-10 top-[-125px] left-[10px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.4}>
+                    <img src={KING} className='w-[300px] ' alt="" />
+                  </ScrollAnimation >
+                </div>
               </div>
             </div>
 
-            <div className='relative '>
-              <ScrollAnimation animation="fadeIn" delay={0.2}>
-                <img src={KF} className='h-[400px]  z-10' alt="" />
-              </ScrollAnimation>
+            <ScrollAnimation animation="zoomIn">
+              <h1 className='text-[#E7A647] text-3xl lg:text-[45px] pt-20 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
+            </ScrollAnimation>
 
-
-              <div className='absolute z-10 top-[-125px] left-[10px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.4}>
-                  <img src={KING} className='w-[300px] ' alt="" />
+            <div className='flex flex-col lg:flex-row relative gap-x-14  pt-32 flex-wrap justify-center items-center'>
+              <div className='relative'>
+                <ScrollAnimation animation="fadeIn" delay={0.4}>
+                  <img src={GF} className='h-[400px] z-10' alt="" />
                 </ScrollAnimation>
+
+                <div className='absolute z-10 top-[-90px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.8}>
+                    <img src={GENE} alt="" />
+                  </ScrollAnimation>
+                </div>
+                <div className='absolute z-10 top-[-90px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.8}>
+                    <img src={GENE} alt="" />
+                  </ScrollAnimation >
+                </div>
               </div>
-              <div className='absolute z-10 top-[-125px] left-[10px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.4}>
-                  <img src={KING} className='w-[300px] ' alt="" />
-                </ScrollAnimation >
+
+              <div className='relative'>
+                <ScrollAnimation animation="fadeIn" delay={0.4}>
+                  <img src={RF} className='h-[400px] z-10' alt="" />
+                </ScrollAnimation>
+
+                <div className='absolute z-10 top-[-125px] left-[10px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.7}>
+                    <img src={RAMSEY} className='w-[300px]' alt="" />
+                  </ScrollAnimation >
+                </div>
+                <div className='absolute z-10 top-[-125px] left-[10px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.7}>
+                    <img src={RAMSEY} className='w-[300px]' alt="" />
+                  </ScrollAnimation>
+                </div>
+              </div>
+              <div className='relative'>
+                <ScrollAnimation animation="fadeIn" delay={0.5}>
+                  <img src={SF} className='h-[400px] z-10' alt="" />
+                </ScrollAnimation>
+
+                <div className='absolute z-10 top-[-125px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.9}>
+                    <img src={SHAWN} className='w-[300px]' alt="" />
+                  </ScrollAnimation>
+                </div>
+                <div className='absolute z-10 top-[-125px]'>
+                  <ScrollAnimation animation="zoomIn" delay={0.9}>
+                    <img src={SHAWN} className='w-[300px]' alt="" />
+                  </ScrollAnimation>
+                </div>
               </div>
             </div>
 
-            <div className='relative'>
-              <ScrollAnimation animation="fadeIn" delay={0.4}>
-                <img src={GF} className='h-[400px] z-10' alt="" />
-              </ScrollAnimation>
-
-              <div className='absolute z-10 top-[-90px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.8}>
-                  <img src={GENE} alt="" />
-                </ScrollAnimation>
-              </div>
-              <div className='absolute z-10 top-[-90px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.8}>
-                  <img src={GENE} alt="" />
-                </ScrollAnimation >
-              </div>
-            </div>
-
-            <div className='relative'>
-              <ScrollAnimation animation="fadeIn" delay={0.4}>
-                <img src={RF} className='h-[400px] z-10' alt="" />
-              </ScrollAnimation>
-
-              <div className='absolute z-10 top-[-125px] left-[10px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.7}>
-                  <img src={RAMSEY} className='w-[300px]' alt="" />
-                </ScrollAnimation >
-              </div>
-              <div className='absolute z-10 top-[-125px] left-[10px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.7}>
-                  <img src={RAMSEY} className='w-[300px]' alt="" />
-                </ScrollAnimation>
-              </div>
-            </div>
-            <div className='relative'>
-              <ScrollAnimation animation="fadeIn" delay={0.5}>
-                <img src={SF} className='h-[400px] z-10' alt="" />
-              </ScrollAnimation>
-
-              <div className='absolute z-10 top-[-125px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.9}>
-                  <img src={SHAWN} className='w-[300px]' alt="" />
-                </ScrollAnimation>
-              </div>
-              <div className='absolute z-10 top-[-125px]'>
-                <ScrollAnimation animation="zoomIn" delay={0.9}>
-                  <img src={SHAWN} className='w-[300px]' alt="" />
-                </ScrollAnimation>
-              </div>
-            </div>
 
 
           </div>
