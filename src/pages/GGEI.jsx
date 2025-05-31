@@ -30,6 +30,7 @@ import SHAWN from '../assets/images/team/shawn.png'
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AdmissionSection from '../component/AdmissionSection'
 
 const FORM_URL = "https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI"
 
@@ -590,6 +591,8 @@ const GGEI = () => {
           </div>
         </div>
       </section>
+
+      <AdmissionSection />
 
       <section className='lg:hidden overflow-hidden px-10 bg-white  pb-20 medium-small-screen'>
         <div className='flex flex-col justify-center items-center pt-10'>
