@@ -49,8 +49,8 @@ const NavBar = () => {
   // Dropdown menu items
   const dropdownItems = [
     { path: '/about', label: 'About Us' },
-    { path: '/credit card liquidation', label: 'CCL' },
-    { path: '/earn-protect-grow', label: 'EPG' }
+    { path: '/credit card liquidation', label: 'Credit to Cash' },
+    { path: '/earn-protect-grow', label: 'Podcast' }
   ];
 
   const toggleMenu = () => {

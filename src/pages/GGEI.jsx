@@ -7,6 +7,7 @@ import YELLOW from '../assets/images/yellow.png'
 import BIGLOGO2 from '../assets/images/biglogo2.png'
 import DART from '../assets/images/dart.png'
 import LONG2 from '../assets/images/king4.png'
+import alx from '../assets/images/alx.jpg'
 import BLOCK from '../assets/images/block.png'
 import CHECK from '../assets/images/check.png'
 import LAPTOP from '../assets/images/laptop.png'
@@ -214,7 +215,7 @@ const GGEI = () => {
         <div className='absolute top-[600px] lg:top-[350px] left-[0px] '>
           <img src={DollarCoin} alt="" className='h-[100px] md:h-[120px] hero-dollar-left lg:h-auto' />
         </div>
-        <div className='absolute top-[100px] right-[0px] '>
+        <div className='absolute top-[100px] right-[0px]'>
           <img src={DollarCoin2} alt="" className='h-[200px] hero-dollar-right md:h-[120px] lg:h-auto' />
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
@@ -231,8 +232,8 @@ const GGEI = () => {
                   “If you don’t have at least five friends in your phone who can turn $1 into $2, you need a new circle.”</h1>
               </div>
               <div>
-                <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center' 
-                style={{ fontFamily: 'Adelia, serif' }}>Alexis Holifield
+                <h1 className='text-[#E7A647] text-4xl leading-relaxed pt-6 text-center'
+                  style={{ fontFamily: 'Adelia, serif' }}>Alexis Holifield
                 </h1>
               </div>
             </ScrollAnimation>
@@ -277,14 +278,22 @@ const GGEI = () => {
           <div className='flex w-full flex-col lg:flex-row justify-center items-center gap-x-7 gap-y-5 pt-6'>
             <div className='h-full lg:w-[100%] flex justify-center items-start'>
               <ScrollAnimation animation="slideRight" delay={0.2}>
-                <img src={LONG2} className='rounded-xl  w-auto' alt="" />
+                <div className='flex flex-col gap-y-4'>
+                  <div>
+                    <img src={LONG2} className='rounded-xl  ' alt="" />
+                  </div>
+                  <div>
+                    <img src={alx} className='rounded-xl  ' alt="" />
+                  </div>
+
+                </div>
               </ScrollAnimation>
             </div>
 
             <div className='md:text-[20px] lg:w-[99%]'>
 
               <ScrollAnimation animation="slideRight" delay={0.3}>
-                <p className='text-xl font-semibold md:text-[26px] text-center pb-3 lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>A Message From Our Co-Founder </p>
+                <p className='text-xl font-semibold md:text-[26px] text-center pb-3 lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>A Message From Our Co-Founders </p>
 
                 <p className=' font-extralight  md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
                   I was speaking to our Co-Founder, Alexis Holifield, and she shared a quote with me that sums up
@@ -326,45 +335,49 @@ const GGEI = () => {
                   <span className='font-bold text-black/70'> “Earn, Protect, Grow”. </span>
                 </p>
               </ScrollAnimation>
+              <br />
+              <ScrollAnimation animation="slideLeft" delay={0.5}>
+                <p className='text-xl font-bold py-3 md:text-[22px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>MY BACKGROUND </p>
+              </ScrollAnimation>
+
+              <ScrollAnimation animation="slideUp" delay={0.7}>
+                <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+                  Both of my parents were in the music industry. My father served as the
+                  Vice President of Capitol Records, and my mother is a two-time Grammy-nominated singer.
+                  <br /><br />
+
+                </p>
+                <p className=' font-extralight md:text-[18px]  text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
+                  In my early years, I believed that entertainment and popularity were the keys to wealth—until I met a
+                  successful entrepreneur who lived just like the entertainers and athletes I knew, but completely
+                  under the radar.
+                  <br /><br />
+                  After that encounter, I set out on a mission to build wealth through entrepreneurship—a path filled
+                  with unknown challenges. However, I eventually figured it out.
+                  <br /><br />
+                  By the age of 30, I was what most would call “rich.” I was
+                  earning over $100,000 per month, had driven every luxury car you could imagine, been on yachts,
+                  flown on private jets, and built relationships with some of the most powerful billionaires in the world.
+                  I was convinced I could never go back to zero.
+                  <br /><br />
+                  However, by age 33, after several failed investments, I struggled to generate income at the level I
+                  once had and was on the brink of filing for bankruptcy. That traumatic financial experience forced
+                  me to search for the fundamental principles of building and sustaining wealth. This journey led me
+                  to my first financial mentor, Alexis Holifield. Through our relationship, I came to a powerful
+                  realization:
+                  <span className='font-bold text-black/70'> most of us have been misled about our
+                    finances. </span>
+                  <br /><br />
+                  Some believe wealth is built simply
+                  by earning more income. Others believe investing is the only way. And while both are necessary
+                  building blocks to creating wealth, neither ensures financial security.
+                </p>
+              </ScrollAnimation>
             </div>
           </div>
-          <ScrollAnimation animation="slideLeft" delay={0.5}>
-            <p className='text-xl font-bold py-3 md:text-[22px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>MY BACKGROUND </p>
-          </ScrollAnimation>
 
-          <ScrollAnimation animation="slideUp" delay={0.7}>
-            <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-              Both of my parents were in the music industry. My father served as the
-              Vice President of Capitol Records, and my mother is a two-time Grammy-nominated singer.
-              <br /><br />
 
-            </p>
-            <p className=' font-extralight md:text-[18px]  text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-              In my early years, I believed that entertainment and popularity were the keys to wealth—until I met a
-              successful entrepreneur who lived just like the entertainers and athletes I knew, but completely
-              under the radar.
-              <br /><br />
-              After that encounter, I set out on a mission to build wealth through entrepreneurship—a path filled
-              with unknown challenges. However, I eventually figured it out.
-              <br /><br />
-              By the age of 30, I was what most would call “rich.” I was
-              earning over $100,000 per month, had driven every luxury car you could imagine, been on yachts,
-              flown on private jets, and built relationships with some of the most powerful billionaires in the world.
-              I was convinced I could never go back to zero.
-              <br /><br />
-              However, by age 33, after several failed investments, I struggled to generate income at the level I
-              once had and was on the brink of filing for bankruptcy. That traumatic financial experience forced
-              me to search for the fundamental principles of building and sustaining wealth. This journey led me
-              to my first financial mentor, Alexis Holifield. Through our relationship, I came to a powerful
-              realization:
-              <span className='font-bold text-black/70'> most of us have been misled about our
-                finances. </span>
-              <br /><br />
-              Some believe wealth is built simply
-              by earning more income. Others believe investing is the only way. And while both are necessary
-              building blocks to creating wealth, neither ensures financial security.
-            </p>
-          </ScrollAnimation>
+
           <ScrollAnimation animation="slideUp" delay={0.4}>
             <p className='text-xl py-2 font-semibold text-center lg:text-start md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>
               True wealth follows a three-step process:
