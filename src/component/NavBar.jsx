@@ -336,7 +336,7 @@ const NavBar = () => {
                   onMouseEnter={(e) => handleDropdownHover(e, true)}
                   onMouseLeave={(e) => handleDropdownHover(e, false)}
                 >
-                  Other Pages
+                  More
                   <HiChevronDown 
                     className={`chevron-icon transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
                   />
@@ -386,7 +386,7 @@ const NavBar = () => {
             ref={mobileMenuRef}
             className='lg:hidden mt-4 backdrop-blur-md rounded-lg p-4 shadow-md'
           >
-            <ul className='flex space-y-4 justify-center items-center flex-col'>
+            <ul className='flex space-y-2 justify-center items-center flex-col'>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 className={` text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
@@ -424,8 +424,8 @@ const NavBar = () => {
               </li>
 
               {/* Mobile Dropdown Items */}
-              <div className='w-full border-t flex flex-col justify-center items-center border-gray-200 pt-4'>
-                <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'semibold' }} className='text-sm text-gray-500 mb-2'>Other Pages</p>
+              <div className='w-full flex flex-col gap-y-2 justify-center items-center border-gray-200 '>
+                <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'semibold' }} className='text-sm text-gray-500 mb-2'><span className='hidden lg:block'>More</span></p>
                 {dropdownItems.map((item, index) => (
                   <li
                     key={index}

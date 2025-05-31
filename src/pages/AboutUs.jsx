@@ -143,10 +143,18 @@ const AboutUs = () => {
 
             {/* Declaration Section */}
             <section className="pb-6 pt-2 px-6 lg:px-8 text-center lg:text-start">
+
                 <div
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                     className="max-w-4xl mx-auto" ref={declarationRef}>
+
                     <div className="bg-neutral-900 rounded-2xl p-3 lg:p-12 border border-black/75">
+                        <div>
+                            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#E7A647]" style={{ fontFamily: 'Minion Pro, serif' }}>
+                                About High Ticket Offer Financing
+                            </h2>
+
+                        </div>
                         <p className="text-xl lg:text-2xl leading-relaxed mb-6 text-white">
                             We believe that entrepreneurship is not a gamble—it's a strategic path to freedom, wealth, and legacy.
                         </p>
