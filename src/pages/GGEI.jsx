@@ -295,7 +295,7 @@ const GGEI = () => {
             <div className='md:text-[20px] lg:w-[99%]'>
 
               <ScrollAnimation animation="slideRight" delay={0.3}>
-                <p className='text-xl font-semibold md:text-[26px] text-center pb-3 lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>A Message From Our Co-Founder </p>
+                <p className='text-xl font-semibold md:text-[26px] text-center pb-3 lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>A Message From Our Co-Founders </p>
 
                 <p className=' font-extralight  md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
                   Hello, King Edwards here—and before we go any further, I want to personally congratulate you for
@@ -481,7 +481,7 @@ const GGEI = () => {
       <section className='hidden lg:block overflow-hidden px-10 bg-white  pb-20 large-screen'>
         <div className='flex flex-col justify-center items-center pt-10'>
           <ScrollAnimation animation="zoomIn">
-            <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Our Co-Founders</h1>
+            {/* <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Our Co-Founders</h1> */}
           </ScrollAnimation>
 
 
@@ -590,7 +590,7 @@ const GGEI = () => {
         <div className='flex flex-col justify-center items-center pt-10'>
           <div>
             <ScrollAnimation animation="zoomIn" delay={0.2}>
-              <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Founders</h1>
+              {/* <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Founders</h1> */}
             </ScrollAnimation>
           </div>
 
