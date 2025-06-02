@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AdmissionSection = ({ handleButtonClick }) => {
     return (
-        <section className='overflow-hidden px-5 md:px-10 bg-black py-20'>
+        <section className='overflow-hidden px-5 md:px-10 bg-white py-20'>
             <div className='flex flex-col justify-center items-center'>
 
                 <ScrollAnimation animation="zoomIn">
@@ -18,7 +18,7 @@ const AdmissionSection = ({ handleButtonClick }) => {
                             style={{ fontFamily: 'Minion Pro, serif' }}>
                             What You Will Get
                         </h1>
-                        <p className='text-white text-lg md:text-xl'
+                        <p className='text-black text-lg md:text-xl'
                             style={{ fontFamily: 'Montserrat, serif' }}>
                             At the become your bank summit you get these things
                         </p>
@@ -30,7 +30,7 @@ const AdmissionSection = ({ handleButtonClick }) => {
 
 
                     <ScrollAnimation animation="slideRight" delay={0.3}>
-                        <div className='bg-white py-6 px-3 rounded-3xl border border-black'>
+                        <div className='bg-white py-6 px-3 rounded-3xl border border-black shadow-2xl'>
                             <div className='bg-black rounded-3xl p-8 shadow-lg border-2 border-gray-200 relative'>
 
                                 <div className='w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-6'>
@@ -64,26 +64,30 @@ const AdmissionSection = ({ handleButtonClick }) => {
                                         </span>
                                     </div>
                                     <div className='flex items-center gap-3'>
-                                        <img src={CHECK} className='h-5 w-5' alt="check" />
-                                        <span className='text-white/35 font-medium' style={{ fontFamily: 'Montserrat, serif' }}>
+                                        {/* <img src={CHECK} className='h-5 w-5' alt="check" /> */}
+                                        <p className='text-lg text-red-600'>X</p>
+                                        <span className='text-white/35 line-through strike font-medium' style={{ fontFamily: 'Montserrat, serif' }}>
                                             Automation - 50% Set Up
                                         </span>
                                     </div>
                                     <div className='flex items-center gap-3'>
-                                        <img src={CHECK} className='h-5 w-5' alt="check" />
-                                        <span className='text-white/35 font-medium' style={{ fontFamily: 'Montserrat, serif' }}>
+                                         {/* <img src={CHECK} className='h-5 w-5' alt="check" /> */}
+                                        <p className='text-lg text-red-600'>X</p>
+                                        <span className='text-white/35 line-through font-medium' style={{ fontFamily: 'Montserrat, serif' }}>
                                             On Site Live Automation Set Up
                                         </span>
                                     </div>
                                     <div className='flex items-center gap-3'>
-                                        <img src={CHECK} className='h-5 w-5' alt="check" />
-                                        <span className='text-white/35 font-medium' style={{ fontFamily: 'Montserrat, serif' }}>
+                                         {/* <img src={CHECK} className='h-5 w-5' alt="check" /> */}
+                                        <p className='text-lg text-red-600'>X</p>
+                                        <span className='text-white/35 line-through font-medium' style={{ fontFamily: 'Montserrat, serif' }}>
                                             Live Trading Mastery Session
                                         </span>
                                     </div>
                                     <div className='flex items-center gap-3'>
-                                        <img src={CHECK} className='h-5 w-5' alt="check" />
-                                        <span className='text-white/35 font-medium' style={{ fontFamily: 'Montserrat, serif' }}>
+                                         {/* <img src={CHECK} className='h-5 w-5' alt="check" /> */}
+                                        <p className='text-lg text-red-600'>X</p>
+                                        <span className='text-white/35 line-through font-medium' style={{ fontFamily: 'Montserrat, serif' }}>
                                             Exclusive Access to Sunday Funday (Jet Skis)
                                         </span>
                                     </div>
@@ -101,7 +105,7 @@ const AdmissionSection = ({ handleButtonClick }) => {
 
 
                     <ScrollAnimation animation="slideLeft" delay={0.5}>
-                        <div className='bg-gradient-to-br from-[#E7A647] to-[#D4941F] py-6 px-3 rounded-3xl border border-black'>
+                        <div className='bg-gradient-to-br from-[#E7A647] to-[#D4941F] py-6 px-3 rounded-3xl border shadow-2xl'>
                             <div className='bg-black rounded-3xl p-8 shadow-xl relative'>
 
                                 <div className='absolute top-7 right-6'>
@@ -125,7 +129,7 @@ const AdmissionSection = ({ handleButtonClick }) => {
                                 </h2>
 
 
-                                <div className='space-y-4 mb-8'>
+                                <div className='space-y-5 mb-8'>
                                     <div className='flex items-center gap-3'>
                                         <img src={CHECK} className='h-5 w-5' alt="check" />
                                         <span className='text-white font-medium' style={{ fontFamily: 'Montserrat, serif' }}>

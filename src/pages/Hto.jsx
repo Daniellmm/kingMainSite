@@ -97,7 +97,7 @@ const Hto = () => {
             <div className='flex flex-col lg:flex-row pt-16 justify-center items-center'>
               <div className='lg:w-2/3 gap-y-4 pt-20 lg:pt-0 flex flex-col items-center justify-center'>
                 <motion.h1
-                  className='lg:text-8xl text-5xl text-center lg:text-start text-[#D09A25]'
+                  className='lg:text-8xl text-5xl text-center uppercase lg:text-start text-[#D09A25]'
                   style={{ fontFamily: 'Minion Pro, serif' }}
                   variants={fadeUp}
                   initial="hidden"
@@ -107,7 +107,7 @@ const Hto = () => {
                   Turn Your Available Credit Into Cash...
                 </motion.h1>
                 <motion.p
-                  className='text-[#999999] text-lg text-center lg:text-start'
+                  className='text-[#999999] text-lg uppercase text-center lg:text-start'
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -173,14 +173,19 @@ const Hto = () => {
               </p>
             </motion.div>
 
-            <div className=''>
+            <div className='flex flex-col justify-center items-center  h-full'>
               <motion.div
-                className='lg:w-[500px] w-[340px] h-[250px] bg-[#999999]'
+                className=' w-[340px] flex justify-center items-center '
                 variants={scaleFade}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
               />
+
+              <iframe className='lg:w-[500px] w-[340px] h-[350px] pb-5 rounded-2xl md:rounded-[50px]'
+                src="https://www.youtube.com/embed/GZ36JbqF2v4?si=g4nBtrnNITjhT66F" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
           </div>

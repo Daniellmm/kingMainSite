@@ -1,19 +1,16 @@
 import React from 'react'
-import { delay, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import KING1 from '../assets/images/page-two/hero.png'
 import KING2 from '../assets/images/page-two/aboutImg.png'
-import BOOK from '../assets/images/page-two/book.png'
-import FACEBOOK from '../assets/images/page-two/faceLogo.png'
-import X from '../assets/images/page-two/xLogo.png'
-import INSTAGRAM from '../assets/images/page-two/instagramLogo.png'
-import YOUTUBE from '../assets/images/page-two/youtubeLogo.png'
 import HeroModel from '../component/HeroModel'
-import PodcastVideosSection from '../component/PodcastVideosSection ' 
+import PodcastVideosSection from '../component/PodcastVideosSection '
+import AdmissionSection from '../component/AdmissionSection'
+
 
 const PodcastPage = () => {
   // Your YouTube API credentials
- const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
-const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
+  const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+  const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
 
 
   // Animation variants
@@ -70,7 +67,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
         {/* Hero Section */}
         <section className='phero-sec lg:px-40 px-5 items-center justify-center'>
           <motion.div
-            className='flex pt-28 lg:pt-0 flex-col lg:flex-row w-full gap-10 items-center justify-center'
+            className='flex pt-28 lg:pt-16 flex-col lg:flex-row w-full gap-10 items-center justify-center'
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
@@ -81,7 +78,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
               variants={fadeInLeft}
             >
               <motion.h1
-                className='lg:text-8xl font-bold text-4xl text-center lg:text-start text-[#D09A25]'
+                className='lg:text-8xl hidden lg:block font-bold text-4xl text-center lg:text-start text-[#D09A25]'
                 style={{ fontFamily: 'Minion Pro, serif' }}
                 variants={fadeInUp}
               >
@@ -89,6 +86,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
                 PROTECT
                 GROW
               </motion.h1>
+
               <motion.div
                 className='flex justify-center lg:justify-start gap-4 w-full items-start'
                 variants={staggerContainer}
@@ -135,6 +133,10 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
           </motion.div>
         </section>
 
+        <section>
+          <AdmissionSection />
+        </section>
+
         {/* Book Section */}
         <section className='psec-two relative lg:px-40 px-5 min-h-[100vh] lg:min-h-[80vh] lg:pb-10'>
           <div className='flex flex-col lg:flex-row w-full items-center justify-between h-full'>
@@ -154,8 +156,8 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 variants={fadeInUp}
               >
-                An Entrepreneur's Guide to Earning More Money, 
-                Protecting the Money You Have Earned, 
+                An Entrepreneur's Guide to Earning More Money,
+                Protecting the Money You Have Earned,
                 & Growing the Money You Have Protected.
               </motion.p>
               <motion.div
@@ -186,7 +188,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
         </section>
 
         {/* Podcast Videos Section - Now Dynamic */}
-        <PodcastVideosSection 
+        <PodcastVideosSection
           apiKey={YOUTUBE_API_KEY}
           channelId={YOUTUBE_CHANNEL_ID}
         />
@@ -196,7 +198,7 @@ const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
           <div className='flex flex-col justify-center items-center'>
             <motion.div variants={fadeInUp}>
               <h1 className='text-4xl pt-20 lg:text-6xl pb-10 text-center lg:text-start font-bold text-[#D09A25]'
-                style={{ fontFamily: 'Minion Pro, serif' }}>ABOUT
+                style={{ fontFamily: 'Minion Pro, serif' }}>ABOUT OUR HOST
               </h1>
             </motion.div>
 

@@ -42,14 +42,16 @@ const NavBar = () => {
     // '/about': AboutLogo,
     // '/credit card liquidation': CCLLogo, 
     '/earn-protect-grow': EPGLogo,
+    // { path: '/about', label: 'About Us' },
+    // { path: '/credit card liquidation', label: 'Credit to Cash' },
   };
 
   const currentLogo = logoMap[location.pathname] || LOGO1;
 
   // Dropdown menu items
   const dropdownItems = [
-    { path: '/about', label: 'About Us' },
-    { path: '/credit card liquidation', label: 'Credit to Cash' },
+    { path: '/laserfund', label: 'TRADING' },
+    { path: 'ggei', label: 'BECOME YOUR OWN BANK' },
     { path: '/earn-protect-grow', label: 'Podcast' }
   ];
 
@@ -274,7 +276,17 @@ const NavBar = () => {
 
           {/* Nav Links (hidden on mobile, shown on medium screens and up) */}
           <div ref={linksRef} className='hidden lg:flex'>
-            <ul className='flex space-x-5 md:space-x-6 items-center'>
+            <ul className='flex space-x-5 uppercase md:space-x-6 items-center'>
+              <li
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                data-path="/about"
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/')}
+                onMouseEnter={(e) => handleLinkHover(e, true)}
+                onMouseLeave={(e) => handleLinkHover(e, false)}
+              >
+                ABOUT US
+              </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/"
@@ -284,6 +296,16 @@ const NavBar = () => {
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
                 Funding
+              </li>
+              <li
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                data-path="/credit card liquidation"
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/funding')}
+                onMouseEnter={(e) => handleLinkHover(e, true)}
+                onMouseLeave={(e) => handleLinkHover(e, false)}
+              >
+                CREDIT TO CASH
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
@@ -305,27 +327,7 @@ const NavBar = () => {
               >
                 Insurance
               </li>
-              <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                data-path="/laserfund"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600 font-semibold' : ''}`}
-                onClick={() => navigateTo('/laserfund')}
-                onMouseEnter={(e) => handleLinkHover(e, true)}
-                onMouseLeave={(e) => handleLinkHover(e, false)}
-              >
-                Trading
-              </li>
-              <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                data-path="/ggei"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600 font-semibold' : ''}`}
-                onClick={() => navigateTo('/ggei')}
-                onMouseEnter={(e) => handleLinkHover(e, true)}
-                onMouseLeave={(e) => handleLinkHover(e, false)}
-              >
-                Become A Bank
-              </li>
-
+             
               {/* Dropdown Menu */}
               <li className='relative'>
                 <div
@@ -386,13 +388,27 @@ const NavBar = () => {
             ref={mobileMenuRef}
             className='lg:hidden mt-4 backdrop-blur-md rounded-lg p-4 shadow-md'
           >
-            <ul className='flex space-y-2 justify-center items-center flex-col'>
+            <ul className='flex uppercase space-y-2 justify-center items-center flex-col'>
+              <li
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                className={` text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/about')}
+              >
+                ABOUT US
+              </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 className={` text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/')}
               >
                 Funding
+              </li>
+              <li
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                className={`text-lg cursor-pointer transition-colors ${isActive('/credit card liquidation') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/credit card liquidation')}
+              >
+                CREDIT TO CASH
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
@@ -422,9 +438,16 @@ const NavBar = () => {
               >
                 Become A Bank
               </li>
+              <li
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                className={` text-lg cursor-pointer transition-colors ${isActive('/earn-protect-grow') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/earn-protect-grow')}
+              >
+                PODCAST
+              </li>
 
               {/* Mobile Dropdown Items */}
-              <div className='w-full flex flex-col gap-y-2 justify-center items-center border-gray-200 '>
+              {/* <div className='w-full flex flex-col gap-y-2 justify-center items-center border-gray-200 '>
                 <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 'semibold' }} className='text-sm text-gray-500 mb-2'><span className='hidden lg:block'>More</span></p>
                 {dropdownItems.map((item, index) => (
                   <li
@@ -436,12 +459,12 @@ const NavBar = () => {
                     {item.label}
                   </li>
                 ))}
-              </div>
+              </div> */}
 
-              <div className='w-[129px] border border-1 rounded-lg border-black'>
+              <div className='w-[189px] border border-1 rounded-lg border-black'>
                 <button
                   style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                  className='bg-Btn text-black rounded-lg  py-3 px-4 border-black transition-transform duration-500'
+                  className='bg-Btn text-black rounded-lg uppercase text- py-4 px-10  text-center border-black transition-transform duration-500'
                 >
                   Contact Us
                 </button>

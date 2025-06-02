@@ -11,6 +11,7 @@ import X from '../assets/images/icons/twitter1.png'
 import LinkedIn from '../assets/images/icons/linkedin.png'
 import INSTA from '../assets/images/icons/insta.png'
 import TIKTOK from '../assets/images/icons/tiktok.png'
+import EPGLogo from '../assets/images/page-two/logo.png' 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -33,6 +34,7 @@ const Footer = () => {
     '/insurance': InsuranceLogo,
     '/laserfund': LaserFundLogo,
     '/ggei': GGEILogo,
+    '/earn-protect-grow': EPGLogo,
   };
 
   // Get current logo based on path

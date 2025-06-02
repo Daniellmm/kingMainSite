@@ -7,7 +7,7 @@ import YELLOW from '../assets/images/yellow.png'
 import BIGLOGO2 from '../assets/images/biglogo2.png'
 import DART from '../assets/images/dart.png'
 import LONG2 from '../assets/images/king4.png'
-import ALX from '../assets/images/alx.jpg'
+import ALX from '../assets/images/ean.png'
 import BLOCK from '../assets/images/block.png'
 import CHECK from '../assets/images/check.png'
 import LAPTOP from '../assets/images/laptop.png'
@@ -31,7 +31,6 @@ import SHAWN from '../assets/images/team/shawn.png'
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import AdmissionSection from '../component/AdmissionSection'
 
 const FORM_URL = "https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI"
 
@@ -267,29 +266,31 @@ const GGEI = () => {
       <section className='overflow-hidden px-5 md:px-10 bg-white  pb-14'>
         <div className='flex flex-col justify-center items-center lg:items-start gap-y-4 pt-10'>
           <ScrollAnimation animation="zoomIn">
-            <h1 className='text-[#E7A647] text-center lg:text-start text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
-              Most entrepreneurs believe that the secret to wealth lies in earning more money—but is that really the case?
+            <h1 className='text-[#E7A647] text-center  text-3xl lg:text-[45px] leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+              Welcome to The Global Group Economic Initiative’s Become Your Own Bank Summit.
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.1}>
           </ScrollAnimation>
 
+          <div className='h-full lg:w-[100%] flex justify-center items-start'>
+            <ScrollAnimation animation="slideRight" delay={0.2}>
+              <div className='flex justify-center items-center gap-y-6 gap-x-6 '>
+                <div className='w-[50%] flex-1 lg:w-auto'>
+                  <img src={LONG2} className='rounded-xl size-[200px] lg:size-full lg:w-auto' alt="" />
+                </div>
+
+                <div className='w-[50%] flex-1 lg:w-auto'>
+                  <img src={ALX} className='rounded-xl size-[200px] lg:size-full lg:w-auto' alt="" />
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+
 
           <div className='flex w-full flex-col lg:flex-row justify-center items-center gap-x-7 gap-y-5 pt-6'>
-            <div className='h-full lg:w-[100%] flex justify-center items-start'>
-              <ScrollAnimation animation="slideRight" delay={0.2}>
-                <div className='flex lg:flex-col justify-center items-center gap-y-6 gap-x-6 '>
-                  <div className='w-[50%] lg:w-auto'>
-                    <img src={LONG2} className='rounded-xl size-[200px] lg:size-full lg:w-auto' alt="" />
-                  </div>
 
-                  <div className='w-[50%] lg:w-auto'>
-                    <img src={ALX} className='rounded-xl size-[200px] lg:size-full lg:w-auto' alt="" />
-                  </div>
-                </div>
-              </ScrollAnimation>
-            </div>
 
             <div className='md:text-[20px] lg:w-[99%]'>
 
@@ -297,19 +298,22 @@ const GGEI = () => {
                 <p className='text-xl font-semibold md:text-[26px] text-center pb-3 lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>A Message From Our Co-Founder </p>
 
                 <p className=' font-extralight  md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
-                  I was speaking to our Co-Founder, Alexis Holifield, and she shared a quote with me that sums up
-                  <span className='font-bold text-black/70'> The Global Group Economic Initiative's purpose: </span>
-                  “If you don’t have at least five friends in your
-                  phone who can turn $1 into $2, you need a new circle.”
+                  Hello, King Edwards here—and before we go any further, I want to personally congratulate you for
+                  being here. On behalf of myself and my business partner, Alexis Holifield, it’s our pleasure to
+                  welcome you to
+                  <span className='font-bold text-black/70'> The Global Group Economic Initiative (GGEI).</span>
                   <br /><br />
-                  Often times, entrepreneurs fill their phones with “comfort connections” who can’t move the financial
-                  needle when it matters most. The wealthy don’t just gather friends—they cultivate strategic allies
-                  who lift them spiritually and financially.
+                  We created GGEI to serve a very specific mission:
+                  <span className='font-bold text-black/70'> to break the cycle that so many high earners—
+                    entrepreneurs, athletes, and entertainers—find themselves trapped in.</span>
+                  . It’s the all-too-common
+                  story: you generate significant income, only to lose it all, and find yourself forced to start over
+                  again.
                   <br /><br />
-                  With wars on the horizon, markets teetering on collapse, and global uncertainty looming, the single
-                  smartest move you can make is connecting with people who can multiply your resources.
+                  This happens because, as financial leaders in our families, we’re often expected to uplift everyone
+                  around us—yet we rarely have a trusted circle that supports us in doing the same for ourselves.
                   <br /><br />
-                  <span className='font-bold text-black/70'> The Global Group Economic Initiative is that group. </span>
+                  <span className='font-bold text-black/70'> What is the Global Group Economic Initiative? </span>
                 </p>
               </ScrollAnimation>
 
@@ -317,61 +321,25 @@ const GGEI = () => {
               <ScrollAnimation animation="slideUp" delay={0.4}>
                 <br />
                 <p className=' font-extralight  md:text-[18px] leading-[25px] text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif' }}>
-                  Hello, King Edwards here. I want to welcome you to The Global Group Economic Initiative’s
-                  <span className='font-bold text-black/70'> “Become Your Own Bank Summit.” </span>
+                  GGEI is a
+                  <span className='font-bold text-black/70'> private, members-only wealth network </span>
+                  designed to give you both the education and the
+                  tools to earn, protect, and multiply your income through proven, time-tested strategies.
                   <br /><br />
-                  We created this powerful initiative to help entrepreneurs,
-                  athletes, and entertainers avoid the painful cycle of earning significant income, losing it all, and
-                  having to rebuild from scratch—a cycle that far too many of us face.
-
-                  At the<span className='font-bold text-black/70'> “Become Your Own Bank Summit.” </span>
-                  we empower our members to break free from financial
-                  setbacks by introducing a transformative strategy known as
-                  <span className='font-bold text-black/70'>  Infinite Banking</span>
-                  —a powerful, integrated financial model that redefines the way you build and protect wealth. By combining the
-                  forces of
-                  <span className='font-bold text-black/70'> Funding, Insurance, and Trading,</span>
-                  Infinite Banking enables you to create a private banking
-                  system within your life and business — A system that we have coined as
-                  <span className='font-bold text-black/70'> “Earn, Protect, Grow”. </span>
-                </p>
-              </ScrollAnimation>
-
-              <ScrollAnimation animation="slideLeft" delay={0.5}>
-                <p className='text-xl font-bold py-3 md:text-[22px] text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>MY BACKGROUND </p>
-              </ScrollAnimation>
-
-              <ScrollAnimation animation="slideUp" delay={0.7}>
-                <p className=' font-extralight md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-                  Both of my parents were in the music industry. My father served as the
-                  Vice President of Capitol Records, and my mother is a two-time Grammy-nominated singer.
+                  We teach the same financial principles used by the world’s wealthiest families—such as
+                  <span className='font-bold text-black/70'> The
+                    Rockefeller Waterfall Method— </span>
+                  and help you implement them in real time through a powerful 3-step
+                  wealth-building framework:
                   <br /><br />
-
-                </p>
-                <p className=' font-extralight md:text-[18px]  text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-                  In my early years, I believed that entertainment and popularity were the keys to wealth—until I met a
-                  successful entrepreneur who lived just like the entertainers and athletes I knew, but completely
-                  under the radar.
-                  <br /><br />
-                  After that encounter, I set out on a mission to build wealth through entrepreneurship—a path filled
-                  with unknown challenges. However, I eventually figured it out.
-                  <br /><br />
-                  By the age of 30, I was what most would call “rich.” I was
-                  earning over $100,000 per month, had driven every luxury car you could imagine, been on yachts,
-                  flown on private jets, and built relationships with some of the most powerful billionaires in the world.
-                  I was convinced I could never go back to zero.
-                  <br /><br />
-                  However, by age 33, after several failed investments, I struggled to generate income at the level I
-                  once had and was on the brink of filing for bankruptcy. That traumatic financial experience forced
-                  me to search for the fundamental principles of building and sustaining wealth. This journey led me
-                  to my first financial mentor, Alexis Holifield. Through our relationship, I came to a powerful
-                  realization:
-                  <span className='font-bold text-black/70'> most of us have been misled about our
-                    finances. </span>
-                  <br /><br />
-                  Some believe wealth is built simply
-                  by earning more income. Others believe investing is the only way. And while both are necessary
-                  building blocks to creating wealth, neither ensures financial security.
+                  <ScrollAnimation animation="slideUp" delay={0.8}>
+                    <ol className='pb-5 leading-[25px] text-center lg:text-start md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <li><span className='font-bold '>Earning more</span> – Increase your income through high-performance strategies.</li>
+                      <li><span className='font-bold '>Protect What You Earn</span> – Use advanced vehicles that outpace inflation and preserve capital.</li>
+                      <li><span className='font-bold '>Grow Your Wealth</span>  – Multiply your revenue through opportunities like AI-powered trading bots
+                        and more.</li>
+                    </ol>
+                  </ScrollAnimation>
                 </p>
               </ScrollAnimation>
             </div>
@@ -381,27 +349,38 @@ const GGEI = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.4}>
             <p className='text-xl py-2 font-semibold text-center lg:text-start md:text-[22px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-              True wealth follows a three-step process:
+              The “Become Your Own Bank” Summit
             </p>
           </ScrollAnimation >
-          <ScrollAnimation animation="slideUp" delay={0.8}>
-            <ol className='pb-5 font-bold  leading-[25px] text-center lg:text-start md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-              <li>Earning more money</li>
-              <li>Protect the money you’ve earned</li>
-              <li>Grow the money you’ve protected </li>
-            </ol>
-          </ScrollAnimation>
+
           <ScrollAnimation animation="slideUp" delay={0.9}>
             <p className='font-extralight  pb-5 md:text-[18px] text-center lg:text-start leading-[25px]' style={{ fontFamily: 'Montserrat, serif' }}>
-              At the Become Your Own Bank Summit, we’ll teach you how to use bank funding, insurance, trading
-              algorithms, and other asset classes to grow your wealth—consistently, sustainably, and continuously
-              —just like the Warren Buffetts of the world
-            </p>
-            <p className='text-center lg:text-start' style={{ fontFamily: 'Minion Pro, serif' }}>
-              <span className='text-lg font-semibold md:text-[22px] text-center lg:text-start'>This is what we call Wealth Mastery</span>
-            </p>
-            <p className='text-lg font-semibold md:text-[22px] text-center lg:text-start pt-2' style={{ fontFamily: 'Minion Pro, serif' }}>
-              Is this something you’d like to learn?
+              All of this comes to life at our flagship event: <span className='font-bold text-black/70'>The Become Your Own Bank Summit.</span>
+
+              <br /><br />
+              This is not just another financial seminar—it’s a <span className='font-bold text-black/70'>transformative experience</span> where we introduce a
+              groundbreaking concept called
+              <span className='font-bold text-black/70'> Infinite Banking: </span>a fully integrated financial system that empowers
+              you to create your own private bank within your life and business.
+
+              <br /><br />By combining the pillars of
+              <span className='font-bold text-black/70'> Funding, Insurance, and Trading, </span>
+              Infinite Banking helps you take full
+              control of your financial future using our signature model: <span className='font-bold text-black/70'>  Earn. Protect. Grow. </span>
+
+              <br /><br />
+              If you’re ready to reclaim your financial power, build generational wealth, and surround yourself with
+              a network of elite, like-minded individuals who are doing the same—
+              <span className='font-bold text-black/70'> you’re in the right place.</span>
+
+              <br /><br />
+              Welcome to the movement. Welcome to the mission.
+
+              <br /><br />
+              <span className='font-bold text-black/70'> Welcome to the Global Group Economic Initiative.</span>
+
+              <br /><br />
+              — King Edwards & Alexis Holifield
             </p>
           </ScrollAnimation>
         </div>
@@ -457,7 +436,6 @@ const GGEI = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <p className='text-black text-center lg:text-start font-extralight md:text-[18px]' style={{ fontFamily: 'Montserrat, serif' }}>
-                King Edwards of High Ticket Offer Financing and Alexis Holifield of Millennial Millionaire have joined forces to create The Global Group Economic Initiative.
                 The Global Group Economic Initiative is a Christian-based wealth-building community dedicated to helping serious entrepreneurs achieve lasting financial success.
                 We teach proven strategies that empower business owners to generate significantly more revenue, grow their net worth year after year—regardless of
                 economic conditions—and build financial legacies, much like the Warren Buffetts of the world.
@@ -490,7 +468,9 @@ const GGEI = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="slideUp" delay={0.8}>
               <p className='text-white text-center lg:text-start font-light md:text-[18px]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                To create more millionaire entrepreneurs by equipping you with <span className='font-bold'>century-old wealth-building secrets </span>used by the world’s richest individuals.
+                To create more wealthy families by equipping you with century-old wealth-building secrets used by
+                the world’s wealthiest individuals.
+
               </p>
             </ScrollAnimation>
           </div>
@@ -544,7 +524,7 @@ const GGEI = () => {
             </div>
 
             <ScrollAnimation animation="zoomIn">
-              <h1 className='text-[#E7A647] text-3xl lg:text-[45px] pt-20 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
+              <h1 className='text-[#E7A647] text-3xl lg:text-[45px] pt-20 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Executive Leadership Team</h1>
             </ScrollAnimation>
 
             <div className='flex flex-col lg:flex-row relative gap-x-14  pt-32 flex-wrap justify-center items-center'>
@@ -605,17 +585,181 @@ const GGEI = () => {
         </div>
       </section>
 
-      <AdmissionSection />
 
-      <section className='lg:hidden overflow-hidden px-10 bg-white  pb-20 medium-small-screen'>
+      <section className='overflow-hidden lg:hidden flex justify-center items-center px-5 bg-white  pb-14 team-section'>
         <div className='flex flex-col justify-center items-center pt-10'>
-          <ScrollAnimation animation="zoomIn">
-            <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Meet The Team</h1>
-          </ScrollAnimation>
-
-          <div className='pt-3 '>
-            <TeamSlider teamMembers={teamMembers} />
+          <div>
+            <ScrollAnimation animation="zoomIn" delay={0.2}>
+              <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Founders</h1>
+            </ScrollAnimation>
           </div>
+
+          <div className='lg:px-10 space-y-10'>
+            <div className='flex flex-col justify-center items-center'>
+
+              <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+                <div className='flex justify-center items-center'>
+                  <img src={ALEXIS} className='w-[510px]' alt="" />
+                </div>
+
+                <div className='flex flex-col justify-center lg:items-start'>
+                  <div>
+                    <h1 className='text-[#E7A647] text-center lg:text-start text-3xl' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Alexis Holifield</h1>
+                  </div>
+                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Co-Founder of The Millennial Millionaire</p>
+
+                  <p className=' pt-5 text-center lg:text-start'>
+                    Alexis Holifield, began her journey to learning the laws of building generational wealth at the early age of 17 years old. She began her journey by attending a seminar put on by T. Harv Eker "Secrets Of The Millionaire Mind". Immediately, she began creating an archive of these "well-kept secrets of the wealthy" for the world to know. She went on to graduate with honors and complete a masters degree in life through first hand experience of wealth building, in addition the Multi-Millionaires she continues to be mentored by.
+                    <br /> <br />
+                    As a Licensed Insurance Broker, Financial Strategist, & Wealth Planner, Alexis dedicates her time as a coach and a mentor sharing Financial Intelligence and Investment Education to cultivate the minds of Millennials all over the nation. Her mission to advise families, individuals, and business owners to begin or enhance their journey to financial freedom to increase and preserve wealth is expressed in her ability to transform the paradigm, and financial states of her client. Specializing in Estate Planning, Cash Value Life Insurance, Retirement, and Executive Business Planning.
+                  </p>
+                </div>
+              </div>
+
+
+              <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+                <div className='flex justify-center lg:items-center'>
+                  <img src={KING} className='w-auto rounded-3xl' alt="" />
+                </div>
+
+                <div className='flex flex-col justify-center lg:items-start'>
+                  <div>
+                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King Edwards</h1>
+                  </div>
+                  <p className='text-lg italic font-semibold text-center lg:text-start' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>King, a visionary, funding expert, and author</p>
+
+                  <p className=' pt-5 text-center lg:text-start'>
+                    was born in Los Angeles and raised in New York. He draws inspiration from the diverse influences of each city. LA exposed him to the glamorous Hollywood lifestyle, while New York instilled a sense of grit and determination.
+                    <br /> <br />
+                    In his first professional project, King embarked on the creation of HighTicketOfferFinancing.com. This innovative venture aimed to provide alternative funding solutions for entrepreneurs operating in industries traditionally overlooked by banks. Through this endeavor, he sought to help consultants and entrepreneurs earn significant profits, develop and sell high-value products and services, and safeguard themselves from legal implications using HTOF’s comprehensive workflows, standard operating procedures, and contract templates.
+                    <br /> <br />
+                    With a focus on helping entrepreneurs thrive and achieve remarkable financial milestones, King has received accolades such as the Man of the Moment and Made Man Award for his achievements. Through unwavering determination and an unwavering focus on the next best move, King aims to rewrite the rules of the game and help his clients leave an indelible mark on their respective industries and their family’s lives.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <ScrollAnimation animation="zoomIn" delay={0.2}>
+                <h1 className='text-[#E7A647] text-center pb-10 text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  Executive Leadership Team
+                </h1>
+              </ScrollAnimation>
+            </div>
+            <div className='flex flex-col justify-center items-center'>
+
+              <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+                <div className='flex justify-center items-center'>
+                  <img src={GENE} className='w-[510px]' alt="" />
+                </div>
+
+                <div className='flex flex-col justify-center lg:items-start'>
+                  <div>
+                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
+                  </div>
+                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
+
+                  <p className=' pt-5 text-center lg:text-start'>
+                    Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
+                    management for high net worth individuals and families. With over a decade of strategic experience in the finance and insurance industry, Gene has established himself as a trusted
+                    advisor to discerning clients seeking sophisticated financial solutions.
+                    <br /> <br />
+                    Demonstrating exceptional performance, Gene has successfully written over $25 million in life
+                    insurance coverage, strategically managed in excess of $2.4 million in client assets, and
+                    facilitated more than $15 million in annuity premiums. His practice is precisely calibrated to
+                    serve high net worth clients, delivering nuanced financial strategies that address the complex
+                    wealth management needs of successful professionals and entrepreneurs.
+                    <br /> <br />
+                    Specializing in advanced retirement planning, comprehensive estate strategies, and tailored
+                    investment optimization, Gene provides a strategic approach that goes beyond standard
+                    financial advising. His expertise lies in crafting customized financial solutions that protect and
+                    grow wealth, with a keen understanding of the unique financial challenges facing high-net-worth
+                    individuals.
+                    <br /> <br />
+                    Gene's client-focused methodology combines rigorous financial acumen with a commitment to
+                    building long-term, trust-based relationships. By offering personalized guidance and strategic
+                    insights, he empowers clients to make informed decisions that align with their most significant
+                    financial objectives and legacy planning goals.
+                  </p>
+                </div>
+              </div>
+
+              <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+                <div className='flex justify-center items-center'>
+                  <img src={RAMSEY} className='w-[510px]' alt="" />
+                </div>
+
+                <div className='flex flex-col justify-center lg:items-start'>
+                  <div>
+                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
+                  </div>
+                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
+
+                  <p className=' pt-5 text-center lg:text-start'>
+                    Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
+                    management for high net worth individuals and families. With over a decade of strategic experience in the finance and insurance industry, Gene has established himself as a trusted
+                    advisor to discerning clients seeking sophisticated financial solutions.
+                    <br /> <br />
+                    Demonstrating exceptional performance, Gene has successfully written over $25 million in life
+                    insurance coverage, strategically managed in excess of $2.4 million in client assets, and
+                    facilitated more than $15 million in annuity premiums. His practice is precisely calibrated to
+                    serve high net worth clients, delivering nuanced financial strategies that address the complex
+                    wealth management needs of successful professionals and entrepreneurs.
+                    <br /> <br />
+                    Specializing in advanced retirement planning, comprehensive estate strategies, and tailored
+                    investment optimization, Gene provides a strategic approach that goes beyond standard
+                    financial advising. His expertise lies in crafting customized financial solutions that protect and
+                    grow wealth, with a keen understanding of the unique financial challenges facing high-net-worth
+                    individuals.
+                    <br /> <br />
+                    Gene's client-focused methodology combines rigorous financial acumen with a commitment to
+                    building long-term, trust-based relationships. By offering personalized guidance and strategic
+                    insights, he empowers clients to make informed decisions that align with their most significant
+                    financial objectives and legacy planning goals.
+                  </p>
+                </div>
+              </div>
+
+              <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-x-14 space-y-10'>
+                <div className='flex justify-center items-center'>
+                  <img src={SHAWN} className='w-[510px]' alt="" />
+                </div>
+
+                <div className='flex flex-col justify-center lg:items-start'>
+                  <div>
+                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
+                  </div>
+                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
+
+                  <p className=' pt-5 text-center lg:text-start'>
+                    Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
+                    management for high net worth individuals and families. With over a decade of strategic experience in the finance and insurance industry, Gene has established himself as a trusted
+                    advisor to discerning clients seeking sophisticated financial solutions.
+                    <br /> <br />
+                    Demonstrating exceptional performance, Gene has successfully written over $25 million in life
+                    insurance coverage, strategically managed in excess of $2.4 million in client assets, and
+                    facilitated more than $15 million in annuity premiums. His practice is precisely calibrated to
+                    serve high net worth clients, delivering nuanced financial strategies that address the complex
+                    wealth management needs of successful professionals and entrepreneurs.
+                    <br /> <br />
+                    Specializing in advanced retirement planning, comprehensive estate strategies, and tailored
+                    investment optimization, Gene provides a strategic approach that goes beyond standard
+                    financial advising. His expertise lies in crafting customized financial solutions that protect and
+                    grow wealth, with a keen understanding of the unique financial challenges facing high-net-worth
+                    individuals.
+                    <br /> <br />
+                    Gene's client-focused methodology combines rigorous financial acumen with a commitment to
+                    building long-term, trust-based relationships. By offering personalized guidance and strategic
+                    insights, he empowers clients to make informed decisions that align with their most significant
+                    financial objectives and legacy planning goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* <div className='w-full h-[1px] mt-7 lg:mt-16 bg-black'></div> */}
         </div>
       </section>
 

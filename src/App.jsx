@@ -10,7 +10,7 @@ import Preloader from "./component/Preloader";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import ScrollToTop from "./component/ScrollToTop";
-import PageTransition from "./component/PageTransition"; 
+import PageTransition from "./component/PageTransition";
 import Blog from "./pages/Blog";
 import Hto from "./pages/Hto";
 import PodcastPage from "./pages/PodcastPage";
@@ -26,15 +26,15 @@ const preloaderContent = {
     subText: 'IN FAST, RELIABLE FUNDING FOR YOU AND YOUR CUSTOMERS'
   },
   '/funding': {
-    mainText: ['Start Your',  'Own','Funding Business'],
+    mainText: ['Start Your', 'Own', 'Funding Business'],
     subText: 'Earn Up To 6 Figures + Per Deal'
   },
   '/insurance': {
-    mainText: ['Insure', 'Your', 'Wealth'],   
+    mainText: ['Insure', 'Your', 'Wealth'],
     subText: 'COMPREHENSIVE INSURANCE COVERAGE FOR PEACE OF MIND'
   },
   '/laserfund': {
-    mainText: [' Master', 'The', 'Markets'],    
+    mainText: [' Master', 'The', 'Markets'],
     subText: ' Learn While You Earn'
   },
   '/ggei': {
@@ -42,43 +42,47 @@ const preloaderContent = {
     subText: 'Become Your Own Bank Summit'
   },
   '/credit card liquidation': {
-    mainText: ['Credit', 'Into', 'Cash'],
-    subText: 'Your Credit Card Limits into cash'
+    mainText: ['Credit', 'CARD', 'LIQUIDATIONS'],
+    subText: 'TURN YOUR ENTIRE CREDIT CARD LIMIT INTO CASH IN YOUR BANK ACCOUNT'
   },
   '/earn-protect-grow': {
     mainText: ['EARN', 'PROTECT', 'GROW'],
-    subText: 'Learn how to earn more'
+    subText: 'LISTEN TO OUR PODCAST'
+  },
+  '/about': {
+    mainText: ['About High', 'Ticket Offer', 'Financing'],
+    subText: 'Learn More'
   },
 };
 
 function RouteChangeListener() {
   const location = useLocation();
   const { setIsLoading, setCurrentPath } = useContext(LoadingContext);
-  
+
   useEffect(() => {
-   
+
     setCurrentPath(location.pathname);
-    
-    
+
+
     setIsLoading(true);
-    
-    
+
+
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 6000); 
-    
+    }, 6000);
+
     return () => clearTimeout(timer);
   }, [location.pathname, setIsLoading, setCurrentPath]);
-  
+
   return null;
 }
 
 function AppContent() {
   const { isLoading, currentPath } = useContext(LoadingContext);
-  
-  
+
+
   const content = preloaderContent[currentPath] || preloaderContent['/'];
-  
+
   return (
     <>
       <ScrollToTop />
@@ -89,6 +93,11 @@ function AppContent() {
         <>
           <NavBar />
           <Routes>
+            <Route path="/about" element={
+              <PageTransition>
+                <AboutUs />
+              </PageTransition>
+            } />
             <Route path="/" element={
               <PageTransition>
                 <Home />
@@ -119,19 +128,15 @@ function AppContent() {
                <Blog />
               </PageTransition>
             } /> */}
-            <Route path="/about" element={
-              <PageTransition>
-               <AboutUs />
-              </PageTransition>
-            } />
+            
             <Route path="/credit card liquidation" element={
               <PageTransition>
-               <Hto />
+                <Hto />
               </PageTransition>
             } />
             <Route path="/earn-protect-grow" element={
               <PageTransition>
-               <PodcastPage />
+                <PodcastPage />
               </PageTransition>
             } />
           </Routes>
@@ -149,8 +154,8 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 6000); 
-    
+    }, 6000);
+
     return () => clearTimeout(timer);
   }, []);
 

@@ -136,7 +136,7 @@ const AboutUs = () => {
             <section className="relative pt-20 px-6 lg:px-8 overflow-hidden">
                 <div className="relative max-w-6xl mx-auto text-center" ref={heroRef}>
                     <h1 className="text-4xl lg:text-8xl font-bold pt-10 mb-6 bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                        A Declaration for Entrepreneurs Who Refuse to Settle
+                       About High Ticket Offer Financing
                     </h1>
                 </div>
             </section>
@@ -150,9 +150,9 @@ const AboutUs = () => {
 
                     <div className="bg-neutral-900 rounded-2xl p-3 lg:p-12 border border-black/75">
                         <div>
-                            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#E7A647]" style={{ fontFamily: 'Minion Pro, serif' }}>
+                            {/* <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#E7A647]" style={{ fontFamily: 'Minion Pro, serif' }}>
                                 About High Ticket Offer Financing
-                            </h2>
+                            </h2> */}
 
                         </div>
                         <p className="text-xl lg:text-2xl leading-relaxed mb-6 text-white">
