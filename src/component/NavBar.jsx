@@ -281,7 +281,7 @@ const NavBar = () => {
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/about"
                 className={` text-lg md: cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
-                onClick={() => navigateTo('/')}
+                onClick={() => navigateTo('/about')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
@@ -300,7 +300,7 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/credit card liquidation"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/credit card liquidation') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/funding')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -391,7 +391,7 @@ const NavBar = () => {
             <ul className='flex uppercase space-y-2 justify-center items-center flex-col'>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={` text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={` text-lg cursor-pointer transition-colors ${isActive('/about') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/about')}
               >
                 ABOUT US

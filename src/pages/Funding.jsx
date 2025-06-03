@@ -13,6 +13,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import HP from '../assets/images/hp.jpg'
 
 const FORM_URL = "https://syofb.io/vsl "
 
@@ -82,7 +83,7 @@ const Funding = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 8000, 
+    autoplaySpeed: 8000,
     pauseOnHover: true,
     arrows: true,
     centerMode: true,
@@ -235,7 +236,7 @@ const Funding = () => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
-                      
+
                     ></iframe>
                   </div>
                 </div>
@@ -247,7 +248,7 @@ const Funding = () => {
 
 
       <section className='overflow-hidden px-10 bg-white flex justify-center items-center pt-10 pb-10'>
-        <div className='flex justify-center items-center pt-7'>
+        <div className='flex flex-col gap-10 justify-center items-center pt-7'>
           <div className='grid '>
 
             <div className='flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center '>
@@ -301,15 +302,45 @@ const Funding = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+
+          <div className='flex flex-col lg:flex-row justify-center items-center lg:px-20 lg:gap-20 gap-10'>
+            <div className='flex flex-1 w-full'>
+              <img src={HP} alt="" className='rounded-xl' />
+            </div>
+
+            <div className='flex flex-col flex-1 w-full'>
+              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                Download “Credit Card Investing Hacks The Banks Don’t Want You To Know About” FREE
+              </h1>
+              <div>
+                <ScrollAnimation animation="slideUp" delay={0.3}>
+                  <div>
+                    <button
+
+                      content=''
+                      className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                      style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      <a
+                        href="/hack.pdf"
+                        download>
+
+                        Download Now
+                      </a>
+                    </button>
+                  </div>
+                </ScrollAnimation>
+              </div>
+            </div>
+          </div>
+        </div >
+      </section >
 
 
       <section className='overflow-hidden px-5 bg-black py-10'>
         <div className='flex flex-col justify-center items-center py-10'>
           <ScrollAnimation animation="zoomIn">
             <div>
-              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] text-center lg:px-28 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Here’s What You’ll Get When You License Our Product:</h1>
+              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] text-center lg:px-28 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }} >Here’s What You’ll Get When You License Our Product:</h1>
             </div>
           </ScrollAnimation>
 
