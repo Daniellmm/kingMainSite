@@ -4,7 +4,7 @@ import KING1 from '../assets/images/page-two/hero.png'
 import KING2 from '../assets/images/page-two/aboutImg.png'
 import HeroModel from '../component/HeroModel'
 import PodcastVideosSection from '../component/PodcastVideosSection '
-import AdmissionSection from '../component/AdmissionSection'
+
 
 
 const PodcastPage = () => {
@@ -133,9 +133,7 @@ const PodcastPage = () => {
           </motion.div>
         </section>
 
-        <section>
-          <AdmissionSection />
-        </section>
+        
 
         {/* Book Section */}
         <section className='psec-two relative lg:px-40 px-5 min-h-[100vh] lg:min-h-[80vh] lg:pb-10'>

@@ -27,7 +27,7 @@ import GENE from '../assets/images/team/gene.png'
 import ALEXIS from '../assets/images/team/alexis.png'
 import RAMSEY from '../assets/images/team/ramsey.png'
 import SHAWN from '../assets/images/team/shawn.png'
-
+import AdmissionSection from '../component/AdmissionSection'
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -453,6 +453,9 @@ const GGEI = () => {
         </div>
       </section>
 
+      <section>
+        <AdmissionSection />
+      </section>
 
       <section className='overflow-hidden px-10 bg-black pb-14'>
         <div className='flex flex-col md:flex-row gap-x-20 gap-y-10 pt-10 '>
