@@ -31,7 +31,6 @@ import AdmissionSection from '../component/AdmissionSection'
 import ScrollAnimation from '../component/ScrollAnimation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 const FORM_URL = "https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI"
 
 
@@ -168,12 +167,11 @@ const GGEI = () => {
   }, []);
 
 
-  // Function to handle button clicks
   const handleButtonClick = () => {
     window.open(FORM_URL, '_blank');
   };
 
-  https://youtu.be/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0
+  // https://youtu.be/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0
 
   return (
     <>

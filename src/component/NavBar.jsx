@@ -280,7 +280,7 @@ const NavBar = () => {
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 data-path="/about"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/about') ? 'text-yellow-600 font-semibold' : ''}`}
                 onClick={() => navigateTo('/about')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}

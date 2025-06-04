@@ -43,7 +43,7 @@ const Insurance = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 8000, 
+    autoplaySpeed: 8000,
     pauseOnHover: true,
     arrows: true,
     centerMode: true,
@@ -150,7 +150,9 @@ const Insurance = () => {
           <div className='flex flex-col justify-center items-center pt-10 '>
 
             <div className='lg:px-24'>
-              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>"The definition of insanity is doing the same thing over and over again and expecting a different result." It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today."</h1>
+              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>
+                "The definition of insanity is doing the same thing over and over again and expecting a different result. It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today."
+              </h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-3xl md:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}> Gene Santos</h1>
@@ -313,7 +315,7 @@ const Insurance = () => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
-                      
+
                     ></iframe>
                   </div>
                 </div>
