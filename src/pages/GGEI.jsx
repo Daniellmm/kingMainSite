@@ -692,31 +692,28 @@ const GGEI = () => {
 
                 <div className='flex flex-col justify-center lg:items-start'>
                   <div>
-                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
+                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Ramses Guzman</h1>
                   </div>
-                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
+                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Professional Day Trader | Financial Educator | Automation Specialist</p>
 
                   <p className=' pt-5 text-center lg:text-start'>
-                    Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
-                    management for high net worth individuals and families. With over a decade of strategic experience in the finance and insurance industry, Gene has established himself as a trusted
-                    advisor to discerning clients seeking sophisticated financial solutions.
+                    Ramses Guzman is a professional day trader, financial educator,
+                    and automation specialist with nearly a decade of experience in the markets.
+                    He founded The Bank Zone Trading Club in 2021, mentoring over 600 students globally in Forex,
+                    Futures, and Cryptocurrency. The platform generated over $250,000 in its first year,
+                    driven by Ramses’ hands-on leadership and focus on empowering individuals through disciplined,
+                    confident trading.
+
                     <br /> <br />
-                    Demonstrating exceptional performance, Gene has successfully written over $25 million in life
-                    insurance coverage, strategically managed in excess of $2.4 million in client assets, and
-                    facilitated more than $15 million in annuity premiums. His practice is precisely calibrated to
-                    serve high net worth clients, delivering nuanced financial strategies that address the complex
-                    wealth management needs of successful professionals and entrepreneurs.
+                    He also leads Venture Asset Investments, a company that develops automated algorithmic trading systems for hands-free investing.
+                    His combined expertise in trading education and automation helps clients pursue both active and passive income.
+                    Raised in New York City, Ramses has built a loyal following through live seminars, immersive trading events,
+                    and transparent social media content.
+
                     <br /> <br />
-                    Specializing in advanced retirement planning, comprehensive estate strategies, and tailored
-                    investment optimization, Gene provides a strategic approach that goes beyond standard
-                    financial advising. His expertise lies in crafting customized financial solutions that protect and
-                    grow wealth, with a keen understanding of the unique financial challenges facing high-net-worth
-                    individuals.
-                    <br /> <br />
-                    Gene's client-focused methodology combines rigorous financial acumen with a commitment to
-                    building long-term, trust-based relationships. By offering personalized guidance and strategic
-                    insights, he empowers clients to make informed decisions that align with their most significant
-                    financial objectives and legacy planning goals.
+                    Most recently, Ramses co-launched The Laser Fund Experience, a strategic initiative helping individuals
+                    “become their own bank” by helping them how to grow capital in the markets. Through his ventures,
+                    he continues to redefine financial independence and inspire others to take control of their financial future.
                   </p>
                 </div>
               </div>
@@ -728,31 +725,26 @@ const GGEI = () => {
 
                 <div className='flex flex-col justify-center lg:items-start'>
                   <div>
-                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Gene Santos</h1>
+                    <h1 className='text-[#E7A647] text-3xl text-center lg:text-start ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Shawn Grace</h1>
                   </div>
-                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Financial Advisor</p>
+                  <p className='text-lg italic text-center lg:text-start font-semibold' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Professional Day Trader | Financial Educator | Automation Specialist</p>
 
                   <p className=' pt-5 text-center lg:text-start'>
-                    Gene Santos is a distinguished financial advisor specializing in comprehensive wealth
-                    management for high net worth individuals and families. With over a decade of strategic experience in the finance and insurance industry, Gene has established himself as a trusted
-                    advisor to discerning clients seeking sophisticated financial solutions.
+                    Shawn Grace is the owner of Shawn Grace Investments and part owner of Venture Asset Investments,
+                    with 9 years of experience in automated trading, prop firm management,
+                    and financial education. He specializes in helping clients grow and protect wealth through innovative,
+                    performance-driven strategies. As a lead mentor at The Bank Zone Trading Club, Shawn has guided over 600 students,
+                    offering copy trading, one-on-one coaching, and live sessions focused on confident, informed trading.
+
                     <br /> <br />
-                    Demonstrating exceptional performance, Gene has successfully written over $25 million in life
-                    insurance coverage, strategically managed in excess of $2.4 million in client assets, and
-                    facilitated more than $15 million in annuity premiums. His practice is precisely calibrated to
-                    serve high net worth clients, delivering nuanced financial strategies that address the complex
-                    wealth management needs of successful professionals and entrepreneurs.
+                    A passionate educator, Shawn thrives on helping others succeed in dynamic markets.
+                    His mentorship style blends technical expertise with a deep commitment to student growth and results.
+
                     <br /> <br />
-                    Specializing in advanced retirement planning, comprehensive estate strategies, and tailored
-                    investment optimization, Gene provides a strategic approach that goes beyond standard
-                    financial advising. His expertise lies in crafting customized financial solutions that protect and
-                    grow wealth, with a keen understanding of the unique financial challenges facing high-net-worth
-                    individuals.
-                    <br /> <br />
-                    Gene's client-focused methodology combines rigorous financial acumen with a commitment to
-                    building long-term, trust-based relationships. By offering personalized guidance and strategic
-                    insights, he empowers clients to make informed decisions that align with their most significant
-                    financial objectives and legacy planning goals.
+                    He is also co-founder of The Laser Fund Experience, an initiative designed to teach individuals
+                    how to become their own bank using strategies The Laser Fund Experience, a strategic initiative helping
+                    individuals “become their own bank” by helping them how to grow capital in the markets.
+                    The program focuses on helping clients achieve long-term financial freedom and legacy wealth.
                   </p>
                 </div>
               </div>
