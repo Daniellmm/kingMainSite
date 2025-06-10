@@ -247,9 +247,9 @@ const Funding = () => {
       </section>
 
 
-      <section className='overflow-hidden px-10 bg-white flex justify-center items-center pt-10 pb-10'>
-        <div className='flex flex-col gap-10 justify-center items-center pt-7'>
-          <div className='grid '>
+      <section className='overflow-hidden px-10 bg-white w-full flex justify-center items-center pt-10 pb-10'>
+        <div className='flex flex-col gap-10 justify-center items-center pt-7 w-full'>
+          <div className='grid'>
 
             <div className='flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center '>
               <ScrollAnimation animation="zoomIn">
@@ -303,7 +303,7 @@ const Funding = () => {
             </div>
           </div>
 
-          <div className='flex flex-col lg:flex-row justify-center items-center lg:px-20 lg:gap-20 gap-10'>
+          <div className='grid md:grid-cols-2 grid-rows-1 lg:flex-row justify-center w-full items-center lg:px-20 lg:gap-20 gap-10'>
             <div className='flex flex-1 w-full'>
               <img src={HP} alt="" className='rounded-xl' />
             </div>
@@ -312,11 +312,11 @@ const Funding = () => {
               <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
                 Download “Credit Card Investing Hacks The Banks Don’t Want You To Know About” <span className='text-red-600 line-through'>FREE</span>
               </h1>
-              <div className='flex justify-center w-full lg:justify-start'>
-                <ScrollAnimation animation="slideUp" delay={0.3}>
-                  <div className='bg-white p-7 rounded-lg'>
-                    <form action="">
-                      <div>
+              <div className='flex gap-y-5 justify-center min-w-[100wv] w-full lg:justify-start '>
+                <div className='p-7 rounded-lg flex gap-y-10 min-w-[100wv] w-full flex-col justify-center items-center'>
+                  
+                    <form action="" className='w-full min-w-[100wv]  flex flex-col'>
+                      <div className='w-full'>
                         <input
                           type="text"
                           name="phone"
@@ -345,10 +345,10 @@ const Funding = () => {
                       </div>
                     </form>
 
-                    <button
-
-                      content=''
-                      className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                    <div className='flex justify-center lg:justify-start w-full'>
+                      <button
+                    content=''
+                      className='bg-[#E7A647] flex justify-center lg:justify-start  px-3 py-2  rounded-[8px]'
                       style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
                       <a
                         href="/hack.pdf"
@@ -356,8 +356,9 @@ const Funding = () => {
                         Download Now
                       </a>
                     </button>
-                  </div>
-                </ScrollAnimation>
+                    </div>
+                  
+                </div>
               </div>
             </div>
           </div>
