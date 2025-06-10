@@ -129,7 +129,7 @@ function AppContent() {
               </PageTransition>
             } /> */}
             
-            <Route path="/credit card liquidation" element={
+            <Route path="/credit-card-liquidation" element={
               <PageTransition>
                 <Hto />
               </PageTransition>

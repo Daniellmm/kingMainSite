@@ -5,6 +5,7 @@ import FundingLogo from '../assets/images/logo/fundingLogo.png'
 import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
 import LaserFundLogo from '../assets/images/logo/laserLogo.png'
 import GGEILogo from '../assets/images/logo/ggei.png'
+import CCLLogo from '../assets/images/logo/ccl.png'
 import Facebk from '../assets/images/icons/facebook.png'
 import YouTB from '../assets/images/icons/youtube.png'
 import X from '../assets/images/icons/twitter1.png'
@@ -35,6 +36,7 @@ const Footer = () => {
     '/laserfund': LaserFundLogo,
     '/ggei': GGEILogo,
     '/earn-protect-grow': EPGLogo,
+    '/credit-card-liquidation': CCLLogo,
   };
 
   // Get current logo based on path

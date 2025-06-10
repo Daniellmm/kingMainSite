@@ -15,7 +15,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import HP from '../assets/images/hp.jpg'
 
-const FORM_URL = "https://syofb.io/vsl "
+const FORM_URL = "https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -309,12 +309,42 @@ const Funding = () => {
             </div>
 
             <div className='flex flex-col flex-1 w-full'>
-              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
-                Download “Credit Card Investing Hacks The Banks Don’t Want You To Know About” FREE
+              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                Download “Credit Card Investing Hacks The Banks Don’t Want You To Know About” <span className='text-red-600 line-through'>FREE</span>
               </h1>
-              <div>
+              <div className='flex justify-center w-full lg:justify-start'>
                 <ScrollAnimation animation="slideUp" delay={0.3}>
-                  <div>
+                  <div className='bg-white p-7 rounded-lg'>
+                    <form action="">
+                      <div>
+                        <input
+                          type="text"
+                          name="phone"
+                          placeholder='Name'
+                          className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          name="phone"
+                          placeholder='Email'
+                          className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          name="phone"
+                          placeholder='Phone Number'
+                          className="w-full p-3 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black  placeholder:font-thin"
+                          required
+                        />
+                      </div>
+                    </form>
+
                     <button
 
                       content=''
@@ -323,7 +353,6 @@ const Funding = () => {
                       <a
                         href="/hack.pdf"
                         download>
-
                         Download Now
                       </a>
                     </button>

@@ -99,6 +99,11 @@ const PodcastPage = () => {
                     className="px-4 py-2 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      document.getElementById('podcast-section').scrollIntoView({
+                        behavior: 'smooth'
+                      });
+                    }}
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                   >
                     Watch Podcast
@@ -108,14 +113,16 @@ const PodcastPage = () => {
                   className='flex'
                   variants={fadeInUp}
                 >
-                  <motion.button
-                    className="px-3 py-2 rounded-full text-sm bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
-                    whileHover={buttonHover}
-                    whileTap={{ scale: 0.95 }}
-                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                  >
-                    Join Our Community
-                  </motion.button>
+                  <a href="https://whop.com/earn-protect-grow/?a=funding3f" target='_blank'>
+                    <motion.button
+                      className="px-3 py-2 rounded-full text-sm bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                      whileHover={buttonHover}
+                      whileTap={{ scale: 0.95 }}
+                      style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                    >
+                      Join Our Community
+                    </motion.button>
+                  </a>
                 </motion.div>
               </motion.div>
             </div>
@@ -133,7 +140,7 @@ const PodcastPage = () => {
           </motion.div>
         </section>
 
-        
+
 
         {/* Book Section */}
         <section className='psec-two relative lg:px-40 px-5 min-h-[100vh] lg:min-h-[80vh] lg:pb-10'>
@@ -162,14 +169,16 @@ const PodcastPage = () => {
                 className='flex justify-center lg:justify-start'
                 variants={fadeInUp}
               >
-                <motion.button
-                  className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
-                  whileHover={buttonHover}
-                  whileTap={{ scale: 0.95 }}
-                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                >
-                  Download Book
-                </motion.button>
+                <a href="https://whop.com/checkout/plan_NodSn8DMwG69g" target='_blank'>
+                  <motion.button
+                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    whileHover={buttonHover}
+                    whileTap={{ scale: 0.95 }}
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                  >
+                    Purchase Now
+                  </motion.button>
+                </a>
               </motion.div>
             </motion.div>
 
@@ -186,10 +195,12 @@ const PodcastPage = () => {
         </section>
 
         {/* Podcast Videos Section - Now Dynamic */}
-        <PodcastVideosSection
-          apiKey={YOUTUBE_API_KEY}
-          channelId={YOUTUBE_CHANNEL_ID}
-        />
+        <section id='podcast-section'>
+          <PodcastVideosSection
+            apiKey={YOUTUBE_API_KEY}
+            channelId={YOUTUBE_CHANNEL_ID}
+          />
+        </section>
 
         {/* About Section */}
         <section className='about-sec lg:px-40 px-5'>

@@ -5,6 +5,7 @@ import LOGO1 from '../assets/images/logo/homeLogo.png'
 import FundingLogo from '../assets/images/logo/fundingLogo.png'
 import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
 import LaserFundLogo from '../assets/images/logo/laserLogo.png'
+import CCLLogo from '../assets/images/logo/ccl.png'
 import GGEILogo from '../assets/images/logo/ggei.png'
 // Add these imports for the dropdown page logos
 // import AboutLogo from '../assets/images/logo/aboutLogo.png' // Add your about logo
@@ -40,7 +41,7 @@ const NavBar = () => {
     '/laserfund': LaserFundLogo,
     '/ggei': GGEILogo,
     // '/about': AboutLogo,
-    // '/credit card liquidation': CCLLogo, 
+    '/credit-card-liquidation': CCLLogo, 
     '/earn-protect-grow': EPGLogo,
     // { path: '/about', label: 'About Us' },
     // { path: '/credit card liquidation', label: 'Credit to Cash' },
@@ -299,9 +300,9 @@ const NavBar = () => {
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                data-path="/credit card liquidation"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/credit card liquidation') ? 'text-yellow-600 font-semibold' : ''}`}
-                onClick={() => navigateTo('/funding')}
+                data-path="/credit-card-liquidation"
+                className={` text-lg md: cursor-pointer transition-colors ${isActive('/credit-card-liquidation') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/credit-card-liquidation')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
@@ -405,8 +406,8 @@ const NavBar = () => {
               </li>
               <li
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={`text-lg cursor-pointer transition-colors ${isActive('/credit card liquidation') ? 'text-yellow-600 font-semibold' : ''}`}
-                onClick={() => navigateTo('/credit card liquidation')}
+                className={`text-lg cursor-pointer transition-colors ${isActive('/credit-card-liquidation') ? 'text-yellow-600 font-semibold' : ''}`}
+                onClick={() => navigateTo('/credit-card-liquidation')}
               >
                 CREDIT TO CASH
               </li>

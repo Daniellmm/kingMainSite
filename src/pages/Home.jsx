@@ -142,7 +142,7 @@ const Home = () => {
               <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“We believe that entrepreneurship is not a gamble — it’s a strategic <br className='hidden lg:block' />path to freedom, wealth, and legacy.” </h1>
             </div>
             <div>
-              <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>CEO, Founder </h1>
+              <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>King Edwards</h1>
             </div>
           </div>
         </ScrollAnimation>
@@ -513,13 +513,15 @@ const Home = () => {
             <h1 className=' text-3xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>Have Questions?</h1>
             <h2 className=' text-xl lg:text-[24px] font-semibold text-center' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 200, fontStyle: 'normal' }}>Complete questionnaire to speak to a representative.</h2>
             <div className='pt-1'>
-              <button
+              <a href="https://landing.highticketofferfinancing.com/advert-page" target='_blank'>
+                <button
                 className='bg-[#E7A647] text-black px-3 py-3 rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                onClick={handleButtonClick}
+                
               >
                 Complete Questionnaire
               </button>
+              </a>
             </div>
           </div>
         </ScrollAnimation>

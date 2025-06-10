@@ -4,9 +4,14 @@ import CARD1 from '../assets/images/page-one/card.png'
 import { infoCards, steps } from './constant'
 import { motion } from 'framer-motion';
 
+const FORM_URL = "https://api.leadconnectorhq.com/widget/bookings/liquidation-htof"
 
 const Hto = () => {
 
+  // Function to handle button clicks
+  const handleButtonClick = () => {
+    window.open(FORM_URL, '_blank');
+  };
 
   const stepVariant = {
     hidden: { opacity: 0, y: 50 },
@@ -120,7 +125,7 @@ const Hto = () => {
 
 
                 <motion.div
-                  className='flex lg:justify-start justify-center items-center lg:items-start w-full'
+                  className='flex lg:justify-start gap-5 justify-center items-center lg:items-start w-full'
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -128,9 +133,21 @@ const Hto = () => {
                   custom={2}
                 >
                   <button
+                    onClick={handleButtonClick}
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+                    className="lg:px-6 py-3 px-3 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
                     Book Appointment Now
+                  </button>
+                  <button
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                    className="px-6 py-3 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    onClick={() => {
+                      document.getElementById('yt-sec').scrollIntoView({
+                        behavior: 'smooth'
+                      });
+                    }}
+                  >
+                    Learn More
                   </button>
                 </motion.div>
               </div>
@@ -152,7 +169,7 @@ const Hto = () => {
           </header>
         </section>
 
-        <section className='lg:px-20 px-5 pt-20 pb-10 vid-sec min-h-[60vh]'>
+        <section id='yt-sec' className='lg:px-20 px-5 pt-20 pb-10 vid-sec min-h-[60vh]'>
           <div className='flex flex-col gap-y-10 lg:flex-row justify-evenly items-center'>
 
             <motion.div
@@ -168,7 +185,7 @@ const Hto = () => {
                 Need fast access to cash? Our Credit Card Liquidation service helps you convert your entire credit limit
                 into spendable cash—without losing the rewards and points you’ve earned.
                 <br /><br />
-                This is a 100% done-for-you service designed for entrepreneurs, business owners, and high performers
+                This is a 100% done-for-you service designed for entrepreneurs, business owners, and high performers
                 who want cash flow without friction.
               </p>
             </motion.div>
@@ -373,7 +390,7 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.2 }}
                     viewport={{ once: true }}
-                    className='text-white'
+                    className='text-white text-2xl'
                     style={{ fontFamily: 'Minion Pro, serif' }}>
                     Business owners looking to scale
                   </motion.h1>
@@ -411,7 +428,7 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.4 }}
                     viewport={{ once: true }}
-                    className='text-white'
+                    className='text-white text-2xl'
                     style={{ fontFamily: 'Minion Pro, serif' }}>
                     Entrepreneurs needing fast capital
                   </motion.h1>
@@ -448,7 +465,7 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.6 }}
                     viewport={{ once: true }}
-                    className='text-white'
+                    className='text-white text-2xl'
                     style={{ fontFamily: 'Minion Pro, serif' }}>
                     Individuals who want to leverage credit smartly
                   </motion.h1>
@@ -485,7 +502,7 @@ const Hto = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ delay: 0.8 }}
-                    className='text-white'
+                    className='text-white text-2xl'
                     style={{ fontFamily: 'Minion Pro, serif' }}>
                     Anyone seeking extra liquidity without disrupting their credit usage
                   </motion.h1>
@@ -521,7 +538,7 @@ const Hto = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   transition={{ delay: 0.8 }}
-                  className='text-white'
+                  className='text-white text-2xl'
                   style={{ fontFamily: 'Minion Pro, serif' }}>
                   Anyone seeking extra liquidity <br /> without disrupting their credit usage
                 </motion.h1>
@@ -566,6 +583,7 @@ const Hto = () => {
               custom={2}
             >
               <button
+                onClick={handleButtonClick}
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                 className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
                 Book Appointment Now

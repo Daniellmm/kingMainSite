@@ -56,7 +56,7 @@ const testimonials = [
   { id: 17, image: testimonial17, name: 'Brittany', quote: 'Their system is a total game-changer.' },
 ]
 
-const FORM_URL = "https://www.laserfundpamm.com/disclaimer "
+const FORM_URL = "https://www.laserfundpamm.com/new-disclaimer-page"
 
 const LaserFund = () => {
   const sliderRef = useRef(null);
@@ -219,7 +219,7 @@ const LaserFund = () => {
                 onClick={handleButtonClick}
                 className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-               Meet the Team
+                Meet the Team
               </button>
             </div>
           </ScrollAnimation>
@@ -265,7 +265,7 @@ const LaserFund = () => {
                       onClick={handleButtonClick}
                       className='bg-[#E7A647] px-5 py-3 rounded-[8px]'
                       style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                      Download Now
+                      Meet the Team
                     </button>
                   </div>
                 </ScrollAnimation>
@@ -339,85 +339,84 @@ const LaserFund = () => {
       </section>
 
       <section className="py-16 px-4 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        {/* Video Column */}
-        <div className="w-full">
-          <div className="relative rounded-lg overflow-hidden shadow-2xl">
-            <video 
-              className="w-full h-64 md:h-80 lg:h-96 object-cover"
-              controls
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Video Column */}
+          <div className="w-full">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl">
+              <video
+                className="w-full h-64 md:h-80 lg:h-96 object-cover"
+                controls
               // poster="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop"
-            >
-              <source src="/man.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          {/* <div className="mt-4">
+              >
+                <source src="/man.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            {/* <div className="mt-4">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured Video</h3>
             <p className="text-gray-600">Experience our latest content in high definition. This video showcases the best of what we have to offer.</p>
           </div> */}
-        </div>
+          </div>
 
-        {/* Image Slider Column */}
-        <div className="w-full">
-          <div className="relative rounded-lg overflow-hidden shadow-2xl">
-            {/* Main Image Display */}
-            <div className="relative h-64 md:h-80 lg:h-80">
-              <img 
-                src={images[currentSlide]} 
-                alt={`Slide ${currentSlide + 1}`}
-                className="w-full h-full object-cover transition-opacity duration-500"
-              />
-              
-              {/* Navigation Arrows */}
-              <button 
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button 
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
-              >
-                <ChevronRight size={24} />
-              </button>
-              
-              {/* Slide Counter */}
-              <div className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
-                {currentSlide + 1} / {images.length}
+          {/* Image Slider Column */}
+          <div className="w-full">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl">
+              {/* Main Image Display */}
+              <div className="relative h-64 md:h-80 lg:h-80">
+                <img
+                  src={images[currentSlide]}
+                  alt={`Slide ${currentSlide + 1}`}
+                  className="w-full h-full object-cover transition-opacity duration-500"
+                />
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full transition-all duration-200"
+                >
+                  <ChevronRight size={24} />
+                </button>
+
+                {/* Slide Counter */}
+                <div className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+                  {currentSlide + 1} / {images.length}
+                </div>
+              </div>
+
+              {/* Thumbnail Navigation */}
+              <div className="flex space-x-2 mt-4 justify-center">
+                {images.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-16 h-12 rounded-md overflow-hidden border-2 transition-all duration-200 ${currentSlide === index
+                        ? 'border-blue-500 opacity-100'
+                        : 'border-gray-300 opacity-70 hover:opacity-100'
+                      }`}
+                  >
+                    <img
+                      src={image}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
               </div>
             </div>
-            
-            {/* Thumbnail Navigation */}
-            <div className="flex space-x-2 mt-4 justify-center">
-              {images.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-16 h-12 rounded-md overflow-hidden border-2 transition-all duration-200 ${
-                    currentSlide === index 
-                      ? 'border-blue-500 opacity-100' 
-                      : 'border-gray-300 opacity-70 hover:opacity-100'
-                  }`}
-                >
-                  <img 
-                    src={image} 
-                    alt={`Thumbnail ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
-          </div>
-          
-          {/* <div className="mt-4">
+
+            {/* <div className="mt-4">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Image Gallery</h3>
             <p className="text-gray-600">Browse through our curated collection of stunning visuals. Use the arrows or thumbnails to navigate.</p>
           </div> */}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <section className='overflow-hidden flex justify-center items-center bg-white pb-14'>
         <div className='flex justify-center items-center pt-10 lg:px-10'>
@@ -796,7 +795,7 @@ const LaserFund = () => {
         <div className='flex flex-col justify-center items-center gap-y-5'>
           <ScrollAnimation animation="zoomIn">
             <h1 className='text-3xl lg:text-[45px] leading-[45px] text-center font-semibold text-[#E7A647]' style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}>
-              BONUS: Get Started Today and Receive a Free Trading Strategy Guide ($197 Value)!
+              BONUS: Free Trading Strategy Session instead of Free Trading Strategy Guide. ($1,997 Value)!
             </h1>
           </ScrollAnimation>
 
@@ -814,7 +813,7 @@ const LaserFund = () => {
                 onClick={handleButtonClick}
                 className='bg-[#E7A647] text-black px-3 py-3 rounded-[8px]'
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                Download Now
+                Meet the Team
               </button>
             </div>
           </ScrollAnimation>
