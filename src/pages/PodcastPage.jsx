@@ -207,7 +207,7 @@ const PodcastPage = () => {
           <div className='flex flex-col justify-center items-center'>
             <motion.div variants={fadeInUp}>
               <h1 className='text-4xl pt-20 lg:text-6xl pb-10 text-center lg:text-start font-bold text-[#D09A25]'
-                style={{ fontFamily: 'Minion Pro, serif' }}>ABOUT OUR HOST
+                style={{ fontFamily: 'Minion Pro, serif' }}>ABOUT YOUR HOST
               </h1>
             </motion.div>
 
