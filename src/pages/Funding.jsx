@@ -199,7 +199,7 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className='bg-white lg:pt-20 pt-10'>
+      <section className='bg-white lg:pt-20 pt-10 px-5'>
         <div className='grid md:grid-cols-2 grid-rows-1 lg:flex-row justify-center w-full items-center lg:px-20 lg:gap-20 gap-10'>
           <div className='flex flex-1 w-full'>
             <img src={HP} alt="" className='rounded-xl' />
