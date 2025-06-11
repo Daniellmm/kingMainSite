@@ -199,6 +199,67 @@ const Funding = () => {
         </div>
       </section>
 
+      <section className='bg-white lg:pt-20 pt-10'>
+        <div className='grid md:grid-cols-2 grid-rows-1 lg:flex-row justify-center w-full items-center lg:px-20 lg:gap-20 gap-10'>
+          <div className='flex flex-1 w-full'>
+            <img src={HP} alt="" className='rounded-xl' />
+          </div>
+
+          <div className='flex flex-col flex-1 w-full'>
+            <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+              Download “Credit Card Investing Hacks The Banks Don’t Want You To Know About” <span className='text-red-600 line-through'>FREE</span>
+            </h1>
+            <div className='flex gap-y-5 justify-center min-w-[100wv] w-full lg:justify-start '>
+              <div className='p-7 rounded-lg flex gap-y-10 min-w-[100wv] w-full flex-col justify-center items-center'>
+
+                <form action="" className='w-full min-w-[100wv]  flex flex-col'>
+                  <div className='w-full'>
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder='Name'
+                      className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder='Email'
+                      className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder='Phone Number'
+                      className="w-full p-3 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black  placeholder:font-thin"
+                      required
+                    />
+                  </div>
+                </form>
+
+                <div className='flex justify-center lg:justify-start w-full'>
+                  <button
+                    content=''
+                    className='bg-[#E7A647] flex justify-center lg:justify-start  px-3 py-2  rounded-[8px]'
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    <a
+                      href="/hack.pdf"
+                      download>
+                      Download Now
+                    </a>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className='overflow-hidden  bg-black lg:pb-5 '>
         <div className='flex flex-col justify-center items-center py-10'>
@@ -303,65 +364,7 @@ const Funding = () => {
             </div>
           </div>
 
-          <div className='grid md:grid-cols-2 grid-rows-1 lg:flex-row justify-center w-full items-center lg:px-20 lg:gap-20 gap-10'>
-            <div className='flex flex-1 w-full'>
-              <img src={HP} alt="" className='rounded-xl' />
-            </div>
 
-            <div className='flex flex-col flex-1 w-full'>
-              <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
-                Download “Credit Card Investing Hacks The Banks Don’t Want You To Know About” <span className='text-red-600 line-through'>FREE</span>
-              </h1>
-              <div className='flex gap-y-5 justify-center min-w-[100wv] w-full lg:justify-start '>
-                <div className='p-7 rounded-lg flex gap-y-10 min-w-[100wv] w-full flex-col justify-center items-center'>
-                  
-                    <form action="" className='w-full min-w-[100wv]  flex flex-col'>
-                      <div className='w-full'>
-                        <input
-                          type="text"
-                          name="phone"
-                          placeholder='Name'
-                          className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <input
-                          type="text"
-                          name="phone"
-                          placeholder='Email'
-                          className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <input
-                          type="text"
-                          name="phone"
-                          placeholder='Phone Number'
-                          className="w-full p-3 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black  placeholder:font-thin"
-                          required
-                        />
-                      </div>
-                    </form>
-
-                    <div className='flex justify-center lg:justify-start w-full'>
-                      <button
-                    content=''
-                      className='bg-[#E7A647] flex justify-center lg:justify-start  px-3 py-2  rounded-[8px]'
-                      style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                      <a
-                        href="/hack.pdf"
-                        download>
-                        Download Now
-                      </a>
-                    </button>
-                    </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
         </div >
       </section >
 

@@ -102,7 +102,7 @@ const Hto = () => {
             <div className='flex flex-col lg:flex-row pt-16 justify-center items-center'>
               <div className='lg:w-2/3 gap-y-4 pt-20 lg:pt-0 flex flex-col items-center justify-center'>
                 <motion.h1
-                  className='lg:text-8xl text-5xl text-center uppercase lg:text-start text-[#D09A25]'
+                  className='lg:text-8xl text-5xl text-center uppercase lg:text-start font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent'
                   style={{ fontFamily: 'Minion Pro, serif' }}
                   variants={fadeUp}
                   initial="hidden"
@@ -118,14 +118,14 @@ const Hto = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   custom={1}
-                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                  style={{ fontFamily: 'Minion Pro, serif', fontWeight: 'medium' }}
                 >
                   Turn 100% of Your Credit Card Limits into cash deposited into your bank account Without the Stress
                 </motion.p>
 
 
                 <motion.div
-                  className='flex lg:justify-start gap-5 justify-center items-center lg:items-start w-full'
+                  className='flex lg:justify-start gap-2 justify-center items-center lg:items-start w-full'
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -135,12 +135,12 @@ const Hto = () => {
                   <button
                     onClick={handleButtonClick}
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                    className="lg:px-6 py-3 px-3 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+                    className="lg:px-6 py-3 px-3 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
                     Book Appointment Now
                   </button>
                   <button
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                    className="px-6 py-3 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    className="px-6 py-3 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     onClick={() => {
                       document.getElementById('yt-sec').scrollIntoView({
                         behavior: 'smooth'

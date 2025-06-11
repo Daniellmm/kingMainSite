@@ -151,7 +151,7 @@ const Insurance = () => {
 
             <div className='lg:px-24'>
               <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>
-                "The definition of insanity is doing the same thing over and over again and expecting a different result. It's time to get serious about your financial future. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today."
+                "The definition of insanity is doing the same thing over and over again and expecting a different result. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today."
               </h1>
             </div>
             <div>
