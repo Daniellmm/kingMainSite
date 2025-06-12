@@ -41,9 +41,9 @@ const preloaderContent = {
     mainText: ['Become', 'Your Own', 'Bank'],
     subText: 'Become Your Own Bank Summit'
   },
-  '/credit card liquidation': {
-    mainText: ['Credit', 'CARD', 'LIQUIDATIONS'],
-    subText: 'TURN YOUR ENTIRE CREDIT CARD LIMIT INTO CASH IN YOUR BANK ACCOUNT'
+  '/credit-card-liquidation': {
+    mainText: ['CREDIT ', 'CARD', 'LIQUIDATIONS'],
+    subText: 'TURN CREDIT INTO CASH IN YOUR BANK ACCOUNT'
   },
   '/earn-protect-grow': {
     mainText: ['EARN', 'PROTECT', 'GROW'],
