@@ -131,7 +131,7 @@ const Hto = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   custom={2}
-                >
+                > 
                   <button
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                     className="px-6 py-3 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
