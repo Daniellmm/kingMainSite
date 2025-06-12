@@ -199,10 +199,10 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className='bg-white lg:pt-20 pt-10 px-5'>
-        <div className='grid md:grid-cols-2 grid-rows-1 lg:flex-row justify-center w-full items-center lg:px-20 lg:gap-20 gap-10'>
-          <div className='flex flex-1 w-full'>
-            <img src={HP} alt="" className='rounded-xl' />
+      <section className='bg-white lg:pt-20 pt-10 lg:px-5 px-3 pb-10'>
+        <div className='grid md:grid-cols-2 grid-rows-1  py-5 border-2 border-black rounded-3xl lg:flex-row justify-center w-full items-center lg:px-20 lg:gap-20 gap-10'>
+          <div className='flex flex-1 w-full px-3'>
+            <img src={HP} alt="" className='rounded-xl shadow-black shadow-2xl' />
           </div>
 
           <div className='flex flex-col flex-1 w-full'>

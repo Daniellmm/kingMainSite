@@ -133,12 +133,6 @@ const Hto = () => {
                   custom={2}
                 >
                   <button
-                    onClick={handleButtonClick}
-                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                    className="lg:px-6 py-3 px-3 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
-                    Book Appointment Now
-                  </button>
-                  <button
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                     className="px-6 py-3 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     onClick={() => {
@@ -148,6 +142,13 @@ const Hto = () => {
                     }}
                   >
                     Learn More
+                  </button>
+
+                  <button
+                    onClick={handleButtonClick}
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                    className="lg:px-6 py-3 px-3 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+                    Book Appointment Now
                   </button>
                 </motion.div>
               </div>
