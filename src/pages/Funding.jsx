@@ -132,6 +132,33 @@ const Funding = () => {
   };
 
 
+
+
+  // Approach 1: Open GHL form in popup, then download PDF
+  const handleDownloadClick = () => {
+    // Open GHL form in a popup window
+    const popup = window.open(
+      'https://app.gohighlevel.com/v2/preview/g5WdFPtmhhFwqxoTogJ1?notrack=true',
+      'ghlForm',
+      'width=600,height=700,scrollbars=yes,resizable=yes'
+    );
+
+    // Start PDF download after a short delay
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/hack.pdf';
+      link.download = 'hack.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 20000); // 2 second delay
+  };
+
+  // Your updated JSX:
+
+
+
+
   return (
     <>
       <section className='relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
@@ -212,7 +239,7 @@ const Funding = () => {
             <div className='flex gap-y-5 justify-center min-w-[100wv] w-full lg:justify-start '>
               <div className='p-7 rounded-lg flex gap-y-10 min-w-[100wv] w-full flex-col justify-center items-center'>
 
-                <form action="" className='w-full min-w-[100wv]  flex flex-col'>
+                {/* <form action="" className='w-full min-w-[100wv]  flex flex-col'>
                   <div className='w-full'>
                     <input
                       type="text"
@@ -240,18 +267,15 @@ const Funding = () => {
                       required
                     />
                   </div>
-                </form>
+                </form> */}
 
                 <div className='flex justify-center lg:justify-start w-full'>
                   <button
-                    content=''
-                    className='bg-[#E7A647] flex justify-center lg:justify-start  px-3 py-2  rounded-[8px]'
-                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                    <a
-                      href="/hack.pdf"
-                      download>
-                      Download Now
-                    </a>
+                    onClick={handleDownloadClick}
+                    className='bg-[#E7A647] flex justify-center lg:justify-start px-3 py-2 rounded-[8px]'
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                  >
+                    Download Now
                   </button>
                 </div>
 
