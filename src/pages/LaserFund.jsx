@@ -265,7 +265,7 @@ const LaserFund = () => {
                       onClick={handleButtonClick}
                       className='bg-[#E7A647] px-5 py-3 rounded-[8px]'
                       style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                      Meet the Team
+                      Buy Now
                     </button>
                   </div>
                 </ScrollAnimation>

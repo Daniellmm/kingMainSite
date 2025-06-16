@@ -132,8 +132,6 @@ const Funding = () => {
   };
 
 
-
-
   // Approach 1: Open GHL form in popup, then download PDF
   const handleDownloadClick = () => {
     // Open GHL form in a popup window
@@ -146,16 +144,13 @@ const Funding = () => {
     // Start PDF download after a short delay
     setTimeout(() => {
       const link = document.createElement('a');
-      link.href = '/hack.pdf';
+      link.href = '/hack-1.pdf';
       link.download = 'hack.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    }, 20000); // 2 second delay
+    }, 20000); 
   };
-
-  // Your updated JSX:
-
 
 
 
@@ -205,7 +200,6 @@ const Funding = () => {
         </div>
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section>
-
 
       <section className='overflow-hidden px-10 bg-white pb-14'>
         <div className='flex flex-col justify-center items-center pt-10'>
