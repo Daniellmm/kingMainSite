@@ -81,6 +81,27 @@ const Home = () => {
     window.open(FORM_URL, '_blank');
   };
 
+
+  // Approach 1: Open GHL form in popup, then download PDF
+  const handleDownloadClick = () => {
+    // Open GHL form in a popup window
+    const popup = window.open(
+      'https://api.leadconnectorhq.com/widget/form/rtAKST11w3sgneYl2MH9',
+      'ghlForm',
+      'width=600,height=700,scrollbars=yes,resizable=yes'
+    );
+
+    // Start PDF download after a short delay
+    // setTimeout(() => {
+    //   const link = document.createElement('a');
+    //   link.href = '/hack-1.pdf';
+    //   link.download = 'hack.pdf';
+    //   document.body.appendChild(link);
+    //   link.click();
+    //   document.body.removeChild(link);
+    // }, 20000); 
+  };
+
   return (
     <>
       <section className='relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
@@ -168,8 +189,8 @@ const Home = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideLeft" delay={0.8}>
-                <div className='bg-white p-7 rounded-lg'>
-                  <form action="">
+                <div className='bg-black p-7 rounded-lg flex justify-start items-start h-full w-full'>
+                  {/* <form action="">
                     <div>
                       <input
                         type="text"
@@ -197,19 +218,19 @@ const Home = () => {
                         required
                       />
                     </div>
-                  </form>
+                  </form> */}
 
-                  <ScrollAnimation animation="slideUp" delay={0.8}>
-                    <div className='pt-14 flex justify-center lg:justify-start'>
+                  <div className='pt-14 flex justify-start lg:justify-start'>
+                    <ScrollAnimation animation="slideUp" delay={0.8}>
                       <button
                         className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
                         style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                        onClick={handleButtonClick}
+                        onClick={handleDownloadClick}
                       >
                         Download Now
                       </button>
-                    </div>
-                  </ScrollAnimation>
+                    </ScrollAnimation>
+                  </div>
                 </div>
               </ScrollAnimation>
             </div>
@@ -515,12 +536,12 @@ const Home = () => {
             <div className='pt-1'>
               <a href="https://landing.highticketofferfinancing.com/advert-page" target='_blank'>
                 <button
-                className='bg-[#E7A647] text-black px-3 py-3 rounded-[8px]'
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                
-              >
-                Complete Questionnaire
-              </button>
+                  className='bg-[#E7A647] text-black px-3 py-3 rounded-[8px]'
+                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+
+                >
+                  Complete Questionnaire
+                </button>
               </a>
             </div>
           </div>
