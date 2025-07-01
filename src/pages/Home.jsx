@@ -83,23 +83,44 @@ const Home = () => {
 
 
   // Approach 1: Open GHL form in popup, then download PDF
+  // const handleDownloadClick = () => {
+  //   // Open GHL form in a popup window
+  //   const popup = window.open(
+  //     'https://api.leadconnectorhq.com/widget/form/rtAKST11w3sgneYl2MH9',
+  //     'ghlForm',
+  //     'width=600,height=700,scrollbars=yes,resizable=yes'
+  //   );
+
+  //   // Start PDF download after a short delay
+  //   // setTimeout(() => {
+  //   //   const link = document.createElement('a');
+  //   //   link.href = '/hack-1.pdf';
+  //   //   link.download = 'hack.pdf';
+  //   //   document.body.appendChild(link);
+  //   //   link.click();
+  //   //   document.body.removeChild(link);
+  //   // }, 20000); 
+  // };
+
+
+  // Approach 1: Open GHL form in popup, then download PDF
   const handleDownloadClick = () => {
     // Open GHL form in a popup window
     const popup = window.open(
-      'https://api.leadconnectorhq.com/widget/form/rtAKST11w3sgneYl2MH9',
+      'https://app.gohighlevel.com/v2/preview/g5WdFPtmhhFwqxoTogJ1?notrack=true',
       'ghlForm',
       'width=600,height=700,scrollbars=yes,resizable=yes'
     );
 
     // Start PDF download after a short delay
-    // setTimeout(() => {
-    //   const link = document.createElement('a');
-    //   link.href = '/hack-1.pdf';
-    //   link.download = 'hack.pdf';
-    //   document.body.appendChild(link);
-    //   link.click();
-    //   document.body.removeChild(link);
-    // }, 20000); 
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/hack-1.pdf';
+      link.download = 'hack.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 20000); 
   };
 
   return (
@@ -160,7 +181,8 @@ const Home = () => {
             </div>
 
             <div>
-              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“We believe that entrepreneurship is not a gamble — it’s a strategic <br className='hidden lg:block' />path to freedom, wealth, and legacy.” </h1>
+              <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>“The only thing holding you back from achieving all of your
+                goals <br className='hidden lg:block' /> is a financing partner that you can depend on. H.T.O.F. is that partner.” </h1>
             </div>
             <div>
               <h1 className='text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center' style={{ fontFamily: 'Adelia, serif' }}>King Edwards</h1>
@@ -255,19 +277,25 @@ const Home = () => {
               <ScrollAnimation animation="slideLeft" delay={0.8}>
                 <div className='flex flex-col gap-y-5 md:px-10 h-full items-center lg:items-start justify-center '>
                   <div>
-                    <h1 className='text-[#E7A647] text-4xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>About Us</h1>
+                    <h1 className='text-[#E7A647] text-4xl lg:text-[47px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Why This Program Is a Game-Changer (About Us)</h1>
                   </div>
 
                   <div className='flex'>
-                    <p className='text-lg lg:text-[18px] items-center lg:items-start text-gray-700 leading-7' style={{ fontFamily: 'Montserrat, serif' }}>If you're here, it's likely because you've worked with other funding companies in the past only
-                      to be met with empty promises and disappointing results. To make matters worse, some have
-                      even charged you upfront fees without delivering meaningful outcomes. That ends today!
+                    <p className='text-lg lg:text-[18px] items-center lg:items-start text-gray-700 leading-7' style={{ fontFamily: 'Montserrat, serif' }}>
+                      If you’re here, chances are you’ve dealt with other funding companies — and
+                      walked away with broken promises and underwhelming results. That ends now.
                       <br /><br />
-                      At High Ticket Offer Financing, we believe in results, not risks. That's why we charge zero
-                      upfront fees—we only get paid when we successfully secure your funding.
+                      At High Ticket Offer Financing, we help your clients secure up to $4M in fast,
+                      reliable capital to purchase your products and services — including up to $150K
+                      in No-Doc funding with no hard credit check.
                       <br /><br />
+                      We do this by tapping into 11+ years of banking relationships and a nationwide
+                      broker network, giving your clients access to higher approvals and better terms.
+                      <br /><br />
+                      Stop chasing funding. Start closing deals. Let’s get your clients the capital they
+                      need — today.
 
-                      It's time to stop trying to get funded and start getting funded. Let's get to work.</p>
+                    </p>
                   </div>
                 </div>
               </ScrollAnimation>
@@ -300,14 +328,14 @@ const Home = () => {
               <ScrollAnimation animation='slideUp' delay={0.2}>
                 <div className='flex gap-x-3 pt-5 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
-                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>Small Business Loans Up to $3M</h1>
+                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>No Doc Financing Up to $200k</h1>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation animation='slideUp' delay={0.4}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
-                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>No Doc Funding Up to $200K</h1>
+                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>Small Business Loans Up to $4M</h1>
                 </div>
               </ScrollAnimation>
 
@@ -321,7 +349,7 @@ const Home = () => {
               <ScrollAnimation animation='slideUp' delay={0.8}>
                 <div className='flex gap-x-3 pt-3 justify-start items-center'>
                   <img src={MARK} className='h-6' alt="" />
-                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>Home Equity Lines of Credit Up to $4M</h1>
+                  <h1 className='text-white ' style={{ fontFamily: 'Montserrat, serif' }}>Home Equity Line of Credit Up to $4M</h1>
                 </div>
               </ScrollAnimation>
 
@@ -363,7 +391,7 @@ const Home = () => {
                   <div><h1 className='font-bold text-2xl lg:text-[32px] py-3' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Step 1</h1></div>
 
                   <div>
-                    <h1 className='  font-bold lg:text-[24px] ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>Click "Apply Now"</h1>
+                    <h1 className='  font-bold lg:text-[24px] ' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>"Submit Your Client"</h1>
                   </div>
 
                 </div>

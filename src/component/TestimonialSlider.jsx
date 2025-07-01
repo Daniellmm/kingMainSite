@@ -22,14 +22,14 @@ import testimonial16 from '../assets/images/testimonial/Corboi.png';
 import testimonial17 from '../assets/images/testimonial/Brittany.png';
 import testimonial18 from '../assets/images/testimonial/Marshall.png';
 import testimonial19 from '../assets/images/testimonial/AgaFilms.png';
-import testimonial20 from '../assets/images/testimonial/April.png';
-import testimonial21 from '../assets/images/testimonial/Marcus.png';
-import testimonial22 from '../assets/images/testimonial/Clayton.png';
-import testimonial23 from '../assets/images/testimonial/Gilbert.png';
-import testimonial24 from '../assets/images/testimonial/Odile.png';
-import testimonial25 from '../assets/images/testimonial/Xufang.png';
-import testimonial26 from '../assets/images/testimonial/Delfin.png';
-import testimonial27 from '../assets/images/testimonial/Justin.png';
+// import testimonial20 from '../assets/images/testimonial/April.png';
+// import testimonial21 from '../assets/images/testimonial/Marcus.png';
+// import testimonial22 from '../assets/images/testimonial/Clayton.png';
+// import testimonial23 from '../assets/images/testimonial/Gilbert.png';
+// import testimonial24 from '../assets/images/testimonial/Odile.png';
+// import testimonial25 from '../assets/images/testimonial/Xufang.png';
+// import testimonial26 from '../assets/images/testimonial/Delfin.png';
+// import testimonial27 from '../assets/images/testimonial/Justin.png';
 
 const testimonials = [
   { id: 1, image: testimonial1, name: 'Joshua', quote: 'Transformed my business with their funding solutions!' },
@@ -51,14 +51,14 @@ const testimonials = [
   { id: 17, image: testimonial17, name: 'Brittany', quote: 'Their system is a total game-changer.' },
   { id: 18, image: testimonial18, name: 'Marshall', quote: 'Fast funding with zero hassle.' },
   { id: 19, image: testimonial19, name: 'AgaFilms', quote: 'Fueled my creative projects with ease.' },
-  { id: 20, image: testimonial20, name: 'April', quote: 'Outstanding service and results.' },
-  { id: 21, image: testimonial21, name: 'Marcus', quote: 'The key to unlocking my business potential.' },
-  { id: 22, image: testimonial22, name: 'Clayton', quote: 'Simplified funding for maximum impact.' },
-  { id: 23, image: testimonial23, name: 'Gilbert', quote: 'A reliable partner for growth.' },
-  { id: 24, image: testimonial24, name: 'Odile', quote: 'Their expertise is unparalleled.' },
-  { id: 25, image: testimonial25, name: 'Xufang', quote: 'Made funding accessible and stress-free.' },
-  { id: 26, image: testimonial26, name: 'Delfin', quote: 'Empowered my business to thrive.' },
-  { id: 27, image: testimonial27, name: 'Justin', quote: 'The best decision for my business growth.' },
+  // { id: 20, image: testimonial20, name: 'April', quote: 'Outstanding service and results.' },
+  // { id: 21, image: testimonial21, name: 'Marcus', quote: 'The key to unlocking my business potential.' },
+  // { id: 22, image: testimonial22, name: 'Clayton', quote: 'Simplified funding for maximum impact.' },
+  // { id: 23, image: testimonial23, name: 'Gilbert', quote: 'A reliable partner for growth.' },
+  // { id: 24, image: testimonial24, name: 'Odile', quote: 'Their expertise is unparalleled.' },
+  // { id: 25, image: testimonial25, name: 'Xufang', quote: 'Made funding accessible and stress-free.' },
+  // { id: 26, image: testimonial26, name: 'Delfin', quote: 'Empowered my business to thrive.' },
+  // { id: 27, image: testimonial27, name: 'Justin', quote: 'The best decision for my business growth.' },
 ];
 
 const TestimonialSlider = () => {
@@ -140,6 +140,16 @@ const TestimonialSlider = () => {
     );
   };
 
+  // External control functions
+  const goToPrevious = () => {
+    sliderRef.current?.slickPrev();
+  };
+
+  const goToNext = () => {
+    sliderRef.current?.slickNext();
+  };
+
+
   return (
     <div className="w-full bg-black py-12 relative md:py-16">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -172,6 +182,28 @@ const TestimonialSlider = () => {
             </div>
           ))}
         </Slider>
+
+        {/* External Control Buttons - Below Slider */}
+        <div className="flex justify-center gap-4 mt-8">
+          <button
+            onClick={goToPrevious}
+            className="w-12 h-12 bg-[#E7A647] bg-opacity-90 backdrop-blur-sm text-black rounded-full hover:bg-opacity-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 flex items-center justify-center"
+            aria-label="Previous testimonials"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={goToNext}
+            className="w-12 h-12 bg-[#E7A647] bg-opacity-90 backdrop-blur-sm text-black rounded-full hover:bg-opacity-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 flex items-center justify-center"
+            aria-label="Next testimonials"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* CSS for background grid pattern and slick overrides */}

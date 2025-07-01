@@ -16,6 +16,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import HP from '../assets/images/hp.jpg'
 
 const FORM_URL = "https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U"
+const URL = "https://syofb.io"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,6 +131,10 @@ const Funding = () => {
   const handleButtonClick = () => {
     window.open(FORM_URL, '_blank');
   };
+  // Function to handle button clicks
+  const handleFreeClick = () => {
+    window.open(FORM_URL, '_blank');
+  };
 
 
   // Approach 1: Open GHL form in popup, then download PDF
@@ -149,7 +154,7 @@ const Funding = () => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    }, 20000); 
+    }, 20000);
   };
 
 
@@ -228,7 +233,8 @@ const Funding = () => {
 
           <div className='flex flex-col flex-1 w-full'>
             <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
-              Download “Credit Card Investing Hacks The Banks Don’t Want You To Know About” <span className='text-red-600 line-through'>FREE</span>
+              Discover Exactly How Entrepreneurs Are Launching 7-Figure Funding
+              Businesses From Scratch
             </h1>
             <div className='flex gap-y-5 justify-center min-w-[100wv] w-full lg:justify-start '>
               <div className='p-7 rounded-lg flex gap-y-10 min-w-[100wv] w-full flex-col justify-center items-center'>
@@ -263,13 +269,13 @@ const Funding = () => {
                   </div>
                 </form> */}
 
-                <div className='flex justify-center lg:justify-start w-full'>
+                <div className='flex justify-start lg:justify-start w-full'>
                   <button
-                    onClick={handleDownloadClick}
+                    onClick={handleFreeClick}
                     className='bg-[#E7A647] flex justify-center lg:justify-start px-3 py-2 rounded-[8px]'
                     style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
                   >
-                    Download Now
+                    Learn More
                   </button>
                 </div>
 

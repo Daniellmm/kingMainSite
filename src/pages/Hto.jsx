@@ -91,7 +91,7 @@ const Hto = () => {
     <>
       <main className='overflow-hidden'>
 
-        <section className='lg:px-20 px-5 hero min-h-[80vh] lg:min-h-[100vh]'>
+        <section className='lg:px-5 px-5 hero min-h-[80vh] bg-black lg:min-h-[100vh]'>
           <header>
             {/* <div>
               <nav>
@@ -99,10 +99,10 @@ const Hto = () => {
               </nav>
             </div> */}
 
-            <div className='flex flex-col lg:flex-row pt-16 justify-center items-center'>
-              <div className='lg:w-2/3 gap-y-4 pt-20 lg:pt-0 flex flex-col items-center justify-center'>
+            <div className='flex flex-col pt-16 justify-center items-center'>
+              <div className='lg:w-2/3 gap-y-4 pt-10 lg:pt-0 flex flex-col items-center justify-center'>
                 <motion.h1
-                  className='lg:text-8xl text-5xl text-center uppercase lg:text-start font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent'
+                  className='lg:text-7xl text-5xl text-center uppercase lg:pt-10 font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent'
                   style={{ fontFamily: 'Minion Pro, serif' }}
                   variants={fadeUp}
                   initial="hidden"
@@ -112,7 +112,7 @@ const Hto = () => {
                   Turn Your Available Credit Into Cash...
                 </motion.h1>
                 <motion.p
-                  className='text-[#999999] text-lg uppercase text-center lg:text-start'
+                  className='text-[#999999] text-lg uppercase text-center'
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -125,7 +125,7 @@ const Hto = () => {
 
 
                 <motion.div
-                  className='flex lg:justify-start gap-2 justify-center items-center lg:items-start w-full'
+                  className='flex  gap-2 justify-center items-center  w-full'
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -182,7 +182,7 @@ const Hto = () => {
             >
               <p
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className='text-[#999999] text-center lg:text-start text-lg'>
+                className='text-black text-center lg:text-start text-lg'>
                 Need fast access to cash? Our Credit Card Liquidation service helps you convert your entire credit limit
                 into spendable cash—without losing the rewards and points you’ve earned.
                 <br /><br />
@@ -209,7 +209,7 @@ const Hto = () => {
           </div>
         </section>
 
-        <section className='lg:px-20 px-5 pt-20 card-sec pb-10 min-h-[80vh]'>
+        <section className='lg:px-20 px-5 pt-20 card-sec pb-10 min-h-[80vh] bg-black'>
           <div className='flex flex-col justify-start items-start gap-y-20'>
             <div>
               <motion.h1
@@ -283,8 +283,8 @@ const Hto = () => {
                       variants={stepVariant}
                     >
                       <h1 className='text-[#D09A25] text-6xl' style={{ fontFamily: 'Minion Pro, serif' }}>{step.number}</h1>
-                      <h1 className='text-white font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.title}</h1>
-                      <h1 className='text-white font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.subtitle}</h1>
+                      <h1 className='text-black font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.title}</h1>
+                      <h1 className='text-black font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.subtitle}</h1>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -354,8 +354,8 @@ const Hto = () => {
                       variants={stepVariant}
                     >
                       <h1 className='text-[#D09A25] text-4xl' style={{ fontFamily: 'Minion Pro, serif' }}>{step.number}</h1>
-                      <h1 className='text-white font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.title}</h1>
-                      <h1 className='text-white font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.subtitle}</h1>
+                      <h1 className='text-black font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.title}</h1>
+                      <h1 className='text-black font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.subtitle}</h1>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -365,7 +365,7 @@ const Hto = () => {
           </div>
         </section>
 
-        <section className='lg:px-20 px-5 pt-20 who-sec step-sec pb-32 min-h-[60vh]'>
+        <section className='lg:px-20 px-5 pt-20 who-sec step-sec pb-32 min-h-[60vh] bg-black'>
           <div className='flex flex-col lg:px-14 justify-center items-center gap-20'>
             {/* Title */}
             <div className='flex lg:justify-start lg:items-start justify-center items-center w-full'>
@@ -550,7 +550,7 @@ const Hto = () => {
           </div>
         </section>
 
-        <section className='lg:px-20 px-5 pt-20  last-sec flex flex-col justify-center items-center pb-32 lg:min-h-[100vh]'>
+        <section className='lg:px-20 px-5 pt-20  last-sec flex flex-col justify-center items-center pb-32 lg:min-h-[10vh] bg-black'>
           <div className='flex flex-col justify-center items-center gap-8'>
             <motion.h1
               className='text-[#D09A25] text-4xl lg:text-6xl'
