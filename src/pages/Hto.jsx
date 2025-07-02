@@ -154,7 +154,7 @@ const Hto = () => {
               </div>
 
 
-              <div className='lg:w-4/6 flex flex-col justify-end items-end'>
+              <div className='lg:w-4/6 flex flex-col justify-center items-center'>
                 <motion.img
                   src={CARD1}
                   alt=""
