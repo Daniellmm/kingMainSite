@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import BANK from '../assets/images/bank2.png';
+import BANK from '../assets/images/home.png';
 import AWW from '../assets/images/aww.png';
 import BBB from '../assets/images/bbb.png';
 import MARK from '../assets/images/mark.png';
@@ -195,8 +195,8 @@ const Home = () => {
         <div className='flex justify-center items-center  pt-5'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <ScrollAnimation animation="slideRight" delay={0.8}>
-              <div className='flex justify-end items-center  '>
-                <img src={BANK} alt="" className='' />
+              <div className='flex justify-end items-center px-5 py-10'>
+                <img src={BANK} alt="" className='rounded-2xl shadow-white shadow-2xl' />
               </div>
             </ScrollAnimation>
 
@@ -211,7 +211,7 @@ const Home = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideLeft" delay={0.8}>
-                <div className='bg-black p-7 rounded-lg flex justify-start items-start h-full w-full'>
+                <div className='bg-black  rounded-lg flex justify-center items-center h-full w-full'>
                   {/* <form action="">
                     <div>
                       <input

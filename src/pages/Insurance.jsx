@@ -17,6 +17,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import KG from '../assets/images/kandg.jpg'
+
 
 
 
@@ -97,8 +99,8 @@ const Insurance = () => {
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className='pb-2'>
               {/* <img src={MText} alt="" /> */}
-              <h1 className="lg:text-7xl text-4xl text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                ARE YOU INSURING YOUR MONEY?
+              <h1 className="lg:text-7xl text-4xl text-center uppercase font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
+                EPG Wealth Management & Securities
               </h1>
             </div>
           </ScrollAnimation>
@@ -106,32 +108,37 @@ const Insurance = () => {
           <ScrollAnimation animation="fadeIn" delay={0.5}>
             <div className='flex justify-center'>
               <p className='text-white pb-8 text-center uppercase md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-                IF YOU ARE AN ENTREPRENEUR AND YOU ARE NOT INSURING YOUR MONEY
+                A Private Wealth-Building Community for Entrepreneurs,
+                High Net Worth Individuals, Athletes, and Entertainers
                 <span className='text-[#e7a647]'> Watch this video.</span>
               </p>
-              <div className='flex justify-end items-end'>
+              {/* <div className='flex justify-end items-end'>
                 <img src={ARROWD} className=' animate-bounce lg:pl-4' alt="" />
-              </div>
+              </div> */}
+            </div>
 
+            <div className='flex justify-center items-center w-full pb-10'>
+              <ScrollAnimation animation="slideUp" delay={0.3}>
+                <div>
+                  <button
+                    onClick={handleButtonClick}
+                    className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                    Watch FREE Web-class
+                  </button>
+                </div>
+              </ScrollAnimation>
             </div>
 
             {/* <div className='flex lg:hidden justify-end w-full items-center'>
               <img src={ARROWD} className=' animate-bounce h-10 lg:pl-4' alt="" />
             </div> */}
-            <div className='flex w-full justify-center'>
-              <iframe className='lg:w-[850px] pb-5 rounded-2xl md:w-[640px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/mRKJTzM-qTk?si=SRmluWecI8rayx0X" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <div className='flex w-full  items-center justify-center'>
+              <img className='max-w-[700px] w-full shadow-2xl shadow-white rounded-xl' src={KG} alt="" />
+              {/* <iframe className='lg:w-[850px] pb-5 rounded-2xl md:w-[640px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/mRKJTzM-qTk?si=SRmluWecI8rayx0X" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
             </div>
           </ScrollAnimation>
-          <ScrollAnimation animation="slideUp" delay={0.3}>
-            <div>
-              <button
-                onClick={handleButtonClick}
-                className='bg-[#E7A647] px-3 py-2  rounded-[8px]'
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                Free Financial Review
-              </button>
-            </div>
-          </ScrollAnimation>
+
         </div>
 
         {/* <div className='absolute top-[200px] left-[-20px]'>
@@ -151,7 +158,7 @@ const Insurance = () => {
 
             <div className='lg:px-24'>
               <h1 className='text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10' style={{ fontFamily: 'Minion Pro, serif' }}>
-                "The definition of insanity is doing the same thing over and over again and expecting a different result. If you want to ensure you and your company are financially set up for success, get a FREE financial review with YellowBrick Financial today."
+                "Legacy is the new Luxury"
               </h1>
             </div>
             <div>
@@ -198,9 +205,9 @@ const Insurance = () => {
             </div>
           </div>
         </div>
-        
+
         <div className='flex justify-center items-center pt-10 lg:px-32'>
-          
+
         </div>
       </section>
 
@@ -228,6 +235,74 @@ const Insurance = () => {
               </ScrollAnimation>
             </div>
 
+          </div>
+        </div>
+
+        <div className='flex flex-col justify-center items-center pt-10 mt-10 bg-black rounded-3xl'>
+          <div>
+            <ScrollAnimation animation="zoomIn" >
+              <div>
+                <h1 className='text-[#E7A647] px-2 pb-10 text-3xl lg:text-[45px] lg:leading-[45px] text-center lg:px-20 font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  About Us
+                </h1>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="fadeIn" delay={0.6}>
+              <div className='text-center px-5 lg:text-center'>
+                <p className='text-white  md:text-[20px] leading-snug lg:px-20 pb-14' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>If you’ve ever tried to work in the funding industry, you know the biggest challenge is finding financing solutions that actually work for your customers—and that skepticism is understandable.
+                  <br /> <br />
+                  Your vision deserves more than a bank account. It deserves a Financial
+                  Ark.
+                  <br /> <br />
+                  The EPG Wealth Building Community, or the Financial Ark, is a private
+                  wealth-building community designed for high-achievers who refuse to leave their legacy to chance. Built on century-old frameworks, faith-driven
+                  principles, and modern financial systems, our community helps you
+                  safeguard, multiply, and strategically direct the resources God has placed
+                  in your hands.
+                  <br /> <br />
+                  This is not traditional wealth management. This is a movement.
+                  <br /> <br />
+                  For the visionary entrepreneur looking to build generational wealth or the
+                  athlete / entertainer that has mastered their craft and is now looking to be
+                  more intelligent with their money — EPG provides an environment of elite
+                  stewardship, advanced financial planning & education, and high-level
+                  collaboration.
+                  <br /> <br />
+                  Inside the EPG Community, you will learn how to:
+                  <ul>
+                    <li>Build resilient income streams in any market</li>
+                    <li> Protect your wealth using structures favored by the world’s wealthiest
+                      families</li>
+                    <li>Grow your resources with purpose, discipline, and wisdom</li>
+                    <li>Join a curated network of like-minded, faith-rooted wealth builders</li>
+                  </ul>
+
+                  <br /> <br />
+                  Because true prosperity is about legacy, not just accumulation.
+                  <br /> <br />
+                  We do not simply teach theory
+                  <br /> <br />
+                  We build frameworks for you to earn, protect, and grow — alongside other
+                  believers and trusted professionals — within a secure, private environment.
+                  <br /> <br />
+                  Seats are extremely limited.
+                  <br /> <br />
+                  If you are called to safeguard your wealth — and multiply it for
+                  generations — apply below to explore membership in The Financial Ark
+                  today.
+                </p>
+                <div className='flex justify-center items-center w-full pb-10'>
+                  <ScrollAnimation animation="slideUp" delay={0.4}>
+                    <button
+                      className='bg-[#E7A647] px-5 py-3  rounded-[8px]'
+                      style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
+                      Watch FREE Web-class
+                    </button>
+                  </ScrollAnimation>
+                </div>
+              </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
