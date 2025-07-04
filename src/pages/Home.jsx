@@ -17,6 +17,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomSlider from '../component/TestimonialSlider';
+import HP from '../assets/images/hp.jpg'
 
 // Form URL for buttons
 const FORM_URL = "https://api.leadconnectorhq.com/widget/form/6cFWjFbL2wvGc3vBFdVd";
@@ -191,7 +192,37 @@ const Home = () => {
         </ScrollAnimation>
       </section>
 
-      <section className='overflow-hidden md:px-10 bg-black  pb-14'>
+       <section className='bg-white lg:pt-20 pt-10 lg:px-5 px-3 pb-10'>
+              <div className='grid md:grid-cols-2 grid-rows-1  py-5 border-2 border-black rounded-3xl lg:flex-row justify-center w-full items-center lg:px-20 lg:gap-20 gap-10'>
+                <div className='flex flex-1 w-full px-3'>
+                  <img src={HP} alt="" className='rounded-xl shadow-black shadow-2xl' />
+                </div>
+      
+                <div className='flex flex-col flex-1 w-full'>
+                  <h1 className='text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:text-start font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
+                    Discover Exactly How Entrepreneurs Are Launching 7-Figure Funding
+                    Businesses From Scratch
+                  </h1>
+                  <div className='flex gap-y-5 justify-center min-w-[100wv] w-full lg:justify-start '>
+                    <div className='p-7 rounded-lg flex gap-y-10 min-w-[100wv] w-full flex-col justify-center items-center'>
+      
+                      <div className='flex justify-start lg:justify-start w-full'>
+                        <button
+                          onClick={handleDownloadClick}
+                          className='bg-[#E7A647] flex justify-center lg:justify-start px-3 py-2 rounded-[8px]'
+                          style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                        >
+                          Learn More
+                        </button>
+                      </div>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>|
+
+      {/* <section className='overflow-hidden md:px-10 bg-black  pb-14'>
         <div className='flex justify-center items-center  pt-5'>
           <div className='grid md:grid-cols-2 grid-rows-1'>
             <ScrollAnimation animation="slideRight" delay={0.8}>
@@ -240,14 +271,14 @@ const Home = () => {
                         required
                       />
                     </div>
-                  </form> */}
+                  </form> *
 
                   <div className='pt-14 flex justify-start lg:justify-start'>
                     <ScrollAnimation animation="slideUp" delay={0.8}>
                       <button
                         className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
                         style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                        onClick={handleDownloadClick}
+                        
                       >
                         Download Now
                       </button>
@@ -258,7 +289,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className='overflow-hidden px-5 bg-white flex justify-center items-center pb-16'>
         <div className='flex justify-center items-center md:pt-10'>
