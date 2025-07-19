@@ -128,7 +128,7 @@ const Home = () => {
   return (
     <>
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-full lg:pl-24 lg:pr-24">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:pl-24 lg:pr-24">
           <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:mr-48">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
               <div className="pb-2">
@@ -151,7 +151,7 @@ const Home = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex justify-center">
                 <p
-                  className="px-5 pb-4 text-center text-[10px] uppercase text-white md:text-left md:text-[12px]"
+                  className="px-5 pb-4 text-center text-[10px] uppercase text-white md:text-left md:text-[14px]"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   Close more Deals, Scale Faster, and Eliminate Price Objections
@@ -186,7 +186,7 @@ const Home = () => {
           </div>
 
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <div class="relative -bottom-[38px] w-[14rem] lg:w-[17rem]">
+            <div class="relative -bottom-[56px] w-[14rem] lg:w-[21rem]">
               <img src={PHONEIMG} alt="phone image" />
             </div>
           </ScrollAnimation>
