@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { useState, useEffect, createContext, useContext } from "react";
 import "./App.css";
 import Home from "./pages/Home";
@@ -16,42 +21,40 @@ import Hto from "./pages/Hto";
 import PodcastPage from "./pages/PodcastPage";
 import AboutUs from "./pages/AboutUs";
 
-
 const LoadingContext = createContext();
 
-
 const preloaderContent = {
-  '/': {
-    mainText: ['GET', 'UP TO', '$4M'],
-    subText: 'IN FAST, RELIABLE FUNDING FOR YOU AND YOUR CUSTOMERS'
+  "/": {
+    mainText: ["GET", "UP TO", "$4M"],
+    subText: "IN FAST, RELIABLE FUNDING FOR YOU AND YOUR CUSTOMERS",
   },
-  '/funding': {
-    mainText: ['Start Your', 'Own', 'Funding Business'],
-    subText: 'Earn Up To 6 Figures + Per Deal'
+  "/funding": {
+    mainText: ["Start Your", "Own", "Funding Business"],
+    subText: "Earn Up To 6 Figures + Per Deal",
   },
-  '/insurance': {
-    mainText: ['Insure', 'Your', 'Wealth'],
-    subText: 'COMPREHENSIVE INSURANCE COVERAGE FOR PEACE OF MIND'
+  "/insurance": {
+    mainText: ["Insure", "Your", "Wealth"],
+    subText: "COMPREHENSIVE INSURANCE COVERAGE FOR PEACE OF MIND",
   },
-  '/laserfund': {
-    mainText: [' Master', 'The', 'Markets'],
-    subText: ' Learn While You Earn'
+  "/laserfund": {
+    mainText: [" Master", "The", "Markets"],
+    subText: " Learn While You Earn",
   },
-  '/ggei': {
-    mainText: ['Become', 'Your Own', 'Bank'],
-    subText: 'Become Your Own Bank Summit'
+  "/ggei": {
+    mainText: ["Become", "Your Own", "Bank"],
+    subText: "Become Your Own Bank Summit",
   },
-  '/credit-card-liquidation': {
-    mainText: ['CREDIT ', 'CARD', 'LIQUIDATIONS'],
-    subText: 'TURN CREDIT INTO CASH IN YOUR BANK ACCOUNT'
+  "/credit-card-liquidation": {
+    mainText: ["CREDIT ", "CARD", "LIQUIDATIONS"],
+    subText: "TURN CREDIT INTO CASH IN YOUR BANK ACCOUNT",
   },
-  '/earn-protect-grow': {
-    mainText: ['EARN', 'PROTECT', 'GROW'],
-    subText: 'LISTEN TO OUR PODCAST'
+  "/earn-protect-grow": {
+    mainText: ["EARN", "PROTECT", "GROW"],
+    subText: "LISTEN TO OUR PODCAST",
   },
-  '/about': {
-    mainText: ['About High', 'Ticket Offer', 'Financing'],
-    subText: 'Learn More'
+  "/about": {
+    mainText: ["About High", "Ticket Offer", "Financing"],
+    subText: "Learn More",
   },
 };
 
@@ -60,16 +63,13 @@ function RouteChangeListener() {
   const { setIsLoading, setCurrentPath } = useContext(LoadingContext);
 
   useEffect(() => {
-
     setCurrentPath(location.pathname);
-
 
     setIsLoading(true);
 
-
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 6000);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [location.pathname, setIsLoading, setCurrentPath]);
@@ -80,8 +80,7 @@ function RouteChangeListener() {
 function AppContent() {
   const { isLoading, currentPath } = useContext(LoadingContext);
 
-
-  const content = preloaderContent[currentPath] || preloaderContent['/'];
+  const content = preloaderContent[currentPath] || preloaderContent["/"];
 
   return (
     <>
@@ -93,52 +92,76 @@ function AppContent() {
         <>
           <NavBar />
           <Routes>
-            <Route path="/about" element={
-              <PageTransition>
-                <AboutUs />
-              </PageTransition>
-            } />
-            <Route path="/" element={
-              <PageTransition>
-                <Home />
-              </PageTransition>
-            } />
-            <Route path="/funding" element={
-              <PageTransition>
-                <Funding />
-              </PageTransition>
-            } />
-            <Route path="/insurance" element={
-              <PageTransition>
-                <Insurance />
-              </PageTransition>
-            } />
-            <Route path="/ggei" element={
-              <PageTransition>
-                <GGEI />
-              </PageTransition>
-            } />
-            <Route path="/laserfund" element={
-              <PageTransition>
-                <LaserFund />
-              </PageTransition>
-            } />
+            <Route
+              path="/about"
+              element={
+                <PageTransition>
+                  <AboutUs />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/"
+              element={
+                <PageTransition>
+                  <Home />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/funding"
+              element={
+                <PageTransition>
+                  <Funding />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/insurance"
+              element={
+                <PageTransition>
+                  <Insurance />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/ggei"
+              element={
+                <PageTransition>
+                  <GGEI />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/laserfund"
+              element={
+                <PageTransition>
+                  <LaserFund />
+                </PageTransition>
+              }
+            />
             {/* <Route path="/blog" element={
               <PageTransition>
                <Blog />
               </PageTransition>
             } /> */}
-            
-            <Route path="/credit-card-liquidation" element={
-              <PageTransition>
-                <Hto />
-              </PageTransition>
-            } />
-            <Route path="/earn-protect-grow" element={
-              <PageTransition>
-                <PodcastPage />
-              </PageTransition>
-            } />
+
+            <Route
+              path="/credit-card-liquidation"
+              element={
+                <PageTransition>
+                  <Hto />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/earn-protect-grow"
+              element={
+                <PageTransition>
+                  <PodcastPage />
+                </PageTransition>
+              }
+            />
           </Routes>
           <Footer />
         </>
@@ -149,7 +172,7 @@ function AppContent() {
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [currentPath, setCurrentPath] = useState('/');
+  const [currentPath, setCurrentPath] = useState("/");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -160,7 +183,9 @@ function App() {
   }, []);
 
   return (
-    <LoadingContext.Provider value={{ isLoading, setIsLoading, currentPath, setCurrentPath }}>
+    <LoadingContext.Provider
+      value={{ isLoading, setIsLoading, currentPath, setCurrentPath }}
+    >
       <Router>
         <AppContent />
       </Router>
