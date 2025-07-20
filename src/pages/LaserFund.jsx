@@ -373,8 +373,16 @@ const LaserFund = () => {
           </div>
 
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <div class="relative -bottom-[46px] w-[14rem] md:-bottom-[50px] lg:-bottom-[71px] lg:w-[21rem]">
-              <img src={PHONEIMG} alt="phone image" />
+            <div className="relative -bottom-[46px] aspect-[340/600] w-[14rem] md:-bottom-[50px] lg:-bottom-[71px] lg:aspect-[490/900] lg:w-[21rem]">
+              <img
+                src={PHONEIMG}
+                alt="phone image"
+                width={340}
+                height={600}
+                className="block aspect-[340/600] h-auto w-full object-contain lg:aspect-[490/900]"
+                style={{ display: 'block' }}
+                loading="lazy"
+              />
             </div>
           </ScrollAnimation>
         </div>

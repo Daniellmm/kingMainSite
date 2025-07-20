@@ -129,7 +129,7 @@ const Home = () => {
     <>
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:pl-24 lg:pr-24">
-          <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:mr-48">
+          <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:mr-16">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
               <div className="pb-2">
                 <h1
@@ -186,8 +186,16 @@ const Home = () => {
           </div>
 
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <div class="relative -bottom-[56px] w-[14rem] lg:w-[21rem]">
-              <img src={PHONEIMG} alt="phone image" />
+            <div className="relative -bottom-[56px] aspect-[340/600] w-[14rem] lg:aspect-[490/900] lg:w-[21rem]">
+              <img
+                src={PHONEIMG}
+                alt="phone image"
+                width={340}
+                height={600}
+                className="block aspect-[340/600] h-auto w-full object-contain lg:aspect-[490/900]"
+                style={{ display: 'block' }}
+                loading="lazy"
+              />
             </div>
           </ScrollAnimation>
         </div>

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 /* .hero{
     background-image: url(../src/assets/images/page-one/heroBg.png);
    background-repeat: no-repeat;
@@ -44,134 +41,142 @@
     background-position: center;
 } */
 .phero-sec {
-    background-image: url(../src/assets/images/page-two/heroBg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url(../src/assets/images/page-two/heroBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .psec-two {
-    background-image: url(../src/assets/images/page-two/sectwo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url(../src/assets/images/page-two/sectwo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .podcast-sec {
-    background-image: url(../src/assets/images/page-two/podcastBg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url(../src/assets/images/page-two/podcastBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .about-sec {
-    background-image: url(../src/assets/images/page-two/about.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-
-@font-face {
-    font-family: 'Beauty Wind';
-    src: url('/src/assets/fonts/beauty-Wind.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
+  background-image: url(../src/assets/images/page-two/about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @font-face {
-    font-family: 'Beauty Wind';
-    src: url('/src/assets/fonts/beauty-Wind.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Beauty Wind';
+  src: url('/src/assets/fonts/beauty-Wind.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Minion Pro';
-    src: url('/src/assets/fonts/MinionPro-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Beauty Wind';
+  src: url('/src/assets/fonts/beauty-Wind.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Minion Pro';
-    src: url('/src/assets/fonts/MinionPro-Medium.otf') format('opentype');
-    font-weight: 200;
-    font-style: normal;
+  font-family: 'Minion Pro';
+  src: url('/src/assets/fonts/MinionPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Minion Pro';
-    src: url('/src/assets/fonts/MinionPro-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Minion Pro';
+  src: url('/src/assets/fonts/MinionPro-Medium.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/assets/fonts/Montserrat-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
+  font-family: 'Minion Pro';
+  src: url('/src/assets/fonts/MinionPro-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/assets/fonts/Montserrat-BlackItalic.ttf') format('truetype');
-    font-weight: 900;
-    font-style: italic;
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/assets/fonts/Montserrat-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('/src/assets/fonts/Montserrat-Medium.ttf') format('truetype');
-    font-weight: medium;
-    font-style: normal;
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/assets/fonts/Montserrat-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/assets/fonts/Montserrat-ExtraBoldItalic.ttf') format('truetype');
-    font-weight: 800;
-    font-style: italic;
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/assets/fonts/Montserrat-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-ExtraBoldItalic.ttf')
+    format('truetype');
+  font-weight: 800;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Adelia';
-    src: url('/src/assets/fonts/adelia.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'Adelia';
+  src: url('/src/assets/fonts/adelia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .mil-preloader {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
