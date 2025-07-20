@@ -87,7 +87,7 @@ const ClientSuccessCarousel = () => {
     <div className="w-full overflow-hidden px-4 py-16">
       <div className="mx-auto max-w-7xl">
         <h2
-          className="mb-12 text-center text-3xl font-bold text-yellow-600 md:text-4xl lg:text-5xl"
+          className="mb-12 text-center text-3xl font-bold text-[#E7A647] md:text-4xl lg:text-5xl"
           style={{ fontFamily: '"Minion Pro", serif' }}
         >
           CLIENT SUCCESS HIGHLIGHTS

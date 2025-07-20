@@ -19,6 +19,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import CustomSlider from '../component/TestimonialSlider'
 import HP from '../assets/images/hp.jpg'
+import ClientSuccessCarousel from '../component/ClientSuccessCarousel'
 
 // Form URL for buttons
 const FORM_URL =
@@ -127,13 +128,13 @@ const Home = () => {
 
   return (
     <>
-      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
+      <section className="custom-header-bg relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:pl-24 lg:pr-24">
           <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:mr-16">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
               <div className="pb-2">
                 <h1
-                  className="px-4 py-0 text-center text-lg font-bold leading-tight text-white md:text-left md:text-2xl lg:text-5xl"
+                  className="py-0 text-center text-lg font-bold leading-tight text-white md:px-4 md:text-left md:text-2xl lg:text-5xl"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   HIGH TICKET FINANCING FOR
@@ -186,13 +187,23 @@ const Home = () => {
           </div>
 
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <div className="relative -bottom-[56px] aspect-[340/600] w-[14rem] lg:aspect-[490/900] lg:w-[21rem]">
+            <div className="relative -bottom-[56px] flex aspect-[340/600] w-[14rem] items-center justify-center lg:aspect-[490/900] lg:w-[21rem]">
+              {/* Golden glow effect: mobile - semi-circle at bottom, desktop - full circle bottom right */}
+              <div
+                className="controlGlow absolute bottom-[-138px] left-1/2 z-0 h-[500px] w-[500px] -translate-x-1/2 rounded-b-full md:bottom-[-50px] md:left-[81%] md:h-[400px] md:w-[400px] lg:bottom-[-30%] lg:left-auto lg:right-[-240%] lg:top-auto lg:h-[800px] lg:w-[800px] lg:rounded-full"
+                style={{
+                  background:
+                    'radial-gradient(circle at 50% 80%, rgb(243 193 118 / 36%) 0%, rgba(133, 91, 31, 0.25) 60%, rgba(0, 0, 0, 0) 100%)',
+                  filter: 'blur(50px)',
+                }}
+                aria-hidden="true"
+              ></div>
               <img
                 src={PHONEIMG}
                 alt="phone image"
                 width={340}
                 height={600}
-                className="block aspect-[340/600] h-auto w-full object-contain lg:aspect-[490/900]"
+                className="relative z-10 block aspect-[340/600] h-auto w-full object-contain lg:aspect-[490/900]"
                 style={{ display: 'block' }}
                 loading="lazy"
               />
@@ -200,7 +211,7 @@ const Home = () => {
           </ScrollAnimation>
         </div>
 
-        <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div>
+        {/* <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div> */}
       </section>
       <section className="overflow-hidden bg-white px-5 pb-14">
         <ScrollAnimation animation="fadeIn" delay={0.8}>
@@ -629,6 +640,8 @@ const Home = () => {
           </ScrollAnimation>
         </div>
       </section>
+      {/* Carousel */}
+      <ClientSuccessCarousel />
       <section className="min-h-screen overflow-hidden bg-black px-5 pb-10 pt-10">
         <div className="flex flex-col items-center justify-center pt-10">
           <ScrollAnimation animation="zoomIn" delay={0.8}>
