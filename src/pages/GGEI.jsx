@@ -27,10 +27,12 @@ import GENE from '../assets/images/team/gene.png'
 import ALEXIS from '../assets/images/team/alexis.png'
 import RAMSEY from '../assets/images/team/ramsey.png'
 import SHAWN from '../assets/images/team/shawn.png'
+
 import AdmissionSection from '../component/AdmissionSection'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import BankSummitHeader from '../component/BankSummitHeader'
 const FORM_URL =
   'https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI'
 
@@ -176,76 +178,9 @@ const GGEI = () => {
 
   return (
     <>
-      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black px-10 pb-10 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pt-20">
-          <ScrollAnimation animation="zoomIn" delay={0.5}>
-            <div className="pb-2">
-              {/* <img src={MText} alt="" /> */}
-              <h1
-                className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-center text-4xl font-bold uppercase text-transparent lg:text-8xl"
-                style={{ fontFamily: 'Minion Pro, serif' }}
-              >
-                Become Your Own Bank Summit{' '}
-              </h1>
-            </div>
-          </ScrollAnimation>
+      <BankSummitHeader />
 
-          <ScrollAnimation animation="fadeIn" delay={0.5}>
-            <div>
-              <p
-                className="pb-8 text-center text-xl uppercase text-white md:text-[26px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
-              >
-                Learn How To Turn Your Business into a Bank That Grows Your
-                Wealth Agressively and Consistently at GGEI’s
-              </p>
-            </div>
-
-            <div className="flex justify-center">
-              <iframe
-                className="h-[250px] w-[340px] rounded-2xl pb-5 md:w-[540px] lg:h-[415px] lg:w-[850px] lg:rounded-[50px]"
-                src="https://www.youtube.com/embed/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </ScrollAnimation>
-
-          <ScrollAnimation animation="slideUp" delay={0.3}>
-            <div>
-              <button
-                onClick={handleButtonClick}
-                className="rounded-[8px] bg-[#E7A647] px-3 py-2"
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
-              >
-                Secure My Spot
-              </button>
-            </div>
-          </ScrollAnimation>
-        </div>
-
-        <div className="absolute left-[0px] top-[600px] lg:top-[350px]">
-          <img
-            src={DollarCoin}
-            alt=""
-            className="hero-dollar-left h-[100px] md:h-[120px] lg:h-auto"
-          />
-        </div>
-        <div className="absolute right-[0px] top-[100px]">
-          <img
-            src={DollarCoin2}
-            alt=""
-            className="hero-dollar-right h-[200px] md:h-[120px] lg:h-auto"
-          />
-        </div>
-        <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div>
-      </section>
+      {/* <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black px-10 pb-10 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]"></section> */}
 
       <section className="flex justify-center overflow-hidden bg-gray-200 px-5 py-10">
         <div className="flex justify-center rounded-xl bg-white px-2 py-14 lg:px-16">
