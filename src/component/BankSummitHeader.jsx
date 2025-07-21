@@ -7,7 +7,8 @@ const BankSummitHeader = () => {
     <section className="relative flex min-h-[670px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-28 md:min-h-[575px] md:rounded-bl-[100px] md:rounded-br-[100px] md:px-8 md:pb-12 lg:pb-32 lg:pt-32">
       {/* Slanted golden gradient bar in upper right corner, clipped to section */}
       <div
-        className="slantedDivGgei pointer-events-none absolute right-0 top-0 z-20 w-1/2 -translate-y-[132px] translate-x-[157px] rotate-[45deg] overflow-hidden bg-[linear-gradient(to_right,_#A78430_95%,_#E7A647_10%);]"
+        className="slantedDivGgei pointer-events-none absolute right-0 top-0 z-20 w-1/2 -translate-y-[132px] translate-x-[157px] rotate-[45deg] overflow-hidden bg-[linear-gradient(to_right,_#2a1f05,_#4a3510_40%,_#b28f48_104%)]
+"
         style={{ width: '300px', height: '[275px' }}
       >
         <div
@@ -17,10 +18,12 @@ const BankSummitHeader = () => {
           }}
         />
       </div>
-      <div className="relative lg:w-[1280px]">
+      <div className="relative lg:w-[1280px] xl:w-[1800px]">
         {/* Text Content */}
-        <div className="z-50 flex w-1/2 flex-col space-y-4 lg:w-[35%]">
+        <div className="z-50 flex w-1/2 flex-col space-y-4 lg:w-[35%] ml-1 lg:ml-8">
           {/* LOGO */}
+          <ScrollAnimation animation="zoomIn" delay={0.5}>
+
           <div className="mb-2 flex h-14 w-14 items-center justify-start lg:h-36 lg:w-36">
             <img
               src={ggeiLogo}
@@ -31,6 +34,7 @@ const BankSummitHeader = () => {
               style={{ display: 'block' }}
             />
           </div>
+          </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <h1
@@ -94,8 +98,10 @@ const BankSummitHeader = () => {
         {/* IMAGES */}
         <div className="relative">
           {/* Alexis Card */}
+          <ScrollAnimation animation="slideUp" delay={0.5}>
+
           <div
-            className="alexisHeaderGgei absolute left-[-127px] top-[50px] h-48 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] md:h-72 md:w-[50rem]"
+            className="alexisHeaderGgei absolute left-[-127px] top-[54px] h-48 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] md:h-72 md:w-[50rem] bg-[linear-gradient(210deg,_#040404,_#2d2a3452)]"
             style={{ width: 384, height: 192 }}
           >
             <img
@@ -103,14 +109,16 @@ const BankSummitHeader = () => {
               alt="Alexis"
               width={210}
               height={270}
-              className="alexisHeaderGgeiImg mr-4 h-[270px] w-[210px] rotate-[31deg] scale-x-100 justify-self-end object-cover"
+              className="alexisHeaderGgeiImg mr-4 h-[270px] w-[210px] -scale-x-100 rotate-[33deg] md:rotate-[31deg] md:scale-x-100 justify-self-end object-cover"
               style={{ display: 'block' }}
             />
           </div>
+          </ScrollAnimation>
 
           {/* King Card */}
+          <ScrollAnimation animation="slideDown" delay={0.5}>
           <div
-            className="kingHeaderGgei absolute -top-[311px] left-[160px] h-48 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647]"
+            className="kingHeaderGgei absolute -top-[311px] left-[160px] h-48 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] bg-[linear-gradient(175deg,_#070709,_#2d2a346e)] md:bg-[linear-gradient(200deg,_#070709,_#2d2a346e)]"
             style={{ width: 384, height: 192 }}
           >
             <img
@@ -118,10 +126,12 @@ const BankSummitHeader = () => {
               alt="King"
               width={268}
               height={320}
-              className="kingHeaderGgeiImg kingHeaderGgeiImg -ml-24 -mt-5 h-[320px] w-[268px] rotate-[33deg] -scale-x-100 justify-self-start object-cover"
+              className="kingHeaderGgeiImg kingHeaderGgeiImg -ml-24 -mt-5 h-[368px] w-[222px] rotate-[33deg] -scale-x-100 justify-self-start object-cover"
               style={{ display: 'block' }}
             />
           </div>
+          </ScrollAnimation>
+
         </div>
       </div>
     </section>
