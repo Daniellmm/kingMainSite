@@ -162,7 +162,7 @@ const Home = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
                 <button
-                  className="flex w-[170x] items-center justify-center rounded-full px-7 py-2 text-xs font-semibold text-black shadow-md md:mt-4"
+                  className="flex w-[170px] items-center justify-center rounded-full px-7 py-2 text-xs font-semibold text-black shadow-md md:mt-4"
                   style={{
                     fontFamily: 'Montserrat, sans-serif',
                     background:
