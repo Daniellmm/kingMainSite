@@ -5,6 +5,19 @@
   opacity: 1;
 }
 
+.clientReviewCarousel{
+   background-image: url('/images/podcastbgDesktop.png');
+  background-size: cover;
+  background-position: left;
+  opacity: 1;
+}
+
+@media (min-width:768px){
+.clientReviewCarousel{
+  background-position: bottom;
+}
+}
+
 .underline-after::after {
   content: "";
   position: absolute;

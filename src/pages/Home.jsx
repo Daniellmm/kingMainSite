@@ -20,6 +20,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import CustomSlider from '../component/TestimonialSlider'
 import HP from '../assets/images/hp.jpg'
 import ClientSuccessCarousel from '../component/ClientSuccessCarousel'
+ import ClientReviewCarousel from '../component/ClientReviewCarousel'
 
 // Form URL for buttons
 const FORM_URL =
@@ -213,6 +214,7 @@ const Home = () => {
 
         {/* <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div> */}
       </section>
+            
       <section className="overflow-hidden bg-white px-5 pb-14">
         <ScrollAnimation animation="fadeIn" delay={0.8}>
           <div className="flex flex-col items-center justify-center pt-10 md:pt-24">
@@ -241,6 +243,31 @@ const Home = () => {
           </div>
         </ScrollAnimation>
       </section>
+
+ {/* Client Review Carousel Section */}
+      <section className="bg-black py-16 md:py-24 px-5 clientReviewCarousel">
+        <ScrollAnimation animation="fadeIn" delay={0.3}>
+          <div className="text-center mb-12">
+            <h2
+              className="text-xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase leading-[1.2]"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              <span className="bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent">WHAT OUR</span>{' '}
+              <span className="text-white">CLIENTS</span>{' '}
+              <span className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent">ARE SAYING</span>
+              <br />
+              <span className="bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent text-xxl md:text-3xl lg:text-4xl">
+                (AND ACHIEVING)
+              </span>
+            </h2>
+          </div>
+        </ScrollAnimation>
+        
+        <ScrollAnimation animation="slideUp" delay={0.5}>
+          <ClientReviewCarousel />
+        </ScrollAnimation>
+      </section>
+
       <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
         <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-5 md:grid-cols-2 lg:flex-row lg:gap-20 lg:px-20">
           <div className="flex w-full flex-1 px-3">
