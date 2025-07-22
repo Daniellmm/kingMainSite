@@ -4,7 +4,7 @@ import alexisTransparent from '../assets/images/team/alexisTransparent.png'
 import ScrollAnimation from './ScrollAnimation'
 const BankSummitHeader = () => {
   return (
-    <section className="relative flex min-h-[670px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-28 md:min-h-[575px] md:rounded-bl-[100px] md:rounded-br-[100px] md:px-8 md:pb-12 lg:pb-32 lg:pt-32">
+    <section className="relative flex min-h-[700px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-28 md:min-h-[640px] md:rounded-bl-[100px] md:rounded-br-[100px] lg:min-h-[746px] md:px-8 md:pb-12 lg:pb-32 lg:pt-32 bankSummitSecion">
       {/* Slanted golden gradient bar in upper right corner, clipped to section */}
       <div
         className="slantedDivGgei pointer-events-none absolute right-0 top-0 z-20 w-1/2 -translate-y-[132px] translate-x-[157px] rotate-[45deg] overflow-hidden bg-[linear-gradient(to_right,_#2a1f05,_#4a3510_40%,_#b28f48_104%)]
@@ -18,6 +18,7 @@ const BankSummitHeader = () => {
           }}
         />
       </div>
+      
       <div className="relative lg:w-[1280px] xl:w-[1800px]">
         {/* Text Content */}
         <div className="z-50 flex w-1/2 flex-col space-y-4 lg:w-[35%] ml-1 lg:ml-8">
@@ -94,16 +95,89 @@ const BankSummitHeader = () => {
             </div>
           </ScrollAnimation>
         </div>
+    {/* Alexis Name */}
+          {/* <div className=" z-30 relative underline-after pl-2 inline-block">
+            <h3 
+              className="text-sm text-[#ffffff] text-[0.8rem] font-light lg:font-normal whitespace-nowrap uppercase"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                // textDecoration: 'underline',
+                textDecorationColor: '#E7A647',
+                textUnderlineOffset: '3px',
+                lineHeight: 1,
+              }}
+            >
+            <span className='text-[1.1rem] font-medium lette' style={{
+              letterSpacing: '1px'
+            }}>
+              <span className='text-[1.5rem] font-semibold'>
+                A
+              </span>
+              lexis
+              </span> 
+              <br/>
+              Holifield
+            </h3>
+          </div> */}
 
+          {/* KING Name */}
+          {/* <div className=" z-30 relative underline-after-king pl-4 inline-block">
+            <h3 
+              className="text-sm text-[#ffffff] text-[0.8rem] font-light lg:font-normal whitespace-nowrap"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                // textDecoration: 'underline',
+                textDecorationColor: '#E7A647',
+                textUnderlineOffset: '3px',
+                lineHeight: 1,
+              }}
+            >
+            <span className='text-[1.1rem] font-medium' style={{
+              letterSpacing: '1px'
+            }}>
+KING
+</span>
+              <br/>
+              Edwards
+            </h3>
+          </div> */}
         {/* IMAGES */}
         <div className="relative">
-          {/* Alexis Card */}
-          <ScrollAnimation animation="slideUp" delay={0.5}>
 
+
+        {/* IMAGES */}
+        {/* <div className="relative"></div> */}
+
+          {/* Alexis Card */}   
+          <ScrollAnimation animation="slideUp" delay={0.5}>
+            <div className="alexisHeaderGgei absolute left-[-127px] top-[54px] h-48 w-96">
+ {/* Alexis Name */}
+          <div className="z-30 relative underline-after pl-2 inline-block alexisNameGgei">
+            <h3 
+              className="text-[0.7rem] md:text-sm text-[#ffffff]  font-light lg:font-normal whitespace-nowrap uppercase"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                // textDecoration: 'underline',
+                textDecorationColor: '#E7A647',
+                lineHeight: 1,
+              }}
+            >
+            <span className='text-[0.8rem] md:text-[1.1rem] font-medium lette' style={{
+              letterSpacing: '1px'
+            }}>
+              <span className='text-[1.2rem] md:text-[1.5rem] font-semibold'>
+                A
+              </span>
+              lexis
+              </span> 
+              <br/>
+              Holifield
+            </h3>
+          </div>
           <div
-            className="alexisHeaderGgei absolute left-[-127px] top-[54px] h-48 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] md:h-72 md:w-[50rem] bg-[linear-gradient(210deg,_#040404,_#2d2a3452)]"
-            style={{ width: 384, height: 192 }}
-          >
+            className=" h-48 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] md:w-[455px] md:h-[246px] lg:w-[600px] lg:h-[300px] bg-[linear-gradient(210deg,_#040404,_#2d2a3452)]"
+            // style={{ width: 384, height: 192 }}
+            >           
             <img
               src={alexisTransparent}
               alt="Alexis"
@@ -111,16 +185,41 @@ const BankSummitHeader = () => {
               height={270}
               className="alexisHeaderGgeiImg mr-4 h-[270px] w-[210px] -scale-x-100 rotate-[33deg] md:rotate-[31deg] md:scale-x-100 justify-self-end object-cover"
               style={{ display: 'block' }}
-            />
+              />
           </div>
+              </div>
           </ScrollAnimation>
+          
 
           {/* King Card */}
           <ScrollAnimation animation="slideDown" delay={0.5}>
+            <div className='kingHeaderGgei absolute -top-[328px] left-[165px] h-48 w-96 '>
+          {/* KING Name */}
+          <div className=" z-30 relative underline-after-king pl-4 inline-block nameKingGgei">
+            <h3 
+              className="text-sm text-[#ffffff] text-[0.8rem] md:text-[0.85rem] font-light lg:font-normal whitespace-nowrap"
+              style={{ 
+                fontFamily: 'Montserrat, sans-serif',
+                // textDecoration: 'underline',
+                textDecorationColor: '#E7A647',
+                textUnderlineOffset: '3px',
+                lineHeight: 1,
+              }}
+            >
+            <span className='text-[1.1rem] font-medium md:text-[1.3rem]' style={{
+              letterSpacing: '1px'
+            }}>
+KING
+</span>
+              <br/>
+              Edwards
+            </h3>
+          </div>
+
           <div
-            className="kingHeaderGgei absolute -top-[311px] left-[160px] h-48 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] bg-[linear-gradient(175deg,_#070709,_#2d2a346e)] md:bg-[linear-gradient(200deg,_#070709,_#2d2a346e)]"
-            style={{ width: 384, height: 192 }}
-          >
+            className=" h-48 w-96 -rotate-[33deg] overflow-hidden border md:w-[418px] md:h-[246px] lg:w-[600px] lg:h-[300px] border-[#E7A647] bg-[linear-gradient(175deg,_#070709,_#2d2a346e)] md:bg-[linear-gradient(200deg,_#070709,_#2d2a346e)]"
+            // style={{ width: 384, height: 192 }}
+            >
             <img
               src={kingTransparent}
               alt="King"
@@ -128,8 +227,9 @@ const BankSummitHeader = () => {
               height={320}
               className="kingHeaderGgeiImg kingHeaderGgeiImg -ml-24 -mt-5 h-[368px] w-[222px] rotate-[33deg] -scale-x-100 justify-self-start object-cover"
               style={{ display: 'block' }}
-            />
+              />
           </div>
+              </div>
           </ScrollAnimation>
 
         </div>

@@ -117,58 +117,6 @@ const GGEI = () => {
     { frame: SFS, name: SHAWN, isGene: false },
   ]
 
-  useEffect(() => {
-    gsap.fromTo(
-      '.hero-dollar-left',
-      {
-        x: -100,
-        opacity: 0,
-        rotation: -20,
-      },
-      {
-        x: 0,
-        opacity: 1,
-        rotation: 0,
-        duration: 1.5,
-        ease: 'elastic.out(1, 0.3)',
-        delay: 0.5,
-      },
-    )
-
-    gsap.fromTo(
-      '.hero-dollar-right',
-      {
-        x: 100,
-        opacity: 0,
-        rotation: 20,
-      },
-      {
-        x: 0,
-        opacity: 1,
-        rotation: 0,
-        duration: 1.5,
-        ease: 'elastic.out(1, 0.3)',
-        delay: 0.8,
-      },
-    )
-
-    gsap.to('.hero-dollar-left', {
-      y: 15,
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: 'sine.inOut',
-    })
-
-    gsap.to('.hero-dollar-right', {
-      y: -15,
-      duration: 2.5,
-      repeat: -1,
-      yoyo: true,
-      ease: 'sine.inOut',
-      delay: 0.5,
-    })
-  }, [])
 
   const handleButtonClick = () => {
     window.open(FORM_URL, '_blank')
