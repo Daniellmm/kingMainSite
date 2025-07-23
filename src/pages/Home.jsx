@@ -19,8 +19,8 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import CustomSlider from '../component/TestimonialSlider'
 import HP from '../assets/images/hp.jpg'
-import ClientSuccessCarousel from '../component/ClientSuccessCarousel'
  import ClientReviewCarousel from '../component/ClientReviewCarousel'
+import ClientSuccessHighlights from '../component/ClientSuccessHighlights'
 
 // Form URL for buttons
 const FORM_URL =
@@ -267,6 +267,8 @@ const Home = () => {
           <ClientReviewCarousel />
         </ScrollAnimation>
       </section>
+
+
 
       <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
         <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-5 md:grid-cols-2 lg:flex-row lg:gap-20 lg:px-20">
@@ -668,8 +670,25 @@ const Home = () => {
           </ScrollAnimation>
         </div>
       </section>
-      {/* Carousel */}
-      <ClientSuccessCarousel />
+
+                {/* Client Success Highlights Section */}
+                <section className="bg-white py-16 md:py-24 px-5">
+          <ScrollAnimation animation="slideUp" delay={0.3}>
+            <div className="text-center mb-12">
+              <h2 
+                 className="text-xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase leading-[1.2] bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent"
+                 style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                Client Success Highlights
+              </h2>
+            </div>
+          </ScrollAnimation>
+          
+          <ScrollAnimation animation="slideUp" delay={0.5}>
+            <ClientSuccessHighlights />
+          </ScrollAnimation>
+      </section>
+
       <section className="min-h-screen overflow-hidden bg-black px-5 pb-10 pt-10">
         <div className="flex flex-col items-center justify-center pt-10">
           <ScrollAnimation animation="zoomIn" delay={0.8}>
@@ -829,6 +848,24 @@ const Home = () => {
           </ScrollAnimation>
         </div>
       </section>
+      
+      {/* Client Success Highlights Section */}
+      <section className="bg-black py-16 md:py-24 px-5">
+        <ScrollAnimation animation="fadeIn" delay={0.3}>
+          <div className="text-center mb-12">
+            <h2
+              className="text-xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase leading-[1.2]"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              <span className="bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent">CLIENT SUCCESS</span>{' '}
+              <span className="text-white">HIGHLIGHTS</span>
+            </h2>
+          </div>
+        </ScrollAnimation>
+        
+      </section>
+
+      
       <section className="flex min-h-[40vh] w-full items-center justify-center overflow-hidden bg-black px-5">
         <ScrollAnimation animation="fadeIn" delay={0.8}>
           <div className="flex flex-col items-center justify-center gap-y-5 text-white">

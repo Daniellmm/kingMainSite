@@ -90,7 +90,7 @@ const Insurance = () => {
 
   return (
     <>
-      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-10 pb-8 pt-12 md:pb-8 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px] md:pt-16">
+      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-10 pb-8 pt-12 md:pb-8 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px] md:pt-16  md:h-[600px] lg:h-[772px]">
         {/* <div className="flex flex-col items-center justify-center pt-10 md:flex-row-reverse"> */}
         <div className="relative z-10 flex w-full flex-col items-center justify-center pt-4 gap-y-4 gap-x-0 md:mt-12 lg:mt-20 md:max-w-[800px] md:flex-row-reverse  md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
           <ScrollAnimation animation="zoomIn" delay={0.3}>

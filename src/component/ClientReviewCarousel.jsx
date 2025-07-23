@@ -76,7 +76,7 @@ const ClientReviewCarousel = () => {
           }
           
           .client-review-carousel-wrapper .slick-dots li {
-            margin: 0 4px !important;
+            margin: 0 0px !important;
           }
           
           .client-review-carousel-wrapper .slick-dots li button {
