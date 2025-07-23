@@ -1,29 +1,29 @@
-import React, { useEffect, useState, useRef } from "react";
-import SYOB from "../assets/images/syob.png";
-import SCI from "../assets/images/scifi.png";
-import CHECK from "../assets/images/check.png";
-import MText from "../assets/images/png2.png";
-import AWW from "../assets/images/aww.png";
-import LONG from "../assets/images/long.png";
-import DollarCoin from "../assets/images/bg-live/rightmc.png";
-import DollarCoin2 from "../assets/images/bg-live/leftmc.png";
-import ScrollAnimation from "../component/ScrollAnimation";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import HP from "../assets/images/hp.jpg";
+import React, { useEffect, useState, useRef } from 'react'
+import SYOB from '../assets/images/syob.png'
+import SCI from '../assets/images/scifi.png'
+import CHECK from '../assets/images/check.png'
+import MText from '../assets/images/png2.png'
+import AWW from '../assets/images/aww.png'
+import LONG from '../assets/images/long.png'
+import DollarCoin from '../assets/images/bg-live/rightmc.png'
+import DollarCoin2 from '../assets/images/bg-live/leftmc.png'
+import ScrollAnimation from '../component/ScrollAnimation'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import HP from '../assets/images/hp.jpg'
 
-const FORM_URL = "https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U";
-const URL = "https://syofb.io";
+const FORM_URL = 'https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U'
+const URL = 'https://syofb.io'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 const Funding = () => {
   useEffect(() => {
     gsap.fromTo(
-      ".hero-dollar-left",
+      '.hero-dollar-left',
       {
         x: -100,
         opacity: 0,
@@ -34,13 +34,13 @@ const Funding = () => {
         opacity: 1,
         rotation: 0,
         duration: 1.5,
-        ease: "elastic.out(1, 0.3)",
+        ease: 'elastic.out(1, 0.3)',
         delay: 0.5,
-      }
-    );
+      },
+    )
 
     gsap.fromTo(
-      ".hero-dollar-right",
+      '.hero-dollar-right',
       {
         x: 100,
         opacity: 0,
@@ -51,32 +51,32 @@ const Funding = () => {
         opacity: 1,
         rotation: 0,
         duration: 1.5,
-        ease: "elastic.out(1, 0.3)",
+        ease: 'elastic.out(1, 0.3)',
         delay: 0.8,
-      }
-    );
+      },
+    )
 
-    gsap.to(".hero-dollar-left", {
+    gsap.to('.hero-dollar-left', {
       y: 15,
       duration: 2,
       repeat: -1,
       yoyo: true,
-      ease: "sine.inOut",
-    });
+      ease: 'sine.inOut',
+    })
 
-    gsap.to(".hero-dollar-right", {
+    gsap.to('.hero-dollar-right', {
       y: -15,
       duration: 2.5,
       repeat: -1,
       yoyo: true,
-      ease: "sine.inOut",
+      ease: 'sine.inOut',
       delay: 0.5,
-    });
-  }, []);
+    })
+  }, [])
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [focusedVideo, setFocusedVideo] = useState(1);
-  const videoSliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [focusedVideo, setFocusedVideo] = useState(1)
+  const videoSliderRef = useRef(null)
 
   const videoSettings = {
     dots: true,
@@ -89,84 +89,84 @@ const Funding = () => {
     pauseOnHover: true,
     arrows: true,
     centerMode: true,
-    centerPadding: "0px",
-  };
+    centerPadding: '0px',
+  }
 
   // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
-    "https://www.youtube.com/embed/a9M6uPzQLFs?si=3BgzDhk_uvms2z41",
-    "https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn",
-    "https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX",
-    "https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX",
-    "https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH",
-    "https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp",
-    "https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA",
-  ]);
+    'https://www.youtube.com/embed/a9M6uPzQLFs?si=3BgzDhk_uvms2z41',
+    'https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn',
+    'https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX',
+    'https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX',
+    'https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH',
+    'https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp',
+    'https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA',
+  ])
 
   const handlePrevVideo = () => {
     // Rotate videos left (make the last video the first)
-    const newVideos = [...videos];
-    const firstVideo = newVideos.shift();
-    newVideos.push(firstVideo);
-    setVideos(newVideos);
-  };
+    const newVideos = [...videos]
+    const firstVideo = newVideos.shift()
+    newVideos.push(firstVideo)
+    setVideos(newVideos)
+  }
 
   const handleNextVideo = () => {
     // Rotate videos right (make the last video the first)
-    const newVideos = [...videos];
-    const lastVideo = newVideos.pop();
-    newVideos.unshift(lastVideo);
-    setVideos(newVideos);
-  };
+    const newVideos = [...videos]
+    const lastVideo = newVideos.pop()
+    newVideos.unshift(lastVideo)
+    setVideos(newVideos)
+  }
 
   // Navigation functions for the mobile slider
   const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
-  };
+    setCurrentSlide((prev) => (prev === 0 ? videos.length - 1 : prev - 1))
+  }
 
   const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
-  };
+    setCurrentSlide((prev) => (prev === videos.length - 1 ? 0 : prev + 1))
+  }
 
   // Function to handle button clicks
   const handleButtonClick = () => {
-    window.open(FORM_URL, "_blank");
-  };
+    window.open(FORM_URL, '_blank')
+  }
   // Function to handle button clicks
   const handleFreeClick = () => {
-    window.open(FORM_URL, "_blank");
-  };
+    window.open(FORM_URL, '_blank')
+  }
 
   // Approach 1: Open GHL form in popup, then download PDF
   const handleDownloadClick = () => {
     // Open GHL form in a popup window
     const popup = window.open(
-      "https://app.gohighlevel.com/v2/preview/g5WdFPtmhhFwqxoTogJ1?notrack=true",
-      "ghlForm",
-      "width=600,height=700,scrollbars=yes,resizable=yes"
-    );
+      'https://app.gohighlevel.com/v2/preview/g5WdFPtmhhFwqxoTogJ1?notrack=true',
+      'ghlForm',
+      'width=600,height=700,scrollbars=yes,resizable=yes',
+    )
 
     // Start PDF download after a short delay
     setTimeout(() => {
-      const link = document.createElement("a");
-      link.href = "/hack-1.pdf";
-      link.download = "hack.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }, 20000);
-  };
+      const link = document.createElement('a')
+      link.href = '/hack-1.pdf'
+      link.download = 'hack.pdf'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    }, 20000)
+  }
 
   return (
     <>
-      <section className="relative overflow-hidden pb-10  bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]">
-        <div className="z-10 relative pt-20 w-full flex flex-col justify-center items-center">
+      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black pb-10 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center pt-20">
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className="pb-2">
               {/* <img src={MText} alt="" /> */}
               <h1
-                className="lg:text-[70px] text-[38px] px-5 text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent"
-                style={{ fontFamily: "Minion Pro, serif" }}
+                className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text px-5 text-center text-[38px] font-bold text-transparent lg:text-[70px]"
+                style={{ fontFamily: 'Minion Pro, serif' }}
               >
                 BECOME A FUNDING BROKER
               </h1>
@@ -176,10 +176,10 @@ const Funding = () => {
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div>
               <p
-                className="text-white pb-7 px-5 text-center uppercase md:text-[26px]"
-                style={{ fontFamily: "Minion Pro, serif" }}
+                className="px-5 pb-7 text-center uppercase text-white md:text-[26px]"
+                style={{ fontFamily: 'Minion Pro, serif' }}
               >
-                BUILD A MULTI-6 OR 7-FIGURE FUNDING BUSINESS{" "}
+                BUILD A MULTI-6 OR 7-FIGURE FUNDING BUSINESS{' '}
                 <span className="text-[#e7a647]"> HELPING ENTREPRENEURS </span>
                 GET THE CAPITAL THEY DESPERATELY NEED TO SUCCEED.
               </p>
@@ -187,7 +187,7 @@ const Funding = () => {
 
             <div className="flex justify-center">
               <iframe
-                className="lg:w-[850px] pb-5 px-5 rounded-2xl md:w-[640px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]"
+                className="h-[250px] w-[340px] rounded-2xl px-5 pb-5 md:w-[640px] lg:h-[415px] lg:w-[850px] lg:rounded-[50px]"
                 src="https://www.youtube.com/embed/1aJIqv7Tz_Q?si=OEQxeJPWmSdd_cex"
                 title="YouTube video player"
                 frameborder="0"
@@ -202,10 +202,10 @@ const Funding = () => {
             <div>
               <button
                 onClick={handleButtonClick}
-                className="bg-[#E7A647] px-3 py-2  rounded-[8px]"
+                className="rounded-[8px] bg-[#E7A647] px-3 py-2"
                 style={{
-                  fontFamily: "Montserrat, serif",
-                  fontWeight: "medium",
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
                 }}
               >
                 Your Journey Starts Here
@@ -214,25 +214,25 @@ const Funding = () => {
           </ScrollAnimation>
         </div>
 
-        <div className="absolute top-[200px] lg:top-[300px] left-[-40px]">
+        <div className="absolute left-[-40px] top-[200px] lg:top-[300px]">
           <img
             src={DollarCoin}
             alt=""
-            className="h-[100px] md:h-[120px] lg:h-[250px] hero-dollar-left"
+            className="hero-dollar-left h-[100px] md:h-[120px] lg:h-[250px]"
           />
         </div>
         <div className="absolute bottom-[10px] right-[-40px]">
           <img
             src={DollarCoin2}
             alt=""
-            className="h-[100px] md:h-[120px] lg:h-[250px] hero-dollar-right"
+            className="hero-dollar-right h-[100px] md:h-[120px] lg:h-[250px]"
           />
         </div>
-        <div className="w-full h-full bg-black opacity-60 inset-0 absolute"></div>
+        <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div>
       </section>
 
-      <section className="overflow-hidden px-10 bg-white pb-14">
-        <div className="flex flex-col justify-center items-center pt-10">
+      <section className="overflow-hidden bg-white px-10 pb-14">
+        <div className="flex flex-col items-center justify-center pt-10">
           <ScrollAnimation animation="fadeIn">
             <div className="pb-10">
               <img src={AWW} alt="" />
@@ -242,10 +242,10 @@ const Funding = () => {
           <ScrollAnimation animation="fadeIn" delay={0.3}>
             <div className="lg:px-24">
               <h1
-                className="text-black text-xl lg:text-[28px] tracking-[1px] font-thin text-center leading-10"
-                style={{ fontFamily: "Minion Pro, serif" }}
+                className="text-center text-xl font-thin leading-10 tracking-[1px] text-black lg:text-[28px]"
+                style={{ fontFamily: 'Minion Pro, serif' }}
               >
-                {" "}
+                {' '}
                 "This is the most profitable, low start-up cost opportunity
                 available, and no extensive education is required—everyone needs
                 capital."
@@ -253,8 +253,8 @@ const Funding = () => {
             </div>
             <div>
               <h1
-                className="text-[#E7A647] text-3xl lg:text-4xl pt-6 text-center"
-                style={{ fontFamily: "Adelia, serif" }}
+                className="pt-6 text-center text-3xl text-[#E7A647] lg:text-4xl"
+                style={{ fontFamily: 'Adelia, serif' }}
               >
                 Erick Alvarez
               </h1>
@@ -263,26 +263,26 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className="bg-white lg:pt-20 pt-10 lg:px-5 px-3 pb-10">
-        <div className="grid md:grid-cols-2 grid-rows-1  py-5 border-2 border-black rounded-3xl lg:flex-row justify-center w-full items-center lg:px-20 lg:gap-20 gap-10">
-          <div className="flex flex-1 w-full px-3">
+      <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
+        <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-5 md:grid-cols-2 lg:flex-row lg:gap-20 lg:px-20">
+          <div className="flex w-full flex-1 px-3">
             <img
               src={HP}
               alt=""
-              className="rounded-xl shadow-black shadow-2xl"
+              className="rounded-xl shadow-2xl shadow-black"
             />
           </div>
 
-          <div className="flex flex-col flex-1 w-full">
+          <div className="flex w-full flex-1 flex-col">
             <h1
-              className="text-[#E7A647] pb-10 text-3xl lg:text-[45px] leading-10 text-center lg:text-start font-semibold"
-              style={{ fontFamily: "Minion Pro, serif" }}
+              className="pb-10 text-center text-3xl font-semibold leading-10 text-[#E7A647] lg:text-start lg:text-[45px]"
+              style={{ fontFamily: 'Minion Pro, serif' }}
             >
               Discover Exactly How Entrepreneurs Are Launching 7-Figure Funding
               Businesses From Scratch
             </h1>
-            <div className="flex gap-y-5 justify-center min-w-[100wv] w-full lg:justify-start ">
-              <div className="p-7 rounded-lg flex gap-y-10 min-w-[100wv] w-full flex-col justify-center items-center">
+            <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
+              <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-7">
                 {/* <form action="" className='w-full min-w-[100wv]  flex flex-col'>
                   <div className='w-full'>
                     <input
@@ -313,13 +313,13 @@ const Funding = () => {
                   </div>
                 </form> */}
 
-                <div className="flex justify-start lg:justify-start w-full">
+                <div className="flex w-full justify-start lg:justify-start">
                   <button
                     onClick={handleFreeClick}
-                    className="bg-[#E7A647] flex justify-center lg:justify-start px-3 py-2 rounded-[8px]"
+                    className="flex justify-center rounded-[8px] bg-[#E7A647] px-3 py-2 lg:justify-start"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
                     Learn More
@@ -331,28 +331,28 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden  bg-black lg:pb-5 ">
-        <div className="flex flex-col justify-center items-center py-10">
+      <section className="overflow-hidden bg-black lg:pb-5">
+        <div className="flex flex-col items-center justify-center py-10">
           <ScrollAnimation animation="zoomIn">
             <div>
               <h1
-                className="text-[#E7A647] px-10 pb-10 text-3xl lg:text-[45px] lg:leading-[45px] text-center lg:px-20 font-semibold"
-                style={{ fontFamily: "Minion Pro, serif" }}
+                className="px-10 pb-10 text-center text-3xl font-semibold text-[#E7A647] lg:px-20 lg:text-[45px] lg:leading-[45px]"
+                style={{ fontFamily: 'Minion Pro, serif' }}
               >
-                Discover the Secrets to Building a Funding Business with{" "}
+                Discover the Secrets to Building a Funding Business with{' '}
                 <br className="hidden lg:block" />
-                Unlimited Earning Potential{" "}
+                Unlimited Earning Potential{' '}
               </h1>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeIn" delay={0.6}>
-            <div className="text-start px-10 lg:text-start">
+            <div className="px-10 text-start lg:text-start">
               <p
-                className="text-white  md:text-[20px] leading-snug font-thin  lg:px-20 pb-14"
+                className="pb-14 font-thin leading-snug text-white md:text-[20px] lg:px-20"
                 style={{
-                  fontFamily: "Montserrat, serif",
-                  fontWeight: "medium",
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
                 }}
               >
                 If you’ve ever tried to work in the funding industry, you know
@@ -377,7 +377,7 @@ const Funding = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="w-full max-w-[350px] lg:max-w-2xl px-4">
+          <div className="w-full max-w-[350px] px-4 lg:max-w-2xl">
             <Slider
               ref={videoSliderRef}
               {...videoSettings}
@@ -385,9 +385,9 @@ const Funding = () => {
             >
               {videos.map((video, index) => (
                 <div key={index} className="px-2">
-                  <div className="relative aspect-video rounded-xl overflow-hidden">
+                  <div className="relative aspect-video overflow-hidden rounded-xl">
                     <iframe
-                      className="w-full h-full"
+                      className="h-full w-full"
                       src={video}
                       title={`YouTube video ${index + 1}`}
                       frameBorder="0"
@@ -403,15 +403,15 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden px-10 bg-white w-full flex justify-center items-center pt-10 pb-10">
-        <div className="flex flex-col gap-10 justify-center items-center pt-7 w-full">
+      <section className="flex w-full items-center justify-center overflow-hidden bg-white px-10 pb-10 pt-10">
+        <div className="flex w-full flex-col items-center justify-center gap-10 pt-7">
           <div className="grid">
-            <div className="flex flex-col  gap-y-3 md:px-10 lg:px-24 justify-center ">
+            <div className="flex flex-col justify-center gap-y-3 md:px-10 lg:px-24">
               <ScrollAnimation animation="zoomIn">
                 <div>
                   <h1
-                    className="text-[#E7A647] text-center lg:text-start text-4xl lg:text-[45px] leading-[50px] font-semibold"
-                    style={{ fontFamily: "Minion Pro, serif" }}
+                    className="text-center text-4xl font-semibold leading-[50px] text-[#E7A647] lg:text-start lg:text-[45px]"
+                    style={{ fontFamily: 'Minion Pro, serif' }}
                   >
                     Why Starting a Funding Business is the Smartest Move Right
                     Now
@@ -419,22 +419,22 @@ const Funding = () => {
                 </div>
               </ScrollAnimation>
 
-              <div className="flex flex-col justify-start items-start md:text-[20px] gap-y-5">
+              <div className="flex flex-col items-start justify-start gap-y-5 md:text-[20px]">
                 <ScrollAnimation animation="slideUp" delay={0.2}>
-                  <div className="flex gap-3 justify-center items-center text-black">
+                  <div className="flex items-center justify-center gap-3 text-black">
                     <img src={CHECK} className="h-7" alt="" />
                     <div>
                       <p
                         style={{
-                          fontFamily: "Montserrat, serif",
-                          fontWeight: "medium",
+                          fontFamily: 'Montserrat, serif',
+                          fontWeight: 'medium',
                         }}
                       >
-                        {" "}
+                        {' '}
                         <span className="font-bold">
-                          {" "}
-                          Unlimited Earning Potential{" "}
-                        </span>{" "}
+                          {' '}
+                          Unlimited Earning Potential{' '}
+                        </span>{' '}
                         – You decide what to charge and how much to earn.
                       </p>
                     </div>
@@ -442,20 +442,20 @@ const Funding = () => {
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="slideUp" delay={0.4}>
-                  <div className="flex gap-3 justify-center items-center text-black">
+                  <div className="flex items-center justify-center gap-3 text-black">
                     <img src={CHECK} className="h-7" alt="" />
                     <div>
                       <p
                         style={{
-                          fontFamily: "Montserrat, serif",
-                          fontWeight: "medium",
+                          fontFamily: 'Montserrat, serif',
+                          fontWeight: 'medium',
                         }}
                       >
-                        {" "}
+                        {' '}
                         <span className="font-bold">
-                          {" "}
-                          Simple Business Model{" "}
-                        </span>{" "}
+                          {' '}
+                          Simple Business Model{' '}
+                        </span>{' '}
                         – Earn capital by simply connecting business owners with
                         funding solutions that work.
                       </p>
@@ -464,20 +464,20 @@ const Funding = () => {
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="fadeIn" delay={0.6}>
-                  <div className="flex gap-3 justify-center items-center text-black">
+                  <div className="flex items-center justify-center gap-3 text-black">
                     <img src={CHECK} className="h-7" alt="" />
                     <div>
                       <p
                         style={{
-                          fontFamily: "Montserrat, serif",
-                          fontWeight: "medium",
+                          fontFamily: 'Montserrat, serif',
+                          fontWeight: 'medium',
                         }}
                       >
-                        {" "}
+                        {' '}
                         <span className="font-bold">
-                          {" "}
-                          Massive Market Demand{" "}
-                        </span>{" "}
+                          {' '}
+                          Massive Market Demand{' '}
+                        </span>{' '}
                         – 82% of entrepreneurs need cash flow to grow — and
                         you’ll have the solution.
                       </p>
@@ -486,19 +486,19 @@ const Funding = () => {
                 </ScrollAnimation>
 
                 <ScrollAnimation animation="fadeIn" delay={0.6}>
-                  <div className="flex gap-3 justify-center items-center text-black">
+                  <div className="flex items-center justify-center gap-3 text-black">
                     <img src={CHECK} className="h-7" alt="" />
                     <div>
                       <p
                         style={{
-                          fontFamily: "Montserrat, serif",
-                          fontWeight: "medium",
+                          fontFamily: 'Montserrat, serif',
+                          fontWeight: 'medium',
                         }}
                       >
-                        {" "}
+                        {' '}
                         <span className="font-bold"> Minimal Overhead </span> –
                         No need for a large team or expensive infrastructure to
-                        get started.{" "}
+                        get started.{' '}
                       </p>
                     </div>
                   </div>
@@ -509,41 +509,41 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden px-5 bg-black py-10">
-        <div className="flex flex-col justify-center items-center py-10">
+      <section className="overflow-hidden bg-black px-5 py-10">
+        <div className="flex flex-col items-center justify-center py-10">
           <ScrollAnimation animation="zoomIn">
             <div>
               <h1
-                className="text-[#E7A647] pb-10 text-3xl lg:text-[45px] text-center lg:px-28 font-semibold"
-                style={{ fontFamily: "Minion Pro, serif" }}
+                className="pb-10 text-center text-3xl font-semibold text-[#E7A647] lg:px-28 lg:text-[45px]"
+                style={{ fontFamily: 'Minion Pro, serif' }}
               >
                 Here’s What You’ll Get When You License Our Product:
               </h1>
             </div>
           </ScrollAnimation>
 
-          <div className="flex flex-col gap-y-7  lg:px-28 justify-start items-start w-full">
+          <div className="flex w-full flex-col items-start justify-start gap-y-7 lg:px-28">
             <ScrollAnimation animation="fadeIn" delay={0.2}>
-              <div className="flex  flex-col items-start">
-                <div className="flex justify-center items-center gap-x-4">
+              <div className="flex flex-col items-start">
+                <div className="flex items-center justify-center gap-x-4">
                   <img src={CHECK} className="h-8" alt="" />
                   <p
-                    className="text-white  md:text-[20px]"
+                    className="text-white md:text-[20px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
-                    Complete Training Program{" "}
+                    Complete Training Program{' '}
                   </p>
                 </div>
 
                 <div className="pl-16">
                   <p
-                    className="text-white font-thin md:text-[18px]  leading-[30px]"
+                    className="font-thin leading-[30px] text-white md:text-[18px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
                     ● Step-by-step guidance on how to structure, launch, and
@@ -555,27 +555,27 @@ const Funding = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeIn" delay={0.4}>
-              <div className="flex  flex-col items-start">
-                <div className="flex justify-center items-center gap-x-4">
+              <div className="flex flex-col items-start">
+                <div className="flex items-center justify-center gap-x-4">
                   <img src={CHECK} className="h-8" alt="" />
                   <p
-                    className="text-white  md:text-[20px]"
+                    className="text-white md:text-[20px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
-                    {" "}
-                    1-on-1 Coaching{" "}
+                    {' '}
+                    1-on-1 Coaching{' '}
                   </p>
                 </div>
 
                 <div className="pl-16">
                   <p
-                    className="text-white font-thin  md:text-[18px] leading-[30px]"
+                    className="font-thin leading-[30px] text-white md:text-[18px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
                     ● Work directly with funding experts who have built 7 and
@@ -588,26 +588,26 @@ const Funding = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeIn" delay={0.6}>
-              <div className="flex  flex-col items-start">
-                <div className="flex justify-center items-center gap-x-4">
+              <div className="flex flex-col items-start">
+                <div className="flex items-center justify-center gap-x-4">
                   <img src={CHECK} className="h-8" alt="" />
                   <p
-                    className="text-white  md:text-[20px]"
+                    className="text-white md:text-[20px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
-                    Access to ALL Funding Options{" "}
+                    Access to ALL Funding Options{' '}
                   </p>
                 </div>
 
                 <div className="pl-16">
                   <p
-                    className="text-white font-thin  md:text-[18px] leading-[30px]"
+                    className="font-thin leading-[30px] text-white md:text-[18px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
                     ● No-doc personal funding – Up to $150,000 <br />
@@ -622,26 +622,26 @@ const Funding = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeIn" delay={0.8}>
-              <div className="flex  flex-col items-start">
-                <div className="flex justify-center items-center gap-x-4">
+              <div className="flex flex-col items-start">
+                <div className="flex items-center justify-center gap-x-4">
                   <img src={CHECK} className="h-8" alt="" />
                   <p
-                    className="text-white  md:text-[20px]"
+                    className="text-white md:text-[20px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
-                    Exclusive Funding Network{" "}
+                    Exclusive Funding Network{' '}
                   </p>
                 </div>
 
                 <div className="pl-16">
                   <p
-                    className="text-white font-thin  md:text-[18px] leading-[30px]"
+                    className="font-thin leading-[30px] text-white md:text-[18px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
                     ● Tap into a network of lenders and funding products that
@@ -654,26 +654,26 @@ const Funding = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="fadeIn" delay={0.9}>
-              <div className="flex  flex-col items-start">
-                <div className="flex justify-center items-center gap-x-4">
+              <div className="flex flex-col items-start">
+                <div className="flex items-center justify-center gap-x-4">
                   <img src={CHECK} className="h-8" alt="" />
                   <p
-                    className="text-white  md:text-[20px]"
+                    className="text-white md:text-[20px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
-                    Charge What You Want{" "}
+                    Charge What You Want{' '}
                   </p>
                 </div>
 
                 <div className="pl-16">
                   <p
-                    className="text-white font-thin  md:text-[18px] leading-[30px]"
+                    className="font-thin leading-[30px] text-white md:text-[18px]"
                     style={{
-                      fontFamily: "Montserrat, serif",
-                      fontWeight: "medium",
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
                     }}
                   >
                     ● This is your business — you control the pricing. <br />●
@@ -687,10 +687,10 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden px-10 bg-white flex justify-center items-center pb-14">
-        <div className="flex justify-center items-center pt-5">
+      <section className="flex items-center justify-center overflow-hidden bg-white px-10 pb-14">
+        <div className="flex items-center justify-center pt-5">
           <div className="grid lg:grid-cols-2">
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               <ScrollAnimation animation="slideRight">
                 <div className="pb-10">
                   <img src={SYOB} className="md:h-[500px]" alt="" />
@@ -699,11 +699,11 @@ const Funding = () => {
             </div>
 
             <ScrollAnimation animation="slideLeft">
-              <div className="flex flex-col gap-y-5 md:px-10 lg:px-6 h-full justify-center ">
+              <div className="flex h-full flex-col justify-center gap-y-5 md:px-10 lg:px-6">
                 <div>
                   <h1
-                    className="text-[#E7A647] text-center lg:text-start text-4xl lg:text-[45px] leading-[50px] font-semibold"
-                    style={{ fontFamily: "Minion Pro, serif" }}
+                    className="text-center text-4xl font-semibold leading-[50px] text-[#E7A647] lg:text-start lg:text-[45px]"
+                    style={{ fontFamily: 'Minion Pro, serif' }}
                   >
                     Why This Business Is So Profitable?
                   </h1>
@@ -711,8 +711,8 @@ const Funding = () => {
 
                 <div>
                   <p
-                    className=" text-gray-700 md:text-[20px] text-start lg:text-start leading-[30px]"
-                    style={{ fontFamily: "Montserrat, serif" }}
+                    className="text-start leading-[30px] text-gray-700 md:text-[20px] lg:text-start"
+                    style={{ fontFamily: 'Montserrat, serif' }}
                   >
                     Most entrepreneurs don’t know where to turn for funding — or
                     they’ve been burned by funding companies that overpromise
@@ -728,16 +728,16 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden px-10 bg-black flex justify-center items-center py-10 pb-8">
-        <div className="flex justify-center items-center pt-6">
-          <div className="grid lg:grid-cols-2 grid-rows-1">
-            <div className="flex w-full justify-center items-ecnter  lg:pl-20 bg-">
-              <div className="flex flex-col gap-y-3 md:px-10 lg:px-5 justify-center">
+      <section className="flex items-center justify-center overflow-hidden bg-black px-10 py-10 pb-8">
+        <div className="flex items-center justify-center pt-6">
+          <div className="grid grid-rows-1 lg:grid-cols-2">
+            <div className="items-ecnter bg- flex w-full justify-center lg:pl-20">
+              <div className="flex flex-col justify-center gap-y-3 md:px-10 lg:px-5">
                 <ScrollAnimation animation="zoomIn">
                   <div>
                     <h1
-                      className="text-[#E7A647] text-center lg:text-start  text-4xl lg:text-[45px] leading-[50px] font-semibold"
-                      style={{ fontFamily: "Minion Pro, serif" }}
+                      className="text-center text-4xl font-semibold leading-[50px] text-[#E7A647] lg:text-start lg:text-[45px]"
+                      style={{ fontFamily: 'Minion Pro, serif' }}
                     >
                       Start Your Own Funding Business
                     </h1>
@@ -747,29 +747,29 @@ const Funding = () => {
                 <ScrollAnimation animation="slideUp">
                   <div>
                     <p
-                      className="text-white text-center lg:text-start font-thin md:text-[20px]"
+                      className="text-center font-thin text-white md:text-[20px] lg:text-start"
                       style={{
-                        fontFamily: "Montserrat, serif",
-                        fontWeight: "medium",
+                        fontFamily: 'Montserrat, serif',
+                        fontWeight: 'medium',
                       }}
                     >
-                      If you’ve been looking for a business model that:{" "}
+                      If you’ve been looking for a business model that:{' '}
                     </p>
                   </div>
                 </ScrollAnimation>
 
-                <div className="flex flex-col justify-start md:text-[20px] items-start gap-y-5">
+                <div className="flex flex-col items-start justify-start gap-y-5 md:text-[20px]">
                   <ScrollAnimation animation="slideRight" delay={0.2}>
-                    <div className="flex gap-3 justify-center items-center text-white">
+                    <div className="flex items-center justify-center gap-3 text-white">
                       <img src={CHECK} className="h-7" alt="" />
                       <div>
                         <p
                           style={{
-                            fontFamily: "Montserrat, serif",
-                            fontWeight: "medium",
+                            fontFamily: 'Montserrat, serif',
+                            fontWeight: 'medium',
                           }}
                         >
-                          {" "}
+                          {' '}
                           Has unlimited earning potential
                         </p>
                       </div>
@@ -777,50 +777,50 @@ const Funding = () => {
                   </ScrollAnimation>
 
                   <ScrollAnimation animation="slideRight" delay={0.4}>
-                    <div className="flex gap-3 justify-center items-center text-white">
+                    <div className="flex items-center justify-center gap-3 text-white">
                       <img src={CHECK} className="h-7" alt="" />
                       <div>
                         <p
                           style={{
-                            fontFamily: "Montserrat, serif",
-                            fontWeight: "medium",
+                            fontFamily: 'Montserrat, serif',
+                            fontWeight: 'medium',
                           }}
                         >
-                          {" "}
-                          Solves a real problem for business owners{" "}
+                          {' '}
+                          Solves a real problem for business owners{' '}
                         </p>
                       </div>
                     </div>
                   </ScrollAnimation>
 
                   <ScrollAnimation animation="slideRight" delay={0.6}>
-                    <div className="flex gap-3 justify-center items-center text-white">
+                    <div className="flex items-center justify-center gap-3 text-white">
                       <img src={CHECK} className="h-7" alt="" />
                       <div>
                         <p
                           style={{
-                            fontFamily: "Montserrat, serif",
-                            fontWeight: "medium",
+                            fontFamily: 'Montserrat, serif',
+                            fontWeight: 'medium',
                           }}
                         >
-                          {" "}
-                          Requires minimal overhead and setup costs{" "}
+                          {' '}
+                          Requires minimal overhead and setup costs{' '}
                         </p>
                       </div>
                     </div>
                   </ScrollAnimation>
 
                   <ScrollAnimation animation="slideRight" delay={0.8}>
-                    <div className="flex gap-3 justify-center items-center text-white">
+                    <div className="flex items-center justify-center gap-3 text-white">
                       <img src={CHECK} className="h-7" alt="" />
                       <div>
                         <p
                           style={{
-                            fontFamily: "Montserrat, serif",
-                            fontWeight: "medium",
+                            fontFamily: 'Montserrat, serif',
+                            fontWeight: 'medium',
                           }}
                         >
-                          {" "}
+                          {' '}
                           Works in ANY economy
                         </p>
                       </div>
@@ -828,13 +828,13 @@ const Funding = () => {
                   </ScrollAnimation>
 
                   <ScrollAnimation animation="slideUp">
-                    <div className="flex gap-3 justify-center items-center text-white">
+                    <div className="flex items-center justify-center gap-3 text-white">
                       <div>
                         <p
                           className="font-thin"
                           style={{
-                            fontFamily: "Montserrat, serif",
-                            fontWeight: "medium",
+                            fontFamily: 'Montserrat, serif',
+                            fontWeight: 'medium',
                           }}
                         >
                           Then this is your moment.
@@ -847,7 +847,7 @@ const Funding = () => {
             </div>
 
             <ScrollAnimation animation="slideLeft">
-              <div className="flex justify-center pt-8 lg:pt-0 items-center">
+              <div className="flex items-center justify-center pt-8 lg:pt-0">
                 <div className="">
                   <img src={SCI} className="md:h-[400px]" alt="" />
                 </div>
@@ -857,24 +857,24 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden px-5 justify-center items-center w-full flex bg-white min-h-[40vh]">
-        <div className="flex flex-col justify-center items-center text-[#E7A647] gap-y-5">
+      <section className="flex min-h-[40vh] w-full items-center justify-center overflow-hidden bg-white px-5">
+        <div className="flex flex-col items-center justify-center gap-y-5 text-[#E7A647]">
           <ScrollAnimation animation="zoomIn">
             <h1
-              className=" text-4xl text-center lg:text-start lg:text-[45px] font-semibold"
-              style={{ fontFamily: "Minion Pro, serif", fontWeight: 700 }}
+              className="text-center text-4xl font-semibold lg:text-start lg:text-[45px]"
+              style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}
             >
-              Spots Are Filling Fast – Secure Yours Today!{" "}
+              Spots Are Filling Fast – Secure Yours Today!{' '}
             </h1>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div className="pt-7">
               <button
                 onClick={handleButtonClick}
-                className="bg-[#E7A647] text-black px-3 py-3  rounded-[8px]"
+                className="rounded-[8px] bg-[#E7A647] px-3 py-3 text-black"
                 style={{
-                  fontFamily: "Montserrat, serif",
-                  fontWeight: "medium",
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
                 }}
               >
                 Your Journey Starts Here
@@ -882,11 +882,11 @@ const Funding = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="w-full h-[1px] mt-5 bg-black"></div>
+          <div className="mt-5 h-[1px] w-full bg-black"></div>
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Funding;
+export default Funding

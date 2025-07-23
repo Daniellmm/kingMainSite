@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi';
+import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi'
 import LOGO1 from '../assets/images/logo/homeLogo.png'
 import FundingLogo from '../assets/images/logo/fundingLogo.png'
 import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
@@ -9,29 +9,29 @@ import CCLLogo from '../assets/images/logo/ccl.png'
 import GGEILogo from '../assets/images/logo/ggei.png'
 // Add these imports for the dropdown page logos
 // import AboutLogo from '../assets/images/logo/aboutLogo.png' // Add your about logo
-// import CCLLogo from '../assets/images/logo/Logo.png' 
-import EPGLogo from '../assets/images/page-two/logo.png' 
-import ScrollAnimation from '../component/ScrollAnimation';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import CCLLogo from '../assets/images/logo/Logo.png'
+import EPGLogo from '../assets/images/page-two/logo.png'
+import ScrollAnimation from '../component/ScrollAnimation'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 const NavBar = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate()
+  const location = useLocation()
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   // Refs for animations
-  const navbarRef = useRef(null);
-  const logoRef = useRef(null);
-  const linksRef = useRef(null);
-  const buttonRef = useRef(null);
-  const mobileMenuRef = useRef(null);
-  const dropdownRef = useRef(null);
-  const dropdownToggleRef = useRef(null);
+  const navbarRef = useRef(null)
+  const logoRef = useRef(null)
+  const linksRef = useRef(null)
+  const buttonRef = useRef(null)
+  const mobileMenuRef = useRef(null)
+  const dropdownRef = useRef(null)
+  const dropdownToggleRef = useRef(null)
 
   // Updated logoMap to include dropdown pages
   const logoMap = {
@@ -41,59 +41,63 @@ const NavBar = () => {
     '/laserfund': LaserFundLogo,
     '/ggei': GGEILogo,
     // '/about': AboutLogo,
-    '/credit-card-liquidation': CCLLogo, 
+    '/credit-card-liquidation': CCLLogo,
     '/earn-protect-grow': EPGLogo,
     // { path: '/about', label: 'About Us' },
     // { path: '/credit card liquidation', label: 'Credit to Cash' },
-  };
+  }
 
-  const currentLogo = logoMap[location.pathname] || LOGO1;
+  const currentLogo = logoMap[location.pathname] || LOGO1
 
   // Dropdown menu items
   const dropdownItems = [
     { path: '/laserfund', label: 'TRADING' },
     { path: 'ggei', label: 'BECOME YOUR OWN BANK' },
-    { path: '/earn-protect-grow', label: 'Podcast' }
-  ];
+    { path: '/earn-protect-grow', label: 'Podcast' },
+  ]
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)
   }
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen(!isDropdownOpen)
   }
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && 
-          dropdownToggleRef.current && !dropdownToggleRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        dropdownToggleRef.current &&
+        !dropdownToggleRef.current.contains(event.target)
+      ) {
+        setIsDropdownOpen(false)
       }
-    };
+    }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside)
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setScrolled(true);
+        setScrolled(true)
       } else {
-        setScrolled(false);
+        setScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   // Initial load animations
   useEffect(() => {
@@ -101,8 +105,8 @@ const NavBar = () => {
     gsap.fromTo(
       navbarRef.current,
       { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
-    );
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
+    )
 
     // Staggered animation for logo and links
     gsap.fromTo(
@@ -114,23 +118,25 @@ const NavBar = () => {
         duration: 0.6,
         stagger: 0.1,
         delay: 0.3,
-        ease: "power2.out"
-      }
-    );
-  }, []);
+        ease: 'power2.out',
+      },
+    )
+  }, [])
 
   // Animation for navbar scroll state change
   useEffect(() => {
     if (navbarRef.current) {
       gsap.to(navbarRef.current, {
-        backgroundColor: scrolled ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.95)',
+        backgroundColor: scrolled
+          ? 'rgba(255, 255, 255, 1)'
+          : 'rgba(255, 255, 255, 0.95)',
         boxShadow: scrolled ? '0 4px 6px -1px rgba(0, 0, 0, 0.1)' : 'none',
         height: scrolled ? 'auto' : 'auto',
         duration: 0.3,
-        ease: "power2.out"
-      });
+        ease: 'power2.out',
+      })
     }
-  }, [scrolled]);
+  }, [scrolled])
 
   // Mobile menu animation
   useEffect(() => {
@@ -139,18 +145,25 @@ const NavBar = () => {
         gsap.fromTo(
           mobileMenuRef.current,
           { opacity: 0, y: -10 },
-          { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
-        );
+          { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' },
+        )
 
         // Animate the menu items
         gsap.fromTo(
           mobileMenuRef.current.querySelectorAll('li, div'),
           { opacity: 0, y: -10 },
-          { opacity: 1, y: 0, stagger: 0.05, duration: 0.3, delay: 0.1, ease: "power2.out" }
-        );
+          {
+            opacity: 1,
+            y: 0,
+            stagger: 0.05,
+            duration: 0.3,
+            delay: 0.1,
+            ease: 'power2.out',
+          },
+        )
       }
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   // Dropdown animation
   useEffect(() => {
@@ -159,129 +172,144 @@ const NavBar = () => {
         gsap.fromTo(
           dropdownRef.current,
           { opacity: 0, y: -10, scale: 0.95 },
-          { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "power2.out" }
-        );
+          { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: 'power2.out' },
+        )
 
         // Animate dropdown items
         gsap.fromTo(
           dropdownRef.current.querySelectorAll('li'),
           { opacity: 0, x: -10 },
-          { opacity: 1, x: 0, stagger: 0.05, duration: 0.2, delay: 0.1, ease: "power2.out" }
-        );
+          {
+            opacity: 1,
+            x: 0,
+            stagger: 0.05,
+            duration: 0.2,
+            delay: 0.1,
+            ease: 'power2.out',
+          },
+        )
       } else {
         gsap.to(dropdownRef.current, {
           opacity: 0,
           y: -10,
           scale: 0.95,
           duration: 0.15,
-          ease: "power2.in"
-        });
+          ease: 'power2.in',
+        })
       }
     }
-  }, [isDropdownOpen]);
+  }, [isDropdownOpen])
 
   const isActive = (path) => {
-    return location.pathname === path;
+    return location.pathname === path
   }
 
   const isDropdownActive = () => {
-    return dropdownItems.some(item => location.pathname === item.path);
+    return dropdownItems.some((item) => location.pathname === item.path)
   }
 
   const navigateTo = (path) => {
-    navigate(path);
-    setIsOpen(false);
-    setIsDropdownOpen(false);
+    navigate(path)
+    setIsOpen(false)
+    setIsDropdownOpen(false)
   }
 
   // Hover animation for nav links
   const handleLinkHover = (e, enter) => {
     gsap.to(e.target, {
       scale: enter ? 1.05 : 1,
-      color: enter ? '#E7A647' : isActive(e.target.getAttribute('data-path')) ? '#E7A647' : '#000',
-      duration: 0.2
-    });
-  };
+      color: enter
+        ? '#E7A647'
+        : isActive(e.target.getAttribute('data-path'))
+          ? '#E7A647'
+          : '#000',
+      duration: 0.2,
+    })
+  }
 
   // Button hover animation
   const handleButtonHover = (e, enter) => {
     gsap.to(e.target, {
       scale: enter ? 1.05 : 1,
       backgroundColor: enter ? '#E7A647' : 'transparent',
-      duration: 0.2
-    });
-  };
+      duration: 0.2,
+    })
+  }
 
   // Dropdown hover animation
   const handleDropdownHover = (e, enter) => {
     gsap.to(e.target, {
       scale: enter ? 1.05 : 1,
       color: enter ? '#E7A647' : isDropdownActive() ? '#E7A647' : '#000',
-      duration: 0.2
-    });
+      duration: 0.2,
+    })
 
     // Animate the chevron
-    const chevron = e.target.querySelector('.chevron-icon');
+    const chevron = e.target.querySelector('.chevron-icon')
     if (chevron) {
       gsap.to(chevron, {
-        rotate: enter ? 180 : (isDropdownOpen ? 180 : 0),
-        duration: 0.2
-      });
+        rotate: enter ? 180 : isDropdownOpen ? 180 : 0,
+        duration: 0.2,
+      })
     }
-  };
+  }
 
   return (
     <div
       ref={navbarRef}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white backdrop-blur-md shadow-md' : 'bg-white'
-        }`}
+      className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
+        scrolled ? 'bg-white shadow-md backdrop-blur-md' : 'bg-white'
+      }`}
     >
-      <div className='w-full bg-white text-black py-2 px-8 md:px-24'>
-        <div className='flex justify-between items-center'>
+      <div className="w-full bg-white px-8 py-2 text-black md:px-24">
+        <div className="flex items-center justify-between">
           {/* logo */}
-          <div ref={logoRef} className='cursor-pointer'>
+          <div ref={logoRef} className="cursor-pointer">
             <img
               src={currentLogo}
-              className='h-10 md:h-14'
+              className="h-10 md:h-14"
               alt={`${location.pathname.slice(1) || 'home'} logo`}
             />
           </div>
 
           {/* Menu Icon for Mobile */}
-          <div className='lg:hidden'>
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className='transition-transform duration-300'
+              className="transition-transform duration-300"
               onMouseEnter={(e) => {
                 gsap.to(e.target, {
                   rotate: isOpen ? 0 : 90,
                   scale: 1.1,
-                  duration: 0.3
-                });
+                  duration: 0.3,
+                })
               }}
               onMouseLeave={(e) => {
                 gsap.to(e.target, {
                   rotate: 0,
                   scale: 1,
-                  duration: 0.3
-                });
+                  duration: 0.3,
+                })
               }}
             >
               {isOpen ? (
-                <HiX className='text-3xl' />
+                <HiX className="text-3xl" />
               ) : (
-                <HiMenu className='text-3xl' />
+                <HiMenu className="text-3xl" />
               )}
             </button>
           </div>
 
           {/* Nav Links (hidden on mobile, shown on medium screens and up) */}
-          <div ref={linksRef} className='hidden lg:flex'>
-            <ul className='flex space-x-5 uppercase md:space-x-6 items-center'>
+          <div ref={linksRef} className="hidden lg:flex">
+            <ul className="flex items-center space-x-5 uppercase md:space-x-6">
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
                 data-path="/about"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/about') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/about') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/about')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -289,9 +317,12 @@ const NavBar = () => {
                 ABOUT US
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
                 data-path="/"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -299,9 +330,12 @@ const NavBar = () => {
                 Funding
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
                 data-path="/credit-card-liquidation"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/credit-card-liquidation') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/credit-card-liquidation') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/credit-card-liquidation')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -309,9 +343,12 @@ const NavBar = () => {
                 CREDIT TO CASH
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
                 data-path="/funding"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/funding') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/funding')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
@@ -319,29 +356,35 @@ const NavBar = () => {
                 SYOFB
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
                 data-path="/insurance"
-                className={` text-lg md: cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600 font-semibold' : ''}`}
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/insurance') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/insurance')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
                 Insurance
               </li>
-             
+
               {/* Dropdown Menu */}
-              <li className='relative'>
+              <li className="relative">
                 <div
                   ref={dropdownToggleRef}
-                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                  className={`text-lg cursor-pointer transition-colors flex items-center gap-1 ${isDropdownActive() ? 'text-yellow-600 font-semibold' : ''}`}
+                  style={{
+                    fontFamily: 'Montserrat, serif',
+                    fontWeight: 'medium',
+                  }}
+                  className={`flex cursor-pointer items-center gap-1 text-lg transition-colors ${isDropdownActive() ? 'font-semibold text-yellow-600' : ''}`}
                   onClick={toggleDropdown}
                   onMouseEnter={(e) => handleDropdownHover(e, true)}
                   onMouseLeave={(e) => handleDropdownHover(e, false)}
                 >
                   More
-                  <HiChevronDown 
-                    className={`chevron-icon transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
+                  <HiChevronDown
+                    className={`chevron-icon transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
                   />
                 </div>
 
@@ -349,15 +392,18 @@ const NavBar = () => {
                 {isDropdownOpen && (
                   <div
                     ref={dropdownRef}
-                    className='absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-[9999]'
+                    className="absolute left-0 top-full z-[9999] mt-2 w-48 rounded-lg border border-gray-100 bg-white py-2 shadow-lg"
                     style={{ zIndex: 9999 }}
                   >
                     <ul>
                       {dropdownItems.map((item, index) => (
                         <li
                           key={index}
-                          style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                          className={`px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-600 cursor-pointer transition-colors ${isActive(item.path) ? 'text-yellow-600 font-semibold bg-yellow-50' : ''}`}
+                          style={{
+                            fontFamily: 'Montserrat, serif',
+                            fontWeight: 'medium',
+                          }}
+                          className={`cursor-pointer px-4 py-2 text-gray-700 transition-colors hover:bg-gray-50 hover:text-yellow-600 ${isActive(item.path) ? 'bg-yellow-50 font-semibold text-yellow-600' : ''}`}
                           onClick={() => navigateTo(item.path)}
                         >
                           {item.label}
@@ -371,10 +417,13 @@ const NavBar = () => {
           </div>
 
           {/* contact us btn  */}
-          <div ref={buttonRef} className='hidden  lg:flex gap-x-5 border border-1 rounded-lg border-black'>
+          <div
+            ref={buttonRef}
+            className="border-1 hidden gap-x-5 rounded-lg border border-black lg:flex"
+          >
             <button
               style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-              className='bg-Btn text-black rounded-lg  md:text-sx hover:bg-[#E7A647] py-3 md:py-2 px-4 md:px-2 border-black transition-all duration-300'
+              className="bg-Btn md:text-sx rounded-lg border-black px-4 py-3 text-black transition-all duration-300 hover:bg-[#E7A647] md:px-2 md:py-2"
               onMouseEnter={(e) => handleButtonHover(e, true)}
               onMouseLeave={(e) => handleButtonHover(e, false)}
             >
@@ -387,61 +436,85 @@ const NavBar = () => {
         {isOpen && (
           <div
             ref={mobileMenuRef}
-            className='lg:hidden mt-4 backdrop-blur-md rounded-lg p-4 shadow-md'
+            className="mt-4 rounded-lg p-4 shadow-md backdrop-blur-md lg:hidden"
           >
-            <ul className='flex uppercase space-y-2 justify-center items-center flex-col'>
+            <ul className="flex flex-col items-center justify-center space-y-2 uppercase">
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={` text-lg cursor-pointer transition-colors ${isActive('/about') ? 'text-yellow-600 font-semibold' : ''}`}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/about') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/about')}
               >
                 ABOUT US
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={` text-lg cursor-pointer transition-colors ${isActive('/') ? 'text-yellow-600 font-semibold' : ''}`}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/')}
               >
                 Funding
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={`text-lg cursor-pointer transition-colors ${isActive('/credit-card-liquidation') ? 'text-yellow-600 font-semibold' : ''}`}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/credit-card-liquidation') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/credit-card-liquidation')}
               >
                 CREDIT TO CASH
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={`text-lg cursor-pointer transition-colors ${isActive('/funding') ? 'text-yellow-600 font-semibold' : ''}`}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/funding') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/funding')}
               >
                 SYOFB
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={` text-lg cursor-pointer transition-colors ${isActive('/insurance') ? 'text-yellow-600 font-semibold' : ''}`}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/insurance') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/insurance')}
               >
                 Insurance
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={` text-lg cursor-pointer transition-colors ${isActive('/laserfund') ? 'text-yellow-600 font-semibold' : ''}`}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/laserfund') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/laserfund')}
               >
                 Trading
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={` text-lg cursor-pointer transition-colors ${isActive('/ggei') ? 'text-yellow-600 font-semibold' : ''}`}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/ggei') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/ggei')}
               >
                 Become A Bank
               </li>
               <li
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className={` text-lg cursor-pointer transition-colors ${isActive('/earn-protect-grow') ? 'text-yellow-600 font-semibold' : ''}`}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/earn-protect-grow') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/earn-protect-grow')}
               >
                 PODCAST
@@ -462,10 +535,13 @@ const NavBar = () => {
                 ))}
               </div> */}
 
-              <div className='w-[189px] border border-1 rounded-lg border-black'>
+              <div className="border-1 w-[189px] rounded-lg border border-black">
                 <button
-                  style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                  className='bg-Btn text-black rounded-lg uppercase text- py-4 px-10  text-center border-black transition-transform duration-500'
+                  style={{
+                    fontFamily: 'Montserrat, serif',
+                    fontWeight: 'medium',
+                  }}
+                  className="bg-Btn text- rounded-lg border-black px-10 py-4 text-center uppercase text-black transition-transform duration-500"
                 >
                   Contact Us
                 </button>

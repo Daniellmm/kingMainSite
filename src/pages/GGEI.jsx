@@ -117,7 +117,6 @@ const GGEI = () => {
     { frame: SFS, name: SHAWN, isGene: false },
   ]
 
-
   const handleButtonClick = () => {
     window.open(FORM_URL, '_blank')
   }
@@ -203,11 +202,17 @@ const GGEI = () => {
 
           <div className="flex h-full items-start justify-center lg:w-[100%]">
             <ScrollAnimation animation="slideRight" delay={0.2}>
-
-              <div className='flex justify-center mt-3'>
-                <iframe className='lg:w-[850px] pb-5 w-[340px] md:w-[540px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div className="mt-3 flex justify-center">
+                <iframe
+                  className="h-[250px] w-[340px] rounded-2xl pb-5 md:w-[540px] lg:h-[415px] lg:w-[850px] lg:rounded-[50px]"
+                  src="https://www.youtube.com/embed/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
-
             </ScrollAnimation>
           </div>
 

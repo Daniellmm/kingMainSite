@@ -1,3 +1,4 @@
+/* This custom-header-bg class is used at many many sections, using this img as bacground */
 .custom-header-bg {
   background-image: url('/images/podcastbgDesktop.png');
   background-size: cover;
@@ -5,21 +6,21 @@
   opacity: 1;
 }
 
-.clientReviewCarousel{
-   background-image: url('/images/podcastbgDesktop.png');
+.clientReviewCarousel {
+  background-image: url('/images/podcastbgDesktop.png');
   background-size: cover;
   background-position: left;
   opacity: 1;
 }
 
-@media (min-width:768px){
-.clientReviewCarousel{
-  background-position: bottom;
-}
+@media (min-width: 768px) {
+  .clientReviewCarousel {
+    background-position: bottom;
+  }
 }
 
 .underline-after::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -6px; /* Adjust space from text */
   left: 0;
@@ -27,11 +28,9 @@
   height: 2px;
   background-color: #d3b158;
 }
-
-
 
 .underline-after-king::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -6px; /* Adjust space from text */
   left: 0;
@@ -40,14 +39,13 @@
   background-color: #d3b158;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .underline-after::after {
-  width: 120px;
-}
-.underline-after-king::after {
-  width: 105px;
-
-}
+    width: 120px;
+  }
+  .underline-after-king::after {
+    width: 105px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -64,24 +62,23 @@
   }
 }
 
-.nameKingGgei{
-     transform: translate(27px, 36px);
+.nameKingGgei {
+  transform: translate(27px, 36px);
 }
-.alexisNameGgei{
-         transform: translate(371px, 30px);
+.alexisNameGgei {
+  transform: translate(371px, 30px);
 }
 /* ============== MEDIA QUERIES FOR GGEI PAGE HEADER IMAGES ================ */
-  
+
 @media (min-width: 398px) {
   .kingHeaderGgei {
- left: 201px;
+    left: 201px;
   }
-  .alexisHeaderGgei{
+  .alexisHeaderGgei {
     left: -125px;
     top: 60px;
   }
 }
-
 
 @media (min-width: 420px) {
   .kingHeaderGgei {
@@ -92,18 +89,18 @@
 
 @media (min-width: 475px) {
   .kingHeaderGgei {
- left: 266px;
+    left: 266px;
   }
-    .alexisHeaderGgei {
-        left: -65px;
-        top: 68px;
-    }
+  .alexisHeaderGgei {
+    left: -65px;
+    top: 68px;
+  }
 }
 
 @media (min-width: 550px) {
   .alexisNameGgei {
-  transform: translate(369px, 30px);
-}
+    transform: translate(369px, 30px);
+  }
   .kingHeaderGgei {
     left: 306px;
     top: -249px;
@@ -116,34 +113,34 @@
 }
 
 @media (min-width: 575px) {
-    .kingHeaderGgei {
-             left: 344px;
-        top: -222px;
-    }
-        .alexisHeaderGgei {
-        left: -75px;
-        top: 84px;
-    }
+  .kingHeaderGgei {
+    left: 344px;
+    top: -222px;
+  }
+  .alexisHeaderGgei {
+    left: -75px;
+    top: 84px;
+  }
 }
 
 @media (min-width: 620px) {
-   .kingHeaderGgei {
-             left: 392px;
-    }
-    .alexisHeaderGgei {
-        left: -75px;
-        top: 99px;
-    }
+  .kingHeaderGgei {
+    left: 392px;
+  }
+  .alexisHeaderGgei {
+    left: -75px;
+    top: 99px;
+  }
 }
 
 @media (min-width: 768px) {
-    .nameKingGgei {
-        transform: translate(-25px, 71px);
-    }
-    .alexisNameGgei {
-        transform: translate(430px, 31px);
-    }
-  .bankSummitSection{
+  .nameKingGgei {
+    transform: translate(-25px, 71px);
+  }
+  .alexisNameGgei {
+    transform: translate(430px, 31px);
+  }
+  .bankSummitSection {
     min-width: 640px;
   }
   .kingHeaderGgei {
@@ -161,37 +158,34 @@
   .alexisHeaderGgei {
     width: 418px !important;
     height: 236px !important;
-            top: 40px;
-        left: 46px;
-
+    top: 40px;
+    left: 46px;
   }
 }
 
 @media (min-width: 814px) {
-
-    .kingHeaderGgei {
-        left: 455px;
-    }
+  .kingHeaderGgei {
+    left: 455px;
+  }
 }
 
 @media (min-width: 1024px) {
-
   .slantedDivGgei {
     transform: translate(189px, -42px) rotate(45deg);
   }
-    .nameKingGgei {
-        transform: translate(-84px, 260px);
-    }
-    .alexisNameGgei {
-        transform: translate(576px, 38px);
-    }
+  .nameKingGgei {
+    transform: translate(-84px, 260px);
+  }
+  .alexisNameGgei {
+    transform: translate(576px, 38px);
+  }
 
-    .kingHeaderGgei {
-        width: 600px !important;
-        left: 475px;
-        top: -645px;
-        height: 300px !important;
-    }
+  .kingHeaderGgei {
+    width: 600px !important;
+    left: 475px;
+    top: -645px;
+    height: 300px !important;
+  }
 
   .kingHeaderGgeiImg {
     width: 441px;
@@ -200,12 +194,12 @@
     margin-top: 0rem;
   }
 
-    .alexisHeaderGgei {
-        width: 600px !important;
-        height: 300px !important;
-        top: -70px;
-        left: 262px;
-    }
+  .alexisHeaderGgei {
+    width: 600px !important;
+    height: 300px !important;
+    top: -70px;
+    left: 262px;
+  }
   .alexisHeaderGgeiImg {
     width: 267px;
     height: 337px;
@@ -220,105 +214,104 @@
 }
 
 @media (min-width: 1160px) {
-    .kingHeaderGgei {
-        left: 602px;
-        top: -629px;
-    }
-       .alexisHeaderGgei {
-        top: -46px;
-        left: 350px;
-    }
+  .kingHeaderGgei {
+    left: 602px;
+    top: -629px;
+  }
+  .alexisHeaderGgei {
+    top: -46px;
+    left: 350px;
+  }
 }
 
 @media (min-width: 1300px) {
-    .alexisHeaderGgei {
-        top: -58px;
-        left: 421px;
-    }
+  .alexisHeaderGgei {
+    top: -58px;
+    left: 421px;
+  }
 
-        .kingHeaderGgei {
-        left: 563px;
-        top: -584px;
-    }
-        .slantedDivGgei {
-        transform: translate(224px, -48px) rotate(45deg);
-        width: 643px !important;
-    }
+  .kingHeaderGgei {
+    left: 563px;
+    top: -584px;
+  }
+  .slantedDivGgei {
+    transform: translate(224px, -48px) rotate(45deg);
+    width: 643px !important;
+  }
 }
 
 @media (min-width: 1380px) {
-    .kingHeaderGgei {
-        left: 604px;
-        top: -592px;
-    }
-        .alexisHeaderGgei {
-        top: -59px;
-        left: 461px;
-    }
+  .kingHeaderGgei {
+    left: 604px;
+    top: -592px;
+  }
+  .alexisHeaderGgei {
+    top: -59px;
+    left: 461px;
+  }
 }
 
 @media (min-width: 1497px) {
-    .kingHeaderGgei {
-        left: 776px;
-        top: -563px;
-    }
+  .kingHeaderGgei {
+    left: 776px;
+    top: -563px;
+  }
 
-    .alexisHeaderGgei {
-        top: -8px;
-        left: 584px;
-    }
+  .alexisHeaderGgei {
+    top: -8px;
+    left: 584px;
+  }
 }
 
 @media (min-width: 1600px) {
-      .alexisHeaderGgei{
-        top: -12px;
-        left: 660px;
-    }
-        .alexisHeaderGgei {
-        top: -12px;
-        left: 660px;
-    }
+  .alexisHeaderGgei {
+    top: -12px;
+    left: 660px;
+  }
+  .alexisHeaderGgei {
+    top: -12px;
+    left: 660px;
+  }
 }
 
 @media (min-width: 1680px) {
-    .kingHeaderGgei {
-        left: 1097px;
-        top: -528px;
-    }
-.alexisHeaderGgei {
-        top: -14px;
-        left: 590px;
-    }
+  .kingHeaderGgei {
+    left: 1097px;
+    top: -528px;
+  }
+  .alexisHeaderGgei {
+    top: -14px;
+    left: 590px;
+  }
 }
 
 @media (min-width: 2000px) {
-  .bankSummitSection{
+  .bankSummitSection {
     width: 2200px;
   }
-      .slantedDivGgei {
-        transform: translate(246px, -48px) rotate(45deg);
-        width: 762px !important;
-        height: 348px;
-    }
-    .kingHeaderGgei {
-        left: 1279px;
-        top: -523px;
-    }
+  .slantedDivGgei {
+    transform: translate(246px, -48px) rotate(45deg);
+    width: 762px !important;
+    height: 348px;
+  }
+  .kingHeaderGgei {
+    left: 1279px;
+    top: -523px;
+  }
 
-    .alexisHeaderGgei {
-        top: -20px;
-        left: 760px;
-    }
-
+  .alexisHeaderGgei {
+    top: -20px;
+    left: 760px;
+  }
 }
 
 @media (min-width: 2150px) {
-        .kingHeaderGgei {
-        left: 1464px;
-        top: -523px;
-    }
-     .alexisHeaderGgei {
-        top: -13px;
-        left: 832px;
-    }
+  .kingHeaderGgei {
+    left: 1464px;
+    top: -523px;
+  }
+  .alexisHeaderGgei {
+    top: -13px;
+    left: 832px;
+  }
 }

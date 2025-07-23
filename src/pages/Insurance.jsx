@@ -90,9 +90,9 @@ const Insurance = () => {
 
   return (
     <>
-      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-10 pb-8 pt-12 md:pb-8 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px] md:pt-16  md:h-[600px] lg:h-[772px]">
+      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-10 pb-8 pt-12 md:h-[600px] md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px] md:pb-8 md:pt-16 lg:h-[772px]">
         {/* <div className="flex flex-col items-center justify-center pt-10 md:flex-row-reverse"> */}
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pt-4 gap-y-4 gap-x-0 md:mt-12 lg:mt-20 md:max-w-[800px] md:flex-row-reverse  md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-x-0 gap-y-4 pt-4 md:mt-12 md:max-w-[800px] md:flex-row-reverse md:pl-4 md:pr-4 md:pt-0 lg:mt-20 lg:max-w-[1800px]">
           <ScrollAnimation animation="zoomIn" delay={0.3}>
             <img
               src={insuranceHeaderImg}
@@ -108,7 +108,7 @@ const Insurance = () => {
               loading="lazy"
             />
           </ScrollAnimation>
-          <div className="flex flex-col items-center lg:pl-8 xl-pl-0 md:w-full md:flex-1 md:items-start md:self-start lg:w-1/2 xl:flex-none">
+          <div className="xl-pl-0 flex flex-col items-center md:w-full md:flex-1 md:items-start md:self-start lg:w-1/2 lg:pl-8 xl:flex-none">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
               <div className="pb-2 pt-4">
                 <h1

@@ -2,57 +2,57 @@ import React from 'react'
 import LOGO from '../assets/images/page-one/logoHto.png'
 import CARD1 from '../assets/images/page-one/card.png'
 import { infoCards, steps } from './constant'
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
-const FORM_URL = "https://api.leadconnectorhq.com/widget/bookings/liquidation-htof"
+const FORM_URL =
+  'https://api.leadconnectorhq.com/widget/bookings/liquidation-htof'
 
 const Hto = () => {
-
   // Function to handle button clicks
   const handleButtonClick = () => {
-    window.open(FORM_URL, '_blank');
-  };
+    window.open(FORM_URL, '_blank')
+  }
 
   const stepVariant = {
     hidden: { opacity: 0, y: 50 },
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.2 }
-    })
-  };
+      transition: { delay: i * 0.2 },
+    }),
+  }
 
   const dotVariant = {
     hidden: { scale: 0 },
     visible: (i) => ({
       scale: 1,
-      transition: { delay: i * 0.15 }
-    })
-  };
+      transition: { delay: i * 0.15 },
+    }),
+  }
 
   const lineVariant = {
     hidden: { scaleX: 0 },
     visible: {
       scaleX: 1,
-      transition: { duration: 0.8, ease: 'easeInOut' }
-    }
-  };
+      transition: { duration: 0.8, ease: 'easeInOut' },
+    },
+  }
 
   const lineVariant2 = {
     hidden: { scaleY: -2 },
     visible: {
       scaleY: 1,
       // transition: { duration: 0.8, ease: 'easeInOut' }
-    }
-  };
+    },
+  }
 
   const dotVariant2 = {
     hidden: { scale: 0 },
     visible: {
       scale: 1,
       // transition: { delay: 0.15 }
-    }
-  };
+    },
+  }
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -65,7 +65,7 @@ const Hto = () => {
         ease: 'easeOut',
       },
     }),
-  };
+  }
 
   const fadeInRight = {
     hidden: { opacity: 0, x: 40 },
@@ -73,7 +73,7 @@ const Hto = () => {
       opacity: 1,
       x: 0,
     },
-  };
+  }
 
   const scaleFade = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -85,13 +85,12 @@ const Hto = () => {
         duration: 0.5,
       },
     }),
-  };
+  }
 
   return (
     <>
-      <main className='overflow-hidden'>
-
-        <section className='lg:px-5 px-5 hero min-h-[80vh] bg-black lg:min-h-[100vh]'>
+      <main className="overflow-hidden">
+        <section className="hero min-h-[80vh] bg-black px-5 lg:min-h-[100vh] lg:px-5">
           <header>
             {/* <div>
               <nav>
@@ -99,46 +98,55 @@ const Hto = () => {
               </nav>
             </div> */}
 
-            <div className='flex flex-col pt-16 justify-center items-center'>
-              <div className='lg:w-2/3 gap-y-4 pt-10 lg:pt-0 flex flex-col items-center justify-center'>
+            <div className="flex flex-col items-center justify-center pt-16">
+              <div className="flex flex-col items-center justify-center gap-y-4 pt-10 lg:w-2/3 lg:pt-0">
                 <motion.h1
-                  className='lg:text-7xl text-5xl text-center uppercase lg:pt-10 font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent'
+                  className="bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text  text-center text-5xl font-bold uppercase text-transparent lg:pt-10 lg:text-7xl"
                   style={{ fontFamily: 'Minion Pro, serif' }}
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  Turn Your Available Credit Into Cash...
+                  Turn Your Available Credit{' '}<span className='bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text  text-center text-5xl font-bold uppercase  lg:pt-10 lg:text-7xl'>
+                    Into Cash...
+                    </span>
                 </motion.h1>
                 <motion.p
-                  className='text-[#999999] text-lg uppercase text-center'
+                  className="text-center text-lg uppercase text-[#999999]"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   custom={1}
-                  style={{ fontFamily: 'Minion Pro, serif', fontWeight: 'medium' }}
+                  style={{
+                    fontFamily: 'Minion Pro, serif',
+                    fontWeight: 'medium',
+                  }}
                 >
-                  Turn 100% of Your Credit Card Limits into cash deposited into your bank account Without the Stress
+                  Turn 100% of Your Credit Card Limits into cash deposited into
+                  your bank account Without the Stress
                 </motion.p>
 
-
                 <motion.div
-                  className='flex  gap-2 justify-center items-center  w-full'
+                  className="flex w-full items-center justify-center gap-2"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   custom={2}
-                > 
+                >
                   <button
-                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                    className="px-6 py-3 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
+                      background: "linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)",
+                    }}
+                    className="rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] px-6 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
                     onClick={() => {
                       document.getElementById('yt-sec').scrollIntoView({
-                        behavior: 'smooth'
-                      });
+                        behavior: 'smooth',
+                      })
                     }}
                   >
                     Learn More
@@ -146,19 +154,23 @@ const Hto = () => {
 
                   <button
                     onClick={handleButtonClick}
-                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                    className="lg:px-6 py-3 px-3 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
+                      background: "linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)",
+                    }}
+                    className="rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] px-3 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg lg:px-6"
+                  >
                     Book Appointment Now
                   </button>
                 </motion.div>
               </div>
 
-
-              <div className='lg:w-4/6 flex flex-col justify-center items-center'>
+              <div className="flex flex-col items-center justify-center lg:w-4/6">
                 <motion.img
                   src={CARD1}
                   alt=""
-                  className='w-auto lg:h-[580px] pt-16 lg:pt-0'
+                  className="w-auto pt-16 lg:h-[580px] lg:pt-0"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -170,65 +182,80 @@ const Hto = () => {
           </header>
         </section>
 
-        <section id='yt-sec' className='lg:px-20 px-5 pt-20 pb-10 vid-sec min-h-[60vh]'>
-          <div className='flex flex-col gap-y-10 lg:flex-row justify-evenly items-center'>
-
+        <section
+          id="yt-sec"
+          className="vid-sec min-h-[60vh] px-5 pb-10 pt-20 lg:px-20"
+        >
+          <div className="flex flex-col items-center justify-evenly gap-y-10 lg:flex-row">
             <motion.div
-              className='lg:w-2/6 flex justify-center items-center'
+              className="flex items-center justify-center lg:w-2/6"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               <p
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className='text-black text-center lg:text-start text-lg'>
-                Need fast access to cash? Our Credit Card Liquidation service helps you convert your entire credit limit
-                into spendable cash—without losing the rewards and points you’ve earned.
-                <br /><br />
-                This is a 100% done-for-you service designed for entrepreneurs, business owners, and high performers
-                who want cash flow without friction.
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className="text-center text-lg text-black lg:text-start"
+              >
+                Need fast access to cash? Our Credit Card Liquidation service
+                helps you convert your entire credit limit into spendable
+                cash—without losing the rewards and points you’ve earned.
+                <br />
+                <br />
+                This is a 100% done-for-you service designed for entrepreneurs,
+                business owners, and high performers who want cash flow without
+                friction.
               </p>
             </motion.div>
 
-            <div className='flex flex-col justify-center items-center  h-full'>
+            <div className="flex h-full flex-col items-center justify-center">
               <motion.div
-                className=' w-[340px] flex justify-center items-center '
+                className="flex w-[340px] items-center justify-center"
                 variants={scaleFade}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
               />
 
-              <iframe className='lg:w-[500px] w-[340px] h-[350px] pb-5 rounded-2xl md:rounded-[50px]'
-                src="https://www.youtube.com/embed/GZ36JbqF2v4?si=g4nBtrnNITjhT66F" title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe
+                className="h-[350px] w-[340px] rounded-2xl pb-5 md:rounded-[50px] lg:w-[500px]"
+                src="https://www.youtube.com/embed/GZ36JbqF2v4?si=g4nBtrnNITjhT66F"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
-
           </div>
         </section>
 
-        <section className='lg:px-20 px-5 pt-20 card-sec pb-10 min-h-[80vh] bg-black'>
-          <div className='flex flex-col justify-start items-start gap-y-20'>
+        <section className="card-sec min-h-[80vh] bg-black px-5 pb-10 pt-20 lg:px-20">
+          <div className="flex flex-col items-start justify-start gap-y-20">
             <div>
               <motion.h1
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className='text-[#D09A25] text-center lg:text-start text-4xl lg:text-6xl'
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                className="text-center text-4xl bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-transparent lg:text-start lg:text-6xl"
+                style={{ fontFamily: 'Minion Pro, serif',
+                  fontWeight: 'bold'
+                 }}
               >
                 Why Choose Our Credit Card Liquidation Service?
               </motion.h1>
             </div>
 
-            <div className='flex gap-10 flex-col lg:flex-row justify-center items-center w-full'>
+            <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row">
               {infoCards.map((card, i) => (
                 <motion.div
                   key={card.title}
-                  className='h-[250px] w-[250px] gap-2 rounded-2xl p-7 flex flex-col'
+                  className="flex h-[250px] w-[250px] flex-col gap-2 rounded-2xl p-7"
                   style={{
                     background: 'linear-gradient(to bottom, #363636, #202020)',
                   }}
@@ -238,26 +265,42 @@ const Hto = () => {
                   viewport={{ once: true }}
                   custom={i}
                 >
-                  <img src={card.imgPath} className='size-14' alt={card.title} />
-                  <h1 className='text-white' style={{ fontFamily: 'Minion Pro, serif' }}>{card.title}</h1>
-                  <p className='text-[#999999]' style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>{card.desc}</p>
+                  <img
+                    src={card.imgPath}
+                    className="size-14"
+                    alt={card.title}
+                  />
+                  <h1
+                    className="text-white"
+                    style={{ fontFamily: 'Minion Pro, serif' }}
+                  >
+                    {card.title}
+                  </h1>
+                  <p
+                    className="text-[#999999]"
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
+                    }}
+                  >
+                    {card.desc}
+                  </p>
                 </motion.div>
               ))}
-
             </div>
           </div>
         </section>
 
-        <section className='lg:px-20 px-5 pt-20 step-sec pb-32 min-h-[70vh] timeline-part'>
-          <div className='flex flex-col justify-center items-center gap-20'>
+        <section className="step-sec timeline-part min-h-[70vh] px-5 pb-32 pt-20 lg:px-20">
+          <div className="flex flex-col items-center justify-center gap-20">
             {/* Title */}
-            <div className='flex justify-start items-start w-full'>
+            <div className="flex w-full items-start justify-start">
               <motion.h1
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className='text-[#D09A25] text-center lg:text-start text-4xl lg:text-6xl'
+                className="text-center text-4xl bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-transparent lg:text-start lg:text-6xl"
                 style={{ fontFamily: 'Minion Pro, serif' }}
               >
                 How It Works (In 5 Simple Steps)
@@ -265,34 +308,49 @@ const Hto = () => {
             </div>
 
             {/* Step Descriptions with Timeline */}
-            <div className='w-full'>
+            <div className="w-full">
               {/* Desktop Layout */}
-              <div className='hidden lg:block'>
+              <div className="hidden lg:block">
                 {/* Desktop Steps */}
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className='flex flex-row justify-evenly w-full items-center gap-10'
+                  className="flex w-full flex-row items-center justify-evenly gap-10"
                 >
                   {steps.map((step, i) => (
                     <motion.div
                       key={step.number}
-                      className='flex flex-col justify-center items-start text-left'
+                      className="flex flex-col items-start justify-center text-left"
                       custom={i}
                       variants={stepVariant}
                     >
-                      <h1 className='text-[#D09A25] text-6xl' style={{ fontFamily: 'Minion Pro, serif' }}>{step.number}</h1>
-                      <h1 className='text-black font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.title}</h1>
-                      <h1 className='text-black font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.subtitle}</h1>
+                      <h1
+                        className="text-6xl text-[#D09A25]"
+                        style={{ fontFamily: 'Minion Pro, serif' }}
+                      >
+                        {step.number}
+                      </h1>
+                      <h1
+                        className="font-light tracking-wider text-black"
+                        style={{ fontFamily: 'Minion Pro, serif' }}
+                      >
+                        {step.title}
+                      </h1>
+                      <h1
+                        className="font-light tracking-wider text-black"
+                        style={{ fontFamily: 'Minion Pro, serif' }}
+                      >
+                        {step.subtitle}
+                      </h1>
                     </motion.div>
                   ))}
                 </motion.div>
 
                 {/* Horizontal Line & Dots */}
-                <div className='relative w-full flex flex-row items-center justify-between px-10 mt-10'>
+                <div className="relative mt-10 flex w-full flex-row items-center justify-between px-10">
                   <motion.div
-                    className='absolute top-1/2 left-[40px] right-[40px] h-0.5 bg-[#D09A25] z-0 origin-left'
+                    className="absolute left-[40px] right-[40px] top-1/2 z-0 h-0.5 origin-left bg-[#D09A25]"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -301,7 +359,7 @@ const Hto = () => {
                   {steps.map((_, i) => (
                     <motion.div
                       key={i}
-                      className='w-4 h-4 bg-[#D09A25] rounded-full z-10'
+                      className="z-10 h-4 w-4 rounded-full bg-[#D09A25]"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
@@ -310,28 +368,27 @@ const Hto = () => {
                     />
                   ))}
                 </div>
-
               </div>
 
               {/* Mobile Layout */}
-              <div className='lg:hidden flex'>
+              <div className="flex lg:hidden">
                 {/* Timeline Dots and Lines */}
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className='flex flex-col items-center mr-6 pt-2'
+                  className="mr-6 flex flex-col items-center pt-2"
                 >
                   {steps.map((_, i) => (
-                    <div key={i} className='flex flex-col items-center'>
+                    <div key={i} className="flex flex-col items-center">
                       <motion.div
-                        className='w-4 h-4 bg-[#D09A25] rounded-full z-10'
+                        className="z-10 h-4 w-4 rounded-full bg-[#D09A25]"
                         custom={i}
                         variants={dotVariant}
                       />
                       {i < steps.length - 1 && (
                         <motion.div
-                          className='w-0.5 h-16 bg-[#D09A25] my-4 origin-top'
+                          className="my-4 h-16 w-0.5 origin-top bg-[#D09A25]"
                           variants={lineVariant}
                         />
                       )}
@@ -344,46 +401,59 @@ const Hto = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className='flex flex-col gap-8'
+                  className="flex flex-col gap-8"
                 >
                   {steps.map((step, i) => (
                     <motion.div
                       key={step.number}
-                      className='flex flex-col justify-center items-start text-left min-h-[80px]'
+                      className="flex min-h-[80px] flex-col items-start justify-center text-left"
                       custom={i}
                       variants={stepVariant}
                     >
-                      <h1 className='text-[#D09A25] text-4xl' style={{ fontFamily: 'Minion Pro, serif' }}>{step.number}</h1>
-                      <h1 className='text-black font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.title}</h1>
-                      <h1 className='text-black font-light tracking-wider' style={{ fontFamily: 'Minion Pro, serif' }}>{step.subtitle}</h1>
+                      <h1
+                        className="text-4xl text-[#D09A25]"
+                        style={{ fontFamily: 'Minion Pro, serif' }}
+                      >
+                        {step.number}
+                      </h1>
+                      <h1
+                        className="font-light tracking-wider text-black"
+                        style={{ fontFamily: 'Minion Pro, serif' }}
+                      >
+                        {step.title}
+                      </h1>
+                      <h1
+                        className="font-light tracking-wider text-black"
+                        style={{ fontFamily: 'Minion Pro, serif' }}
+                      >
+                        {step.subtitle}
+                      </h1>
                     </motion.div>
                   ))}
                 </motion.div>
               </div>
-
             </div>
           </div>
         </section>
 
-        <section className='lg:px-20 px-5 pt-20 who-sec step-sec pb-32 min-h-[60vh] bg-black'>
-          <div className='flex flex-col lg:px-14 justify-center items-center gap-20'>
+        <section className="who-sec step-sec min-h-[60vh] bg-black px-5 pb-32 pt-20 lg:px-20">
+          <div className="flex flex-col items-center justify-center gap-20 lg:px-14">
             {/* Title */}
-            <div className='flex lg:justify-start lg:items-start justify-center items-center w-full'>
+            <div className="flex w-full items-center justify-center lg:items-start lg:justify-start">
               <motion.h1
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className='text-[#D09A25] text-center lg:text-start text-4xl lg:text-6xl'
+                className="text-center text-4xl bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-transparent lg:text-start lg:text-6xl"
                 style={{ fontFamily: 'Minion Pro, serif' }}
               >
                 Who Is This For?
               </motion.h1>
             </div>
 
-            <div className='flex flex-col lg:flex-row justify-start items-start w-full lg:justify-center lg:items-center gap-10'>
-
-              <div className='flex flex-row-reverse lg:flex-row justify-center items-center gap-10'>
+            <div className="flex w-full flex-col items-start justify-start gap-10 lg:flex-row lg:items-center lg:justify-center">
+              <div className="flex flex-row-reverse items-center justify-center gap-10 lg:flex-row">
                 <div>
                   <motion.h1
                     variants={fadeInRight}
@@ -391,37 +461,41 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.2 }}
                     viewport={{ once: true }}
-                    className='text-white text-2xl'
-                    style={{ fontFamily: 'Minion Pro, serif' }}>
+                    className="text-2xl text-white"
+                    style={{ fontFamily: 'Minion Pro, serif' }}
+                  >
                     Business owners looking to scale
                   </motion.h1>
                 </div>
 
                 <div>
-                  <div className='flex flex-col-reverse justify-center items-center'>
+                  <div className="flex flex-col-reverse items-center justify-center">
                     <motion.div
                       variants={dotVariant2}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ delay: 0.2, duration: 0.4, ease: 'easeInOut' }}
+                      transition={{
+                        delay: 0.2,
+                        duration: 0.4,
+                        ease: 'easeInOut',
+                      }}
                       viewport={{ once: true }}
-                      className='border-[#D09A25] rounded-full size-7 border-2'>
-                    </motion.div>
+                      className="size-7 rounded-full border-2 border-[#D09A25]"
+                    ></motion.div>
 
                     <motion.div
                       variants={lineVariant2}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ delay: 0.3, duration: 0.3, }}
+                      transition={{ delay: 0.3, duration: 0.3 }}
                       viewport={{ once: true }}
-                      className='border-[#D09A25] h-20 border'>
-                    </motion.div>
+                      className="h-20 border border-[#D09A25]"
+                    ></motion.div>
                   </div>
                 </div>
               </div>
 
-
-              <div className='flex flex-row-reverse lg:flex-row justify-center items-center gap-10'>
+              <div className="flex flex-row-reverse items-center justify-center gap-10 lg:flex-row">
                 <div>
                   <motion.h1
                     variants={fadeInRight}
@@ -429,36 +503,41 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.4 }}
                     viewport={{ once: true }}
-                    className='text-white text-2xl'
-                    style={{ fontFamily: 'Minion Pro, serif' }}>
+                    className="text-2xl text-white"
+                    style={{ fontFamily: 'Minion Pro, serif' }}
+                  >
                     Entrepreneurs needing fast capital
                   </motion.h1>
                 </div>
 
                 <div>
-                  <div className='flex flex-col justify-center items-center'>
+                  <div className="flex flex-col items-center justify-center">
                     <motion.div
                       variants={dotVariant2}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ delay: 0.4, duration: 0.6, ease: 'easeInOut' }}
+                      transition={{
+                        delay: 0.4,
+                        duration: 0.6,
+                        ease: 'easeInOut',
+                      }}
                       viewport={{ once: true }}
-                      className='border-[#D09A25] rounded-full size-7 border-2'>
-                    </motion.div>
+                      className="size-7 rounded-full border-2 border-[#D09A25]"
+                    ></motion.div>
 
                     <motion.div
                       variants={lineVariant2}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ delay: 0.4, duration: 0.4, }}
+                      transition={{ delay: 0.4, duration: 0.4 }}
                       viewport={{ once: true }}
-                      className='border-[#D09A25] h-20 border'>
-                    </motion.div>
+                      className="h-20 border border-[#D09A25]"
+                    ></motion.div>
                   </div>
                 </div>
               </div>
 
-              <div className='flex flex-row-reverse lg:flex-row justify-center items-center gap-10'>
+              <div className="flex flex-row-reverse items-center justify-center gap-10 lg:flex-row">
                 <div>
                   <motion.h1
                     variants={fadeInRight}
@@ -466,36 +545,41 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.6 }}
                     viewport={{ once: true }}
-                    className='text-white text-2xl'
-                    style={{ fontFamily: 'Minion Pro, serif' }}>
+                    className="text-2xl text-white"
+                    style={{ fontFamily: 'Minion Pro, serif' }}
+                  >
                     Individuals who want to leverage credit smartly
                   </motion.h1>
                 </div>
 
                 <div>
-                  <div className='flex flex-col-reverse justify-center items-center'>
+                  <div className="flex flex-col-reverse items-center justify-center">
                     <motion.div
                       variants={dotVariant2}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ delay: 0.6, duration: 0.6, ease: 'easeInOut' }}
+                      transition={{
+                        delay: 0.6,
+                        duration: 0.6,
+                        ease: 'easeInOut',
+                      }}
                       viewport={{ once: true }}
-                      className='border-[#D09A25] rounded-full size-7 border-2'>
-                    </motion.div>
+                      className="size-7 rounded-full border-2 border-[#D09A25]"
+                    ></motion.div>
 
                     <motion.div
                       variants={lineVariant2}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ delay: 0.5, duration: 0.5, }}
+                      transition={{ delay: 0.5, duration: 0.5 }}
                       viewport={{ once: true }}
-                      className='border-[#D09A25] h-20 border'>
-                    </motion.div>
+                      className="h-20 border border-[#D09A25]"
+                    ></motion.div>
                   </div>
                 </div>
               </div>
 
-              <div className='flex lg:hidden flex-row-reverse lg:flex-row justify-center items-center gap-10'>
+              <div className="flex flex-row-reverse items-center justify-center gap-10 lg:hidden lg:flex-row">
                 <div>
                   <motion.h1
                     variants={fadeInRight}
@@ -503,57 +587,63 @@ const Hto = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ delay: 0.8 }}
-                    className='text-white text-2xl'
-                    style={{ fontFamily: 'Minion Pro, serif' }}>
-                    Anyone seeking extra liquidity without disrupting their credit usage
+                    className="text-2xl text-white"
+                    style={{ fontFamily: 'Minion Pro, serif' }}
+                  >
+                    Anyone seeking extra liquidity without disrupting their
+                    credit usage
                   </motion.h1>
                 </div>
 
                 <div>
-                  <div className='flex flex-col justify-center items-center'>
+                  <div className="flex flex-col items-center justify-center">
                     <motion.div
                       variants={dotVariant2}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ delay: 0.8, duration: 0.25, ease: 'easeInOut' }}
+                      transition={{
+                        delay: 0.8,
+                        duration: 0.25,
+                        ease: 'easeInOut',
+                      }}
                       viewport={{ once: true }}
-                      className='border-[#D09A25] rounded-full size-7 border-2'>
-                    </motion.div>
+                      className="size-7 rounded-full border-2 border-[#D09A25]"
+                    ></motion.div>
 
                     <motion.div
                       variants={lineVariant2}
                       initial="hidden"
                       whileInView="visible"
-                      transition={{ delay: 0.6, duration: 0.6, }}
+                      transition={{ delay: 0.6, duration: 0.6 }}
                       viewport={{ once: true }}
-                      className='border-[#D09A25] h-20 border'>
-                    </motion.div>
+                      className="h-20 border border-[#D09A25]"
+                    ></motion.div>
                   </div>
                 </div>
               </div>
 
-              <div className='hidden lg:block'>
+              <div className="hidden lg:block">
                 <motion.h1
                   variants={fadeInRight}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   transition={{ delay: 0.8 }}
-                  className='text-white text-2xl'
-                  style={{ fontFamily: 'Minion Pro, serif' }}>
-                  Anyone seeking extra liquidity <br /> without disrupting their credit usage
+                  className="text-2xl text-white"
+                  style={{ fontFamily: 'Minion Pro, serif' }}
+                >
+                  Anyone seeking extra liquidity <br /> without disrupting their
+                  credit usage
                 </motion.h1>
               </div>
             </div>
-
-
           </div>
         </section>
 
-        <section className='lg:px-20 px-5 pt-20  last-sec flex flex-col justify-center items-center pb-32 lg:min-h-[10vh] bg-black'>
-          <div className='flex flex-col justify-center items-center gap-8'>
+        <section className="last-sec flex flex-col items-center justify-center bg-black px-5 pb-32 pt-20 lg:min-h-[10vh] lg:px-20">
+          <div className="flex flex-col items-center justify-center gap-8">
             <motion.h1
-              className='text-[#D09A25] text-4xl lg:text-6xl'
+              className="text-4xl bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-transparent lg:text-6xl"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -564,7 +654,7 @@ const Hto = () => {
             </motion.h1>
 
             <motion.p
-              className='text-[#999999] text-lg text-center'
+              className="text-center text-lg text-[#999999]"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -576,7 +666,7 @@ const Hto = () => {
             </motion.p>
 
             <motion.div
-              className='flex justify-center items-center w-full'
+              className="flex w-full items-center justify-center"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -585,13 +675,16 @@ const Hto = () => {
             >
               <button
                 onClick={handleButtonClick}
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                  background: 'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
+                }}
+                className="rounded-full px-6 py-2 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
+              >
                 Book Appointment Now
               </button>
             </motion.div>
-
-
           </div>
         </section>
       </main>

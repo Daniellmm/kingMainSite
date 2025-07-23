@@ -19,8 +19,10 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import CustomSlider from '../component/TestimonialSlider'
 import HP from '../assets/images/hp.jpg'
- import ClientReviewCarousel from '../component/ClientReviewCarousel'
+import ClientReviewCarousel from '../component/ClientReviewCarousel'
 import ClientSuccessHighlights from '../component/ClientSuccessHighlights'
+import Button from '../component/Button'
+import CheckIcon from '../component/ui/CheckMark'
 
 // Form URL for buttons
 const FORM_URL =
@@ -162,27 +164,10 @@ const Home = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
-                <button
-                  className="flex w-[170px] items-center justify-center rounded-full px-7 py-2 text-xs font-semibold text-black shadow-md md:mt-4"
-                  style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    background:
-                      'linear-gradient(90deg, #E7A647 0%, #FFD76B 50%, #855B1F 100%)',
-                    fontWeight: 600,
-                  }}
-                >
-                  See Client Results
-                </button>
-
-                <button
-                  className="mt-4 flex w-[170px] items-center justify-center rounded-full bg-[#00B67A] px-7 py-2 text-xs font-semibold text-black shadow-md"
-                  style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontWeight: 600,
-                  }}
-                >
+                <Button className="mt-4">See Client Results</Button>
+                <Button color="#1cb67c" variant="solid">
                   Lets Get Started
-                </button>
+                </Button>
               </div>
             </ScrollAnimation>
           </div>
@@ -214,7 +199,6 @@ const Home = () => {
 
         {/* <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div> */}
       </section>
-            
       <section className="overflow-hidden bg-white px-5 pb-14">
         <ScrollAnimation animation="fadeIn" delay={0.8}>
           <div className="flex flex-col items-center justify-center pt-10 md:pt-24">
@@ -243,64 +227,57 @@ const Home = () => {
           </div>
         </ScrollAnimation>
       </section>
-
- {/* Client Review Carousel Section */}
-      <section className="bg-black py-16 md:py-24 px-5 clientReviewCarousel">
+      {/* Client Review Carousel Section */}
+      <section className="clientReviewCarousel bg-black px-5 py-16 md:py-24">
         <ScrollAnimation animation="fadeIn" delay={0.3}>
-          <div className="text-center mb-12">
+          <div className="mb-12 text-center">
             <h2
-              className="text-xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase leading-[1.2]"
+              className="mb-4 text-xl font-bold uppercase leading-[1.2] md:text-4xl lg:text-5xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              <span className="bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent">WHAT OUR</span>{' '}
+              <span className="bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent">
+                WHAT OUR
+              </span>{' '}
               <span className="text-white">CLIENTS</span>{' '}
-              <span className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent">ARE SAYING</span>
+              <span className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent">
+                ARE SAYING
+              </span>
               <br />
-              <span className="bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent text-xxl md:text-3xl lg:text-4xl">
+              <span className="text-xxl bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent md:text-3xl lg:text-4xl">
                 (AND ACHIEVING)
               </span>
             </h2>
           </div>
         </ScrollAnimation>
-        
+
         <ScrollAnimation animation="slideUp" delay={0.5}>
           <ClientReviewCarousel />
         </ScrollAnimation>
       </section>
-
-
-
-      <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
-        <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-5 md:grid-cols-2 lg:flex-row lg:gap-20 lg:px-20">
+      <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20 ">
+        <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-8 md:grid-cols-2 md:py-12 lg:flex-row lg:gap-20 lg:px-20 lg:py-28">
           <div className="flex w-full flex-1 px-3">
             <img
               src={HP}
               alt=""
-              className="rounded-xl shadow-2xl shadow-black"
+              className="rounded-3xl shadow-2xl shadow-black md:rounded-[2.75rem]"
             />
           </div>
 
           <div className="flex w-full flex-1 flex-col">
             <h1
-              className="pb-10 text-center text-3xl font-semibold leading-10 text-[#E7A647] lg:text-start lg:text-[45px]"
-              style={{ fontFamily: 'Minion Pro, serif' }}
+              className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              Discover Exactly How Entrepreneurs Are Launching 7-Figure Funding
-              Businesses From Scratch
+              Download “Credit Card Investing Hacks The Banks Don’t Want You To
+              Know About” <span className='text-[#FF0000] line-through'>
+              FREE
+                </span>
             </h1>
             <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
-              <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-7">
-                <div className="flex w-full justify-start lg:justify-start">
-                  <button
-                    onClick={handleDownloadClick}
-                    className="flex justify-center rounded-[8px] bg-[#E7A647] px-3 py-2 lg:justify-start"
-                    style={{
-                      fontFamily: 'Montserrat, serif',
-                      fontWeight: 'medium',
-                    }}
-                  >
-                    Learn More
-                  </button>
+              <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-0">
+                <div className="flex w-full justify-center md:justify-start">
+                  <Button>Watch FREE Web-Class</Button>
                 </div>
               </div>
             </div>
@@ -376,23 +353,22 @@ const Home = () => {
           </div>
         </div>
       </section> */}
-      <section className="flex items-center justify-center overflow-hidden bg-white px-5 pb-16">
+      <section className="flex items-center justify-center overflow-hidden bg-white px-5 pb-16 custom-header-bg">
         <div className="flex items-center justify-center md:pt-10">
-          <div className="grid grid-rows-1 lg:grid-cols-2">
+          <div className="grid grid-rows-1 gap-y-14 lg:grid-cols-2">
             <div className="flex w-full justify-center lg:justify-end">
               <ScrollAnimation animation="slideRight" delay={0.8}>
                 <div className="flex items-center justify-end pt-10">
                   <div>
-                  <iframe
-  className="h-[250px] w-[340px] rounded-xl pb-5 md:h-[580px] md:w-[490px] md:rounded-[50px]"
-  src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
-  title="YouTube video player"
-  style={{ border: 'none' }}
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerPolicy="strict-origin-when-cross-origin"
-  allowFullScreen
-></iframe>
-
+                    <iframe
+                      className="h-[250px] w-[340px] rounded-md pb-5 md:h-[580px] md:w-[490px] md:rounded-[42px]"
+                      src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
+                      title="YouTube video player"
+                      style={{ border: 'none' }}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
                   </div>
                 </div>
               </ScrollAnimation>
@@ -403,36 +379,29 @@ const Home = () => {
                 <div className="flex h-full flex-col items-center justify-center gap-y-5 md:px-10 lg:items-start">
                   <div>
                     <h1
-                      className="text-4xl font-semibold text-[#E7A647] lg:text-[47px]"
-                      style={{ fontFamily: 'Minion Pro, serif' }}
+                      className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-transparent text-4xl font-semibold lg:text-[47px] mb-8 uppercase"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
                     >
-                      Why This Program Is a Game-Changer (About Us)
+                     About Us
                     </h1>
                   </div>
 
                   <div className="flex">
                     <p
-                      className="items-center text-lg leading-7 text-gray-700 lg:items-start lg:text-[18px]"
+                      className="items-center text-lg leading-7 text-center md:text-left text-white lg:items-start lg:text-[18px]"
                       style={{ fontFamily: 'Montserrat, serif' }}
                     >
-                      If you’re here, chances are you’ve dealt with other
-                      funding companies — and walked away with broken promises
-                      and underwhelming results. That ends now.
+                      If you’re here, it’s likely because you’ve worked with other funding companies in the past—only
+to be met with empty promises and disappointing results. To make matters worse, some have
+even charged you upfront fees without delivering meaningful outcomes. That ends today!
+
                       <br />
                       <br />
-                      At High Ticket Offer Financing, we help your clients
-                      secure up to $4M in fast, reliable capital to purchase
-                      your products and services — including up to $150K in
-                      No-Doc funding with no hard credit check.
+                      At High Ticket Offer Financing, we believe in results, not risks. That’s why we charge zero
+                      upfront fees—we only get paid when we successfully secure your funding.
                       <br />
                       <br />
-                      We do this by tapping into 11+ years of banking
-                      relationships and a nationwide broker network, giving your
-                      clients access to higher approvals and better terms.
-                      <br />
-                      <br />
-                      Stop chasing funding. Start closing deals. Let’s get your
-                      clients the capital they need — today.
+                      It’s time to stop trying to get funded and start getting funded. Let’s get to work.
                     </p>
                   </div>
                 </div>
@@ -441,7 +410,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="overflow-hidden bg-black px-5 pb-10">
+      <section className="overflow-hidden bg-white px-5 pb-10">
         <div className="flex items-center justify-center pt-20">
           <div className="grid grid-rows-1 md:grid-cols-2">
             <div className="flex items-center justify-center">
@@ -456,8 +425,8 @@ const Home = () => {
               <ScrollAnimation animation="zoomIn" delay={0.8}>
                 <div>
                   <h1
-                    className="text-center text-3xl font-semibold leading-[55px] text-[#E7A647] lg:text-start lg:text-[45px]"
-                    style={{ fontFamily: 'Minion Pro, serif' }}
+                    className="uppercase bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text px-4  text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
                     Funding Options Available For You & Your Customers
                   </h1>
@@ -466,10 +435,10 @@ const Home = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.2}>
                 <div className="flex items-center justify-start gap-x-3 pt-5">
-                  <img src={MARK} className="h-6" alt="" />
+                <CheckIcon />
                   <h1
-                    className="text-white"
-                    style={{ fontFamily: 'Montserrat, serif' }}
+                    className="text-black"
+                    style={{ fontFamily: 'Montserrat, serif', fontWeight:"600" }}
                   >
                     No Doc Financing Up to $200k
                   </h1>
@@ -478,10 +447,10 @@ const Home = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.4}>
                 <div className="flex items-center justify-start gap-x-3 pt-3">
-                  <img src={MARK} className="h-6" alt="" />
+                <CheckIcon />
                   <h1
-                    className="text-white"
-                    style={{ fontFamily: 'Montserrat, serif' }}
+                   className="text-black"
+                    style={{ fontFamily: 'Montserrat, serif',fontWeight:"600" }}
                   >
                     Small Business Loans Up to $4M
                   </h1>
@@ -490,10 +459,10 @@ const Home = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.6}>
                 <div className="flex items-center justify-start gap-x-3 pt-3">
-                  <img src={MARK} className="h-6" alt="" />
+                <CheckIcon />
                   <h1
-                    className="text-white"
-                    style={{ fontFamily: 'Montserrat, serif' }}
+                     className="text-black"
+                    style={{ fontFamily: 'Montserrat, serif',fontWeight:"600" }}
                   >
                     0% Business Funding Up to $150K
                   </h1>
@@ -502,10 +471,10 @@ const Home = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.8}>
                 <div className="flex items-center justify-start gap-x-3 pt-3">
-                  <img src={MARK} className="h-6" alt="" />
+                <CheckIcon />
                   <h1
-                    className="text-white"
-                    style={{ fontFamily: 'Montserrat, serif' }}
+                   className="text-black"
+                    style={{ fontFamily: 'Montserrat, serif',fontWeight:"600" }}
                   >
                     Home Equity Line of Credit Up to $4M
                   </h1>
@@ -514,10 +483,10 @@ const Home = () => {
 
               <ScrollAnimation animation="slideUp" delay={0.9}>
                 <div className="flex items-center justify-start gap-x-3 pt-3">
-                  <img src={MARK} className="h-6" alt="" />
+<CheckIcon />
                   <h1
-                    className="text-white"
-                    style={{ fontFamily: 'Montserrat, serif' }}
+                    className="text-black"
+                    style={{ fontFamily: 'Montserrat, serif',fontWeight:"600" }}
                   >
                     And More…
                   </h1>
@@ -527,13 +496,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="overflow-hidden bg-white px-5 pb-10">
+      <section className="overflow-hidden bg-white px-5 pb-10 custom-header-bg">
         <div className="flex flex-col items-center justify-center pt-16">
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="pb-2 text-center text-4xl text-[#E7A647] lg:text-[47px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                className="pb-2 text-4xl font-semibold lg:text-[38px] md:mb-4 uppercase bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-transparent"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 How It Works:
               </h1>
@@ -541,10 +510,10 @@ const Home = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.8}>
-            <div className="pb-10">
+            <div className="pb-10 md:pb-14 lg:pb-20">
               <h1
-                className="text-center text-2xl text-black lg:text-[34px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                className="text-center text-2xl text-white lg:text-[38px] uppercase leading-[2.1rem] md:leading-10"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 Our pre-approval process is simple, quick, and easy.
               </h1>
@@ -656,46 +625,36 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className="pt-10">
-              <button
-                className="rounded-[8px] bg-[#E7A647] px-5 py-4"
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
-                onClick={handleButtonClick}
-              >
-                Apply Now
-              </button>
+              <Button className='text-[1rem]' padding='14px 28px'>Apply Now</Button>
             </div>
           </ScrollAnimation>
         </div>
       </section>
 
-                {/* Client Success Highlights Section */}
-                <section className="bg-white py-16 md:py-24 px-5">
-          <ScrollAnimation animation="slideUp" delay={0.3}>
-            <div className="text-center mb-12">
-              <h2 
-                 className="text-xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase leading-[1.2] bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent"
-                 style={{ fontFamily: 'Montserrat, sans-serif' }}
-              >
-                Client Success Highlights
-              </h2>
-            </div>
-          </ScrollAnimation>
-          
-          <ScrollAnimation animation="slideUp" delay={0.5}>
-            <ClientSuccessHighlights />
-          </ScrollAnimation>
-      </section>
+      {/* Client Success Highlights Section */}
+      <section className="bg-white px-5 py-16 md:py-24">
+        <ScrollAnimation animation="slideUp" delay={0.3}>
+          <div className="mb-12 text-center">
+            <h2
+              className="mb-4 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Client Success Highlights
+            </h2>
+          </div>
+        </ScrollAnimation>
 
+        <ScrollAnimation animation="slideUp" delay={0.5}>
+          <ClientSuccessHighlights />
+        </ScrollAnimation>
+      </section>
       <section className="min-h-screen overflow-hidden bg-black px-5 pb-10 pt-10">
         <div className="flex flex-col items-center justify-center pt-10">
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="pb-2 text-center text-4xl text-[#E7A647] lg:text-[47px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                className="pb-2 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 More Client Results
               </h1>
@@ -714,10 +673,10 @@ const Home = () => {
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="py-9 text-center text-4xl font-semibold text-[#E7A647] lg:text-[47px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                className="py-9 text-3xl mb-8 sm:text-4xl font-bold uppercase leading-[1.2] md:text-4xl lg:text-5xl bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-transparent"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                Recent Articles & News
+               Recent Articles & News
               </h1>
             </div>
           </ScrollAnimation>
@@ -835,74 +794,43 @@ const Home = () => {
 
           <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className="pt-10">
-              <button
-                className="rounded-[8px] bg-[#E7A647] px-5 py-4"
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
-              >
-                View All Post
-              </button>
+              <Button className='text-[1rem]' padding='14px 28px'>View All Posts</Button>
             </div>
           </ScrollAnimation>
         </div>
       </section>
-      
-      {/* Client Success Highlights Section */}
-      <section className="bg-black py-16 md:py-24 px-5">
-        <ScrollAnimation animation="fadeIn" delay={0.3}>
-          <div className="text-center mb-12">
+     
+      <section className="flex flex-col min-h-[40vh] w-full items-center justify-center overflow-hidden bg-black px-5 text-center custom-header-bg h-[480px]">
+        <div className=''>
+      <ScrollAnimation animation="fadeIn" delay={0.3}>
+          <div className="mb-6 text-center">
             <h2
-              className="text-xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase leading-[1.2]"
+              className="mb-4 text-3xl sm:text-4xl font-bold uppercase leading-[1.2] md:text-4xl lg:text-5xl bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-transparent"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              <span className="bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent">CLIENT SUCCESS</span>{' '}
-              <span className="text-white">HIGHLIGHTS</span>
+            
+              Have Questions?
             </h2>
           </div>
         </ScrollAnimation>
-        
-      </section>
 
-      
-      <section className="flex min-h-[40vh] w-full items-center justify-center overflow-hidden bg-black px-5">
         <ScrollAnimation animation="fadeIn" delay={0.8}>
-          <div className="flex flex-col items-center justify-center gap-y-5 text-white">
+          <div className="flex flex-col items-center justify-center gap-y-[3rem] lg:gap-y-[3.5rem] text-white">
             <h1
-              className="text-3xl font-semibold lg:text-[47px]"
-              style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}
+              className="text-2xl leading-7 md:text-3xl font-semibold lg:text-[38px] md:leading-[2.3rem] lg:leading-[2.8rem]"
+              style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
             >
-              Have Questions?
+             Complete questionnaire to speak to a
+             <br/>
+             representative.
             </h1>
-            <h2
-              className="text-center text-xl font-semibold lg:text-[24px]"
-              style={{
-                fontFamily: 'Minion Pro, serif',
-                fontWeight: 200,
-                fontStyle: 'normal',
-              }}
-            >
-              Complete questionnaire to speak to a representative.
-            </h2>
             <div className="pt-1">
-              <a
-                href="https://landing.highticketofferfinancing.com/advert-page"
-                target="_blank"
-              >
-                <button
-                  className="rounded-[8px] bg-[#E7A647] px-3 py-3 text-black"
-                  style={{
-                    fontFamily: 'Montserrat, serif',
-                    fontWeight: 'medium',
-                  }}
-                >
-                  Complete Questionnaire
-                </button>
-              </a>
+              <Button>Complete Questionnaire</Button>
             </div>
           </div>
         </ScrollAnimation>
+        </div>
+
       </section>
     </>
   )

@@ -48,7 +48,7 @@ const VideoCarousel = () => {
           variableWidth: false,
           slidesToShow: 2,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 768,
@@ -56,17 +56,18 @@ const VideoCarousel = () => {
           variableWidth: false,
           slidesToShow: 1,
           slidesToScroll: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   }
 
   if (!mounted) return null
 
   return (
     <div className="video-carousel-wrapper">
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
           .video-carousel-wrapper .slick-dots {
             bottom: -30px !important;
             position: static !important;
@@ -96,7 +97,7 @@ const VideoCarousel = () => {
           }
 
           .video-carousel-wrapper .slick-slide {
-            padding: 0 10px !important;
+            padding: 0 11px !important;
           }
 
           .video-carousel-wrapper .slick-list {
@@ -111,27 +112,30 @@ const VideoCarousel = () => {
               margin-top: 1rem !important;
             }
           }
-        `
-      }} />
+        `,
+        }}
+      />
 
-      <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 sm:py-4 md:px-12 md:py:12 overflow-hidden">
+      <div className="md:py:12 mx-auto w-full max-w-7xl overflow-hidden px-2 sm:px-4 sm:py-4 md:px-12">
         <Slider {...settings}>
           {/* Slide 1 (Wide) */}
           <div className="relative w-full lg:!w-[698px]">
             <div
-              className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[395px] bg-black rounded-xl overflow-hidden"
+              className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '16/9' }}
             >
               {activeVideo === 1 ? (
-                <div className="relative w-full h-full">
+                <div className="relative h-full w-full">
                   {isVideoLoading && (
-                    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center z-10">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-                      <p className="text-white text-sm font-medium ml-3">Loading video...</p>
+                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60">
+                      <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-white"></div>
+                      <p className="ml-3 text-sm font-medium text-white">
+                        Loading video...
+                      </p>
                     </div>
                   )}
                   <iframe
-                    className="w-full h-full"
+                    className="h-full w-full"
                     src="https://www.youtube.com/embed/a9M6uPzQLFs?controls=1&rel=0&modestbranding=1"
                     title="YouTube Video 1"
                     frameBorder="0"
@@ -142,18 +146,24 @@ const VideoCarousel = () => {
                 </div>
               ) : (
                 <div
-                  className="relative w-full h-full cursor-pointer"
+                  className="relative h-full w-full cursor-pointer"
                   onClick={() => handleVideoClick(1)}
                 >
                   <img
-                    src={getYouTubeThumbnail('https://www.youtube.com/watch?v=a9M6uPzQLFs')}
+                    src={getYouTubeThumbnail(
+                      'https://www.youtube.com/watch?v=a9M6uPzQLFs',
+                    )}
                     alt="Thumbnail 1"
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 z-10">
-                    <div className="bg-black bg-opacity-80 rounded-full p-3">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
+                    <div className="rounded-full bg-black bg-opacity-80 p-3">
+                      <svg
+                        className="h-6 w-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M6 4l10 6-10 6V4z" />
                       </svg>
                     </div>
@@ -166,19 +176,21 @@ const VideoCarousel = () => {
           {/* Slide 2 (Short width - 184px) */}
           <div className="relative lg:!w-[256px]">
             <div
-              className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[395px] bg-black rounded-xl overflow-hidden"
+              className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '9/16' }}
             >
               {activeVideo === 2 ? (
-                <div className="relative w-full h-full">
+                <div className="relative h-full w-full">
                   {isVideoLoading && (
-                    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center z-10">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-                      <p className="text-white text-sm font-medium ml-3">Loading video...</p>
+                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60">
+                      <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-white"></div>
+                      <p className="ml-3 text-sm font-medium text-white">
+                        Loading video...
+                      </p>
                     </div>
                   )}
                   <iframe
-                    className="w-full h-full"
+                    className="h-full w-full"
                     src="https://www.youtube.com/embed/Ib9feq1-YVw?controls=1&rel=0&modestbranding=1"
                     title="YouTube Short"
                     frameBorder="0"
@@ -189,18 +201,24 @@ const VideoCarousel = () => {
                 </div>
               ) : (
                 <div
-                  className="relative w-full h-full cursor-pointer"
+                  className="relative h-full w-full cursor-pointer"
                   onClick={() => handleVideoClick(2)}
                 >
                   <img
-                    src={getYouTubeThumbnail('https://www.youtube.com/watch?v=Ib9feq1-YVw')}
+                    src={getYouTubeThumbnail(
+                      'https://www.youtube.com/watch?v=Ib9feq1-YVw',
+                    )}
                     alt="Short Video"
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 z-10">
-                    <div className="bg-black bg-opacity-80 rounded-full p-3">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
+                    <div className="rounded-full bg-black bg-opacity-80 p-3">
+                      <svg
+                        className="h-6 w-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M6 4l10 6-10 6V4z" />
                       </svg>
                     </div>
@@ -213,19 +231,21 @@ const VideoCarousel = () => {
           {/* Slide 3 (Wide) */}
           <div className="relative w-full lg:!w-[698px]">
             <div
-              className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[395px] bg-black rounded-xl overflow-hidden"
+              className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '16/9' }}
             >
               {activeVideo === 3 ? (
-                <div className="relative w-full h-full">
+                <div className="relative h-full w-full">
                   {isVideoLoading && (
-                    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center z-10">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-                      <p className="text-white text-sm font-medium ml-3">Loading video...</p>
+                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60">
+                      <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-white"></div>
+                      <p className="ml-3 text-sm font-medium text-white">
+                        Loading video...
+                      </p>
                     </div>
                   )}
                   <iframe
-                    className="w-full h-full"
+                    className="h-full w-full"
                     src="https://www.youtube.com/embed/byzZl7yl0S0?controls=1&rel=0&modestbranding=1"
                     title="YouTube Video 3"
                     frameBorder="0"
@@ -236,18 +256,24 @@ const VideoCarousel = () => {
                 </div>
               ) : (
                 <div
-                  className="relative w-full h-full cursor-pointer"
+                  className="relative h-full w-full cursor-pointer"
                   onClick={() => handleVideoClick(3)}
                 >
                   <img
-                    src={getYouTubeThumbnail('https://www.youtube.com/watch?v=byzZl7yl0S0')}
+                    src={getYouTubeThumbnail(
+                      'https://www.youtube.com/watch?v=byzZl7yl0S0',
+                    )}
                     alt="Thumbnail 3"
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 z-10">
-                    <div className="bg-black bg-opacity-80 rounded-full p-3">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
+                    <div className="rounded-full bg-black bg-opacity-80 p-3">
+                      <svg
+                        className="h-6 w-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M6 4l10 6-10 6V4z" />
                       </svg>
                     </div>

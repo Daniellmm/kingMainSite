@@ -37,18 +37,18 @@ const ClientReviewCarousel = () => {
         settings: {
           variableWidth: false,
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 768,
         settings: {
           variableWidth: false,
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   const handleVideoPlay = () => {
@@ -67,8 +67,9 @@ const ClientReviewCarousel = () => {
   return (
     <div className="client-review-carousel-wrapper">
       {/* Inline styles to prevent conflicts */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
           .client-review-carousel-wrapper .slick-dots {
             bottom: -30px !important;
             position: static !important;
@@ -98,7 +99,7 @@ const ClientReviewCarousel = () => {
           }
           
           .client-review-carousel-wrapper .slick-slide {
-            padding: 0 10px !important;
+            padding: 0 0px !important;
           }
           
           .client-review-carousel-wrapper .slick-list {
@@ -112,43 +113,50 @@ const ClientReviewCarousel = () => {
             .client-review-carousel-wrapper .slick-dots {
               margin-top: 1rem !important;
             }
+                .client-review-carousel-wrapper .slick-slide {
+            padding: 0 10px !important;
           }
-        `
-      }} />
+          }
+        `,
+        }}
+      />
 
-      <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-8 overflow-hidden">
+      <div className="mx-auto w-full max-w-7xl overflow-hidden  sm:px-4 md:px-8">
         <Slider {...settings}>
           {/* First Slide - Video */}
-          <div className="relative w-full lg:!w-[698px]">
+          <div className="relative w-full lg:!w-[698px] md:pl-[25px]">
             <div
-              className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] bg-black rounded-xl overflow-hidden"
+              className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
               style={{ aspectRatio: '16/9' }}
             >
               {!showVideo ? (
                 <div
-                  className="relative w-full h-full cursor-pointer"
+                  className="relative h-full w-full cursor-pointer"
                   onClick={handleVideoPlay}
                 >
                   <img
                     src={sliderVideoThumbnail}
                     alt="Video Thumbnail"
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                     onError={(e) => {
-                      e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjk4IiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuKWtiBWaWRlbyBUaHVtYm5haWw8L3RleHQ+PC9zdmc+'
+                      e.target.src =
+                        'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjk4IiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuKWtiBWaWRlbyBUaHVtYm5haWw8L3RleHQ+PC9zdmc+'
                     }}
                     loading="lazy"
                   />
                 </div>
               ) : (
-                <div className="relative w-full h-full">
+                <div className="relative h-full w-full">
                   {isVideoLoading && (
-                    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center z-10">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
-                      <p className="text-white text-sm font-medium ml-3">Loading video...</p>
+                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60">
+                      <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-white"></div>
+                      <p className="ml-3 text-sm font-medium text-white">
+                        Loading video...
+                      </p>
                     </div>
                   )}
                   <iframe
-                    className="w-full h-full"
+                    className="h-full w-full"
                     src="https://www.youtube.com/embed/a9M6uPzQLFs?autoplay=1controls=1&rel=0&modestbranding=1"
                     title="Client Review Video"
                     frameBorder="0"
@@ -162,36 +170,38 @@ const ClientReviewCarousel = () => {
           </div>
 
           {/* Second Slide - Testimonial Image 1 */}
-          <div className="relative w-full lg:!w-[430px]">
+          <div className="relative w-full lg:!w-[430px] md:pl-[25px]">
             <div
-              className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] rounded-xl overflow-hidden bg-white shadow-lg"
+              className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
               style={{ aspectRatio: '16/9' }}
             >
               <img
                 src={clientReview1}
                 alt="Client Review 1"
-                className="w-full h-full object-contain object-top"
+                className="h-full w-full object-contain object-top"
                 loading="lazy"
                 onError={(e) => {
-                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2IiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSItMC41ZW0iPkNsaWVudCBSZXZpZXc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjEuNWVtIj5JbWFnZSBVbmF2YWlsYWJsZTwvdGV4dD48L3N2Zz4='
+                  e.target.src =
+                    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2IiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSItMC41ZW0iPkNsaWVudCBSZXZpZXc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjEuNWVtIj5JbWFnZSBVbmF2YWlsYWJsZTwvdGV4dD48L3N2Zz4='
                 }}
               />
             </div>
           </div>
 
           {/* Third Slide - Testimonial Image 2 */}
-          <div className="relative w-full lg:!w-[430px]">
+          <div className="relative w-full lg:!w-[430px] md:pl-[25px]">
             <div
-              className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px] rounded-xl overflow-hidden bg-white shadow-lg"
+              className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
               style={{ aspectRatio: '16/9' }}
             >
               <img
                 src={clientReview2}
                 alt="Client Review 2"
-                className="w-full h-full object-contain object-top"
+                className="h-full w-full object-contain object-top"
                 loading="lazy"
                 onError={(e) => {
-                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2IiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSItMC41ZW0iPkNsaWVudCBSZXZpZXc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjEuNWVtIj5JbWFnZSBVbmF2YWlsYWJsZTwvdGV4dD48L3N2Zz4='
+                  e.target.src =
+                    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2IiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSItMC41ZW0iPkNsaWVudCBSZXZpZXc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjEuNWVtIj5JbWFnZSBVbmF2YWlsYWJsZTwvdGV4dD48L3N2Zz4='
                 }}
               />
             </div>

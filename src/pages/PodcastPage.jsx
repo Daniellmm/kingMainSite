@@ -5,33 +5,46 @@ import KING2 from '../assets/images/page-two/aboutImg.png'
 import HeroModel from '../component/HeroModel'
 import PodcastVideosSection from '../component/PodcastVideosSection '
 
-
-
 const PodcastPage = () => {
   // Your YouTube API credentials
-  const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
-  const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
-
+  const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
+  const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID
 
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
+    },
   }
 
   const fadeInLeft = {
     hidden: { opacity: 0, x: -60 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } }
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
+    },
   }
 
   const fadeInRight = {
     hidden: { opacity: 0, x: 60 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } }
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
+    },
   }
 
   const scaleIn = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } }
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
+    },
   }
 
   const staggerContainer = {
@@ -40,85 +53,85 @@ const PodcastPage = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   }
 
   const buttonHover = {
     scale: 1.05,
-    transition: { duration: 0.2, ease: "easeInOut" }
+    transition: { duration: 0.2, ease: 'easeInOut' },
   }
 
   const imageHover = {
     scale: 1.05,
-    transition: { duration: 0.3, ease: "easeInOut" }
+    transition: { duration: 0.3, ease: 'easeInOut' },
   }
 
   const socialHover = {
     scale: 1.2,
     rotate: 10,
-    transition: { duration: 0.2, ease: "easeInOut" }
+    transition: { duration: 0.2, ease: 'easeInOut' },
   }
 
   return (
     <>
-      <main className='overflow-hidden'>
+      <main className="overflow-hidden">
         {/* Hero Section */}
-        <section className='phero-sec lg:px-40 px-5 items-center justify-center'>
+        <section className="phero-sec items-center justify-center px-5 lg:px-40">
           <motion.div
-            className='flex pt-28 lg:pt-16 flex-col lg:flex-row w-full gap-10 items-center justify-center'
+            className="flex w-full flex-col items-center justify-center gap-10 pt-28 lg:flex-row lg:pt-16"
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
             {/* First part */}
             <div
-              className='flex flex-col justify-center items-center gap-9'
+              className="flex flex-col items-center justify-center gap-9"
               variants={fadeInLeft}
             >
-              <motion.h1
-                className='lg:text-8xl hidden lg:block font-bold text-4xl text-center lg:text-start text-[#D09A25]'
-                style={{ fontFamily: 'Minion Pro, serif' }}
-                variants={fadeInUp}
-              >
-                EARN
-                PROTECT
-                GROW
-              </motion.h1>
-
               <motion.div
-                className='flex justify-center lg:justify-start gap-4 w-full items-start'
+                className="flex flex-col w-ful items-center md:items-start  justify-center gap-4 lg:gap-6 lg:justify-start"
                 variants={staggerContainer}
               >
-                <motion.div
-                  className='flex'
-                  variants={fadeInUp}
-                >
+                <motion.div className="flex" variants={fadeInUp}>
                   <motion.button
-                    className="px-4 py-2 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    className="rounded-full 
+       px-8 py-4 md:px-10 md:py-5 text-[0.9rem]  md:text-[1rem] lg:text-[1.2rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg w-[240px] md:w-[310px] lg:w-[360px]"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
-                      document.getElementById('podcast-section').scrollIntoView({
-                        behavior: 'smooth'
-                      });
+                      document
+                        .getElementById('podcast-section')
+                        .scrollIntoView({
+                          behavior: 'smooth',
+                        })
                     }}
-                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
+                                        fontWeight: '700',
+                        background:"linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)"
+                    }}
                   >
                     Watch Podcast
                   </motion.button>
                 </motion.div>
-                <motion.div
-                  className='flex'
-                  variants={fadeInUp}
-                >
-                  <a href="https://whop.com/earn-protect-grow/?a=funding3f" target='_blank'>
+                <motion.div className="flex" variants={fadeInUp}>
+                  <a
+                    href="https://whop.com/earn-protect-grow/?a=funding3f"
+                    target="_blank"
+                  >
                     <motion.button
-                      className="px-3 py-2 rounded-full text-sm bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                      className="rounded-full 
+       px-8 py-4 md:px-10 md:py-5 text-[0.9rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.3rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg w-[240px] md:w-[310px] lg:w-[360px]"
                       whileHover={buttonHover}
                       whileTap={{ scale: 0.95 }}
-                      style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                      style={{
+                        fontFamily: 'Montserrat, serif',
+                        fontWeight: '700',
+                        background:"linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)"
+                      }}
                     >
                       Join Our Community
                     </motion.button>
@@ -129,52 +142,57 @@ const PodcastPage = () => {
 
             {/* Second part */}
             <motion.div
-              className='flex lg:justify-start lg:items-start justify-center items-center w-full'
+              className="flex w-full items-center justify-center lg:items-start lg:justify-start"
               variants={fadeInRight}
             >
-              <img
-                src={KING1}
-                alt=""
-              />
+              <img src={KING1} alt="" />
             </motion.div>
           </motion.div>
         </section>
 
-
-
         {/* Book Section */}
-        <section className='psec-two relative lg:px-40 px-5 min-h-[100vh] lg:min-h-[80vh] lg:pb-10'>
-          <div className='flex flex-col lg:flex-row w-full items-center justify-between h-full'>
+        <section className="psec-two relative min-h-[100vh] px-5 lg:min-h-[80vh] lg:px-40 lg:pb-10">
+          <div className="flex h-full w-full flex-col items-center justify-between lg:flex-row">
             <motion.div
-              className='lg:w-1/2 pt-10 space-y-5 z-10'
+              className="z-10 space-y-5 pt-10 lg:w-1/2"
               variants={fadeInLeft}
             >
               <motion.h1
-                className='text-4xl lg:text-6xl text-center lg:text-start font-bold text-[#D09A25]'
+                className="text-center text-4xl font-bold bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-transparent
+ lg:text-start lg:text-6xl"
                 style={{ fontFamily: 'Minion Pro, serif' }}
                 variants={fadeInUp}
               >
                 EARN, PROTECT, GROW
               </motion.h1>
               <motion.p
-                className='text-white capitalize text-center lg:text-start'
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                className="text-center capitalize text-white lg:text-start"
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
                 variants={fadeInUp}
               >
-                An Entrepreneur's Guide to Earning More Money,
-                Protecting the Money You Have Earned,
-                & Growing the Money You Have Protected.
+                An Entrepreneur's Guide to Earning More Money, Protecting the
+                Money You Have Earned, & Growing the Money You Have Protected.
               </motion.p>
               <motion.div
-                className='flex justify-center lg:justify-start'
+                className="flex justify-center lg:justify-start"
                 variants={fadeInUp}
               >
-                <a href="https://whop.com/checkout/plan_NodSn8DMwG69g" target='_blank'>
+                <a
+                  href="https://whop.com/checkout/plan_NodSn8DMwG69g"
+                  target="_blank"
+                >
                   <motion.button
-                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    className="rounded-full px-6 py-2 md:py-4 md:px-8 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
-                    style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: 'medium',
+                        background:"linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)"
+                    }}
                   >
                     Purchase Now
                   </motion.button>
@@ -184,10 +202,10 @@ const PodcastPage = () => {
 
             {/* 3D model of the book */}
             <motion.div
-              className='lg:w-1/2 w-full h-[50vh] lg:h-[70vh] relative'
+              className="relative h-[50vh] w-full lg:h-[70vh] lg:w-1/2"
               variants={fadeInRight}
             >
-              <div className='w-full h-full'>
+              <div className="h-full w-full">
                 <HeroModel />
               </div>
             </motion.div>
@@ -195,7 +213,7 @@ const PodcastPage = () => {
         </section>
 
         {/* Podcast Videos Section - Now Dynamic */}
-        <section id='podcast-section'>
+        <section id="podcast-section">
           <PodcastVideosSection
             apiKey={YOUTUBE_API_KEY}
             channelId={YOUTUBE_CHANNEL_ID}
@@ -203,26 +221,29 @@ const PodcastPage = () => {
         </section>
 
         {/* About Section */}
-        <section className='about-sec lg:px-40 px-5'>
-          <div className='flex flex-col justify-center items-center'>
+        <section className="about-sec px-5 lg:px-40">
+          <div className="flex flex-col items-center justify-center">
             <motion.div variants={fadeInUp}>
-              <h1 className='text-4xl pt-20 lg:text-6xl pb-10 text-center lg:text-start font-bold text-[#D09A25]'
-                style={{ fontFamily: 'Minion Pro, serif' }}>ABOUT YOUR HOST
+              <h1
+                className="pb-10 pt-20 text-center text-4xl font-bold bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-transparent lg:text-start lg:text-6xl"
+                style={{ fontFamily: 'Minion Pro, serif' }}
+              >
+                ABOUT YOUR HOST
               </h1>
             </motion.div>
 
-            <div className='pb-10 flex flex-col justify-center items-center'>
+            <div className="flex flex-col items-center justify-center pb-10">
               <motion.div variants={scaleIn}>
                 <motion.img
                   src={KING2}
-                  className='lg:h-[600px]'
+                  className="lg:h-[600px]"
                   alt="king's-images"
                   whileHover={imageHover}
                 />
               </motion.div>
 
               <motion.div
-                className='text-[#D09A25] text-4xl pt-8 lg:text-6xl text-center'
+                className="pt-8 text-center text-4xl text-[#D09A25] lg:text-6xl"
                 variants={fadeInUp}
                 style={{ fontFamily: 'Beauty Wind, serif' }}
               >
@@ -231,70 +252,104 @@ const PodcastPage = () => {
               </motion.div>
 
               <motion.p
-                className='text-[#999999] pt-10 text-center lg:text-start'
+                className="pt-10 text-center text-white lg:text-start"
                 variants={fadeInUp}
                 transition={{ delay: 0.2 }}
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
               >
-                King Edwards, a visionary, funding expert, and author, was born in Los Angeles and raised in New York.
-                He draws inspiration from the diverse influences of each city—Los Angeles exposed him to the glamorous
-                Hollywood lifestyle, while New York instilled in him a sense of grit and determination. Yet above all,
-                King's true source of strength and guidance has always been his faith in God.
-                <br /><br />
-
-                King's journey began with the creation of High Ticket Offer Financing (HTOF)—a platform designed not just
-                to provide alternative funding solutions for entrepreneurs, but to empower them to operate with integrity,
-                excellence, and wisdom. Recognizing that many industries are overlooked by traditional banks, King sought
-                to help consultants and entrepreneurs generate significant profits, develop and sell high-value products and
-                services, and safeguard themselves from legal pitfalls by providing comprehensive workflows, standard operating
-                procedures, and contract templates. His mission reflects a deeper calling to equip others with the financial
+                King Edwards, a visionary, funding expert, and author, was born
+                in Los Angeles and raised in New York. He draws inspiration from
+                the diverse influences of each city—Los Angeles exposed him to
+                the glamorous Hollywood lifestyle, while New York instilled in
+                him a sense of grit and determination. Yet above all, King's
+                true source of strength and guidance has always been his faith
+                in God.
+                <br />
+                <br />
+                King's journey began with the creation of High Ticket Offer
+                Financing (HTOF)—a platform designed not just to provide
+                alternative funding solutions for entrepreneurs, but to empower
+                them to operate with integrity, excellence, and wisdom.
+                Recognizing that many industries are overlooked by traditional
+                banks, King sought to help consultants and entrepreneurs
+                generate significant profits, develop and sell high-value
+                products and services, and safeguard themselves from legal
+                pitfalls by providing comprehensive workflows, standard
+                operating procedures, and contract templates. His mission
+                reflects a deeper calling to equip others with the financial
                 knowledge and spiritual foundation needed to thrive.
-                <br /><br />
-
-                King's life is a testament to the scripture, "To whom much is given, much is required" (Luke 12:48).
-                Beyond finance, he has a wide array of passions, including basketball, traveling, spirituality, business,
-                and fitness. He finds joy in connecting with influential individuals, exploring different cultures during his
-                global travels, and maintaining an open heart toward learning and growth. However, his work is ultimately driven
-                by a higher purpose—glorifying God through his success and using his platform to serve others.
-                <br /><br />
-
-                With over a decade of experience, King's companies have collaborated with high-profile clients, including Zeus Network,
-                Tubi, Floyd Mayweather, Cardi B, and more. Yet King remains grounded, knowing that his success is not his own—it
-                is a gift from God, entrusted to him to steward wisely. His ambition extends beyond personal achievement;
-                he is launching a D4U Consumer Financing Product for entrepreneurs and High Ticket Offer Consultants while
-                scaling his existing ventures globally, particularly with a focus on Africa—a continent he feels called to impact
-                deeply.
-                <br /><br />
-
-                King's journey is marked by resilience and divine intervention. In his twenties, he faced homelessness while raising
-                twins, even resorting to digging through trash cans to survive. Yet in the midst of that darkness, King surrendered
-                his ego and turned to God. That pivotal decision transformed his life. God reminded him of his identity—not as a
-                struggling man, but as a king. Through faith, wisdom, and strategic application of banking principles, King rebuilt
-                his life from the ground up. His story echoes Jeremiah 29:11—"For I know the plans I have for you," declares the Lord,
-                "plans to prosper you and not to harm you, plans to give you hope and a future."
-                <br /><br />
-
-                King's success is not just about building wealth—it's about creating legacy. His goal is to revolutionize the business
-                landscape by showing entrepreneurs how to leverage bank funding rather than relying solely on savings or personal
-                income. He encourages individuals to tap into their divine power—represented by the hashtag #IAM—which signifies
-                the limitless potential God has placed within each of us.
-                <br /><br />
-
-                King has received accolades such as the Man of the Moment and Made Man Award for his achievements.
-                These honors underscore his significant contributions to the financial industry and reflect his unwavering
-                commitment to excellence and service. Through High Ticket Offer Financing, King equips entrepreneurs with the
-                tools to thrive—offering not just funding solutions, but the financial and spiritual wisdom needed to sustain
-                long-term success.
-                <br /><br />
-
-                King's guiding philosophy reflects the wisdom of Proverbs 16:9: "In their hearts humans plan their course,
-                but the Lord establishes their steps." In his own words, "Amid chaos, while everyone else panics,
-                the grand chess master focuses on the next best move." His ability to remain calm and composed in the face
-                of challenges stems from his faith and trust in God's perfect plan.
-                King Edwards stands as a living example of God's promise to restore and elevate those who seek Him.
-                His life, business, and mission are rooted in the belief that success is not merely about financial gain—it's
-                about fulfilling God's purpose and helping others rise to their highest potential. When you see a king,
-                you see the work of a sovereign God.
+                <br />
+                <br />
+                King's life is a testament to the scripture, "To whom much is
+                given, much is required" (Luke 12:48). Beyond finance, he has a
+                wide array of passions, including basketball, traveling,
+                spirituality, business, and fitness. He finds joy in connecting
+                with influential individuals, exploring different cultures
+                during his global travels, and maintaining an open heart toward
+                learning and growth. However, his work is ultimately driven by a
+                higher purpose—glorifying God through his success and using his
+                platform to serve others.
+                <br />
+                <br />
+                With over a decade of experience, King's companies have
+                collaborated with high-profile clients, including Zeus Network,
+                Tubi, Floyd Mayweather, Cardi B, and more. Yet King remains
+                grounded, knowing that his success is not his own—it is a gift
+                from God, entrusted to him to steward wisely. His ambition
+                extends beyond personal achievement; he is launching a D4U
+                Consumer Financing Product for entrepreneurs and High Ticket
+                Offer Consultants while scaling his existing ventures globally,
+                particularly with a focus on Africa—a continent he feels called
+                to impact deeply.
+                <br />
+                <br />
+                King's journey is marked by resilience and divine intervention.
+                In his twenties, he faced homelessness while raising twins, even
+                resorting to digging through trash cans to survive. Yet in the
+                midst of that darkness, King surrendered his ego and turned to
+                God. That pivotal decision transformed his life. God reminded
+                him of his identity—not as a struggling man, but as a king.
+                Through faith, wisdom, and strategic application of banking
+                principles, King rebuilt his life from the ground up. His story
+                echoes Jeremiah 29:11—"For I know the plans I have for you,"
+                declares the Lord, "plans to prosper you and not to harm you,
+                plans to give you hope and a future."
+                <br />
+                <br />
+                King's success is not just about building wealth—it's about
+                creating legacy. His goal is to revolutionize the business
+                landscape by showing entrepreneurs how to leverage bank funding
+                rather than relying solely on savings or personal income. He
+                encourages individuals to tap into their divine
+                power—represented by the hashtag #IAM—which signifies the
+                limitless potential God has placed within each of us.
+                <br />
+                <br />
+                King has received accolades such as the Man of the Moment and
+                Made Man Award for his achievements. These honors underscore his
+                significant contributions to the financial industry and reflect
+                his unwavering commitment to excellence and service. Through
+                High Ticket Offer Financing, King equips entrepreneurs with the
+                tools to thrive—offering not just funding solutions, but the
+                financial and spiritual wisdom needed to sustain long-term
+                success.
+                <br />
+                <br />
+                King's guiding philosophy reflects the wisdom of Proverbs 16:9:
+                "In their hearts humans plan their course, but the Lord
+                establishes their steps." In his own words, "Amid chaos, while
+                everyone else panics, the grand chess master focuses on the next
+                best move." His ability to remain calm and composed in the face
+                of challenges stems from his faith and trust in God's perfect
+                plan. King Edwards stands as a living example of God's promise
+                to restore and elevate those who seek Him. His life, business,
+                and mission are rooted in the belief that success is not merely
+                about financial gain—it's about fulfilling God's purpose and
+                helping others rise to their highest potential. When you see a
+                king, you see the work of a sovereign God.
               </motion.p>
 
               {/* <motion.div
