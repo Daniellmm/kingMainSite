@@ -91,13 +91,12 @@ const PodcastPage = () => {
               variants={fadeInLeft}
             >
               <motion.div
-                className="flex flex-col w-ful items-center md:items-start  justify-center gap-4 lg:gap-6 lg:justify-start"
+                className="w-ful flex flex-col items-center justify-center gap-4 md:items-start lg:justify-start lg:gap-6"
                 variants={staggerContainer}
               >
                 <motion.div className="flex" variants={fadeInUp}>
                   <motion.button
-                    className="rounded-full 
-       px-8 py-4 md:px-10 md:py-5 text-[0.9rem]  md:text-[1rem] lg:text-[1.2rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg w-[240px] md:w-[310px] lg:w-[360px]"
+                    className="w-[240px] rounded-full px-8 py-4 text-[0.9rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg md:w-[310px] md:px-10 md:py-5 md:text-[1rem] lg:w-[360px] lg:text-[1.2rem]"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
@@ -110,8 +109,9 @@ const PodcastPage = () => {
                     style={{
                       fontFamily: 'Montserrat, serif',
                       fontWeight: 'medium',
-                                        fontWeight: '700',
-                        background:"linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)"
+                      fontWeight: '700',
+                      background:
+                        'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                     }}
                   >
                     Watch Podcast
@@ -123,14 +123,14 @@ const PodcastPage = () => {
                     target="_blank"
                   >
                     <motion.button
-                      className="rounded-full 
-       px-8 py-4 md:px-10 md:py-5 text-[0.9rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[1.3rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg w-[240px] md:w-[310px] lg:w-[360px]"
+                      className="w-[240px] rounded-full px-8 py-4 text-[0.9rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg md:w-[310px] md:px-10 md:py-5 md:text-[1rem] lg:w-[360px] lg:text-[1.2rem] xl:text-[1.3rem]"
                       whileHover={buttonHover}
                       whileTap={{ scale: 0.95 }}
                       style={{
                         fontFamily: 'Montserrat, serif',
                         fontWeight: '700',
-                        background:"linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)"
+                        background:
+                          'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                       }}
                     >
                       Join Our Community
@@ -158,8 +158,7 @@ const PodcastPage = () => {
               variants={fadeInLeft}
             >
               <motion.h1
-                className="text-center text-4xl font-bold bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-transparent
- lg:text-start lg:text-6xl"
+                className="bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-center text-4xl font-bold text-transparent lg:text-start lg:text-6xl"
                 style={{ fontFamily: 'Minion Pro, serif' }}
                 variants={fadeInUp}
               >
@@ -185,13 +184,14 @@ const PodcastPage = () => {
                   target="_blank"
                 >
                   <motion.button
-                    className="rounded-full px-6 py-2 md:py-4 md:px-8 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
+                    className="rounded-full px-6 py-2 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg md:px-8 md:py-4"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
                     style={{
                       fontFamily: 'Montserrat, serif',
                       fontWeight: 'medium',
-                        background:"linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)"
+                      background:
+                        'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                     }}
                   >
                     Purchase Now
@@ -225,7 +225,7 @@ const PodcastPage = () => {
           <div className="flex flex-col items-center justify-center">
             <motion.div variants={fadeInUp}>
               <h1
-                className="pb-10 pt-20 text-center text-4xl font-bold bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-transparent lg:text-start lg:text-6xl"
+                className="bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text pb-10 pt-20 text-center text-4xl font-bold text-transparent lg:text-start lg:text-6xl"
                 style={{ fontFamily: 'Minion Pro, serif' }}
               >
                 ABOUT YOUR HOST

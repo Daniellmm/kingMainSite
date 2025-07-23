@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
-import BANK from '../assets/images/home.png'
 import PHONEIMG from '../assets/images/phone1.png'
 import AWW from '../assets/images/aww.png'
 import BBB from '../assets/images/bbb.png'
-import MARK from '../assets/images/mark.png'
 import Correct from '../assets/images/correct.png'
 import Out from '../assets/images/out.png'
 import Money from '../assets/images/money.png'
@@ -11,7 +9,6 @@ import Rect1 from '../assets/images/pfb.jpg'
 import Rect2 from '../assets/images/bible.jpg'
 import Rect3 from '../assets/images/secure.jpg'
 import ArrowR from '../assets/images/arrowupright.png'
-import ARROWD from '../assets/images/arrowD.png'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -254,7 +251,7 @@ const Home = () => {
           <ClientReviewCarousel />
         </ScrollAnimation>
       </section>
-      <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20 ">
+      <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
         <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-8 md:grid-cols-2 md:py-12 lg:flex-row lg:gap-20 lg:px-20 lg:py-28">
           <div className="flex w-full flex-1 px-3">
             <img
@@ -270,9 +267,8 @@ const Home = () => {
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               Download “Credit Card Investing Hacks The Banks Don’t Want You To
-              Know About” <span className='text-[#FF0000] line-through'>
-              FREE
-                </span>
+              Know About”{' '}
+              <span className="text-[#FF0000] line-through">FREE</span>
             </h1>
             <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
               <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-0">
@@ -353,7 +349,7 @@ const Home = () => {
           </div>
         </div>
       </section> */}
-      <section className="flex items-center justify-center overflow-hidden bg-white px-5 pb-16 custom-header-bg">
+      <section className="custom-header-bg flex items-center justify-center overflow-hidden bg-white px-5 pb-16">
         <div className="flex items-center justify-center md:pt-10">
           <div className="grid grid-rows-1 gap-y-14 lg:grid-cols-2">
             <div className="flex w-full justify-center lg:justify-end">
@@ -379,29 +375,32 @@ const Home = () => {
                 <div className="flex h-full flex-col items-center justify-center gap-y-5 md:px-10 lg:items-start">
                   <div>
                     <h1
-                      className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-transparent text-4xl font-semibold lg:text-[47px] mb-8 uppercase"
+                      className="mb-8 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-4xl font-semibold uppercase text-transparent lg:text-[47px]"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}
                     >
-                     About Us
+                      About Us
                     </h1>
                   </div>
 
                   <div className="flex">
                     <p
-                      className="items-center text-lg leading-7 text-center md:text-left text-white lg:items-start lg:text-[18px]"
+                      className="items-center text-center text-lg leading-7 text-white md:text-left lg:items-start lg:text-[18px]"
                       style={{ fontFamily: 'Montserrat, serif' }}
                     >
-                      If you’re here, it’s likely because you’ve worked with other funding companies in the past—only
-to be met with empty promises and disappointing results. To make matters worse, some have
-even charged you upfront fees without delivering meaningful outcomes. That ends today!
-
+                      If you’re here, it’s likely because you’ve worked with
+                      other funding companies in the past—only to be met with
+                      empty promises and disappointing results. To make matters
+                      worse, some have even charged you upfront fees without
+                      delivering meaningful outcomes. That ends today!
                       <br />
                       <br />
-                      At High Ticket Offer Financing, we believe in results, not risks. That’s why we charge zero
-                      upfront fees—we only get paid when we successfully secure your funding.
+                      At High Ticket Offer Financing, we believe in results, not
+                      risks. That’s why we charge zero upfront fees—we only get
+                      paid when we successfully secure your funding.
                       <br />
                       <br />
-                      It’s time to stop trying to get funded and start getting funded. Let’s get to work.
+                      It’s time to stop trying to get funded and start getting
+                      funded. Let’s get to work.
                     </p>
                   </div>
                 </div>
@@ -425,7 +424,7 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
               <ScrollAnimation animation="zoomIn" delay={0.8}>
                 <div>
                   <h1
-                    className="uppercase bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text px-4  text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
+                    className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text px-4 text-center text-3xl font-semibold uppercase leading-9 text-[#E7A647] text-transparent md:px-0 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
                     Funding Options Available For You & Your Customers
@@ -435,34 +434,43 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
 
               <ScrollAnimation animation="slideUp" delay={0.2}>
                 <div className="flex items-center justify-start gap-x-3 pt-5">
-                <CheckIcon />
+                  <CheckIcon />
                   <h1
                     className="text-black"
-                    style={{ fontFamily: 'Montserrat, serif', fontWeight:"600" }}
-                  >
-                    No Doc Financing Up to $200k
-                  </h1>
-                </div>
-              </ScrollAnimation>
-
-              <ScrollAnimation animation="slideUp" delay={0.4}>
-                <div className="flex items-center justify-start gap-x-3 pt-3">
-                <CheckIcon />
-                  <h1
-                   className="text-black"
-                    style={{ fontFamily: 'Montserrat, serif',fontWeight:"600" }}
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: '600',
+                    }}
                   >
                     Small Business Loans Up to $4M
                   </h1>
                 </div>
               </ScrollAnimation>
 
+              <ScrollAnimation animation="slideUp" delay={0.4}>
+                <div className="flex items-center justify-start gap-x-3 pt-3">
+                  <CheckIcon />
+                  <h1
+                    className="text-black"
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: '600',
+                    }}
+                  >
+                    No Doc Financing Up to $200k
+                  </h1>
+                </div>
+              </ScrollAnimation>
+
               <ScrollAnimation animation="slideUp" delay={0.6}>
                 <div className="flex items-center justify-start gap-x-3 pt-3">
-                <CheckIcon />
+                  <CheckIcon />
                   <h1
-                     className="text-black"
-                    style={{ fontFamily: 'Montserrat, serif',fontWeight:"600" }}
+                    className="text-black"
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: '600',
+                    }}
                   >
                     0% Business Funding Up to $150K
                   </h1>
@@ -471,10 +479,13 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
 
               <ScrollAnimation animation="slideUp" delay={0.8}>
                 <div className="flex items-center justify-start gap-x-3 pt-3">
-                <CheckIcon />
+                  <CheckIcon />
                   <h1
-                   className="text-black"
-                    style={{ fontFamily: 'Montserrat, serif',fontWeight:"600" }}
+                    className="text-black"
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: '600',
+                    }}
                   >
                     Home Equity Line of Credit Up to $4M
                   </h1>
@@ -483,10 +494,13 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
 
               <ScrollAnimation animation="slideUp" delay={0.9}>
                 <div className="flex items-center justify-start gap-x-3 pt-3">
-<CheckIcon />
+                  <CheckIcon />
                   <h1
                     className="text-black"
-                    style={{ fontFamily: 'Montserrat, serif',fontWeight:"600" }}
+                    style={{
+                      fontFamily: 'Montserrat, serif',
+                      fontWeight: '600',
+                    }}
                   >
                     And More…
                   </h1>
@@ -496,12 +510,12 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
           </div>
         </div>
       </section>
-      <section className="overflow-hidden bg-white px-5 pb-10 custom-header-bg">
+      <section className="custom-header-bg overflow-hidden bg-white px-5 pb-10">
         <div className="flex flex-col items-center justify-center pt-16">
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="pb-2 text-4xl font-semibold lg:text-[38px] md:mb-4 uppercase bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text pb-2 text-4xl font-semibold uppercase text-transparent md:mb-4 lg:text-[38px]"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 How It Works:
@@ -512,7 +526,7 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
           <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className="pb-10 md:pb-14 lg:pb-20">
               <h1
-                className="text-center text-2xl text-white lg:text-[38px] uppercase leading-[2.1rem] md:leading-10"
+                className="text-center text-2xl uppercase leading-[2.1rem] text-white md:leading-10 lg:text-[38px]"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 Our pre-approval process is simple, quick, and easy.
@@ -625,12 +639,13 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
 
           <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className="pt-10">
-              <Button className='text-[1rem]' padding='14px 28px'>Apply Now</Button>
+              <Button className="text-[1rem]" padding="14px 28px">
+                Apply Now
+              </Button>
             </div>
           </ScrollAnimation>
         </div>
       </section>
-
       {/* Client Success Highlights Section */}
       <section className="bg-white px-5 py-16 md:py-24">
         <ScrollAnimation animation="slideUp" delay={0.3}>
@@ -653,7 +668,7 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="pb-2 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
+                className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text pb-2 text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 More Client Results
@@ -673,10 +688,10 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="py-9 text-3xl mb-8 sm:text-4xl font-bold uppercase leading-[1.2] md:text-4xl lg:text-5xl bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-transparent"
+                className="mb-8 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text py-9 text-3xl font-bold uppercase leading-[1.2] text-transparent sm:text-4xl md:text-4xl lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-               Recent Articles & News
+                Recent Articles & News
               </h1>
             </div>
           </ScrollAnimation>
@@ -794,43 +809,45 @@ even charged you upfront fees without delivering meaningful outcomes. That ends 
 
           <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className="pt-10">
-              <Button className='text-[1rem]' padding='14px 28px'>View All Posts</Button>
+              <Button className="text-[1rem]" padding="14px 28px">
+                View All Posts
+              </Button>
             </div>
           </ScrollAnimation>
         </div>
       </section>
-     
-      <section className="flex flex-col min-h-[40vh] w-full items-center justify-center overflow-hidden bg-black px-5 text-center custom-header-bg h-[480px]">
-        <div className=''>
-      <ScrollAnimation animation="fadeIn" delay={0.3}>
-          <div className="mb-6 text-center">
-            <h2
-              className="mb-4 text-3xl sm:text-4xl font-bold uppercase leading-[1.2] md:text-4xl lg:text-5xl bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-transparent"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-            >
-            
-              Have Questions?
-            </h2>
-          </div>
-        </ScrollAnimation>
-
-        <ScrollAnimation animation="fadeIn" delay={0.8}>
-          <div className="flex flex-col items-center justify-center gap-y-[3rem] lg:gap-y-[3.5rem] text-white">
-            <h1
-              className="text-2xl leading-7 md:text-3xl font-semibold lg:text-[38px] md:leading-[2.3rem] lg:leading-[2.8rem]"
-              style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
-            >
-             Complete questionnaire to speak to a
-             <br/>
-             representative.
-            </h1>
-            <div className="pt-1">
-              <Button>Complete Questionnaire</Button>
+      <section className="custom-header-bg flex h-[480px] min-h-[40vh] w-full flex-col items-center justify-center overflow-hidden bg-black px-5 text-center">
+        <div className="">
+          <ScrollAnimation animation="fadeIn" delay={0.3}>
+            <div className="mb-6 text-center">
+              <h2
+                className="mb-4 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-3xl font-bold uppercase leading-[1.2] text-transparent sm:text-4xl md:text-4xl lg:text-5xl"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                Have Questions?
+              </h2>
             </div>
-          </div>
-        </ScrollAnimation>
-        </div>
+          </ScrollAnimation>
 
+          <ScrollAnimation animation="fadeIn" delay={0.8}>
+            <div className="flex flex-col items-center justify-center gap-y-[3rem] text-white lg:gap-y-[3.5rem]">
+              <h1
+                className="text-2xl font-semibold leading-7 md:text-3xl md:leading-[2.3rem] lg:text-[38px] lg:leading-[2.8rem]"
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 500,
+                }}
+              >
+                Complete questionnaire to speak to a
+                <br />
+                representative.
+              </h1>
+              <div className="pt-1">
+                <Button>Complete Questionnaire</Button>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </div>
       </section>
     </>
   )

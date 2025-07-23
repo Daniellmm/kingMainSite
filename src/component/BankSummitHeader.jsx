@@ -2,6 +2,7 @@ import ggeiLogo from '../assets/images/logo/ggei.png'
 import kingTransparent from '../assets/images/team/kingTransparent.png'
 import alexisTransparent from '../assets/images/team/alexisTransparent.png'
 import ScrollAnimation from './ScrollAnimation'
+import Button from './Button'
 const BankSummitHeader = () => {
   return (
     <section className="bankSummitSecion relative flex min-h-[700px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-28 md:min-h-[640px] md:rounded-bl-[100px] md:rounded-br-[100px] md:px-8 md:pb-12 lg:min-h-[746px] lg:pb-32 lg:pt-32">
@@ -74,13 +75,12 @@ const BankSummitHeader = () => {
                 style={{
                   fontFamily: 'Montserrat, sans-serif',
                   background:
-                    'linear-gradient(90deg, #E7A647 0%, #FFD76B 50%, #855B1F 100%)',
+                    'linear-gradient(90deg, rgb(231, 166, 71) 0%, rgb(255, 215, 107) 50%, rgb(191 140 65) 100%)',
                   fontWeight: 600,
                 }}
               >
                 Get Tickets
               </button>
-
               <button
                 className="mt-4 flex w-[103px] items-center justify-center rounded-full bg-[#00B67A] p-[0.3rem] text-[0.6rem] font-semibold uppercase text-black shadow-md md:w-[141px] md:py-2 md:text-xs"
                 style={{

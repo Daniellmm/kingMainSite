@@ -49,7 +49,7 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
       <section className="podcast-sec px-5 lg:px-40">
         <div className="flex w-full flex-col items-center justify-center pt-20">
           <motion.h1
-            className="text-center text-4xl font-bold bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-transparent lg:text-start lg:text-6xl"
+            className="bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-center text-4xl font-bold text-transparent lg:text-start lg:text-6xl"
             style={{ fontFamily: 'Minion Pro, serif' }}
             variants={fadeInUp}
           >

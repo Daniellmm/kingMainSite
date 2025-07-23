@@ -1,33 +1,18 @@
-import React from 'react';
+import React from 'react'
+import Mark from '../../assets/images/tickMark.png'
 
-const CheckIcon = ({ 
-  size = 38, 
-  color = "#10B981", 
-  strokeWidth = 3,
-  className = "" 
-}) => (
-  <svg 
-    width={size} 
-    height={size} 
-    viewBox="0 0 48 48" 
-    fill="none"
-    className={className}
+const CheckIcon = () => (
+  <div
+    className="flex !h-[33px] max-h-[33px] min-h-[33px] !w-[33px] min-w-[33px] max-w-[33px] items-center justify-center overflow-visible rounded-full border-[3px] border-[#00B67A]"
+    style={{ boxSizing: 'border-box' }}
   >
-    <circle 
-      cx="24" 
-      cy="24" 
-      r="20" 
-      stroke={color} 
-      strokeWidth={strokeWidth} 
+    <img
+      src={Mark}
+      alt="mark"
+      className="h-[24px] w-[24px] object-contain"
+      draggable={false}
     />
-    <path 
-      d="M16 24l6 6 12-14" 
-      stroke={color} 
-      strokeWidth={strokeWidth} 
-      strokeLinecap="round" 
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+  </div>
+)
 
-export default CheckIcon;
+export default CheckIcon

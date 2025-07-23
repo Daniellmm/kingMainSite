@@ -1,15 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
-import MText from '../assets/images/png3.png'
-import NOTE from '../assets/images/bg-live/note.png'
-import NOTE2 from '../assets/images/bg-live/note2.png'
+import React, { useState, useRef } from 'react'
+
 import HEADPHONE from '../assets/images/headphone.png'
 import BIGLOGO from '../assets/images/biglogo.png'
 import FALLCOIN from '../assets/images/fallcoin.png'
-import LONG from '../assets/images/long.png'
 import KING from '../assets/images/ak1.png'
 import ALEXIS from '../assets/images/alexis.png'
 import insuranceHeaderImg from '../assets/images/insuranceHeaderImg.png'
-import ARROWD from '../assets/images/arrowD.png'
 import GENE from '../assets/images/gene.png'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -17,6 +13,7 @@ import { gsap } from 'gsap'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Button from '../component/Button'
 
 const FORM_URL =
   'https://api.leadconnectorhq.com/widget/form/TufHjWMyJ7iFxU6TBfrk'
@@ -136,27 +133,10 @@ const Insurance = () => {
 
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4 lg:mt-5">
-                <button
-                  className="flex w-[170px] items-center justify-center rounded-full px-4 py-2 text-xs font-semibold text-black shadow-md md:mt-4 lg:w-[194px] lg:px-7"
-                  style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    background:
-                      'linear-gradient(90deg, #E7A647 0%, #FFD76B 50%, #855B1F 100%)',
-                    fontWeight: 600,
-                  }}
-                >
-                  See Client Results
-                </button>
-
-                <button
-                  className="px:4 mt-4 flex w-[170px] items-center justify-center rounded-full bg-[#00B67A] py-2 text-xs font-semibold text-black shadow-md lg:w-[194px] lg:px-7"
-                  style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontWeight: 600,
-                  }}
-                >
+                <Button className="mt-4">See Client Results</Button>
+                <Button variant="solid" color="#00B67A">
                   Free Financial Review
-                </button>
+                </Button>
               </div>
             </ScrollAnimation>
           </div>

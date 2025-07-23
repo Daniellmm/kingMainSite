@@ -29,8 +29,8 @@ const LINKEDIN_LINK =
 gsap.registerPlugin(ScrollTrigger)
 
 const Footer = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const location = useLocation()
+  const navigate = useNavigate()
 
   // Create logo map just like in NavBar
   const logoMap = {
@@ -289,19 +289,19 @@ const Footer = () => {
           <div>
             <ul>
               {[
-               { item:'Home', link:"/"},
-               { item:'About Us', link:"/about"},
-               { item:'Our Team', link:null},
-               { item:'Services', link:null},
-               { item:'Contact Us', link:null},
-               { item:'Privacy Policy', link:null},
-              ].map(({item, link}, index) => (
+                { item: 'Home', link: '/' },
+                { item: 'About Us', link: '/about' },
+                { item: 'Our Team', link: null },
+                { item: 'Services', link: null },
+                { item: 'Contact Us', link: null },
+                { item: 'Privacy Policy', link: null },
+              ].map(({ item, link }, index) => (
                 <li
                   key={index}
                   className="transform cursor-pointer py-1 transition-all"
                   onMouseEnter={(e) => handleLinkHover(e, true)}
                   onMouseLeave={(e) => handleLinkHover(e, false)}
-                  onClick={()=> navigate(link)}
+                  onClick={() => navigate(link)}
                 >
                   {item}
                 </li>
@@ -323,18 +323,18 @@ const Footer = () => {
           <div>
             <ul>
               {[
-                { item:'Funding', link:"/funding"},
-                { item:'Insurance', link:"/insurance"},
-                { item:'LaserFund', link:"/laserfund"},
-                { item:'Credit to Cash', link:"/credit-card-liquidation"},
-                { item:'Become Your Own Bank', link:"/ggei"},
-              ].map(({item, link}, index) => (
+                { item: 'Funding', link: '/funding' },
+                { item: 'Insurance', link: '/insurance' },
+                { item: 'LaserFund', link: '/laserfund' },
+                { item: 'Credit to Cash', link: '/credit-card-liquidation' },
+                { item: 'Become Your Own Bank', link: '/ggei' },
+              ].map(({ item, link }, index) => (
                 <li
                   key={index}
                   className="transform cursor-pointer py-1 transition-all"
                   onMouseEnter={(e) => handleLinkHover(e, true)}
                   onMouseLeave={(e) => handleLinkHover(e, false)}
-                  onClick={()=> navigate(link)}
+                  onClick={() => navigate(link)}
                 >
                   {item}
                 </li>

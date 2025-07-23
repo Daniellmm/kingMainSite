@@ -121,10 +121,10 @@ const ClientReviewCarousel = () => {
         }}
       />
 
-      <div className="mx-auto w-full max-w-7xl overflow-hidden  sm:px-4 md:px-8">
+      <div className="mx-auto w-full max-w-7xl overflow-hidden sm:px-4 md:px-8">
         <Slider {...settings}>
           {/* First Slide - Video */}
-          <div className="relative w-full lg:!w-[698px] md:pl-[25px]">
+          <div className="relative w-full md:pl-[25px] lg:!w-[698px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
               style={{ aspectRatio: '16/9' }}
@@ -170,7 +170,7 @@ const ClientReviewCarousel = () => {
           </div>
 
           {/* Second Slide - Testimonial Image 1 */}
-          <div className="relative w-full lg:!w-[430px] md:pl-[25px]">
+          <div className="relative w-full md:pl-[25px] lg:!w-[430px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
               style={{ aspectRatio: '16/9' }}
@@ -189,7 +189,7 @@ const ClientReviewCarousel = () => {
           </div>
 
           {/* Third Slide - Testimonial Image 2 */}
-          <div className="relative w-full lg:!w-[430px] md:pl-[25px]">
+          <div className="relative w-full md:pl-[25px] lg:!w-[430px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
               style={{ aspectRatio: '16/9' }}

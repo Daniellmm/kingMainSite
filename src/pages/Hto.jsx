@@ -101,16 +101,17 @@ const Hto = () => {
             <div className="flex flex-col items-center justify-center pt-16">
               <div className="flex flex-col items-center justify-center gap-y-4 pt-10 lg:w-2/3 lg:pt-0">
                 <motion.h1
-                  className="bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text  text-center text-5xl font-bold uppercase text-transparent lg:pt-10 lg:text-7xl"
+                  className="bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-center text-5xl font-bold uppercase text-transparent lg:pt-10 lg:text-7xl"
                   style={{ fontFamily: 'Minion Pro, serif' }}
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  Turn Your Available Credit{' '}<span className='bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text  text-center text-5xl font-bold uppercase  lg:pt-10 lg:text-7xl'>
+                  Turn Your Available Credit{' '}
+                  <span className="bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-center text-5xl font-bold uppercase lg:pt-10 lg:text-7xl">
                     Into Cash...
-                    </span>
+                  </span>
                 </motion.h1>
                 <motion.p
                   className="text-center text-lg uppercase text-[#999999]"
@@ -140,7 +141,8 @@ const Hto = () => {
                     style={{
                       fontFamily: 'Montserrat, serif',
                       fontWeight: 'medium',
-                      background: "linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)",
+                      background:
+                        'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                     }}
                     className="rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] px-6 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
                     onClick={() => {
@@ -157,7 +159,8 @@ const Hto = () => {
                     style={{
                       fontFamily: 'Montserrat, serif',
                       fontWeight: 'medium',
-                      background: "linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)",
+                      background:
+                        'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                     }}
                     className="rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] px-3 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg lg:px-6"
                   >
@@ -242,10 +245,8 @@ const Hto = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-center text-4xl bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-transparent lg:text-start lg:text-6xl"
-                style={{ fontFamily: 'Minion Pro, serif',
-                  fontWeight: 'bold'
-                 }}
+                className="bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-center text-4xl text-transparent lg:text-start lg:text-6xl"
+                style={{ fontFamily: 'Minion Pro, serif', fontWeight: 'bold' }}
               >
                 Why Choose Our Credit Card Liquidation Service?
               </motion.h1>
@@ -300,7 +301,7 @@ const Hto = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-center text-4xl bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-transparent lg:text-start lg:text-6xl"
+                className="bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-center text-4xl text-transparent lg:text-start lg:text-6xl"
                 style={{ fontFamily: 'Minion Pro, serif' }}
               >
                 How It Works (In 5 Simple Steps)
@@ -445,7 +446,7 @@ const Hto = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-center text-4xl bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-transparent lg:text-start lg:text-6xl"
+                className="bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-center text-4xl text-transparent lg:text-start lg:text-6xl"
                 style={{ fontFamily: 'Minion Pro, serif' }}
               >
                 Who Is This For?
@@ -643,7 +644,7 @@ const Hto = () => {
         <section className="last-sec flex flex-col items-center justify-center bg-black px-5 pb-32 pt-20 lg:min-h-[10vh] lg:px-20">
           <div className="flex flex-col items-center justify-center gap-8">
             <motion.h1
-              className="text-4xl bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-transparent lg:text-6xl"
+              className="bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-4xl text-transparent lg:text-6xl"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -678,7 +679,8 @@ const Hto = () => {
                 style={{
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
-                  background: 'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
+                  background:
+                    'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                 }}
                 className="rounded-full px-6 py-2 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
               >
