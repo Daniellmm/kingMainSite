@@ -203,23 +203,11 @@ const GGEI = () => {
 
           <div className="flex h-full items-start justify-center lg:w-[100%]">
             <ScrollAnimation animation="slideRight" delay={0.2}>
-              <div className="flex items-center justify-center gap-x-6 gap-y-6">
-                <div className="w-[50%] flex-1 lg:w-auto">
-                  <img
-                    src={LONG2}
-                    className="size-[200px] rounded-xl lg:size-full lg:w-auto"
-                    alt=""
-                  />
-                </div>
 
-                <div className="w-[50%] flex-1 lg:w-auto">
-                  <img
-                    src={ALX}
-                    className="size-[200px] rounded-xl lg:size-full lg:w-auto"
-                    alt=""
-                  />
-                </div>
+              <div className='flex justify-center mt-3'>
+                <iframe className='lg:w-[850px] pb-5 w-[340px] md:w-[540px] rounded-2xl h-[250px] lg:rounded-[50px] lg:h-[415px]' src="https://www.youtube.com/embed/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
+
             </ScrollAnimation>
           </div>
 

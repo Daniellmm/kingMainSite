@@ -381,15 +381,16 @@ const Home = () => {
               <ScrollAnimation animation="slideRight" delay={0.8}>
                 <div className="flex items-center justify-end pt-10">
                   <div>
-                    <iframe
-                      className="h-[250px] w-[340px] rounded-xl pb-5 md:h-[580px] md:w-[490px] md:rounded-[50px]"
-                      src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                    ></iframe>
+                  <iframe
+  className="h-[250px] w-[340px] rounded-xl pb-5 md:h-[580px] md:w-[490px] md:rounded-[50px]"
+  src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
+  title="YouTube video player"
+  style={{ border: 'none' }}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+></iframe>
+
                   </div>
                 </div>
               </ScrollAnimation>
