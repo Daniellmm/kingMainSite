@@ -515,7 +515,12 @@ const GGEI = () => {
       <section className="large-screen hidden overflow-hidden bg-white px-10 pb-20 lg:block">
         <div className="flex flex-col items-center justify-center pt-10">
           <ScrollAnimation animation="zoomIn">
-            {/* <h1 className='text-[#E7A647] text-3xl lg:text-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>Our Co-Founders</h1> */}
+            <h1
+              className="text-3xl font-semibold text-[#E7A647] lg:text-[45px]"
+              style={{ fontFamily: 'Minion Pro, serif' }}
+            >
+              Founders
+            </h1>
           </ScrollAnimation>
 
           <div className="relative flex flex-col flex-wrap items-center justify-center gap-x-14 pt-44">

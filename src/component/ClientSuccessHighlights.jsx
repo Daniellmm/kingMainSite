@@ -4,7 +4,9 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 const getYouTubeThumbnail = (url) => {
-  const videoId = url.split('v=')[1]?.split('&')[0] || url.split('/').pop()
+  const videoId = url.includes('shorts')
+    ? url.split('/shorts/')[1]?.split('?')[0]
+    : url.split('v=')[1]?.split('&')[0] || url.split('/').pop()
   return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
 }
 
@@ -68,57 +70,53 @@ const VideoCarousel = () => {
       <style
         dangerouslySetInnerHTML={{
           __html: `
-          .video-carousel-wrapper .slick-dots {
-            bottom: -30px !important;
-            position: static !important;
-            margin-top: 3.3rem !important;
-          }
-
-          .video-carousel-wrapper .slick-dots li {
-            margin: 0 0px !important;
-          }
-
-          .video-carousel-wrapper .slick-dots li button {
-            width: 12px !important;
-            height: 12px !important;
-            border-radius: 50% !important;
-            background-color: #D9D9D9 !important;
-            border: none !important;
-            transition: all 0.3s ease !important;
-          }
-
-          .video-carousel-wrapper .slick-dots li button:hover {
-            background-color: #444444 !important;
-            transform: scale(1.1) !important;
-          }
-
-          .video-carousel-wrapper .slick-dots li.slick-active button {
-            background-color: #444444 !important;
-          }
-
-          .video-carousel-wrapper .slick-slide {
-            padding: 0 11px !important;
-          }
-
-          .video-carousel-wrapper .slick-list {
-            margin: 0 -60px !important;
-          }
-
-          @media (max-width: 768px) {
-            .video-carousel-wrapper .slick-list {
-              margin: 0 !important;
-            }
             .video-carousel-wrapper .slick-dots {
-              margin-top: 1rem !important;
+              bottom: -30px !important;
+              position: static !important;
+              margin-top: 3.3rem !important;
             }
-          }
-        `,
+
+            .video-carousel-wrapper .slick-dots li button {
+              width: 12px !important;
+              height: 12px !important;
+              border-radius: 50% !important;
+              background-color: #D9D9D9 !important;
+              border: none !important;
+              transition: all 0.3s ease !important;
+            }
+
+            .video-carousel-wrapper .slick-dots li button:hover {
+              background-color: #444444 !important;
+              transform: scale(1.1) !important;
+            }
+
+            .video-carousel-wrapper .slick-dots li.slick-active button {
+              background-color: #444444 !important;
+            }
+
+            .video-carousel-wrapper .slick-slide {
+              padding: 0 11px !important;
+            }
+
+            .video-carousel-wrapper .slick-list {
+              margin: 0 -60px !important;
+            }
+
+            @media (max-width: 768px) {
+              .video-carousel-wrapper .slick-list {
+                margin: 0 !important;
+              }
+              .video-carousel-wrapper .slick-dots {
+                margin-top: 1rem !important;
+              }
+            }
+          `,
         }}
       />
 
       <div className="md:py:12 mx-auto w-full max-w-7xl overflow-hidden px-2 sm:px-4 sm:py-4 md:px-12">
         <Slider {...settings}>
-          {/* Slide 1 (Wide) */}
+          {/* Slide 1 - Regular YouTube video */}
           <div className="relative w-full lg:!w-[698px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
@@ -136,8 +134,8 @@ const VideoCarousel = () => {
                   )}
                   <iframe
                     className="h-full w-full"
-                    src="https://www.youtube.com/embed/a9M6uPzQLFs?controls=1&rel=0&modestbranding=1"
-                    title="YouTube Video 1"
+                    src="https://www.youtube.com/embed/JvPEDv5MiFg?controls=1&rel=0&modestbranding=1"
+                    title="Video 1"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
@@ -150,10 +148,8 @@ const VideoCarousel = () => {
                   onClick={() => handleVideoClick(1)}
                 >
                   <img
-                    src={getYouTubeThumbnail(
-                      'https://www.youtube.com/watch?v=a9M6uPzQLFs',
-                    )}
-                    alt="Thumbnail 1"
+                    src={getYouTubeThumbnail('https://youtu.be/JvPEDv5MiFg')}
+                    alt="Video 1"
                     className="h-full w-full object-cover"
                     loading="lazy"
                   />
@@ -173,8 +169,8 @@ const VideoCarousel = () => {
             </div>
           </div>
 
-          {/* Slide 2 (Short width - 184px) */}
-          <div className="relative lg:!w-[256px]">
+          {/* Slide 2 - YouTube Shorts */}
+          <div className="relative lg:!w-[224px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '9/16' }}
@@ -191,8 +187,8 @@ const VideoCarousel = () => {
                   )}
                   <iframe
                     className="h-full w-full"
-                    src="https://www.youtube.com/embed/Ib9feq1-YVw?controls=1&rel=0&modestbranding=1"
-                    title="YouTube Short"
+                    src="https://www.youtube.com/embed/TQqpTs8ntHk?controls=1&rel=0&modestbranding=1"
+                    title="Short Video"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
@@ -206,7 +202,7 @@ const VideoCarousel = () => {
                 >
                   <img
                     src={getYouTubeThumbnail(
-                      'https://www.youtube.com/watch?v=Ib9feq1-YVw',
+                      'https://youtube.com/shorts/TQqpTs8ntHk',
                     )}
                     alt="Short Video"
                     className="h-full w-full object-cover"
@@ -228,7 +224,7 @@ const VideoCarousel = () => {
             </div>
           </div>
 
-          {/* Slide 3 (Wide) */}
+          {/* Slide 3 - Regular YouTube video */}
           <div className="relative w-full lg:!w-[698px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
@@ -246,8 +242,8 @@ const VideoCarousel = () => {
                   )}
                   <iframe
                     className="h-full w-full"
-                    src="https://www.youtube.com/embed/byzZl7yl0S0?controls=1&rel=0&modestbranding=1"
-                    title="YouTube Video 3"
+                    src="https://www.youtube.com/embed/8oc1XzrVKdU?controls=1&rel=0&modestbranding=1"
+                    title="Video 3"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
@@ -260,10 +256,8 @@ const VideoCarousel = () => {
                   onClick={() => handleVideoClick(3)}
                 >
                   <img
-                    src={getYouTubeThumbnail(
-                      'https://www.youtube.com/watch?v=byzZl7yl0S0',
-                    )}
-                    alt="Thumbnail 3"
+                    src={getYouTubeThumbnail('https://youtu.be/8oc1XzrVKdU')}
+                    alt="Video 3"
                     className="h-full w-full object-cover"
                     loading="lazy"
                   />

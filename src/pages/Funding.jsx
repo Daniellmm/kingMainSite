@@ -5,6 +5,7 @@ import CHECK from '../assets/images/check.png'
 import MText from '../assets/images/png2.png'
 import AWW from '../assets/images/aww.png'
 import LONG from '../assets/images/long.png'
+import LoanImg from '../assets/images/loan.png'
 import DollarCoin from '../assets/images/bg-live/rightmc.png'
 import DollarCoin2 from '../assets/images/bg-live/leftmc.png'
 import ScrollAnimation from '../component/ScrollAnimation'
@@ -14,6 +15,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import HP from '../assets/images/hp.jpg'
+import Button from '../component/ui/Button'
 
 const FORM_URL = 'https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U'
 const URL = 'https://syofb.io'
@@ -263,26 +265,28 @@ const Funding = () => {
         </div>
       </section>
 
-      <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
-        <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-5 md:grid-cols-2 lg:flex-row lg:gap-20 lg:px-20">
-          <div className="flex w-full flex-1 px-3">
+      <section className="bg-white px-4 pb-10 pt-10 lg:px-5 lg:pt-20">
+        <div className="mx-auto my-0 grid w-full max-w-[1800px] grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black p-4 py-5 md:grid-cols-2 md:p-12 lg:flex-row lg:gap-12 xl:gap-20">
+          <div className="flex w-full flex-1">
             <img
-              src={HP}
+              src={LoanImg}
               alt=""
-              className="rounded-xl shadow-2xl shadow-black"
+              className="rounded-[38px] shadow-2xl shadow-black"
             />
           </div>
 
           <div className="flex w-full flex-1 flex-col">
             <h1
-              className="pb-10 text-center text-3xl font-semibold leading-10 text-[#E7A647] lg:text-start lg:text-[45px]"
-              style={{ fontFamily: 'Minion Pro, serif' }}
+              className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.1] lg:text-start lg:text-[42px]"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              Discover Exactly How Entrepreneurs Are Launching 7-Figure Funding
-              Businesses From Scratch
+              Discover Exactly How
+              <span className="hidden md:inline">&nbsp;</span>
+              Entrepreneurs Are Launching 7-Figure Funding Businesses From
+              Scratch
             </h1>
             <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
-              <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-7">
+              <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg py-7">
                 {/* <form action="" className='w-full min-w-[100wv]  flex flex-col'>
                   <div className='w-full'>
                     <input
@@ -313,17 +317,10 @@ const Funding = () => {
                   </div>
                 </form> */}
 
-                <div className="flex w-full justify-start lg:justify-start">
-                  <button
-                    onClick={handleFreeClick}
-                    className="flex justify-center rounded-[8px] bg-[#E7A647] px-3 py-2 lg:justify-start"
-                    style={{
-                      fontFamily: 'Montserrat, serif',
-                      fontWeight: 'medium',
-                    }}
-                  >
+                <div className="flex w-full justify-center md:justify-start">
+                  <Button size="large" width="150px">
                     Learn More
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>

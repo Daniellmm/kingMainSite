@@ -2,10 +2,10 @@ import ggeiLogo from '../assets/images/logo/ggei.png'
 import kingTransparent from '../assets/images/team/kingTransparent.png'
 import alexisTransparent from '../assets/images/team/alexisTransparent.png'
 import ScrollAnimation from './ScrollAnimation'
-import Button from './Button'
+import Button from './ui/Button'
 const BankSummitHeader = () => {
   return (
-    <section className="bankSummitSecion relative flex min-h-[700px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-28 md:min-h-[640px] md:rounded-bl-[100px] md:rounded-br-[100px] md:px-8 md:pb-12 lg:min-h-[746px] lg:pb-32 lg:pt-32">
+    <section className="bankSummitSecion relative flex min-h-[700px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-28 md:min-h-[640px] md:rounded-bl-[70px] md:rounded-br-[70px] md:px-8 md:pb-12 lg:min-h-[746px] lg:pb-32 lg:pt-32">
       {/* Slanted golden gradient bar in upper right corner, clipped to section */}
       <div
         className="slantedDivGgei pointer-events-none absolute right-0 top-0 z-20 w-1/2 -translate-y-[132px] translate-x-[157px] rotate-[45deg] overflow-hidden bg-[linear-gradient(to_right,_#2a1f05,_#4a3510_40%,_#b28f48_104%)]"
@@ -42,14 +42,14 @@ const BankSummitHeader = () => {
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               <span
-                className="bg-gradient-to-r from-[#A78430] to-[#E7A647] bg-clip-text text-transparent"
+                className="bg-gradient-golden bg-clip-text text-transparent"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 Become{' '}
               </span>
               Your{' '}
               <span
-                className="bg-gradient-to-r from-[#A78430] to-[#E7A647] bg-clip-text text-transparent"
+                className="bg-gradient-golden bg-clip-text text-transparent"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 Own Bank{' '}

@@ -31,6 +31,7 @@ import testimonial14 from '../assets/images/imageTest/testi14.png'
 import testimonial15 from '../assets/images/imageTest/testi15.png'
 import testimonial16 from '../assets/images/imageTest/testi16.png'
 import testimonial17 from '../assets/images/imageTest/testi17.png'
+import Button from '../component/ui/Button'
 
 const testimonials = [
   {
@@ -308,23 +309,27 @@ const LaserFund = () => {
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section> */}
 
-      <section className="custom-header-bg relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:pl-24 lg:pr-24">
-          <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:mr-48">
+      <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[624px] md:rounded-bl-[70px] md:rounded-br-[70px]">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
+          <div className="grow-1 flex w-[90%] flex-col items-center sm:px-12 md:mr-8 md:w-full md:items-start md:px-0 lg:mr-12 xl:mr-56 2xl:mr-64">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
               <div className="pb-2">
                 <h1
-                  className="px-4 py-0 text-center text-lg font-bold uppercase leading-tight text-white md:text-left md:text-2xl lg:text-5xl"
+                  className="p-0 text-center text-3xl font-bold uppercase text-white md:px-4 md:text-left lg:text-5xl"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   <span
-                    className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent"
+                    className="bg-gradient-golden-dark bg-clip-text text-transparent"
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
-                    Trading, Education
-                    <br />
-                  </span>
-                  & AutomatioN Network
+                    <span className="bg-gradient-golden-dark block bg-clip-text text-transparent sm:hidden">
+                      Trading, Education
+                    </span>
+                    <span className="hidden sm:inline">
+                      Trading,&nbsp;Education
+                    </span>
+                  </span>{' '}
+                  & Automation Network
                 </h1>
               </div>
             </ScrollAnimation>
@@ -332,7 +337,7 @@ const LaserFund = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex justify-center">
                 <p
-                  className="px-5 pb-4 text-center text-[10px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px]"
+                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px]"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   Master the markets, build wealth, create passive income, and
@@ -342,36 +347,17 @@ const LaserFund = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
-                <button
-                  className="flex w-[170x] items-center justify-center rounded-full px-7 py-2 text-xs font-semibold text-black shadow-md md:mt-4"
-                  style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    background:
-                      'linear-gradient(90deg, #E7A647 0%, #FFD76B 50%, #855B1F 100%)',
-                    fontWeight: 600,
-                  }}
-                >
-                  Watch Video
-                </button>
-
-                <button
-                  className="mt-4 flex w-[170px] items-center justify-center rounded-full bg-[#00B67A] px-7 py-2 text-xs font-semibold text-black shadow-md"
-                  style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontWeight: 600,
-                  }}
-                >
-                  Learn More
-                </button>
+                <Button className="mt-4">Watch Video</Button>
+                <Button variant="solid">Learn More</Button>
               </div>
             </ScrollAnimation>
           </div>
 
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <div className="relative -bottom-[46px] aspect-[340/600] w-[14rem] md:-bottom-[50px] lg:-bottom-[71px] lg:aspect-[490/900] lg:w-[21rem]">
-              {/* Golden glow effect: mobile - semi-circle at bottom, desktop - full circle bottom right */}
+            <div className="relative -bottom-[46px] aspect-[340/600] w-40 sm:w-48 md:-bottom-[50px] md:w-56 lg:-bottom-[71px] lg:aspect-[490/900] lg:w-[18rem] xl:h-[528px] xl:w-[19rem]">
+              {/* Golden glow effect */}
               <div
-                className="controlGlow absolute bottom-[-138px] left-1/2 z-0 h-[500px] w-[500px] -translate-x-1/2 rounded-b-full md:bottom-[-50px] md:left-[81%] md:h-[400px] md:w-[400px] lg:bottom-[-30%] lg:left-auto lg:right-[-240%] lg:top-auto lg:h-[800px] lg:w-[800px] lg:rounded-full"
+                className="controlGlow absolute bottom-[-138px] left-1/2 z-0 h-[390px] w-[420px] -translate-x-1/2 rounded-b-full md:bottom-[-50px] md:left-[81%] md:h-[400px] md:w-[400px] lg:bottom-[-30%] lg:left-auto lg:right-[-240%] lg:top-auto lg:h-[700px] lg:w-[700px] lg:rounded-full"
                 style={{
                   background:
                     'radial-gradient(circle at 50% 80%, rgb(243 193 118 / 36%) 0%, rgba(133, 91, 31, 0.25) 60%, rgba(0, 0, 0, 0) 100%)',
@@ -390,8 +376,6 @@ const LaserFund = () => {
             </div>
           </ScrollAnimation>
         </div>
-
-        {/* <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div> */}
       </section>
 
       <section className="flex items-center justify-center overflow-hidden bg-white px-10 pb-14">
@@ -422,9 +406,11 @@ const LaserFund = () => {
                       fontWeight: 'medium',
                     }}
                   >
-                    Get our “Buy The Dip Crypto Series (Beginners Guide): How I
-                    7x’d My Crypto Portfolio in 3 Months Buying & Selling Crypto
-                    on Coinbase."
+                    As a valued member of the Laser Fund PAMM Education &
+                    Automation Network, you’ll receive complimentary access to
+                    the “Buy the Dip Crypto Series: A Beginner’s Guide to How I
+                    7x’d My Portfolio in 3 Months Using Coinbase” — absolutely
+                    FREE.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -432,7 +418,7 @@ const LaserFund = () => {
               <div className="flex w-full items-center justify-center lg:justify-start">
                 <ScrollAnimation animation="slideUp" delay={0.4}>
                   <div>
-                    <button
+                    {/* <button
                       onClick={handleButtonClick}
                       className="rounded-[8px] bg-[#E7A647] px-5 py-3"
                       style={{
@@ -441,7 +427,10 @@ const LaserFund = () => {
                       }}
                     >
                       Buy Now
-                    </button>
+                    </button> */}
+                    <Button size="large" width="180px">
+                      Learn More
+                    </Button>
                   </div>
                 </ScrollAnimation>
               </div>
@@ -1215,8 +1204,8 @@ const LaserFund = () => {
               className="text-center text-3xl font-semibold leading-[45px] text-[#E7A647] lg:text-[45px]"
               style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}
             >
-              BONUS: Free Trading Strategy Session instead of Free Trading
-              Strategy Guide. ($1,997 Value)!
+              BONUS: Monthly Q&A Trading Strategy Sessions with the Founders of
+              the AI Trading Algorithm.
             </h1>
           </ScrollAnimation>
 
@@ -1252,7 +1241,7 @@ const LaserFund = () => {
                   fontWeight: 'medium',
                 }}
               >
-                Meet the Team
+                Meet the Founders
               </button>
             </div>
           </ScrollAnimation>

@@ -18,7 +18,7 @@ import CustomSlider from '../component/TestimonialSlider'
 import HP from '../assets/images/hp.jpg'
 import ClientReviewCarousel from '../component/ClientReviewCarousel'
 import ClientSuccessHighlights from '../component/ClientSuccessHighlights'
-import Button from '../component/Button'
+import Button from '../component/ui/Button'
 import CheckIcon from '../component/ui/CheckMark'
 
 // Form URL for buttons
@@ -128,19 +128,19 @@ const Home = () => {
 
   return (
     <>
-      <section className="custom-header-bg relative flex min-h-[70vh] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:pl-24 lg:pr-24">
-          <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:mr-16">
+      <section className="custom-header-bg sm: md:h- relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[624px] md:rounded-bl-[70px] md:rounded-br-[70px]">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center pt-24 md:max-w-[800px] md:flex-row md:gap-8 md:px-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
+          <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:mr-16 xl:mr-48">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
               <div className="pb-2">
                 <h1
-                  className="py-0 text-center text-lg font-bold leading-tight text-white md:px-4 md:text-left md:text-2xl lg:text-5xl"
+                  className="p-0 text-center text-3xl font-bold uppercase leading-[2rem] text-white md:px-4 md:text-left md:text-4xl lg:text-5xl"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
-                  HIGH TICKET FINANCING FOR
+                  HIGH TICKET FINANCING&nbsp;FOR
                   <br />
                   <span
-                    className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent"
+                    className="bg-gradient-golden-deep bg-clip-text text-transparent"
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
                     COACHES, SERVICES, AND DIGITAL PRODUCTS
@@ -152,28 +152,29 @@ const Home = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex justify-center">
                 <p
-                  className="px-5 pb-4 text-center text-[10px] uppercase text-white md:text-left md:text-[14px]"
+                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px]"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   Close more Deals, Scale Faster, and Eliminate Price Objections
                 </p>
               </div>
             </ScrollAnimation>
+
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
                 <Button className="mt-4">See Client Results</Button>
                 <Button color="#1cb67c" variant="solid">
-                  Lets Get Started
+                  Let's Get Started
                 </Button>
               </div>
             </ScrollAnimation>
           </div>
 
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <div className="relative -bottom-[56px] flex aspect-[340/600] w-[14rem] items-center justify-center lg:aspect-[490/900] lg:w-[21rem]">
-              {/* Golden glow effect: mobile - semi-circle at bottom, desktop - full circle bottom right */}
+            <div className="sm:-48 relative -bottom-[46px] aspect-[340/600] w-40 md:-bottom-[50px] md:w-56 lg:-bottom-[71px] lg:aspect-[490/900] lg:w-[18rem] xl:h-[528px] xl:w-[19rem]">
+              {/* Golden glow effect */}
               <div
-                className="controlGlow absolute bottom-[-138px] left-1/2 z-0 h-[500px] w-[500px] -translate-x-1/2 rounded-b-full md:bottom-[-50px] md:left-[81%] md:h-[400px] md:w-[400px] lg:bottom-[-30%] lg:left-auto lg:right-[-240%] lg:top-auto lg:h-[800px] lg:w-[800px] lg:rounded-full"
+                className="controlGlow absolute bottom-[-138px] left-1/2 z-0 h-[390px] w-[420px] -translate-x-1/2 rounded-b-full md:bottom-[-50px] md:left-[81%] md:h-[400px] md:w-[400px] lg:bottom-[-30%] lg:left-auto lg:right-[-240%] lg:top-auto lg:h-[700px] lg:w-[700px] lg:rounded-full"
                 style={{
                   background:
                     'radial-gradient(circle at 50% 80%, rgb(243 193 118 / 36%) 0%, rgba(133, 91, 31, 0.25) 60%, rgba(0, 0, 0, 0) 100%)',
@@ -192,8 +193,6 @@ const Home = () => {
             </div>
           </ScrollAnimation>
         </div>
-
-        {/* <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div> */}
       </section>
       <section className="overflow-hidden bg-white px-5 pb-14">
         <ScrollAnimation animation="fadeIn" delay={0.8}>
@@ -209,7 +208,7 @@ const Home = () => {
               >
                 “The only thing holding you back from achieving all of your
                 goals <br className="hidden lg:block" /> is a financing partner
-                that you can depend on. H.T.O.F. is that partner.”{' '}
+                that you can depend on.”{' '}
               </h1>
             </div>
             <div>
@@ -228,18 +227,18 @@ const Home = () => {
         <ScrollAnimation animation="fadeIn" delay={0.3}>
           <div className="mb-12 text-center">
             <h2
-              className="mb-4 text-xl font-bold uppercase leading-[1.2] md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl font-bold uppercase sm:text-4xl lg:text-5xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              <span className="bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent">
+              <span className="bg-gradient-golden bg-clip-text text-transparent">
                 WHAT OUR
               </span>{' '}
               <span className="text-white">CLIENTS</span>{' '}
-              <span className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent">
+              <span className="bg-gradient-golden-deep bg-clip-text text-transparent">
                 ARE SAYING
               </span>
               <br />
-              <span className="text-xxl bg-gradient-to-r from-[#E7A647] to-[#CFA647] bg-clip-text text-transparent md:text-3xl lg:text-4xl">
+              <span className="text-xxl bg-gradient-golden bg-clip-text text-transparent md:text-3xl lg:text-4xl">
                 (AND ACHIEVING)
               </span>
             </h2>
@@ -262,7 +261,7 @@ const Home = () => {
 
           <div className="flex w-full flex-1 flex-col">
             <h1
-              className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
+              className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               Download “Credit Card Investing Hacks The Banks Don’t Want You To
@@ -272,7 +271,7 @@ const Home = () => {
             <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
               <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-0">
                 <div className="flex w-full justify-center md:justify-start">
-                  <Button>Watch FREE Web-Class</Button>
+                  <Button>Download Now</Button>
                 </div>
               </div>
             </div>
@@ -350,7 +349,7 @@ const Home = () => {
       </section> */}
       <section className="custom-header-bg flex items-center justify-center overflow-hidden bg-white px-5 pb-16">
         <div className="flex items-center justify-center md:pt-10">
-          <div className="grid grid-rows-1 gap-y-14 lg:grid-cols-2">
+          <div className="grid grid-rows-1 gap-y-8 md:gap-y-12 lg:grid-cols-2">
             <div className="flex w-full justify-center lg:justify-end">
               <ScrollAnimation animation="slideRight" delay={0.8}>
                 <div className="flex items-center justify-end pt-10">
@@ -374,7 +373,7 @@ const Home = () => {
                 <div className="flex h-full flex-col items-center justify-center gap-y-5 md:px-10 lg:items-start">
                   <div>
                     <h1
-                      className="mb-8 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-4xl font-semibold uppercase text-transparent lg:text-[47px]"
+                      className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-3xl font-semibold uppercase text-transparent sm:text-4xl md:mb-4 lg:text-5xl"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}
                     >
                       About Us
@@ -423,7 +422,7 @@ const Home = () => {
               <ScrollAnimation animation="zoomIn" delay={0.8}>
                 <div>
                   <h1
-                    className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text px-4 text-center text-3xl font-semibold uppercase leading-9 text-[#E7A647] text-transparent md:px-0 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
+                    className="bg-gradient-golden-dark bg-clip-text px-4 text-center text-3xl font-semibold uppercase leading-9 text-[#E7A647] text-transparent md:px-0 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
                     Funding Options Available For You & Your Customers
@@ -514,7 +513,7 @@ const Home = () => {
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text pb-2 text-4xl font-semibold uppercase text-transparent md:mb-4 lg:text-[38px]"
+                className="bg-gradient-golden-dark bg-clip-text pb-2 text-4xl font-semibold uppercase text-transparent md:mb-4 lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 How It Works:
@@ -525,7 +524,7 @@ const Home = () => {
           <ScrollAnimation animation="slideUp" delay={0.8}>
             <div className="pb-10 md:pb-14 lg:pb-20">
               <h1
-                className="text-center text-2xl uppercase leading-[2.1rem] text-white md:leading-10 lg:text-[38px]"
+                className="text-center text-xl uppercase text-white md:text-2xl md:leading-10 lg:text-[38px]"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 Our pre-approval process is simple, quick, and easy.
@@ -650,7 +649,7 @@ const Home = () => {
         <ScrollAnimation animation="slideUp" delay={0.3}>
           <div className="mb-12 text-center">
             <h2
-              className="mb-4 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
+              className="bg-gradient-golden-dark mb-4 bg-clip-text text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               Client Success Highlights
@@ -667,7 +666,7 @@ const Home = () => {
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text pb-2 text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
+                className="bg-gradient-golden-dark bg-clip-text pb-2 text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 More Client Results
@@ -687,7 +686,7 @@ const Home = () => {
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="mb-8 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text py-9 text-3xl font-bold uppercase leading-[1.2] text-transparent sm:text-4xl md:text-4xl lg:text-5xl"
+                className="bg-gradient-golden-dark mb-8 bg-clip-text py-9 text-3xl font-bold uppercase leading-[1.2] text-transparent sm:text-4xl md:text-4xl lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 Recent Articles & News
@@ -820,7 +819,7 @@ const Home = () => {
           <ScrollAnimation animation="fadeIn" delay={0.3}>
             <div className="mb-6 text-center">
               <h2
-                className="mb-4 bg-gradient-to-r from-[#E7A647] to-[#A78430] bg-clip-text text-3xl font-bold uppercase leading-[1.2] text-transparent sm:text-4xl md:text-4xl lg:text-5xl"
+                className="bg-gradient-golden-dark mb-4 bg-clip-text text-3xl font-bold uppercase leading-[1.2] text-transparent sm:text-4xl md:text-4xl lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 Have Questions?
