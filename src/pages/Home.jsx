@@ -188,7 +188,6 @@ const Home = () => {
                 height={600}
                 className="relative z-10 block aspect-[340/600] h-auto w-full object-contain lg:aspect-[490/900]"
                 style={{ display: 'block' }}
-                loading="lazy"
               />
             </div>
           </ScrollAnimation>

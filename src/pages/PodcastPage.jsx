@@ -108,7 +108,6 @@ const PodcastPage = () => {
                     }}
                     style={{
                       fontFamily: 'Montserrat, serif',
-                      fontWeight: 'medium',
                       fontWeight: '700',
                       background:
                         'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',

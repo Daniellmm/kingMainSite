@@ -96,13 +96,10 @@ const Insurance = () => {
               alt="header image"
               width={600}
               height={600}
-              style={
-                {
-                  // aspectRatio: '1/1',
-                }
-              }
+              style={{
+                aspectRatio: '3/2',
+              }}
               className="block object-contain md:mt-40 md:w-[80vw] md:max-w-[372px] lg:w-[600px] lg:max-w-[600px]"
-              loading="lazy"
             />
           </ScrollAnimation>
           <div className="xl-pl-0 flex flex-col items-center md:w-full md:flex-1 md:items-start md:self-start lg:w-1/2 lg:pl-8 xl:flex-none">

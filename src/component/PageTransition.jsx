@@ -5,6 +5,7 @@ const PageTransition = ({ children }) => {
   const pageRef = useRef(null)
 
   useEffect(() => {
+    if (!pageRef.current) return
     const tl = gsap.timeline()
 
     tl.fromTo(

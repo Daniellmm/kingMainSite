@@ -161,7 +161,7 @@ const Insurance = () => {
         clearInterval(autoScrollTimerRef.current)
       }
     }
-  }, [isLargeScreen, currentSlide]) // Added currentSlide to properly reset timer when slide changes
+  }, [isLargeScreen, currentSlide, nextSlide]) // Added currentSlide to properly reset timer when slide changes
 
   // Check screen size on component mount and window resize
   useEffect(() => {

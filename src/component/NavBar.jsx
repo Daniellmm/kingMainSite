@@ -44,7 +44,7 @@ const NavBar = () => {
     '/credit-card-liquidation': CCLLogo,
     '/earn-protect-grow': EPGLogo,
     // { path: '/about', label: 'About Us' },
-    // { path: '/credit card liquidation', label: 'Credit to Cash' },
+    // { path: '/credit card liquidation', label: 'Credit to Cash' },
   }
 
   const currentLogo = logoMap[location.pathname] || LOGO1
