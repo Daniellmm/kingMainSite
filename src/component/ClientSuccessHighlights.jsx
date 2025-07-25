@@ -35,6 +35,38 @@ const VideoCarousel = () => {
     setIsVideoLoading(false)
   }
 
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 600,
+  //   arrows: false,
+  //   swipeToSlide: true,
+  //   touchMove: true,
+  //   draggable: true,
+  //   autoplay: false,
+  //   pauseOnHover: true,
+  //   centerMode: false,
+  //   variableWidth: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         variableWidth: true,
+  //         slidesToShow: 2.5,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         variableWidth: false,
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // }
+
   const settings = {
     dots: true,
     infinite: true,
@@ -51,17 +83,14 @@ const VideoCarousel = () => {
       {
         breakpoint: 1024,
         settings: {
-          variableWidth: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          variableWidth: true,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 766,
         settings: {
           variableWidth: false,
           slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
@@ -118,10 +147,10 @@ const VideoCarousel = () => {
         }}
       />
 
-      <div className="md:py:12 mx-auto w-full max-w-7xl overflow-hidden px-2 sm:px-4 sm:py-4 md:px-12">
+      <div className="mx-auto w-full max-w-7xl overflow-hidden px-2 sm:px-4 sm:py-4 md:px-12">
         <Slider {...settings}>
           {/* Slide 1 - YouTube Shorts */}
-          <div className="relative lg:!w-[224px]">
+          <div className="relative md:!w-[224px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '9/16' }}
@@ -176,7 +205,7 @@ const VideoCarousel = () => {
           </div>
 
           {/* Slide 2 - Congratulations Image 1 */}
-          <div className="relative w-full lg:!w-[316px]">
+          <div className="relative w-full md:!w-[280px] lg:!w-[316px]">
             <div
               className="flex h-[250px] w-full items-center justify-center overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '16/9' }}
@@ -191,7 +220,7 @@ const VideoCarousel = () => {
           </div>
 
           {/* Slide 3 - Regular YouTube video */}
-          <div className="relative w-full lg:!w-[698px]">
+          <div className="relative w-full md:!w-[698px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '16/9' }}
@@ -244,7 +273,7 @@ const VideoCarousel = () => {
           </div>
 
           {/* Slide 4 - Congratulations Image 2 */}
-          <div className="relative w-full lg:!w-[316px]">
+          <div className="relative w-full md:!w-[280px] lg:!w-[316px]">
             <div
               className="flex h-[250px] w-full items-center justify-center overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '16/9' }}
@@ -259,7 +288,7 @@ const VideoCarousel = () => {
           </div>
 
           {/* Slide 5 - Regular YouTube video */}
-          <div className="relative w-full lg:!w-[698px]">
+          <div className="relative w-full md:!w-[698px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '16/9' }}
@@ -312,7 +341,7 @@ const VideoCarousel = () => {
           </div>
 
           {/* Slide 6 - Congratulations Image 3 */}
-          <div className="relative w-full lg:!w-[316px]">
+          <div className="relative w-full md:!w-[280px] lg:!w-[316px]">
             <div
               className="flex h-[250px] w-full items-center justify-center overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
               style={{ aspectRatio: '16/9' }}

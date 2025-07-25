@@ -645,7 +645,7 @@ const Home = () => {
         </div>
       </section>
       {/* Client Success Highlights Section */}
-      <section className="bg-white px-5 py-16 md:py-24">
+      <section className="bg-white py-16 md:px-5 md:py-24">
         <ScrollAnimation animation="slideUp" delay={0.3}>
           <div className="mb-12 text-center">
             <h2

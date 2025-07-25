@@ -186,9 +186,12 @@ const ClientReviewCarousel = () => {
             </div>
           </div>
 
-          {clientReviews.map((review) => {
+          {clientReviews.map((review, index) => {
             return (
-              <div className="relative w-full md:pl-[25px] lg:!w-[430px]">
+              <div
+                className="relative w-full md:pl-[25px] lg:!w-[430px]"
+                key={index}
+              >
                 <div
                   className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
                   style={{ aspectRatio: '16/9' }}
