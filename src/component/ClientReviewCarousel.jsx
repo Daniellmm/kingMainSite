@@ -2,9 +2,26 @@ import React, { useState, useEffect } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import clientReview1 from '../assets/images/page-two/client-review-1.jpg'
-import clientReview2 from '../assets/images/page-two/client-review-2.jpg'
+import clientReview1 from '../assets/images/trustpilot/review1.webp'
+import clientReview2 from '../assets/images/trustpilot/review2.webp'
+import clientReview3 from '../assets/images/trustpilot/review3.webp'
+import clientReview4 from '../assets/images/trustpilot/review4.webp'
+import clientReview5 from '../assets/images/trustpilot/review5.webp'
+import clientReview6 from '../assets/images/trustpilot/review6.webp'
+import clientReview7 from '../assets/images/trustpilot/review7.webp'
+import clientReview8 from '../assets/images/trustpilot/review8.webp'
 import sliderVideoThumbnail from '../assets/images/page-two/sliderVidoeThumbnail.png'
+
+const clientReviews = [
+  clientReview1,
+  clientReview2,
+  clientReview3,
+  clientReview4,
+  clientReview5,
+  clientReview6,
+  clientReview7,
+  clientReview8,
+]
 
 const ClientReviewCarousel = () => {
   const [showVideo, setShowVideo] = useState(false)
@@ -169,43 +186,27 @@ const ClientReviewCarousel = () => {
             </div>
           </div>
 
-          {/* Second Slide - Testimonial Image 1 */}
-          <div className="relative w-full md:pl-[25px] lg:!w-[430px]">
-            <div
-              className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
-              style={{ aspectRatio: '16/9' }}
-            >
-              <img
-                src={clientReview1}
-                alt="Client Review 1"
-                className="h-full w-full object-contain object-top"
-                loading="lazy"
-                onError={(e) => {
-                  e.target.src =
-                    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2IiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSItMC41ZW0iPkNsaWVudCBSZXZpZXc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjEuNWVtIj5JbWFnZSBVbmF2YWlsYWJsZTwvdGV4dD48L3N2Zz4='
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Third Slide - Testimonial Image 2 */}
-          <div className="relative w-full md:pl-[25px] lg:!w-[430px]">
-            <div
-              className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
-              style={{ aspectRatio: '16/9' }}
-            >
-              <img
-                src={clientReview2}
-                alt="Client Review 2"
-                className="h-full w-full object-contain object-top"
-                loading="lazy"
-                onError={(e) => {
-                  e.target.src =
-                    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2IiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSItMC41ZW0iPkNsaWVudCBSZXZpZXc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjEuNWVtIj5JbWFnZSBVbmF2YWlsYWJsZTwvdGV4dD48L3N2Zz4='
-                }}
-              />
-            </div>
-          </div>
+          {clientReviews.map((review) => {
+            return (
+              <div className="relative w-full md:pl-[25px] lg:!w-[430px]">
+                <div
+                  className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
+                  style={{ aspectRatio: '16/9' }}
+                >
+                  <img
+                    src={review}
+                    alt="Client Review 2"
+                    className="h-full w-full object-contain object-top"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src =
+                        'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMwIiBoZWlnaHQ9IjQ1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2IiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSItMC41ZW0iPkNsaWVudCBSZXZpZXc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjEuNWVtIj5JbWFnZSBVbmF2YWlsYWJsZTwvdGV4dD48L3N2Zz4='
+                    }}
+                  />
+                </div>
+              </div>
+            )
+          })}
         </Slider>
       </div>
     </div>

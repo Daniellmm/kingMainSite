@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+//Congratulation testimonials
+import testimonial1 from '../assets/images/testimonial/Joshua.png'
+import testimonial2 from '../assets/images/testimonial/Demarcus.png'
+import testimonial3 from '../assets/images/testimonial/AgaFilms.png'
 
 const getYouTubeThumbnail = (url) => {
   const videoId = url.includes('shorts')
@@ -116,60 +120,7 @@ const VideoCarousel = () => {
 
       <div className="md:py:12 mx-auto w-full max-w-7xl overflow-hidden px-2 sm:px-4 sm:py-4 md:px-12">
         <Slider {...settings}>
-          {/* Slide 1 - Regular YouTube video */}
-          <div className="relative w-full lg:!w-[698px]">
-            <div
-              className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
-              style={{ aspectRatio: '16/9' }}
-            >
-              {activeVideo === 1 ? (
-                <div className="relative h-full w-full">
-                  {isVideoLoading && (
-                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60">
-                      <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-white"></div>
-                      <p className="ml-3 text-sm font-medium text-white">
-                        Loading video...
-                      </p>
-                    </div>
-                  )}
-                  <iframe
-                    className="h-full w-full"
-                    src="https://www.youtube.com/embed/JvPEDv5MiFg?controls=1&rel=0&modestbranding=1"
-                    title="Video 1"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    onLoad={handleVideoLoad}
-                  />
-                </div>
-              ) : (
-                <div
-                  className="relative h-full w-full cursor-pointer"
-                  onClick={() => handleVideoClick(1)}
-                >
-                  <img
-                    src={getYouTubeThumbnail('https://youtu.be/JvPEDv5MiFg')}
-                    alt="Video 1"
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
-                    <div className="rounded-full bg-black bg-opacity-80 p-3">
-                      <svg
-                        className="h-6 w-6 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M6 4l10 6-10 6V4z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Slide 2 - YouTube Shorts */}
+          {/* Slide 1 - YouTube Shorts */}
           <div className="relative lg:!w-[224px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
@@ -224,7 +175,90 @@ const VideoCarousel = () => {
             </div>
           </div>
 
+          {/* Slide 2 - Congratulations Image 1 */}
+          <div className="relative w-full lg:!w-[316px]">
+            <div
+              className="flex h-[250px] w-full items-center justify-center overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
+              style={{ aspectRatio: '16/9' }}
+            >
+              <img
+                src={testimonial1}
+                alt="Congratulations 1"
+                className="h-full w-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
           {/* Slide 3 - Regular YouTube video */}
+          <div className="relative w-full lg:!w-[698px]">
+            <div
+              className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
+              style={{ aspectRatio: '16/9' }}
+            >
+              {activeVideo === 1 ? (
+                <div className="relative h-full w-full">
+                  {isVideoLoading && (
+                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60">
+                      <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-white"></div>
+                      <p className="ml-3 text-sm font-medium text-white">
+                        Loading video...
+                      </p>
+                    </div>
+                  )}
+                  <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube.com/embed/JvPEDv5MiFg?controls=1&rel=0&modestbranding=1"
+                    title="Video 1"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    onLoad={handleVideoLoad}
+                  />
+                </div>
+              ) : (
+                <div
+                  className="relative h-full w-full cursor-pointer"
+                  onClick={() => handleVideoClick(1)}
+                >
+                  <img
+                    src={getYouTubeThumbnail('https://youtu.be/JvPEDv5MiFg')}
+                    alt="Video 1"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
+                    <div className="rounded-full bg-black bg-opacity-80 p-3">
+                      <svg
+                        className="h-6 w-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M6 4l10 6-10 6V4z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Slide 4 - Congratulations Image 2 */}
+          <div className="relative w-full lg:!w-[316px]">
+            <div
+              className="flex h-[250px] w-full items-center justify-center overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
+              style={{ aspectRatio: '16/9' }}
+            >
+              <img
+                src={testimonial2}
+                alt="Congratulations 2"
+                className="h-full w-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          {/* Slide 5 - Regular YouTube video */}
           <div className="relative w-full lg:!w-[698px]">
             <div
               className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
@@ -274,6 +308,21 @@ const VideoCarousel = () => {
                   </div>
                 </div>
               )}
+            </div>
+          </div>
+
+          {/* Slide 6 - Congratulations Image 3 */}
+          <div className="relative w-full lg:!w-[316px]">
+            <div
+              className="flex h-[250px] w-full items-center justify-center overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[395px]"
+              style={{ aspectRatio: '16/9' }}
+            >
+              <img
+                src={testimonial3}
+                alt="Congratulations 3"
+                className="h-full w-auto object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
         </Slider>

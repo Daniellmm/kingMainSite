@@ -661,15 +661,35 @@ const Home = () => {
           <ClientSuccessHighlights />
         </ScrollAnimation>
       </section>
+      {/* <section className="min-h-screen overflow-hidden bg-black px-5 pb-10 pt-10">
+        <div className="flex flex-col items-center justify-center pt-10">
+          <ScrollAnimation animation="zoomIn" delay={0.8}>
+            <div>
+              <h1
+                className="bg-gradient-golden-dark bg-clip-text pb-2 text-center text-4xl font-bold uppercase leading-[1.2] text-transparent md:text-left lg:text-5xl"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                More Client Results
+              </h1>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="fadeIn" delay={0.8}>
+            <div className="flex w-full pt-10">
+              <CustomSlider />
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section> */}
       <section className="min-h-screen overflow-hidden bg-black px-5 pb-10 pt-10">
         <div className="flex flex-col items-center justify-center pt-10">
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="bg-gradient-golden-dark bg-clip-text pb-2 text-4xl font-bold uppercase leading-[1.2] text-transparent lg:text-5xl"
+                className="bg-gradient-golden-dark bg-clip-text pb-2 text-center text-4xl font-bold uppercase leading-[1.2] text-transparent md:text-left lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                More Client Results
+                Frequently Asked Questions
               </h1>
             </div>
           </ScrollAnimation>
