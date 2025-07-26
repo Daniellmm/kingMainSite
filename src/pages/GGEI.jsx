@@ -27,7 +27,7 @@ import AdmissionSection from '../component/AdmissionSection'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import BankSummitHeader from '../component/BankSummitHeader'
+import BankSummitHeader from '../component/BankSummitHeader/BankSummitHeader'
 const FORM_URL =
   'https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI'
 

@@ -8,6 +8,7 @@ import LONG from '../assets/images/long.png'
 import LoanImg from '../assets/images/loan.png'
 import DollarCoin from '../assets/images/bg-live/rightmc.png'
 import DollarCoin2 from '../assets/images/bg-live/leftmc.png'
+
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -16,9 +17,15 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import HP from '../assets/images/hp.jpg'
 import Button from '../component/ui/Button'
+import FundingPageHeader from '../component/FundingPageHeader/FundingPageHeader'
 
 const FORM_URL = 'https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U'
 const URL = 'https://syofb.io'
+
+// Function to handle button clicks
+const handleButtonClick = (url) => {
+  window.open(url, '_blank')
+}
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -95,8 +102,18 @@ const Funding = () => {
   }
 
   // Initialize videos as state so we can update it
+  // const [videos, setVideos] = useState([
+  //   'https://www.youtube.com/embed/a9M6uPzQLFs?si=3BgzDhk_uvms2z41',
+  //   'https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn',
+  //   'https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX',
+  //   'https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX',
+  //   'https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH',
+  //   'https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp',
+  //   'https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA',
+  // ])
+
   const [videos, setVideos] = useState([
-    'https://www.youtube.com/embed/a9M6uPzQLFs?si=3BgzDhk_uvms2z41',
+    'https://youtu.be/tvciZcF6BPg?feature=shared',
     'https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn',
     'https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX',
     'https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX',
@@ -131,8 +148,8 @@ const Funding = () => {
   }
 
   // Function to handle button clicks
-  const handleButtonClick = () => {
-    window.open(FORM_URL, '_blank')
+  const handleButtonClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
   // Function to handle button clicks
   const handleFreeClick = () => {
@@ -161,11 +178,11 @@ const Funding = () => {
 
   return (
     <>
-      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black pb-10 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
+      {/* ORIGNAL HEADER: */}
+      {/* <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black pb-10 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center pt-20">
           <ScrollAnimation animation="zoomIn" delay={0.5}>
             <div className="pb-2">
-              {/* <img src={MText} alt="" /> */}
               <h1
                 className="bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text px-5 text-center text-[38px] font-bold text-transparent lg:text-[70px]"
                 style={{ fontFamily: 'Minion Pro, serif' }}
@@ -231,7 +248,9 @@ const Funding = () => {
           />
         </div>
         <div className="absolute inset-0 h-full w-full bg-black opacity-60"></div>
-      </section>
+      </section> */}
+
+      <FundingPageHeader />
 
       <section className="overflow-hidden bg-white px-10 pb-14">
         <div className="flex flex-col items-center justify-center pt-10">
@@ -318,7 +337,13 @@ const Funding = () => {
                 </form> */}
 
                 <div className="flex w-full justify-center md:justify-start">
-                  <Button size="large" width="150px">
+                  <Button
+                    size="large"
+                    width="150px"
+                    onClick={() => {
+                      handleButtonClick(URL)
+                    }}
+                  >
                     Learn More
                   </Button>
                 </div>
@@ -867,7 +892,7 @@ const Funding = () => {
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <div className="pt-7">
               <button
-                onClick={handleButtonClick}
+                onClick={() => handleButtonClick(URL)}
                 className="rounded-[8px] bg-[#E7A647] px-3 py-3 text-black"
                 style={{
                   fontFamily: 'Montserrat, serif',

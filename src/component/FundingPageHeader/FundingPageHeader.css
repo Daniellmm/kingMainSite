@@ -1,0 +1,332 @@
+/* FundingPageHeader custom classes */
+.fundingHeaderKingName {
+  transform: translate(-6px, 56px);
+}
+.fundingHeaderErickName {
+  transform: translate(324px, -51px);
+}
+/* ============== MEDIA QUERIES FOR GGEI PAGE HEADER IMAGES ================ */
+
+@media (min-width: 397px) {
+  .fundingHeaderErickName {
+    transform: translate(353px, -12px);
+  }
+  .fundingHeaderKingCard {
+    left: 201px;
+    top: -401px;
+  }
+  .fundingHeaderErickCard {
+    left: -125px;
+    top: 60px;
+  }
+}
+
+@media (min-width: 420px) {
+  .fundingHeaderKingCard {
+    left: 212px;
+    top: -294px;
+  }
+  .fundingHeaderErickCard {
+    left: -107px;
+    top: 43px;
+  }
+  .fundingHeaderErickName {
+    transform: translate(374px, 15px);
+  }
+  .fundingHeaderErickImg {
+    width: 314px;
+
+    height: 295px;
+  }
+  .fundingHeaderSlant {
+    width: 405px !important;
+  }
+}
+
+@media (min-width: 475px) {
+  .fundingHeaderKingCard {
+    left: 266px;
+  }
+  .fundingHeaderErickCard {
+    left: -65px;
+    top: 23px;
+  }
+}
+
+@media (min-width: 550px) {
+  .fundingHeaderErickName {
+    transform: translate(382px, 30px);
+  }
+  .fundingHeaderKingName {
+    transform: translate(-16px, 58.5px);
+  }
+  .fundingHeaderKingCard {
+    left: 303px;
+    top: -282px;
+  }
+  .fundingHeaderErickCard {
+    left: -51px;
+    top: 34px;
+  }
+}
+
+@media (min-width: 612px) {
+  .fundingHeaderKingCard {
+    left: 359px;
+    top: -267px;
+  }
+  .fundingHeaderKingCard {
+    left: 359px;
+    top: -267px;
+  }
+}
+
+@media (min-width: 640px) {
+  .fundingHeaderKingName {
+    transform: translate(-41px, 71.5px);
+  }
+  .fundingHeaderErickName {
+    transform: translate(383px, 45px);
+  }
+  .fundingHeaderKingCard {
+    left: 404px;
+    top: -333px;
+  }
+  .fundingHeaderErickCard {
+    left: -7px;
+    top: 14px;
+  }
+  .fundingHeaderErickImg {
+    width: 338px;
+    height: 318px;
+    margin-right: -2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .fundingHeaderKingName {
+    transform: translate(-25px, 71px);
+  }
+  .fundingHeaderErickName {
+    transform: translate(492px, 41px);
+  }
+  .fundingPageHeaderSection {
+    /* min-width: 640px; */
+  }
+  .fundingHeaderKingCard {
+    width: 427px !important;
+    height: 236px !important;
+    left: 489px;
+    top: -318px;
+  }
+  .fundingHeaderKingImg {
+    width: 294px;
+    transform: rotate(31deg) scaleX(1);
+    margin-left: -3rem;
+    margin-top: 0rem;
+  }
+  .fundingHeaderErickCard {
+    width: 418px !important;
+    height: 236px !important;
+    top: 51px;
+    left: 4px;
+  }
+  .fundingHeaderErickImg {
+    /* width: 237px;
+    height: 253px; */
+  }
+}
+
+@media (min-width: 850px) {
+  .fundingHeaderKingCard {
+    top: -307px;
+    left: 608px;
+  }
+  .fundingHeaderErickCard {
+    top: 75px;
+    left: 37px;
+  }
+  .fundingHeaderErickImg {
+    width: 341px;
+    height: 323px;
+  }
+}
+
+@media (min-width: 890px) {
+  .fundingHeaderErickCard {
+    top: 67px;
+    left: -21px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fundingHeaderSlant {
+    transform: translate(189px, -42px) rotate(45deg);
+  }
+  .fundingHeaderKingName {
+    transform: translate(-70px, 253px);
+  }
+  .fundingHeaderErickName {
+    transform: translate(597px, 38px);
+  }
+
+  .fundingHeaderKingCard {
+    width: 600px !important;
+    left: 475px;
+    top: -645px;
+    height: 300px !important;
+  }
+
+  .fundingHeaderKingImg {
+    width: 441px;
+    height: 479px;
+    margin-left: -6rem;
+    margin-top: 0rem;
+  }
+
+  .fundingHeaderErickCard {
+    width: 600px !important;
+    height: 300px !important;
+    top: -151px;
+    left: 262px;
+  }
+
+  .fundingHeaderErickImg {
+    width: 502px;
+    height: 473px;
+    margin-top: -2rem;
+    margin-right: -4.5rem;
+  }
+
+  .fundingHeaderSlant {
+    transform: translate(189px, -48px) rotate(45deg);
+    width: 500px !important;
+  }
+}
+
+@media (min-width: 1081px) {
+  .fundingHeaderKingCard {
+    left: 521px;
+    top: -598px;
+  }
+  .fundingHeaderErickCard {
+    top: -84px;
+    left: 285px;
+  }
+}
+
+@media (min-width: 1160px) {
+  /* .kingHeaderGgei {
+    left: 602px;
+    top: -629px;
+  }
+  .alexisHeaderGgei {
+    top: -46px;
+    left: 350px;
+  } */
+}
+
+@media (min-width: 1300px) {
+  .fundingHeaderErickCard {
+    top: -83px;
+    left: 409px;
+  }
+
+  .fundingHeaderKingCard {
+    left: 563px;
+    top: -558px;
+  }
+  .fundingHeaderSlant {
+    transform: translate(224px, -48px) rotate(45deg);
+    width: 643px !important;
+  }
+}
+
+@media (min-width: 1380px) {
+  .fundingHeaderKingCard {
+    left: 612px;
+    top: -563px;
+  }
+  .fundingHeaderErickCard {
+    top: -84px;
+    left: 461px;
+  }
+  /* .fundingHeaderErickImg {
+    width: 241px;
+    height: 267px;
+  } */
+}
+
+@media (min-width: 1497px) {
+  .fundingHeaderKingCard {
+    left: 776px;
+    top: -563px;
+  }
+
+  .fundingHeaderErickCard {
+    top: -52px;
+    left: 577px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .fundingHeaderKingCard {
+    left: 776px;
+    top: -548px;
+  }
+  .fundingHeaderKingName {
+    transform: translate(-81px, 255px);
+  }
+  .fundingHeaderErickCard {
+    top: -10px;
+    left: 577px;
+  }
+}
+@media (min-width: 1600px) {
+  .fundingHeaderErickCard {
+    top: -12px;
+    left: 660px;
+  }
+  .fundingHeaderErickCard {
+    top: -12px;
+    left: 660px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .fundingHeaderKingCard {
+    left: 1097px;
+    top: -528px;
+  }
+  .fundingHeaderErickCard {
+    top: -14px;
+    left: 590px;
+  }
+}
+
+@media (min-width: 2000px) {
+  /* .fundingPageHeaderSection {
+    width: 2200px;
+  } */
+  .fundingHeaderSlant {
+    transform: translate(246px, -48px) rotate(45deg);
+    width: 762px !important;
+    height: 348px;
+  }
+  .fundingHeaderKingCard {
+    left: 1279px;
+    top: -523px;
+  }
+
+  .fundingHeaderErickCard {
+    top: -20px;
+    left: 760px;
+  }
+}
+
+@media (min-width: 2150px) {
+  /* .fundingHeaderErickCard {
+    top: -13px;
+    left: 832px;
+  } */
+}

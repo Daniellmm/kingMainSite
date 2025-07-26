@@ -83,7 +83,7 @@ const Home = () => {
 
   // Function to handle button clicks
   const handleButtonClick = () => {
-    window.open(FORM_URL, '_blank')
+    window.open(FORM_URL, '_blank', 'noopener,noreferrer')
   }
 
   // Approach 1: Open GHL form in popup, then download PDF
@@ -126,9 +126,16 @@ const Home = () => {
     }, 20000)
   }
 
+  //Scroll to clientReviews section
+  const handleScroll = () => {
+    document
+      .getElementById('clientReviews')
+      ?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
-      <section className="custom-header-bg sm: md:h- relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[624px] md:rounded-bl-[70px] md:rounded-br-[70px]">
+      <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] 2xl:min-h-[705px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center pt-24 md:max-w-[800px] md:flex-row md:gap-8 md:px-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
           <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:mr-16 xl:mr-48">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
@@ -152,7 +159,7 @@ const Home = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex justify-center">
                 <p
-                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px]"
+                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px] 2xl:text-[18px]"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   Close more Deals, Scale Faster, and Eliminate Price Objections
@@ -162,7 +169,9 @@ const Home = () => {
 
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
-                <Button className="mt-4">See Client Results</Button>
+                <Button className="mt-4" onClick={handleScroll}>
+                  See Client Results
+                </Button>
                 <Button color="#1cb67c" variant="solid">
                   Let's Get Started
                 </Button>
@@ -223,7 +232,10 @@ const Home = () => {
         </ScrollAnimation>
       </section>
       {/* Client Review Carousel Section */}
-      <section className="clientReviewCarousel bg-black px-5 py-16 md:py-24">
+      <section
+        id="clientReviews"
+        className="clientReviewCarousel bg-black px-5 py-16 md:py-24"
+      >
         <ScrollAnimation animation="fadeIn" delay={0.3}>
           <div className="mb-12 text-center">
             <h2

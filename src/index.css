@@ -40,6 +40,9 @@
     background-size: cover;
     background-position: center;
 } */
+body {
+  background-color: #e5e7eb;
+}
 .phero-sec {
   background-image: url(../src/assets/images/page-two/heroBg.png);
   background-repeat: no-repeat;

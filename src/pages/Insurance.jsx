@@ -85,10 +85,16 @@ const Insurance = () => {
     window.open(FORM_URL, '_blank')
   }
 
+  //Scroll to clientSuccessStories section
+  const handleScroll = () => {
+    document
+      .getElementById('clientSuccessStories')
+      ?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
-      <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-10 pb-8 pt-16 sm:pb-16 md:min-h-[624px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-16">
-        {/* <div className="flex flex-col items-center justify-center pt-10 md:flex-row-reverse"> */}
+      <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-10 pb-8 pt-16 sm:pb-16 md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-16 2xl:min-h-[705px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center gap-x-0 pt-4 md:max-w-[800px] md:flex-row-reverse md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
           <ScrollAnimation animation="zoomIn" delay={0.3}>
             <img
@@ -104,9 +110,9 @@ const Insurance = () => {
           </ScrollAnimation>
           <div className="flex flex-col items-center sm:px-12 md:w-full md:flex-1 md:items-start md:self-start md:px-0 lg:w-1/2 lg:pl-8 xl:flex-none xl:pl-0">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
-              <div className="pb-2 pt-4 lg:mt-16">
+              <div className="2xl:16 pb-2 pt-4 lg:mt-12">
                 <h1
-                  className="py-0 text-center text-xl font-bold leading-tight text-white md:px-4 md:text-left md:text-2xl lg:text-3xl xl:text-4xl"
+                  className="py-0 text-center text-xl font-bold leading-tight text-white md:px-4 md:text-left md:text-2xl lg:text-3xl xl:text-5xl"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   PROTECT YOUR BUSINESS REVENUES LOWER YOUR TAXES. GROW YOUR
@@ -118,7 +124,7 @@ const Insurance = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex justify-center">
                 <p
-                  className="px-5 pb-4 text-center text-[13px] uppercase text-white md:pt-0 md:text-left md:text-[14px] lg:pt-4 xl:text-[16px]"
+                  className="px-5 pb-4 text-center text-[13px] uppercase text-white md:pt-0 md:text-left md:text-[14px] lg:pt-4 xl:text-[16px] 2xl:text-[18px]"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   Click below for your free wealth review, and see how
@@ -129,8 +135,8 @@ const Insurance = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
-              <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4 lg:mt-5">
-                <Button className="mt-4" width="180px">
+              <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4 lg:mt-0 2xl:mt-5">
+                <Button className="mt-4" width="180px" onClick={handleScroll}>
                   See Client Results
                 </Button>
                 <Button variant="solid" color="#00B67A" width="180px">
@@ -361,7 +367,10 @@ const Insurance = () => {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center overflow-hidden bg-black pb-10">
+      <section
+        id="clientSuccessStories"
+        className="flex flex-col items-center justify-center overflow-hidden bg-black pb-10"
+      >
         <div className="flex flex-col items-center justify-center gap-y-3 pt-10 lg:pt-16">
           <ScrollAnimation animation="slideDown" delay={0.1}>
             <h1

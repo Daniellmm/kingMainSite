@@ -122,14 +122,12 @@ const PodcastPage = () => {
                     target="_blank"
                   >
                     <motion.button
-                      className="w-[240px] rounded-full px-8 py-4 text-[0.9rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg md:w-[310px] md:px-10 md:py-5 md:text-[1rem] lg:w-[360px] lg:text-[1.2rem] xl:text-[1.3rem]"
+                      className="bg-emerald w-[240px] rounded-full px-8 py-4 text-[0.9rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg md:w-[310px] md:px-10 md:py-5 md:text-[1rem] lg:w-[360px] lg:text-[1.2rem] xl:text-[1.3rem]"
                       whileHover={buttonHover}
                       whileTap={{ scale: 0.95 }}
                       style={{
                         fontFamily: 'Montserrat, serif',
                         fontWeight: '700',
-                        background:
-                          'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                       }}
                     >
                       Join Our Community

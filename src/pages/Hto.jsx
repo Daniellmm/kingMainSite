@@ -159,10 +159,10 @@ const Hto = () => {
                     style={{
                       fontFamily: 'Montserrat, serif',
                       fontWeight: 'medium',
-                      background:
-                        'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
+                      // background:
+                      //   'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                     }}
-                    className="rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] px-3 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg lg:px-6"
+                    className="bg-emerald rounded-full px-3 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg lg:px-6"
                   >
                     Book Appointment Now
                   </button>
@@ -682,7 +682,7 @@ const Hto = () => {
                   background:
                     'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                 }}
-                className="rounded-full px-6 py-2 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
+                className="bg-emerald rounded-full px-6 py-2 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
               >
                 Book Appointment Now
               </button>

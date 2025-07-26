@@ -309,7 +309,7 @@ const LaserFund = () => {
         <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
       </section> */}
 
-      <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[624px] md:rounded-bl-[70px] md:rounded-br-[70px]">
+      <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] 2xl:min-h-[705px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
           <div className="grow-1 flex w-[90%] flex-col items-center sm:px-12 md:mr-8 md:w-full md:items-start md:px-0 lg:mr-12 xl:mr-56 2xl:mr-64">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
@@ -337,7 +337,7 @@ const LaserFund = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex justify-center">
                 <p
-                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px]"
+                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px] 2xl:text-[18px]"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   Master the markets, build wealth, create passive income, and
