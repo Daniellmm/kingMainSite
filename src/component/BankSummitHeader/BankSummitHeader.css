@@ -1,189 +1,189 @@
-.nameKingGgei {
+.bankSummitKingName {
   transform: translate(-6px, 56px);
 }
-.alexisNameGgei {
+.bankSummitAlexisName {
   transform: translate(324px, -51px);
 }
 /* ============== MEDIA QUERIES FOR GGEI PAGE HEADER IMAGES ================ */
 
 @media (min-width: 397px) {
-  .alexisNameGgei {
+  .bankSummitAlexisName {
     transform: translate(353px, -12px);
   }
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 201px;
     top: -401px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     left: -125px;
     top: 60px;
   }
 }
 
 @media (min-width: 420px) {
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 212px;
     top: -294px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     left: -107px;
     top: 43px;
   }
-  .alexisNameGgei {
+  .bankSummitAlexisName {
     transform: translate(374px, 15px);
   }
-  .slantedDivGgei {
+  .bankSummitSlantedDiv {
     width: 405px !important;
   }
 }
 
 @media (min-width: 475px) {
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 266px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     left: -65px;
     top: 23px;
   }
-  .alexisHeaderGgeiImg {
+  .bankSummitAlexisImg {
     width: 196px;
     height: 234px;
   }
 }
 
 @media (min-width: 550px) {
-  .alexisNameGgei {
+  .bankSummitAlexisName {
     transform: translate(382px, 30px);
   }
-  .nameKingGgei {
+  .bankSummitKingName {
     transform: translate(-16px, 58.5px);
   }
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 303px;
     top: -282px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     left: -51px;
     top: 34px;
   }
 }
 
 @media (min-width: 640px) {
-  .nameKingGgei {
+  .bankSummitKingName {
     transform: translate(-41px, 71.5px);
   }
-  .alexisNameGgei {
+  .bankSummitAlexisName {
     transform: translate(373px, 31px);
   }
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 404px;
     top: -357px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     left: 1px;
     top: -7px;
   }
 }
 
 @media (min-width: 768px) {
-  .nameKingGgei {
+  .bankSummitKingName {
     transform: translate(-25px, 71px);
   }
-  .alexisNameGgei {
+  .bankSummitAlexisName {
     transform: translate(492px, 41px);
   }
   .bankSummitSection {
     /* min-width: 640px; */
   }
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     width: 427px !important;
     height: 236px !important;
     left: 444px;
     top: -318px;
   }
-  .kingHeaderGgeiImg {
+  .bankSummitKingImg {
     width: 294px;
     transform: rotate(31deg) scaleX(1);
     margin-left: -3rem;
     margin-top: 0rem;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     width: 418px !important;
     height: 236px !important;
     top: 51px;
     left: 4px;
   }
-  .alexisHeaderGgeiImg {
+  .bankSummitAlexisImg {
     width: 237px;
     height: 253px;
   }
 }
 
 @media (min-width: 850px) {
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     top: -307px;
     left: 504px;
   }
 }
 
 @media (min-width: 890px) {
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: 67px;
     left: -21px;
   }
 }
 
 @media (min-width: 1024px) {
-  .slantedDivGgei {
+  .bankSummitSlantedDiv {
     transform: translate(189px, -42px) rotate(45deg);
   }
-  .nameKingGgei {
+  .bankSummitKingName {
     transform: translate(-70px, 253px);
   }
-  .alexisNameGgei {
+  .bankSummitAlexisName {
     transform: translate(597px, 38px);
   }
 
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     width: 600px !important;
     left: 475px;
     top: -645px;
     height: 300px !important;
   }
 
-  .kingHeaderGgeiImg {
+  .bankSummitKingImg {
     width: 441px;
     height: 479px;
     margin-left: -6rem;
     margin-top: 0rem;
   }
 
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     width: 600px !important;
     height: 300px !important;
     top: -151px;
     left: 262px;
   }
 
-  .alexisHeaderGgeiImg {
+  .bankSummitAlexisImg {
     width: 241px;
     height: 255px;
     margin-right: 0rem;
     margin-top: 0rem;
   }
 
-  .slantedDivGgei {
+  .bankSummitSlantedDiv {
     transform: translate(189px, -48px) rotate(45deg);
     width: 500px !important;
   }
 }
 
 @media (min-width: 1081px) {
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 521px;
     top: -598px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -84px;
     left: 285px;
   }
@@ -201,105 +201,105 @@
 }
 
 @media (min-width: 1300px) {
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -83px;
     left: 409px;
   }
 
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 563px;
     top: -558px;
   }
-  .slantedDivGgei {
+  .bankSummitSlantedDiv {
     transform: translate(224px, -48px) rotate(45deg);
     width: 643px !important;
   }
 }
 
 @media (min-width: 1380px) {
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 612px;
     top: -563px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -84px;
     left: 461px;
   }
-  .alexisHeaderGgeiImg {
+  .bankSummitAlexisImg {
     width: 241px;
     height: 267px;
   }
 }
 
 @media (min-width: 1497px) {
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 776px;
     top: -563px;
   }
 
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -52px;
     left: 577px;
   }
 }
 
 @media (min-width: 1536px) {
-  .nameKingGgei {
+  .bankSummitKingName {
     transform: translate(-81px, 253px);
   }
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 776px;
     top: -548px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -10px;
     left: 577px;
   }
 }
 @media (min-width: 1600px) {
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -12px;
     left: 660px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -12px;
     left: 660px;
   }
 }
 
 @media (min-width: 1680px) {
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 1097px;
     top: -528px;
   }
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -14px;
     left: 590px;
   }
 }
 
 @media (min-width: 2000px) {
-  .bankSummitSection {
+  /* .bankSummitSection {
     width: 2200px;
-  }
-  .slantedDivGgei {
+  } */
+  .bankSummitSlantedDiv {
     transform: translate(246px, -48px) rotate(45deg);
     width: 762px !important;
     height: 348px;
   }
-  .kingHeaderGgei {
+  .bankSummitKingHeader {
     left: 1279px;
     top: -523px;
   }
 
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -20px;
     left: 760px;
   }
 }
 
 @media (min-width: 2150px) {
-  .alexisHeaderGgei {
+  .bankSummitAlexisHeader {
     top: -13px;
     left: 832px;
   }

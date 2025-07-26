@@ -1,13 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import SYOB from '../assets/images/syob.png'
 import SCI from '../assets/images/scifi.png'
 import CHECK from '../assets/images/check.png'
 import MText from '../assets/images/png2.png'
 import AWW from '../assets/images/aww.png'
-import LONG from '../assets/images/long.png'
 import LoanImg from '../assets/images/loan.png'
-import DollarCoin from '../assets/images/bg-live/rightmc.png'
-import DollarCoin2 from '../assets/images/bg-live/leftmc.png'
 
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
@@ -15,9 +12,39 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import HP from '../assets/images/hp.jpg'
 import Button from '../component/ui/Button'
 import FundingPageHeader from '../component/FundingPageHeader/FundingPageHeader'
+
+//images
+import ss1 from '../assets/images/screenshots/ss1.jpeg'
+import ss2 from '../assets/images/screenshots/ss2.jpeg'
+import ss3 from '../assets/images/screenshots/ss3.jpeg'
+import ss4 from '../assets/images/screenshots/ss4.jpeg'
+import ss5 from '../assets/images/screenshots/ss5.jpeg'
+import ss6 from '../assets/images/screenshots/ss6.jpeg'
+import ss7 from '../assets/images/screenshots/ss7.jpeg'
+import ss8 from '../assets/images/screenshots/ss8.jpeg'
+import ss9 from '../assets/images/screenshots/ss9.jpeg'
+import ss10 from '../assets/images/screenshots/ss10.jpeg'
+import ss11 from '../assets/images/screenshots/ss11.jpeg'
+import ss12 from '../assets/images/screenshots/ss12.jpeg'
+import ss13 from '../assets/images/screenshots/ss13.jpeg'
+import ss14 from '../assets/images/screenshots/ss14.jpeg'
+import ss15 from '../assets/images/screenshots/ss15.jpeg'
+import ss16 from '../assets/images/screenshots/ss16.jpeg'
+import ss17 from '../assets/images/screenshots/ss17.jpeg'
+import ss18 from '../assets/images/screenshots/ss18.jpeg'
+import ss19 from '../assets/images/screenshots/ss19.jpeg'
+import ss20 from '../assets/images/screenshots/ss20.jpeg'
+import ss21 from '../assets/images/screenshots/ss21.jpeg'
+import ss22 from '../assets/images/screenshots/ss22.jpeg'
+import ss23 from '../assets/images/screenshots/ss23.jpeg'
+import ss24 from '../assets/images/screenshots/ss24.jpeg'
+import ss25 from '../assets/images/screenshots/ss25.jpeg'
+import ss26 from '../assets/images/screenshots/ss26.jpeg'
+import ss27 from '../assets/images/screenshots/ss27.jpeg'
+import ss28 from '../assets/images/screenshots/ss28.jpeg'
+import ss29 from '../assets/images/screenshots/ss29.jpeg'
 
 const FORM_URL = 'https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U'
 const URL = 'https://syofb.io'
@@ -88,7 +115,7 @@ const Funding = () => {
   const videoSliderRef = useRef(null)
 
   const videoSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -118,6 +145,38 @@ const Funding = () => {
     'https://www.youtube.com/embed/8oc1XzrVKdU',
     'https://www.youtube.com/embed/byzZl7yl0S0',
     'https://www.youtube.com/embed/r8-lefenM4c',
+  ])
+
+  const [images, setImages] = useState([
+    ss1,
+    ss2,
+    ss3,
+    ss4,
+    ss5,
+    ss6,
+    ss7,
+    ss8,
+    ss9,
+    ss10,
+    ss11,
+    ss12,
+    ss13,
+    ss14,
+    ss15,
+    ss16,
+    ss17,
+    ss18,
+    ss19,
+    ss20,
+    ss21,
+    ss22,
+    ss23,
+    ss24,
+    ss25,
+    ss26,
+    ss27,
+    ss28,
+    ss29,
   ])
 
   const handlePrevVideo = () => {
@@ -403,18 +462,33 @@ const Funding = () => {
               {...videoSettings}
               className="video-slider"
             >
+              {/* Videos */}
               {videos.map((video, index) => (
-                <div key={index} className="px-2">
+                <div key={`video-${index}`} className="px-2">
                   <div className="relative aspect-video overflow-hidden rounded-xl">
                     <iframe
                       className="h-full w-full"
                       src={video}
                       title={`YouTube video ${index + 1}`}
-                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
                     ></iframe>
+                  </div>
+                </div>
+              ))}
+
+              {/* Images */}
+              {images.map((img, index) => (
+                <div key={`img-${index}`} className="px-2">
+                  <div className="relative aspect-video overflow-hidden rounded-xl">
+                    <img
+                      src={img}
+                      alt={`Slide ${index + 1}`}
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/30" />
                   </div>
                 </div>
               ))}

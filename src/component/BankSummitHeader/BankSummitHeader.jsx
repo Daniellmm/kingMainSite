@@ -6,10 +6,10 @@ import Button from '../ui/Button'
 import './BankSummitHeader.css'
 const BankSummitHeader = () => {
   return (
-    <section className="bankSummitSecion relative flex min-h-[680px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-[5.5rem] sm:pt-24 md:rounded-bl-[70px] md:rounded-br-[70px] lg:min-h-[660px] lg:pb-0 lg:pt-32 xl:min-h-[628px] 2xl:min-h-[705px]">
+    <section className="bankSummitSection relative flex min-h-[680px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-[5.5rem] sm:pt-24 md:rounded-bl-[70px] md:rounded-br-[70px] lg:min-h-[660px] lg:pb-0 lg:pt-32 xl:min-h-[628px] 2xl:min-h-[705px]">
       {/* Slanted golden gradient bar in upper right corner, clipped to section */}
       <div
-        className="slantedDivGgei pointer-events-none absolute right-0 top-0 z-20 w-1/2 -translate-y-[132px] translate-x-[157px] rotate-[45deg] overflow-hidden bg-[linear-gradient(to_right,_#2a1f05,_#4a3510_40%,_#b28f48_104%)]"
+        className="bankSummitSlantedDiv pointer-events-none absolute right-0 top-0 z-20 w-1/2 -translate-y-[132px] translate-x-[157px] rotate-[45deg] overflow-hidden bg-[linear-gradient(to_right,_#2a1f05,_#4a3510_40%,_#b28f48_104%)]"
         style={{ width: '350px', height: '[275px' }}
       >
         <div
@@ -84,9 +84,9 @@ const BankSummitHeader = () => {
         {/* IMAGES */}
         <div className="relative">
           {/* Alexis Card */}
-          <div className="alexisHeaderGgei absolute left-[-88px] top-[20px] h-48 w-96">
+          <div className="bankSummitAlexisHeader absolute left-[-88px] top-[20px] h-48 w-96">
             {/* Alexis Name */}
-            <div className="underline-after alexisNameGgei relative z-30 inline-block pl-2">
+            <div className="underline-after bankSummitAlexisName relative z-30 inline-block pl-2">
               <h3
                 className="whitespace-nowrap text-[0.7rem] font-light uppercase text-[#ffffff] md:text-sm lg:font-normal"
                 style={{
@@ -116,16 +116,16 @@ const BankSummitHeader = () => {
                 alt="Alexis"
                 width={210}
                 height={270}
-                className="alexisHeaderGgeiImg mr-2 h-[177px] w-[170px] rotate-[33deg] -scale-x-100 justify-self-end object-cover md:rotate-[31deg] md:scale-x-100"
+                className="bankSummitAlexisImg mr-2 h-[177px] w-[170px] rotate-[33deg] -scale-x-100 justify-self-end object-cover md:rotate-[31deg] md:scale-x-100"
                 style={{ display: 'block' }}
               />
             </div>
           </div>
 
           {/* King Card */}
-          <div className="kingHeaderGgei absolute -top-[459px] left-[165px] h-44 w-96">
+          <div className="bankSummitKingHeader absolute -top-[459px] left-[165px] h-44 w-96">
             {/* KING Name */}
-            <div className="underline-after-king nameKingGgei relative z-30 inline-block pl-4">
+            <div className="underline-after-king bankSummitKingName relative z-30 inline-block pl-4">
               <h3
                 className="whitespace-nowrap text-[0.8rem] text-sm font-light text-[#ffffff] md:text-[0.85rem] lg:font-normal"
                 style={{
@@ -154,7 +154,7 @@ const BankSummitHeader = () => {
                 alt="King"
                 width={268}
                 height={320}
-                className="kingHeaderGgeiImg kingHeaderGgeiImg -ml-16 -mt-5 h-[283px] w-[235px] rotate-[33deg] -scale-x-100 justify-self-start object-cover"
+                className="bankSummitKingImg -ml-16 -mt-5 h-[283px] w-[235px] rotate-[33deg] -scale-x-100 justify-self-start object-cover"
                 style={{ display: 'block' }}
               />
             </div>

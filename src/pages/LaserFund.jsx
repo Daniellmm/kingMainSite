@@ -253,62 +253,6 @@ const LaserFund = () => {
 
   return (
     <>
-      {/* <section className='relative overflow-hidden pb-10 bg-black flex justify-center items-center min-h-[70vh] md:min-h-0 md:rounded-br-[100px] md:rounded-bl-[100px]'>
-        <div className='z-10 relative pt-20 w-full flex flex-col justify-center items-center'>
-          <ScrollAnimation animation="zoomIn" delay={0.5}>
-            <div className='pb-2'>
-              <h1 className="lg:text-8xl text-4xl px-2 uppercase text-center font-bold bg-gradient-to-r from-[#E7A647] to-[#855B1F] bg-clip-text text-transparent" style={{ fontFamily: 'Minion Pro, serif' }}>
-                Become a Master Trader
-              </h1>
-            </div>
-          </ScrollAnimation>
-
-          <ScrollAnimation animation="fadeIn" delay={0.5}>
-            <div className='flex justify-center'>
-              <p className='text-white px-4 pb-8 text-center text-sm uppercase md:leading-[35px] md:text-[26px]' style={{ fontFamily: 'Minion Pro, serif' }}>
-                Master the markets, build wealth, create passive income,
-                and learn the secrets to successful trading.
-                <span className='text-[#e7a647]'> Watch this video.</span>
-              </p>
-
-              <div className='flex items-end'>
-                <img src={ARROWD} className='animate-bounce lg:pl-4 pr-1' alt="" />
-              </div>
-            </div>
-
-            <div className='flex justify-center w-full'>
-              <iframe className='lg:w-[850px] px-5 pb-5 rounded-2xl md:w-[540px] w-[340px] h-[250px] lg:rounded-[50px] lg:h-[415px]'
-                src="https://www.youtube.com/embed/zlPMJyeH6ko?si=qQ_V6yqfwp4PBmen"
-                title="YouTube video player" frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
-                loading="lazy"
-              >
-              </iframe>
-            </div>
-          </ScrollAnimation>
-
-          <ScrollAnimation animation="slideUp" delay={0.3}>
-            <div>
-              <button
-                onClick={handleButtonClick}
-                className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
-                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}>
-                Meet the Team
-              </button>
-            </div>
-          </ScrollAnimation>
-        </div>
-
-        <div className='absolute top-[230px] left-[-40px]'>
-          <img src={LEFT} alt="" className='h-[100px] md:h-[120px] lg:h-40 hero-dollar-left' />
-        </div>
-        <div className='absolute bottom-[100px] right-[0px]'>
-          <img src={RIGHT} alt="" className='h-[100px] md:h-[120px] lg:h-40 hero-dollar-right' />
-        </div>
-        <div className='w-full h-full bg-black opacity-60 inset-0 absolute'></div>
-      </section> */}
-
       <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] 2xl:min-h-[705px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
           <div className="grow-1 flex w-[90%] flex-col items-center sm:px-12 md:mr-8 md:w-full md:items-start md:px-0 lg:mr-12 xl:mr-56 2xl:mr-64">
