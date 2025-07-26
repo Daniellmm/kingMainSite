@@ -113,13 +113,11 @@ const Funding = () => {
   // ])
 
   const [videos, setVideos] = useState([
-    'https://youtu.be/tvciZcF6BPg?feature=shared',
-    'https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn',
-    'https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX',
-    'https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX',
-    'https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH',
-    'https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp',
-    'https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA',
+    'https://www.youtube.com/embed/tvciZcF6BPg',
+    'https://www.youtube.com/embed/JTzpOMs6Csg',
+    'https://www.youtube.com/embed/8oc1XzrVKdU',
+    'https://www.youtube.com/embed/byzZl7yl0S0',
+    'https://www.youtube.com/embed/r8-lefenM4c',
   ])
 
   const handlePrevVideo = () => {

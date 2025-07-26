@@ -512,7 +512,10 @@ const GGEI = () => {
         </div>
       </section>
 
-      <section className="large-screen hidden overflow-hidden bg-white px-10 pb-20 lg:block">
+      <section
+        id="team-section"
+        className="large-screen hidden overflow-hidden bg-white px-10 pb-20 lg:block"
+      >
         <div className="flex flex-col items-center justify-center pt-10">
           <ScrollAnimation animation="zoomIn">
             <h1

@@ -198,6 +198,26 @@ const Footer = () => {
     window.open(IG_LINK, '_blank')
   }
 
+  // Helper for smooth scroll to team-section on GGEI
+  const handleOurTeamClick = () => {
+    if (location.pathname === '/ggei') {
+      // Already on GGEI, just scroll
+      const el = document.getElementById('team-section')
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      navigate('/ggei')
+      // Wait for navigation and then scroll
+      setTimeout(() => {
+        const el = document.getElementById('team-section')
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 1000) // Adjust delay if needed
+    }
+  }
+
   return (
     <div
       ref={footerRef}
@@ -291,7 +311,7 @@ const Footer = () => {
               {[
                 { item: 'Home', link: '/' },
                 { item: 'About Us', link: '/about' },
-                { item: 'Our Team', link: null },
+                { item: 'Our Team', link: '/ggei#team-section' },
                 { item: 'Services', link: null },
                 { item: 'Contact Us', link: null },
                 { item: 'Privacy Policy', link: null },
@@ -301,7 +321,13 @@ const Footer = () => {
                   className="transform cursor-pointer py-1 transition-all"
                   onMouseEnter={(e) => handleLinkHover(e, true)}
                   onMouseLeave={(e) => handleLinkHover(e, false)}
-                  onClick={() => navigate(link)}
+                  onClick={() => {
+                    if (item === 'Our Team') {
+                      handleOurTeamClick()
+                    } else if (link) {
+                      navigate(link)
+                    }
+                  }}
                 >
                   {item}
                 </li>
