@@ -111,13 +111,22 @@ const BankSummitHeader = () => {
               </h3>
             </div>
             <div className="h-44 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] bg-[linear-gradient(210deg,_#040404,_#2d2a3452)] sm:min-h-52 md:h-[246px] md:w-[500px] lg:h-[250px] lg:w-[600px] 2xl:h-[285px]">
-              <img
+              {/* <img
                 src={alexisTransparent}
                 alt="Alexis"
                 width={210}
                 height={270}
                 className="bankSummitAlexisImg mr-2 h-[177px] w-[170px] rotate-[33deg] -scale-x-100 justify-self-end object-cover md:rotate-[31deg] md:scale-x-100"
                 style={{ display: 'block' }}
+              /> */}
+
+              <img
+                src={alexisTransparent}
+                alt="Alexis"
+                width={210}
+                height={270}
+                className="bankSummitAlexisImg w-full rotate-[33deg] -scale-x-100 justify-self-end md:rotate-[31deg] md:scale-x-100"
+                style={{ display: 'block', objectPosition: 'center top' }} // adjust as needed
               />
             </div>
           </div>

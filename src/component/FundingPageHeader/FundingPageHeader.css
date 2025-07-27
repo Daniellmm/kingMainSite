@@ -1,9 +1,9 @@
 /* FundingPageHeader custom classes */
 .fundingHeaderKingName {
-  transform: translate(-6px, 56px);
+  transform: translate(-13px, 56px);
 }
 .fundingHeaderErickName {
-  transform: translate(324px, -51px);
+  transform: translate(331px, -51px);
 }
 /* ============== MEDIA QUERIES FOR GGEI PAGE HEADER IMAGES ================ */
 .fundingHeaderErickImg {
@@ -25,6 +25,15 @@
   .fundingHeaderErickCard {
     left: -125px;
     top: 60px;
+  }
+  /* .fundingHeaderKingCard {
+    left: 201px;
+    top: -344px;
+  } */
+
+  .fundingHeaderKingCard {
+    left: 201px;
+    top: -365px;
   }
 }
 
@@ -67,10 +76,10 @@
 
 @media (min-width: 550px) {
   .fundingHeaderErickName {
-    transform: translate(382px, 30px);
+    transform: translate(384px, 30px);
   }
   .fundingHeaderKingName {
-    transform: translate(-16px, 58.5px);
+    transform: translate(-17.5px, 58.5px);
   }
   .fundingHeaderKingCard {
     left: 303px;
@@ -117,10 +126,10 @@
 
 @media (min-width: 768px) {
   .fundingHeaderKingName {
-    transform: translate(-25px, 71px);
+    transform: translate(-32px, 71px);
   }
   .fundingHeaderErickName {
-    transform: translate(492px, 41px);
+    transform: translate(495px, 41px);
   }
   .fundingPageHeaderSection {
     /* min-width: 640px; */
@@ -185,7 +194,7 @@
     transform: translate(-70px, 253px);
   }
   .fundingHeaderErickName {
-    transform: translate(597px, 38px);
+    transform: translate(582px, 7px);
   }
 
   .fundingHeaderKingCard {
@@ -300,6 +309,9 @@
   }
   .fundingHeaderKingName {
     transform: translate(-81px, 255px);
+  }
+  .fundingHeaderErickName {
+    transform: translate(576px, 15px);
   }
   .fundingHeaderErickCard {
     top: -10px;

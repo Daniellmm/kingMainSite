@@ -140,7 +140,7 @@ const FundingPageHeader = () => {
           </div>
 
           {/* King Card */}
-          <div className="fundingHeaderKingCard absolute -top-[459px] left-[165px] h-44 w-96">
+          <div className="fundingHeaderKingCard absolute -top-[442px] left-[165px] h-44 w-96">
             {/* KING Name */}
             <div className="underline-after-king fundingHeaderKingName relative z-30 inline-block pl-4">
               <h3
