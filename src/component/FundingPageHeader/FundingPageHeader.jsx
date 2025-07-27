@@ -14,7 +14,7 @@ const handleButtonClick = (url) => {
 
 const FundingPageHeader = () => {
   return (
-    <section className="fundingPageHeaderSection relative flex min-h-[680px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-[5.5rem] sm:pt-24 md:rounded-bl-[70px] md:rounded-br-[70px] lg:min-h-[660px] lg:pb-0 lg:pt-32 xl:min-h-[628px] 2xl:min-h-[705px]">
+    <section className="fundingPageHeaderSection relative flex min-h-[680px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-[5.5rem] sm:pt-24 md:rounded-bl-[70px] md:rounded-br-[70px] lg:min-h-[660px] lg:pb-0 lg:pt-32 2xl:min-h-[705px]">
       {/* Slanted golden gradient bar in upper right corner, clipped to section */}
       <div
         className="fundingHeaderSlant pointer-events-none absolute right-0 top-0 z-20 w-1/2 -translate-y-[132px] translate-x-[157px] rotate-[45deg] overflow-hidden bg-[linear-gradient(to_right,_#2a1f05,_#4a3510_40%,_#b28f48_104%)]"
@@ -92,9 +92,9 @@ const FundingPageHeader = () => {
 
         {/* IMAGES */}
         <div className="relative">
-          {/* Alexis Card */}
+          {/* Erick Card */}
           <div className="fundingHeaderErickCard absolute left-[-88px] top-[20px] h-48 w-96">
-            {/* Alexis Name */}
+            {/* Erick Name */}
             <div className="underline-after fundingHeaderErickName relative z-30 inline-block pl-2">
               <h3
                 className="whitespace-nowrap text-[0.7rem] font-light uppercase text-[#ffffff] md:text-sm lg:font-normal"
@@ -120,13 +120,21 @@ const FundingPageHeader = () => {
               </h3>
             </div>
             <div className="fundingHeaderErickImgWrap h-44 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] bg-[linear-gradient(210deg,_#040404,_#2d2a3452)] sm:min-h-52 md:h-[246px] md:w-[500px] lg:h-[250px] lg:w-[600px] 2xl:h-[285px]">
-              <img
+              {/* <img
                 src={erickTransparent}
                 alt="Erick"
                 width={210}
                 height={270}
                 className="fundingHeaderErickImg -mr-6 -mt-3 h-[256px] w-[281px] rotate-[33deg] justify-self-end object-cover md:rotate-[31deg]"
                 style={{ display: 'block' }}
+              /> */}
+              <img
+                src={erickTransparent}
+                alt="Erick"
+                width={210}
+                height={270}
+                className="fundingHeaderErickImg w-full rotate-[33deg] justify-self-end md:rotate-[31deg]"
+                style={{ display: 'block', objectPosition: 'center top' }} // adjust as needed
               />
             </div>
           </div>

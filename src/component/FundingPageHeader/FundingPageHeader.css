@@ -6,6 +6,13 @@
   transform: translate(324px, -51px);
 }
 /* ============== MEDIA QUERIES FOR GGEI PAGE HEADER IMAGES ================ */
+.fundingHeaderErickImg {
+  position: absolute;
+  right: -77px;
+  top: -22px;
+  object-fit: contain;
+  height: 300px;
+}
 
 @media (min-width: 397px) {
   .fundingHeaderErickName {
@@ -33,11 +40,11 @@
   .fundingHeaderErickName {
     transform: translate(374px, 15px);
   }
-  .fundingHeaderErickImg {
+  /* .fundingHeaderErickImg {
     width: 314px;
 
     height: 295px;
-  }
+  } */
   .fundingHeaderSlant {
     width: 405px !important;
   }
@@ -50,6 +57,11 @@
   .fundingHeaderErickCard {
     left: -65px;
     top: 23px;
+  }
+  .fundingHeaderErickImg {
+    right: -57px;
+    top: -33px;
+    object-fit: cover;
   }
 }
 
@@ -97,9 +109,9 @@
     top: 14px;
   }
   .fundingHeaderErickImg {
-    width: 338px;
+    /* width: 338px;
     height: 318px;
-    margin-right: -2.5rem;
+    margin-right: -2.5rem; */
   }
 }
 
@@ -135,6 +147,12 @@
     /* width: 237px;
     height: 253px; */
   }
+
+  .fundingHeaderErickImg {
+    right: -117px;
+    top: -31px;
+    /* object-fit: cover; */
+  }
 }
 
 @media (min-width: 850px) {
@@ -146,10 +164,10 @@
     top: 75px;
     left: 37px;
   }
-  .fundingHeaderErickImg {
+  /* .fundingHeaderErickImg {
     width: 341px;
     height: 323px;
-  }
+  } */
 }
 
 @media (min-width: 890px) {
@@ -191,11 +209,17 @@
     left: 262px;
   }
 
-  .fundingHeaderErickImg {
+  /* .fundingHeaderErickImg {
     width: 502px;
     height: 473px;
     margin-top: -2rem;
     margin-right: -4.5rem;
+  } */
+
+  .fundingHeaderErickImg {
+    width: 500px;
+    top: -28px;
+    right: -96px;
   }
 
   .fundingHeaderSlant {

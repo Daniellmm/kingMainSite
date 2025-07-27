@@ -115,8 +115,10 @@ const Insurance = () => {
                   className="py-0 text-center text-xl font-bold leading-tight text-white md:px-4 md:text-left md:text-2xl lg:text-3xl xl:text-5xl"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
-                  PROTECT YOUR BUSINESS REVENUES LOWER YOUR TAXES. GROW YOUR
-                  NETWORTH.
+                  <span className="bg-gradient-golden-dark bg-clip-text text-transparent">
+                    PROTECT YOUR BUSINESS{' '}
+                  </span>
+                  REVENUES LOWER YOUR TAXES. GROW YOUR NETWORTH.
                 </h1>
               </div>
             </ScrollAnimation>
@@ -156,10 +158,9 @@ const Insurance = () => {
                 className="text-center text-xl font-thin leading-10 tracking-[1px] text-black lg:text-[28px]"
                 style={{ fontFamily: 'Minion Pro, serif' }}
               >
-                "The definition of insanity is doing the same thing over and
-                over again and expecting a different result. If you want to
-                ensure you and your company are financially set up for success,
-                get a FREE financial review with YellowBrick Financial today."
+                "If you want to ensure you and your company are financially set
+                up for success, get a FREE financial review with YellowBrick
+                Financial today."
               </h1>
             </div>
             <div>
