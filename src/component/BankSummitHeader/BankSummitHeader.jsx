@@ -1,6 +1,6 @@
 import ggeiLogo from '../../assets/images/logo/ggei.png'
-import kingTransparent from '../../assets/images/team/kingTransparent.png'
-import alexisTransparent from '../../assets/images/team/alexisTransparent.png'
+import kingTransparent from '../../assets/images/team/kingTransparent.webp'
+import alexisTransparent from '../../assets/images/team/alexisTransparent.webp'
 import ScrollAnimation from '../ScrollAnimation'
 import Button from '../ui/Button'
 import './BankSummitHeader.css'

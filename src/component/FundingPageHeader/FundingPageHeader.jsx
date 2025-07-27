@@ -1,6 +1,6 @@
 import fundingLogo from '../../assets/images/logo/fundingLogo.png'
-import kingTransparent from '../../assets/images/team/kingTransparent.png'
-import erickTransparent from '../../assets/images/team/erickTransparent.png'
+import kingTransparent from '../../assets/images/team/kingTransparent.webp'
+import erickTransparent from '../../assets/images/team/erickTransparent.webp'
 import ScrollAnimation from '../ScrollAnimation'
 import Button from '../ui/Button'
 import './FundingPageHeader.css'
