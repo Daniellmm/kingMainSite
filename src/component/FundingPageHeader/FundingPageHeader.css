@@ -16,7 +16,7 @@
 
 @media (min-width: 397px) {
   .fundingHeaderErickName {
-    transform: translate(353px, -12px);
+    transform: translate(357px, -12px);
   }
   .fundingHeaderKingCard {
     left: 201px;
@@ -26,11 +26,6 @@
     left: -125px;
     top: 60px;
   }
-  /* .fundingHeaderKingCard {
-    left: 201px;
-    top: -344px;
-  } */
-
   .fundingHeaderKingCard {
     left: 201px;
     top: -365px;
@@ -49,11 +44,6 @@
   .fundingHeaderErickName {
     transform: translate(374px, 15px);
   }
-  /* .fundingHeaderErickImg {
-    width: 314px;
-
-    height: 295px;
-  } */
   .fundingHeaderSlant {
     width: 405px !important;
   }
@@ -117,11 +107,6 @@
     left: -7px;
     top: 14px;
   }
-  .fundingHeaderErickImg {
-    /* width: 338px;
-    height: 318px;
-    margin-right: -2.5rem; */
-  }
 }
 
 @media (min-width: 768px) {
@@ -130,9 +115,6 @@
   }
   .fundingHeaderErickName {
     transform: translate(495px, 41px);
-  }
-  .fundingPageHeaderSection {
-    /* min-width: 640px; */
   }
   .fundingHeaderKingCard {
     width: 427px !important;
@@ -152,15 +134,10 @@
     top: 51px;
     left: 4px;
   }
-  .fundingHeaderErickImg {
-    /* width: 237px;
-    height: 253px; */
-  }
 
   .fundingHeaderErickImg {
     right: -117px;
     top: -31px;
-    /* object-fit: cover; */
   }
 }
 
@@ -173,10 +150,6 @@
     top: 75px;
     left: 37px;
   }
-  /* .fundingHeaderErickImg {
-    width: 341px;
-    height: 323px;
-  } */
 }
 
 @media (min-width: 890px) {
@@ -218,13 +191,6 @@
     left: 262px;
   }
 
-  /* .fundingHeaderErickImg {
-    width: 502px;
-    height: 473px;
-    margin-top: -2rem;
-    margin-right: -4.5rem;
-  } */
-
   .fundingHeaderErickImg {
     width: 500px;
     top: -28px;
@@ -246,17 +212,6 @@
     top: -84px;
     left: 285px;
   }
-}
-
-@media (min-width: 1160px) {
-  /* .kingHeaderGgei {
-    left: 602px;
-    top: -629px;
-  }
-  .alexisHeaderGgei {
-    top: -46px;
-    left: 350px;
-  } */
 }
 
 @media (min-width: 1300px) {
@@ -284,10 +239,6 @@
     top: -84px;
     left: 461px;
   }
-  /* .fundingHeaderErickImg {
-    width: 241px;
-    height: 267px;
-  } */
 }
 
 @media (min-width: 1497px) {
@@ -358,11 +309,4 @@
     top: -20px;
     left: 760px;
   }
-}
-
-@media (min-width: 2150px) {
-  /* .fundingHeaderErickCard {
-    top: -13px;
-    left: 832px;
-  } */
 }

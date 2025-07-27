@@ -254,19 +254,23 @@ const LaserFund = () => {
   return (
     <>
       <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] 2xl:min-h-[705px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-24 md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
-          <div className="grow-1 flex w-[90%] flex-col items-center sm:px-12 md:mr-8 md:w-full md:items-start md:px-0 lg:mr-12 xl:mr-56 2xl:mr-64">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-[5.5rem] md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
+          <div className="grow-1 flex w-[90%] flex-col items-center sm:px-12 md:mr-8 md:w-full md:items-start md:px-0 lg:mr-12 lg:gap-2 xl:mr-56 xl:gap-4 2xl:mr-64">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
               <div className="pb-2">
                 <h1
-                  className="p-0 text-center text-3xl font-bold uppercase text-white md:px-4 md:text-left lg:text-5xl"
+                  className="p-0 text-center text-3xl font-bold uppercase leading-[2rem] text-white md:px-4 md:text-left lg:text-5xl"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   <span
                     className="bg-gradient-golden-dark bg-clip-text text-transparent"
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
-                    <span className="bg-gradient-golden-dark block bg-clip-text text-transparent sm:hidden">
+                    <span className="bg-gradient-golden-dark hidden bg-clip-text text-transparent min-[370px]:block sm:hidden">
+                      Trading,&nbsp;Education
+                    </span>
+
+                    <span className="bg-gradient-golden-dark block bg-clip-text text-transparent min-[370px]:hidden sm:hidden">
                       Trading, Education
                     </span>
                     <span className="hidden sm:inline">
@@ -291,14 +295,15 @@ const LaserFund = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
-                <Button className="mt-4">Watch Video</Button>
-                <Button variant="solid">Learn More</Button>
+                <Button variant="solid" className="mt-2">
+                  Learn More
+                </Button>
               </div>
             </ScrollAnimation>
           </div>
 
           <ScrollAnimation animation="slideUp" delay={0.7}>
-            <div className="relative -bottom-[46px] aspect-[340/600] w-40 sm:w-48 md:-bottom-[50px] md:w-56 lg:-bottom-[71px] lg:aspect-[490/900] lg:w-[18rem] xl:h-[528px] xl:w-[19rem]">
+            <div className="relative -bottom-[46px] aspect-[340/600] w-56 min-[414px]:w-60 min-[504px]:w-64 md:-bottom-[50px] md:w-56 lg:-bottom-[71px] lg:aspect-[490/900] lg:w-[18rem] xl:h-[528px] xl:w-[19rem]">
               {/* Golden glow effect */}
               <div
                 className="controlGlow absolute bottom-[-138px] left-1/2 z-0 h-[390px] w-[420px] -translate-x-1/2 rounded-b-full md:bottom-[-50px] md:left-[81%] md:h-[400px] md:w-[400px] lg:bottom-[-30%] lg:left-auto lg:right-[-240%] lg:top-auto lg:h-[700px] lg:w-[700px] lg:rounded-full"

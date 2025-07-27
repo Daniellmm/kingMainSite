@@ -120,14 +120,6 @@ const FundingPageHeader = () => {
               </h3>
             </div>
             <div className="fundingHeaderErickImgWrap h-44 w-96 -rotate-[33deg] overflow-hidden border border-[#E7A647] bg-[linear-gradient(210deg,_#040404,_#2d2a3452)] sm:min-h-52 md:h-[246px] md:w-[500px] lg:h-[250px] lg:w-[600px] 2xl:h-[285px]">
-              {/* <img
-                src={erickTransparent}
-                alt="Erick"
-                width={210}
-                height={270}
-                className="fundingHeaderErickImg -mr-6 -mt-3 h-[256px] w-[281px] rotate-[33deg] justify-self-end object-cover md:rotate-[31deg]"
-                style={{ display: 'block' }}
-              /> */}
               <img
                 src={erickTransparent}
                 alt="Erick"

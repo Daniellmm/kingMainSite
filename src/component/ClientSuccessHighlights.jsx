@@ -35,38 +35,6 @@ const VideoCarousel = () => {
     setIsVideoLoading(false)
   }
 
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 600,
-  //   arrows: false,
-  //   swipeToSlide: true,
-  //   touchMove: true,
-  //   draggable: true,
-  //   autoplay: false,
-  //   pauseOnHover: true,
-  //   centerMode: false,
-  //   variableWidth: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         variableWidth: true,
-  //         slidesToShow: 2.5,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         variableWidth: false,
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // }
-
   const settings = {
     dots: true,
     infinite: true,

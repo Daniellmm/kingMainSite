@@ -51,8 +51,8 @@ const NavBar = () => {
 
   // Dropdown menu items
   const dropdownItems = [
-    { path: '/laserfund', label: 'TRADING' },
-    { path: 'ggei', label: 'BECOME YOUR OWN BANK' },
+    { path: '/credit-card-liquidation', label: 'CREDIT TO CASH' },
+    { path: '/funding', label: 'SYOFB' },
     { path: '/earn-protect-grow', label: 'Podcast' },
   ]
 
@@ -334,15 +334,15 @@ const NavBar = () => {
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
                 }}
-                data-path="/credit-card-liquidation"
-                className={`md: cursor-pointer text-lg transition-colors ${isActive('/credit-card-liquidation') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/credit-card-liquidation')}
+                data-path="/insurance"
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/insurance') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/insurance')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
-                CREDIT TO CASH
+                Insurance
               </li>
-              <li
+              {/* <li
                 style={{
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
@@ -354,19 +354,46 @@ const NavBar = () => {
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
                 SYOFB
+              </li>    */}
+
+              {/* <li
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                data-path="/credit-card-liquidation"
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/credit-card-liquidation') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/credit-card-liquidation')}
+                onMouseEnter={(e) => handleLinkHover(e, true)}
+                onMouseLeave={(e) => handleLinkHover(e, false)}
+              >
+                CREDIT TO CASH
+              </li>  */}
+              <li
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                data-path="/laserfund"
+                className={`text-lg transition-colors md:cursor-pointer ${isActive('/laserfund') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/laserfund')}
+                onMouseEnter={(e) => handleLinkHover(e, true)}
+                onMouseLeave={(e) => handleLinkHover(e, false)}
+              >
+                Trading
               </li>
               <li
                 style={{
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
                 }}
-                data-path="/insurance"
-                className={`md: cursor-pointer text-lg transition-colors ${isActive('/insurance') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/insurance')}
+                data-path="/ggei"
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/ggei') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/ggei')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
-                Insurance
+                Become A Bank
               </li>
 
               {/* Dropdown Menu */}
@@ -464,26 +491,6 @@ const NavBar = () => {
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
                 }}
-                className={`cursor-pointer text-lg transition-colors ${isActive('/credit-card-liquidation') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/credit-card-liquidation')}
-              >
-                CREDIT TO CASH
-              </li>
-              <li
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
-                className={`cursor-pointer text-lg transition-colors ${isActive('/funding') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/funding')}
-              >
-                SYOFB
-              </li>
-              <li
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
                 className={`cursor-pointer text-lg transition-colors ${isActive('/insurance') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/insurance')}
               >
@@ -509,6 +516,27 @@ const NavBar = () => {
               >
                 Become A Bank
               </li>
+              <li
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/credit-card-liquidation') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/credit-card-liquidation')}
+              >
+                CREDIT TO CASH
+              </li>
+              <li
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/funding') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/funding')}
+              >
+                SYOFB
+              </li>
+
               <li
                 style={{
                   fontFamily: 'Montserrat, serif',
