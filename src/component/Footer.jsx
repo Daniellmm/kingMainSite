@@ -245,14 +245,14 @@ const Footer = () => {
             ref={socialIconsRef}
             className="flex flex-wrap items-center justify-start gap-4"
           >
-            <img
+            {/* <img
               src={Facebk}
               onClick={handleFBLinkClick}
               alt="Facebook"
               className="cursor-pointer"
               onMouseEnter={(e) => handleSocialIconHover(e, true)}
               onMouseLeave={(e) => handleSocialIconHover(e, false)}
-            />
+            /> */}
             <img
               src={YouTB}
               alt="YouTube"
@@ -261,14 +261,14 @@ const Footer = () => {
               onMouseEnter={(e) => handleSocialIconHover(e, true)}
               onMouseLeave={(e) => handleSocialIconHover(e, false)}
             />
-            <img
+            {/* <img
               src={X}
               alt="X/Twitter"
               onClick={handleXLinkClick}
               className="cursor-pointer"
               onMouseEnter={(e) => handleSocialIconHover(e, true)}
               onMouseLeave={(e) => handleSocialIconHover(e, false)}
-            />
+            /> */}
             <img
               src={LinkedIn}
               alt="LinkedIn"
@@ -311,10 +311,13 @@ const Footer = () => {
               {[
                 { item: 'Home', link: '/' },
                 { item: 'About Us', link: '/about' },
-                { item: 'Our Team', link: '/ggei#team-section' },
-                { item: 'Services', link: null },
-                { item: 'Contact Us', link: null },
+                {
+                  item: 'Legal Notices & Disclaimers',
+                  link: '/legal-notice',
+                },
+                { item: 'Terms of Service', link: '/term-of-service' },
                 { item: 'Privacy Policy', link: '/privacy-policy' },
+                { item: 'Contact Us', link: null },
               ].map(({ item, link }, index) => (
                 <li
                   key={index}
@@ -342,18 +345,21 @@ const Footer = () => {
               className="font-bold"
               style={{ fontFamily: 'Montserrat, serif' }}
             >
-              Offer
+              Services
             </h1>
           </div>
 
           <div>
             <ul>
               {[
-                { item: 'Funding', link: '/funding' },
                 { item: 'Insurance', link: '/insurance' },
                 { item: 'LaserFund', link: '/laserfund' },
-                { item: 'Credit to Cash', link: '/credit-card-liquidation' },
                 { item: 'Become Your Own Bank', link: '/ggei' },
+                {
+                  item: 'Credit Card Processing',
+                  link: '/credit-card-liquidation',
+                },
+                { item: 'Partner with HTOF', link: '/funding' },
               ].map(({ item, link }, index) => (
                 <li
                   key={index}
@@ -408,8 +414,11 @@ const Footer = () => {
         >
           <h1 className="" style={{ fontFamily: 'Montserrat, serif' }}>
             Copyright © 2025{' '}
-            <span className="text-[#E7A647]"> High Ticket Offer.</span> All
-            Rights Reserved.
+            <span className="text-[#E7A647]">
+              {' '}
+              High Ticket Offer Financing.
+            </span>{' '}
+            All Rights Reserved.
           </h1>
           <h1
             className="cursor-pointer transition-colors duration-300 hover:text-[#E7A647]"

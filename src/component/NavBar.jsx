@@ -50,8 +50,8 @@ const NavBar = () => {
 
   // Dropdown menu items
   const dropdownItems = [
-    { path: '/credit-card-liquidation', label: 'CREDIT TO CASH' },
-    { path: '/funding', label: 'SYOFB' },
+    { path: '/credit-card-liquidation', label: ' Credit Card Processing' },
+    { path: '/funding', label: 'Partner with HTOF' },
     { path: '/earn-protect-grow', label: 'Podcast' },
   ]
 
@@ -443,7 +443,7 @@ const NavBar = () => {
           </div>
 
           {/* contact us btn  */}
-          <div
+          {/* <div
             ref={buttonRef}
             className="border-1 hidden gap-x-5 rounded-lg border border-black lg:flex"
           >
@@ -455,7 +455,7 @@ const NavBar = () => {
             >
               Contact Us
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Mobile Menu Dropdown */}
@@ -562,7 +562,7 @@ const NavBar = () => {
                 ))}
               </div> */}
 
-              <div className="border-1 w-[189px] rounded-lg border border-black">
+              {/* <div className="border-1 w-[189px] rounded-lg border border-black">
                 <button
                   style={{
                     fontFamily: 'Montserrat, serif',
@@ -572,7 +572,7 @@ const NavBar = () => {
                 >
                   Contact Us
                 </button>
-              </div>
+              </div> */}
             </ul>
           </div>
         )}
