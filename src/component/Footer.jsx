@@ -313,9 +313,9 @@ const Footer = () => {
                 { item: 'About Us', link: '/about' },
                 {
                   item: 'Legal Notices & Disclaimers',
-                  link: '/legal-notice',
+                  link: '/legal-notices',
                 },
-                { item: 'Terms of Service', link: '/term-of-service' },
+                { item: 'Terms of Service', link: '/terms-of-service' },
                 { item: 'Privacy Policy', link: '/privacy-policy' },
                 { item: 'Contact Us', link: null },
               ].map(({ item, link }, index) => (

@@ -21,6 +21,8 @@ import Hto from './pages/Hto'
 import PodcastPage from './pages/PodcastPage'
 import AboutUs from './pages/AboutUs'
 import Privacy from './pages/Privacy'
+import LegalNotices from './pages/LegalNotices'
+import TermsOfService from './pages/TermsOfService'
 
 const LoadingContext = createContext()
 
@@ -170,6 +172,24 @@ function AppContent() {
               element={
                 <PageTransition>
                   <Privacy />
+                </PageTransition>
+              }
+            />
+
+            <Route
+              path="/legal-notices"
+              element={
+                <PageTransition>
+                  <LegalNotices />
+                </PageTransition>
+              }
+            />
+
+            <Route
+              path="/terms-of-service"
+              element={
+                <PageTransition>
+                  <TermsOfService />
                 </PageTransition>
               }
             />
