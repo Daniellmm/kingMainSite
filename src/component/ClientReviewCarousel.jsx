@@ -10,7 +10,7 @@ import clientReview5 from '../assets/images/trustpilot/review5.webp'
 import clientReview6 from '../assets/images/trustpilot/review6.webp'
 import clientReview7 from '../assets/images/trustpilot/review7.webp'
 import clientReview8 from '../assets/images/trustpilot/review8.webp'
-import sliderVideoThumbnail from '../assets/images/page-two/sliderVidoeThumbnail.png'
+import sliderVideoThumbnail from '../assets/images/page-two/sliderVidoeThumbnail.webp'
 
 const clientReviews = [
   clientReview1,
@@ -109,6 +109,10 @@ const ClientReviewCarousel = () => {
           .client-review-carousel-wrapper .slick-dots li button:hover {
             background-color: rgba(255, 255, 255, 0.8) !important;
             transform: scale(1.1) !important;
+          } 
+
+          .client-review-carousel-wrapper .slick-dots li button::before {
+            opacity: 0;
           }
           
           .client-review-carousel-wrapper .slick-dots li.slick-active button {
@@ -143,7 +147,7 @@ const ClientReviewCarousel = () => {
           {/* First Slide - Video */}
           <div className="relative w-full md:pl-[25px] lg:!w-[698px]">
             <div
-              className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
+              className="h-[250px] w-full overflow-hidden rounded-xl bg-black sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[400px]"
               style={{ aspectRatio: '16/9' }}
             >
               {!showVideo ? (
@@ -174,7 +178,7 @@ const ClientReviewCarousel = () => {
                   )}
                   <iframe
                     className="h-full w-full"
-                    src="https://www.youtube.com/embed/a9M6uPzQLFs?autoplay=1controls=1&rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/otezXZ_W2fM?autoplay=1controls=1&rel=0&modestbranding=1"
                     title="Client Review Video"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -193,7 +197,7 @@ const ClientReviewCarousel = () => {
                 key={index}
               >
                 <div
-                  className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]"
+                  className="h-[250px] w-full overflow-hidden rounded-xl bg-white shadow-lg sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[400px]"
                   style={{ aspectRatio: '16/9' }}
                 >
                   <img

@@ -50,10 +50,10 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
         <div className="flex w-full flex-col items-center justify-center pt-20">
           <motion.h1
             className="bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-center text-4xl font-bold text-transparent lg:text-start lg:text-6xl"
-            style={{ fontFamily: 'Minion Pro, serif' }}
+            style={{ fontFamily: 'Montserrat, serif' }}
             variants={fadeInUp}
           >
-            NOW OUT!!!
+            Watch Podcast
           </motion.h1>
           <div className="flex items-center justify-center py-20">
             <div className="h-12 w-12 animate-spin rounded-full border-b-2 border-[#D09A25]"></div>
@@ -69,10 +69,10 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
         <div className="flex w-full flex-col items-center justify-center pt-20">
           <motion.h1
             className="text-center text-4xl font-bold text-[#D09A25] lg:text-start lg:text-6xl"
-            style={{ fontFamily: 'Minion Pro, serif' }}
+            style={{ fontFamily: 'Montserrat, serif' }}
             variants={fadeInUp}
           >
-            NOW OUT!!!
+            Watch Podcast
           </motion.h1>
           <div className="py-10 text-center text-red-500">
             <p>Unable to load latest videos. Please try again later.</p>
@@ -87,10 +87,10 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
       <div className="flex w-full flex-col items-center justify-center pt-20">
         <motion.h1
           className="text-center text-4xl font-bold text-[#D09A25] lg:text-start lg:text-6xl"
-          style={{ fontFamily: 'Minion Pro, serif' }}
+          style={{ fontFamily: 'Montserrat, serif' }}
           variants={fadeInUp}
         >
-          NOW OUT!!!
+          Watch Podcast
         </motion.h1>
         <motion.p
           className="text-center text-white"
@@ -105,7 +105,7 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
         <motion.div variants={fadeInUp}>
           <h1
             className="pb-7 pt-10 text-center text-3xl font-bold text-[#D09A25] lg:text-start"
-            style={{ fontFamily: 'Minion Pro, serif' }}
+            style={{ fontFamily: 'Montserrat, serif' }}
           >
             Watch Latest Podcasts
           </h1>

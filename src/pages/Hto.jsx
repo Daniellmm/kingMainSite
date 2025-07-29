@@ -5,7 +5,7 @@ import { infoCards, steps } from './constant'
 import { motion } from 'framer-motion'
 
 const FORM_URL =
-  'https://api.leadconnectorhq.com/widget/bookings/liquidation-htof'
+  ' https://api.leadconnectorhq.com/widget/form/JDaHxIsDZwIh47NcOzTG'
 
 const Hto = () => {
   // Function to handle button clicks
@@ -90,7 +90,7 @@ const Hto = () => {
   return (
     <>
       <main className="overflow-hidden">
-        <section className="hero min-h-[80vh] bg-black px-5 lg:min-h-[100vh] lg:px-5">
+        <section className="hero bg-black px-5 md:px-12 lg:pl-12 lg:pt-12 2xl:pl-20">
           <header>
             {/* <div>
               <nav>
@@ -98,39 +98,57 @@ const Hto = () => {
               </nav>
             </div> */}
 
-            <div className="flex flex-col items-center justify-center pt-16">
-              <div className="flex flex-col items-center justify-center gap-y-4 pt-10 lg:w-2/3 lg:pt-0">
+            <div className="flex max-w-[1800px] flex-col items-start justify-center self-center pt-16 lg:flex-row lg:pt-20">
+              <div className="flex flex-col justify-center gap-y-4 pt-4 md:pt-10 lg:w-2/3 lg:pt-0">
+                {/* Heading For small screens < 1024 */}
                 <motion.h1
-                  className="bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-center text-5xl font-bold uppercase text-transparent lg:pt-10 lg:text-7xl"
-                  style={{ fontFamily: 'Minion Pro, serif' }}
+                  className="test-center bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-center text-4xl font-bold uppercase text-transparent md:text-5xl lg:text-left lg:text-7xl xl:hidden"
+                  style={{ fontFamily: 'Montserrat, serif' }}
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  Turn Your Available Credit{' '}
-                  <span className="bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-center text-5xl font-bold uppercase lg:pt-10 lg:text-7xl">
-                    Into Cash...
+                  <span className="text-white">Turn</span> 100% Of Your
+                  Available Credit{' '}
+                  <span className="font-bold uppercase text-white lg:pt-10 lg:text-7xl">
+                    Into Cash
                   </span>
                 </motion.h1>
+
+                {/* Heading For large screens > 1024 */}
+                <motion.h1
+                  className="test-center hidden bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-5xl font-bold uppercase text-transparent lg:text-left lg:text-7xl xl:block"
+                  style={{ fontFamily: 'Montserrat, serif' }}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  <span className="text-white">Turn</span>
+                  &nbsp;100%&nbsp;Of Your&nbsp;Available Credit&nbsp;
+                  <span className="font-bold uppercase text-white lg:pt-10 lg:text-7xl">
+                    Into&nbsp;Cash
+                  </span>
+                </motion.h1>
+
                 <motion.p
-                  className="text-center text-lg uppercase text-[#999999]"
+                  className="text-center text-[14px] uppercase text-[#999999] md:text-[16px] lg:text-left 2xl:text-[18px]"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   custom={1}
                   style={{
-                    fontFamily: 'Minion Pro, serif',
+                    fontFamily: 'Montserrat, serif',
                     fontWeight: 'medium',
                   }}
                 >
-                  Turn 100% of Your Credit Card Limits into cash deposited into
-                  your bank account Without the Stress
+                  Deposited into your bank account with in 24 hour
                 </motion.p>
 
                 <motion.div
-                  className="flex w-full items-center justify-center gap-2"
+                  className="flex w-full items-center justify-center gap-2 lg:justify-start"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -159,21 +177,19 @@ const Hto = () => {
                     style={{
                       fontFamily: 'Montserrat, serif',
                       fontWeight: 'medium',
-                      // background:
-                      //   'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                     }}
-                    className="bg-emerald rounded-full px-3 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg lg:px-6"
+                    className="rounded-full bg-emerald px-3 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg lg:px-6"
                   >
                     Book Appointment Now
                   </button>
                 </motion.div>
               </div>
 
-              <div className="flex flex-col items-center justify-center lg:w-4/6">
+              <div className="mx-auto mt-8 flex flex-col items-center justify-center lg:mt-28 lg:w-4/6">
                 <motion.img
                   src={CARD1}
                   alt=""
-                  className="w-auto pt-16 lg:h-[580px] lg:pt-0"
+                  className="pt- lg:max-h-auto max-h-[500px] w-auto lg:h-[580px] lg:pt-0"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -245,14 +261,15 @@ const Hto = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-center text-4xl text-transparent lg:text-start lg:text-6xl"
-                style={{ fontFamily: 'Minion Pro, serif', fontWeight: 'bold' }}
+                className="bg-gradient-golden bg-clip-text text-center text-4xl uppercase text-transparent lg:text-start lg:text-6xl"
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: 'bold' }}
               >
-                Why Choose Our Credit Card Liquidation Service?
+                <span className="text-white"> Why Choose </span>
+                Our Credit Card Liquidation Service?
               </motion.h1>
             </div>
 
-            <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row">
+            <div className="flex w-full flex-col items-center justify-center gap-4 lg:flex-row">
               {infoCards.map((card, i) => (
                 <motion.div
                   key={card.title}
@@ -273,7 +290,7 @@ const Hto = () => {
                   />
                   <h1
                     className="text-white"
-                    style={{ fontFamily: 'Minion Pro, serif' }}
+                    style={{ fontFamily: 'Montserrat, serif' }}
                   >
                     {card.title}
                   </h1>
@@ -301,8 +318,9 @@ const Hto = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-center text-4xl text-transparent lg:text-start lg:text-6xl"
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                _rgb
+                className="bg-gradient-golden bg-clip-text text-center text-4xl uppercase text-transparent lg:text-start lg:text-6xl"
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: '700' }}
               >
                 How It Works (In 5 Simple Steps)
               </motion.h1>
@@ -328,19 +346,19 @@ const Hto = () => {
                     >
                       <h1
                         className="text-6xl text-[#D09A25]"
-                        style={{ fontFamily: 'Minion Pro, serif' }}
+                        style={{ fontFamily: 'Montserrat, serif' }}
                       >
                         {step.number}
                       </h1>
                       <h1
-                        className="font-light tracking-wider text-black"
-                        style={{ fontFamily: 'Minion Pro, serif' }}
+                        className="font-normal tracking-wider text-black"
+                        style={{ fontFamily: 'Montserrat, serif' }}
                       >
                         {step.title}
                       </h1>
                       <h1
-                        className="font-light tracking-wider text-black"
-                        style={{ fontFamily: 'Minion Pro, serif' }}
+                        className="font-normal tracking-wider text-black"
+                        style={{ fontFamily: 'Montserrat, serif' }}
                       >
                         {step.subtitle}
                       </h1>
@@ -413,19 +431,19 @@ const Hto = () => {
                     >
                       <h1
                         className="text-4xl text-[#D09A25]"
-                        style={{ fontFamily: 'Minion Pro, serif' }}
+                        style={{ fontFamily: 'Montserrat, serif' }}
                       >
                         {step.number}
                       </h1>
                       <h1
-                        className="font-light tracking-wider text-black"
-                        style={{ fontFamily: 'Minion Pro, serif' }}
+                        className="font-normal tracking-wider text-black"
+                        style={{ fontFamily: 'Montserrat, serif' }}
                       >
                         {step.title}
                       </h1>
                       <h1
-                        className="font-light tracking-wider text-black"
-                        style={{ fontFamily: 'Minion Pro, serif' }}
+                        className="font-normal tracking-wider text-black"
+                        style={{ fontFamily: 'Montserrat, serif' }}
                       >
                         {step.subtitle}
                       </h1>
@@ -446,8 +464,8 @@ const Hto = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-center text-4xl text-transparent lg:text-start lg:text-6xl"
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                className="uppercaes bg-gradient-golden bg-clip-text text-center text-4xl text-transparent lg:text-start lg:text-6xl"
+                style={{ fontFamily: 'Montserrat, serif', fontWeight: '700' }}
               >
                 Who Is This For?
               </motion.h1>
@@ -463,7 +481,7 @@ const Hto = () => {
                     transition={{ delay: 0.2 }}
                     viewport={{ once: true }}
                     className="text-2xl text-white"
-                    style={{ fontFamily: 'Minion Pro, serif' }}
+                    style={{ fontFamily: 'Montserrat, serif' }}
                   >
                     Business owners looking to scale
                   </motion.h1>
@@ -505,7 +523,7 @@ const Hto = () => {
                     transition={{ delay: 0.4 }}
                     viewport={{ once: true }}
                     className="text-2xl text-white"
-                    style={{ fontFamily: 'Minion Pro, serif' }}
+                    style={{ fontFamily: 'Montserrat, serif' }}
                   >
                     Entrepreneurs needing fast capital
                   </motion.h1>
@@ -547,7 +565,7 @@ const Hto = () => {
                     transition={{ delay: 0.6 }}
                     viewport={{ once: true }}
                     className="text-2xl text-white"
-                    style={{ fontFamily: 'Minion Pro, serif' }}
+                    style={{ fontFamily: 'Montserrat, serif' }}
                   >
                     Individuals who want to leverage credit smartly
                   </motion.h1>
@@ -589,7 +607,7 @@ const Hto = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.8 }}
                     className="text-2xl text-white"
-                    style={{ fontFamily: 'Minion Pro, serif' }}
+                    style={{ fontFamily: 'Montserrat, serif' }}
                   >
                     Anyone seeking extra liquidity without disrupting their
                     credit usage
@@ -631,7 +649,7 @@ const Hto = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.8 }}
                   className="text-2xl text-white"
-                  style={{ fontFamily: 'Minion Pro, serif' }}
+                  style={{ fontFamily: 'Montserrat, serif' }}
                 >
                   Anyone seeking extra liquidity <br /> without disrupting their
                   credit usage
@@ -641,21 +659,21 @@ const Hto = () => {
           </div>
         </section>
 
-        <section className="last-sec flex flex-col items-center justify-center bg-black px-5 pb-32 pt-20 lg:min-h-[10vh] lg:px-20">
+        <section className="last-sec flex flex-col items-center justify-center bg-black bg-white px-5 pb-32 pt-20 lg:min-h-[10vh] lg:px-20">
           <div className="flex flex-col items-center justify-center gap-8">
             <motion.h1
-              className="bg-[linear-gradient(135deg,_rgb(229,194,108)_0%,_rgb(218,189,93)_50%,_rgb(201,168,87)_100%)] bg-clip-text text-4xl text-transparent lg:text-6xl"
+              className="uppercaes bg-gradient-golden bg-clip-text text-4xl text-transparent lg:text-6xl"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              style={{ fontFamily: 'Minion Pro, serif' }}
+              style={{ fontFamily: 'Montserrat, serif', fontWeight: '700' }}
             >
               Get Started Today
             </motion.h1>
 
             <motion.p
-              className="text-center text-lg text-[#999999]"
+              className="text-center text-lg text-white"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -663,7 +681,8 @@ const Hto = () => {
               custom={1}
               style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
             >
-              Don’t let your available credit sit idle...
+              Don’t let your available credit sit idle. Turn it into cash—and
+              opportunity. Click below to book your appointment and get started.
             </motion.p>
 
             <motion.div
@@ -679,10 +698,8 @@ const Hto = () => {
                 style={{
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
-                  background:
-                    'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
                 }}
-                className="bg-emerald rounded-full px-6 py-2 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
+                className="rounded-full bg-gradient-golden px-6 py-4 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
               >
                 Book Appointment Now
               </button>

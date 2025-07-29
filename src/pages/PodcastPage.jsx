@@ -3,8 +3,16 @@ import { motion } from 'framer-motion'
 import KING1 from '../assets/images/page-two/hero.png'
 import KING2 from '../assets/images/page-two/aboutImg.png'
 import HeroModel from '../component/HeroModel'
+import BOOK from '../assets/images/epgBook.png'
 import PodcastVideosSection from '../component/PodcastVideosSection '
+import SocialLinksRow from '../component/SocialLinksRow'
 
+const FORM_URL =
+  'https://5syxfzvlrt3cydxokpwu.app.clientclub.net/communities/groups/epg-community/home?invite=68875d277d6093a5e3f728f'
+
+const handleButtonClick = () => {
+  window.open(FORM_URL, '_blank', 'noopener,noreferrer')
+}
 const PodcastPage = () => {
   // Your YouTube API credentials
   const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
@@ -78,7 +86,7 @@ const PodcastPage = () => {
     <>
       <main className="overflow-hidden">
         {/* Hero Section */}
-        <section className="phero-sec items-center justify-center px-5 lg:px-40">
+        <section className="phero-sec items-center justify-center px-5 lg:px-16 2xl:px-40">
           <motion.div
             className="flex w-full flex-col items-center justify-center gap-10 pt-28 lg:flex-row lg:pt-16"
             initial="hidden"
@@ -122,13 +130,14 @@ const PodcastPage = () => {
                     target="_blank"
                   >
                     <motion.button
-                      className="bg-emerald w-[240px] rounded-full px-8 py-4 text-[0.9rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg md:w-[310px] md:px-10 md:py-5 md:text-[1rem] lg:w-[360px] lg:text-[1.2rem] xl:text-[1.3rem]"
+                      className="w-[240px] rounded-full bg-emerald px-8 py-4 text-[0.9rem] font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg md:w-[310px] md:px-10 md:py-5 md:text-[1rem] lg:w-[360px] lg:text-[1.2rem] xl:text-[1.3rem]"
                       whileHover={buttonHover}
                       whileTap={{ scale: 0.95 }}
                       style={{
                         fontFamily: 'Montserrat, serif',
                         fontWeight: '700',
                       }}
+                      onClick={handleButtonClick}
                     >
                       Join Our Community
                     </motion.button>
@@ -139,7 +148,7 @@ const PodcastPage = () => {
 
             {/* Second part */}
             <motion.div
-              className="flex w-full items-center justify-center lg:items-start lg:justify-start"
+              className="flex w-full items-center justify-center lg:items-start"
               variants={fadeInRight}
             >
               <img src={KING1} alt="" />
@@ -148,21 +157,21 @@ const PodcastPage = () => {
         </section>
 
         {/* Book Section */}
-        <section className="psec-two relative min-h-[100vh] px-5 lg:min-h-[80vh] lg:px-40 lg:pb-10">
+        <section className="relative bg-white px-5 lg:min-h-[80vh] lg:px-16 lg:pb-0 lg:pr-0 2xl:px-40">
           <div className="flex h-full w-full flex-col items-center justify-between lg:flex-row">
             <motion.div
-              className="z-10 space-y-5 pt-10 lg:w-1/2"
+              className="z-10 space-y-5 pt-10 lg:mr-32 xl:mr-56"
               variants={fadeInLeft}
             >
               <motion.h1
-                className="bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-center text-4xl font-bold text-transparent lg:text-start lg:text-6xl"
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                className="bg-gradient-golden bg-clip-text text-center text-4xl font-bold text-transparent lg:text-start lg:text-7xl"
+                style={{ fontFamily: 'Montserrat, serif' }}
                 variants={fadeInUp}
               >
-                EARN, PROTECT, GROW
+                EARN PROTECT GROW
               </motion.h1>
               <motion.p
-                className="text-center capitalize text-white lg:text-start"
+                className="text-center capitalize text-black lg:text-start"
                 style={{
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
@@ -198,15 +207,22 @@ const PodcastPage = () => {
             </motion.div>
 
             {/* 3D model of the book */}
-            <motion.div
+            {/* <motion.div
               className="relative h-[50vh] w-full lg:h-[70vh] lg:w-1/2"
               variants={fadeInRight}
             >
               <div className="h-full w-full">
                 <HeroModel />
               </div>
-            </motion.div>
+            </motion.div> */}
+            {/* <div> */}
+            <img
+              src={BOOK}
+              alt="book"
+              className="h-[350px] w-auto min-[300px]:h-[400px] min-[400px]:h-[450px] sm:h-[650px] xl:h-[800px]"
+            />
           </div>
+          {/* </div> */}
         </section>
 
         {/* Podcast Videos Section - Now Dynamic */}
@@ -218,14 +234,14 @@ const PodcastPage = () => {
         </section>
 
         {/* About Section */}
-        <section className="about-sec px-5 lg:px-40">
+        <section className="px-5 lg:px-40">
           <div className="flex flex-col items-center justify-center">
             <motion.div variants={fadeInUp}>
               <h1
-                className="bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text pb-10 pt-20 text-center text-4xl font-bold text-transparent lg:text-start lg:text-6xl"
-                style={{ fontFamily: 'Minion Pro, serif' }}
+                className="bg-gradient-golden bg-clip-text pb-10 pt-20 text-center text-4xl font-bold text-transparent lg:text-start lg:text-6xl"
+                style={{ fontFamily: 'Montserrat, serif' }}
               >
-                ABOUT YOUR HOST
+                ABOUT
               </h1>
             </motion.div>
 
@@ -249,7 +265,7 @@ const PodcastPage = () => {
               </motion.div>
 
               <motion.p
-                className="pt-10 text-center text-white lg:text-start"
+                className="pt-10 text-center text-black lg:text-start"
                 variants={fadeInUp}
                 transition={{ delay: 0.2 }}
                 style={{
@@ -349,39 +365,7 @@ const PodcastPage = () => {
                 king, you see the work of a sovereign God.
               </motion.p>
 
-              {/* <motion.div
-                className='pt-16 flex justify-center items-center gap-6'
-                variants={staggerContainer}
-              >
-                <motion.img
-                  src={FACEBOOK}
-                  className='size-10 cursor-pointer'
-                  alt="facebook-logo"
-                  variants={scaleIn}
-                  whileHover={socialHover}
-                />
-                <motion.img
-                  src={X}
-                  className='size-10 cursor-pointer'
-                  alt="X-logo"
-                  variants={scaleIn}
-                  whileHover={socialHover}
-                />
-                <motion.img
-                  src={INSTAGRAM}
-                  className='size-10 cursor-pointer'
-                  alt="instagram-logo"
-                  variants={scaleIn}
-                  whileHover={socialHover}
-                />
-                <motion.img
-                  src={YOUTUBE}
-                  className='size-10 cursor-pointer'
-                  alt="youtube-logo"
-                  variants={scaleIn}
-                  whileHover={socialHover}
-                />
-              </motion.div> */}
+              <SocialLinksRow />
             </div>
           </div>
         </section>

@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 
 import HEADPHONE from '../assets/images/headphone.png'
 import BIGLOGO from '../assets/images/biglogo.png'
 import FALLCOIN from '../assets/images/fallcoin.png'
 import KING from '../assets/images/ak1.png'
 import ALEXIS from '../assets/images/alexis.png'
-import insuranceHeaderImg from '../assets/images/insuranceHeaderImg.png'
+import insuranceHeaderImg from '../assets/images/insuranceHeaderImg.webp'
 import GENE from '../assets/images/gene.png'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -16,7 +16,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import Button from '../component/ui/Button'
 
 const FORM_URL =
-  'https://api.leadconnectorhq.com/widget/form/TufHjWMyJ7iFxU6TBfrk'
+  'https://yellowbrickfinancialagency.com/intake?am_id=kingedwards98 7'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -82,7 +82,7 @@ const Insurance = () => {
 
   // Function to handle button clicks
   const handleButtonClick = () => {
-    window.open(FORM_URL, '_blank')
+    window.open(FORM_URL, '_blank', 'noopener,noreferrer')
   }
 
   //Scroll to clientSuccessStories section
@@ -96,18 +96,6 @@ const Insurance = () => {
     <>
       <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-6 pb-8 pt-12 sm:pb-16 md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-16 2xl:min-h-[705px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center gap-x-0 pt-2 md:max-w-[800px] md:flex-row-reverse md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
-          {/* <ScrollAnimation animation="zoomIn" delay={0.3}>
-            <img
-              src={insuranceHeaderImg}
-              alt="header image"
-              width={600}
-              height={600}
-              style={{
-                aspectRatio: '3/2',
-              }}
-              className="block w-[90vw] max-w-[300px] object-contain md:mt-40 md:w-[80vw] md:max-w-[372px] lg:w-[600px] lg:max-w-[600px]"
-            />
-          </ScrollAnimation> */}
           <ScrollAnimation animation="zoomIn" delay={0.3}>
             <img
               src={insuranceHeaderImg}
@@ -129,7 +117,7 @@ const Insurance = () => {
                   <span className="bg-gradient-golden-dark bg-clip-text text-transparent">
                     PROTECT YOUR BUSINESS{' '}
                   </span>
-                  REVENUES LOWER YOUR TAXES. GROW YOUR NETWORTH.
+                  REVENUES, LOWER YOUR TAXES, GROW YOUR NETWORTH.
                 </h1>
               </div>
             </ScrollAnimation>
@@ -152,7 +140,12 @@ const Insurance = () => {
                 <Button className="mt-4" width="180px" onClick={handleScroll}>
                   See Client Results
                 </Button>
-                <Button variant="solid" color="#00B67A" width="180px">
+                <Button
+                  variant="solid"
+                  color="#00B67A"
+                  width="180px"
+                  onClick={handleButtonClick}
+                >
                   Free Financial Review
                 </Button>
               </div>
@@ -207,9 +200,6 @@ const Insurance = () => {
                   Audio.
                   <div class="relative inline-block font-bold text-black">
                     <span className="text-red-600 line-through">FREE</span>
-                    {/* <svg class="absolute left-0 top-1/2 w-full h-1" viewBox="0 0 100 2" preserveAspectRatio="none">
-                      <path d="M0,1 Q10,0 20,1 T40,1 T60,0 T80,1 T100,1" stroke="red" fill="transparent" stroke-width="2" />
-                    </svg> */}
                   </div>
                 </h1>
               </ScrollAnimation>

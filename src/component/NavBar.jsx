@@ -5,13 +5,12 @@ import LOGO1 from '../assets/images/logo/homeLogo.png'
 import FundingLogo from '../assets/images/logo/fundingLogo.png'
 import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
 import LaserFundLogo from '../assets/images/logo/laserLogo.png'
-import CCLLogo from '../assets/images/logo/ccl.png'
+import CCLLogo from '../assets/images/logo/creditLogo.webp'
 import GGEILogo from '../assets/images/logo/ggei.png'
 // Add these imports for the dropdown page logos
 // import AboutLogo from '../assets/images/logo/aboutLogo.png' // Add your about logo
 // import CCLLogo from '../assets/images/logo/Logo.png'
 import EPGLogo from '../assets/images/page-two/logo.png'
-import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 

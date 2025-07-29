@@ -56,11 +56,18 @@
     left: -65px;
     top: 23px;
   }
-  .bankSummitAlexisImg {
+  /* .bankSummitAlexisImg {
     right: 24px;
     top: -5px;
     height: 212px;
     width: 197px;
+    object-fit: cover;
+  } */
+  .bankSummitAlexisImg {
+    right: 24px;
+    top: -5px;
+    height: 231px;
+    width: 199px;
     object-fit: cover;
   }
 }
@@ -76,9 +83,13 @@
     left: 303px;
     top: -282px;
   }
-  .bankSummitAlexisHeader {
+  /* .bankSummitAlexisHeader {
     left: -51px;
     top: 34px;
+  } */
+  .bankSummitAlexisHeader {
+    left: -34px;
+    top: 44px;
   }
 }
 
@@ -93,8 +104,12 @@
     left: 404px;
     top: -357px;
   }
-  .bankSummitAlexisHeader {
+  /* .bankSummitAlexisHeader {
     left: 1px;
+    top: -7px;
+  }  */
+  .bankSummitAlexisHeader {
+    left: -10px;
     top: -7px;
   }
   .bankSummitAlexisImg {
@@ -109,9 +124,6 @@
   }
   .bankSummitAlexisName {
     transform: translate(502px, 51px);
-  }
-  .bankSummitSection {
-    /* min-width: 640px; */
   }
   .bankSummitKingHeader {
     width: 427px !important;
@@ -191,18 +203,17 @@
     top: -151px;
     left: 262px;
   }
-
   /* .bankSummitAlexisImg {
-    width: 241px;
-    height: 255px;
-    margin-right: 0rem;
-    margin-top: 0rem;
-  } */
-  .bankSummitAlexisImg {
     width: 242px;
     height: 260px;
     right: 63px;
     top: -12px;
+  } */
+  .bankSummitAlexisImg {
+    width: 242px;
+    height: 260px;
+    right: 37px;
+    top: -1px;
   }
   .bankSummitSlantedDiv {
     transform: translate(189px, -48px) rotate(45deg);
@@ -219,17 +230,6 @@
     top: -84px;
     left: 285px;
   }
-}
-
-@media (min-width: 1160px) {
-  /* .kingHeaderGgei {
-    left: 602px;
-    top: -629px;
-  }
-  .alexisHeaderGgei {
-    top: -46px;
-    left: 350px;
-  } */
 }
 
 @media (min-width: 1300px) {

@@ -46,7 +46,7 @@ const FundingPageHeader = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.5}>
-            <h1
+            {/* <h1
               className="fundingHeaderTitle py-0 pt-2 text-left text-3xl font-bold uppercase leading-8 text-white sm:text-4xl sm:leading-[2.5rem] lg:pt-0 lg:text-5xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
@@ -64,6 +64,50 @@ const FundingPageHeader = () => {
                 Own Funding{' '}
               </span>
               Business
+            </h1> */}
+            <h1
+              className="fundingHeaderTitle py-0 pt-2 text-left text-3xl font-bold uppercase leading-8 text-white sm:text-4xl sm:leading-[2.5rem] lg:pt-0 lg:text-5xl"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              <span style={{ color: 'white' }}>S</span>
+              <span
+                className="bg-gradient-golden bg-clip-text text-transparent"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                tart{' '}
+              </span>
+
+              <span style={{ color: 'white' }}>Y</span>
+              <span
+                className="bg-gradient-golden bg-clip-text text-transparent"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                our{' '}
+              </span>
+
+              <span style={{ color: 'white' }}>O</span>
+              <span
+                className="bg-gradient-golden bg-clip-text text-transparent"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                wn{' '}
+              </span>
+
+              <span style={{ color: 'white' }}>F</span>
+              <span
+                className="bg-gradient-golden bg-clip-text text-transparent"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                unding{' '}
+              </span>
+
+              <span style={{ color: 'white' }}>B</span>
+              <span
+                className="bg-gradient-golden bg-clip-text text-transparent"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                usiness
+              </span>
             </h1>
           </ScrollAnimation>
 

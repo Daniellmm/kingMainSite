@@ -314,7 +314,7 @@ const Footer = () => {
                 { item: 'Our Team', link: '/ggei#team-section' },
                 { item: 'Services', link: null },
                 { item: 'Contact Us', link: null },
-                { item: 'Privacy Policy', link: null },
+                { item: 'Privacy Policy', link: '/privacy-policy' },
               ].map(({ item, link }, index) => (
                 <li
                   key={index}

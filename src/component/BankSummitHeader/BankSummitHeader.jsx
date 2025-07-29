@@ -4,7 +4,7 @@ import alexisTransparent from '../../assets/images/team/alexisTransparent.webp'
 import ScrollAnimation from '../ScrollAnimation'
 import Button from '../ui/Button'
 import './BankSummitHeader.css'
-const BankSummitHeader = () => {
+const BankSummitHeader = ({ handleClick }) => {
   return (
     <section className="bankSummitSection relative flex min-h-[680px] justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black px-4 pb-8 pt-[5.5rem] sm:pt-24 md:rounded-bl-[70px] md:rounded-br-[70px] lg:min-h-[660px] lg:pb-0 lg:pt-32 xl:min-h-[628px] 2xl:min-h-[705px]">
       {/* Slanted golden gradient bar in upper right corner, clipped to section */}
@@ -70,11 +70,13 @@ const BankSummitHeader = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
-            <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 uppercase md:flex-row 2xl:mt-2">
-              <Button width="150px" className="mt-4 w-[150px]">
-                GET TICKETS
-              </Button>
-              <Button variant="solid" width="150px" className="w-[150px]">
+            <div className="mt-6 flex flex-col gap-x-4 gap-y-0 space-y-4 uppercase md:mt-0 md:flex-row 2xl:mt-2">
+              <Button
+                variant="solid"
+                width="150px"
+                className="w-[150px]"
+                onClick={handleClick}
+              >
                 LEARN MORE
               </Button>
             </div>
@@ -82,7 +84,7 @@ const BankSummitHeader = () => {
         </div>
 
         {/* IMAGES */}
-        <div className="relative">
+        <div className="relative mt-4 md:mt-0">
           {/* Alexis Card */}
           <div className="bankSummitAlexisHeader absolute left-[-88px] top-[20px] h-48 w-96">
             {/* Alexis Name */}

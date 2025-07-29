@@ -29,7 +29,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BankSummitHeader from '../component/BankSummitHeader/BankSummitHeader'
 const FORM_URL =
-  'https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI'
+  ' https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -113,14 +113,14 @@ const GGEI = () => {
   ]
 
   const handleButtonClick = () => {
-    window.open(FORM_URL, '_blank')
+    window.open(FORM_URL, '_blank', 'noopener,noreferrer')
   }
 
   // https://youtu.be/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0
 
   return (
     <>
-      <BankSummitHeader />
+      <BankSummitHeader handleClick={handleButtonClick} />
 
       {/* <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black px-10 pb-10 md:min-h-0 md:rounded-bl-[100px] md:rounded-br-[100px]"></section> */}
 
@@ -475,7 +475,7 @@ const GGEI = () => {
       </section>
 
       <section>
-        <AdmissionSection />
+        <AdmissionSection handleButtonClick={handleButtonClick} />
       </section>
 
       <section className="overflow-hidden bg-black px-10 pb-14">

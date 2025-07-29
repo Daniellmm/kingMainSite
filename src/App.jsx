@@ -20,6 +20,7 @@ import Blog from './pages/Blog'
 import Hto from './pages/Hto'
 import PodcastPage from './pages/PodcastPage'
 import AboutUs from './pages/AboutUs'
+import Privacy from './pages/Privacy'
 
 const LoadingContext = createContext()
 
@@ -160,6 +161,15 @@ function AppContent() {
               element={
                 <PageTransition>
                   <PodcastPage />
+                </PageTransition>
+              }
+            />
+
+            <Route
+              path="/privacy-policy"
+              element={
+                <PageTransition>
+                  <Privacy />
                 </PageTransition>
               }
             />

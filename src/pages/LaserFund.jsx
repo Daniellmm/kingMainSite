@@ -248,7 +248,7 @@ const LaserFund = () => {
   ])
 
   const handleButtonClick = () => {
-    window.open(FORM_URL, '_blank')
+    window.open(FORM_URL, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -266,11 +266,11 @@ const LaserFund = () => {
                     className="bg-gradient-golden-dark bg-clip-text text-transparent"
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
-                    <span className="bg-gradient-golden-dark hidden bg-clip-text text-transparent min-[370px]:block sm:hidden">
+                    <span className="hidden bg-gradient-golden-dark bg-clip-text text-transparent min-[370px]:block sm:hidden">
                       Trading,&nbsp;Education
                     </span>
 
-                    <span className="bg-gradient-golden-dark block bg-clip-text text-transparent min-[370px]:hidden sm:hidden">
+                    <span className="block bg-gradient-golden-dark bg-clip-text text-transparent min-[370px]:hidden sm:hidden">
                       Trading, Education
                     </span>
                     <span className="hidden sm:inline">
@@ -1150,11 +1150,11 @@ const LaserFund = () => {
         <div className="flex flex-col items-center justify-center gap-y-5">
           <ScrollAnimation animation="zoomIn">
             <h1
-              className="text-center text-3xl font-semibold leading-[45px] text-[#E7A647] lg:text-[45px]"
+              className="text-left text-3xl font-semibold leading-[45px] text-[#E7A647] md:text-left lg:text-[45px]"
               style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}
             >
               BONUS: Monthly Q&A Trading Strategy Sessions with the Founders of
-              the AI Trading Algorithm.
+              the AI Trading Algorithm ($1,997 per month)!
             </h1>
           </ScrollAnimation>
 
