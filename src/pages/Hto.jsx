@@ -1,6 +1,6 @@
 import React from 'react'
 import LOGO from '../assets/images/page-one/logoHto.png'
-import CARD1 from '../assets/images/page-one/card.png'
+import CARD1 from '../assets/images/page-one/card.webp'
 import { infoCards, steps } from './constant'
 import { motion } from 'framer-motion'
 
@@ -188,8 +188,18 @@ const Hto = () => {
               <div className="mx-auto mt-8 flex flex-col items-center justify-center lg:mt-28 lg:w-4/6">
                 <motion.img
                   src={CARD1}
-                  alt=""
-                  className="pt- lg:max-h-auto max-h-[500px] w-auto lg:h-[580px] lg:pt-0"
+                  alt="Credit Card Liquidation Service"
+                  style={{
+                    // aspectRatio: '400/580',
+                    width: '100%',
+                    height: 'auto',
+                    maxHeight: '500px',
+                    // height: '500px',
+                    objectFit: 'fit',
+                    objectPosition: 'bottom',
+                    display: 'block',
+                  }}
+                  className="block max-h-[500px] w-full max-w-[400px] md:max-w-[450px] lg:max-w-[500px] xl:max-w-[560px] 2xl:max-w-[750px]"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -673,7 +683,7 @@ const Hto = () => {
             </motion.h1>
 
             <motion.p
-              className="text-center text-lg text-white"
+              className="text-center text-lg text-black"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
