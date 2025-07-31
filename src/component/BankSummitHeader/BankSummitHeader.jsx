@@ -84,7 +84,7 @@ const BankSummitHeader = ({ handleClick }) => {
         </div>
 
         {/* IMAGES */}
-        <div className="relative mt-4 md:mt-0">
+        <div className="relative mt-4 md:mt-4 2xl:mt-0">
           {/* Alexis Card */}
           <div className="bankSummitAlexisHeader absolute left-[-88px] top-[20px] h-48 w-96">
             {/* Alexis Name */}

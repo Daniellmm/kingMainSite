@@ -45,6 +45,7 @@ import ss26 from '../assets/images/screenshots/ss26.jpeg'
 import ss27 from '../assets/images/screenshots/ss27.jpeg'
 import ss28 from '../assets/images/screenshots/ss28.jpeg'
 import ss29 from '../assets/images/screenshots/ss29.jpeg'
+import Quote from '../component/ui/Quote'
 
 const FORM_URL = 'https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U'
 const URL = 'https://syofb.io'
@@ -237,15 +238,15 @@ const Funding = () => {
     <>
       <FundingPageHeader />
 
-      <section className="overflow-hidden bg-white px-10 pb-14">
-        <div className="flex flex-col items-center justify-center pt-10">
-          <ScrollAnimation animation="fadeIn">
-            <div className="pb-10">
-              <img src={AWW} alt="" />
-            </div>
-          </ScrollAnimation>
+      <section className="flex justify-center overflow-hidden bg-white px-10 pt-10">
+        {/* <div className="flex flex-col items-center justify-center pt-10"> */}
+        <ScrollAnimation animation="fadeIn">
+          <div className="">
+            <img src={AWW} alt="" />
+          </div>
+        </ScrollAnimation>
 
-          <ScrollAnimation animation="fadeIn" delay={0.3}>
+        {/* <ScrollAnimation animation="fadeIn" delay={0.3}>
             <div className="lg:px-24">
               <h1
                 className="text-center text-xl font-thin leading-10 tracking-[1px] text-black lg:text-[28px]"
@@ -265,9 +266,14 @@ const Funding = () => {
                 Erick Alvarez
               </h1>
             </div>
-          </ScrollAnimation>
-        </div>
+          </ScrollAnimation> */}
+        {/* </div> */}
       </section>
+
+      <Quote author="Erick Alvarez" className="lg:px-24">
+        This is the most profitable, low start-up cost opportunity available,
+        and no extensive education is required—everyone needs capital.
+      </Quote>
 
       <section className="bg-white px-4 pb-10 pt-10 lg:px-5 lg:pt-20">
         <div className="mx-auto my-0 grid w-full max-w-[1800px] grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black p-4 py-5 md:grid-cols-2 md:p-12 lg:flex-row lg:gap-12 xl:gap-20">

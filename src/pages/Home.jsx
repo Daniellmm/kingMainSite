@@ -20,6 +20,7 @@ import ClientReviewCarousel from '../component/ClientReviewCarousel'
 import ClientSuccessHighlights from '../component/ClientSuccessHighlights'
 import Button from '../component/ui/Button'
 import CheckIcon from '../component/ui/CheckMark'
+import Quote from '../component/ui/Quote'
 
 // Form URL for buttons
 const MAIN_URL = ' https://landing.highticketofferfinancing.com/application'
@@ -221,34 +222,20 @@ const Home = () => {
           </ScrollAnimation>
         </div>
       </section>
-      <section className="overflow-hidden bg-white px-5 pb-14">
+      <section className="overflow-hidden bg-white px-5">
         <ScrollAnimation animation="fadeIn" delay={0.8}>
           <div className="flex flex-col items-center justify-center pt-10 md:pt-24">
-            <div className="pb-10">
+            <div className="">
               <img src={AWW} alt="" />
-            </div>
-
-            <div>
-              <h1
-                className="text-center text-xl font-thin leading-10 tracking-[1px] text-black lg:text-[28px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
-              >
-                “The only thing holding you back from achieving all of your
-                goals <br className="hidden lg:block" /> is a financing partner
-                that you can&nbsp;depend&nbsp;on.”{' '}
-              </h1>
-            </div>
-            <div>
-              <h1
-                className="pt-6 text-center text-3xl text-[#E7A647] lg:text-4xl"
-                style={{ fontFamily: 'Adelia, serif' }}
-              >
-                King Edwards
-              </h1>
             </div>
           </div>
         </ScrollAnimation>
       </section>
+      <Quote author="King Edwards">
+        The only thing holding you back from achieving all of your goals{' '}
+        <br className="hidden lg:block" /> is a financing partner that you
+        can&nbsp;depend&nbsp;on.
+      </Quote>
       {/* Client Review Carousel Section */}
       <section
         id="clientReviews"

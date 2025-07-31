@@ -7,10 +7,11 @@ import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
 import LaserFundLogo from '../assets/images/logo/laserLogo.png'
 import CCLLogo from '../assets/images/logo/creditLogo.webp'
 import GGEILogo from '../assets/images/logo/ggei.png'
+import PODLogo from '../assets/images/logo/podcastLogo.png'
+import EPGLogo from '../assets/images/logo/epgLogo.png'
 // Add these imports for the dropdown page logos
 // import AboutLogo from '../assets/images/logo/aboutLogo.png' // Add your about logo
 // import CCLLogo from '../assets/images/logo/Logo.png'
-import EPGLogo from '../assets/images/page-two/logo.png'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -41,6 +42,7 @@ const NavBar = () => {
     '/ggei': GGEILogo,
     // '/about': AboutLogo,
     '/credit-card-liquidation': CCLLogo,
+    '/podcast': PODLogo,
     '/earn-protect-grow': EPGLogo,
     // { path: '/about', label: 'About Us' },
     // { path: '/credit card liquidation', label: 'Credit to Cash' },
@@ -52,7 +54,8 @@ const NavBar = () => {
   const dropdownItems = [
     { path: '/credit-card-liquidation', label: ' Credit Card Processing' },
     { path: '/funding', label: 'Partner with HTOF' },
-    { path: '/earn-protect-grow', label: 'Podcast' },
+    { path: '/earn-protect-grow', label: 'EPG' },
+    { path: '/podcast', label: 'Podcast' },
   ]
 
   const toggleMenu = () => {
@@ -523,7 +526,7 @@ const NavBar = () => {
                 className={`cursor-pointer text-lg transition-colors ${isActive('/credit-card-liquidation') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/credit-card-liquidation')}
               >
-                CREDIT TO CASH
+                CREDIT CARD PROCESSING
               </li>
               <li
                 style={{
@@ -535,14 +538,24 @@ const NavBar = () => {
               >
                 SYOFB
               </li>
+              <li
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/epg') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/earn-protect-grow')}
+              >
+                EPG
+              </li>
 
               <li
                 style={{
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
                 }}
-                className={`cursor-pointer text-lg transition-colors ${isActive('/earn-protect-grow') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/earn-protect-grow')}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/podcast') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/podcast')}
               >
                 PODCAST
               </li>

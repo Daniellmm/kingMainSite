@@ -117,7 +117,7 @@ const FundingPageHeader = () => {
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               Build a multi-6 or 7-figure funding business helping entrepreneurs
-              get the capital they desperatly need to succeed,
+              get the capital they desperatly need to succeed.
             </p>
           </ScrollAnimation>
 

@@ -1,18 +1,17 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import LOGO1 from '../assets/images/logo/homeLogo.png'
 import FundingLogo from '../assets/images/logo/fundingLogo.png'
 import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
 import LaserFundLogo from '../assets/images/logo/laserLogo.png'
 import GGEILogo from '../assets/images/logo/ggei.png'
-import CCLLogo from '../assets/images/logo/ccl.png'
-import Facebk from '../assets/images/icons/facebook.png'
+import CCLLogo from '../assets/images/logo/creditLogo.webp'
 import YouTB from '../assets/images/icons/youtube.png'
-import X from '../assets/images/icons/twitter1.png'
 import LinkedIn from '../assets/images/icons/linkedin.png'
 import INSTA from '../assets/images/icons/insta.png'
 import TIKTOK from '../assets/images/icons/tiktok.png'
-import EPGLogo from '../assets/images/page-two/logo.png'
+import EPGLogo from '../assets/images/logo/epgLogo.png'
+import PODLogo from '../assets/images/logo/podcastLogo.png'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -39,8 +38,9 @@ const Footer = () => {
     '/insurance': InsuranceLogo,
     '/laserfund': LaserFundLogo,
     '/ggei': GGEILogo,
-    '/earn-protect-grow': EPGLogo,
+    '/podcast': PODLogo,
     '/credit-card-liquidation': CCLLogo,
+    '/earn-protect-grow': EPGLogo,
   }
 
   // Get current logo based on path
@@ -360,6 +360,7 @@ const Footer = () => {
                   link: '/credit-card-liquidation',
                 },
                 { item: 'Partner with HTOF', link: '/funding' },
+                { item: 'EPG', link: '/earn-protect-grow' },
               ].map(({ item, link }, index) => (
                 <li
                   key={index}

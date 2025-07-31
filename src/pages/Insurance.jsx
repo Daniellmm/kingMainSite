@@ -14,6 +14,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Button from '../component/ui/Button'
+import Quote from '../component/ui/Quote'
 
 const FORM_URL =
   'https://yellowbrickfinancialagency.com/intake?am_id=kingedwards98 7'
@@ -154,8 +155,7 @@ const Insurance = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-white px-10 pb-10">
-        <ScrollAnimation animation="fadeIn" delay={0.5}>
+      {/* <ScrollAnimation animation="fadeIn" delay={0.5}>
           <div className="flex flex-col items-center justify-center pt-10">
             <div className="lg:px-24">
               <h1
@@ -177,8 +177,11 @@ const Insurance = () => {
               </h1>
             </div>
           </div>
-        </ScrollAnimation>
-      </section>
+        </ScrollAnimation> */}
+      <Quote author="Gene Santos">
+        If you want to ensure you and your company are financially set up for
+        success, get a FREE financial review with YellowBrick Financial today.
+      </Quote>
 
       <section className="flex items-center justify-center overflow-hidden bg-black px-5 pb-14">
         <div className="flex items-center justify-center pt-10 lg:px-32">

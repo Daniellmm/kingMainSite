@@ -23,6 +23,7 @@ import AboutUs from './pages/AboutUs'
 import Privacy from './pages/Privacy'
 import LegalNotices from './pages/LegalNotices'
 import TermsOfService from './pages/TermsOfService'
+import Epg from './pages/Epg'
 
 const LoadingContext = createContext()
 
@@ -159,10 +160,18 @@ function AppContent() {
               }
             />
             <Route
-              path="/earn-protect-grow"
+              path="/podcast"
               element={
                 <PageTransition>
                   <PodcastPage />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/earn-protect-grow"
+              element={
+                <PageTransition>
+                  <Epg />
                 </PageTransition>
               }
             />
