@@ -536,7 +536,7 @@ const NavBar = () => {
                 className={`cursor-pointer text-lg transition-colors ${isActive('/funding') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/funding')}
               >
-                SYOFB
+                Partner with HTOF
               </li>
               <li
                 style={{
