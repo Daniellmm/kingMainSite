@@ -124,7 +124,7 @@ const TestimonialVideoSlider = () => {
           {videoIds.map((id, index) => (
             <div key={index} className="testimonial-slide px-2">
               <div className="overflow-hidden rounded-xl border border-gray-800 shadow-2xl">
-                <div className="relative h-[300px] w-auto overflow-hidden rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 sm:w-[360px] md:h-[395px]">
+                <div className="relative h-[300px] w-auto overflow-hidden rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 md:h-[395px]">
                   <iframe
                     className="h-full w-full"
                     src={`https://www.youtube.com/embed/${id}`}

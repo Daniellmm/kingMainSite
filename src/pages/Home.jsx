@@ -176,7 +176,7 @@ const Home = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex justify-center">
                 <p
-                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px] 2xl:text-[18px]"
+                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left lg:text-[14px] 2xl:text-[18px]"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   Close more Deals, Scale Faster, and Eliminate Price Objections
@@ -284,8 +284,7 @@ const Home = () => {
                 className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                “Want a tailored breakdown of funding solutions for your
-                clients?”{' '}
+                Download “The Ultimate Funding Qualification Guide”
                 <span className="text-[#FF0000] line-through">FREE</span>
               </h1>
               <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">

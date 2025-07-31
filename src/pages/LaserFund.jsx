@@ -1150,11 +1150,12 @@ const LaserFund = () => {
         <div className="flex flex-col items-center justify-center gap-y-5">
           <ScrollAnimation animation="zoomIn">
             <h1
-              className="text-left text-3xl font-semibold leading-[45px] text-[#E7A647] md:text-left lg:text-[45px]"
-              style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}
+              className="text-center text-3xl font-semibold leading-[45px] text-[#E7A647] lg:text-[45px]"
+              style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}
             >
               BONUS: Monthly Q&A Trading Strategy Sessions with the Founders of
-              the AI Trading Algorithm ($1,997 per month)!
+              the AI Trading Algorithm ($1,997 per month)!{' '}
+              <span className="text-[#FF0000] line-through">FREE</span>
             </h1>
           </ScrollAnimation>
 
@@ -1162,7 +1163,7 @@ const LaserFund = () => {
             <h2
               className="pb-5 text-center text-xl font-semibold text-white md:text-[28px]"
               style={{
-                fontFamily: 'Montserrat, serif',
+                fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 200,
                 fontStyle: 'normal',
               }}

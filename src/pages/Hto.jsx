@@ -90,19 +90,13 @@ const Hto = () => {
   return (
     <>
       <main className="overflow-hidden">
-        <section className="hero bg-black px-5 md:px-12 lg:pl-12 lg:pt-12 2xl:pl-20">
+        <section className="hero min-h-[600px] bg-black px-5 md:px-12 lg:pl-12 lg:pt-12 xl:min-h-[700px] 2xl:min-h-[899px] 2xl:pl-20">
           <header>
-            {/* <div>
-              <nav>
-                <img src={LOGO} className='py-5 lg:size-auto h-20' alt="" />
-              </nav>
-            </div> */}
-
-            <div className="flex max-w-[1800px] flex-col items-start justify-center self-center pt-16 lg:flex-row lg:pt-20">
-              <div className="flex flex-col justify-center gap-y-4 pt-4 md:pt-10 lg:w-2/3 lg:pt-0">
+            <div className="mx-auto flex max-w-[1800px] flex-col items-start justify-center self-center pt-16 lg:flex-row lg:pt-20">
+              <div className="flex flex-col justify-center gap-y-4 pt-4 md:px-16 md:pt-10 lg:w-2/3 lg:px-0 lg:pt-0">
                 {/* Heading For small screens < 1024 */}
                 <motion.h1
-                  className="test-center bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-center text-4xl font-bold uppercase text-transparent md:text-5xl lg:text-left lg:text-7xl xl:hidden"
+                  className="test-center bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-center text-3xl font-bold uppercase text-transparent sm:text-4xl lg:text-left lg:text-5xl xl:hidden"
                   style={{ fontFamily: 'Montserrat, serif' }}
                   variants={fadeUp}
                   initial="hidden"
@@ -111,14 +105,14 @@ const Hto = () => {
                 >
                   <span className="text-white">Turn</span> 100% Of Your
                   Available Credit{' '}
-                  <span className="font-bold uppercase text-white lg:pt-10 lg:text-7xl">
+                  <span className="font-bold uppercase text-white">
                     Into Cash
                   </span>
                 </motion.h1>
 
                 {/* Heading For large screens > 1024 */}
                 <motion.h1
-                  className="test-center hidden bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-5xl font-bold uppercase text-transparent lg:text-left lg:text-7xl xl:block"
+                  className="test-center hidden bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-4xl font-bold uppercase leading-[2rem] text-transparent sm:text-4xl lg:text-left lg:text-5xl lg:leading-[3.3rem] xl:block 2xl:text-6xl"
                   style={{ fontFamily: 'Montserrat, serif' }}
                   variants={fadeUp}
                   initial="hidden"
@@ -127,13 +121,13 @@ const Hto = () => {
                 >
                   <span className="text-white">Turn</span>
                   &nbsp;100%&nbsp;Of Your&nbsp;Available Credit&nbsp;
-                  <span className="font-bold uppercase text-white lg:pt-10 lg:text-7xl">
+                  <span className="font-bold uppercase text-white">
                     Into&nbsp;Cash
                   </span>
                 </motion.h1>
 
                 <motion.p
-                  className="text-center text-[14px] uppercase text-[#999999] md:text-[16px] lg:text-left 2xl:text-[18px]"
+                  className="text-center text-[12px] uppercase text-[#999999] md:text-[14px] lg:text-left 2xl:text-[18px]"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -148,7 +142,7 @@ const Hto = () => {
                 </motion.p>
 
                 <motion.div
-                  className="flex w-full items-center justify-center gap-2 lg:justify-start"
+                  className="flex w-full items-center justify-center gap-2 lg:mt-4 lg:justify-start"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -185,7 +179,7 @@ const Hto = () => {
                 </motion.div>
               </div>
 
-              <div className="mx-auto mt-8 flex flex-col items-center justify-center lg:mt-28 lg:w-4/6">
+              <div className="mx-auto mt-8 flex flex-col items-center justify-center lg:mx-0 lg:mt-28 lg:w-1/2">
                 <motion.img
                   src={CARD1}
                   alt="Credit Card Liquidation Service"
@@ -193,13 +187,13 @@ const Hto = () => {
                     // aspectRatio: '400/580',
                     width: '100%',
                     height: 'auto',
-                    maxHeight: '500px',
+                    maxHeight: '800px',
                     // height: '500px',
-                    objectFit: 'fit',
+                    objectFit: 'contain',
                     objectPosition: 'bottom',
                     display: 'block',
                   }}
-                  className="block max-h-[500px] w-full max-w-[400px] md:max-w-[450px] lg:max-w-[500px] xl:max-w-[560px] 2xl:max-w-[750px]"
+                  className="block max-h-[500px] w-full max-w-[400px] md:max-w-[450px] lg:max-w-[500px] xl:max-w-[px750] 2xl:max-w-[800px]"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"

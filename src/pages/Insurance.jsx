@@ -95,16 +95,16 @@ const Insurance = () => {
 
   return (
     <>
-      <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-6 pb-8 pt-12 sm:pb-16 md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-16 2xl:min-h-[705px]">
+      <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-6 pb-8 pt-12 sm:pb-16 md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-8 2xl:min-h-[705px]">
         <div className="relative z-10 flex w-full flex-col items-center justify-center gap-x-0 pt-2 md:max-w-[800px] md:flex-row-reverse md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
           <ScrollAnimation animation="zoomIn" delay={0.3}>
             <img
               src={insuranceHeaderImg}
               alt="header image"
               style={{
-                aspectRatio: '3 / 2', // or '3:2' in supported CSS
+                aspectRatio: '3 / 2',
               }}
-              className="block w-[100vw] max-w-[383px] object-contain md:mt-40 md:w-[80vw] md:max-w-[372px] lg:w-[600px] lg:max-w-[600px]"
+              className="block w-[100vw] max-w-[383px] object-contain md:mt-[5rem] md:w-[80vw] md:max-w-[372px] lg:w-[650px] lg:max-w-[650px] 2xl:w-[750px] 2xl:max-w-[750px]"
             />
           </ScrollAnimation>
 
@@ -154,30 +154,6 @@ const Insurance = () => {
           </div>
         </div>
       </section>
-
-      {/* <ScrollAnimation animation="fadeIn" delay={0.5}>
-          <div className="flex flex-col items-center justify-center pt-10">
-            <div className="lg:px-24">
-              <h1
-                className="text-center text-xl font-thin leading-10 tracking-[1px] text-black lg:text-[28px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
-              >
-                "If you want to ensure you and your company are financially set
-                up for success, get a FREE financial review with YellowBrick
-                Financial today."
-              </h1>
-            </div>
-            <div>
-              <h1
-                className="pt-6 text-center text-3xl text-[#E7A647] md:text-4xl"
-                style={{ fontFamily: 'Adelia, serif' }}
-              >
-                {' '}
-                Gene Santos
-              </h1>
-            </div>
-          </div>
-        </ScrollAnimation> */}
       <Quote author="Gene Santos">
         If you want to ensure you and your company are financially set up for
         success, get a FREE financial review with YellowBrick Financial today.
