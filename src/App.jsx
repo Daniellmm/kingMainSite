@@ -25,6 +25,8 @@ import LegalNotices from './pages/LegalNotices'
 import TermsOfService from './pages/TermsOfService'
 import Epg from './pages/Epg'
 
+import NotFound from './pages/NotFound'
+
 const LoadingContext = createContext()
 
 const preloaderContent = {
@@ -202,6 +204,8 @@ function AppContent() {
                 </PageTransition>
               }
             />
+            {/* 404 Catch-all route */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </>

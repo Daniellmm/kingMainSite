@@ -268,30 +268,35 @@ const Home = () => {
       </section>
       <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
         <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-8 md:grid-cols-2 md:py-12 lg:flex-row lg:gap-12 lg:px-12 lg:py-12">
-          <div className="flex w-full flex-1 px-3">
-            <img
-              src={fundingBook}
-              alt=""
-              className="rounded-3xl shadow-2xl shadow-black md:rounded-[2.75rem]"
-            />
-          </div>
+          <ScrollAnimation animation="slideUp" delay={0.8}>
+            <div className="flex w-full flex-1 px-3">
+              <img
+                src={fundingBook}
+                alt=""
+                className="rounded-3xl shadow-2xl shadow-black md:rounded-[2.75rem]"
+              />
+            </div>
+          </ScrollAnimation>
 
-          <div className="flex w-full flex-1 flex-col">
-            <h1
-              className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-            >
-              “Want a tailored breakdown of funding solutions for your clients?”{' '}
-              <span className="text-[#FF0000] line-through">FREE</span>
-            </h1>
-            <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
-              <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-0">
-                <div className="flex w-full justify-center md:justify-start">
-                  <Button>Download Free Guide</Button>
+          <ScrollAnimation animation="slideUp" delay={0.9}>
+            <div className="flex w-full flex-1 flex-col">
+              <h1
+                className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                “Want a tailored breakdown of funding solutions for your
+                clients?”{' '}
+                <span className="text-[#FF0000] line-through">FREE</span>
+              </h1>
+              <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
+                <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-0">
+                  <div className="flex w-full justify-center md:justify-start">
+                    <Button>Download Free Guide</Button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
       |

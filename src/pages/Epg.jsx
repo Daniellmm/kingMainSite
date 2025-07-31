@@ -136,18 +136,18 @@ function Epg() {
             </h1>
           </ScrollAnimation>
 
-          <ScrollAnimation animation="slideUp" delay={0.8} className="mx-auto">
-            <ul className="mb-8 mt-0 flex w-full max-w-2xl flex-col gap-4 md:mb-12 md:mt-4">
-              {[
-                'Build resilient income streams in any market',
-                "Protect your wealth using structures favored by the world's wealthiest families",
-                'Grow your resources with purpose, discipline, and wisdom',
-                'Join a curated network of like-minded, faith-rooted wealth builders',
-                'Because true prosperity is about legacy, not just accumulation.',
-                'We do not simply teach theory.',
-                'We build frameworks for you to earn, protect, and grow — alongside other believers and trusted professionals — within a secure, private environment.',
-                'Seats are extremely limited.',
-              ].map((item, idx) => (
+          <ul className="mb-8 mt-0 flex w-full max-w-2xl flex-col gap-4 md:mb-12 md:mt-4">
+            {[
+              'Build resilient income streams in any market',
+              "Protect your wealth using structures favored by the world's wealthiest families",
+              'Grow your resources with purpose, discipline, and wisdom',
+              'Join a curated network of like-minded, faith-rooted wealth builders',
+              'Because true prosperity is about legacy, not just accumulation.',
+              'We do not simply teach theory.',
+              'We build frameworks for you to earn, protect, and grow — alongside other believers and trusted professionals — within a secure, private environment.',
+              'Seats are extremely limited.',
+            ].map((item, idx) => (
+              <ScrollAnimation animation="slideUp" delay={`0.${idx}`}>
                 <li
                   key={idx}
                   className="flex items-start gap-3 text-base text-white md:text-lg lg:text-xl"
@@ -155,9 +155,10 @@ function Epg() {
                   <CheckMark />
                   <span>{item}</span>
                 </li>
-              ))}
-            </ul>
-
+              </ScrollAnimation>
+            ))}
+          </ul>
+          <ScrollAnimation animation="slideUp" delay={0.8}>
             <p
               className="mb-8 max-w-2xl text-left text-base text-white md:text-lg"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
