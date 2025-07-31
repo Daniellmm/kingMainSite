@@ -11,6 +11,7 @@ const ScrollAnimation = ({
   delay = 0,
   duration = 0.8,
   triggerPosition = 'top 95%',
+  className = '',
 }) => {
   const elementRef = useRef(null)
 
@@ -152,7 +153,7 @@ const ScrollAnimation = ({
   }, [animation, delay, duration, triggerPosition])
 
   return (
-    <div ref={elementRef} className="scroll-animation">
+    <div ref={elementRef} className={`scroll-animation ${className}`}>
       {children}
     </div>
   )

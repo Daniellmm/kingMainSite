@@ -269,11 +269,6 @@ const Home = () => {
       <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
         <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-8 md:grid-cols-2 md:py-12 lg:flex-row lg:gap-12 lg:px-12 lg:py-12">
           <div className="flex w-full flex-1 px-3">
-            {/* <img
-              src={HP}
-              alt=""
-              className="rounded-3xl shadow-2xl shadow-black md:rounded-[2.75rem]"
-            /> */}
             <img
               src={fundingBook}
               alt=""
@@ -529,7 +524,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="custom-header-bg overflow-hidden bg-white px-5 pb-10">
+      <section className="custom-header-bg overflow-hidden px-5 pb-10">
         <div className="flex flex-col items-center justify-center pt-16">
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>

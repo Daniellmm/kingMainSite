@@ -245,29 +245,6 @@ const Funding = () => {
             <img src={AWW} alt="" />
           </div>
         </ScrollAnimation>
-
-        {/* <ScrollAnimation animation="fadeIn" delay={0.3}>
-            <div className="lg:px-24">
-              <h1
-                className="text-center text-xl font-thin leading-10 tracking-[1px] text-black lg:text-[28px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
-              >
-                {' '}
-                "This is the most profitable, low start-up cost opportunity
-                available, and no extensive education is required—everyone needs
-                capital."
-              </h1>
-            </div>
-            <div>
-              <h1
-                className="pt-6 text-center text-3xl text-[#E7A647] lg:text-4xl"
-                style={{ fontFamily: 'Adelia, serif' }}
-              >
-                Erick Alvarez
-              </h1>
-            </div>
-          </ScrollAnimation> */}
-        {/* </div> */}
       </section>
 
       <Quote author="Erick Alvarez" className="lg:px-24">
@@ -276,7 +253,7 @@ const Funding = () => {
       </Quote>
 
       <section className="bg-white px-4 pb-10 pt-10 lg:px-5 lg:pt-20">
-        <div className="mx-auto my-0 grid w-full max-w-[1800px] grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black p-4 py-5 md:grid-cols-2 md:p-12 lg:flex-row lg:gap-12 xl:gap-20">
+        <div className="mx-auto my-0 grid w-full max-w-[1800px] grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black p-4 py-5 md:grid-cols-2 md:p-12 lg:flex-row lg:gap-12 xl:gap-20 2xl:gap-40">
           <div className="flex w-full flex-1">
             <img
               src={LoanImg}
@@ -287,7 +264,7 @@ const Funding = () => {
 
           <div className="flex w-full flex-1 flex-col">
             <h1
-              className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.1] lg:text-start lg:text-[42px]"
+              className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.1] lg:text-start lg:text-[42px] 2xl:text-5xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               Discover Exactly How

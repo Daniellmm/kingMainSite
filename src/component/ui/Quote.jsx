@@ -1,8 +1,11 @@
 import ScrollAnimation from '../ScrollAnimation'
 
-function Quote({ children, author }) {
+function Quote({ children, author, className = '', ...props }) {
   return (
-    <section className="overflow-hidden bg-white px-10 py-10 lg:px-24">
+    <section
+      className={`overflow-hidden bg-white px-10 py-10 lg:px-24 ${className}`}
+      {...props}
+    >
       <ScrollAnimation animation="fadeIn" delay={0.5}>
         <figure className="text-center">
           <blockquote>

@@ -15,7 +15,7 @@ function Button({
   // Define padding variants using Tailwind classes
   const sizeClasses = {
     normal: 'px-5 py-[10px] md:py-[12px]',
-    large: 'px-7 py-[14px] md:py-[16px]',
+    large: 'px-7 py-[14px] md:py-[16px] !text-sm',
   }
 
   const dynamicStyle = {
