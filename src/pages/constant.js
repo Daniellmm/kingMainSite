@@ -2,56 +2,61 @@ export const infoCards = [
   {
     imgPath: '/images/page-one/funnel.png',
     title: 'Full Conversion',
-    desc: 'Access up to 100% of your available credit limit as cash.',
+    desc: 'Up to $100K+/mo processing limits — instantly.',
   },
   {
     imgPath: '/images/page-one/trophy.png',
     title: 'Keep Your Rewards',
-    desc: 'Still earn credit card points, cashback, and travel perks.',
+    desc: 'Same-Day / Next-Day Payout Options Available',
   },
   {
     imgPath: '/images/page-one/taxfree.png',
     title: 'Completely Hands-Free',
-    desc: 'We handle every step—no guesswork, no stress.',
+    desc: 'Turn available credit into cash without cash advances or high fees',
   },
   {
     imgPath: '/images/page-one/flash.png',
     title: 'Fast Turnaround ',
-    desc: 'Funds deposited directly into your account in record time.',
+    desc: 'Liquidate business or personal credit lines up to $100K',
+  },
+  {
+    imgPath: '/images/page-one/flash.png',
+    title: 'Fast Turnaround ',
+    desc: 'Use funds for ads, inventory, staffing, reinvestment',
   },
 ]
 
 export const steps = [
   {
     number: '01',
-    title: 'Book Your',
-    subtitle: 'Appointment',
+    title: 'Book appointment with our  team to discuss your needs',
+    subtitle: '',
   },
   {
     number: '02',
-    title: 'Speak With a',
-    subtitle: 'Specialist',
+    title: 'Get matched with our merchants + receive our liquidation strategy',
+    subtitle: '',
   },
   {
     number: '03',
-    title: 'Sign Our Simple',
-    subtitle: 'Agreement',
+    title: 'Start processing payments at scale',
+    subtitle: '',
   },
   {
     number: '04',
-    title: 'We start the',
-    subtitle: 'liquidation process',
+    title: 'Choose when to unlock capital from credit lines',
+    subtitle: '',
   },
   {
     number: '05',
-    title: 'Receive Your',
-    subtitle: 'Cash',
+    title: 'Use funds immediately — no questions asked',
+    subtitle: '',
   },
 ]
 
 export const items = [
-  'Business owners looking to scale',
-  'Entrepreneurs needing fast capital',
-  'Individuals who want to leverage credit smartly',
-  'Anyone seeking extra liquidity without disrupting their credit usage',
+  'Stripe and PayPal throttle payouts — we unlock them',
+  'Banks limit credit access — we help you turn your limits into liquidity',
+  'Processors freeze funds — we accelerate them',
+  'You’re generating real revenue — you deserve tools that match',
 ]

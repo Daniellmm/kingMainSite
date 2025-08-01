@@ -3,6 +3,7 @@ import LOGO from '../assets/images/page-one/logoHto.png'
 import CARD1 from '../assets/images/page-one/card.webp'
 import { infoCards, steps } from './constant'
 import { motion } from 'framer-motion'
+import Button from '../component/ui/Button'
 
 const FORM_URL =
   ' https://api.leadconnectorhq.com/widget/form/JDaHxIsDZwIh47NcOzTG'
@@ -103,31 +104,35 @@ const Hto = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  <span className="text-white">Turn</span> 100% Of Your
+                  {/* <span className="text-white">Turn</span> 100% Of Your
                   Available Credit{' '}
                   <span className="font-bold uppercase text-white">
-                    Into Cash
-                  </span>
+                                 Into Cash
+                  </span> */}
+                  Credit Card Merchant Unlock
+                  <span class="ml-1 align-super text-xs">™</span>
                 </motion.h1>
 
                 {/* Heading For large screens > 1024 */}
                 <motion.h1
-                  className="test-center hidden bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-4xl font-bold uppercase leading-[2rem] text-transparent sm:text-4xl lg:text-left lg:text-5xl lg:leading-[3.3rem] xl:block 2xl:text-6xl"
+                  className="test-center hidden bg-[linear-gradient(135deg,_rgb(167,132,48)_0%,_rgb(218,189,93)_50%,_rgb(167,132,48)_100%)] bg-clip-text text-3xl font-bold uppercase leading-[2rem] text-transparent sm:text-4xl lg:text-left lg:text-5xl lg:leading-[3.3rem] xl:block 2xl:text-6xl"
                   style={{ fontFamily: 'Montserrat, serif' }}
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  <span className="text-white">Turn</span>
+                  {/* <span className="text-white">Turn</span>
                   &nbsp;100%&nbsp;Of Your&nbsp;Available Credit&nbsp;
                   <span className="font-bold uppercase text-white">
                     Into&nbsp;Cash
-                  </span>
+                  </span> */}
+                  Credit Card Merchant&nbsp;Unlock
+                  <span class="ml-1 align-super text-xl">™</span>
                 </motion.h1>
 
                 <motion.p
-                  className="text-center text-[12px] uppercase text-[#999999] md:text-[14px] lg:text-left 2xl:text-[18px]"
+                  className="text-center text-[12px] uppercase text-white md:text-[14px] lg:text-left 2xl:text-[18px]"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
@@ -138,44 +143,31 @@ const Hto = () => {
                     fontWeight: 'medium',
                   }}
                 >
-                  Deposited into your bank account with in 24 hour
+                  High-Limit Credit Card Processing + Unlimited Credit-to-Cash
+                  Features for Entrepreneurs Looking to Scale.
                 </motion.p>
 
                 <motion.div
-                  className="flex w-full items-center justify-center gap-2 lg:mt-4 lg:justify-start"
+                  className="flex w-full flex-col items-center justify-center gap-2 min-[414px]:flex-row lg:mt-4 lg:justify-start"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   custom={2}
                 >
-                  <button
-                    style={{
-                      fontFamily: 'Montserrat, serif',
-                      fontWeight: 'medium',
-                      background:
-                        'linear-gradient(135deg, rgb(167, 132, 48) 0%, rgb(218, 189, 93) 50%, rgb(167, 132, 48) 100%)',
-                    }}
-                    className="rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] px-6 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
+                  <Button
                     onClick={() => {
                       document.getElementById('yt-sec').scrollIntoView({
                         behavior: 'smooth',
                       })
                     }}
+                    className="!min-w-[112px]"
                   >
                     Learn More
-                  </button>
-
-                  <button
-                    onClick={handleButtonClick}
-                    style={{
-                      fontFamily: 'Montserrat, serif',
-                      fontWeight: 'medium',
-                    }}
-                    className="rounded-full bg-emerald px-3 py-3 text-sm font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg lg:px-6"
-                  >
+                  </Button>
+                  <Button variant="solid" onClick={handleButtonClick}>
                     Book Appointment Now
-                  </button>
+                  </Button>
                 </motion.div>
               </div>
 
@@ -207,9 +199,9 @@ const Hto = () => {
 
         <section
           id="yt-sec"
-          className="vid-sec min-h-[60vh] px-5 pb-10 pt-20 lg:px-20"
+          className="vid-sec min-h-[60vh] px-5 pb-10 pt-10 lg:px-20"
         >
-          <div className="flex flex-col items-center justify-evenly gap-y-10 lg:flex-row">
+          <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-evenly gap-y-10 lg:flex-row">
             <motion.div
               className="flex items-center justify-center lg:w-2/6"
               variants={fadeUp}
@@ -224,14 +216,15 @@ const Hto = () => {
                 }}
                 className="text-center text-lg text-black lg:text-start"
               >
-                Need fast access to cash? Our Credit Card Liquidation service
-                helps you convert your entire credit limit into spendable
-                cash—without losing the rewards and points you’ve earned.
+                If you’re generating $50K+ per month through credit card
+                payments, you shouldn’t be dealing with payout delays, merchant
+                holds, or locked-up capital.
                 <br />
                 <br />
-                This is a 100% done-for-you service designed for entrepreneurs,
-                business owners, and high performers who want cash flow without
-                friction.
+                With Credit Card Merchant Unlock{' '}
+                <span class="align-super text-sm">™ </span>, you get fast,
+                secure processing power — and the ability to turn available
+                credit into deployable cash on demand.
               </p>
             </motion.div>
 
@@ -257,19 +250,20 @@ const Hto = () => {
           </div>
         </section>
 
-        <section className="card-sec min-h-[80vh] bg-black px-5 pb-10 pt-20 lg:px-20">
-          <div className="flex flex-col items-start justify-start gap-y-20">
+        <section className="card-sec min-h-[80vh] bg-black px-5 pb-10 pt-10 lg:px-20">
+          <div className="mx-auto flex max-w-[1800px] flex-col items-start justify-start gap-y-12 lg:gap-y-20">
             <div>
               <motion.h1
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-gradient-golden bg-clip-text text-center text-4xl uppercase text-transparent lg:text-start lg:text-6xl"
+                className="bg-gradient-golden bg-clip-text text-center text-3xl uppercase text-transparent sm:text-4xl lg:text-start lg:text-5xl 2xl:w-10/12 2xl:text-6xl"
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: 'bold' }}
               >
-                <span className="text-white"> Why Choose </span>
-                Our Credit Card Liquidation Service?
+                <span className="text-white"> What You </span>
+                Get with Credit Card Merchant Unlock&nbsp;
+                <span class="align-super text-2xl">™</span>
               </motion.h1>
             </div>
 
@@ -277,7 +271,7 @@ const Hto = () => {
               {infoCards.map((card, i) => (
                 <motion.div
                   key={card.title}
-                  className="flex h-[250px] w-[250px] flex-col gap-2 rounded-2xl p-7"
+                  className="flex h-[308px] w-full flex-col gap-6 rounded-2xl p-7 min-[360px]:w-[308px]"
                   style={{
                     background: 'linear-gradient(to bottom, #363636, #202020)',
                   }}
@@ -292,12 +286,12 @@ const Hto = () => {
                     className="size-14"
                     alt={card.title}
                   />
-                  <h1
+                  {/* <h1
                     className="text-white"
                     style={{ fontFamily: 'Montserrat, serif' }}
                   >
                     {card.title}
-                  </h1>
+                  </h1> */}
                   <p
                     className="text-[#999999]"
                     style={{
@@ -313,8 +307,8 @@ const Hto = () => {
           </div>
         </section>
 
-        <section className="step-sec timeline-part min-h-[70vh] px-5 pb-32 pt-20 lg:px-20">
-          <div className="flex flex-col items-center justify-center gap-20">
+        <section className="step-sec timeline-part min-h-[70vh] px-5 pb-32 pt-10 lg:px-20">
+          <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center gap-20">
             {/* Title */}
             <div className="flex w-full items-start justify-start">
               <motion.h1
@@ -323,10 +317,10 @@ const Hto = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 _rgb
-                className="bg-gradient-golden bg-clip-text text-center text-4xl uppercase text-transparent lg:text-start lg:text-6xl"
+                className="bg-gradient-golden bg-clip-text text-center text-3xl uppercase text-transparent sm:text-4xl lg:text-start lg:text-5xl 2xl:text-6xl"
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: '700' }}
               >
-                How It Works (In 5 Simple Steps)
+                How It Works
               </motion.h1>
             </div>
 
@@ -339,12 +333,12 @@ const Hto = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="flex w-full flex-row items-center justify-evenly gap-10"
+                  className="flex w-full flex-row items-start justify-evenly gap-10"
                 >
                   {steps.map((step, i) => (
                     <motion.div
                       key={step.number}
-                      className="flex flex-col items-start justify-center text-left"
+                      className="flex flex-col items-start justify-center text-left md:max-w-[210px]"
                       custom={i}
                       variants={stepVariant}
                     >
@@ -459,8 +453,8 @@ const Hto = () => {
           </div>
         </section>
 
-        <section className="who-sec step-sec min-h-[60vh] bg-black px-5 pb-32 pt-20 lg:px-20">
-          <div className="flex flex-col items-center justify-center gap-20 lg:px-14">
+        <section className="who-sec step-sec min-h-[60vh] bg-black px-5 pb-32 pt-10 lg:px-20">
+          <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center gap-20 xl:px-14">
             {/* Title */}
             <div className="flex w-full items-center justify-center lg:items-start lg:justify-start">
               <motion.h1
@@ -468,10 +462,10 @@ const Hto = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="uppercaes bg-gradient-golden bg-clip-text text-center text-4xl text-transparent lg:text-start lg:text-6xl"
+                className="uppercaes sm:texts-4xl bg-gradient-golden bg-clip-text text-center text-3xl text-transparent lg:text-start lg:text-5xl 2xl:w-10/12 2xl:text-6xl"
                 style={{ fontFamily: 'Montserrat, serif', fontWeight: '700' }}
               >
-                Who Is This For?
+                Use funds immediately — no questions asked
               </motion.h1>
             </div>
 
@@ -484,10 +478,10 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="text-2xl text-white"
+                    className="text-xl text-white 2xl:text-2xl"
                     style={{ fontFamily: 'Montserrat, serif' }}
                   >
-                    Business owners looking to scale
+                    Stripe and PayPal throttle payouts — we unlock them
                   </motion.h1>
                 </div>
 
@@ -526,10 +520,11 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="text-2xl text-white"
+                    className="text-xl text-white 2xl:text-2xl"
                     style={{ fontFamily: 'Montserrat, serif' }}
                   >
-                    Entrepreneurs needing fast capital
+                    Banks limit credit access — we help you turn your limits
+                    into liquidity
                   </motion.h1>
                 </div>
 
@@ -568,10 +563,10 @@ const Hto = () => {
                     whileInView="visible"
                     transition={{ delay: 0.6 }}
                     viewport={{ once: true }}
-                    className="text-2xl text-white"
+                    className="text-xl text-white 2xl:text-2xl"
                     style={{ fontFamily: 'Montserrat, serif' }}
                   >
-                    Individuals who want to leverage credit smartly
+                    Processors freeze funds — we accelerate them
                   </motion.h1>
                 </div>
 
@@ -610,11 +605,11 @@ const Hto = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ delay: 0.8 }}
-                    className="text-2xl text-white"
+                    className="text-xl text-white 2xl:text-2xl"
                     style={{ fontFamily: 'Montserrat, serif' }}
                   >
-                    Anyone seeking extra liquidity without disrupting their
-                    credit usage
+                    You’re generating real revenue — you deserve tools that
+                    match
                   </motion.h1>
                 </div>
 
@@ -652,19 +647,18 @@ const Hto = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   transition={{ delay: 0.8 }}
-                  className="text-2xl text-white"
+                  className="text-xl text-white 2xl:text-2xl"
                   style={{ fontFamily: 'Montserrat, serif' }}
                 >
-                  Anyone seeking extra liquidity <br /> without disrupting their
-                  credit usage
+                  You’re generating real revenue — you deserve tools that match
                 </motion.h1>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="last-sec flex flex-col items-center justify-center bg-black bg-white px-5 pb-32 pt-20 lg:min-h-[10vh] lg:px-20">
-          <div className="flex flex-col items-center justify-center gap-8">
+        <section className="last-sec flex flex-col items-center justify-center bg-white px-5 pb-32 pt-10 lg:min-h-[10vh] lg:px-20">
+          <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center gap-8">
             <motion.h1
               className="uppercaes bg-gradient-golden bg-clip-text text-4xl text-transparent lg:text-6xl"
               variants={fadeUp}
@@ -673,7 +667,7 @@ const Hto = () => {
               viewport={{ once: true }}
               style={{ fontFamily: 'Montserrat, serif', fontWeight: '700' }}
             >
-              Get Started Today
+              Apply Now — Limited Capacity Weekly
             </motion.h1>
 
             <motion.p
@@ -685,8 +679,13 @@ const Hto = () => {
               custom={1}
               style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
             >
-              Don’t let your available credit sit idle. Turn it into cash—and
-              opportunity. Click below to book your appointment and get started.
+              If you’re processing $50K+ and still dealing with caps, holds, or
+              stuck credit — you’re leaving money on the table.
+              <br />
+              <br />
+              Credit Card Merchant Unlock
+              <span class="ml-1 align-super text-xl">™</span> is your edge.
+              Don’t miss it.
             </motion.p>
 
             <motion.div
@@ -697,16 +696,10 @@ const Hto = () => {
               viewport={{ once: true }}
               custom={2}
             >
-              <button
-                onClick={handleButtonClick}
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
-                className="rounded-full bg-gradient-golden px-6 py-4 font-semibold text-black shadow-inner transition duration-300 hover:shadow-lg"
-              >
-                Book Appointment Now
-              </button>
+              <Button size="large">
+                Apply for Credit Card Merchant Unlock
+                {/* <span class="ml-[2px] align-super text-sm">™ </span>&ensp;Now */}
+              </Button>
             </motion.div>
           </div>
         </section>
