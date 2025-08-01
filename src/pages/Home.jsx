@@ -753,7 +753,7 @@ const Home = () => {
             <ScrollAnimation animation="slideRight" delay={0.6}>
               <div className="flex flex-col items-center justify-start gap-y-5 px-10 md:px-5">
                 <div className="">
-                  <img src={Rect2} className="w-[387px]" alt="" />
+                  <img src={Rect2} className="w-[387px] lg:w-auto" alt="" />
                 </div>
 
                 <div>
@@ -790,7 +790,7 @@ const Home = () => {
             <ScrollAnimation animation="slideRight" delay={0.9}>
               <div className="flex flex-col items-center justify-start gap-y-5 px-10 md:px-5">
                 <div className="">
-                  <img src={Rect3} alt="" />
+                  <img src={Rect3} alt="" className="w-[340px] lg:w-auto" />
                 </div>
 
                 <div>
