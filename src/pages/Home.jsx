@@ -664,8 +664,13 @@ const Home = () => {
           <div className="grid gap-y-10 lg:grid-cols-3">
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <div className="flex flex-col items-center justify-start gap-y-5 px-10 md:px-5">
-                <div className="w-[340px] lg:w-auto">
-                  <img src={Rect1} alt="" loading="lazy" />
+                <div className="aspect-[17/10] w-[340px] lg:w-auto">
+                  <img
+                    src={Rect1}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
 
                 <div>
@@ -699,12 +704,12 @@ const Home = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.6}>
               <div className="flex flex-col items-center justify-start gap-y-5 px-10 md:px-5">
-                <div className="">
+                <div className="aspect-[17/10] w-[340px] lg:w-auto">
                   <img
                     src={Rect2}
-                    className="w-[387px]"
                     alt=""
                     loading="lazy"
+                    className="h-full w-full object-contain"
                   />
                 </div>
 
@@ -719,8 +724,6 @@ const Home = () => {
                 </div>
 
                 <div className="flex w-full items-center justify-end">
-                  {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
-
                   <div className="flex items-center justify-center">
                     <p
                       className="text-xs text-black"
@@ -741,8 +744,13 @@ const Home = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.9}>
               <div className="flex flex-col items-center justify-start gap-y-5 px-10 md:px-5">
-                <div className="">
-                  <img src={Rect3} alt="" loading="lazy" />
+                <div className="aspect-[17/10] w-[340px] lg:w-auto">
+                  <img
+                    src={Rect3}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
 
                 <div>
