@@ -148,11 +148,14 @@ function AppContent() {
                 </PageTransition>
               }
             />
-            {/* <Route path="/blog" element={
-              <PageTransition>
-               <Blog />
-              </PageTransition>
-            } /> */}
+            <Route
+              path="/blog"
+              element={
+                <PageTransition>
+                  <Blog />
+                </PageTransition>
+              }
+            />
 
             <Route
               path="/credit-card-liquidation"
