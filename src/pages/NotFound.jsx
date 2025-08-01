@@ -1,16 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import homeLogo from '../assets/images/logo/homeLogo.png'
+import homeLogo from '../assets/images/logo/homeLogo.webp'
 
 const NotFound = () => {
   const navigate = useNavigate()
   return (
     <section className="flex min-h-[70vh] flex-col items-center justify-center bg-white px-4 py-20">
-      <img
-        src={homeLogo}
-        alt="Home Logo"
-        className="mb-8 h-20 w-20 object-contain"
-      />
       <h1
         className="mb-4 text-4xl font-bold text-[#E7A647]"
         style={{ fontFamily: 'Montserrat, sans-serif' }}

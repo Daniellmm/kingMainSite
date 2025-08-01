@@ -148,7 +148,7 @@ const Hto = () => {
                 </motion.p>
 
                 <motion.div
-                  className="flex w-full flex-col items-center justify-center gap-2 min-[414px]:flex-row lg:mt-4 lg:justify-start"
+                  className="mt-4 flex w-full flex-col items-center justify-center gap-2 min-[345px]:flex-row md:mt-0 lg:mt-4 lg:justify-start"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"

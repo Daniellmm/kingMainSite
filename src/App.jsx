@@ -65,6 +65,7 @@ const preloaderContent = {
 }
 
 function RouteChangeListener() {
+  console.log('Re-Render')
   const location = useLocation()
   const { setIsLoading, setCurrentPath } = useContext(LoadingContext)
 

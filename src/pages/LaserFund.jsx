@@ -254,10 +254,10 @@ const LaserFund = () => {
   return (
     <>
       <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] 2xl:min-h-[705px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-[5.5rem] md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-[5.2rem] md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
           <div className="grow-1 flex w-[90%] flex-col items-center sm:px-12 md:mr-8 md:w-full md:items-start md:px-0 lg:mr-12 lg:gap-2 xl:mr-56 xl:gap-4 2xl:mr-64">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
-              <div className="pb-2">
+              <div className="pb-4">
                 <h1
                   className="p-0 text-center text-3xl font-bold uppercase leading-[2rem] text-white md:px-4 md:text-left lg:text-5xl"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
@@ -295,7 +295,7 @@ const LaserFund = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
-                <Button variant="solid" className="mt-2">
+                <Button variant="solid" className="mt-4">
                   Learn More
                 </Button>
               </div>
@@ -367,16 +367,6 @@ const LaserFund = () => {
               <div className="flex w-full items-center justify-center lg:justify-start">
                 <ScrollAnimation animation="slideUp" delay={0.4}>
                   <div>
-                    {/* <button
-                      onClick={handleButtonClick}
-                      className="rounded-[8px] bg-[#E7A647] px-5 py-3"
-                      style={{
-                        fontFamily: 'Montserrat, serif',
-                        fontWeight: 'medium',
-                      }}
-                    >
-                      Buy Now
-                    </button> */}
                     <Button size="large" width="180px">
                       Learn More
                     </Button>

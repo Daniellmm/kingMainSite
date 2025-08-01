@@ -1,4 +1,4 @@
-import epgLogo from '../../assets/images/logo/epgLogo.png'
+import epgLogo from '../../assets/images/logo/epgLogo.webp'
 import kingTransparent from '../../assets/images/team/kingTransparent.webp'
 import geneTransparent from '../../assets/images/team/geneTransparent.png'
 import ScrollAnimation from '../ScrollAnimation'

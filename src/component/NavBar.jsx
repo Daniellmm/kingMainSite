@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { HiMenu, HiX, HiChevronDown } from 'react-icons/hi'
-import LOGO1 from '../assets/images/logo/homeLogo.png'
-import FundingLogo from '../assets/images/logo/fundingLogo.png'
-import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
-import LaserFundLogo from '../assets/images/logo/laserLogo.png'
+import LOGO1 from '../assets/images/logo/homeLogo.webp'
+import FundingLogo from '../assets/images/logo/fundingLogo.webp'
+import InsuranceLogo from '../assets/images/logo/insuranceLogo.webp'
+import LaserFundLogo from '../assets/images/logo/laserLogo.webp'
 import CCLLogo from '../assets/images/logo/creditLogo.webp'
-import GGEILogo from '../assets/images/logo/ggei.png'
-import PODLogo from '../assets/images/logo/podcastLogo.png'
-import EPGLogo from '../assets/images/logo/epgLogo.png'
+import GGEILogo from '../assets/images/logo/ggei.webp'
+import PODLogo from '../assets/images/logo/podcastLogo.webp'
+import EPGLogo from '../assets/images/logo/epgLogo.webp'
 // Add these imports for the dropdown page logos
 // import AboutLogo from '../assets/images/logo/aboutLogo.png' // Add your about logo
 // import CCLLogo from '../assets/images/logo/Logo.png'
@@ -310,26 +310,13 @@ const NavBar = () => {
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
                 }}
-                data-path="/about"
-                className={`md: cursor-pointer text-lg transition-colors ${isActive('/about') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/about')}
-                onMouseEnter={(e) => handleLinkHover(e, true)}
-                onMouseLeave={(e) => handleLinkHover(e, false)}
-              >
-                ABOUT US
-              </li>
-              <li
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
                 data-path="/"
                 className={`md: cursor-pointer text-lg transition-colors ${isActive('/') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/')}
                 onMouseEnter={(e) => handleLinkHover(e, true)}
                 onMouseLeave={(e) => handleLinkHover(e, false)}
               >
-                Funding
+                Need Funding
               </li>
               <li
                 style={{
@@ -344,33 +331,6 @@ const NavBar = () => {
               >
                 Insurance
               </li>
-              {/* <li
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
-                data-path="/funding"
-                className={`md: cursor-pointer text-lg transition-colors ${isActive('/funding') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/funding')}
-                onMouseEnter={(e) => handleLinkHover(e, true)}
-                onMouseLeave={(e) => handleLinkHover(e, false)}
-              >
-                SYOFB
-              </li>    */}
-
-              {/* <li
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
-                data-path="/credit-card-liquidation"
-                className={`md: cursor-pointer text-lg transition-colors ${isActive('/credit-card-liquidation') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/credit-card-liquidation')}
-                onMouseEnter={(e) => handleLinkHover(e, true)}
-                onMouseLeave={(e) => handleLinkHover(e, false)}
-              >
-                CREDIT TO CASH
-              </li>  */}
               <li
                 style={{
                   fontFamily: 'Montserrat, serif',
@@ -397,7 +357,19 @@ const NavBar = () => {
               >
                 Become A Bank
               </li>
-
+              <li
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                data-path="/about"
+                className={`md: cursor-pointer text-lg transition-colors ${isActive('/about') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/about')}
+                onMouseEnter={(e) => handleLinkHover(e, true)}
+                onMouseLeave={(e) => handleLinkHover(e, false)}
+              >
+                ABOUT US
+              </li>
               {/* Dropdown Menu */}
               <li className="relative">
                 <div
@@ -465,19 +437,9 @@ const NavBar = () => {
         {isOpen && (
           <div
             ref={mobileMenuRef}
-            className="mt-4 rounded-lg p-4 shadow-md backdrop-blur-md lg:hidden"
+            className="mt-4 rounded-lg p-4 text-center shadow-md backdrop-blur-md lg:hidden"
           >
             <ul className="flex flex-col items-center justify-center space-y-2 uppercase">
-              <li
-                style={{
-                  fontFamily: 'Montserrat, serif',
-                  fontWeight: 'medium',
-                }}
-                className={`cursor-pointer text-lg transition-colors ${isActive('/about') ? 'font-semibold text-yellow-600' : ''}`}
-                onClick={() => navigateTo('/about')}
-              >
-                ABOUT US
-              </li>
               <li
                 style={{
                   fontFamily: 'Montserrat, serif',
@@ -486,7 +448,7 @@ const NavBar = () => {
                 className={`cursor-pointer text-lg transition-colors ${isActive('/') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/')}
               >
-                Funding
+                Need Funding
               </li>
               <li
                 style={{
@@ -517,6 +479,16 @@ const NavBar = () => {
                 onClick={() => navigateTo('/ggei')}
               >
                 Become A Bank
+              </li>
+              <li
+                style={{
+                  fontFamily: 'Montserrat, serif',
+                  fontWeight: 'medium',
+                }}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/about') ? 'font-semibold text-yellow-600' : ''}`}
+                onClick={() => navigateTo('/about')}
+              >
+                ABOUT US
               </li>
               <li
                 style={{

@@ -1,4 +1,4 @@
-import ggeiLogo from '../../assets/images/logo/ggei.png'
+import ggeiLogo from '../../assets/images/logo/ggei.webp'
 import kingTransparent from '../../assets/images/team/kingTransparent.webp'
 import alexisTransparent from '../../assets/images/team/alexisTransparent.webp'
 import ScrollAnimation from '../ScrollAnimation'
@@ -64,7 +64,7 @@ const BankSummitHeader = ({ handleClick }) => {
               className="pt-2 text-left text-[12px] uppercase text-white sm:text-[14px] 2xl:pt-[1.1rem] 2xl:text-[16px]"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              Lean how to turn your business into a bank that grows your wealth
+              Learn how to turn your business into a bank that grows your wealth
               aggressively and consistently.
             </p>
           </ScrollAnimation>

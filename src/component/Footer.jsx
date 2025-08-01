@@ -1,17 +1,17 @@
 import { useEffect, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import LOGO1 from '../assets/images/logo/homeLogo.png'
-import FundingLogo from '../assets/images/logo/fundingLogo.png'
-import InsuranceLogo from '../assets/images/logo/insuranceLogo.png'
-import LaserFundLogo from '../assets/images/logo/laserLogo.png'
-import GGEILogo from '../assets/images/logo/ggei.png'
+import LOGO1 from '../assets/images/logo/homeLogo.webp'
+import FundingLogo from '../assets/images/logo/fundingLogo.webp'
+import InsuranceLogo from '../assets/images/logo/insuranceLogo.webp'
+import LaserFundLogo from '../assets/images/logo/laserLogo.webp'
+import GGEILogo from '../assets/images/logo/ggei.webp'
 import CCLLogo from '../assets/images/logo/creditLogo.webp'
+import EPGLogo from '../assets/images/logo/epgLogo.webp'
+import PODLogo from '../assets/images/logo/podcastLogo.webp'
 import YouTB from '../assets/images/icons/youtube.png'
 import LinkedIn from '../assets/images/icons/linkedin.png'
 import INSTA from '../assets/images/icons/insta.png'
 import TIKTOK from '../assets/images/icons/tiktok.png'
-import EPGLogo from '../assets/images/logo/epgLogo.png'
-import PODLogo from '../assets/images/logo/podcastLogo.png'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -231,6 +231,7 @@ const Footer = () => {
           <div className="overflow-hidden">
             <img
               src={currentLogo}
+              loading="lazy"
               alt={`${location.pathname.slice(1) || 'home'} logo`}
               className="transform transition-transform duration-300 hover:scale-105"
             />

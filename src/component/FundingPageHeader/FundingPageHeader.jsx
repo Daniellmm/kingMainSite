@@ -1,4 +1,4 @@
-import fundingLogo from '../../assets/images/logo/fundingLogo.png'
+import fundingLogo from '../../assets/images/logo/fundingLogo.webp'
 import kingTransparent from '../../assets/images/team/kingTransparent.webp'
 import erickTransparent from '../../assets/images/team/erickTransparent.webp'
 import ScrollAnimation from '../ScrollAnimation'
