@@ -66,10 +66,10 @@ function Epg() {
         <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center gap-6 md:items-start">
           <ScrollAnimation animation="zoomIn" delay={0.8} className="mx-auto">
             <h2
-              className="bg-gradient-golden-dark bg-clip-text text-center text-4xl font-bold uppercase text-transparent md:text-5xl 2xl:mb-4 2xl:text-6xl"
+              className="bg-gradient-golden-dark bg-clip-text text-center text-4xl font-bold uppercase text-transparent lg:text-5xl 2xl:mb-4 2xl:text-6xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              EPG Wisdom & Wealth Community
+              EARN. PROTECT. GROW
             </h2>
           </ScrollAnimation>
 
@@ -126,7 +126,7 @@ function Epg() {
         <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center">
           <ScrollAnimation animation="zoomIn" delay={0.8} className="mx-auto">
             <h1
-              className="mb-8 text-center text-4xl font-bold uppercase md:text-5xl 2xl:text-6xl"
+              className="mb-8 text-center text-4xl font-bold uppercase lg:text-5xl 2xl:text-6xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               <span className="text-[#e7a647]">INSIDE THE EPG COMMUNITY,</span>

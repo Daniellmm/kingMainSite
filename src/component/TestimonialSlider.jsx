@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick'
 import { gsap } from 'gsap'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import faqThumbnail from '../assets/images/faqThumbnail.webp'
 
 const videoIds = [
   'J24rETbL1k0',
@@ -19,7 +20,7 @@ const videoIds = [
   'b47VAdaUeEI',
 ]
 
-const TestimonialVideoSlider = () => {
+const FaqSlider = () => {
   const sliderRef = useRef(null)
 
   const settings = {
@@ -88,10 +89,15 @@ const TestimonialVideoSlider = () => {
     ),
   }
 
+  // Track which videos are loaded (iframe shown)
+  const [loadedVideos, setLoadedVideos] = useState(
+    Array(videoIds.length).fill(false),
+  )
+
   useEffect(() => {
     if (sliderRef.current) {
       gsap.fromTo(
-        '.testimonial-slide',
+        '.faq-slide',
         { opacity: 0.5, scale: 0.95, y: 20 },
         {
           opacity: 1,
@@ -119,20 +125,55 @@ const TestimonialVideoSlider = () => {
         <Slider
           ref={sliderRef}
           {...settings}
-          className="testimonial-slider px-40 sm:px-4"
+          className="faq-slider px-40 sm:px-4"
         >
           {videoIds.map((id, index) => (
-            <div key={index} className="testimonial-slide px-2">
+            <div key={index} className="faq-slide px-2">
               <div className="overflow-hidden rounded-xl border border-gray-800 shadow-2xl">
-                <div className="relative h-[300px] w-auto overflow-hidden rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 md:h-[395px]">
-                  <iframe
-                    className="h-full w-full"
-                    src={`https://www.youtube.com/embed/${id}`}
-                    title={`Testimonial video ${index + 1}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                  ></iframe>
+                <div className="group relative flex h-[300px] w-auto cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 md:h-[395px]">
+                  {loadedVideos[index] ? (
+                    <iframe
+                      className="h-full w-full"
+                      src={`https://www.youtube.com/embed/${id}`}
+                      title={`FAQ video ${index + 1}`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                    ></iframe>
+                  ) : (
+                    <div
+                      className="relative flex h-full w-full items-center justify-center"
+                      onClick={() => {
+                        setLoadedVideos((prev) => {
+                          const updated = [...prev]
+                          updated[index] = true
+                          return updated
+                        })
+                      }}
+                    >
+                      <img
+                        src={faqThumbnail}
+                        alt="FAQ Video Thumbnail"
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <svg
+                          className="h-16 w-16 text-white opacity-80 transition-transform group-hover:scale-110"
+                          fill="currentColor"
+                          viewBox="0 0 84 84"
+                        >
+                          <circle
+                            cx="42"
+                            cy="42"
+                            r="42"
+                            fill="#000"
+                            fillOpacity="0.4"
+                          />
+                          <polygon points="34,28 62,42 34,56" fill="#fff" />
+                        </svg>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -143,7 +184,7 @@ const TestimonialVideoSlider = () => {
           <button
             onClick={goToPrevious}
             className="flex h-12 w-12 transform items-center justify-center rounded-full bg-[#E7A647] bg-opacity-90 text-black shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-opacity-100 hover:shadow-xl"
-            aria-label="Previous testimonials"
+            aria-label="Previous FAQs"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +204,7 @@ const TestimonialVideoSlider = () => {
           <button
             onClick={goToNext}
             className="flex h-12 w-12 transform items-center justify-center rounded-full bg-[#E7A647] bg-opacity-90 text-black shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-opacity-100 hover:shadow-xl"
-            aria-label="Next testimonials"
+            aria-label="Next FAQs"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -186,4 +227,4 @@ const TestimonialVideoSlider = () => {
   )
 }
 
-export default TestimonialVideoSlider
+export default FaqSlider

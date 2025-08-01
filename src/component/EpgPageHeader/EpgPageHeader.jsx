@@ -33,13 +33,13 @@ const EpgPageHeader = () => {
         <div className="relative z-50 ml-1 flex w-1/2 flex-col space-y-2 sm:ml-5 sm:space-y-4 lg:ml-8 lg:w-[35%]">
           {/* LOGO */}
           <ScrollAnimation animation="zoomIn" delay={0.5}>
-            <div className="mb-2 flex h-14 w-14 items-center justify-start sm:w-[5.5rem] lg:mb-0 lg:h-28 lg:w-36">
+            <div className="mb-2 flex h-[4.5rem] w-[4.5rem] items-center justify-start sm:w-[5.5rem] lg:mb-0 lg:h-28 lg:w-36">
               <img
                 src={epgLogo}
                 alt="logo"
                 width={56}
                 height={56}
-                className="h-14 w-14 object-contain sm:h-[5.5rem] sm:w-[5.5rem] lg:h-24 lg:w-24"
+                className="h-[4.5rem] w-[4.5rem] object-contain sm:h-[5.5rem] sm:w-[5.5rem] lg:h-24 lg:w-24"
                 style={{ display: 'block' }}
               />
             </div>
@@ -55,7 +55,9 @@ const EpgPageHeader = () => {
             >
               WEALTH
               <br />
-              MANAGEMENT <span className="text-white">&&nbsp;SECURITIES</span>
+              BUILDING
+              <br />
+              <span className="text-white">COMMUNITY</span>
             </h1>
           </ScrollAnimation>
 
@@ -73,7 +75,7 @@ const EpgPageHeader = () => {
             <div className="mt-6 flex flex-col gap-x-4 gap-y-0 space-y-4 uppercase md:mt-0 md:flex-row 2xl:mt-2">
               <Button
                 width="150px"
-                className="w-[150px] md:mt-4"
+                className="w-[150px] md:mt-4 md:w-[180px]"
                 onClick={() => handleButtonClick(URL)}
               >
                 FREE WEBCLASS

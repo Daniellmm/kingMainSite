@@ -1136,22 +1136,22 @@ const LaserFund = () => {
         </div>
       </section>
 
-      <section className="flex w-full items-center justify-center overflow-hidden bg-black px-10 py-10">
+      <section className="flex w-full items-center justify-center overflow-hidden bg-black px-2 py-10 md:px-6 lg:px-10">
         <div className="flex flex-col items-center justify-center gap-y-5">
           <ScrollAnimation animation="zoomIn">
             <h1
-              className="text-center text-3xl font-semibold leading-[45px] text-[#E7A647] lg:text-[45px]"
+              className="text-center text-2xl font-semibold text-[#E7A647] sm:text-3xl lg:text-[45px] lg:leading-[45px]"
               style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}
             >
               BONUS: Monthly Q&A Trading Strategy Sessions with the Founders of
-              the AI Trading Algorithm ($1,997 per month)!{' '}
+              the AI Trading Algorithm ($1,997 per month){' '}
               <span className="text-[#FF0000] line-through">FREE</span>
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <h2
-              className="pb-5 text-center text-xl font-semibold text-white md:text-[28px]"
+              className="pb-2 text-center text-base font-semibold text-white md:pb-5 md:text-[28px] md:text-xl"
               style={{
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 200,
@@ -1161,7 +1161,7 @@ const LaserFund = () => {
               Don’t miss this opportunity to transform your financial future.
             </h2>
             <h2
-              className="font- text-center text-xl text-white md:text-[22px]"
+              className="font- text-center text-base text-white md:text-[22px] md:text-xl"
               style={{
                 fontFamily: 'Montserrat, serif',
                 fontWeight: 200,
@@ -1172,7 +1172,7 @@ const LaserFund = () => {
             </h2>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.5}>
-            <div className="pt-7">
+            <div className="pt-2 md:pt-6">
               <button
                 onClick={handleButtonClick}
                 className="rounded-[8px] bg-[#E7A647] px-3 py-3 text-black"
