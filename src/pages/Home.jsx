@@ -694,9 +694,9 @@ const Home = () => {
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animation="fadeIn" delay={0.8}>
+          {/* <ScrollAnimation animation="fadeIn" delay={0.8}>
             <div className="flex w-full">{<CustomSlider />}</div>
-          </ScrollAnimation>
+          </ScrollAnimation> */}
         </div>
       </section>
       <section className="overflow-hidden bg-white px-10 pb-14 pt-10">
