@@ -1,14 +1,19 @@
-import React from 'react'
-import LOGO from '../assets/images/page-one/logoHto.png'
+import React, { useState } from 'react'
 import CARD1 from '../assets/images/page-one/card.webp'
 import { infoCards, steps } from './constant'
 import { motion } from 'framer-motion'
 import Button from '../component/ui/Button'
+import Loader from '../component/ui/Loader'
+import PlayButton from '../component/ui/PlayButton'
 
 const FORM_URL =
   ' https://api.leadconnectorhq.com/widget/form/JDaHxIsDZwIh47NcOzTG'
 
 const Hto = () => {
+  //to show Thumbnail for emeded solo ifram first, only loading iframe when clicked on thumbnail
+  const [showIframe, setShowIframe] = useState(false)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
+
   // Function to handle button clicks
   const handleButtonClick = () => {
     window.open(FORM_URL, '_blank')
@@ -122,11 +127,6 @@ const Hto = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  {/* <span className="text-white">Turn</span>
-                  &nbsp;100%&nbsp;Of Your&nbsp;Available Credit&nbsp;
-                  <span className="font-bold uppercase text-white">
-                    Into&nbsp;Cash
-                  </span> */}
                   Credit Card Merchant&nbsp;Unlock
                   <span class="ml-1 align-super text-xl">™</span>
                 </motion.h1>
@@ -228,7 +228,7 @@ const Hto = () => {
               </p>
             </motion.div>
 
-            <div className="flex h-full flex-col items-center justify-center">
+            <div className="flex h-full flex-col items-center justify-center px-2 sm:px-0">
               <motion.div
                 className="flex w-[340px] items-center justify-center"
                 variants={scaleFade}
@@ -237,15 +237,51 @@ const Hto = () => {
                 viewport={{ once: true }}
               />
 
-              <iframe
-                className="h-[350px] w-[340px] rounded-2xl pb-5 md:rounded-[50px] lg:w-[500px]"
-                src="https://www.youtube.com/embed/GZ36JbqF2v4?si=g4nBtrnNITjhT66F"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+              {!showIframe ? (
+                <motion.div
+                  className="flex w-[340px] items-center justify-center rounded-2xl md:rounded-[50px]"
+                  variants={scaleFade}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  <div
+                    className="group relative h-[350px] w-[340px] cursor-pointer overflow-hidden rounded-2xl md:rounded-[50px] lg:w-[500px]"
+                    onClick={() => setShowIframe(true)}
+                  >
+                    {/* Thumbnail */}
+                    <img
+                      src="https://img.youtube.com/vi/GZ36JbqF2v4/hqdefault.jpg"
+                      alt="Video thumbnail"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+
+                    {/* Play Button Overlay */}
+                    <PlayButton />
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  className="relative flex w-[340px] items-center justify-center rounded-2xl md:rounded-[50px]"
+                  variants={scaleFade}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  {isIframeLoading && <Loader />}
+                  <iframe
+                    className="h-[350px] w-[340px] rounded-2xl md:rounded-[50px] lg:w-[500px]"
+                    src="https://www.youtube.com/embed/GZ36JbqF2v4?si=g4nBtrnNITjhT66F"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    onLoad={() => setIsIframeLoading(false)}
+                  ></iframe>
+                </motion.div>
+              )}
             </div>
           </div>
         </section>
