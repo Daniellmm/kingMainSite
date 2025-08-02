@@ -1,6 +1,6 @@
 import epgLogo from '../../assets/images/logo/epgLogo.webp'
 import kingTransparent from '../../assets/images/team/kingTransparent.webp'
-import geneTransparent from '../../assets/images/team/geneTransparent.png'
+import geneTransparent from '../../assets/images/team/geneTransparent.webp'
 import ScrollAnimation from '../ScrollAnimation'
 import Button from '../ui/Button'
 import './EpgPageHeader.css'

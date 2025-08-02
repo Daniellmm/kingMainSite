@@ -1,6 +1,5 @@
-import CHECK from '../assets/images/check.png'
+import CHECK from '../assets/images/check.webp'
 import ScrollAnimation from '../component/ScrollAnimation'
-import CARD from '../assets/images/card.jpg'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 

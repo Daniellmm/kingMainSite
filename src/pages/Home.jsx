@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
-import PHONEIMG from '../assets/images/phone1.png'
-import AWW from '../assets/images/aww.png'
+import PHONEIMG from '../assets/images/phone1.webp'
+import AWW from '../assets/images/aww.webp'
 import BBB from '../assets/images/bbb.webp'
-import Correct from '../assets/images/correct.png'
+import Correct from '../assets/images/correct.webp'
 import Out from '../assets/images/out.png'
 import Money from '../assets/images/money.png'
 import fundingBook from '../assets/images/fundingBook.webp'
-import Rect1 from '../assets/images/pfb.jpg'
-import Rect2 from '../assets/images/bible.jpg'
-import Rect3 from '../assets/images/secure.jpg'
+import Rect1 from '../assets/images/pfb.webp'
+import Rect2 from '../assets/images/bible.webp'
+import Rect3 from '../assets/images/secure.webp'
 import ArrowR from '../assets/images/arrowupright.png'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
@@ -282,7 +282,7 @@ const Home = () => {
                 loading="lazy"
                 src={fundingBook}
                 alt="book"
-                className="rounded-3xl shadow-2xl shadow-black md:rounded-[2.75rem]"
+                className="mx-auto rounded-3xl shadow-2xl shadow-black md:rounded-[2.75rem]"
               />
             </div>
           </ScrollAnimation>
@@ -322,6 +322,7 @@ const Home = () => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
+                      loading="lazy"
                     ></iframe>
                   </div>
                 </div>
@@ -478,7 +479,7 @@ const Home = () => {
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="bg-gradient-golden-dark bg-clip-text pb-2 text-4xl font-semibold uppercase text-transparent md:mb-4 lg:text-5xl"
+                className="bg-gradient-golden-dark bg-clip-text pb-2 text-center text-4xl font-semibold uppercase text-transparent md:mb-4 md:text-left lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 How It Works:

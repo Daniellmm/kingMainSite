@@ -1,26 +1,26 @@
 export const infoCards = [
   {
-    imgPath: '/images/page-one/funnel.png',
+    imgPath: '/images/page-one/funnel.webp',
     title: 'Full Conversion',
     desc: 'Up to $100K+/mo processing limits — instantly.',
   },
   {
-    imgPath: '/images/page-one/trophy.png',
+    imgPath: '/images/page-one/trophy.webp',
     title: 'Keep Your Rewards',
     desc: 'Same-Day / Next-Day Payout Options Available',
   },
   {
-    imgPath: '/images/page-one/taxfree.png',
+    imgPath: '/images/page-one/taxfree.webp',
     title: 'Completely Hands-Free',
     desc: 'Turn available credit into cash without cash advances or high fees',
   },
   {
-    imgPath: '/images/page-one/flash.png',
+    imgPath: '/images/page-one/flash.webp',
     title: 'Fast Turnaround ',
     desc: 'Liquidate business or personal credit lines up to $100K',
   },
   {
-    imgPath: '/images/page-one/flash.png',
+    imgPath: '/images/page-one/flash.webp',
     title: 'Fast Turnaround ',
     desc: 'Use funds for ads, inventory, staffing, reinvestment',
   },

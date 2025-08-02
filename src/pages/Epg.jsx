@@ -147,7 +147,11 @@ function Epg() {
               'We build frameworks for you to earn, protect, and grow — alongside other believers and trusted professionals — within a secure, private environment.',
               'Seats are extremely limited.',
             ].map((item, idx) => (
-              <ScrollAnimation animation="slideUp" delay={`0.${idx}`}>
+              <ScrollAnimation
+                key={item + idx}
+                animation="slideUp"
+                delay={`0.${idx}`}
+              >
                 <li
                   key={idx}
                   className="flex items-start gap-3 text-base text-white md:text-lg lg:text-xl"

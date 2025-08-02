@@ -1,12 +1,12 @@
 import { useState, useRef } from 'react'
 
-import HEADPHONE from '../assets/images/headphone.png'
-import BIGLOGO from '../assets/images/biglogo.png'
-import FALLCOIN from '../assets/images/fallcoin.png'
-import KING from '../assets/images/ak1.png'
-import ALEXIS from '../assets/images/alexis.png'
+import HEADPHONE from '../assets/images/headphone.webp'
+import BIGLOGO from '../assets/images/biglogo.webp'
+import FALLCOIN from '../assets/images/fallcoin.webp'
+import KING from '../assets/images/ak1.webp'
+import ALEXIS from '../assets/images/alexis.webp'
 import insuranceHeaderImg from '../assets/images/insuranceHeaderImg.webp'
-import GENE from '../assets/images/gene.png'
+import GENE from '../assets/images/gene.webp'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { gsap } from 'gsap'
@@ -95,8 +95,8 @@ const Insurance = () => {
 
   return (
     <>
-      <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-6 pb-8 pt-12 sm:pb-16 md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-8 2xl:min-h-[705px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-x-0 pt-2 md:max-w-[800px] md:flex-row-reverse md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
+      <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-6 pb-8 pt-16 sm:pb-16 md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-8 2xl:min-h-[705px]">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-x-8 gap-y-4 pt-2 md:max-w-[800px] md:flex-row-reverse md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
           <ScrollAnimation animation="zoomIn" delay={0.3}>
             <img
               src={insuranceHeaderImg}
@@ -104,7 +104,7 @@ const Insurance = () => {
               style={{
                 aspectRatio: '3 / 2',
               }}
-              className="block w-[100vw] max-w-[383px] object-contain md:mt-[5rem] md:w-[80vw] md:max-w-[372px] lg:w-[650px] lg:max-w-[650px] 2xl:w-[750px] 2xl:max-w-[750px]"
+              className="block w-[100vw] max-w-[383px] object-contain md:mt-[5rem] md:w-[80vw] md:max-w-[372px] lg:w-[510px] lg:max-w-[510px] xl:w-[600px] xl:max-w-[600px] 2xl:w-[750px] 2xl:max-w-[750px]"
             />
           </ScrollAnimation>
 
