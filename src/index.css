@@ -64,13 +64,6 @@
   background-size: cover;
   background-position: center;
 }
-/* 
-@font-face {
-  font-family: 'Beauty Wind';
-  src: url('/src/assets/fonts/beauty-Wind.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-} */
 
 @font-face {
   font-family: 'Beauty Wind';
@@ -104,21 +97,21 @@
   font-display: swap;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-BlackItalic.woff2') format('woff2');
   font-weight: 900;
   font-style: italic;
   font-display: swap;
-}
+} */
 
 @font-face {
   font-family: 'Montserrat';
@@ -136,13 +129,13 @@
   font-display: swap;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-BoldItalic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-}
+} */
 
 @font-face {
   font-family: 'Montserrat';
