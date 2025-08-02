@@ -30,6 +30,7 @@ const MAIN_URL = ' https://landing.highticketofferfinancing.com/application'
 gsap.registerPlugin(ScrollTrigger)
 
 const Home = () => {
+  //to show Thumbnail for emeded solo ifram first, only loading iframe when clicked on thumbnail
   const [showIframe, setShowIframe] = useState(false)
   const [isIframeLoading, setIsIframeLoading] = useState(true)
   useEffect(() => {
@@ -319,27 +320,29 @@ const Home = () => {
                 <div className="flex items-center justify-end pt-10">
                   <div>
                     {!showIframe ? (
-                      <div
-                        className="group relative h-[250px] w-[340px] cursor-pointer overflow-hidden rounded-md md:h-[580px] md:w-[490px] md:rounded-[42px]"
-                        onClick={() => setShowIframe(true)}
-                      >
-                        {/* Thumbnail */}
-                        <img
-                          src="https://img.youtube.com/vi/Oc2QVi4RdwU/hqdefault.jpg"
-                          alt="Video thumbnail"
-                          className="h-full w-full object-cover"
-                          loading="lazy"
-                        />
+                      <div className="relative rounded-md md:rounded-[42px]">
+                        <div
+                          className="group relative h-[250px] w-[340px] cursor-pointer overflow-hidden rounded-md md:h-[580px] md:w-[490px] md:rounded-[42px]"
+                          onClick={() => setShowIframe(true)}
+                        >
+                          {/* Thumbnail */}
+                          <img
+                            src="https://img.youtube.com/vi/Oc2QVi4RdwU/hqdefault.jpg"
+                            alt="Video thumbnail"
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
 
-                        {/* Play Button Overlay */}
-                        <PlayButton />
+                          {/* Play Button Overlay */}
+                          <PlayButton />
+                        </div>
                       </div>
                     ) : (
-                      <div className="relative">
+                      <div className="relative rounded-md md:rounded-[42px]">
                         {isIframeLoading && <Loader />}
                         <iframe
                           className="h-[250px] w-[340px] rounded-md pb-5 md:h-[580px] md:w-[490px] md:rounded-[42px]"
-                          src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7&autoplay=1"
+                          src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
                           title="YouTube video player"
                           style={{ border: 'none' }}
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
