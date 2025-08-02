@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
-import PHONEIMG from '../assets/images/phone1.png'
-import AWW from '../assets/images/aww.png'
-import BBB from '../assets/images/bbb.png'
-import Correct from '../assets/images/correct.png'
+import React, { useEffect, useState } from 'react'
+import PHONEIMG from '../assets/images/phone1.webp'
+import AWW from '../assets/images/aww.webp'
+import BBB from '../assets/images/bbb.webp'
+import Correct from '../assets/images/correct.webp'
 import Out from '../assets/images/out.png'
 import Money from '../assets/images/money.png'
 import fundingBook from '../assets/images/fundingBook.webp'
-import Rect1 from '../assets/images/pfb.jpg'
-import Rect2 from '../assets/images/bible.jpg'
-import Rect3 from '../assets/images/secure.jpg'
+import Rect1 from '../assets/images/pfb.webp'
+import Rect2 from '../assets/images/bible.webp'
+import Rect3 from '../assets/images/secure.webp'
 import ArrowR from '../assets/images/arrowupright.png'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
@@ -21,6 +21,8 @@ import ClientSuccessHighlights from '../component/ClientSuccessHighlights'
 import Button from '../component/ui/Button'
 import CheckIcon from '../component/ui/CheckMark'
 import Quote from '../component/ui/Quote'
+import Loader from '../component/ui/Loader'
+import PlayButton from '../component/ui/PlayButton'
 
 // Form URL for buttons
 const MAIN_URL = ' https://landing.highticketofferfinancing.com/application'
@@ -28,6 +30,9 @@ const MAIN_URL = ' https://landing.highticketofferfinancing.com/application'
 gsap.registerPlugin(ScrollTrigger)
 
 const Home = () => {
+  //to show Thumbnail for emeded solo ifram first, only loading iframe when clicked on thumbnail
+  const [showIframe, setShowIframe] = useState(false)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
   useEffect(() => {
     gsap.fromTo(
       '.hero-dollar-left',
@@ -136,10 +141,10 @@ const Home = () => {
   return (
     <>
       <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] 2xl:min-h-[705px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pt-[5.5rem] md:max-w-[800px] md:flex-row md:gap-8 md:px-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
-          <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start lg:gap-2 xl:mr-48 xl:gap-4">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center pt-[5.2rem] md:max-w-[800px] md:flex-row md:gap-8 md:px-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
+          <div className="grow-1 flex w-[90%] flex-col items-center md:mr-8 md:w-full md:items-start md:gap-0 xl:mr-48">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
-              <div className="pb-2">
+              <div className="pb-4">
                 {/* First h1: only visible from 414px to 767px */}
                 <h1
                   className="hidden p-0 text-center text-3xl font-bold uppercase leading-[2rem] text-white min-[414px]:block md:hidden md:px-4 md:text-left md:text-4xl lg:block lg:text-5xl"
@@ -176,7 +181,7 @@ const Home = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex justify-center">
                 <p
-                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:text-left md:text-[12px] lg:text-[14px] 2xl:text-[18px]"
+                  className="px-5 pb-2 text-center text-[12px] uppercase text-white md:pb-4 md:text-left lg:text-[14px] 2xl:text-[18px]"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
                 >
                   Close more Deals, Scale Faster, and Eliminate Price Objections
@@ -185,11 +190,19 @@ const Home = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
-              <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
+              <div className="flex flex-row gap-x-2 space-y-4 max-[345px]:flex-col md:pl-4">
                 <Button
                   color="#1cb67c"
                   variant="solid"
-                  className="mt-2"
+                  className="mt-4 md:!min-w-[180px]"
+                  width="144px"
+                  onClick={handleScroll}
+                >
+                  See Client Results
+                </Button>
+                <Button
+                  className="md:!min-w-[180px]"
+                  width="144px"
                   onClick={handleButtonClick}
                 >
                   Let's Get Started
@@ -225,8 +238,8 @@ const Home = () => {
       <section className="overflow-hidden bg-white px-5">
         <ScrollAnimation animation="fadeIn" delay={0.8}>
           <div className="flex flex-col items-center justify-center pt-10 md:pt-24">
-            <div className="">
-              <img src={AWW} alt="" />
+            <div>
+              <img src={AWW} alt="" loading="lazy" />
             </div>
           </div>
         </ScrollAnimation>
@@ -268,101 +281,37 @@ const Home = () => {
       </section>
       <section className="bg-white px-3 pb-10 pt-10 lg:px-5 lg:pt-20">
         <div className="grid w-full grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black py-8 md:grid-cols-2 md:py-12 lg:flex-row lg:gap-12 lg:px-12 lg:py-12">
-          <div className="flex w-full flex-1 px-3">
-            <img
-              src={fundingBook}
-              alt=""
-              className="rounded-3xl shadow-2xl shadow-black md:rounded-[2.75rem]"
-            />
-          </div>
-
-          <div className="flex w-full flex-1 flex-col">
-            <h1
-              className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-            >
-              “Want a tailored breakdown of funding solutions for your clients?”{' '}
-              <span className="text-[#FF0000] line-through">FREE</span>
-            </h1>
-            <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
-              <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-0">
-                <div className="flex w-full justify-center md:justify-start">
-                  <Button>Download Free Guide</Button>
-                </div>
-              </div>
+          <ScrollAnimation animation="slideUp" delay={0.8}>
+            <div className="flex w-full flex-1 px-3">
+              <img
+                loading="lazy"
+                src={fundingBook}
+                alt="book"
+                className="mx-auto rounded-3xl shadow-2xl shadow-black md:rounded-[2.75rem]"
+              />
             </div>
-          </div>
-        </div>
-      </section>
-      |
-      {/* <section className='overflow-hidden md:px-10 bg-black  pb-14'>
-        <div className='flex justify-center items-center  pt-5'>
-          <div className='grid md:grid-cols-2 grid-rows-1'>
-            <ScrollAnimation animation="slideRight" delay={0.8}>
-              <div className='flex justify-end items-center px-5 py-10'>
-                <img src={BANK} alt="" className='rounded-2xl shadow-white shadow-2xl' />
-              </div>
-            </ScrollAnimation>
+          </ScrollAnimation>
 
-
-            <div className='flex flex-col gap-y-5 px-5 h-full justify-center lg:px-4 '>
-              <ScrollAnimation animation="zoomIn" delay={0.8}>
-                <div>
-                  <h1 className='text-[#E7A647] text-3xl lg:text-[47px] text-center leading-[45px] font-semibold' style={{ fontFamily: 'Minion Pro, serif' }}>
-                    Download “The Ultimate Funding Qualification Guide” <span className='text-red-600 line-through'>FREE</span>
-                  </h1>
-                </div>
-              </ScrollAnimation>
-
-              <ScrollAnimation animation="slideLeft" delay={0.8}>
-                <div className='bg-black  rounded-lg flex justify-center items-center h-full w-full'>
-                  {/* <form action="">
-                    <div>
-                      <input
-                        type="text"
-                        name="phone"
-                        placeholder='Name'
-                        className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        name="phone"
-                        placeholder='Email'
-                        className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        name="phone"
-                        placeholder='Phone Number'
-                        className="w-full p-3 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black  placeholder:font-thin"
-                        required
-                      />
-                    </div>
-                  </form> *
-
-                  <div className='pt-14 flex justify-start lg:justify-start'>
-                    <ScrollAnimation animation="slideUp" delay={0.8}>
-                      <button
-                        className='bg-[#E7A647] px-3 py-2 rounded-[8px]'
-                        style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-                        
-                      >
-                        Download Now
-                      </button>
-                    </ScrollAnimation>
+          <ScrollAnimation animation="slideUp" delay={0.9}>
+            <div className="flex w-full flex-1 flex-col">
+              <h1
+                className="bg-gradient-golden-dark bg-clip-text px-4 pb-10 text-center text-3xl font-semibold leading-9 text-[#E7A647] text-transparent md:px-0 md:pb-6 md:text-left md:leading-[1.3] lg:text-start lg:text-[42px]"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                Download “The Ultimate Funding Qualification Guide”
+                <span className="text-[#FF0000] line-through">FREE</span>
+              </h1>
+              <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
+                <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg p-0">
+                  <div className="flex w-full justify-center md:justify-start">
+                    <Button>Download Free Guide</Button>
                   </div>
                 </div>
-              </ScrollAnimation>
+              </div>
             </div>
-          </div>
+          </ScrollAnimation>
         </div>
-      </section> */}
+      </section>
       <section className="custom-header-bg flex items-center justify-center overflow-hidden bg-white px-5 pb-16">
         <div className="flex items-center justify-center md:pt-10">
           <div className="grid grid-rows-1 gap-y-8 md:gap-y-12 lg:grid-cols-2">
@@ -370,15 +319,40 @@ const Home = () => {
               <ScrollAnimation animation="slideRight" delay={0.8}>
                 <div className="flex items-center justify-end pt-10">
                   <div>
-                    <iframe
-                      className="h-[250px] w-[340px] rounded-md pb-5 md:h-[580px] md:w-[490px] md:rounded-[42px]"
-                      src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
-                      title="YouTube video player"
-                      style={{ border: 'none' }}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
+                    {!showIframe ? (
+                      <div className="relative rounded-md md:rounded-[42px]">
+                        <div
+                          className="group relative h-[250px] w-[340px] cursor-pointer overflow-hidden rounded-md md:h-[580px] md:w-[490px] md:rounded-[42px]"
+                          onClick={() => setShowIframe(true)}
+                        >
+                          {/* Thumbnail */}
+                          <img
+                            src="https://img.youtube.com/vi/Oc2QVi4RdwU/hqdefault.jpg"
+                            alt="Video thumbnail"
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+
+                          {/* Play Button Overlay */}
+                          <PlayButton />
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="relative rounded-md md:rounded-[42px]">
+                        {isIframeLoading && <Loader />}
+                        <iframe
+                          className="h-[250px] w-[340px] rounded-md pb-5 md:h-[580px] md:w-[490px] md:rounded-[42px]"
+                          src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
+                          title="YouTube video player"
+                          style={{ border: 'none' }}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          loading="lazy"
+                          onLoad={() => setIsIframeLoading(false)}
+                        ></iframe>
+                      </div>
+                    )}
                   </div>
                 </div>
               </ScrollAnimation>
@@ -429,7 +403,12 @@ const Home = () => {
             <div className="flex items-center justify-center">
               <ScrollAnimation animation="slideRight" delay={0.8}>
                 <div>
-                  <img src={BBB} className="w-auto" alt="" />
+                  <img
+                    loading="lazy"
+                    src={BBB}
+                    className="w-auto"
+                    alt="bank img"
+                  />
                 </div>
               </ScrollAnimation>
             </div>
@@ -529,7 +508,7 @@ const Home = () => {
           <ScrollAnimation animation="zoomIn" delay={0.8}>
             <div>
               <h1
-                className="bg-gradient-golden-dark bg-clip-text pb-2 text-4xl font-semibold uppercase text-transparent md:mb-4 lg:text-5xl"
+                className="bg-gradient-golden-dark bg-clip-text pb-2 text-center text-4xl font-semibold uppercase text-transparent md:mb-4 md:text-left lg:text-5xl"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 How It Works:
@@ -552,7 +531,7 @@ const Home = () => {
               <ScrollAnimation animation="slideRight" delay={0.3}>
                 <div className="flex h-[244px] w-[320px] flex-col items-center justify-center rounded-xl bg-white shadow-lg shadow-black/35">
                   <div>
-                    <img src={Out} alt="" />
+                    <img loading="lazy" src={Out} alt="" />
                   </div>
 
                   <div>
@@ -586,7 +565,7 @@ const Home = () => {
               <ScrollAnimation animation="fadeIn" delay={0.6}>
                 <div className="flex h-[244px] w-[320px] flex-col items-center justify-center rounded-xl bg-white shadow-lg shadow-black/35">
                   <div>
-                    <img src={Correct} alt="" />
+                    <img src={Correct} alt="" loading="lazy" />
                   </div>
 
                   <div>
@@ -620,7 +599,7 @@ const Home = () => {
               <ScrollAnimation animation="slideLeft" delay={0.9}>
                 <div className="flex h-[244px] w-[320px] flex-col items-center justify-center rounded-xl bg-white shadow-lg shadow-black/35">
                   <div>
-                    <img src={Money} alt="" />
+                    <img src={Money} alt="money" loading="lazy" />
                   </div>
 
                   <div>
@@ -715,8 +694,13 @@ const Home = () => {
           <div className="grid gap-y-10 lg:grid-cols-3">
             <ScrollAnimation animation="slideRight" delay={0.3}>
               <div className="flex flex-col items-center justify-start gap-y-5 px-10 md:px-5">
-                <div className="w-[340px] lg:w-auto">
-                  <img src={Rect1} alt="" />
+                <div className="aspect-[17/10] w-[340px] lg:w-auto">
+                  <img
+                    src={Rect1}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
 
                 <div>
@@ -730,8 +714,6 @@ const Home = () => {
                 </div>
 
                 <div className="flex w-full items-center justify-end">
-                  {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
-
                   <div className="flex items-center justify-center">
                     <p
                       className="text-xs text-black"
@@ -744,7 +726,7 @@ const Home = () => {
                       Read More
                     </p>
 
-                    <img src={ArrowR} alt="" />
+                    <img src={ArrowR} alt="" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -752,8 +734,13 @@ const Home = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.6}>
               <div className="flex flex-col items-center justify-start gap-y-5 px-10 md:px-5">
-                <div className="">
-                  <img src={Rect2} className="w-[387px] lg:w-auto" alt="" />
+                <div className="aspect-[17/10] w-[340px] lg:w-auto">
+                  <img
+                    src={Rect2}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
 
                 <div>
@@ -767,8 +754,6 @@ const Home = () => {
                 </div>
 
                 <div className="flex w-full items-center justify-end">
-                  {/* <p className='text-[#E7A647] ' style={{ fontFamily: 'Minion Pro, serif' }}>April 26, 2024</p> */}
-
                   <div className="flex items-center justify-center">
                     <p
                       className="text-xs text-black"
@@ -781,7 +766,7 @@ const Home = () => {
                       Read More
                     </p>
 
-                    <img src={ArrowR} alt="" />
+                    <img src={ArrowR} alt="" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -789,8 +774,13 @@ const Home = () => {
 
             <ScrollAnimation animation="slideRight" delay={0.9}>
               <div className="flex flex-col items-center justify-start gap-y-5 px-10 md:px-5">
-                <div className="">
-                  <img src={Rect3} alt="" className="w-[340px] lg:w-auto" />
+                <div className="aspect-[17/10] w-[340px] lg:w-auto">
+                  <img
+                    src={Rect3}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-contain"
+                  />
                 </div>
 
                 <div>
@@ -816,7 +806,7 @@ const Home = () => {
                     >
                       Read More
                     </p>
-                    <img src={ArrowR} alt="" />
+                    <img src={ArrowR} alt="" loading="lazy" />
                   </div>
                 </div>
               </div>

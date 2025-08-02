@@ -1,10 +1,9 @@
 import { useEffect, useState, useRef } from 'react'
-import SYOB from '../assets/images/syob.png'
-import SCI from '../assets/images/scifi.png'
-import CHECK from '../assets/images/check.png'
-import MText from '../assets/images/png2.png'
-import AWW from '../assets/images/aww.png'
-import LoanImg from '../assets/images/loan.png'
+import SYOB from '../assets/images/syob.webp'
+import SCI from '../assets/images/scifi.webp'
+import CHECK from '../assets/images/check.webp'
+import AWW from '../assets/images/aww.webp'
+import LoanImg from '../assets/images/loan.webp'
 
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
@@ -16,36 +15,38 @@ import Button from '../component/ui/Button'
 import FundingPageHeader from '../component/FundingPageHeader/FundingPageHeader'
 
 //images
-import ss1 from '../assets/images/screenshots/ss1.jpeg'
-import ss2 from '../assets/images/screenshots/ss2.jpeg'
-import ss3 from '../assets/images/screenshots/ss3.jpeg'
-import ss4 from '../assets/images/screenshots/ss4.jpeg'
-import ss5 from '../assets/images/screenshots/ss5.jpeg'
-import ss6 from '../assets/images/screenshots/ss6.jpeg'
-import ss7 from '../assets/images/screenshots/ss7.jpeg'
-import ss8 from '../assets/images/screenshots/ss8.jpeg'
-import ss9 from '../assets/images/screenshots/ss9.jpeg'
-import ss10 from '../assets/images/screenshots/ss10.jpeg'
-import ss11 from '../assets/images/screenshots/ss11.jpeg'
-import ss12 from '../assets/images/screenshots/ss12.jpeg'
-import ss13 from '../assets/images/screenshots/ss13.jpeg'
-import ss14 from '../assets/images/screenshots/ss14.jpeg'
-import ss15 from '../assets/images/screenshots/ss15.jpeg'
-import ss16 from '../assets/images/screenshots/ss16.jpeg'
-import ss17 from '../assets/images/screenshots/ss17.jpeg'
-import ss18 from '../assets/images/screenshots/ss18.jpeg'
-import ss19 from '../assets/images/screenshots/ss19.jpeg'
-import ss20 from '../assets/images/screenshots/ss20.jpeg'
-import ss21 from '../assets/images/screenshots/ss21.jpeg'
-import ss22 from '../assets/images/screenshots/ss22.jpeg'
-import ss23 from '../assets/images/screenshots/ss23.jpeg'
-import ss24 from '../assets/images/screenshots/ss24.jpeg'
-import ss25 from '../assets/images/screenshots/ss25.jpeg'
-import ss26 from '../assets/images/screenshots/ss26.jpeg'
-import ss27 from '../assets/images/screenshots/ss27.jpeg'
-import ss28 from '../assets/images/screenshots/ss28.jpeg'
-import ss29 from '../assets/images/screenshots/ss29.jpeg'
+import ss1 from '../assets/images/screenshots/ss1.webp'
+import ss2 from '../assets/images/screenshots/ss2.webp'
+import ss3 from '../assets/images/screenshots/ss3.webp'
+import ss4 from '../assets/images/screenshots/ss4.webp'
+import ss5 from '../assets/images/screenshots/ss5.webp'
+import ss6 from '../assets/images/screenshots/ss6.webp'
+import ss7 from '../assets/images/screenshots/ss7.webp'
+import ss8 from '../assets/images/screenshots/ss8.webp'
+import ss9 from '../assets/images/screenshots/ss9.webp'
+import ss10 from '../assets/images/screenshots/ss10.webp'
+import ss11 from '../assets/images/screenshots/ss11.webp'
+import ss12 from '../assets/images/screenshots/ss12.webp'
+import ss13 from '../assets/images/screenshots/ss13.webp'
+import ss14 from '../assets/images/screenshots/ss14.webp'
+import ss15 from '../assets/images/screenshots/ss15.webp'
+import ss16 from '../assets/images/screenshots/ss16.webp'
+import ss17 from '../assets/images/screenshots/ss17.webp'
+import ss18 from '../assets/images/screenshots/ss18.webp'
+import ss19 from '../assets/images/screenshots/ss19.webp'
+import ss20 from '../assets/images/screenshots/ss20.webp'
+import ss21 from '../assets/images/screenshots/ss21.webp'
+import ss22 from '../assets/images/screenshots/ss22.webp'
+import ss23 from '../assets/images/screenshots/ss23.webp'
+import ss24 from '../assets/images/screenshots/ss24.webp'
+import ss25 from '../assets/images/screenshots/ss25.webp'
+import ss26 from '../assets/images/screenshots/ss26.webp'
+import ss27 from '../assets/images/screenshots/ss27.webp'
+import ss28 from '../assets/images/screenshots/ss28.webp'
+import ss29 from '../assets/images/screenshots/ss29.webp'
 import Quote from '../component/ui/Quote'
+import PlayButton from '../component/ui/PlayButton'
+import Loader from '../component/ui/Loader'
 
 const FORM_URL = 'https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U'
 const URL = 'https://syofb.io'
@@ -115,13 +116,16 @@ const Funding = () => {
   const [focusedVideo, setFocusedVideo] = useState(1)
   const videoSliderRef = useRef(null)
 
+  const [activeVideo, setActiveVideo] = useState(null)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
+
   const videoSettings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 8000,
     pauseOnHover: true,
     arrows: true,
@@ -129,23 +133,12 @@ const Funding = () => {
     centerPadding: '0px',
   }
 
-  // Initialize videos as state so we can update it
-  // const [videos, setVideos] = useState([
-  //   'https://www.youtube.com/embed/a9M6uPzQLFs?si=3BgzDhk_uvms2z41',
-  //   'https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn',
-  //   'https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX',
-  //   'https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX',
-  //   'https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH',
-  //   'https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp',
-  //   'https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA',
-  // ])
-
   const [videos, setVideos] = useState([
-    'https://www.youtube.com/embed/tvciZcF6BPg',
-    'https://www.youtube.com/embed/JTzpOMs6Csg',
-    'https://www.youtube.com/embed/8oc1XzrVKdU',
-    'https://www.youtube.com/embed/byzZl7yl0S0',
-    'https://www.youtube.com/embed/r8-lefenM4c',
+    'tvciZcF6BPg',
+    'JTzpOMs6Csg',
+    '8oc1XzrVKdU',
+    'byzZl7yl0S0',
+    'r8-lefenM4c',
   ])
 
   const [images, setImages] = useState([
@@ -179,6 +172,12 @@ const Funding = () => {
     ss28,
     ss29,
   ])
+
+  //Slider Iframe play click function
+  const handleIframeClick = (videoId) => {
+    setIsIframeLoading(true)
+    setActiveVideo(videoId)
+  }
 
   const handlePrevVideo = () => {
     // Rotate videos left (make the last video the first)
@@ -239,7 +238,6 @@ const Funding = () => {
       <FundingPageHeader />
 
       <section className="flex justify-center overflow-hidden bg-white px-10 pt-10">
-        {/* <div className="flex flex-col items-center justify-center pt-10"> */}
         <ScrollAnimation animation="fadeIn">
           <div className="">
             <img src={AWW} alt="" />
@@ -274,36 +272,6 @@ const Funding = () => {
             </h1>
             <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
               <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg py-7">
-                {/* <form action="" className='w-full min-w-[100wv]  flex flex-col'>
-                  <div className='w-full'>
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder='Name'
-                      className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder='Email'
-                      className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder='Phone Number'
-                      className="w-full p-3 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black  placeholder:font-thin"
-                      required
-                    />
-                  </div>
-                </form> */}
-
                 <div className="flex w-full justify-center md:justify-start">
                   <Button
                     size="large"
@@ -373,21 +341,45 @@ const Funding = () => {
               {...videoSettings}
               className="video-slider"
             >
-              {/* Videos */}
-              {videos.map((video, index) => (
-                <div key={`video-${index}`} className="px-2">
-                  <div className="relative aspect-video overflow-hidden rounded-xl">
-                    <iframe
-                      className="h-full w-full"
-                      src={video}
-                      title={`YouTube video ${index + 1}`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
+              {videos.map((videoId, index) => {
+                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+
+                return (
+                  <div key={`video-${index}`} className="px-2">
+                    {activeVideo === videoId ? (
+                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
+                        {isIframeLoading && <Loader />}
+
+                        <iframe
+                          className="h-full w-full"
+                          src={`https://www.youtube.com/embed/${videoId}`}
+                          title={`YouTube video ${index + 1}`}
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          onLoad={() => setIsIframeLoading(false)}
+                        />
+                      </div>
+                    ) : (
+                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
+                        <div
+                          className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md"
+                          onClick={() => handleIframeClick(videoId)}
+                        >
+                          <img
+                            src={thumbnailUrl}
+                            alt={`Thumbnail for video ${index + 1}`}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                          <PlayButton />
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                )
+              })}
 
               {/* Images */}
               {images.map((img, index) => (

@@ -1,12 +1,12 @@
 import { useState, useRef } from 'react'
 
-import HEADPHONE from '../assets/images/headphone.png'
-import BIGLOGO from '../assets/images/biglogo.png'
-import FALLCOIN from '../assets/images/fallcoin.png'
-import KING from '../assets/images/ak1.png'
-import ALEXIS from '../assets/images/alexis.png'
+import HEADPHONE from '../assets/images/headphone.webp'
+import BIGLOGO from '../assets/images/biglogo.webp'
+import FALLCOIN from '../assets/images/fallcoin.webp'
+import KING from '../assets/images/ak1.webp'
+import ALEXIS from '../assets/images/alexis.webp'
 import insuranceHeaderImg from '../assets/images/insuranceHeaderImg.webp'
-import GENE from '../assets/images/gene.png'
+import GENE from '../assets/images/gene.webp'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { gsap } from 'gsap'
@@ -15,6 +15,8 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Button from '../component/ui/Button'
 import Quote from '../component/ui/Quote'
+import PlayButton from '../component/ui/PlayButton'
+import Loader from '../component/ui/Loader'
 
 const FORM_URL =
   'https://yellowbrickfinancialagency.com/intake?am_id=kingedwards98 7'
@@ -25,6 +27,9 @@ const Insurance = () => {
   // Animation transition duration in milliseconds - centralized for consistency
   const TRANSITION_DURATION = 500 // 0.5 seconds
   const AUTO_SCROLL_INTERVAL = 60000 // 60 seconds (1 minute)
+
+  const [activeVideo, setActiveVideo] = useState(null)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isLargeScreen, setIsLargeScreen] = useState(true)
@@ -39,7 +44,7 @@ const Insurance = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 8000,
     pauseOnHover: true,
     arrows: true,
@@ -47,14 +52,19 @@ const Insurance = () => {
     centerPadding: '0px',
   }
 
-  // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
-    'https://www.youtube.com/embed/Ib9feq1-YVw?si=4XZZMEeryeujM8YR',
-    'https://www.youtube.com/embed/rEfuJ32_JeQ?si=6Ub6lIK8BImS-Z-e',
-    'https://www.youtube.com/embed/DhdNv7iyTI4?si=ejUJltEC8MA1dKUk',
-    'https://www.youtube.com/embed/9izvdSfdtyg?si=ABwD7IF4gfdq-RZ2',
-    'https://www.youtube.com/embed/72xuX6HNr0Q?si=M9fBF2QKxonzDANS',
+    'Ib9feq1-YVw',
+    'rEfuJ32_JeQ',
+    'DhdNv7iyTI4',
+    '9izvdSfdtyg',
+    '72xuX6HNr0Q',
   ])
+
+  //Slider Iframe play click function
+  const handleIframeClick = (videoId) => {
+    setIsIframeLoading(true)
+    setActiveVideo(videoId)
+  }
 
   const handlePrevVideo = () => {
     // Rotate videos left (make the last video the first)
@@ -95,16 +105,16 @@ const Insurance = () => {
 
   return (
     <>
-      <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-6 pb-8 pt-12 sm:pb-16 md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-16 2xl:min-h-[705px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-x-0 pt-2 md:max-w-[800px] md:flex-row-reverse md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
+      <section className="relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[34px] rounded-br-[34px] bg-black px-6 pb-8 pt-16 sm:pb-16 md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] md:pb-0 md:pt-8 2xl:min-h-[705px]">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center gap-x-8 gap-y-4 pt-2 md:max-w-[800px] md:flex-row-reverse md:pl-4 md:pr-4 md:pt-0 lg:max-w-[1800px]">
           <ScrollAnimation animation="zoomIn" delay={0.3}>
             <img
               src={insuranceHeaderImg}
               alt="header image"
               style={{
-                aspectRatio: '3 / 2', // or '3:2' in supported CSS
+                aspectRatio: '3 / 2',
               }}
-              className="block w-[100vw] max-w-[383px] object-contain md:mt-40 md:w-[80vw] md:max-w-[372px] lg:w-[600px] lg:max-w-[600px]"
+              className="block w-[100vw] max-w-[383px] object-contain md:mt-[5rem] md:w-[80vw] md:max-w-[372px] lg:w-[510px] lg:max-w-[510px] xl:w-[600px] xl:max-w-[600px] 2xl:w-[750px] 2xl:max-w-[750px]"
             />
           </ScrollAnimation>
 
@@ -154,30 +164,6 @@ const Insurance = () => {
           </div>
         </div>
       </section>
-
-      {/* <ScrollAnimation animation="fadeIn" delay={0.5}>
-          <div className="flex flex-col items-center justify-center pt-10">
-            <div className="lg:px-24">
-              <h1
-                className="text-center text-xl font-thin leading-10 tracking-[1px] text-black lg:text-[28px]"
-                style={{ fontFamily: 'Minion Pro, serif' }}
-              >
-                "If you want to ensure you and your company are financially set
-                up for success, get a FREE financial review with YellowBrick
-                Financial today."
-              </h1>
-            </div>
-            <div>
-              <h1
-                className="pt-6 text-center text-3xl text-[#E7A647] md:text-4xl"
-                style={{ fontFamily: 'Adelia, serif' }}
-              >
-                {' '}
-                Gene Santos
-              </h1>
-            </div>
-          </div>
-        </ScrollAnimation> */}
       <Quote author="Gene Santos">
         If you want to ensure you and your company are financially set up for
         success, get a FREE financial review with YellowBrick Financial today.
@@ -400,21 +386,45 @@ const Insurance = () => {
               {...videoSettings}
               className="video-slider"
             >
-              {videos.map((video, index) => (
-                <div key={index} className="px-2">
-                  <div className="relative aspect-video overflow-hidden rounded-xl">
-                    <iframe
-                      className="h-full w-full"
-                      src={video}
-                      title={`YouTube video ${index + 1}`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
+              {videos.map((videoId, index) => {
+                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+
+                return (
+                  <div key={`${videoId}-${index}`} className="px-2">
+                    {activeVideo === videoId ? (
+                      <div className="relative aspect-video overflow-hidden rounded-xl">
+                        {isIframeLoading && <Loader />}
+
+                        <iframe
+                          className="h-full w-full"
+                          src={`https://www.youtube.com/embed/${videoId}`}
+                          title={`YouTube video ${index + 1}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          onLoad={() => setIsIframeLoading(false)}
+                        ></iframe>
+                      </div>
+                    ) : (
+                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
+                        <div
+                          className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md"
+                          onClick={() => handleIframeClick(videoId)}
+                        >
+                          <img
+                            src={thumbnailUrl}
+                            alt={`Thumbnail for video ${index + 1}`}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                          <PlayButton />
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </Slider>
           </div>
         </div>

@@ -1,9 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import KING1 from '../assets/images/page-two/hero.png'
-import KING2 from '../assets/images/page-two/aboutImg.png'
-import HeroModel from '../component/HeroModel'
-import BOOK from '../assets/images/epgBook.png'
+import KING1 from '../assets/images/page-two/hero.webp'
+import KING2 from '../assets/images/page-two/aboutImg.webp'
+import BOOK from '../assets/images/epgBook.webp'
 import PodcastVideosSection from '../component/PodcastVideosSection '
 import SocialLinksRow from '../component/SocialLinksRow'
 

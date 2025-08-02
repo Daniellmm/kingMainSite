@@ -66,10 +66,10 @@ function Epg() {
         <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center gap-6 md:items-start">
           <ScrollAnimation animation="zoomIn" delay={0.8} className="mx-auto">
             <h2
-              className="bg-gradient-golden-dark bg-clip-text text-center text-4xl font-bold uppercase text-transparent md:text-5xl 2xl:mb-4 2xl:text-6xl"
+              className="bg-gradient-golden-dark bg-clip-text text-center text-4xl font-bold uppercase text-transparent lg:text-5xl 2xl:mb-4 2xl:text-6xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              EPG Wisdom & Wealth Community
+              EARN. PROTECT. GROW
             </h2>
           </ScrollAnimation>
 
@@ -126,7 +126,7 @@ function Epg() {
         <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center">
           <ScrollAnimation animation="zoomIn" delay={0.8} className="mx-auto">
             <h1
-              className="mb-8 text-center text-4xl font-bold uppercase md:text-5xl 2xl:text-6xl"
+              className="mb-8 text-center text-4xl font-bold uppercase lg:text-5xl 2xl:text-6xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               <span className="text-[#e7a647]">INSIDE THE EPG COMMUNITY,</span>
@@ -136,18 +136,22 @@ function Epg() {
             </h1>
           </ScrollAnimation>
 
-          <ScrollAnimation animation="slideUp" delay={0.8} className="mx-auto">
-            <ul className="mb-8 mt-0 flex w-full max-w-2xl flex-col gap-4 md:mb-12 md:mt-4">
-              {[
-                'Build resilient income streams in any market',
-                "Protect your wealth using structures favored by the world's wealthiest families",
-                'Grow your resources with purpose, discipline, and wisdom',
-                'Join a curated network of like-minded, faith-rooted wealth builders',
-                'Because true prosperity is about legacy, not just accumulation.',
-                'We do not simply teach theory.',
-                'We build frameworks for you to earn, protect, and grow — alongside other believers and trusted professionals — within a secure, private environment.',
-                'Seats are extremely limited.',
-              ].map((item, idx) => (
+          <ul className="mb-8 mt-0 flex w-full max-w-2xl flex-col gap-4 md:mb-12 md:mt-4">
+            {[
+              'Build resilient income streams in any market',
+              "Protect your wealth using structures favored by the world's wealthiest families",
+              'Grow your resources with purpose, discipline, and wisdom',
+              'Join a curated network of like-minded, faith-rooted wealth builders',
+              'Because true prosperity is about legacy, not just accumulation.',
+              'We do not simply teach theory.',
+              'We build frameworks for you to earn, protect, and grow — alongside other believers and trusted professionals — within a secure, private environment.',
+              'Seats are extremely limited.',
+            ].map((item, idx) => (
+              <ScrollAnimation
+                key={item + idx}
+                animation="slideUp"
+                delay={`0.${idx}`}
+              >
                 <li
                   key={idx}
                   className="flex items-start gap-3 text-base text-white md:text-lg lg:text-xl"
@@ -155,9 +159,10 @@ function Epg() {
                   <CheckMark />
                   <span>{item}</span>
                 </li>
-              ))}
-            </ul>
-
+              </ScrollAnimation>
+            ))}
+          </ul>
+          <ScrollAnimation animation="slideUp" delay={0.8}>
             <p
               className="mb-8 max-w-2xl text-left text-base text-white md:text-lg"
               style={{ fontFamily: 'Montserrat, sans-serif' }}

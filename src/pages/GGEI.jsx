@@ -1,33 +1,35 @@
 import React, { useEffect, useState, useRef } from 'react'
 
-import SCI from '../assets/images/sci.png'
-import YELLOW from '../assets/images/yellow.png'
-import BIGLOGO2 from '../assets/images/biglogo2.png'
-import DART from '../assets/images/dart.png'
-import CHECK from '../assets/images/check.png'
-import LAPTOP from '../assets/images/laptop.png'
-import GIRL from '../assets/images/girl.png'
-import KF from '../assets/images/team/kf.png'
-import AF from '../assets/images/team/af.png'
-import GF from '../assets/images/team/gf.png'
-import RF from '../assets/images/team/ramses.png'
-import SF from '../assets/images/team/sf.png'
-import KFS from '../assets/images/team/1.png'
-import AFS from '../assets/images/team/2.png'
-import GFS from '../assets/images/team/3.png'
-import RFS from '../assets/images/team/4.png'
-import SFS from '../assets/images/team/5.png'
-import KING from '../assets/images/team/king.png'
-import GENE from '../assets/images/team/gene.png'
-import ALEXIS from '../assets/images/team/alexis.png'
-import RAMSEY from '../assets/images/team/ramsey.png'
-import SHAWN from '../assets/images/team/shawn.png'
+import SCI from '../assets/images/sci.webp'
+import YELLOW from '../assets/images/yellow.webp'
+import BIGLOGO2 from '../assets/images/biglogo2.webp'
+import DART from '../assets/images/dart.webp'
+import CHECK from '../assets/images/check.webp'
+import LAPTOP from '../assets/images/laptop.webp'
+import GIRL from '../assets/images/girl.webp'
+import KF from '../assets/images/team/kf.webp'
+import AF from '../assets/images/team/af.webp'
+import GF from '../assets/images/team/gf.webp'
+import RF from '../assets/images/team/ramses.webp'
+import SF from '../assets/images/team/sf.webp'
+import KFS from '../assets/images/team/1.webp'
+import AFS from '../assets/images/team/2.webp'
+import GFS from '../assets/images/team/3.webp'
+import RFS from '../assets/images/team/4.webp'
+import SFS from '../assets/images/team/5.webp'
+import KING from '../assets/images/team/king.webp'
+import GENE from '../assets/images/team/gene.webp'
+import ALEXIS from '../assets/images/team/alexis.webp'
+import RAMSEY from '../assets/images/team/ramsey.webp'
+import SHAWN from '../assets/images/team/shawn.webp'
 
 import AdmissionSection from '../component/AdmissionSection'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BankSummitHeader from '../component/BankSummitHeader/BankSummitHeader'
+import PlayButton from '../component/ui/PlayButton'
+import Loader from '../component/ui/Loader'
 const FORM_URL =
   ' https://api.leadconnectorhq.com/widget/form/BH71Y2GyuR17dADcvbhI'
 
@@ -111,6 +113,10 @@ const GGEI = () => {
     { frame: RFS, name: RAMSEY, isGene: false },
     { frame: SFS, name: SHAWN, isGene: false },
   ]
+
+  //to show Thumbnail for emeded solo ifram first, only loading iframe when clicked on thumbnail
+  const [showIframe, setShowIframe] = useState(false)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
 
   const handleButtonClick = () => {
     window.open(FORM_URL, '_blank', 'noopener,noreferrer')
@@ -197,17 +203,39 @@ const GGEI = () => {
 
           <div className="flex h-full items-start justify-center lg:w-[100%]">
             <ScrollAnimation animation="slideRight" delay={0.2}>
-              <div className="mt-3 flex justify-center">
-                <iframe
-                  className="h-[250px] w-[340px] rounded-2xl pb-5 md:w-[540px] lg:h-[415px] lg:w-[850px] lg:rounded-[50px]"
-                  src="https://www.youtube.com/embed/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
-              </div>
+              {!showIframe ? (
+                <div className="relative mt-3 flex justify-center rounded-2xl lg:rounded-[50px]">
+                  <div
+                    className="group relative h-[250px] w-[340px] cursor-pointer overflow-hidden rounded-2xl md:w-[540px] lg:h-[415px] lg:w-[850px] lg:rounded-[50px]"
+                    onClick={() => setShowIframe(true)}
+                  >
+                    {/* Thumbnail */}
+                    <img
+                      src="https://img.youtube.com/vi/LbuGAPU2dqQ/hqdefault.jpg"
+                      alt="Video thumbnail"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+
+                    {/* Play Button Overlay */}
+                    <PlayButton />
+                  </div>
+                </div>
+              ) : (
+                <div className="relative mt-3 flex justify-center rounded-2xl lg:rounded-[50px]">
+                  {isIframeLoading && <Loader />}
+                  <iframe
+                    className="h-[250px] w-[340px] md:w-[540px] lg:h-[415px] lg:w-[850px] lg:rounded-[50px]"
+                    src="https://www.youtube.com/embed/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    onLoad={() => setIsIframeLoading(false)}
+                  ></iframe>
+                </div>
+              )}
             </ScrollAnimation>
           </div>
 

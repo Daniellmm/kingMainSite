@@ -1,37 +1,39 @@
-import React, { useEffect, useState, useRef } from 'react'
-import DISC from '../assets/images/disc.png'
-import PHONEIMG from '../assets/images/phone2.png'
-import CHECK from '../assets/images/check.png'
-import LASER from '../assets/images/laser.png'
-import CIRCLE from '../assets/images/circle.png'
-import READ from '../assets/images/read.png'
+import { useEffect, useState, useRef } from 'react'
+import DISC from '../assets/images/disc.webp'
+import PHONEIMG from '../assets/images/phone2.webp'
+import CHECK from '../assets/images/check.webp'
+import LASER from '../assets/images/laser.webp'
+import CIRCLE from '../assets/images/circle.webp'
+import READ from '../assets/images/read.webp'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import CHART from '../assets/images/chart.png'
-import LAY from '../assets/images/lay.png'
+import CHART from '../assets/images/chart.webp'
+import LAY from '../assets/images/lay.webp'
 import ScrollAnimation from '../component/ScrollAnimation'
 import { gsap } from 'gsap'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import testimonial1 from '../assets/images/imageTest/testi1.png'
-import testimonial2 from '../assets/images/imageTest/testi2.png'
-import testimonial3 from '../assets/images/imageTest/testi3.png'
-import testimonial4 from '../assets/images/imageTest/testi4.png'
-import testimonial5 from '../assets/images/imageTest/testi5.png'
-import testimonial6 from '../assets/images/imageTest/testi6.png'
-import testimonial7 from '../assets/images/imageTest/testi7.png'
-import testimonial8 from '../assets/images/imageTest/testi8.png'
-import testimonial9 from '../assets/images/imageTest/testi9.png'
-import testimonial10 from '../assets/images/imageTest/testi10.png'
-import testimonial11 from '../assets/images/imageTest/testi11.png'
-import testimonial12 from '../assets/images/imageTest/testi12.png'
-import testimonial13 from '../assets/images/imageTest/testi13.png'
-import testimonial14 from '../assets/images/imageTest/testi14.png'
-import testimonial15 from '../assets/images/imageTest/testi15.png'
-import testimonial16 from '../assets/images/imageTest/testi16.png'
-import testimonial17 from '../assets/images/imageTest/testi17.png'
+import testimonial1 from '../assets/images/imageTest/test1.webp'
+import testimonial2 from '../assets/images/imageTest/test2.webp'
+import testimonial3 from '../assets/images/imageTest/test3.webp'
+import testimonial4 from '../assets/images/imageTest/test4.webp'
+import testimonial5 from '../assets/images/imageTest/test5.webp'
+import testimonial6 from '../assets/images/imageTest/test6.webp'
+import testimonial7 from '../assets/images/imageTest/test7.webp'
+import testimonial8 from '../assets/images/imageTest/test8.webp'
+import testimonial9 from '../assets/images/imageTest/test9.webp'
+import testimonial10 from '../assets/images/imageTest/test10.webp'
+import testimonial11 from '../assets/images/imageTest/test11.webp'
+import testimonial12 from '../assets/images/imageTest/test12.webp'
+import testimonial13 from '../assets/images/imageTest/test13.webp'
+import testimonial14 from '../assets/images/imageTest/test14.webp'
+import testimonial15 from '../assets/images/imageTest/test15.webp'
+import testimonial16 from '../assets/images/imageTest/test16.webp'
+import testimonial17 from '../assets/images/imageTest/test17.webp'
 import Button from '../component/ui/Button'
+import Loader from '../component/ui/Loader'
+import PlayButton from '../component/ui/PlayButton'
 
 const testimonials = [
   {
@@ -145,8 +147,11 @@ const LaserFund = () => {
   const videoSliderRef = useRef(null)
   const [currentSlide, setCurrentSlide] = useState(0)
 
+  const [activeVideo, setActiveVideo] = useState(null)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
+
   // Sample images for the slider
-  const images = ['/1.jpeg', '/2.jpeg', '/3.jpeg', '/4.jpeg']
+  const images = ['/1.webp', '/2.webp', '/3.webp', '/4.webp']
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % images.length)
@@ -166,8 +171,8 @@ const LaserFund = () => {
     speed: 900,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 10000,
+    autoplay: false,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: true,
     centerMode: true,
@@ -179,7 +184,7 @@ const LaserFund = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 8000,
     pauseOnHover: true,
     arrows: true,
@@ -240,11 +245,17 @@ const LaserFund = () => {
     })
   }, [])
 
+  //Slider Iframe play click function
+  const handleIframeClick = (videoId) => {
+    setIsIframeLoading(true)
+    setActiveVideo(videoId)
+  }
+
   const [videos, setVideos] = useState([
-    'https://www.youtube.com/embed/6h-KSsq1lRQ',
-    'https://www.youtube.com/embed/CYyTxYAEtxM',
-    'https://www.youtube.com/embed/RHAKwL1vrxc',
-    'https://www.youtube.com/embed/3ypIhaaqzKQ',
+    '6h-KSsq1lRQ',
+    'CYyTxYAEtxM',
+    'RHAKwL1vrxc',
+    '3ypIhaaqzKQ',
   ])
 
   const handleButtonClick = () => {
@@ -254,10 +265,10 @@ const LaserFund = () => {
   return (
     <>
       <section className="custom-header-bg relative flex h-auto min-h-[660px] items-center justify-center overflow-hidden rounded-bl-[35px] rounded-br-[35px] bg-black md:min-h-[628px] md:rounded-bl-[70px] md:rounded-br-[70px] 2xl:min-h-[705px]">
-        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-[5.5rem] md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
+        <div className="relative z-10 flex w-full flex-col items-center justify-center pl-4 pr-4 pt-[5.2rem] md:max-w-[800px] md:flex-row md:gap-8 lg:max-w-[1800px] lg:px-24 xl:px-36 2xl:px-48">
           <div className="grow-1 flex w-[90%] flex-col items-center sm:px-12 md:mr-8 md:w-full md:items-start md:px-0 lg:mr-12 lg:gap-2 xl:mr-56 xl:gap-4 2xl:mr-64">
             <ScrollAnimation animation="zoomIn" delay={0.5}>
-              <div className="pb-2">
+              <div className="pb-4">
                 <h1
                   className="p-0 text-center text-3xl font-bold uppercase leading-[2rem] text-white md:px-4 md:text-left lg:text-5xl"
                   style={{ fontFamily: 'Montserrat, sans-serif' }}
@@ -295,7 +306,7 @@ const LaserFund = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="mt-0 flex flex-col gap-x-4 gap-y-0 space-y-4 md:flex-row md:pl-4">
-                <Button variant="solid" className="mt-2">
+                <Button variant="solid" className="mt-4">
                   Learn More
                 </Button>
               </div>
@@ -367,16 +378,6 @@ const LaserFund = () => {
               <div className="flex w-full items-center justify-center lg:justify-start">
                 <ScrollAnimation animation="slideUp" delay={0.4}>
                   <div>
-                    {/* <button
-                      onClick={handleButtonClick}
-                      className="rounded-[8px] bg-[#E7A647] px-5 py-3"
-                      style={{
-                        fontFamily: 'Montserrat, serif',
-                        fontWeight: 'medium',
-                      }}
-                    >
-                      Buy Now
-                    </button> */}
                     <Button size="large" width="180px">
                       Learn More
                     </Button>
@@ -998,22 +999,46 @@ const LaserFund = () => {
               {...videoSettings}
               className="video-slider"
             >
-              {videos.map((video, index) => (
-                <div key={index} className="px-2">
-                  <div className="relative aspect-video overflow-hidden rounded-xl">
-                    <iframe
-                      className="h-full w-full"
-                      src={video}
-                      title={`YouTube video ${index + 1}`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
+              {videos.map((videoId, index) => {
+                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+
+                return (
+                  <div key={`trading-${videoId}-${index}`} className="px-2">
+                    {activeVideo === videoId ? (
+                      <div className="relative aspect-video overflow-hidden rounded-xl">
+                        {isIframeLoading && <Loader />}
+
+                        <iframe
+                          className="h-full w-full"
+                          src={`https://www.youtube.com/embed/${videoId}`}
+                          title={`YouTube video ${index + 1}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          loading="lazy"
+                          onLoad={() => setIsIframeLoading(false)}
+                        ></iframe>
+                      </div>
+                    ) : (
+                      <div className="relative aspect-video overflow-hidden rounded-xl">
+                        <div
+                          className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md"
+                          onClick={() => handleIframeClick(videoId)}
+                        >
+                          <img
+                            src={thumbnailUrl}
+                            alt={`Thumbnail for video ${index + 1}`}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                          <PlayButton />
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </Slider>
           </div>
         </div>
@@ -1146,23 +1171,24 @@ const LaserFund = () => {
         </div>
       </section>
 
-      <section className="flex w-full items-center justify-center overflow-hidden bg-black px-10 py-10">
+      <section className="flex w-full items-center justify-center overflow-hidden bg-black px-2 py-10 md:px-6 lg:px-10">
         <div className="flex flex-col items-center justify-center gap-y-5">
           <ScrollAnimation animation="zoomIn">
             <h1
-              className="text-left text-3xl font-semibold leading-[45px] text-[#E7A647] md:text-left lg:text-[45px]"
-              style={{ fontFamily: 'Minion Pro, serif', fontWeight: 700 }}
+              className="text-center text-2xl font-semibold text-[#E7A647] sm:text-3xl lg:text-[45px] lg:leading-[45px]"
+              style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}
             >
               BONUS: Monthly Q&A Trading Strategy Sessions with the Founders of
-              the AI Trading Algorithm ($1,997 per month)!
+              the AI Trading Algorithm ($1,997 per month){' '}
+              <span className="text-[#FF0000] line-through">FREE</span>
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={0.3}>
             <h2
-              className="pb-5 text-center text-xl font-semibold text-white md:text-[28px]"
+              className="pb-2 text-center text-base font-semibold text-white md:pb-5 md:text-[28px] md:text-xl"
               style={{
-                fontFamily: 'Montserrat, serif',
+                fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 200,
                 fontStyle: 'normal',
               }}
@@ -1170,7 +1196,7 @@ const LaserFund = () => {
               Don’t miss this opportunity to transform your financial future.
             </h2>
             <h2
-              className="font- text-center text-xl text-white md:text-[22px]"
+              className="font- text-center text-base text-white md:text-[22px] md:text-xl"
               style={{
                 fontFamily: 'Montserrat, serif',
                 fontWeight: 200,
@@ -1181,7 +1207,7 @@ const LaserFund = () => {
             </h2>
           </ScrollAnimation>
           <ScrollAnimation animation="slideUp" delay={0.5}>
-            <div className="pt-7">
+            <div className="pt-2 md:pt-6">
               <button
                 onClick={handleButtonClick}
                 className="rounded-[8px] bg-[#E7A647] px-3 py-3 text-black"
