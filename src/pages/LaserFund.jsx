@@ -171,7 +171,7 @@ const LaserFund = () => {
     speed: 900,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: true,
