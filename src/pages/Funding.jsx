@@ -45,6 +45,8 @@ import ss27 from '../assets/images/screenshots/ss27.webp'
 import ss28 from '../assets/images/screenshots/ss28.webp'
 import ss29 from '../assets/images/screenshots/ss29.webp'
 import Quote from '../component/ui/Quote'
+import PlayButton from '../component/ui/PlayButton'
+import Loader from '../component/ui/Loader'
 
 const FORM_URL = 'https://app.gohighlevel.com/v2/preview/q2Q6W6KqHZmQQoYQrO1U'
 const URL = 'https://syofb.io'
@@ -114,6 +116,10 @@ const Funding = () => {
   const [focusedVideo, setFocusedVideo] = useState(1)
   const videoSliderRef = useRef(null)
 
+  const [activeVideo, setActiveVideo] = useState(null)
+  const [showIframe, setShowIframe] = useState(false)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
+
   const videoSettings = {
     dots: false,
     infinite: true,
@@ -128,23 +134,12 @@ const Funding = () => {
     centerPadding: '0px',
   }
 
-  // Initialize videos as state so we can update it
-  // const [videos, setVideos] = useState([
-  //   'https://www.youtube.com/embed/a9M6uPzQLFs?si=3BgzDhk_uvms2z41',
-  //   'https://www.youtube.com/embed/44k0pYbfwm4?si=l-cAkgX0TF3a7eNn',
-  //   'https://www.youtube.com/embed/8oc1XzrVKdU?si=WbtIRVhxf5VTWzWX',
-  //   'https://www.youtube.com/embed/byzZl7yl0S0?si=14uTPQ7OY-2LVIfX',
-  //   'https://www.youtube.com/embed/w_LC8Ov5_sw?si=PlpLCd1Ike7-NwdH',
-  //   'https://www.youtube.com/embed/n8L5goJJPXM?si=fvb4uLLlLFRLlRcp',
-  //   'https://www.youtube.com/embed/5iAzDrXZ2qY?si=rJj1rhBzzLyRVgNA',
-  // ])
-
   const [videos, setVideos] = useState([
-    'https://www.youtube.com/embed/tvciZcF6BPg',
-    'https://www.youtube.com/embed/JTzpOMs6Csg',
-    'https://www.youtube.com/embed/8oc1XzrVKdU',
-    'https://www.youtube.com/embed/byzZl7yl0S0',
-    'https://www.youtube.com/embed/r8-lefenM4c',
+    'tvciZcF6BPg',
+    'JTzpOMs6Csg',
+    '8oc1XzrVKdU',
+    'byzZl7yl0S0',
+    'r8-lefenM4c',
   ])
 
   const [images, setImages] = useState([
@@ -178,6 +173,12 @@ const Funding = () => {
     ss28,
     ss29,
   ])
+
+  //Slider Iframe play click function
+  const handleIframeClick = (videoId) => {
+    setIsIframeLoading(true)
+    setActiveVideo(videoId)
+  }
 
   const handlePrevVideo = () => {
     // Rotate videos left (make the last video the first)
@@ -238,7 +239,6 @@ const Funding = () => {
       <FundingPageHeader />
 
       <section className="flex justify-center overflow-hidden bg-white px-10 pt-10">
-        {/* <div className="flex flex-col items-center justify-center pt-10"> */}
         <ScrollAnimation animation="fadeIn">
           <div className="">
             <img src={AWW} alt="" />
@@ -273,36 +273,6 @@ const Funding = () => {
             </h1>
             <div className="flex w-full min-w-[100wv] justify-center gap-y-5 lg:justify-start">
               <div className="flex w-full min-w-[100wv] flex-col items-center justify-center gap-y-10 rounded-lg py-7">
-                {/* <form action="" className='w-full min-w-[100wv]  flex flex-col'>
-                  <div className='w-full'>
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder='Name'
-                      className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder='Email'
-                      className="w-full p-3 mb-4 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black placeholder:font-thin"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder='Phone Number'
-                      className="w-full p-3 rounded bg-gray-200 text-black placeholder:text-[13px] placeholder:text-black  placeholder:font-thin"
-                      required
-                    />
-                  </div>
-                </form> */}
-
                 <div className="flex w-full justify-center md:justify-start">
                   <Button
                     size="large"
@@ -372,21 +342,45 @@ const Funding = () => {
               {...videoSettings}
               className="video-slider"
             >
-              {/* Videos */}
-              {videos.map((video, index) => (
-                <div key={`video-${index}`} className="px-2">
-                  <div className="relative aspect-video overflow-hidden rounded-xl">
-                    <iframe
-                      className="h-full w-full"
-                      src={video}
-                      title={`YouTube video ${index + 1}`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
+              {videos.map((videoId, index) => {
+                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+
+                return (
+                  <div key={`video-${index}`} className="px-2">
+                    {activeVideo === videoId ? (
+                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
+                        {isIframeLoading && <Loader />}
+
+                        <iframe
+                          className="h-full w-full"
+                          src={`https://www.youtube.com/embed/${videoId}`}
+                          title={`YouTube video ${index + 1}`}
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          onLoad={() => setIsIframeLoading(false)}
+                        />
+                      </div>
+                    ) : (
+                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
+                        <div
+                          className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md"
+                          onClick={() => handleIframeClick(videoId)}
+                        >
+                          <img
+                            src={thumbnailUrl}
+                            alt={`Thumbnail for video ${index + 1}`}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                          <PlayButton />
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                )
+              })}
 
               {/* Images */}
               {images.map((img, index) => (

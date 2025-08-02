@@ -15,6 +15,8 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Button from '../component/ui/Button'
 import Quote from '../component/ui/Quote'
+import PlayButton from '../component/ui/PlayButton'
+import Loader from '../component/ui/Loader'
 
 const FORM_URL =
   'https://yellowbrickfinancialagency.com/intake?am_id=kingedwards98 7'
@@ -25,6 +27,10 @@ const Insurance = () => {
   // Animation transition duration in milliseconds - centralized for consistency
   const TRANSITION_DURATION = 500 // 0.5 seconds
   const AUTO_SCROLL_INTERVAL = 60000 // 60 seconds (1 minute)
+
+  const [activeVideo, setActiveVideo] = useState(null)
+  const [showIframe, setShowIframe] = useState(false)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isLargeScreen, setIsLargeScreen] = useState(true)
@@ -47,14 +53,19 @@ const Insurance = () => {
     centerPadding: '0px',
   }
 
-  // Initialize videos as state so we can update it
   const [videos, setVideos] = useState([
-    'https://www.youtube.com/embed/Ib9feq1-YVw?si=4XZZMEeryeujM8YR',
-    'https://www.youtube.com/embed/rEfuJ32_JeQ?si=6Ub6lIK8BImS-Z-e',
-    'https://www.youtube.com/embed/DhdNv7iyTI4?si=ejUJltEC8MA1dKUk',
-    'https://www.youtube.com/embed/9izvdSfdtyg?si=ABwD7IF4gfdq-RZ2',
-    'https://www.youtube.com/embed/72xuX6HNr0Q?si=M9fBF2QKxonzDANS',
+    'Ib9feq1-YVw',
+    'rEfuJ32_JeQ',
+    'DhdNv7iyTI4',
+    '9izvdSfdtyg',
+    '72xuX6HNr0Q',
   ])
+
+  //Slider Iframe play click function
+  const handleIframeClick = (videoId) => {
+    setIsIframeLoading(true)
+    setActiveVideo(videoId)
+  }
 
   const handlePrevVideo = () => {
     // Rotate videos left (make the last video the first)
@@ -376,21 +387,45 @@ const Insurance = () => {
               {...videoSettings}
               className="video-slider"
             >
-              {videos.map((video, index) => (
-                <div key={index} className="px-2">
-                  <div className="relative aspect-video overflow-hidden rounded-xl">
-                    <iframe
-                      className="h-full w-full"
-                      src={video}
-                      title={`YouTube video ${index + 1}`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
+              {videos.map((videoId, index) => {
+                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+
+                return (
+                  <div key={`${videoId}-${index}`} className="px-2">
+                    {activeVideo === videoId ? (
+                      <div className="relative aspect-video overflow-hidden rounded-xl">
+                        {isIframeLoading && <Loader />}
+
+                        <iframe
+                          className="h-full w-full"
+                          src={`https://www.youtube.com/embed/${videoId}`}
+                          title={`YouTube video ${index + 1}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          onLoad={() => setIsIframeLoading(false)}
+                        ></iframe>
+                      </div>
+                    ) : (
+                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
+                        <div
+                          className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md"
+                          onClick={() => handleIframeClick(videoId)}
+                        >
+                          <img
+                            src={thumbnailUrl}
+                            alt={`Thumbnail for video ${index + 1}`}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                          <PlayButton />
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </Slider>
           </div>
         </div>
