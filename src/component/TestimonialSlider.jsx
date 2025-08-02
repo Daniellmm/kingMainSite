@@ -156,21 +156,16 @@ const FaqSlider = () => {
                         alt="FAQ Video Thumbnail"
                         className="h-full w-full object-cover"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <svg
-                          className="h-16 w-16 text-white opacity-80 transition-transform group-hover:scale-110"
-                          fill="currentColor"
-                          viewBox="0 0 84 84"
-                        >
-                          <circle
-                            cx="42"
-                            cy="42"
-                            r="42"
-                            fill="#000"
-                            fillOpacity="0.4"
-                          />
-                          <polygon points="34,28 62,42 34,56" fill="#fff" />
-                        </svg>
+                      <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40">
+                        <div className="rounded-full bg-black bg-opacity-80 p-3 transition-transform group-hover:scale-110">
+                          <svg
+                            className="h-6 w-6 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M6 4l10 6-10 6V4z" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   )}

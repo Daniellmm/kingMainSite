@@ -11,6 +11,7 @@ import clientReview6 from '../assets/images/trustpilot/review6.webp'
 import clientReview7 from '../assets/images/trustpilot/review7.webp'
 import clientReview8 from '../assets/images/trustpilot/review8.webp'
 import sliderVideoThumbnail from '../assets/images/page-two/sliderVidoeThumbnail.webp'
+import Loader from './ui/Loader'
 
 const clientReviews = [
   clientReview1,
@@ -168,14 +169,7 @@ const ClientReviewCarousel = () => {
                 </div>
               ) : (
                 <div className="relative h-full w-full">
-                  {isVideoLoading && (
-                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60">
-                      <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-white"></div>
-                      <p className="ml-3 text-sm font-medium text-white">
-                        Loading video...
-                      </p>
-                    </div>
-                  )}
+                  {isVideoLoading && <Loader />}
                   <iframe
                     className="h-full w-full"
                     src="https://www.youtube.com/embed/otezXZ_W2fM?autoplay=1controls=1&rel=0&modestbranding=1"

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import PHONEIMG from '../assets/images/phone1.webp'
 import AWW from '../assets/images/aww.webp'
 import BBB from '../assets/images/bbb.webp'
@@ -21,6 +21,7 @@ import ClientSuccessHighlights from '../component/ClientSuccessHighlights'
 import Button from '../component/ui/Button'
 import CheckIcon from '../component/ui/CheckMark'
 import Quote from '../component/ui/Quote'
+import Loader from '../component/ui/Loader'
 
 // Form URL for buttons
 const MAIN_URL = ' https://landing.highticketofferfinancing.com/application'
@@ -28,6 +29,8 @@ const MAIN_URL = ' https://landing.highticketofferfinancing.com/application'
 gsap.registerPlugin(ScrollTrigger)
 
 const Home = () => {
+  const [showIframe, setShowIframe] = useState(false)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
   useEffect(() => {
     gsap.fromTo(
       '.hero-dollar-left',
@@ -314,16 +317,48 @@ const Home = () => {
               <ScrollAnimation animation="slideRight" delay={0.8}>
                 <div className="flex items-center justify-end pt-10">
                   <div>
-                    <iframe
-                      className="h-[250px] w-[340px] rounded-md pb-5 md:h-[580px] md:w-[490px] md:rounded-[42px]"
-                      src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
-                      title="YouTube video player"
-                      style={{ border: 'none' }}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
+                    {!showIframe ? (
+                      <div
+                        className="group relative h-[250px] w-[340px] cursor-pointer overflow-hidden rounded-md md:h-[580px] md:w-[490px] md:rounded-[42px]"
+                        onClick={() => setShowIframe(true)}
+                      >
+                        {/* Thumbnail */}
+                        <img
+                          src="https://img.youtube.com/vi/Oc2QVi4RdwU/hqdefault.jpg"
+                          alt="Video thumbnail"
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                        />
+
+                        {/* Play Button Overlay */}
+                        <div className="group absolute inset-0 z-10 flex items-center justify-center bg-black/40">
+                          <div className="transform rounded-full bg-black bg-opacity-80 p-3 transition-transform duration-300 group-hover:scale-110">
+                            <svg
+                              className="h-6 w-6 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M6 4l10 6-10 6V4z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="relative">
+                        {isIframeLoading && <Loader />}
+                        <iframe
+                          className="h-[250px] w-[340px] rounded-md pb-5 md:h-[580px] md:w-[490px] md:rounded-[42px]"
+                          src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7&autoplay=1"
+                          title="YouTube video player"
+                          style={{ border: 'none' }}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          loading="lazy"
+                          onLoad={() => setIsIframeLoading(false)}
+                        ></iframe>
+                      </div>
+                    )}
                   </div>
                 </div>
               </ScrollAnimation>
