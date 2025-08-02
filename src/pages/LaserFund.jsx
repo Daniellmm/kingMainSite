@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import DISC from '../assets/images/disc.webp'
 import PHONEIMG from '../assets/images/phone2.webp'
 import CHECK from '../assets/images/check.webp'
@@ -32,6 +32,8 @@ import testimonial15 from '../assets/images/imageTest/test15.webp'
 import testimonial16 from '../assets/images/imageTest/test16.webp'
 import testimonial17 from '../assets/images/imageTest/test17.webp'
 import Button from '../component/ui/Button'
+import Loader from '../component/ui/Loader'
+import PlayButton from '../component/ui/PlayButton'
 
 const testimonials = [
   {
@@ -145,6 +147,9 @@ const LaserFund = () => {
   const videoSliderRef = useRef(null)
   const [currentSlide, setCurrentSlide] = useState(0)
 
+  const [activeVideo, setActiveVideo] = useState(null)
+  const [isIframeLoading, setIsIframeLoading] = useState(true)
+
   // Sample images for the slider
   const images = ['/1.webp', '/2.webp', '/3.webp', '/4.webp']
 
@@ -167,7 +172,7 @@ const LaserFund = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: true,
     centerMode: true,
@@ -179,7 +184,7 @@ const LaserFund = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 8000,
     pauseOnHover: true,
     arrows: true,
@@ -240,11 +245,17 @@ const LaserFund = () => {
     })
   }, [])
 
+  //Slider Iframe play click function
+  const handleIframeClick = (videoId) => {
+    setIsIframeLoading(true)
+    setActiveVideo(videoId)
+  }
+
   const [videos, setVideos] = useState([
-    'https://www.youtube.com/embed/6h-KSsq1lRQ',
-    'https://www.youtube.com/embed/CYyTxYAEtxM',
-    'https://www.youtube.com/embed/RHAKwL1vrxc',
-    'https://www.youtube.com/embed/3ypIhaaqzKQ',
+    '6h-KSsq1lRQ',
+    'CYyTxYAEtxM',
+    'RHAKwL1vrxc',
+    '3ypIhaaqzKQ',
   ])
 
   const handleButtonClick = () => {
@@ -988,22 +999,46 @@ const LaserFund = () => {
               {...videoSettings}
               className="video-slider"
             >
-              {videos.map((video, index) => (
-                <div key={index} className="px-2">
-                  <div className="relative aspect-video overflow-hidden rounded-xl">
-                    <iframe
-                      className="h-full w-full"
-                      src={video}
-                      title={`YouTube video ${index + 1}`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
+              {videos.map((videoId, index) => {
+                const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+
+                return (
+                  <div key={`trading-${videoId}-${index}`} className="px-2">
+                    {activeVideo === videoId ? (
+                      <div className="relative aspect-video overflow-hidden rounded-xl">
+                        {isIframeLoading && <Loader />}
+
+                        <iframe
+                          className="h-full w-full"
+                          src={`https://www.youtube.com/embed/${videoId}`}
+                          title={`YouTube video ${index + 1}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          loading="lazy"
+                          onLoad={() => setIsIframeLoading(false)}
+                        ></iframe>
+                      </div>
+                    ) : (
+                      <div className="relative aspect-video overflow-hidden rounded-xl">
+                        <div
+                          className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md"
+                          onClick={() => handleIframeClick(videoId)}
+                        >
+                          <img
+                            src={thumbnailUrl}
+                            alt={`Thumbnail for video ${index + 1}`}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                          <PlayButton />
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </Slider>
           </div>
         </div>

@@ -117,7 +117,6 @@ const Funding = () => {
   const videoSliderRef = useRef(null)
 
   const [activeVideo, setActiveVideo] = useState(null)
-  const [showIframe, setShowIframe] = useState(false)
   const [isIframeLoading, setIsIframeLoading] = useState(true)
 
   const videoSettings = {

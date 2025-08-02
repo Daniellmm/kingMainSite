@@ -29,7 +29,6 @@ const Insurance = () => {
   const AUTO_SCROLL_INTERVAL = 60000 // 60 seconds (1 minute)
 
   const [activeVideo, setActiveVideo] = useState(null)
-  const [showIframe, setShowIframe] = useState(false)
   const [isIframeLoading, setIsIframeLoading] = useState(true)
 
   const [currentSlide, setCurrentSlide] = useState(0)
