@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import faqThumbnail from '../assets/images/faqThumbnail.webp'
+import Loader from './ui/Loader'
 
 const videoIds = [
   'J24rETbL1k0',
@@ -21,6 +22,10 @@ const videoIds = [
 ]
 
 const FaqSlider = () => {
+  const [loadingVideos, setLoadingVideos] = useState(
+    Array(videoIds.length).fill(false),
+  )
+
   const sliderRef = useRef(null)
 
   const settings = {
@@ -132,18 +137,33 @@ const FaqSlider = () => {
               <div className="overflow-hidden rounded-xl border border-gray-800 shadow-2xl">
                 <div className="group relative flex h-[300px] w-auto cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-gray-800 to-gray-900 md:h-[395px]">
                   {loadedVideos[index] ? (
-                    <iframe
-                      className="h-full w-full"
-                      src={`https://www.youtube.com/embed/${id}`}
-                      title={`FAQ video ${index + 1}`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
+                    <div className="relative h-full w-full">
+                      {loadingVideos[index] && <Loader />}
+                      <iframe
+                        className="h-full w-full"
+                        src={`https://www.youtube.com/embed/${id}`}
+                        title={`FAQ video ${index + 1}`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        loading="lazy"
+                        onLoad={() =>
+                          setLoadingVideos((prev) => {
+                            const updated = [...prev]
+                            updated[index] = false
+                            return updated
+                          })
+                        }
+                      ></iframe>
+                    </div>
                   ) : (
                     <div
                       className="relative flex h-full w-full items-center justify-center"
                       onClick={() => {
+                        setLoadingVideos((prev) => {
+                          const updated = [...prev]
+                          updated[index] = true
+                          return updated
+                        })
                         setLoadedVideos((prev) => {
                           const updated = [...prev]
                           updated[index] = true
