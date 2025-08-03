@@ -312,7 +312,7 @@ const Home = () => {
           </ScrollAnimation>
         </div>
       </section>
-      <section className="custom-header-bg flex items-center justify-center overflow-hidden bg-white px-5 pb-16">
+      <section className="custom-header-bg flex items-center justify-center overflow-hidden bg-black px-5 pb-16">
         <div className="flex items-center justify-center md:pt-10">
           <div className="grid grid-rows-1 gap-y-8 md:gap-y-12 lg:grid-cols-2">
             <div className="flex w-full justify-center lg:justify-end">
