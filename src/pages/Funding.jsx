@@ -347,7 +347,7 @@ const Funding = () => {
                 return (
                   <div key={`video-${index}`} className="px-2">
                     {activeVideo === videoId ? (
-                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
+                      <div className="relative flex aspect-[5/6] items-center justify-center overflow-hidden rounded-xl bg-black md:aspect-video">
                         {isIframeLoading && <Loader />}
 
                         <iframe
@@ -362,7 +362,7 @@ const Funding = () => {
                         />
                       </div>
                     ) : (
-                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
+                      <div className="relative flex aspect-[5/6] items-center justify-center overflow-hidden rounded-xl bg-black md:aspect-video">
                         <div
                           className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md"
                           onClick={() => handleIframeClick(videoId)}
@@ -384,14 +384,13 @@ const Funding = () => {
               {/* Images */}
               {images.map((img, index) => (
                 <div key={`img-${index}`} className="px-2">
-                  <div className="relative aspect-video overflow-hidden rounded-xl">
+                  <div className="relative aspect-[5/6] overflow-hidden rounded-xl md:aspect-video">
                     <img
                       src={img}
                       alt={`Slide ${index + 1}`}
                       className="h-full w-full object-contain"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-black/30" />
                   </div>
                 </div>
               ))}
