@@ -335,7 +335,7 @@ const Funding = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="w-full max-w-[350px] px-4 lg:max-w-2xl">
+          <div className="custom-funding-slider w-full max-w-[350px] px-4 lg:max-w-2xl">
             <Slider
               ref={videoSliderRef}
               {...videoSettings}
@@ -347,7 +347,7 @@ const Funding = () => {
                 return (
                   <div key={`video-${index}`} className="px-2">
                     {activeVideo === videoId ? (
-                      <div className="relative flex aspect-[5/6] items-center justify-center overflow-hidden rounded-xl bg-black md:aspect-video">
+                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
                         {isIframeLoading && <Loader />}
 
                         <iframe
@@ -362,7 +362,7 @@ const Funding = () => {
                         />
                       </div>
                     ) : (
-                      <div className="relative flex aspect-[5/6] items-center justify-center overflow-hidden rounded-xl bg-black md:aspect-video">
+                      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-black">
                         <div
                           className="group relative h-full w-full cursor-pointer overflow-hidden rounded-md"
                           onClick={() => handleIframeClick(videoId)}
@@ -384,7 +384,7 @@ const Funding = () => {
               {/* Images */}
               {images.map((img, index) => (
                 <div key={`img-${index}`} className="px-2">
-                  <div className="relative aspect-[5/6] overflow-hidden rounded-xl md:aspect-video">
+                  <div className="relative aspect-[5/6] overflow-hidden rounded-xl lg:aspect-video">
                     <img
                       src={img}
                       alt={`Slide ${index + 1}`}

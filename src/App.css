@@ -60,3 +60,10 @@
     bottom: -49%;
   }
 }
+
+/* For funding page slider, to center it's sliders (vidoes/images) */
+.custom-funding-slider .slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
