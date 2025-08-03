@@ -3,7 +3,7 @@ import ScrollAnimation from '../ScrollAnimation'
 function Quote({ children, author, className = '', ...props }) {
   return (
     <section
-      className={`overflow-hidden bg-white px-10 py-10 lg:px-24 ${className}`}
+      className={`overflow-hidden bg-white px-12 py-12 lg:px-24 ${className}`}
       {...props}
     >
       <ScrollAnimation animation="fadeIn" delay={0.5}>

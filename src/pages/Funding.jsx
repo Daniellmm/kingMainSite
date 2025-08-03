@@ -250,9 +250,9 @@ const Funding = () => {
         and no extensive education is required—everyone needs capital.
       </Quote>
 
-      <section className="bg-white px-4 pb-10 pt-10 lg:px-5 lg:pt-20">
+      <section className="bg-white px-4 pb-10 pt-6 lg:px-5">
         <div className="mx-auto my-0 grid w-full max-w-[1800px] grid-rows-1 items-center justify-center gap-10 rounded-3xl border-2 border-black p-4 py-5 md:grid-cols-2 md:p-12 lg:flex-row lg:gap-12 xl:gap-20 2xl:gap-40">
-          <div className="flex w-full flex-1">
+          <div className="mx-auto flex w-full max-[380px]:w-[290px]">
             <img
               src={LoanImg}
               alt=""

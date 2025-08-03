@@ -18,7 +18,7 @@ function Epg() {
     <>
       <EpgPageHeader />
 
-      <Quote author="David Bach" className="my-12">
+      <Quote author="David Bach" className="my-4">
         “It’s not how much you make, but how much you keep, and how hard it
         works for you after you keep it.”
       </Quote>

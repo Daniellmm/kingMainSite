@@ -54,7 +54,7 @@ const NavBar = () => {
   const dropdownItems = [
     { path: '/credit-card-liquidation', label: ' Credit Card Processing' },
     { path: '/funding', label: 'Partner with HTOF' },
-    { path: '/earn-protect-grow', label: 'EPG' },
+    { path: '/earn-protect-grow', label: 'EPG Community' },
     { path: '/podcast', label: 'Podcast' },
   ]
 
@@ -515,10 +515,10 @@ const NavBar = () => {
                   fontFamily: 'Montserrat, serif',
                   fontWeight: 'medium',
                 }}
-                className={`cursor-pointer text-lg transition-colors ${isActive('/epg') ? 'font-semibold text-yellow-600' : ''}`}
+                className={`cursor-pointer text-lg transition-colors ${isActive('/earn-protect-grow') ? 'font-semibold text-yellow-600' : ''}`}
                 onClick={() => navigateTo('/earn-protect-grow')}
               >
-                EPG
+                EPG Community
               </li>
 
               <li

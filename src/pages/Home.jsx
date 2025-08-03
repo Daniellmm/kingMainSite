@@ -192,8 +192,6 @@ const Home = () => {
             <ScrollAnimation animation="zoomIn" delay={0.5} className="grow-1">
               <div className="flex flex-row gap-x-2 space-y-4 max-[345px]:flex-col md:pl-4">
                 <Button
-                  color="#1cb67c"
-                  variant="solid"
                   className="mt-4 md:!min-w-[180px]"
                   width="144px"
                   onClick={handleScroll}
@@ -201,6 +199,8 @@ const Home = () => {
                   See Client Results
                 </Button>
                 <Button
+                  color="#1cb67c"
+                  variant="solid"
                   className="md:!min-w-[180px]"
                   width="144px"
                   onClick={handleButtonClick}
@@ -320,9 +320,9 @@ const Home = () => {
                 <div className="flex items-center justify-end pt-10">
                   <div>
                     {!showIframe ? (
-                      <div className="relative rounded-md md:rounded-[42px]">
+                      <div className="relative rounded-xl md:rounded-[42px]">
                         <div
-                          className="group relative h-[250px] w-[340px] cursor-pointer overflow-hidden rounded-md md:h-[580px] md:w-[490px] md:rounded-[42px]"
+                          className="group relative h-[250px] w-[340px] cursor-pointer overflow-hidden rounded-xl md:h-[580px] md:w-[490px] md:rounded-[42px]"
                           onClick={() => setShowIframe(true)}
                         >
                           {/* Thumbnail */}
@@ -338,10 +338,10 @@ const Home = () => {
                         </div>
                       </div>
                     ) : (
-                      <div className="relative rounded-md md:rounded-[42px]">
+                      <div className="relative rounded-xl md:rounded-[42px]">
                         {isIframeLoading && <Loader />}
                         <iframe
-                          className="h-[250px] w-[340px] rounded-md pb-5 md:h-[580px] md:w-[490px] md:rounded-[42px]"
+                          className="h-[250px] w-[340px] rounded-xl md:h-[580px] md:w-[490px] md:rounded-[42px]"
                           src="https://www.youtube.com/embed/Oc2QVi4RdwU?si=5VCgMG0AV_RM7Za7"
                           title="YouTube video player"
                           style={{ border: 'none' }}

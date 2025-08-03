@@ -361,7 +361,7 @@ const Footer = () => {
                   link: '/credit-card-liquidation',
                 },
                 { item: 'Partner with HTOF', link: '/funding' },
-                { item: 'EPG', link: '/earn-protect-grow' },
+                { item: 'EPG Community', link: '/earn-protect-grow' },
               ].map(({ item, link }, index) => (
                 <li
                   key={index}

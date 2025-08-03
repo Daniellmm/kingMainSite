@@ -225,7 +225,7 @@ const GGEI = () => {
                 <div className="relative mt-3 flex justify-center rounded-2xl lg:rounded-[50px]">
                   {isIframeLoading && <Loader />}
                   <iframe
-                    className="h-[250px] w-[340px] md:w-[540px] lg:h-[415px] lg:w-[850px] lg:rounded-[50px]"
+                    className="h-[250px] w-[340px] rounded-2xl md:w-[540px] lg:h-[415px] lg:w-[850px] lg:rounded-[50px]"
                     src="https://www.youtube.com/embed/LbuGAPU2dqQ?si=b0FVL-F4oT-E9pp0"
                     title="YouTube video player"
                     frameborder="0"
