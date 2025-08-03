@@ -5,6 +5,7 @@ import EPG from '../assets/images/logo/epgLarge.webp'
 import ScrollAnimation from '../component/ScrollAnimation'
 import Button from '../component/ui/Button'
 import CheckMark from '../component/ui/CheckMark'
+import PodcastVideosSection from '../component/PodcastVideosSection '
 
 // Function to handle button clicks
 const handleButtonClick = (url) => {
@@ -14,6 +15,9 @@ const handleButtonClick = (url) => {
 const URL = 'https://syofb.io'
 
 function Epg() {
+  // Your YouTube API credentials
+  const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
+  const YOUTUBE_CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID
   return (
     <>
       <EpgPageHeader />
@@ -124,14 +128,14 @@ function Epg() {
 
       <section className="custom-header-bg w-full px-4 pb-12 pt-10 md:py-16">
         <div className="mx-auto flex max-w-[1800px] flex-col items-center justify-center">
-          <ScrollAnimation animation="zoomIn" delay={0.8} className="mx-auto">
+          <ScrollAnimation animation="zoomIn" delay={0.6} className="mx-auto">
             <h1
               className="mb-8 text-center text-4xl font-bold uppercase lg:text-5xl 2xl:text-6xl"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              <span className="text-[#e7a647]">INSIDE THE EPG COMMUNITY,</span>
+              <span className="text-golden">INSIDE THE EPG COMMUNITY,</span>
               <br />
-              <span className="text-[#e7a647]">YOU WILL</span>{' '}
+              <span className="text-golden">YOU WILL</span>{' '}
               <span className="text-white">LEARN HOW TO</span>
             </h1>
           </ScrollAnimation>
@@ -177,6 +181,13 @@ function Epg() {
           </ScrollAnimation>
         </div>
       </section>
+
+      <PodcastVideosSection
+        title="Watch Podcast Here"
+        hasBg={false}
+        apiKey={YOUTUBE_API_KEY}
+        channelId={YOUTUBE_CHANNEL_ID}
+      />
     </>
   )
 }

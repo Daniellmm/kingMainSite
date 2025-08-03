@@ -1,10 +1,20 @@
-// components/PodcastVideosSection.jsx
-import React from 'react'
 import { motion } from 'framer-motion'
 import useYouTubeVideos from '../hooks/useYouTubeVideos'
 
-const PodcastVideosSection = ({ apiKey, channelId }) => {
-  const { videos, loading, error } = useYouTubeVideos(apiKey, channelId, 4)
+const PodcastVideosSection = ({
+  apiKey,
+  channelId,
+  title = 'Watch Podcast',
+  hasBg = true,
+}) => {
+  const { videos, loading, error } = useYouTubeVideos(
+    apiKey,
+    channelId,
+    4,
+    'PLR6YUVR2CylFUlPk0SY9jjrNKXtYo8YJa',
+  )
+  // Only show podcast-sec background if hasBg is true (strict boolean)
+  const bgClass = hasBg === true ? 'podcast-sec' : 'bg-white text-black'
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -36,7 +46,7 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
   }
 
   const imageHover = {
-    scale: 1.05,
+    scale: 1.02,
     transition: { duration: 0.3, ease: 'easeInOut' },
   }
 
@@ -46,14 +56,16 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
 
   if (loading) {
     return (
-      <section className="podcast-sec px-5 lg:px-40">
-        <div className="flex w-full flex-col items-center justify-center pt-20">
+      <section
+        className={`${bgClass} px-5 py-4 md:py-8 lg:px-40 lg:pb-10 lg:pt-2`}
+      >
+        <div className="flex w-full flex-col items-center justify-center pt-20 uppercase">
           <motion.h1
             className="bg-gradient-to-r from-[#DBBD5D] via-[#CFA647] to-[#A78430] bg-clip-text text-center text-4xl font-bold text-transparent lg:text-start lg:text-6xl"
             style={{ fontFamily: 'Montserrat, serif' }}
             variants={fadeInUp}
           >
-            Watch Podcast
+            {title}
           </motion.h1>
           <div className="flex items-center justify-center py-20">
             <div className="h-12 w-12 animate-spin rounded-full border-b-2 border-[#D09A25]"></div>
@@ -65,14 +77,14 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
 
   if (error) {
     return (
-      <section className="podcast-sec px-5 lg:px-40">
+      <section className="podcast-sec px-5 py-4 md:py-8 lg:px-40 lg:pb-10 lg:pt-2">
         <div className="flex w-full flex-col items-center justify-center pt-20">
           <motion.h1
-            className="text-center text-4xl font-bold text-[#D09A25] lg:text-start lg:text-6xl"
+            className="bg-gradient-golden bg-clip-text text-center text-4xl font-bold uppercase text-transparent lg:text-start lg:text-6xl"
             style={{ fontFamily: 'Montserrat, serif' }}
             variants={fadeInUp}
           >
-            Watch Podcast
+            {title}
           </motion.h1>
           <div className="py-10 text-center text-red-500">
             <p>Unable to load latest videos. Please try again later.</p>
@@ -83,40 +95,23 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
   }
 
   return (
-    <section className="podcast-sec px-5 lg:px-40">
-      <div className="flex w-full flex-col items-center justify-center pt-20">
+    <section
+      className={`${bgClass} px-5 py-4 md:py-8 lg:px-40 lg:pb-10 lg:pt-2`}
+    >
+      <div className="flex w-full flex-col items-center justify-center gap-8 pt-12 md:gap-12 md:pt-16 2xl:gap-16">
         <motion.h1
-          className="text-center text-4xl font-bold text-[#D09A25] lg:text-start lg:text-6xl"
+          className="bg-gradient-golden bg-clip-text text-center text-4xl font-bold uppercase text-transparent lg:text-start lg:text-6xl"
           style={{ fontFamily: 'Montserrat, serif' }}
           variants={fadeInUp}
         >
-          Watch Podcast
+          {title}
         </motion.h1>
-        <motion.p
-          className="text-center text-white"
-          variants={fadeInUp}
-          style={{ fontFamily: 'Montserrat, serif', fontWeight: 'medium' }}
-        >
-          Learn how to earn more, protect your income, and grow your wealth with
-          this practical, no-fluff guide. Perfect for entrepreneurs who want to
-          make their money work smarter.
-        </motion.p>
-
-        <motion.div variants={fadeInUp}>
-          <h1
-            className="pb-7 pt-10 text-center text-3xl font-bold text-[#D09A25] lg:text-start"
-            style={{ fontFamily: 'Montserrat, serif' }}
-          >
-            Watch Latest Podcasts
-          </h1>
-        </motion.div>
-
         <motion.div
-          className="flex flex-col items-center justify-center gap-7 pb-10"
+          className="flex flex-col items-center justify-center gap-4 pb-10"
           variants={staggerContainer}
         >
           <motion.div
-            className="flex flex-col items-center justify-center gap-7 lg:flex-row"
+            className="flex flex-col items-center justify-center gap-4 lg:flex-row"
             variants={staggerContainer}
           >
             {videos.slice(0, 2).map((video) => (
@@ -133,7 +128,7 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
                   />
                   {/* Play button overlay */}
                   <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-30 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <div className="rounded-full bg-red-600 p-4">
+                    <div className="rounded-full bg-golden p-4">
                       <svg
                         className="ml-1 h-8 w-8 text-white"
                         fill="currentColor"
@@ -153,9 +148,8 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
               </motion.div>
             ))}
           </motion.div>
-
           <motion.div
-            className="flex flex-col items-center justify-center gap-7 lg:flex-row"
+            className="flex flex-col items-center justify-center gap-4 lg:flex-row"
             variants={staggerContainer}
           >
             {videos.slice(2, 4).map((video) => (
@@ -172,7 +166,7 @@ const PodcastVideosSection = ({ apiKey, channelId }) => {
                   />
                   {/* Play button overlay */}
                   <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-30 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <div className="rounded-full bg-red-600 p-4">
+                    <div className="rounded-full bg-golden p-4">
                       <svg
                         className="ml-1 h-8 w-8 text-white"
                         fill="currentColor"

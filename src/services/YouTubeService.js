@@ -1,4 +1,29 @@
 class YouTubeService {
+  async getPlaylistVideos(playlistId, maxResults = 4) {
+    try {
+      const response = await fetch(
+        `${this.baseUrl}/playlistItems?key=${this.apiKey}&playlistId=${playlistId}&part=snippet&maxResults=${maxResults}`,
+      )
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      const data = await response.json()
+      return data.items.map((item) => ({
+        id: item.snippet.resourceId.videoId,
+        title: item.snippet.title,
+        description: item.snippet.description,
+        thumbnail:
+          item.snippet.thumbnails.high?.url ||
+          item.snippet.thumbnails.medium?.url,
+        publishedAt: item.snippet.publishedAt,
+        videoUrl: `https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`,
+        embedUrl: `https://www.youtube.com/embed/${item.snippet.resourceId.videoId}`,
+      }))
+    } catch (error) {
+      console.error('Error fetching YouTube playlist videos:', error)
+      return []
+    }
+  }
   constructor(apiKey, channelId) {
     this.apiKey = apiKey
     this.channelId = channelId

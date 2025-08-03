@@ -2,7 +2,12 @@
 import { useState, useEffect } from 'react'
 import YouTubeService from '../services/YouTubeService'
 
-const useYouTubeVideos = (apiKey, channelId, maxResults = 4) => {
+const useYouTubeVideos = (
+  apiKey,
+  channelId,
+  maxResults = 4,
+  playlistId = null,
+) => {
   const [videos, setVideos] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -12,7 +17,15 @@ const useYouTubeVideos = (apiKey, channelId, maxResults = 4) => {
       try {
         setLoading(true)
         const youtubeService = new YouTubeService(apiKey, channelId)
-        const latestVideos = await youtubeService.getLatestVideos(maxResults)
+        let latestVideos
+        if (playlistId) {
+          latestVideos = await youtubeService.getPlaylistVideos(
+            playlistId,
+            maxResults,
+          )
+        } else {
+          latestVideos = await youtubeService.getLatestVideos(maxResults)
+        }
         setVideos(latestVideos)
         setError(null)
       } catch (err) {
@@ -23,15 +36,13 @@ const useYouTubeVideos = (apiKey, channelId, maxResults = 4) => {
       }
     }
 
-    if (apiKey && channelId) {
+    if (apiKey && (channelId || playlistId)) {
       fetchVideos()
     }
 
-    // Optional: Set up periodic refresh (every 30 minutes)
     const interval = setInterval(fetchVideos, 30 * 60 * 1000)
-
     return () => clearInterval(interval)
-  }, [apiKey, channelId, maxResults])
+  }, [apiKey, channelId, maxResults, playlistId])
 
   return { videos, loading, error }
 }
